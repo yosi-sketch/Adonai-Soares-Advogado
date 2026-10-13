@@ -1,11 +1,11 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, Plus_Jakarta_Sans } from "next/font/google";
+import { Cinzel, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
-const displayFont = Cormorant_Garamond({
+const displayFont = Cinzel({
   variable: "--font-display",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700", "800", "900"],
   display: "swap",
 });
 
@@ -17,37 +17,40 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#100f0d",
+  themeColor: "#0a0d12",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.guimaraesecanuto.adv.br"),
+  metadataBase: new URL("https://www.ornelaseferreira.adv.br"),
   title:
-    "Guimarães e Canuto Advogados | Direito Imobiliário em Diamantina - MG | Dra. Ana Flávia Guimarães",
+    "ORNELAS E FERREIRA - ADVOGADOS | Sete Lagoas - MG | Atuação Nacional",
   description:
-    "Estratégias jurídicas seguras e eficientes para a regularização de imóveis, usucapião judicial e extrajudicial, inventários, desmembramento e demandas cartorárias em Diamantina e região. Dra. Ana Flávia Guimarães. Sede na R. Macau do Meio, 135 - 2° andar - Centro, Diamantina - MG. Nota máxima 5,0 ★ no Google (13 avaliações).",
+    "Protegemos direitos e reduzimos riscos com rigor técnico, rapidez e atendimento humanizado. Dra. Izabella Ornelas e Dr. Breno Nilson Ferreira. Atuação nacional em Direito Previdenciário (INSS), Trabalhista, Criminal (Plantão 24h), Família e Direito Público. Sede no Edifício Márcio Paulino - Sala 8, Sete Lagoas - MG. Nota 4,9 ★ no Google com mais de 129 avaliações.",
   keywords: [
-    "Guimarães e Canuto Advogados",
-    "Ana Flávia Guimarães",
-    "Dra. Ana Flávia Guimarães",
-    "Advogada Diamantina MG",
-    "Advogado em Diamantina",
-    "Direito Imobiliário Diamantina",
-    "Regularização de Imóveis Diamantina MG",
-    "Usucapião Diamantina",
-    "Usucapião Extrajudicial Diamantina",
-    "Inventário de Imóveis Diamantina",
-    "Retificação de Matrícula Diamantina",
-    "Divisão e Desmembramento de Imóveis",
-    "Regularização Fundiária Vale do Jequitinhonha",
-    "Escritório de Advocacia Diamantina MG",
+    "Ornelas e Ferreira Advogados",
+    "Ornelas & Ferreira Advocacia",
+    "Dra. Izabella Ornelas",
+    "Dr. Breno Nilson Ferreira",
+    "Advogado Sete Lagoas",
+    "Advocacia Sete Lagoas MG",
+    "Advogado em Sete Lagoas",
+    "Direito Previdenciário Sete Lagoas",
+    "Advogado INSS Sete Lagoas",
+    "Advogado Trabalhista Sete Lagoas",
+    "Advogado Criminal Sete Lagoas",
+    "Plantão Criminal 24 Horas Sete Lagoas",
+    "Direito de Família Sete Lagoas",
+    "Direito Público MG",
+    "Edifício Márcio Paulino Sete Lagoas",
+    "Escritório de Advocacia Minas Gerais",
   ],
   authors: [
-    { name: "Dra. Ana Flávia Guimarães" },
-    { name: "Guimarães e Canuto Advogados" },
+    { name: "Dra. Izabella Ornelas" },
+    { name: "Dr. Breno Nilson Ferreira" },
+    { name: "Ornelas e Ferreira Advogados" },
   ],
-  creator: "Guimarães e Canuto Advogados",
-  publisher: "Guimarães e Canuto Advogados",
+  creator: "Ornelas e Ferreira Advogados",
+  publisher: "Ornelas e Ferreira Advogados",
   formatDetection: {
     telephone: true,
     address: true,
@@ -59,18 +62,18 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.guimaraesecanuto.adv.br",
+    url: "https://www.ornelaseferreira.adv.br",
     title:
-      "Guimarães e Canuto Advogados | Direito Imobiliário & Regularização em Diamantina - MG",
+      "ORNELAS E FERREIRA - ADVOGADOS | Protegemos Direitos e Reduzimos Riscos",
     description:
-      "Advocacia especializada em Direito Imobiliário, Regularização de Imóveis, Usucapião e Inventários no Centro de Diamantina - MG. Atendimento próximo, seguro e ágil. Nota 5,0 ★ no Google.",
-    siteName: "Guimarães e Canuto Advogados",
+      "Excelência jurídica em Sete Lagoas - MG com atuação nacional. Direito Previdenciário, Trabalhista, Criminal (Plantão 24h), Família e Direito Público. Avaliação 4,9 ★ no Google (129 avaliações).",
+    siteName: "Ornelas e Ferreira Advogados",
     images: [
       {
         url: "/logo.png",
         width: 2172,
         height: 724,
-        alt: "Guimarães e Canuto Advogados — Diamantina - MG",
+        alt: "Ornelas e Ferreira Advogados — Sete Lagoas - MG",
       },
     ],
   },
@@ -84,43 +87,57 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Guimarães e Canuto Advogados",
-    alternateName: "Guimarães & Canuto Advogados | Dra. Ana Flávia Guimarães",
-    founder: {
-      "@type": "Person",
-      name: "Dra. Ana Flávia Guimarães",
-      jobTitle: "Advogada Especialista em Regularização de Imóveis",
-    },
+    name: "Ornelas e Ferreira Advogados",
+    alternateName: "Ornelas & Ferreira Advocacia | Dra. Izabella Ornelas & Dr. Breno Nilson Ferreira",
+    founder: [
+      {
+        "@type": "Person",
+        name: "Dra. Izabella Ornelas",
+        jobTitle: "Advogada Especialista em Direito Previdenciário, Trabalhista e de Família",
+      },
+      {
+        "@type": "Person",
+        name: "Dr. Breno Nilson Ferreira",
+        jobTitle: "Advogado Especialista em Direito Criminal e Direito Público",
+      },
+    ],
     address: {
       "@type": "PostalAddress",
-      streetAddress: "R. Macau do Meio, n° 135 - 2° andar - Centro",
-      addressLocality: "Diamantina",
+      streetAddress: "Av. Dep. Emílio Vasconcelos Costa, 133 - Segundo andar, Sala 8 - Centro",
+      addressLocality: "Sete Lagoas",
       addressRegion: "MG",
-      postalCode: "39100-000",
+      postalCode: "35700-009",
       addressCountry: "BR",
     },
-    telephone: "+55-38-99186-8160",
-    url: "https://www.guimaraesecanuto.adv.br",
-    image: "https://www.guimaraesecanuto.adv.br/logo.png",
+    telephone: "+55-31-99088-2518",
+    url: "https://www.ornelaseferreira.adv.br",
+    image: "https://www.ornelaseferreira.adv.br/logo.png",
     priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "5.0",
-      reviewCount: "13",
+      ratingValue: "4.9",
+      reviewCount: "129",
     },
     areaServed: [
-      "Diamantina",
-      "Microrregião de Diamantina",
-      "Vale do Jequitinhonha",
+      "Sete Lagoas",
+      "Belo Horizonte",
       "Minas Gerais",
       "Brasil",
     ],
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        opens: "08:00",
-        closes: "18:00",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        opens: "00:00",
+        closes: "23:59",
       },
     ],
   };
@@ -136,7 +153,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen overflow-x-clip bg-ivory font-sans text-ink antialiased selection:bg-brand-800 selection:text-white">
+      <body className="min-h-screen overflow-x-clip bg-pearl font-sans text-ink antialiased selection:bg-brand-800 selection:text-white">
         {children}
       </body>
     </html>
