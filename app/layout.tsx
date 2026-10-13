@@ -17,36 +17,37 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#120f0a",
+  themeColor: "#100f0d",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.catarinasouzaadvogada.com.br"),
+  metadataBase: new URL("https://www.guimaraesecanuto.adv.br"),
   title:
-    "Catarina Souza Advogada | Diamantina - MG | Serviços Jurídicos Especializados",
+    "Guimarães e Canuto Advogados | Direito Imobiliário em Diamantina - MG | Dra. Ana Flávia Guimarães",
   description:
-    "Atendimento jurídico humanizado, ético e comprometido com resultados em Diamantina e toda a Microrregião de Diamantina - MG. Dra. Catarina Souza é especialista em Direito Bancário, Lei do Superendividamento, Fraudes em Empréstimo Consignado, Direito do Consumidor, Cível, Família e Previdenciário. Sede no Beco da Pena, 29 - Centro, Diamantina - MG. Nota máxima 5,0 estrelas no Google (22 avaliações).",
+    "Estratégias jurídicas seguras e eficientes para a regularização de imóveis, usucapião judicial e extrajudicial, inventários, desmembramento e demandas cartorárias em Diamantina e região. Dra. Ana Flávia Guimarães. Sede na R. Macau do Meio, 135 - 2° andar - Centro, Diamantina - MG. Nota máxima 5,0 ★ no Google (13 avaliações).",
   keywords: [
-    "Catarina Souza Advogada",
-    "Dra. Catarina Souza",
+    "Guimarães e Canuto Advogados",
+    "Ana Flávia Guimarães",
+    "Dra. Ana Flávia Guimarães",
     "Advogada Diamantina MG",
-    "Escritório de Advocacia Diamantina",
-    "Serviços Jurídicos Diamantina MG",
-    "Direito Bancário Diamantina",
-    "Lei do Superendividamento Diamantina",
-    "Empréstimo Consignado Não Contratado",
-    "Direito do Consumidor Diamantina",
-    "Direito Cível Diamantina",
-    "Direito de Família Diamantina",
-    "Direito Previdenciário INSS Diamantina",
-    "Advogada Correspondente Diamantina MG",
+    "Advogado em Diamantina",
+    "Direito Imobiliário Diamantina",
+    "Regularização de Imóveis Diamantina MG",
+    "Usucapião Diamantina",
+    "Usucapião Extrajudicial Diamantina",
+    "Inventário de Imóveis Diamantina",
+    "Retificação de Matrícula Diamantina",
+    "Divisão e Desmembramento de Imóveis",
+    "Regularização Fundiária Vale do Jequitinhonha",
+    "Escritório de Advocacia Diamantina MG",
   ],
   authors: [
-    { name: "Dra. Catarina Souza" },
-    { name: "Catarina Souza Advogada" },
+    { name: "Dra. Ana Flávia Guimarães" },
+    { name: "Guimarães e Canuto Advogados" },
   ],
-  creator: "Catarina Souza Advogada",
-  publisher: "Catarina Souza Advogada",
+  creator: "Guimarães e Canuto Advogados",
+  publisher: "Guimarães e Canuto Advogados",
   formatDetection: {
     telephone: true,
     address: true,
@@ -58,18 +59,18 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.catarinasouzaadvogada.com.br",
+    url: "https://www.guimaraesecanuto.adv.br",
     title:
-      "Catarina Souza Advogada | Soluções Jurídicas em Diamantina - MG",
+      "Guimarães e Canuto Advogados | Direito Imobiliário & Regularização em Diamantina - MG",
     description:
-      "Atendimento humanizado e compromisso com o resultado na Microrregião de Diamantina - MG. Especialista em Direito Bancário, Superendividamento, Consignados, Consumidor, Cível e Família. Nota 5,0 ★ no Google.",
-    siteName: "Catarina Souza Advogada",
+      "Advocacia especializada em Direito Imobiliário, Regularização de Imóveis, Usucapião e Inventários no Centro de Diamantina - MG. Atendimento próximo, seguro e ágil. Nota 5,0 ★ no Google.",
+    siteName: "Guimarães e Canuto Advogados",
     images: [
       {
-        url: "/Logo Dourado Catarina Souza Advogada.png",
-        width: 1774,
-        height: 887,
-        alt: "Catarina Souza Advogada — Diamantina - MG",
+        url: "/logo.png",
+        width: 2172,
+        height: 724,
+        alt: "Guimarães e Canuto Advogados — Diamantina - MG",
       },
     ],
   },
@@ -83,30 +84,29 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Catarina Souza Advogada",
-    alternateName: "Catarina Souza Sociedade Individual de Advocacia",
+    name: "Guimarães e Canuto Advogados",
+    alternateName: "Guimarães & Canuto Advogados | Dra. Ana Flávia Guimarães",
     founder: {
       "@type": "Person",
-      name: "Dra. Catarina Souza",
-      jobTitle: "Advogada Titular",
+      name: "Dra. Ana Flávia Guimarães",
+      jobTitle: "Advogada Especialista em Regularização de Imóveis",
     },
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Beco da Pena, 29 - Centro",
+      streetAddress: "R. Macau do Meio, n° 135 - 2° andar - Centro",
       addressLocality: "Diamantina",
       addressRegion: "MG",
       postalCode: "39100-000",
       addressCountry: "BR",
     },
-    telephone: "+55-38-98801-0869",
-    url: "https://www.catarinasouzaadvogada.com.br",
-    image:
-      "https://www.catarinasouzaadvogada.com.br/Logo%20Dourado%20Catarina%20Souza%20Advogada.png",
+    telephone: "+55-38-99186-8160",
+    url: "https://www.guimaraesecanuto.adv.br",
+    image: "https://www.guimaraesecanuto.adv.br/logo.png",
     priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "22",
+      reviewCount: "13",
     },
     areaServed: [
       "Diamantina",

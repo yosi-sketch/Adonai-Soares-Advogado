@@ -12,10 +12,14 @@ import {
   ArrowRight,
   ArrowUpRight,
   Award,
-  BadgeAlert,
+  BookOpen,
   Briefcase,
+  Building2,
   CheckCircle2,
   Clock,
+  Compass,
+  FileCheck,
+  FileText,
   HeartHandshake,
   Landmark,
   Mail,
@@ -30,29 +34,26 @@ import {
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
 
-const WHATSAPP_NUMBER = "5538988010869";
-const PHONE_DISPLAY = "(38) 98801-0869";
-const EMAIL_CONTACT = "contato@catarinasouzaadvogada.com.br";
+const WHATSAPP_NUMBER = "5538991868160";
+const PHONE_DISPLAY = "(38) 99186-8160";
+const EMAIL_CONTACT = "contato@guimaraesecanuto.adv.br";
 
 const ADDRESS_TEXT =
-  "Beco da Pena, 29 - Centro, Diamantina - MG, 39100-000";
+  "R. Macau do Meio, n° 135 - 2° andar - Centro, Diamantina - MG, 39100-000, Brasil";
 const GOOGLE_MAPS_URL =
-  "https://www.google.com/maps/search/?api=1&query=Catarina+Souza+Advogada+Beco+da+Pena+29+Centro+Diamantina+MG";
+  "https://www.google.com/maps/search/?api=1&query=Guimar%C3%A3es+e+Canuto+Advogados+R.+Macau+do+Meio+135+Diamantina+MG";
 
-const LOGO_SRC = "/Logo Dourado Catarina Souza Advogada.png";
-const IMG_CONSIGNADO_SRC =
-  "/imgi_9_825270124_18280603321291086_6369584387742786089_n.jpg";
-const IMG_SUPERENDIVIDAMENTO_SRC =
-  "/imgi_10_825449120_18280129957291086_5701673160777369769_n.jpg";
-const IMG_ESCRITORIO_BANCARIO_SRC =
-  "/imgi_14_794492546_18277284577291086_8367043188480776381_n.jpg";
+const LOGO_SRC = "/logo.png";
+const IMG_PERFIL_SRC = "/ana-flavia-perfil.jpg";
+const IMG_REGISTRO_SRC = "/ana-flavia-registro-imoveis.jpg";
+const IMG_BLAZER_SRC = "/ana-flavia-blazer.jpg";
 
 function getWhatsAppUrl(
   message?: string,
   number: string = WHATSAPP_NUMBER
 ) {
   const defaultText =
-    "Olá, Dra. Catarina Souza! Gostaria de agendar uma consulta jurídica.";
+    "Olá, Dra. Ana Flávia! Gostaria de agendar uma consulta sobre regularização de imóvel / serviços jurídicos.";
   return `https://wa.me/${number}?text=${encodeURIComponent(
     message || defaultText
   )}`;
@@ -106,124 +107,124 @@ interface PracticeArea {
 
 const practiceAreas: PracticeArea[] = [
   {
-    id: "direito-bancario-superendividamento",
-    title: "Direito Bancário & Superendividamento",
-    icon: Landmark,
-    tag: "Repactuação & Defesa contra Bancos",
+    id: "regularizacao-imoveis-escritura",
+    title: "Regularização de Imóveis & Saneamento Cartorário",
+    icon: Building2,
+    tag: "Segurança Jurídica & Matrícula Definitiva",
     summary:
-      "Repactuação global de dívidas pela Lei do Superendividamento, revisão de contratos bancários e proteção da sua renda familiar.",
+      "Transforme contratos de gaveta e posses informais em escritura e registro definitivo no Cartório de Registro de Imóveis.",
     details:
-      "Se o pagamento das suas dívidas compromete o sustento básico da sua família, a Lei do Superendividamento garante o direito à repactuação judicial ou extrajudicial com preservação do mínimo existencial. Atuamos estrategicamente contra abusos bancários, juros excessivos e descontos que sufocam seu orçamento.",
+      "Ter apenas a posse ou contrato de compra e venda informal deixa seu patrimônio vulnerável a penhoras, golpes e disputas. O escritório Guimarães e Canuto Advogados desenvolve estratégias jurídicas seguras e eficientes para obtenção de escritura pública, saneamento de títulos e registro definitivo, viabilizando vendas formais, financiamentos bancários e partilhas tranquilas.",
     topics: [
-      "Ação de Repactuação de Dívidas pela Lei do Superendividamento",
-      "Preservação do Mínimo Existencial e limitação de descontos em conta/folha",
-      "Revisão de Contratos Bancários, Financiamentos e Juros Abusivos",
-      "Defesa estratégica em Execuções Bancárias, Busca e Apreensão e Cobranças",
-      "Renegociação segura de passivos junto a instituições financeiras",
-      "Auditoria jurídica de tarifas embutidas, venda casada e seguros indevidos",
+      "Regularização de imóveis urbanos e rurais sem escritura ou registro",
+      "Regularização Fundiária Urbana e Rural (REURB)",
+      "Saneamento e validação de contratos de compra e venda ('gaveta')",
+      "Averbação de construções, reformas prediais e Habite-se",
+      "Regularização de posse para viabilizar alienação ou financiamento bancário",
+      "Cancelamento de penhoras, hipotecas e gravames indevidos na matrícula",
     ],
     whatsAppText:
-      "Olá, Dra. Catarina Souza! Gostaria de orientação sobre a Lei do Superendividamento e minhas dívidas bancárias.",
+      "Olá, Dra. Ana Flávia! Gostaria de uma análise para regularizar a documentação do meu imóvel.",
   },
   {
-    id: "emprestimo-consignado-fraudes",
-    title: "Empréstimos Consignados & Fraudes",
-    icon: BadgeAlert,
-    tag: "Proteção de Aposentados & Servidores",
-    summary:
-      "Descontaram um empréstimo consignado que você não contratou? Atuamos para suspender a cobrança e buscar indenização.",
-    details:
-      "Aposentados, pensionistas do INSS e servidores públicos são alvos frequentes de descontos indevidos, empréstimos não autorizados e cartões consignados (RMC/RCC) intermináveis. Ingressamos com pedidos liminares urgentes para cessar os descontos imediatamente, restituir os valores em dobro e reparar os danos morais.",
-    topics: [
-      "Cancelamento liminar de Empréstimo Consignado Não Contratado",
-      "Suspensão de descontos abusivos de RMC e RCC (Cartão Consignado)",
-      "Restituição em dobro de valores descontados indevidamente do benefício",
-      "Indenização por danos morais decorrentes de fraude bancária e golpe",
-      "Anulação de descontos de associações e sindicatos não autorizados no INSS",
-      "Defesa contra golpes digitais, falsas centrais bancárias e fraudes via PIX",
-    ],
-    whatsAppText:
-      "Olá, Dra. Catarina Souza! Descontaram um empréstimo consignado que não contratei e preciso de orientação jurídica.",
-  },
-  {
-    id: "direito-consumidor",
-    title: "Direito do Consumidor",
-    icon: ShieldCheck,
-    tag: "Defesa dos Seus Direitos",
-    summary:
-      "Exclusão de negativação indevida no SPC/Serasa, combate a cobranças abusivas, falhas de serviços e indenizações.",
-    details:
-      "Defendemos o consumidor de Diamantina e região perante grandes empresas, concessionárias, operadoras e bancos. Atuamos com agilidade para retirar restrições indevidas do seu nome, cancelar cobranças ilegais e garantir a justa reparação por falhas na prestação de serviços ou defeitos em produtos.",
-    topics: [
-      "Exclusão urgente de inscrição indevida no SPC, Serasa e protestos",
-      "Indenização por cobranças abusivas e serviços não solicitados",
-      "Demandas contra falhas em serviços essenciais (energia, água, telefonia e saúde)",
-      "Direito de arrependimento, vícios ocultos de produtos e garantia legal",
-      "Cancelamento de voos, extravio de bagagem e práticas abusivas no turismo",
-      "Tutelas de urgência para restabelecimento imediato de serviços cortados",
-    ],
-    whatsAppText:
-      "Olá, Dra. Catarina Souza! Preciso de assessoria jurídica em uma causa de Direito do Consumidor.",
-  },
-  {
-    id: "direito-civel-contratos",
-    title: "Direito Cível & Contratos",
+    id: "usucapiao-extrajudicial-judicial",
+    title: "Usucapião Extrajudicial & Judicial",
     icon: Scale,
-    tag: "Segurança Jurídica & Patrimônio",
+    tag: "Aquisição Originária da Propriedade",
     summary:
-      "Ações indenizatórias, cobranças, elaboração de contratos, responsabilidade civil e solução eficaz de conflitos patrimoniais.",
+      "Conquiste a propriedade oficial do seu imóvel pela posse prolongada com agilidade em cartório ou com firmeza na Justiça.",
     details:
-      "Com profundo conhecimento jurídico e atenção minuciosa a cada detalhe processual, protegemos o seu patrimônio e prevenimos prejuízos. Atuamos na elaboração e análise de contratos, ações de cobrança, execução de títulos, questões imobiliárias e reparação integral por danos materiais e morais.",
+      "O Usucapião Extrajudicial permite obter o registro definitivo diretamente no Cartório de Registro de Imóveis, sem a lentidão de um processo judicial. Quando há litígio ou peculiaridades probatórias, atuamos com rigor e excelência na via judicial para assegurar que seu direito de posse seja transformado em titularidade legal incontestável.",
     topics: [
-      "Ações de Indenização por Danos Materiais, Morais e Estéticos",
-      "Elaboração, revisão e rescisão de contratos civis, rurais e empresariais",
-      "Cobranças judiciais, execuções de títulos e recuperação de créditos",
-      "Direito Imobiliário: locações, despejo, usucapião e regularização de imóveis",
-      "Responsabilidade civil em acidentes e descumprimentos contratuais",
-      "Acordos extrajudiciais seguros com força de título executivo",
+      "Usucapião Extrajudicial rápido direto no Cartório de Registro de Imóveis",
+      "Usucapião Extraordinária, Ordinária, Especial Urbana e Especial Rural",
+      "Assessoria em levantamento topográfico, planta e memorial descritivo",
+      "Notificação de confrontantes, colheita de anuências e saneamento de exigências",
+      "Usucapião Familiar e Usucapião Coletiva de áreas consolidadas",
+      "Defesa possessória contra reivindicações indevidas e imissão na posse",
     ],
     whatsAppText:
-      "Olá, Dra. Catarina Souza! Gostaria de agendar uma consulta na área de Direito Cível e Contratos.",
+      "Olá, Dra. Ana Flávia! Gostaria de consultoria jurídica sobre Usucapião para o meu imóvel.",
   },
   {
-    id: "direito-familia-sucessoes",
-    title: "Direito de Família & Sucessões",
+    id: "inventario-partilha-bens-imoveis",
+    title: "Inventário & Partilha de Bens Imóveis",
     icon: HeartHandshake,
-    tag: "Atendimento Humanizado & Ético",
+    tag: "Transmissão Legal sem Travamento de Bens",
     summary:
-      "Condução acolhedora, discreta e firme em divórcios, pensão alimentícia, guarda, partilha de bens e inventários.",
+      "Inventários em cartório rápidos e judiciais para transferir imóveis herdados com planejamento tributário e segurança.",
     details:
-      "Questões familiares exigem sensibilidade humana aliada à segurança técnica. Conduzimos divórcios consensuais em cartório ou judiciais, ações de alimentos, guarda e regulamentação de convivência, bem como inventários e partilhas, sempre priorizando a dignidade e a tranquilidade da família.",
+      "A transmissão sucessória de imóveis exige cuidado para evitar que o patrimônio familiar fique bloqueado por anos em burocracias. Conduzimos inventários extrajudiciais em cartório de notas com rapidez ou inventários judiciais estratégicos, garantindo a partilha justa entre herdeiros, a correta apuração do ITCMD e o registro definitivo de cada quota.",
     topics: [
-      "Divórcio Consensual Rápido em Cartório e Divórcio Judicial",
-      "Pensão Alimentícia: fixação, revisão de valor, exoneração e execução",
-      "Guarda Compartilhada ou Unilateral e Regulamentação de Visitas",
-      "Reconhecimento e Dissolução de União Estável com partilha justa",
-      "Inventário Extrajudicial (em Cartório) e Inventário Judicial",
-      "Planejamento sucessório e proteção do patrimônio familiar",
+      "Inventário Extrajudicial rápido em Cartório de Notas (conclusão em semanas)",
+      "Inventário Judicial para casos com litígio entre herdeiros ou menores",
+      "Partilha amigável de imóveis urbanos, fazendas, sítios e terrenos",
+      "Regularização de imóveis pendentes de inventários antigos não concluídos",
+      "Planejamento tributário sucessório para redução legal de ITCMD e custas",
+      "Alvarás judiciais para venda de imóveis no curso do inventário",
     ],
     whatsAppText:
-      "Olá, Dra. Catarina Souza! Gostaria de uma consulta especializada em Direito de Família e Sucessões.",
+      "Olá, Dra. Ana Flávia! Gostaria de atendimento para realizar um inventário e regularizar imóveis de herança.",
   },
   {
-    id: "previdenciario-correspondencia",
-    title: "Previdenciário & Correspondência",
-    icon: Briefcase,
-    tag: "INSS & Diligências em Diamantina",
+    id: "divisao-desmembramento-demarcacao",
+    title: "Divisão, Desmembramento & Demarcação de Terras",
+    icon: Compass,
+    tag: "Imóveis Rurais e Lotes Urbanos",
     summary:
-      "Aposentadorias, benefícios do INSS (BPC/LOAS, auxílios) e atuação como advogada correspondente na Comarca de Diamantina - MG.",
+      "Individualização de lotes, divisão amigável de condomínio imobiliário e demarcação precisa de divisas rurais e urbanas.",
     details:
-      "Defendemos segurados na conquista de aposentadorias, pensão por morte, auxílio-doença e BPC/LOAS na via administrativa e judicial. Além disso, prestamos suporte de excelência em correspondência jurídica, audiências e diligências para escritórios de todo o Brasil na Comarca de Diamantina e microrregião.",
+      "Imóveis em condomínio (indivisos) frequentemente impedem investimentos e geram impasses entre coproprietários. Atuamos na divisão e desmembramento formal de propriedades, fixação perimétrica de divisas de fazendas e terrenos no Vale do Jequitinhonha, extinguindo condomínios e garantindo matrículas autônomas.",
     topics: [
-      "Aposentadorias por Idade, Tempo de Contribuição, Rural e Especial",
-      "Benefício Assistencial (BPC/LOAS) para idosos e pessoas com deficiência",
-      "Auxílio por Incapacidade Temporária, Aposentadoria por Invalidez e Pensão por Morte",
-      "Reversão judicial de benefícios negados ou cessados indevidamente pelo INSS",
-      "Correspondência Jurídica em Diamantina - MG: audiências, protocolos e despachos",
-      "Diligências presenciais, cópias, certidões e acompanhamento na 12ª Subseção OAB/MG",
+      "Desmembramento e desdobro de lotes perante Prefeitura e Cartório de Imóveis",
+      "Divisão e extinção amigável ou judicial de condomínio entre coproprietários",
+      "Ação Demarcatória para fixação, restauração ou retificação de marcos e divisas",
+      "Adequação documental de imóveis rurais (CAR, CCIR e Georreferenciamento)",
+      "Instituição e regularização de servidões de passagem e estradas rurais",
+      "Ações possessórias: manutenção e reintegração de posse rural e urbana",
     ],
     whatsAppText:
-      "Olá, Dra. Catarina Souza! Gostaria de atendimento em Direito Previdenciário / Serviços Jurídicos em Diamantina.",
+      "Olá, Dra. Ana Flávia! Preciso de orientação sobre divisão ou desmembramento de um imóvel.",
+  },
+  {
+    id: "retificacao-matriculas-demandas-cartorarias",
+    title: "Retificação de Matrículas & Demandas Cartorárias",
+    icon: FileCheck,
+    tag: "Correção de Metragens & Registros",
+    summary:
+      "Correção de divergências de área na matrícula, resposta a notas devolutivas e cumprimento de exigências cartorárias com precisão.",
+    details:
+      "Erros nas medidas perimetrais ou notas devolutivas emitidas pelo Cartório de Registro de Imóveis travam escrituras, financiamentos e vendas. Examinamos a cadeia dominial histórica, elaboramos respostas técnicas a notas devolutivas e conduzimos a retificação de área extrajudicial ou judicial para sincronizar a realidade com o registro.",
+    topics: [
+      "Retificação de Área e Medidas Perimetrais (extrajudicial e judicial)",
+      "Cumprimento técnico e impugnação de Notas Devolutivas de Cartórios",
+      "Averbação de benfeitorias, construções e remembramento (unificação de lotes)",
+      "Cancelamento de ônus, cláusulas de inalienabilidade e alienações fiduciárias quitadas",
+      "Suscitação de Dúvida Registral perante o Juízo de Registros Públicos",
+      "Auditoria da cadeia dominial histórica e emissão de certidões vintenárias",
+    ],
+    whatsAppText:
+      "Olá, Dra. Ana Flávia! Preciso retificar a matrícula do meu imóvel / responder a uma exigência do cartório.",
+  },
+  {
+    id: "contratos-imobiliarios-due-diligence",
+    title: "Contratos Imobiliários & Due Diligence Preventiva",
+    icon: FileText,
+    tag: "Blindagem Patrimonial na Compra e Venda",
+    summary:
+      "Auditoria preventiva de riscos na compra e venda de imóveis e elaboração de contratos personalizados para blindar seu patrimônio.",
+    details:
+      "A compra de um imóvel envolve valores expressivos e riscos que nem sempre estão aparentes na matrícula, como dívidas tributárias, fraudes contra credores e ações cíveis contra vendedores. Realizamos auditoria jurídica completa (Due Diligence) e redigimos contratos customizados que resguardam cada centavo investido.",
+    topics: [
+      "Due Diligence Imobiliária: auditoria completa de vendedores e da cadeia do imóvel",
+      "Redação e revisão de Contratos de Compra e Venda, Promessas e Cessões de Posse",
+      "Contratos de Locação residencial, comercial e contratos de arrendamento rural",
+      "Ações locatícias: despejo por falta de pagamento, cobranças e renovatórias",
+      "Assessoria jurídica preventiva para investidores imobiliários em Diamantina e região",
+      "Resolução de conflitos de vizinhança e direito de construir",
+    ],
+    whatsAppText:
+      "Olá, Dra. Ana Flávia! Gostaria de assessoria jurídica preventiva para comprar/vender um imóvel.",
   },
 ];
 
@@ -264,75 +265,55 @@ function GoogleIcon({
 
 const clientReviews = [
   {
-    name: "Ricardo Soares",
+    name: "Marta Barbosa",
     reviewsCount: "1 avaliação no Google",
-    date: "Há 4 anos",
+    date: "Há 2 meses",
     content:
-      "Excelente profissional com atendimento humanizado e compromisso com o resultado! Vasto conhecimento na área Jurídica. Esta eu indico.",
-    reply: "Obrigada. Sempre à disposição.",
-  },
-  {
-    name: "Joelma Albino",
-    reviewsCount: "7 avaliações no Google",
-    date: "Há 3 anos",
-    content:
-      "Ótimo serviço de advocacia, tirou todas as minhas dúvidas e resolveu meu problema. Melhor escritório da cidade.",
+      "Advogados como poucos! Super humanos, responsáveis com a orientação para o cliente, e super eficientes! Resolveram meu problema com total responsabilidade, agilidade e carinho comigo!",
     reply:
-      "Obrigada pela avaliação! Nossa equipe sempre estará disponível oferecendo o melhor serviço de advocacia da cidade!",
+      "Ficamos felizes em saber que nosso trabalho atendeu às suas expectativas. No Guimarães & Canuto Advogados, buscamos oferecer um atendimento próximo, responsável e seguro em cada etapa dos processos de regularização de imóveis.",
   },
   {
-    name: "Rogerio Souza",
-    reviewsCount: "1 avaliação no Google",
-    date: "Há 4 anos",
-    content:
-      "Excelente profissional! Muito compromissada com seus clientes! Essa eu indico!",
-    reply:
-      "Obrigada pela avaliação! É uma satisfação saber que pude ajudar a resolver suas questões jurídicas de forma eficiente e eficaz. Sempre me esforço para oferecer um serviço personalizado e de qualidade aos meus clientes.",
-  },
-  {
-    name: "Stéfani Luíza",
-    reviewsCount: "9 avaliações · 1 foto",
-    date: "Há 3 anos",
-    content:
-      "Profissional atenta às necessidades do cliente. A melhor advogada de Diamantina-MG.",
-    reply: "Obrigada, fico à disposição!",
-  },
-  {
-    name: "Fabricia Almeida",
-    reviewsCount: "1 avaliação no Google",
-    date: "Há 3 anos",
-    content:
-      "Excelente profissional, atenciosa, parabéns por sua dedicação e profissionalismo.",
-    reply: "Obrigada pelo feedback, fico à disposição!",
-  },
-  {
-    name: "Claudia Ferreira",
-    reviewsCount: "1 avaliação no Google",
-    date: "Há 3 anos",
-    content:
-      "Excelente profissional, ética, competente e responsável. Gratidão!",
-    reply:
-      "Muito obrigada pela confiança em meu trabalho! Estou sempre às ordens.",
-  },
-  {
-    name: "Daniela Silva",
-    reviewsCount: "2 avaliações · 1 foto",
-    date: "Há 5 meses",
-    content: "Maravilhosa, atenciosa. Só tenho a agradecer.",
-  },
-  {
-    name: "Daniele Andrade",
+    name: "Leticia Canuto Treinamentos",
     reviewsCount: "2 avaliações no Google",
-    date: "Há 1 ano",
-    content: "Ótima profissional, me ajudou bastante, super indico!!!",
-    reply: "Muito obrigada Daniele. Sempre às ordens!",
+    date: "Há 3 anos",
+    content:
+      "Advogados super preparados para diversas eventualidades, prontos para esclarecer dúvidas e caminhar junto com o cliente para melhor resolução em questão! Atenciosos, educados e de uma eficácia e rapidez ímpar. Recomendo.",
+    reply:
+      "Ficamos muito felizes com seu retorno, obrigado pela avaliação. Nosso escritório, em Diamantina/MG, permanece à disposição, atuando com excelência em Direito Imobiliário, sempre com atendimento personalizado e foco na segurança jurídica de cada caso.",
   },
   {
-    name: "Amanda Mafra",
-    reviewsCount: "2 avaliações no Google",
-    date: "Há 4 anos",
-    content: "Melhor advogada de Diamantina/MG e região!",
-    reply: "Obrigada Amanda!",
+    name: "Deiwiane Coelho",
+    reviewsCount: "1 avaliação no Google",
+    date: "Há 3 anos",
+    content:
+      "Primeiramente, um escritório muito bem localizado e um ambiente acolhedor. Por fim, formado por excelentes profissionais. Super recomendo.",
+    reply:
+      "Agradecemos imensamente pela confiança. É sempre uma satisfação atender nossos clientes em Diamantina e região, oferecendo soluções completas em Direito Imobiliário e regularização de imóveis em processos judiciais e extrajudiciais.",
+  },
+  {
+    name: "Layane Lorene",
+    reviewsCount: "1 avaliação no Google",
+    date: "Há 3 anos",
+    content:
+      "Lugar impecável! Os advogados super atenciosos! Lugar favorável para quem está procurando profissionais de qualidade! Indico de olhos fechados!",
+    reply:
+      "Seu feedback é muito importante para nós. Em Diamantina e na região, nosso escritório é especializado em regularização de imóveis, retificação de matrículas, inventários e demandas cartorárias, sempre buscando a melhor solução para os imóveis dos nossos clientes.",
+  },
+  {
+    name: "João Antônio Bernardo Lima",
+    reviewsCount: "1 avaliação no Google",
+    date: "Editado há 3 anos",
+    content: "Ótimo escritório.",
+    reply:
+      "Ficamos felizes com sua satisfação. Nosso escritório boutique, com sede em Diamantina/MG, é especialista em regularização fundiária, usucapião, divisão e desmembramento de imóveis rurais e urbanos.",
+  },
+  {
+    name: "Ana Luiza Guimarães",
+    reviewsCount: "2 avaliações · 2 fotos",
+    date: "Há 3 anos",
+    content:
+      "Ótimo atendimento! Advogada desenvolvendo estratégias jurídicas seguras e eficientes para a regularização de imóveis no Guimarães e Canuto Advogados.",
   },
 ];
 
@@ -363,7 +344,7 @@ function Heading({
         <p
           className={
             light
-              ? "mt-5 max-w-xl text-[15px] leading-7 text-brand-100/80"
+              ? "mt-5 max-w-xl text-[15px] leading-7 text-brand-100/85"
               : "mt-5 max-w-xl text-[15px] leading-7 text-ink-soft"
           }
         >
@@ -392,22 +373,22 @@ export default function Home() {
   return (
     <MotionConfig reducedMotion="user">
       <main className="overflow-hidden bg-ivory text-ink">
-        {/* Navigation Bar */}
-        <header className="sticky top-0 z-40 border-b border-ink/10 bg-ivory/95 backdrop-blur-xl">
-          <div className="mx-auto flex h-[96px] max-w-7xl items-center justify-between gap-5 px-5 sm:h-[110px] sm:px-8 lg:px-12">
+        {/* Navigation Bar - Luxury Dark with Champagne Gold Metallic Details */}
+        <header className="sticky top-0 z-40 border-b border-brand-300/20 bg-brand-950/95 backdrop-blur-xl">
+          <div className="mx-auto flex h-[88px] max-w-7xl items-center justify-between gap-5 px-5 sm:h-[102px] sm:px-8 lg:px-12">
             <a
               href="#inicio"
-              aria-label="Catarina Souza Advogada — Início"
+              aria-label="Guimarães e Canuto Advogados — Início"
               onClick={closeMenu}
-              className="flex items-center gap-3 transition-opacity hover:opacity-95"
+              className="flex items-center gap-3 transition-opacity hover:opacity-90"
             >
               <Image
                 src={LOGO_SRC}
-                width={1774}
-                height={887}
-                alt="Catarina Souza Advogada — Diamantina - MG"
+                width={2172}
+                height={724}
+                alt="Guimarães e Canuto Advogados — Diamantina - MG"
                 priority
-                className="h-[68px] w-auto object-contain sm:h-[84px]"
+                className="h-[52px] w-auto object-contain sm:h-[66px]"
               />
             </a>
 
@@ -419,13 +400,13 @@ export default function Home() {
                 Início
               </a>
               <a className="nav-link" href="#sobre">
-                A Advogada & Escritório
+                O Escritório & Advogada
               </a>
               <a className="nav-link" href="#atuacao">
-                Áreas de Atuação
+                Especialidades
               </a>
-              <a className="nav-link" href="#orientacoes">
-                Dívidas & Consignados
+              <a className="nav-link" href="#regularizacao">
+                Por que Regularizar?
               </a>
               <a className="nav-link" href="#avaliacoes">
                 Avaliações (5,0 ★)
@@ -438,8 +419,8 @@ export default function Home() {
             <div className="hidden items-center gap-3 lg:flex">
               <a
                 href={`tel:+${WHATSAPP_NUMBER}`}
-                aria-label="Ligar para Catarina Souza Advogada"
-                className="grid size-10 place-items-center rounded-full border border-ink/15 text-brand-800 transition-all hover:border-brand-800 hover:bg-brand-50 hover:text-brand-900"
+                aria-label="Ligar para Guimarães e Canuto Advogados"
+                className="grid size-10 place-items-center rounded-full border border-brand-300/30 text-brand-200 transition-all hover:border-brand-300 hover:bg-brand-900 hover:text-white"
                 title={`Ligar: ${PHONE_DISPLAY}`}
               >
                 <Phone size={16} />
@@ -448,8 +429,8 @@ export default function Home() {
                 href={getWhatsAppUrl()}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="WhatsApp de Catarina Souza Advogada"
-                className="grid size-10 place-items-center rounded-full border border-ink/15 text-brand-800 transition-all hover:border-brand-800 hover:bg-brand-50 hover:text-brand-900"
+                aria-label="WhatsApp de Guimarães e Canuto Advogados"
+                className="grid size-10 place-items-center rounded-full border border-brand-300/30 text-brand-200 transition-all hover:border-brand-300 hover:bg-brand-900 hover:text-white"
                 title="Atendimento no WhatsApp"
               >
                 <WhatsAppIcon size={18} />
@@ -458,6 +439,7 @@ export default function Home() {
                 href={getWhatsAppUrl()}
                 target="_blank"
                 size="sm"
+                variant="champagne"
                 className="rounded-full shadow-sm"
               >
                 Consulta no WhatsApp <ArrowUpRight size={14} />
@@ -469,7 +451,7 @@ export default function Home() {
               aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
               aria-expanded={menuOpen}
               aria-controls="mobile-navigation"
-              className="grid size-11 place-items-center rounded-full border border-ink/15 text-ink lg:hidden"
+              className="grid size-11 place-items-center rounded-full border border-brand-300/25 text-brand-200 lg:hidden"
               onClick={() => setMenuOpen((open) => !open)}
             >
               {menuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -485,14 +467,14 @@ export default function Home() {
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.22 }}
-                className="overflow-hidden border-t border-ink/10 bg-ivory px-6 lg:hidden"
+                className="overflow-hidden border-t border-brand-300/15 bg-brand-950 px-6 lg:hidden"
               >
                 <div className="mx-auto flex max-w-7xl flex-col gap-1 py-4">
                   {[
                     ["Início", "#inicio"],
-                    ["A Advogada & Escritório", "#sobre"],
-                    ["Áreas de Atuação", "#atuacao"],
-                    ["Superendividamento & Consignados", "#orientacoes"],
+                    ["O Escritório & Advogada", "#sobre"],
+                    ["Especialidades Jurídicas", "#atuacao"],
+                    ["Por que Regularizar o Imóvel?", "#regularizacao"],
                     ["Avaliações no Google (5,0 ★)", "#avaliacoes"],
                     ["Contato & Sede em Diamantina", "#contato"],
                   ].map(([label, href]) => (
@@ -500,30 +482,29 @@ export default function Home() {
                       key={label}
                       href={href}
                       onClick={closeMenu}
-                      className="py-3 text-sm font-medium text-ink-soft hover:text-brand-800"
+                      className="py-3 text-sm font-medium text-brand-100 hover:text-white"
                     >
                       {label}
                     </a>
                   ))}
                   <div className="mt-3 flex flex-col gap-2">
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-800 px-5 py-3.5 text-xs font-semibold uppercase tracking-[0.13em] text-white shadow-md transition-all hover:bg-brand-900"
+                      className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-brand-300 via-brand-200 to-brand-300 px-5 py-3.5 text-xs font-bold uppercase tracking-[0.13em] text-brand-950 shadow-md transition-all hover:brightness-105"
                       href={getWhatsAppUrl()}
                       target="_blank"
                       rel="noreferrer"
                       onClick={closeMenu}
                     >
-                      <WhatsAppIcon size={16} /> Falar no WhatsApp:{" "}
-                      {PHONE_DISPLAY}
+                      <WhatsAppIcon size={16} /> Falar no WhatsApp: {PHONE_DISPLAY}
                     </a>
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-full border border-ink/15 px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-ink transition-all hover:border-brand-800"
+                      className="inline-flex items-center justify-center gap-2 rounded-full border border-brand-300/25 px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-brand-200 transition-all hover:border-brand-300"
                       href={GOOGLE_MAPS_URL}
                       target="_blank"
                       rel="noreferrer"
                       onClick={closeMenu}
                     >
-                      <MapPin size={15} /> Beco da Pena, 29 - Centro, Diamantina
+                      <MapPin size={15} /> R. Macau do Meio, 135 - 2° andar, Diamantina
                     </a>
                   </div>
                 </div>
@@ -537,11 +518,11 @@ export default function Home() {
           id="inicio"
           className="relative isolate scroll-mt-24 border-b border-ink/10"
         >
-          {/* Subtle gold ambient orbs */}
-          <div className="pointer-events-none absolute -right-32 top-8 -z-10 size-[36rem] rounded-full bg-brand-200/40 blur-3xl" />
-          <div className="pointer-events-none absolute -left-20 bottom-10 -z-10 size-[28rem] rounded-full bg-brand-100/60 blur-3xl" />
+          {/* Subtle champagne gold ambient glow */}
+          <div className="pointer-events-none absolute -right-32 top-8 -z-10 size-[36rem] rounded-full bg-brand-200/35 blur-3xl" />
+          <div className="pointer-events-none absolute -left-20 bottom-10 -z-10 size-[28rem] rounded-full bg-brand-100/50 blur-3xl" />
 
-          <div className="mx-auto grid min-h-[660px] max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 sm:py-20 lg:min-h-[720px] lg:grid-cols-[1.08fr_0.92fr] lg:gap-10 lg:px-12 lg:py-20">
+          <div className="mx-auto grid min-h-[660px] max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 sm:py-20 lg:min-h-[720px] lg:grid-cols-[1.1fr_0.9fr] lg:gap-12 lg:px-12 lg:py-20">
             <motion.div
               initial="hidden"
               animate="visible"
@@ -549,39 +530,39 @@ export default function Home() {
               className="relative z-10 max-w-2xl lg:py-6"
             >
               <motion.div variants={reveal} className="eyebrow mb-6">
-                <span className="size-2 shrink-0 rounded-full bg-brand-800" />
+                <span className="size-2 shrink-0 rounded-full bg-brand-600" />
                 <span>
-                  Diamantina - MG · Centro · 5,0 ★ no Google (22 avaliações)
+                  Diamantina - MG · Centro · 5,0 ★ no Google (13 avaliações)
                 </span>
               </motion.div>
 
               <motion.h1
                 variants={reveal}
-                className="max-w-[760px] font-serif text-[3.1rem] leading-[0.99] tracking-[-0.035em] text-ink sm:text-6xl lg:text-[4.65rem]"
+                className="max-w-[760px] font-serif text-[3.1rem] leading-[0.99] tracking-[-0.035em] text-ink sm:text-6xl lg:text-[4.5rem]"
               >
-                Atendimento jurídico{" "}
-                <span className="font-serif italic text-brand-800">
-                  humanizado
-                </span>{" "}
-                e compromisso real com o seu resultado.
+                Estratégias jurídicas seguras e eficientes para a{" "}
+                <span className="font-serif italic text-brand-700">
+                  regularização do seu imóvel.
+                </span>
               </motion.h1>
 
               <motion.p
                 variants={reveal}
                 className="mt-7 max-w-xl text-[15px] leading-7 text-ink-soft sm:text-base sm:leading-8"
               >
-                Defesa técnica, ética e personalizada conduzida pela{" "}
+                Atendimento boutique, próximo e resolutivo liderado pela{" "}
                 <strong className="font-semibold text-ink">
-                  Dra. Catarina Souza
-                </strong>
-                . Referência em{" "}
-                <strong className="font-semibold text-ink">
-                  Direito Bancário, Lei do Superendividamento, Fraudes em
-                  Empréstimo Consignado, Consumidor, Cível, Família e
-                  Previdenciário
+                  Dra. Ana Flávia Guimarães
                 </strong>{" "}
-                — com sede no Centro de Diamantina (MG) e atuação em toda a
-                Microrregião e no Brasil.
+                no escritório{" "}
+                <strong className="font-semibold text-ink">
+                  Guimarães e Canuto Advogados
+                </strong>
+                . Especialistas em{" "}
+                <strong className="font-semibold text-ink">
+                  Direito Imobiliário, Regularização Fundiária, Usucapião Extrajudicial e Judicial, Inventários de Bens Imóveis, Divisão e Retificação de Matrículas
+                </strong>{" "}
+                — com sede no Centro de Diamantina (MG) e atuação em todo o Vale do Jequitinhonha e no Brasil.
               </motion.p>
 
               <motion.div
@@ -592,13 +573,14 @@ export default function Home() {
                   href={getWhatsAppUrl()}
                   target="_blank"
                   size="lg"
+                  variant="gold"
                   className="rounded-full shadow-md"
                 >
                   <WhatsAppIcon size={16} /> Agendar Consulta no WhatsApp
                 </GlowingButton>
                 <a
                   href="#atuacao"
-                  className="group inline-flex items-center gap-2 px-2 py-3 text-sm font-semibold text-ink transition-colors hover:text-brand-800"
+                  className="group inline-flex items-center gap-2 px-2 py-3 text-sm font-semibold text-ink transition-colors hover:text-brand-700"
                 >
                   Conhecer áreas de atuação{" "}
                   <ArrowRight
@@ -614,20 +596,20 @@ export default function Home() {
               >
                 <span className="inline-flex items-center gap-2 font-medium">
                   <Star size={15} className="fill-brand-600 text-brand-600" />{" "}
-                  5,0 estrelas no Google (22 avaliações)
+                  5,0 estrelas no Google (13 avaliações)
                 </span>
                 <span className="inline-flex items-center gap-2 font-medium">
-                  <ShieldCheck size={16} className="text-brand-800" /> Bancário,
-                  Consignados, Consumidor & Cível
+                  <Building2 size={16} className="text-brand-700" /> Regularização,
+                  Usucapião, Inventário & Matrículas
                 </span>
                 <span className="inline-flex items-center gap-2 font-medium">
-                  <MapPin size={15} className="text-brand-800" /> Beco da Pena,
-                  29 · Centro, Diamantina - MG
+                  <MapPin size={15} className="text-brand-700" /> R. Macau do Meio,
+                  135 · Centro, Diamantina - MG
                 </span>
               </motion.div>
             </motion.div>
 
-            {/* Hero Portrait Presentation - Dra. Catarina Souza */}
+            {/* Hero Portrait Presentation - Dra. Ana Flávia Guimarães */}
             <motion.div
               initial={{ opacity: 0, scale: 0.97, y: 18 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -638,24 +620,23 @@ export default function Home() {
               }}
               className="relative mx-auto w-full max-w-[460px] lg:ml-auto lg:mr-2"
             >
-              {/* Main portrait framed cleanly on the upper portrait area */}
-              <div className="relative aspect-[0.82] overflow-hidden rounded-3xl border border-brand-600/35 bg-brand-950 shadow-2xl ring-1 ring-brand-600/20">
+              <div className="relative aspect-[0.82] overflow-hidden rounded-3xl border border-brand-500/35 bg-brand-950 shadow-2xl ring-1 ring-brand-300/20">
                 <Image
-                  src={IMG_CONSIGNADO_SRC}
-                  alt="Dra. Catarina Souza — Advogada em Diamantina - MG"
+                  src={IMG_PERFIL_SRC}
+                  alt="Dra. Ana Flávia Guimarães — Advogada Especialista em Regularização de Imóveis em Diamantina - MG"
                   fill
                   priority
                   sizes="(max-width: 640px) 90vw, (max-width: 1024px) 70vw, 42vw"
-                  className="origin-top scale-[1.58] object-cover object-top"
+                  className="object-cover object-top"
                 />
-                <div className=" inset-x-0 bottom-0 absolute h-2/5 bg-gradient-to-t from-brand-950 via-brand-950/75 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-brand-950 via-brand-950/75 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-3 text-white sm:bottom-8 sm:left-8 sm:right-8">
                   <div>
                     <p className="font-serif text-2xl font-normal tracking-wide text-white">
-                      Dra. Catarina Souza
+                      Dra. Ana Flávia Guimarães
                     </p>
                     <p className="mt-1 text-[10px] uppercase tracking-[0.2em] text-brand-200">
-                      Advogada · Diamantina & Região - MG
+                      Guimarães e Canuto Advogados · Diamantina - MG
                     </p>
                   </div>
                   <span className="grid size-11 shrink-0 place-items-center rounded-full border border-brand-300/40 bg-brand-950/70 text-brand-200 backdrop-blur-sm">
@@ -676,13 +657,13 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="mt-0.5 text-[9px] font-semibold uppercase tracking-wider text-ink-soft">
-                  22 Avaliações no Google
+                  13 Avaliações no Google
                 </p>
               </div>
 
               {/* Floating authority badge */}
               <div className="absolute -right-3 top-6 rounded-full border border-brand-700/25 bg-ivory/95 px-4 py-2 text-[10px] font-bold tracking-[0.14em] text-brand-800 shadow-card backdrop-blur-md sm:-right-5">
-                ÉTICA & ATENDIMENTO HUMANIZADO
+                DIREITO IMOBILIÁRIO & REGULARIZAÇÃO
               </div>
             </motion.div>
           </div>
@@ -697,19 +678,19 @@ export default function Home() {
             {[
               [
                 "5,0 ★",
-                "nota máxima unânime com 22 avaliações no Google Maps",
+                "nota máxima unânime com 13 avaliações no Google Maps",
               ],
               [
-                "Bancário & Cível",
-                "defesa contra abusos, superendividamento e fraudes",
+                "Direito Imobiliário",
+                "especialistas em regularização, usucapião e inventários",
               ],
               [
                 "Diamantina - MG",
-                "sede no Beco da Pena, 29 - Centro e atendimento on-line",
+                "sede na R. Macau do Meio, 135 - 2° andar (Centro)",
               ],
               [
                 "Seg a Sex · 8h–18h",
-                "atendimento próximo, transparente e comprometido",
+                "atendimento acolhedor, transparente e de rapidez ímpar",
               ],
             ].map(([value, label], index) => (
               <div
@@ -720,7 +701,7 @@ export default function Home() {
                     : "flex items-center gap-4 sm:justify-center"
                 }
               >
-                <span className="font-serif text-2xl font-semibold text-brand-800 sm:text-3xl">
+                <span className="font-serif text-2xl font-semibold text-brand-700 sm:text-3xl">
                   {value}
                 </span>
                 <span className="max-w-[165px] text-[11px] leading-5 text-ink-soft">
@@ -731,13 +712,13 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Sobre a Dra. Catarina Souza & O Escritório */}
+        {/* Sobre a Dra. Ana Flávia Guimarães & O Escritório */}
         <section
           id="sobre"
           className="scroll-mt-24 bg-white py-20 sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[0.94fr_1.06fr] lg:gap-20 lg:px-12">
-            {/* Real Office photo of Dra. Catarina Souza in blue blazer with award frame behind */}
+            {/* Real Office photo of Dra. Ana Flávia Guimarães with the official "Registro de Imóveis 2025" treatise */}
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -747,32 +728,31 @@ export default function Home() {
             >
               <div className="relative aspect-[0.88] overflow-hidden rounded-2xl border border-brand-700/20 bg-brand-950 shadow-card">
                 <Image
-                  src={IMG_ESCRITORIO_BANCARIO_SRC}
-                  alt="Dra. Catarina Souza em seu escritório de advocacia em Diamantina - MG"
+                  src={IMG_REGISTRO_SRC}
+                  alt="Dra. Ana Flávia Guimarães com o livro Registro de Imóveis no escritório de advocacia em Diamantina - MG"
                   fill
                   sizes="(max-width: 1024px) 90vw, 45vw"
-                  className="origin-top scale-[1.22] object-cover object-[50%_14%]"
+                  className="object-cover object-top"
                 />
                 <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-brand-950/90 via-brand-950/35 to-transparent" />
               </div>
 
               {/* Authority badge card */}
-              <div className="absolute -bottom-6 right-3 max-w-[330px] rounded-xl border border-brand-700/30 bg-ivory px-5 py-4 shadow-card sm:-right-6 sm:px-6">
+              <div className="absolute -bottom-6 right-3 max-w-[340px] rounded-xl border border-brand-700/30 bg-ivory px-5 py-4 shadow-card sm:-right-6 sm:px-6">
                 <div className="flex items-center gap-2 text-brand-800">
                   <Award size={16} />
                   <p className="text-[10px] font-bold uppercase tracking-[0.16em]">
-                    Advocacia de Referência em Diamantina
+                    Advocacia Boutique em Diamantina
                   </p>
                 </div>
                 <p className="mt-1 font-serif text-lg leading-snug text-ink">
-                  Dra. Catarina Souza
+                  Guimarães e Canuto Advogados
                 </p>
-                <p className="mt-0.5 text-[11px] font-medium text-brand-800">
-                  Catarina Souza Sociedade Individual de Advocacia
+                <p className="mt-0.5 text-[11px] font-medium text-brand-700">
+                  Dra. Ana Flávia Guimarães · Regularização de Imóveis
                 </p>
                 <p className="mt-1 text-[11px] leading-4 text-ink-soft">
-                  Sede no Beco da Pena, 29 — Centro Histórico de Diamantina -
-                  MG.
+                  Sede na R. Macau do Meio, 135 - 2° andar — Centro, Diamantina - MG.
                 </p>
               </div>
 
@@ -787,15 +767,15 @@ export default function Home() {
               variants={stagger}
             >
               <motion.p variants={reveal} className="eyebrow">
-                SOBRE O ESCRITÓRIO & ADVOGADA TITULAR
+                SOBRE O ESCRITÓRIO & ADVOGADA
               </motion.p>
               <motion.h2
                 variants={reveal}
                 className="mt-4 max-w-2xl font-serif text-4xl leading-[1.09] tracking-[-0.03em] text-ink sm:text-5xl lg:text-[3.4rem]"
               >
-                Vasto conhecimento jurídico aliado a um{" "}
-                <span className="italic text-brand-800">
-                  atendimento próximo e resolutivo.
+                Rigor técnico imobiliário aliado a um{" "}
+                <span className="italic text-brand-700">
+                  atendimento próximo, ágil e resolutivo.
                 </span>
               </motion.h2>
 
@@ -803,28 +783,24 @@ export default function Home() {
                 variants={reveal}
                 className="mt-6 max-w-xl text-[15px] leading-7 text-ink-soft"
               >
-                Com atuação consolidada em{" "}
+                Com atuação de destaque em{" "}
                 <strong className="text-ink">
-                  Diamantina e em toda a Microrregião de Diamantina (MG)
+                  Diamantina e em toda a Microrregião do Vale do Jequitinhonha (MG)
                 </strong>
-                , o escritório{" "}
-                <strong className="text-ink">Catarina Souza Advogada</strong>{" "}
-                destaca-se pela dedicação minuciosa a cada cliente, ética
-                inabalável e compromisso com soluções jurídicas rápidas,
-                seguras e eficientes.
+                , o escritório boutique{" "}
+                <strong className="text-ink">Guimarães e Canuto Advogados</strong>{" "}
+                é especializado no saneamento, registro e regularização de imóveis urbanos e rurais, inventários e usucapião.
               </motion.p>
 
               <motion.p
                 variants={reveal}
                 className="mt-4 max-w-xl text-[15px] leading-7 text-ink-soft"
               >
-                Seja na proteção de consumidores e aposentados contra{" "}
+                Sob a liderança da{" "}
                 <strong className="text-ink">
-                  empréstimos consignados não contratados e superendividamento
+                  Dra. Ana Flávia Guimarães
                 </strong>
-                , seja em demandas cíveis, familiares e previdenciárias, cada
-                caso recebe escuta atenta, orientação transparente e estratégia
-                personalizada.
+                , unimos profundo domínio das normas cartorárias e registrais à dedicação personalizada a cada cliente. Atuamos com rapidez ímpar tanto na via extrajudicial (direto em Cartórios de Registro de Imóveis e Notas) quanto em demandas judiciais complexas.
               </motion.p>
 
               {/* Profile Highlight Card */}
@@ -835,26 +811,24 @@ export default function Home() {
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
                   <div className="relative size-16 shrink-0 overflow-hidden rounded-full border-2 border-brand-700/40 shadow-sm">
                     <Image
-                      src={IMG_SUPERENDIVIDAMENTO_SRC}
-                      alt="Dra. Catarina Souza"
+                      src={IMG_BLAZER_SRC}
+                      alt="Dra. Ana Flávia Guimarães"
                       fill
-                      className="origin-top scale-[1.8] object-cover object-[50%_10%]"
+                      className="object-cover object-top"
                     />
                   </div>
                   <div>
                     <span className="text-[9px] font-bold uppercase tracking-widest text-brand-800">
-                      Advogada Titular
+                      Advogada Titular & Sócia
                     </span>
                     <h3 className="font-serif text-xl font-semibold text-ink">
-                      Dra. Catarina Souza
+                      Dra. Ana Flávia Guimarães
                     </h3>
                     <p className="text-xs text-ink-soft">
-                      Bancário · Superendividamento · Consignados · Consumidor ·
-                      Cível · Família · INSS
+                      Direito Imobiliário · Regularização Fundiária · Usucapião · Inventários · Retificação de Matrícula
                     </p>
                     <p className="mt-1 text-[11px] font-medium text-brand-900">
-                      Beco da Pena, 29 - Centro, Diamantina - MG · Atendimento
-                      presencial e digital
+                      R. Macau do Meio, 135 - 2° andar - Centro, Diamantina - MG · Atendimento presencial e digital
                     </p>
                   </div>
                 </div>
@@ -867,37 +841,37 @@ export default function Home() {
                 <div className="flex items-center gap-2">
                   <CheckCircle2
                     size={15}
-                    className="shrink-0 text-brand-800"
+                    className="shrink-0 text-brand-700"
                   />
                   <span>
-                    Atendimento humanizado, ético e atento às suas necessidades
+                    Atendimento humanizado, acolhedor e focado no cliente
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2
                     size={15}
-                    className="shrink-0 text-brand-800"
+                    className="shrink-0 text-brand-700"
                   />
                   <span>
-                    Esclarecimento completo de dúvidas em linguagem clara
+                    Agilidade e rapidez ímpar na condução extrajudicial
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2
                     size={15}
-                    className="shrink-0 text-brand-800"
+                    className="shrink-0 text-brand-700"
                   />
                   <span>
-                    Sede própria no Centro de Diamantina - MG (Beco da Pena, 29)
+                    Escritório acolhedor no Centro de Diamantina - MG
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2
                     size={15}
-                    className="shrink-0 text-brand-800"
+                    className="shrink-0 text-brand-700"
                   />
                   <span>
-                    Nota máxima 5,0 estrelas no Google em 22 avaliações reais
+                    Avaliação máxima de 5,0 estrelas unânimes no Google
                   </span>
                 </div>
               </motion.div>
@@ -908,13 +882,14 @@ export default function Home() {
               >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Catarina Souza! Gostaria de agendar uma consulta sobre o meu caso."
+                    "Olá, Dra. Ana Flávia! Gostaria de agendar uma consulta sobre regularização de imóvel."
                   )}
                   target="_blank"
                   size="md"
+                  variant="gold"
                   className="rounded-full shadow-md"
                 >
-                  <WhatsAppIcon size={16} /> Falar com a Dra. Catarina
+                  <WhatsAppIcon size={16} /> Falar com a Dra. Ana Flávia
                 </GlowingButton>
                 <a
                   href={`tel:+${WHATSAPP_NUMBER}`}
@@ -942,16 +917,16 @@ export default function Home() {
             >
               <Heading
                 eyebrow="SERVIÇOS JURÍDICOS & PILARES DE ATUAÇÃO"
-                description="Soluções jurídicas personalizadas para defender sua renda, seu patrimônio, seus direitos como consumidor e sua família na Microrregião de Diamantina e em todo o Brasil."
+                description="Soluções completas em Direito Imobiliário para garantir segurança jurídica, registro definitivo e proteção do patrimônio da sua família ou empresa em Diamantina e no Vale do Jequitinhonha."
               >
-                Atuação estratégica e comprometida com{" "}
-                <span className="italic text-brand-800">
-                  a defesa dos seus direitos.
+                Estratégias jurídicas completas em{" "}
+                <span className="italic text-brand-700">
+                  Direito Imobiliário & Cartorário.
                 </span>
               </Heading>
               <p className="max-w-[270px] pb-1 text-xs leading-6 text-ink-soft">
                 Selecione uma especialidade abaixo para ver os detalhes de
-                atuação e iniciar seu atendimento pelo WhatsApp.
+                atuação e iniciar seu atendimento direto pelo WhatsApp.
               </p>
             </motion.div>
 
@@ -968,7 +943,7 @@ export default function Home() {
                   <motion.article
                     key={area.id}
                     variants={reveal}
-                    className="group flex min-h-[350px] flex-col rounded-xl border border-ink/10 bg-white p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-700/40 hover:shadow-card sm:p-8"
+                    className="group flex min-h-[350px] flex-col rounded-xl border border-ink/10 bg-white p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-500 hover:shadow-card sm:p-8"
                   >
                     <div className="flex items-start justify-between">
                       <span className="grid size-12 place-items-center rounded-full bg-brand-50 text-brand-800 transition-colors group-hover:bg-brand-800 group-hover:text-white">
@@ -996,7 +971,7 @@ export default function Home() {
                       onClick={() => setActiveArea(area)}
                       className="group/link mt-auto inline-flex w-fit items-center gap-2 pt-6 text-[10px] font-bold uppercase tracking-[0.16em] text-brand-800 hover:text-brand-700"
                     >
-                      Ver detalhes e tópicos{" "}
+                      Ver detalhes e demandas{" "}
                       <ArrowRight
                         size={14}
                         className="transition-transform group-hover/link:translate-x-1"
@@ -1009,36 +984,37 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Seção Especial: Orientações Jurídicas em Destaque (Superendividamento & Consignados) */}
+        {/* Seção Especial: Por que Regularizar o seu Imóvel? (Destaque Imobiliário) */}
         <section
-          id="orientacoes"
-          className="scroll-mt-24 border-y border-ink/10 bg-[#f4ede0] py-20 sm:py-28 lg:py-32"
+          id="regularizacao"
+          className="scroll-mt-24 border-y border-ink/10 bg-[#f6f1e8] py-20 sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
               <Heading
-                eyebrow="PROTEÇÃO FINANCEIRA & DEFESA DO CONSUMIDOR"
-                description="Confira duas das principais frentes de atuação do escritório Catarina Souza Advogada na proteção da sua renda, aposentadoria e dignidade financeira."
+                eyebrow="SEGURANÇA JURÍDICA & VALORIZAÇÃO PATRIMONIAL"
+                description="Entenda os riscos reais de possuir um imóvel sem matrícula ou escritura e saiba como a regularização jurídica transforma posse em patrimônio valorizado e protegido."
               >
-                Cobranças abusivas ou dívidas impagáveis?{" "}
-                <span className="italic text-brand-800">
-                  Conheça os seus direitos.
+                Imóvel sem escritura ou com pendência?{" "}
+                <span className="italic text-brand-700">
+                  Quem não registra não é dono.
                 </span>
               </Heading>
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá, Dra. Catarina Souza! Quero analisar meu caso de dívida bancária / empréstimo consignado."
+                  "Olá, Dra. Ana Flávia! Gostaria de analisar a situação documental do meu imóvel."
                 )}
                 target="_blank"
                 size="md"
+                variant="gold"
                 className="rounded-full shadow-sm"
               >
-                <WhatsAppIcon size={16} /> Analisar Meu Caso no WhatsApp
+                <WhatsAppIcon size={16} /> Analisar Documentação no WhatsApp
               </GlowingButton>
             </div>
 
             <div className="mt-12 grid gap-8 lg:grid-cols-2">
-              {/* Card 1: Lei do Superendividamento (imgi_10 full visual) */}
+              {/* Card 1: Regularização Cartorária e Escritura (imgi_21 reading book) */}
               <motion.article
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1048,54 +1024,52 @@ export default function Home() {
               >
                 <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl border border-brand-700/25 bg-brand-950 shadow-md">
                   <Image
-                    src={IMG_SUPERENDIVIDAMENTO_SRC}
-                    alt="Está difícil pagar todas as suas dívidas? Conheça a possibilidade de repactuação prevista na Lei do Superendividamento — Catarina Souza Advogada"
+                    src={IMG_REGISTRO_SRC}
+                    alt="Regularização de Imóveis e Registro Cartorário — Guimarães e Canuto Advogados"
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 28vw"
-                    className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
+                    className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
                   />
                 </div>
                 <div className="flex h-full flex-col justify-between py-1 sm:pr-2">
                   <div>
                     <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-700/20 bg-brand-50 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-brand-800">
-                      <Landmark size={13} /> Lei nº 14.181/2021
+                      <BookOpen size={13} /> Registro de Imóveis & Saneamento
                     </span>
                     <h3 className="mt-3.5 font-serif text-2xl leading-tight text-ink sm:text-[1.65rem]">
-                      Repactuação de Dívidas pelo Superendividamento
+                      Contratos de Gaveta & Escritura Definitiva
                     </h3>
                     <p className="mt-2.5 text-[13px] leading-6 text-ink-soft">
-                      Quando empréstimos e dívidas comprometem o sustento básico,
-                      a lei permite repactuar todos os débitos em um plano
-                      compatível com sua renda, preservando o mínimo existencial.
+                      O contrato de gaveta comprova apenas a negociação, mas não transfere a propriedade legal perante o Cartório. Sem a matrícula regularizada, o imóvel corre risco de penhora por dívidas do antigo proprietário e perde até 40% do seu valor comercial.
                     </p>
                     <ul className="mt-3.5 space-y-1.5 text-xs font-medium text-ink">
                       <li className="flex items-center gap-2">
                         <CheckCircle2
                           size={14}
-                          className="shrink-0 text-brand-800"
+                          className="shrink-0 text-brand-700"
                         />
-                        <span>Proteção da renda e do mínimo existencial</span>
+                        <span>Valorização imediata de mercado e facilidade de venda</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <CheckCircle2
                           size={14}
-                          className="shrink-0 text-brand-800"
+                          className="shrink-0 text-brand-700"
                         />
-                        <span>Plano judicial ou extrajudicial de pagamento</span>
+                        <span>Apto para financiamento bancário e caução</span>
                       </li>
                     </ul>
                   </div>
-                  <div className="mt-5 pt-3 border-t border-ink/10">
+                  <div className="mt-5 border-t border-ink/10 pt-3">
                     <a
                       href={getWhatsAppUrl(
-                        "Olá, Dra. Catarina Souza! Vi a orientação sobre a Lei do Superendividamento e gostaria de saber como funciona a repactuação de dívidas."
+                        "Olá, Dra. Ana Flávia! Tenho um contrato de gaveta / imóvel sem escritura e gostaria de orientação para regularizar."
                       )}
                       target="_blank"
                       rel="noreferrer"
                       className="inline-flex w-full items-center justify-between rounded-xl border border-brand-800/25 bg-brand-50/80 px-4 py-3 text-[11px] font-bold uppercase tracking-[0.12em] text-brand-900 transition-all hover:border-brand-800 hover:bg-brand-800 hover:text-white"
                     >
                       <span className="inline-flex items-center gap-2">
-                        <WhatsAppIcon size={15} /> Solicitar análise de dívidas
+                        <WhatsAppIcon size={15} /> Solicitar análise de escritura
                       </span>
                       <ArrowUpRight size={15} />
                     </a>
@@ -1103,7 +1077,7 @@ export default function Home() {
                 </div>
               </motion.article>
 
-              {/* Card 2: Empréstimo Consignado Não Contratado (imgi_9 full visual) */}
+              {/* Card 2: Usucapião & Inventário (imgi_31 dark background blazer) */}
               <motion.article
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1113,54 +1087,52 @@ export default function Home() {
               >
                 <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl border border-brand-700/25 bg-brand-950 shadow-md">
                   <Image
-                    src={IMG_CONSIGNADO_SRC}
-                    alt="Descontaram um empréstimo consignado que você não contratou? Saiba o que fazer! — Catarina Souza Advogada"
+                    src={IMG_BLAZER_SRC}
+                    alt="Usucapião Extrajudicial e Inventários de Imóveis em Diamantina - MG"
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 28vw"
-                    className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
+                    className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
                   />
                 </div>
                 <div className="flex h-full flex-col justify-between py-1 sm:pr-2">
                   <div>
                     <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-700/20 bg-brand-50 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-brand-800">
-                      <BadgeAlert size={13} /> Defesa contra Fraudes
+                      <Landmark size={13} /> Extrajudicial & Cartório
                     </span>
                     <h3 className="mt-3.5 font-serif text-2xl leading-tight text-ink sm:text-[1.65rem]">
-                      Empréstimo Consignado Não Contratado
+                      Usucapião em Cartório & Inventário Ágil
                     </h3>
                     <p className="mt-2.5 text-[13px] leading-6 text-ink-soft">
-                      Identificou descontos desconhecidos no seu benefício do
-                      INSS ou contracheque? Atuamos com urgência para suspender
-                      as cobranças e buscar restituição e indenização.
+                      Possui a posse mansa e pacífica de um imóvel há anos? Ou herdou uma propriedade e o inventário está travado? Conduzimos procedimentos extrajudiciais céleres diretamente nos cartórios de notas e registro, solucionando a titularidade sem anos de espera no Judiciário.
                     </p>
                     <ul className="mt-3.5 space-y-1.5 text-xs font-medium text-ink">
                       <li className="flex items-center gap-2">
                         <CheckCircle2
                           size={14}
-                          className="shrink-0 text-brand-800"
+                          className="shrink-0 text-brand-700"
                         />
-                        <span>Pedido liminar para suspender descontos</span>
+                        <span>Usucapião extrajudicial ágil no Cartório de Imóveis</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <CheckCircle2
                           size={14}
-                          className="shrink-0 text-brand-800"
+                          className="shrink-0 text-brand-700"
                         />
-                        <span>Restituição em dobro e danos morais</span>
+                        <span>Inventários extrajudiciais finalizados em semanas</span>
                       </li>
                     </ul>
                   </div>
-                  <div className="mt-5 pt-3 border-t border-ink/10">
+                  <div className="mt-5 border-t border-ink/10 pt-3">
                     <a
                       href={getWhatsAppUrl(
-                        "Olá, Dra. Catarina Souza! Descontaram um empréstimo consignado que eu não contratei e gostaria de saber como proceder."
+                        "Olá, Dra. Ana Flávia! Gostaria de consultar a viabilidade de Usucapião ou Inventário de um imóvel."
                       )}
                       target="_blank"
                       rel="noreferrer"
                       className="inline-flex w-full items-center justify-between rounded-xl border border-brand-800/25 bg-brand-50/80 px-4 py-3 text-[11px] font-bold uppercase tracking-[0.12em] text-brand-900 transition-all hover:border-brand-800 hover:bg-brand-800 hover:text-white"
                     >
                       <span className="inline-flex items-center gap-2">
-                        <WhatsAppIcon size={15} /> Denunciar desconto indevido
+                        <WhatsAppIcon size={15} /> Consultar Usucapião ou Inventário
                       </span>
                       <ArrowUpRight size={15} />
                     </a>
@@ -1181,20 +1153,18 @@ export default function Home() {
               <Heading
                 eyebrow="NOSSO COMPROMISSO PROFISSIONAL"
                 light
-                description="O reconhecimento como um dos escritórios mais bem avaliados de Diamantina - MG é fruto de um método de trabalho pautado na ética, na escuta atenta e na eficiência técnica."
+                description="O reconhecimento unânime como um dos escritórios mais bem avaliados de Diamantina - MG é reflexo direto de um método de trabalho que alia o rigor técnico do Direito Imobiliário à escuta acolhedora de cada família."
               >
                 Dedicação personalizada e{" "}
                 <span className="italic text-brand-200">
-                  compromisso com cada cliente.
+                  segurança jurídica em cada etapa.
                 </span>
               </Heading>
 
-              <blockquote className="mt-8 rounded-xl border border-brand-400/25 bg-white/5 p-6 font-serif text-base italic leading-7 text-brand-100">
-                &ldquo;Excelente profissional com atendimento humanizado e
-                compromisso com o resultado! Vasto conhecimento na área
-                Jurídica. Esta eu indico.&rdquo;
+              <blockquote className="mt-8 rounded-xl border border-brand-300/25 bg-white/5 p-6 font-serif text-base italic leading-7 text-brand-100">
+                &ldquo;Advogados como poucos! Super humanos, responsáveis com a orientação para o cliente, e super eficientes! Resolveram meu problema com total responsabilidade, agilidade e carinho comigo!&rdquo;
                 <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-brand-300">
-                  — Ricardo Soares · Avaliação 5,0 ★ no Google
+                  — Marta Barbosa · Avaliação 5,0 ★ no Google
                 </footer>
               </blockquote>
             </div>
@@ -1209,18 +1179,18 @@ export default function Home() {
               {[
                 [
                   "01",
-                  "Atendimento humanizado e escuta acolhedora",
-                  "Recebemos cada cliente com atenção integral, tirando todas as dúvidas de forma clara, respeitosa e sem jargões complicados.",
+                  "Orientação focada no cliente com escuta atenta",
+                  "Explicamos cada fase do processo e da regularização cartorária em linguagem clara, transparente e acessível, esclarecendo todas as dúvidas.",
                 ],
                 [
                   "02",
-                  "Estratégia jurídica sob medida para o seu caso",
-                  "Analisamos minuciosamente contratos, extratos previdenciários e documentos processuais para construir a tese jurídica mais sólida e eficaz.",
+                  "Eficácia e rapidez ímpar na condução extrajudicial",
+                  "Priorizamos procedimentos extrajudiciais em cartórios e órgãos públicos para entregar a regularização do imóvel no menor tempo legal possível.",
                 ],
                 [
                   "03",
-                  "Ética, responsabilidade e acompanhamento transparente",
-                  "Atuamos com seriedade absoluta do início à conclusão da demanda, mantendo você informado sobre cada avanço do seu processo.",
+                  "Escritório acolhedor e localização privilegiada no Centro",
+                  "Estrutura moderna e confortável na R. Macau do Meio, 135, proporcionando tranquilidade e sigilo absoluto para tratar do patrimônio da sua família.",
                 ],
               ].map(([number, title, description]) => (
                 <motion.div
@@ -1243,7 +1213,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Avaliações no Google (Depoimentos Reais - 5,0 estrelas · 22 avaliações) */}
+        {/* Avaliações no Google (Depoimentos Reais - 5,0 estrelas · 13 avaliações) */}
         <section
           id="avaliacoes"
           className="scroll-mt-24 bg-white py-20 sm:py-28 lg:py-32"
@@ -1251,12 +1221,12 @@ export default function Home() {
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
               <Heading
-                eyebrow="AVALIAÇÕES NO GOOGLE · NOTA 5,0 ★ (22 AVALIAÇÕES)"
-                description="Confira os depoimentos reais de clientes que confiaram suas causas à Dra. Catarina Souza em Diamantina e região."
+                eyebrow="AVALIAÇÕES NO GOOGLE · NOTA 5,0 ★ (13 AVALIAÇÕES)"
+                description="Confira os depoimentos reais de clientes que confiaram a regularização de seus imóveis e demandas jurídicas ao escritório Guimarães e Canuto Advogados em Diamantina e região."
               >
-                Reconhecida pelos clientes pela{" "}
-                <span className="italic text-brand-800">
-                  atenção, ética e excelência.
+                Reconhecido pela{" "}
+                <span className="italic text-brand-700">
+                  orientação atenciosa, rapidez e eficácia ímpar.
                 </span>
               </Heading>
 
@@ -1281,7 +1251,7 @@ export default function Home() {
                     </div>
                   </div>
                   <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-brand-900">
-                    Catarina Souza Advogada · Diamantina
+                    Guimarães e Canuto Advogados · Diamantina
                   </p>
                   <a
                     href={GOOGLE_MAPS_URL}
@@ -1289,7 +1259,7 @@ export default function Home() {
                     rel="noreferrer"
                     className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-brand-800 transition-colors hover:text-brand-950"
                   >
-                    22 avaliações no Google <ArrowUpRight size={13} />
+                    13 avaliações no Google <ArrowUpRight size={13} />
                   </a>
                 </div>
               </div>
@@ -1300,7 +1270,7 @@ export default function Home() {
               {clientReviews.map((review) => (
                 <article
                   key={review.name}
-                  className="group relative flex flex-col justify-between rounded-xl border border-ink/10 bg-white p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-700/40 hover:shadow-card sm:p-8"
+                  className="group relative flex flex-col justify-between rounded-xl border border-ink/10 bg-white p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-500 hover:shadow-card sm:p-8"
                 >
                   <div>
                     {/* Header: Stars + Date + Google icon */}
@@ -1329,7 +1299,7 @@ export default function Home() {
                     {review.reply && (
                       <div className="mt-4 rounded-lg border border-brand-700/20 bg-brand-50/80 p-3 text-[11px] leading-relaxed text-brand-950">
                         <span className="mb-0.5 block text-[9px] font-bold uppercase tracking-wider text-brand-800">
-                          Resposta de Catarina Souza Advogada:
+                          Resposta de Guimarães e Canuto Advogados:
                         </span>
                         &ldquo;{review.reply}&rdquo;
                       </div>
@@ -1358,17 +1328,17 @@ export default function Home() {
             <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-ink/10 pt-8 sm:flex-row">
               <div className="flex flex-wrap items-center gap-2">
                 {[
-                  "Atendimento humanizado",
-                  "Compromisso com o resultado",
-                  "Ética, competente e responsável",
-                  "Melhor escritório de Diamantina",
-                  "Tirou todas as dúvidas",
+                  "Orientação para o cliente",
+                  "Eficiência e rapidez ímpar",
+                  "Escritório acolhedor",
+                  "Direito Imobiliário & Cartórios",
+                  "Atendimento humano e responsável",
                 ].map((tag) => (
                   <span
                     key={tag}
                     className="inline-flex items-center gap-1.5 rounded-full border border-ink/10 bg-ivory px-3.5 py-1.5 text-[11px] font-medium text-ink-soft"
                   >
-                    <CheckCircle2 size={13} className="text-brand-800" />
+                    <CheckCircle2 size={13} className="text-brand-700" />
                     {tag}
                   </span>
                 ))}
@@ -1399,11 +1369,11 @@ export default function Home() {
             <div>
               <Heading
                 eyebrow="CONTATO & SEDE EM DIAMANTINA - MG"
-                description="Agende seu atendimento presencial em nosso escritório no Centro de Diamantina ou fale conosco pelo WhatsApp para atendimento rápido em toda a região."
+                description="Agende seu atendimento presencial em nosso escritório boutique no Centro de Diamantina ou fale conosco pelo WhatsApp para consultoria rápida em toda a região."
               >
                 Estamos à disposição para{" "}
-                <span className="italic text-brand-800">
-                  defender os seus direitos.
+                <span className="italic text-brand-700">
+                  regularizar o seu imóvel.
                 </span>
               </Heading>
 
@@ -1412,6 +1382,7 @@ export default function Home() {
                   href={getWhatsAppUrl()}
                   target="_blank"
                   size="lg"
+                  variant="gold"
                   className="rounded-full shadow-md"
                 >
                   <WhatsAppIcon size={17} /> Iniciar Conversa no WhatsApp
@@ -1426,7 +1397,7 @@ export default function Home() {
                 <div className="flex items-start gap-3">
                   <Clock
                     size={16}
-                    className="mt-0.5 shrink-0 text-brand-800"
+                    className="mt-0.5 shrink-0 text-brand-700"
                   />
                   <div>
                     <p className="font-semibold text-ink">
@@ -1442,7 +1413,7 @@ export default function Home() {
                 </div>
 
                 <div className="flex items-center gap-3 pt-1">
-                  <Phone size={16} className="shrink-0 text-brand-800" />
+                  <Phone size={16} className="shrink-0 text-brand-700" />
                   <a
                     href={`tel:+${WHATSAPP_NUMBER}`}
                     className="font-medium text-ink transition-colors hover:text-brand-800"
@@ -1452,7 +1423,7 @@ export default function Home() {
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <Mail size={16} className="shrink-0 text-brand-800" />
+                  <Mail size={16} className="shrink-0 text-brand-700" />
                   <a
                     href={`mailto:${EMAIL_CONTACT}`}
                     className="transition-colors hover:text-brand-800"
@@ -1464,7 +1435,7 @@ export default function Home() {
                 <div className="flex items-start gap-3">
                   <MapPin
                     size={16}
-                    className="mt-0.5 shrink-0 text-brand-800"
+                    className="mt-0.5 shrink-0 text-brand-700"
                   />
                   <span>{ADDRESS_TEXT}</span>
                 </div>
@@ -1473,7 +1444,7 @@ export default function Home() {
 
             {/* Address & Office Hours Card */}
             <div className="relative overflow-hidden rounded-2xl border border-ink/10 bg-white p-7 shadow-card sm:p-10">
-              <div className="absolute right-0 top-0 h-1.5 w-32 bg-brand-800" />
+              <div className="absolute right-0 top-0 h-1.5 w-32 bg-brand-700" />
 
               <div className="flex items-center gap-4">
                 <span className="grid size-12 place-items-center rounded-full bg-brand-50 text-brand-800">
@@ -1491,11 +1462,10 @@ export default function Home() {
 
               <address className="mt-7 max-w-md text-[14px] not-italic leading-7 text-ink-soft">
                 <strong className="font-semibold text-ink">
-                  Catarina Souza Advogada
+                  Guimarães e Canuto Advogados
                 </strong>
                 <br />
-                Dra. Catarina Souza · Serviços Jurídicos na Microrregião de
-                Diamantina, MG
+                Dra. Ana Flávia Guimarães · Direito Imobiliário & Regularização de Imóveis
                 <br />
                 {ADDRESS_TEXT}
               </address>
@@ -1519,14 +1489,13 @@ export default function Home() {
 
               <div className="flex flex-wrap items-center justify-between gap-4">
                 <p className="text-xs text-ink-soft">
-                  Centro Histórico de Diamantina · Atendimento presencial e
-                  digital
+                  Centro de Diamantina · Atendimento presencial e digital
                 </p>
                 <a
                   href={GOOGLE_MAPS_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border border-ink/15 px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-ink transition-colors hover:border-brand-800 hover:bg-brand-50 hover:text-brand-900"
+                  className="inline-flex items-center gap-2 rounded-full border border-ink/15 px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-ink transition-colors hover:border-brand-700 hover:bg-brand-50 hover:text-brand-900"
                 >
                   Traçar Rota no Google Maps <ArrowUpRight size={14} />
                 </a>
@@ -1535,26 +1504,24 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Pre-Footer CTA Strip */}
-        <section className="bg-brand-800 px-5 py-14 text-white shadow-inner sm:px-8 sm:py-16 lg:px-12">
+        {/* Pre-Footer CTA Strip - Deep Luxury Gold/Espresso Accent */}
+        <section className="bg-gradient-to-r from-brand-900 via-brand-800 to-brand-900 px-5 py-14 text-white shadow-inner sm:px-8 sm:py-16 lg:px-12">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-7 sm:flex-row sm:items-center">
             <div>
               <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-brand-200">
-                <Sparkles size={13} /> CATARINA SOUZA ADVOGADA · DIAMANTINA -
-                MG
+                <Sparkles size={13} /> GUIMARÃES E CANUTO ADVOGADOS · DIAMANTINA - MG
               </p>
               <h2 className="mt-3 max-w-2xl font-serif text-3xl leading-tight text-white sm:text-4xl">
-                Precisa de orientação jurídica segura, ética e comprometida com
-                o seu resultado?
+                Precisa regularizar seu imóvel com agilidade, segurança jurídica e eficácia?
               </h2>
             </div>
             <a
               href={getWhatsAppUrl(
-                "Olá, Dra. Catarina Souza! Gostaria de agendar uma consulta inicial para avaliar meu caso."
+                "Olá, Dra. Ana Flávia! Gostaria de agendar uma consulta inicial para avaliar a regularização do meu imóvel."
               )}
               target="_blank"
               rel="noreferrer"
-              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-full bg-white px-7 py-4 text-[11px] font-bold uppercase tracking-[0.14em] text-brand-900 shadow-md transition-all hover:-translate-y-0.5 hover:bg-brand-50 hover:shadow-lg"
+              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-full bg-gradient-to-r from-brand-300 via-brand-200 to-brand-300 px-7 py-4 text-[11px] font-bold uppercase tracking-[0.14em] text-brand-950 shadow-md transition-all hover:-translate-y-0.5 hover:brightness-105 hover:shadow-lg"
             >
               <WhatsAppIcon size={17} /> Falar no WhatsApp{" "}
               <ArrowUpRight size={15} />
@@ -1568,25 +1535,22 @@ export default function Home() {
             <div>
               <a
                 href="#inicio"
-                aria-label="Catarina Souza Advogada"
+                aria-label="Guimarães e Canuto Advogados"
                 className="inline-block"
               >
                 <Image
                   src={LOGO_SRC}
-                  width={1774}
-                  height={887}
-                  alt="Catarina Souza Advogada"
-                  className="h-20 w-auto object-contain"
+                  width={2172}
+                  height={724}
+                  alt="Guimarães e Canuto Advogados"
+                  className="h-16 w-auto object-contain sm:h-20"
                 />
               </a>
               <p className="mt-4 max-w-xs text-xs leading-6 text-brand-100/70">
-                Serviços jurídicos com atendimento humanizado, ética e
-                compromisso com o resultado na Microrregião de Diamantina - MG
-                e em todo o Brasil.
+                Direito Imobiliário, Regularização Fundiária, Usucapião, Inventários e Demandas Cartorárias em Diamantina - MG e em todo o Brasil.
               </p>
               <p className="mt-3 text-[11px] font-semibold text-brand-300">
-                Dra. Catarina Souza · Catarina Souza Sociedade Individual de
-                Advocacia
+                Dra. Ana Flávia Guimarães · Guimarães e Canuto Advogados
               </p>
             </div>
 
@@ -1599,13 +1563,13 @@ export default function Home() {
                   Início
                 </a>
                 <a className="footer-link" href="#sobre">
-                  A Advogada & Escritório
+                  O Escritório & Advogada
                 </a>
                 <a className="footer-link" href="#atuacao">
-                  Áreas de Atuação
+                  Especialidades Jurídicas
                 </a>
-                <a className="footer-link" href="#orientacoes">
-                  Superendividamento & Consignados
+                <a className="footer-link" href="#regularizacao">
+                  Por que Regularizar o Imóvel?
                 </a>
                 <a className="footer-link" href="#avaliacoes">
                   Avaliações no Google (5,0 ★)
@@ -1623,7 +1587,7 @@ export default function Home() {
               <div className="mt-4 flex flex-col items-start gap-2.5 text-xs text-brand-100/75">
                 <a
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Catarina Souza! Gostaria de solicitar um atendimento."
+                    "Olá, Dra. Ana Flávia! Gostaria de solicitar um atendimento para o meu imóvel."
                   )}
                   target="_blank"
                   rel="noreferrer"
@@ -1663,13 +1627,10 @@ export default function Home() {
 
           <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-white/15 pt-6 text-[10px] text-brand-100/55 sm:flex-row sm:items-center sm:justify-between">
             <p>
-              © {new Date().getFullYear()} Catarina Souza Advogada (Catarina
-              Souza Sociedade Individual de Advocacia). Todos os direitos
-              reservados.
+              © {new Date().getFullYear()} Guimarães e Canuto Advogados. Todos os direitos reservados.
             </p>
             <p>
-              Conteúdo meramente informativo, em estrita conformidade com o
-              Código de Ética e Disciplina da OAB.
+              Conteúdo meramente informativo, em estrita conformidade com o Código de Ética e Disciplina da OAB.
             </p>
           </div>
         </footer>
@@ -1681,7 +1642,7 @@ export default function Home() {
         >
           <a
             href={getWhatsAppUrl(
-              "Olá, Dra. Catarina Souza! Gostaria de tirar uma dúvida sobre meu caso."
+              "Olá, Dra. Ana Flávia! Gostaria de tirar uma dúvida sobre a regularização do meu imóvel."
             )}
             target="_blank"
             rel="noreferrer"
@@ -1718,14 +1679,14 @@ export default function Home() {
               >
                 <button
                   type="button"
-                  aria-label="Fechar detalhes da área"
+                  aria-label="Fechar detalhes da especialidade"
                   onClick={() => setActiveArea(null)}
                   className="absolute right-5 top-5 grid size-10 place-items-center rounded-full border border-ink/15 text-ink transition-colors hover:border-brand-800 hover:text-brand-800"
                 >
                   <X size={18} />
                 </button>
 
-                <p className="eyebrow">ESPECIALIDADE JURÍDICA</p>
+                <p className="eyebrow">DIREITO IMOBILIÁRIO & CARTÓRIOS</p>
 
                 <h2
                   id="area-dialog-title"
@@ -1748,7 +1709,7 @@ export default function Home() {
                         key={topic}
                         className="flex items-center gap-3 text-sm text-ink"
                       >
-                        <span className="size-2 shrink-0 rounded-full bg-brand-800" />
+                        <span className="size-2 shrink-0 rounded-full bg-brand-700" />
                         <span>{topic}</span>
                       </li>
                     ))}
@@ -1760,9 +1721,10 @@ export default function Home() {
                     href={getWhatsAppUrl(activeArea.whatsAppText)}
                     target="_blank"
                     size="md"
+                    variant="gold"
                     className="rounded-full shadow-md"
                   >
-                    <WhatsAppIcon size={16} /> Consultar sobre esta área
+                    <WhatsAppIcon size={16} /> Consultar sobre esta demanda
                   </GlowingButton>
                   <button
                     type="button"

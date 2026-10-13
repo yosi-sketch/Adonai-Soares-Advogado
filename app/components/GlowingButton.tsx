@@ -9,7 +9,7 @@ interface GlowingButtonProps {
   onClick?: () => void;
   className?: string;
   size?: "sm" | "md" | "lg";
-  variant?: "gold" | "outline" | "white";
+  variant?: "gold" | "champagne" | "outline" | "white";
 }
 
 export default function GlowingButton({
@@ -28,11 +28,13 @@ export default function GlowingButton({
   }[size];
 
   const variantClasses = {
-    gold: "border border-brand-800 bg-brand-800 text-white shadow-sm shadow-brand-950/15 hover:-translate-y-0.5 hover:border-brand-900 hover:bg-brand-900 hover:shadow-md hover:shadow-brand-800/25",
+    gold: "border border-brand-700 bg-brand-800 text-white shadow-sm shadow-brand-950/20 hover:-translate-y-0.5 hover:border-brand-600 hover:bg-brand-900 hover:shadow-gold",
+    champagne:
+      "border border-brand-400 bg-gradient-to-r from-brand-300 via-brand-200 to-brand-300 text-brand-950 font-bold shadow-sm hover:-translate-y-0.5 hover:shadow-gold hover:brightness-105",
     outline:
-      "border border-brand-800/50 bg-transparent text-brand-800 hover:-translate-y-0.5 hover:border-brand-800 hover:bg-brand-50 hover:text-brand-900",
+      "border border-brand-700/50 bg-transparent text-brand-800 hover:-translate-y-0.5 hover:border-brand-800 hover:bg-brand-50 hover:text-brand-900",
     white:
-      "border border-white bg-white text-brand-900 shadow-sm hover:-translate-y-0.5 hover:bg-brand-50 hover:text-brand-950 hover:shadow-md",
+      "border border-white bg-white text-brand-950 shadow-sm hover:-translate-y-0.5 hover:bg-brand-50 hover:text-brand-950 hover:shadow-md",
   }[variant];
 
   const classes =
