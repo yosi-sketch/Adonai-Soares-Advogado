@@ -1,16 +1,16 @@
-# ALP Advocacia e Consultoria
-## Dra. Ana Letícia Pereira
+# Catarina Souza Advogada
+## Dra. Catarina Souza · Diamantina - MG
 
-Site institucional de alto padrão da **ALP Advocacia e Consultoria**, liderada pela **Dra. Ana Letícia Pereira**, com sede física na R. Joaquim Bento Carvalho, 108 - Sl 2 - Centro, Três Corações - MG, CEP 37410-000, e atendimento digital em todo o Brasil.
+Site institucional de alto padrão do escritório **Catarina Souza Advogada** (*Catarina Souza Sociedade Individual de Advocacia*), liderado pela **Dra. Catarina Souza**, com sede física no Beco da Pena, 29 - Centro, Diamantina - MG, CEP 39100-000, atuação em toda a Microrregião de Diamantina e atendimento digital em todo o Brasil.
 
 ## Atuação Especializada
 
-- **Direito de Trânsito** (Defesa de CNH, Suspensão, Cassação, Lei Seca / Bafômetro, Recursos)
-- **Direito de Família e Sucessões** (Divórcio, Pensão Alimentícia, Guarda, Partilha, Inventário)
-- **Direito Previdenciário (INSS)** (Planejamento, Aposentadorias, BPC/LOAS, Auxílios, Recursos)
-- **Direito Cível e Contratos** (Indenizações, Cobranças, Análise de Contratos, Conflitos Patrimoniais)
-- **Direito do Consumidor** (Inscrição indevida no SPC/Serasa, Golpes Bancários, Práticas Abusivas)
-- **Consultoria Jurídica Estratégica & Preventiva** (Assessoria contínua para pessoas físicas e empresas)
+- **Direito Bancário & Superendividamento** (Repactuação de dívidas pela Lei do Superendividamento, preservação do mínimo existencial, revisão de juros e contratos bancários)
+- **Empréstimos Consignados & Fraudes Bancárias** (Defesa contra descontos indevidos em aposentadorias e folha de pagamento, RMC/RCC, restituição em dobro e indenizações)
+- **Direito do Consumidor** (Exclusão de negativação indevida no SPC/Serasa, golpes bancários, cobranças abusivas e falhas em serviços essenciais)
+- **Direito Cível, Contratos & Patrimônio** (Ações indenizatórias, cobranças, execuções, elaboração e revisão de contratos e responsabilidade civil)
+- **Direito de Família & Sucessões** (Divórcio consensual e litigioso, pensão alimentícia, guarda, partilha de bens e inventários)
+- **Direito Previdenciário & Correspondência Jurídica** (Aposentadorias, benefícios por incapacidade, BPC/LOAS e diligências jurídicas na Comarca de Diamantina - MG)
 
 ## Desenvolvimento
 

@@ -17,37 +17,36 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#141210",
+  themeColor: "#120f0a",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.advocaciaalp.com.br"),
+  metadataBase: new URL("https://www.catarinasouzaadvogada.com.br"),
   title:
-    "ALP Advocacia e Consultoria | Três Corações - MG | Dra. Ana Letícia Pereira",
+    "Catarina Souza Advogada | Diamantina - MG | Serviços Jurídicos Especializados",
   description:
-    "Soluções jurídicas estratégicas com alto rigor técnico e atendimento humano conduzidas pela Dra. Ana Letícia Pereira na ALP Advocacia e Consultoria. Especialistas em Direito de Trânsito, Família, Cível, Previdenciário e Consumidor. Sede no Centro de Três Corações - MG (R. Joaquim Bento Carvalho, 108, Sala 2) e atendimento on-line em todo o Brasil. Avaliação máxima 5,0 estrelas no Google.",
+    "Atendimento jurídico humanizado, ético e comprometido com resultados em Diamantina e toda a Microrregião de Diamantina - MG. Dra. Catarina Souza é especialista em Direito Bancário, Lei do Superendividamento, Fraudes em Empréstimo Consignado, Direito do Consumidor, Cível, Família e Previdenciário. Sede no Beco da Pena, 29 - Centro, Diamantina - MG. Nota máxima 5,0 estrelas no Google (22 avaliações).",
   keywords: [
-    "ALP Advocacia e Consultoria",
-    "ALP Advocacia",
-    "Dra. Ana Letícia Pereira",
-    "Advogada Três Corações MG",
-    "Advocacia Três Corações",
-    "Direito de Trânsito Três Corações",
-    "Suspensão de CNH Três Corações",
-    "Direito de Família Três Corações",
-    "Divórcio e Pensão Três Corações",
-    "Direito Previdenciário INSS Três Corações",
-    "Aposentadoria e BPC LOAS Três Corações",
-    "Direito Cível Três Corações",
-    "Direito do Consumidor Três Corações",
-    "Consultoria Jurídica Três Corações",
+    "Catarina Souza Advogada",
+    "Dra. Catarina Souza",
+    "Advogada Diamantina MG",
+    "Escritório de Advocacia Diamantina",
+    "Serviços Jurídicos Diamantina MG",
+    "Direito Bancário Diamantina",
+    "Lei do Superendividamento Diamantina",
+    "Empréstimo Consignado Não Contratado",
+    "Direito do Consumidor Diamantina",
+    "Direito Cível Diamantina",
+    "Direito de Família Diamantina",
+    "Direito Previdenciário INSS Diamantina",
+    "Advogada Correspondente Diamantina MG",
   ],
   authors: [
-    { name: "Dra. Ana Letícia Pereira" },
-    { name: "ALP Advocacia e Consultoria" },
+    { name: "Dra. Catarina Souza" },
+    { name: "Catarina Souza Advogada" },
   ],
-  creator: "ALP Advocacia e Consultoria",
-  publisher: "ALP Advocacia e Consultoria",
+  creator: "Catarina Souza Advogada",
+  publisher: "Catarina Souza Advogada",
   formatDetection: {
     telephone: true,
     address: true,
@@ -59,18 +58,18 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.advocaciaalp.com.br",
+    url: "https://www.catarinasouzaadvogada.com.br",
     title:
-      "ALP Advocacia e Consultoria | Soluções Jurídicas Estratégicas em Três Corações - MG",
+      "Catarina Souza Advogada | Soluções Jurídicas em Diamantina - MG",
     description:
-      "Atuação jurídica com excelência técnica, ética intransigente e dedicação artesanal a cada causa. Nota 5,0 estrelas no Google. Atendimento presencial em Três Corações e digital para todo o país.",
-    siteName: "ALP Advocacia e Consultoria",
+      "Atendimento humanizado e compromisso com o resultado na Microrregião de Diamantina - MG. Especialista em Direito Bancário, Superendividamento, Consignados, Consumidor, Cível e Família. Nota 5,0 ★ no Google.",
+    siteName: "Catarina Souza Advogada",
     images: [
       {
-        url: "/logo.png",
+        url: "/Logo Dourado Catarina Souza Advogada.png",
         width: 1774,
         height: 887,
-        alt: "ALP Advocacia e Consultoria",
+        alt: "Catarina Souza Advogada — Diamantina - MG",
       },
     ],
   },
@@ -84,45 +83,44 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "ALP Advocacia e Consultoria",
-    alternateName: "ALP Advocacia",
+    name: "Catarina Souza Advogada",
+    alternateName: "Catarina Souza Sociedade Individual de Advocacia",
     founder: {
       "@type": "Person",
-      name: "Dra. Ana Letícia Pereira",
-      jobTitle: "Advogada e Sócia-Fundadora",
+      name: "Dra. Catarina Souza",
+      jobTitle: "Advogada Titular",
     },
     address: {
       "@type": "PostalAddress",
-      streetAddress: "R. Joaquim Bento Carvalho, 108 - Sl 2 - Centro",
-      addressLocality: "Três Corações",
+      streetAddress: "Beco da Pena, 29 - Centro",
+      addressLocality: "Diamantina",
       addressRegion: "MG",
-      postalCode: "37410-000",
+      postalCode: "39100-000",
       addressCountry: "BR",
     },
-    telephone: "+55-35-99190-6280",
-    url: "https://www.advocaciaalp.com.br",
-    image: "https://www.advocaciaalp.com.br/logo.png",
+    telephone: "+55-38-98801-0869",
+    url: "https://www.catarinasouzaadvogada.com.br",
+    image:
+      "https://www.catarinasouzaadvogada.com.br/Logo%20Dourado%20Catarina%20Souza%20Advogada.png",
     priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "30",
+      reviewCount: "22",
     },
-    areaServed: ["Três Corações", "Minas Gerais", "Brasil"],
+    areaServed: [
+      "Diamantina",
+      "Microrregião de Diamantina",
+      "Vale do Jequitinhonha",
+      "Minas Gerais",
+      "Brasil",
+    ],
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
-        dayOfWeek: [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday",
-        ],
-        opens: "00:00",
-        closes: "23:59",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "08:00",
+        closes: "18:00",
       },
     ],
   };
@@ -138,7 +136,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen overflow-x-clip bg-ivory font-sans text-ink antialiased selection:bg-brand-700 selection:text-white">
+      <body className="min-h-screen overflow-x-clip bg-ivory font-sans text-ink antialiased selection:bg-brand-800 selection:text-white">
         {children}
       </body>
     </html>

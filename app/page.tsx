@@ -11,6 +11,8 @@ import {
 import {
   ArrowRight,
   ArrowUpRight,
+  Award,
+  BadgeAlert,
   Briefcase,
   CheckCircle2,
   Clock,
@@ -21,7 +23,6 @@ import {
   Menu,
   Phone,
   Scale,
-  ShieldAlert,
   ShieldCheck,
   Sparkles,
   Star,
@@ -29,51 +30,29 @@ import {
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
 
-function InstagramIcon({
-  size = 17,
-  className = "",
-}: {
-  size?: number;
-  className?: string;
-}) {
-  return (
-    <svg
-      aria-hidden="true"
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-    >
-      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-    </svg>
-  );
-}
-
-const WHATSAPP_NUMBER = "5535991906280";
-const PHONE_DISPLAY = "(35) 99190-6280";
-const EMAIL_CONTACT = "contato@advocaciaalp.com.br";
-
-const INSTAGRAM_URL = "https://www.instagram.com/advocacia_alp/";
-const INSTAGRAM_HANDLE = "@advocacia_alp";
+const WHATSAPP_NUMBER = "5538988010869";
+const PHONE_DISPLAY = "(38) 98801-0869";
+const EMAIL_CONTACT = "contato@catarinasouzaadvogada.com.br";
 
 const ADDRESS_TEXT =
-  "R. Joaquim Bento Carvalho, 108 - Sl 2 - Centro, Três Corações - MG, 37410-000, Brasil";
+  "Beco da Pena, 29 - Centro, Diamantina - MG, 39100-000";
 const GOOGLE_MAPS_URL =
-  "https://www.google.com/maps/search/?api=1&query=ALP+Advocacia+e+Consultoria+R.+Joaquim+Bento+Carvalho+108+Centro+Tr%C3%AAs+Cora%C3%A7%C3%B5es+MG";
+  "https://www.google.com/maps/search/?api=1&query=Catarina+Souza+Advogada+Beco+da+Pena+29+Centro+Diamantina+MG";
+
+const LOGO_SRC = "/Logo Dourado Catarina Souza Advogada.png";
+const IMG_CONSIGNADO_SRC =
+  "/imgi_9_825270124_18280603321291086_6369584387742786089_n.jpg";
+const IMG_SUPERENDIVIDAMENTO_SRC =
+  "/imgi_10_825449120_18280129957291086_5701673160777369769_n.jpg";
+const IMG_ESCRITORIO_BANCARIO_SRC =
+  "/imgi_14_794492546_18277284577291086_8367043188480776381_n.jpg";
 
 function getWhatsAppUrl(
   message?: string,
   number: string = WHATSAPP_NUMBER
 ) {
   const defaultText =
-    "Olá! Gostaria de agendar uma consulta jurídica com o escritório ALP Advocacia e Consultoria.";
+    "Olá, Dra. Catarina Souza! Gostaria de agendar uma consulta jurídica.";
   return `https://wa.me/${number}?text=${encodeURIComponent(
     message || defaultText
   )}`;
@@ -101,7 +80,7 @@ function WhatsAppIcon({
 }
 
 const reveal: Variants = {
-  hidden: { opacity: 0, y: 26 },
+  hidden: { opacity: 0, y: 24 },
   visible: {
     opacity: 1,
     y: 0,
@@ -127,84 +106,44 @@ interface PracticeArea {
 
 const practiceAreas: PracticeArea[] = [
   {
-    id: "direito-transito",
-    title: "Direito de Trânsito",
-    icon: ShieldAlert,
-    tag: "Defesa de CNH & Infrações",
-    summary:
-      "Defesa especializada contra suspensão e cassação da CNH, Lei Seca (bafômetro), multas graves e penalidades indevidas.",
-    details:
-      "Atuação rápida e técnica para resguardar o seu direito de dirigir. Defendemos condutores e frotas perante os órgãos de trânsito (DETRAN, JARI, CETRAN) e na Justiça, com pedidos liminares para cancelamento de penalidades abusivas, desbloqueio de CNH e anulação de processos punitivos instaurados com vícios formais.",
-    topics: [
-      "Processos de Suspensão e Cassação do Direito de Dirigir",
-      "Defesa na Lei Seca (Art. 165 e 165-A do CTB / Bafômetro)",
-      "Recursos administrativos perante JARI e CETRAN em todas as instâncias",
-      "Ações Judiciais Anulatórias com pedido de Liminar para desbloqueio de CNH",
-      "Defesa estratégica para Motoristas Profissionais (EAR) e Transportadores",
-      "Anulação de multas lavradas com falha de notificação ou vícios materiais",
-    ],
-    whatsAppText:
-      "Olá, Dra. Ana Letícia! Preciso de orientação e defesa especializada em Direito de Trânsito e CNH.",
-  },
-  {
-    id: "direito-familia",
-    title: "Direito de Família & Sucessões",
-    icon: HeartHandshake,
-    tag: "Acolhimento & Resguardo",
-    summary:
-      "Condução sensível, firme e discreta para resguardar vínculos afetivos, menores e a integridade do patrimônio familiar.",
-    details:
-      "Demandas familiares exigem empatia emocional aliada a profundo rigor técnico. Conduzimos divórcios consensuais e litigiosos, garantindo partilha justa e proteção de patrimônio. Atuamos com prioridade no bem-estar dos filhos em ações de guarda, convivência e pensão alimentícia, além de inventários rápidos em cartório ou via judicial.",
-    topics: [
-      "Divórcio Consensual em Cartório e Divórcio Litigioso Complexo",
-      "Partilha de Bens e Proteção do Patrimônio Familiar",
-      "Pensão Alimentícia: Fixação, Cobrança Executiva e Revisional de Valor",
-      "Guarda Compartilhada e Regulamentação do Direito de Convivência Familiar",
-      "Inventários Judiciais e Extrajudiciais Ágeis em Cartório",
-      "Reconhecimento e Dissolução de União Estável",
-    ],
-    whatsAppText:
-      "Olá, Dra. Ana Letícia! Gostaria de uma consulta especializada em Direito de Família e Sucessões.",
-  },
-  {
-    id: "direito-previdenciario",
-    title: "Direito Previdenciário (INSS)",
+    id: "direito-bancario-superendividamento",
+    title: "Direito Bancário & Superendividamento",
     icon: Landmark,
-    tag: "Benefícios & Aposentadorias",
+    tag: "Repactuação & Defesa contra Bancos",
     summary:
-      "Planejamento previdenciário minucioso, concessão das melhores aposentadorias e reversão de benefícios negados pelo INSS.",
+      "Repactuação global de dívidas pela Lei do Superendividamento, revisão de contratos bancários e proteção da sua renda familiar.",
     details:
-      "Garantimos que você receba o benefício previdenciário mais vantajoso, no momento exato e com cálculo correto. Atuamos na via administrativa junto ao INSS e na Justiça Federal, revertendo indeferimentos indevidos de aposentadorias, auxílios por incapacidade e benefícios assistenciais.",
+      "Se o pagamento das suas dívidas compromete o sustento básico da sua família, a Lei do Superendividamento garante o direito à repactuação judicial ou extrajudicial com preservação do mínimo existencial. Atuamos estrategicamente contra abusos bancários, juros excessivos e descontos que sufocam seu orçamento.",
     topics: [
-      "Planejamento Previdenciário para conquista do melhor valor de aposentadoria",
-      "Aposentadorias por Idade, Tempo de Contribuição, Especial e Rural",
-      "Benefício de Prestação Continuada (BPC/LOAS) para Idosos e PCD",
-      "Auxílio por Incapacidade Temporária (Auxílio-Doença) e Aposentadoria por Invalidez",
-      "Pensão por Morte e Auxílio-Reclusão para dependentes",
-      "Ações Judiciais contra o INSS para reversão de negativas e revisões de valor",
+      "Ação de Repactuação de Dívidas pela Lei do Superendividamento",
+      "Preservação do Mínimo Existencial e limitação de descontos em conta/folha",
+      "Revisão de Contratos Bancários, Financiamentos e Juros Abusivos",
+      "Defesa estratégica em Execuções Bancárias, Busca e Apreensão e Cobranças",
+      "Renegociação segura de passivos junto a instituições financeiras",
+      "Auditoria jurídica de tarifas embutidas, venda casada e seguros indevidos",
     ],
     whatsAppText:
-      "Olá, Dra. Ana Letícia! Gostaria de consultar meus direitos previdenciários e benefícios do INSS.",
+      "Olá, Dra. Catarina Souza! Gostaria de orientação sobre a Lei do Superendividamento e minhas dívidas bancárias.",
   },
   {
-    id: "direito-civel",
-    title: "Direito Cível & Contratos",
-    icon: Scale,
-    tag: "Alta Precisão Patrimonial",
+    id: "emprestimo-consignado-fraudes",
+    title: "Empréstimos Consignados & Fraudes",
+    icon: BadgeAlert,
+    tag: "Proteção de Aposentados & Servidores",
     summary:
-      "Elaboração e revisão minuciosa de contratos, reparação por danos, cobranças judiciais e resolução estratégica de conflitos.",
+      "Descontaram um empréstimo consignado que você não contratou? Atuamos para suspender a cobrança e buscar indenização.",
     details:
-      "Com análise cirúrgica de cada cláusula e peça processual, protegemos seu patrimônio e prevenimos litígios onerosos. Atuamos na redação e revisão de contratos, execução de títulos de crédito, recuperação de valores, ações de despejo e reparação integral por danos materiais e morais.",
+      "Aposentados, pensionistas do INSS e servidores públicos são alvos frequentes de descontos indevidos, empréstimos não autorizados e cartões consignados (RMC/RCC) intermináveis. Ingressamos com pedidos liminares urgentes para cessar os descontos imediatamente, restituir os valores em dobro e reparar os danos morais.",
     topics: [
-      "Ações de Reparação Civil por Danos Morais, Materiais e Estéticos",
-      "Execução de Títulos, Cobranças Judiciais e Recuperação de Crédito",
-      "Elaboração, análise preventiva e auditoria de contratos civis e comerciais",
-      "Rescisões Contratuais e Cumprimento de Obrigações de Fazer",
-      "Litígios Imobiliários, Ações de Despejo e Direitos Possessórios",
-      "Resolução extrajudicial e contenciosa de conflitos patrimoniais",
+      "Cancelamento liminar de Empréstimo Consignado Não Contratado",
+      "Suspensão de descontos abusivos de RMC e RCC (Cartão Consignado)",
+      "Restituição em dobro de valores descontados indevidamente do benefício",
+      "Indenização por danos morais decorrentes de fraude bancária e golpe",
+      "Anulação de descontos de associações e sindicatos não autorizados no INSS",
+      "Defesa contra golpes digitais, falsas centrais bancárias e fraudes via PIX",
     ],
     whatsAppText:
-      "Olá, Dra. Ana Letícia! Gostaria de uma consulta especializada em Direito Cível e Contratos.",
+      "Olá, Dra. Catarina Souza! Descontaram um empréstimo consignado que não contratei e preciso de orientação jurídica.",
   },
   {
     id: "direito-consumidor",
@@ -212,39 +151,79 @@ const practiceAreas: PracticeArea[] = [
     icon: ShieldCheck,
     tag: "Defesa dos Seus Direitos",
     summary:
-      "Retirada de negativações indevidas no SPC/Serasa, combate a fraudes e golpes bancários, cobranças abusivas e indenizações.",
+      "Exclusão de negativação indevida no SPC/Serasa, combate a cobranças abusivas, falhas de serviços e indenizações.",
     details:
-      "Defendemos o cidadão contra abusos cometidos por bancos, financeiras, concessionárias e prestadores de serviço. Atuamos com pedidos liminares urgentes para exclusão de restrições indevidas do seu nome, cancelamento de empréstimos fraudulentos e reparação financeira justa por danos sofridos.",
+      "Defendemos o consumidor de Diamantina e região perante grandes empresas, concessionárias, operadoras e bancos. Atuamos com agilidade para retirar restrições indevidas do seu nome, cancelar cobranças ilegais e garantir a justa reparação por falhas na prestação de serviços ou defeitos em produtos.",
     topics: [
-      "Ações contra Inscrição Indevida no SPC, Serasa e Cadastro de Inadimplentes",
-      "Golpes Bancários, Empréstimos Consignados Não Autorizados e Fraudes via PIX",
-      "Cobranças Abusivas, Juros Excessivos e Tarifas Bancárias Não Contratadas",
-      "Indenizações por Falhas Graves em Serviços Essenciais (Luz, Água, Telefonia)",
-      "Cancelamento e atraso de voos, extravio de bagagem e abusos de companhias",
-      "Defesa perante Vícios e Defeitos Ocultos de Produtos e Serviços",
+      "Exclusão urgente de inscrição indevida no SPC, Serasa e protestos",
+      "Indenização por cobranças abusivas e serviços não solicitados",
+      "Demandas contra falhas em serviços essenciais (energia, água, telefonia e saúde)",
+      "Direito de arrependimento, vícios ocultos de produtos e garantia legal",
+      "Cancelamento de voos, extravio de bagagem e práticas abusivas no turismo",
+      "Tutelas de urgência para restabelecimento imediato de serviços cortados",
     ],
     whatsAppText:
-      "Olá, Dra. Ana Letícia! Preciso de assessoria jurídica em uma causa de Direito do Consumidor.",
+      "Olá, Dra. Catarina Souza! Preciso de assessoria jurídica em uma causa de Direito do Consumidor.",
   },
   {
-    id: "consultoria-juridica",
-    title: "Consultoria Jurídica & Preventiva",
-    icon: Briefcase,
-    tag: "Prevenção & Estratégia",
+    id: "direito-civel-contratos",
+    title: "Direito Cível & Contratos",
+    icon: Scale,
+    tag: "Segurança Jurídica & Patrimônio",
     summary:
-      "Blindagem preventiva para pessoas físicas e empresas, com negociações extrajudiciais seguras e gestão inteligente de riscos.",
+      "Ações indenizatórias, cobranças, elaboração de contratos, responsabilidade civil e solução eficaz de conflitos patrimoniais.",
     details:
-      "A melhor vitória jurídica é aquela que soluciona o conflito antes que ele se torne um processo judicial custoso e demorado. Nossa consultoria analisa riscos, emite pareceres técnicos sólidos e conduz negociações extrajudiciais estratégicas com alto índice de resolutividade.",
+      "Com profundo conhecimento jurídico e atenção minuciosa a cada detalhe processual, protegemos o seu patrimônio e prevenimos prejuízos. Atuamos na elaboração e análise de contratos, ações de cobrança, execução de títulos, questões imobiliárias e reparação integral por danos materiais e morais.",
     topics: [
-      "Consultoria jurídica preventiva personalizada para pessoas físicas e empresas",
-      "Negociações extrajudiciais e acordos estruturados com eficácia executiva",
-      "Pareceres jurídicos fundamentados e análise de viabilidade de demandas",
-      "Mitigação proativa de riscos legais, contratuais e operacionais",
-      "Mediação estratégica e conciliação de interesses com segurança jurídica",
-      "Assessoria continuada para planejamento pessoal e patrimonial",
+      "Ações de Indenização por Danos Materiais, Morais e Estéticos",
+      "Elaboração, revisão e rescisão de contratos civis, rurais e empresariais",
+      "Cobranças judiciais, execuções de títulos e recuperação de créditos",
+      "Direito Imobiliário: locações, despejo, usucapião e regularização de imóveis",
+      "Responsabilidade civil em acidentes e descumprimentos contratuais",
+      "Acordos extrajudiciais seguros com força de título executivo",
     ],
     whatsAppText:
-      "Olá, Dra. Ana Letícia! Gostaria de solicitar consultoria jurídica estratégica e preventiva.",
+      "Olá, Dra. Catarina Souza! Gostaria de agendar uma consulta na área de Direito Cível e Contratos.",
+  },
+  {
+    id: "direito-familia-sucessoes",
+    title: "Direito de Família & Sucessões",
+    icon: HeartHandshake,
+    tag: "Atendimento Humanizado & Ético",
+    summary:
+      "Condução acolhedora, discreta e firme em divórcios, pensão alimentícia, guarda, partilha de bens e inventários.",
+    details:
+      "Questões familiares exigem sensibilidade humana aliada à segurança técnica. Conduzimos divórcios consensuais em cartório ou judiciais, ações de alimentos, guarda e regulamentação de convivência, bem como inventários e partilhas, sempre priorizando a dignidade e a tranquilidade da família.",
+    topics: [
+      "Divórcio Consensual Rápido em Cartório e Divórcio Judicial",
+      "Pensão Alimentícia: fixação, revisão de valor, exoneração e execução",
+      "Guarda Compartilhada ou Unilateral e Regulamentação de Visitas",
+      "Reconhecimento e Dissolução de União Estável com partilha justa",
+      "Inventário Extrajudicial (em Cartório) e Inventário Judicial",
+      "Planejamento sucessório e proteção do patrimônio familiar",
+    ],
+    whatsAppText:
+      "Olá, Dra. Catarina Souza! Gostaria de uma consulta especializada em Direito de Família e Sucessões.",
+  },
+  {
+    id: "previdenciario-correspondencia",
+    title: "Previdenciário & Correspondência",
+    icon: Briefcase,
+    tag: "INSS & Diligências em Diamantina",
+    summary:
+      "Aposentadorias, benefícios do INSS (BPC/LOAS, auxílios) e atuação como advogada correspondente na Comarca de Diamantina - MG.",
+    details:
+      "Defendemos segurados na conquista de aposentadorias, pensão por morte, auxílio-doença e BPC/LOAS na via administrativa e judicial. Além disso, prestamos suporte de excelência em correspondência jurídica, audiências e diligências para escritórios de todo o Brasil na Comarca de Diamantina e microrregião.",
+    topics: [
+      "Aposentadorias por Idade, Tempo de Contribuição, Rural e Especial",
+      "Benefício Assistencial (BPC/LOAS) para idosos e pessoas com deficiência",
+      "Auxílio por Incapacidade Temporária, Aposentadoria por Invalidez e Pensão por Morte",
+      "Reversão judicial de benefícios negados ou cessados indevidamente pelo INSS",
+      "Correspondência Jurídica em Diamantina - MG: audiências, protocolos e despachos",
+      "Diligências presenciais, cópias, certidões e acompanhamento na 12ª Subseção OAB/MG",
+    ],
+    whatsAppText:
+      "Olá, Dra. Catarina Souza! Gostaria de atendimento em Direito Previdenciário / Serviços Jurídicos em Diamantina.",
   },
 ];
 
@@ -285,49 +264,75 @@ function GoogleIcon({
 
 const clientReviews = [
   {
-    name: "Jaqueline Barbara",
+    name: "Ricardo Soares",
     reviewsCount: "1 avaliação no Google",
-    date: "Há 2 meses",
+    date: "Há 4 anos",
     content:
-      "Profissional dedicada, e principalmente HONESTA! Recomendo sem medo. Antes de ser uma excelente advogada, é um ótimo ser HUMANO. Parabéns pela dedicação e comprometimento!",
+      "Excelente profissional com atendimento humanizado e compromisso com o resultado! Vasto conhecimento na área Jurídica. Esta eu indico.",
+    reply: "Obrigada. Sempre à disposição.",
   },
   {
-    name: "Arthur Figueira Avezum",
-    reviewsCount: "4 avaliações · 1 foto",
+    name: "Joelma Albino",
+    reviewsCount: "7 avaliações no Google",
     date: "Há 3 anos",
     content:
-      "Os advogados são minuciosos e atenciosos, se mostrando conhecedores profundos de soluções, com as mais excelentes resoluções a todas as questões jurídicas suscitadas. Recomendo a todos.",
-    reply: "Muito obrigado!",
+      "Ótimo serviço de advocacia, tirou todas as minhas dúvidas e resolveu meu problema. Melhor escritório da cidade.",
+    reply:
+      "Obrigada pela avaliação! Nossa equipe sempre estará disponível oferecendo o melhor serviço de advocacia da cidade!",
   },
   {
-    name: "Debora Rangel Moura",
+    name: "Rogerio Souza",
+    reviewsCount: "1 avaliação no Google",
+    date: "Há 4 anos",
+    content:
+      "Excelente profissional! Muito compromissada com seus clientes! Essa eu indico!",
+    reply:
+      "Obrigada pela avaliação! É uma satisfação saber que pude ajudar a resolver suas questões jurídicas de forma eficiente e eficaz. Sempre me esforço para oferecer um serviço personalizado e de qualidade aos meus clientes.",
+  },
+  {
+    name: "Stéfani Luíza",
+    reviewsCount: "9 avaliações · 1 foto",
+    date: "Há 3 anos",
+    content:
+      "Profissional atenta às necessidades do cliente. A melhor advogada de Diamantina-MG.",
+    reply: "Obrigada, fico à disposição!",
+  },
+  {
+    name: "Fabricia Almeida",
+    reviewsCount: "1 avaliação no Google",
+    date: "Há 3 anos",
+    content:
+      "Excelente profissional, atenciosa, parabéns por sua dedicação e profissionalismo.",
+    reply: "Obrigada pelo feedback, fico à disposição!",
+  },
+  {
+    name: "Claudia Ferreira",
+    reviewsCount: "1 avaliação no Google",
+    date: "Há 3 anos",
+    content:
+      "Excelente profissional, ética, competente e responsável. Gratidão!",
+    reply:
+      "Muito obrigada pela confiança em meu trabalho! Estou sempre às ordens.",
+  },
+  {
+    name: "Daniela Silva",
+    reviewsCount: "2 avaliações · 1 foto",
+    date: "Há 5 meses",
+    content: "Maravilhosa, atenciosa. Só tenho a agradecer.",
+  },
+  {
+    name: "Daniele Andrade",
     reviewsCount: "2 avaliações no Google",
-    date: "Há 2 meses",
-    content:
-      "Desde o início excelente atendimento. Todas as explicações são claras. Ótima profissional e ser humano.",
-  },
-  {
-    name: "João Marcos",
-    reviewsCount: "Local Guide · 6 avaliações",
     date: "Há 1 ano",
-    content:
-      "Atendimento incrível, com profissionais capacitados e excelentes, muito humanos que têm uma preocupação genuína em ajudar o cliente. Obrigado!",
-    reply: "Muito obrigado pela avaliação!",
+    content: "Ótima profissional, me ajudou bastante, super indico!!!",
+    reply: "Muito obrigada Daniele. Sempre às ordens!",
   },
   {
-    name: "Bruno Gomes",
-    reviewsCount: "1 avaliação no Google",
-    date: "Há 3 anos",
-    content:
-      "Quero expressar minha profunda gratidão. Obrigado pelo seu apoio e quero agradecer sinceramente por tudo, sua generosidade e atenção com as pessoas. Muito obrigado e que Deus lhe abençoe infinitamente.",
-    reply: "Muito obrigado. Deus abençoe também!",
-  },
-  {
-    name: "Bruna Akauany",
-    reviewsCount: "2 avaliações · 2 fotos",
-    date: "Há 2 meses",
-    content:
-      "Ótima profissional, atenciosa, disposta, competente, indico de olhos fechados!",
+    name: "Amanda Mafra",
+    reviewsCount: "2 avaliações no Google",
+    date: "Há 4 anos",
+    content: "Melhor advogada de Diamantina/MG e região!",
+    reply: "Obrigada Amanda!",
   },
 ];
 
@@ -348,8 +353,8 @@ function Heading({
       <h2
         className={
           light
-            ? "font-serif text-4xl leading-[1.07] tracking-[-0.035em] text-white sm:text-5xl lg:text-[3.55rem]"
-            : "font-serif text-4xl leading-[1.07] tracking-[-0.035em] text-ink sm:text-5xl lg:text-[3.55rem]"
+            ? "font-serif text-4xl leading-[1.07] tracking-[-0.03em] text-white sm:text-5xl lg:text-[3.5rem]"
+            : "font-serif text-4xl leading-[1.07] tracking-[-0.03em] text-ink sm:text-5xl lg:text-[3.5rem]"
         }
       >
         {children}
@@ -358,7 +363,7 @@ function Heading({
         <p
           className={
             light
-              ? "mt-5 max-w-xl text-[15px] leading-7 text-white/70"
+              ? "mt-5 max-w-xl text-[15px] leading-7 text-brand-100/80"
               : "mt-5 max-w-xl text-[15px] leading-7 text-ink-soft"
           }
         >
@@ -392,15 +397,15 @@ export default function Home() {
           <div className="mx-auto flex h-[96px] max-w-7xl items-center justify-between gap-5 px-5 sm:h-[110px] sm:px-8 lg:px-12">
             <a
               href="#inicio"
-              aria-label="ALP Advocacia e Consultoria — Início"
+              aria-label="Catarina Souza Advogada — Início"
               onClick={closeMenu}
               className="flex items-center gap-3 transition-opacity hover:opacity-95"
             >
               <Image
-                src="/logo.png"
+                src={LOGO_SRC}
                 width={1774}
                 height={887}
-                alt="ALP Advocacia e Consultoria"
+                alt="Catarina Souza Advogada — Diamantina - MG"
                 priority
                 className="h-[68px] w-auto object-contain sm:h-[84px]"
               />
@@ -414,13 +419,13 @@ export default function Home() {
                 Início
               </a>
               <a className="nav-link" href="#sobre">
-                O Escritório
+                A Advogada & Escritório
               </a>
               <a className="nav-link" href="#atuacao">
                 Áreas de Atuação
               </a>
-              <a className="nav-link" href="#proposito">
-                Propósito
+              <a className="nav-link" href="#orientacoes">
+                Dívidas & Consignados
               </a>
               <a className="nav-link" href="#avaliacoes">
                 Avaliações (5,0 ★)
@@ -432,21 +437,19 @@ export default function Home() {
 
             <div className="hidden items-center gap-3 lg:flex">
               <a
-                href={INSTAGRAM_URL}
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Instagram ALP Advocacia e Consultoria"
-                className="grid size-10 place-items-center rounded-full border border-ink/15 text-brand-700 transition-all hover:border-brand-700 hover:bg-brand-50 hover:text-brand-800"
-                title="Siga no Instagram (@advocacia_alp)"
+                href={`tel:+${WHATSAPP_NUMBER}`}
+                aria-label="Ligar para Catarina Souza Advogada"
+                className="grid size-10 place-items-center rounded-full border border-ink/15 text-brand-800 transition-all hover:border-brand-800 hover:bg-brand-50 hover:text-brand-900"
+                title={`Ligar: ${PHONE_DISPLAY}`}
               >
-                <InstagramIcon size={17} />
+                <Phone size={16} />
               </a>
               <a
                 href={getWhatsAppUrl()}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="WhatsApp da ALP Advocacia e Consultoria"
-                className="grid size-10 place-items-center rounded-full border border-ink/15 text-brand-700 transition-all hover:border-brand-700 hover:bg-brand-50 hover:text-brand-800"
+                aria-label="WhatsApp de Catarina Souza Advogada"
+                className="grid size-10 place-items-center rounded-full border border-ink/15 text-brand-800 transition-all hover:border-brand-800 hover:bg-brand-50 hover:text-brand-900"
                 title="Atendimento no WhatsApp"
               >
                 <WhatsAppIcon size={18} />
@@ -487,39 +490,40 @@ export default function Home() {
                 <div className="mx-auto flex max-w-7xl flex-col gap-1 py-4">
                   {[
                     ["Início", "#inicio"],
-                    ["O Escritório & Advogada", "#sobre"],
+                    ["A Advogada & Escritório", "#sobre"],
                     ["Áreas de Atuação", "#atuacao"],
-                    ["Propósito & Valores", "#proposito"],
+                    ["Superendividamento & Consignados", "#orientacoes"],
                     ["Avaliações no Google (5,0 ★)", "#avaliacoes"],
-                    ["Contato & Sede", "#contato"],
+                    ["Contato & Sede em Diamantina", "#contato"],
                   ].map(([label, href]) => (
                     <a
                       key={label}
                       href={href}
                       onClick={closeMenu}
-                      className="py-3 text-sm font-medium text-ink-soft hover:text-brand-700"
+                      className="py-3 text-sm font-medium text-ink-soft hover:text-brand-800"
                     >
                       {label}
                     </a>
                   ))}
                   <div className="mt-3 flex flex-col gap-2">
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-700 px-5 py-3.5 text-xs font-semibold uppercase tracking-[0.13em] text-white shadow-md transition-all hover:bg-brand-800"
+                      className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-800 px-5 py-3.5 text-xs font-semibold uppercase tracking-[0.13em] text-white shadow-md transition-all hover:bg-brand-900"
                       href={getWhatsAppUrl()}
                       target="_blank"
                       rel="noreferrer"
                       onClick={closeMenu}
                     >
-                      <WhatsAppIcon size={16} /> Falar no WhatsApp: {PHONE_DISPLAY}
+                      <WhatsAppIcon size={16} /> Falar no WhatsApp:{" "}
+                      {PHONE_DISPLAY}
                     </a>
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-full border border-ink/15 px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-ink transition-all hover:border-brand-700"
-                      href={INSTAGRAM_URL}
+                      className="inline-flex items-center justify-center gap-2 rounded-full border border-ink/15 px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-ink transition-all hover:border-brand-800"
+                      href={GOOGLE_MAPS_URL}
                       target="_blank"
                       rel="noreferrer"
                       onClick={closeMenu}
                     >
-                      <InstagramIcon size={15} /> {INSTAGRAM_HANDLE}
+                      <MapPin size={15} /> Beco da Pena, 29 - Centro, Diamantina
                     </a>
                   </div>
                 </div>
@@ -535,7 +539,7 @@ export default function Home() {
         >
           {/* Subtle gold ambient orbs */}
           <div className="pointer-events-none absolute -right-32 top-8 -z-10 size-[36rem] rounded-full bg-brand-200/40 blur-3xl" />
-          <div className="pointer-events-none absolute -left-20 bottom-10 -z-10 size-[28rem] rounded-full bg-brand-100/50 blur-3xl" />
+          <div className="pointer-events-none absolute -left-20 bottom-10 -z-10 size-[28rem] rounded-full bg-brand-100/60 blur-3xl" />
 
           <div className="mx-auto grid min-h-[660px] max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 sm:py-20 lg:min-h-[720px] lg:grid-cols-[1.08fr_0.92fr] lg:gap-10 lg:px-12 lg:py-20">
             <motion.div
@@ -545,38 +549,39 @@ export default function Home() {
               className="relative z-10 max-w-2xl lg:py-6"
             >
               <motion.div variants={reveal} className="eyebrow mb-6">
-                <span className="size-2 rounded-full bg-brand-700 shrink-0" />
+                <span className="size-2 shrink-0 rounded-full bg-brand-800" />
                 <span>
-                  Três Corações - MG · Centro · 5,0 ★ no Google (30 avaliações)
+                  Diamantina - MG · Centro · 5,0 ★ no Google (22 avaliações)
                 </span>
               </motion.div>
 
               <motion.h1
                 variants={reveal}
-                className="max-w-[760px] font-serif text-[3.1rem] leading-[0.98] tracking-[-0.045em] text-ink sm:text-6xl lg:text-[4.75rem]"
+                className="max-w-[760px] font-serif text-[3.1rem] leading-[0.99] tracking-[-0.035em] text-ink sm:text-6xl lg:text-[4.65rem]"
               >
-                Soluções jurídicas de{" "}
-                <span className="italic text-brand-700 font-serif">
-                  alta precisão
+                Atendimento jurídico{" "}
+                <span className="font-serif italic text-brand-800">
+                  humanizado
                 </span>{" "}
-                e compromisso absoluto com sua causa.
+                e compromisso real com o seu resultado.
               </motion.h1>
 
               <motion.p
                 variants={reveal}
                 className="mt-7 max-w-xl text-[15px] leading-7 text-ink-soft sm:text-base sm:leading-8"
               >
-                Atendimento humanizado, ético e resolutivo liderado pela{" "}
-                <strong className="text-ink font-semibold">
-                  Dra. Ana Letícia Pereira
-                </strong>{" "}
-                no escritório{" "}
-                <strong className="text-ink font-semibold">
-                  ALP Advocacia e Consultoria
+                Defesa técnica, ética e personalizada conduzida pela{" "}
+                <strong className="font-semibold text-ink">
+                  Dra. Catarina Souza
                 </strong>
-                . Atuação especializada em Direito de Trânsito, Família, Cível,
-                Previdenciário e Consumidor — com sede em Três Corações (MG) e
-                atendimento em todo o Brasil.
+                . Referência em{" "}
+                <strong className="font-semibold text-ink">
+                  Direito Bancário, Lei do Superendividamento, Fraudes em
+                  Empréstimo Consignado, Consumidor, Cível, Família e
+                  Previdenciário
+                </strong>{" "}
+                — com sede no Centro de Diamantina (MG) e atuação em toda a
+                Microrregião e no Brasil.
               </motion.p>
 
               <motion.div
@@ -589,11 +594,11 @@ export default function Home() {
                   size="lg"
                   className="rounded-full shadow-md"
                 >
-                  <WhatsAppIcon size={16} /> Falar no WhatsApp
+                  <WhatsAppIcon size={16} /> Agendar Consulta no WhatsApp
                 </GlowingButton>
                 <a
                   href="#atuacao"
-                  className="group inline-flex items-center gap-2 px-2 py-3 text-sm font-semibold text-ink transition-colors hover:text-brand-700"
+                  className="group inline-flex items-center gap-2 px-2 py-3 text-sm font-semibold text-ink transition-colors hover:text-brand-800"
                 >
                   Conhecer áreas de atuação{" "}
                   <ArrowRight
@@ -608,21 +613,21 @@ export default function Home() {
                 className="mt-12 flex flex-wrap items-center gap-x-7 gap-y-4 border-t border-ink/10 pt-6 text-xs text-ink-soft"
               >
                 <span className="inline-flex items-center gap-2 font-medium">
-                  <Star size={15} className="fill-brand-700 text-brand-700" />{" "}
-                  5,0 estrelas no Google (30 avaliações)
+                  <Star size={15} className="fill-brand-600 text-brand-600" />{" "}
+                  5,0 estrelas no Google (22 avaliações)
                 </span>
                 <span className="inline-flex items-center gap-2 font-medium">
-                  <ShieldCheck size={16} className="text-brand-700" /> Trânsito,
-                  Família, Previdenciário & Cível
+                  <ShieldCheck size={16} className="text-brand-800" /> Bancário,
+                  Consignados, Consumidor & Cível
                 </span>
                 <span className="inline-flex items-center gap-2 font-medium">
-                  <MapPin size={15} className="text-brand-700" /> Sede em Três
-                  Corações - MG e atendimento digital
+                  <MapPin size={15} className="text-brand-800" /> Beco da Pena,
+                  29 · Centro, Diamantina - MG
                 </span>
               </motion.div>
             </motion.div>
 
-            {/* Hero Image Presentation - Dra. Ana Letícia Pereira */}
+            {/* Hero Portrait Presentation - Dra. Catarina Souza */}
             <motion.div
               initial={{ opacity: 0, scale: 0.97, y: 18 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -633,51 +638,51 @@ export default function Home() {
               }}
               className="relative mx-auto w-full max-w-[460px] lg:ml-auto lg:mr-2"
             >
-              {/* Main portrait with luxury gold bezel */}
-              <div className="relative aspect-[0.78] overflow-hidden rounded-3xl border border-brand-700/35 bg-brand-950 shadow-2xl ring-1 ring-brand-700/20">
+              {/* Main portrait framed cleanly on the upper portrait area */}
+              <div className="relative aspect-[0.82] overflow-hidden rounded-3xl border border-brand-600/35 bg-brand-950 shadow-2xl ring-1 ring-brand-600/20">
                 <Image
-                  src="/dra-ana-leticia-advogada.jpg"
-                  alt="Dra. Ana Letícia Pereira — ALP Advocacia e Consultoria"
+                  src={IMG_CONSIGNADO_SRC}
+                  alt="Dra. Catarina Souza — Advogada em Diamantina - MG"
                   fill
                   priority
                   sizes="(max-width: 640px) 90vw, (max-width: 1024px) 70vw, 42vw"
-                  className="object-cover object-[50%_15%]"
+                  className="origin-top scale-[1.58] object-cover object-top"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-brand-950/95 via-brand-950/50 to-transparent" />
+                <div className=" inset-x-0 bottom-0 absolute h-2/5 bg-gradient-to-t from-brand-950 via-brand-950/75 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-3 text-white sm:bottom-8 sm:left-8 sm:right-8">
                   <div>
                     <p className="font-serif text-2xl font-normal tracking-wide text-white">
-                      Dra. Ana Letícia Pereira
+                      Dra. Catarina Souza
                     </p>
                     <p className="mt-1 text-[10px] uppercase tracking-[0.2em] text-brand-200">
-                      ALP Advocacia & Consultoria · Três Corações
+                      Advogada · Diamantina & Região - MG
                     </p>
                   </div>
-                  <span className="grid size-11 shrink-0 place-items-center rounded-full border border-brand-300/40 bg-brand-950/60 text-brand-200 backdrop-blur-sm">
+                  <span className="grid size-11 shrink-0 place-items-center rounded-full border border-brand-300/40 bg-brand-950/70 text-brand-200 backdrop-blur-sm">
                     <Scale size={18} />
                   </span>
                 </div>
               </div>
 
               {/* Floating Google rating badge */}
-              <div className="absolute -left-3 -bottom-3 sm:-left-5 rounded-2xl border border-brand-700/25 bg-white/95 p-3.5 shadow-card backdrop-blur-md">
+              <div className="absolute -bottom-3 -left-3 rounded-2xl border border-brand-700/25 bg-white/95 p-3.5 shadow-card backdrop-blur-md sm:-left-5">
                 <div className="flex items-center gap-2">
                   <GoogleIcon size={16} />
                   <div className="flex items-center gap-1 text-brand-700">
-                    <Star size={13} className="fill-brand-700" />
+                    <Star size={13} className="fill-brand-600 text-brand-600" />
                     <span className="font-serif text-base font-bold text-ink">
                       5,0 / 5,0
                     </span>
                   </div>
                 </div>
-                <p className="mt-0.5 text-[9px] uppercase tracking-wider text-ink-soft font-semibold">
-                  30 Avaliações no Google
+                <p className="mt-0.5 text-[9px] font-semibold uppercase tracking-wider text-ink-soft">
+                  22 Avaliações no Google
                 </p>
               </div>
 
               {/* Floating authority badge */}
-              <div className="absolute -right-3 top-6 sm:-right-5 rounded-full border border-brand-700/25 bg-ivory/95 px-4 py-2 text-[10px] font-bold tracking-[0.14em] text-brand-800 shadow-card backdrop-blur-md">
-                RIGOR PROCESSUAL & ÉTICA
+              <div className="absolute -right-3 top-6 rounded-full border border-brand-700/25 bg-ivory/95 px-4 py-2 text-[10px] font-bold tracking-[0.14em] text-brand-800 shadow-card backdrop-blur-md sm:-right-5">
+                ÉTICA & ATENDIMENTO HUMANIZADO
               </div>
             </motion.div>
           </div>
@@ -686,14 +691,26 @@ export default function Home() {
         {/* Highlights Banner */}
         <section
           aria-label="Credenciais e Destaques"
-          className="border-b border-ink/10 bg-white/70"
+          className="border-b border-ink/10 bg-white/80"
         >
           <div className="mx-auto grid max-w-7xl gap-7 px-5 py-8 sm:grid-cols-4 sm:gap-4 sm:px-8 lg:px-12">
             {[
-              ["5,0 ★", "classificação máxima unânime com 30 avaliações no Google"],
-              ["Trânsito & Família", "defesa estratégica de direitos essenciais"],
-              ["Três Corações & Brasil", "sede no Centro e atendimento on-line seguro"],
-              ["Atendimento Ágil", "ética, transparência e acolhimento direto"],
+              [
+                "5,0 ★",
+                "nota máxima unânime com 22 avaliações no Google Maps",
+              ],
+              [
+                "Bancário & Cível",
+                "defesa contra abusos, superendividamento e fraudes",
+              ],
+              [
+                "Diamantina - MG",
+                "sede no Beco da Pena, 29 - Centro e atendimento on-line",
+              ],
+              [
+                "Seg a Sex · 8h–18h",
+                "atendimento próximo, transparente e comprometido",
+              ],
             ].map(([value, label], index) => (
               <div
                 key={label}
@@ -703,10 +720,10 @@ export default function Home() {
                     : "flex items-center gap-4 sm:justify-center"
                 }
               >
-                <span className="font-serif text-3xl font-semibold text-brand-700">
+                <span className="font-serif text-2xl font-semibold text-brand-800 sm:text-3xl">
                   {value}
                 </span>
-                <span className="max-w-[160px] text-[11px] leading-5 text-ink-soft">
+                <span className="max-w-[165px] text-[11px] leading-5 text-ink-soft">
                   {label}
                 </span>
               </div>
@@ -714,55 +731,49 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Sobre a Dra. Ana Letícia Pereira & O Escritório ALP */}
+        {/* Sobre a Dra. Catarina Souza & O Escritório */}
         <section
           id="sobre"
           className="scroll-mt-24 bg-white py-20 sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[0.94fr_1.06fr] lg:gap-20 lg:px-12">
-            {/* Real Office photo with Três Corações Judicial Case Folder & Laptop */}
+            {/* Real Office photo of Dra. Catarina Souza in blue blazer with award frame behind */}
             <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={reveal}
-              className="relative mx-auto w-full max-w-[520px]"
+              className="relative mx-auto w-full max-w-[500px]"
             >
-              <div className="relative aspect-[0.92] overflow-hidden rounded-[2px] bg-[#ded7d0] shadow-card">
+              <div className="relative aspect-[0.88] overflow-hidden rounded-2xl border border-brand-700/20 bg-brand-950 shadow-card">
                 <Image
-                  src="/escritorio-processos-tres-coracoes.jpg"
-                  alt="Processos reais e ambiente de trabalho na ALP Advocacia e Consultoria em Três Corações - MG"
+                  src={IMG_ESCRITORIO_BANCARIO_SRC}
+                  alt="Dra. Catarina Souza em seu escritório de advocacia em Diamantina - MG"
                   fill
                   sizes="(max-width: 1024px) 90vw, 45vw"
-                  className="object-cover object-center"
+                  className="origin-top scale-[1.22] object-cover object-[50%_14%]"
                 />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-brand-950/90 via-brand-950/35 to-transparent" />
               </div>
 
               {/* Authority badge card */}
-              <div className="absolute -bottom-6 right-3 max-w-[320px] border-l-2 border-brand-700 bg-ivory px-5 py-4 shadow-card sm:-right-6 sm:px-6">
-                <div className="flex items-center gap-2 text-brand-700">
-                  <ShieldCheck size={16} />
+              <div className="absolute -bottom-6 right-3 max-w-[330px] rounded-xl border border-brand-700/30 bg-ivory px-5 py-4 shadow-card sm:-right-6 sm:px-6">
+                <div className="flex items-center gap-2 text-brand-800">
+                  <Award size={16} />
                   <p className="text-[10px] font-bold uppercase tracking-[0.16em]">
-                    Advogada & Sócia-Fundadora
+                    Advocacia de Referência em Diamantina
                   </p>
                 </div>
                 <p className="mt-1 font-serif text-lg leading-snug text-ink">
-                  Dra. Ana Letícia Pereira
+                  Dra. Catarina Souza
                 </p>
-                <p className="mt-1 text-[11px] font-medium text-brand-800">
-                  ALP Advocacia e Consultoria
+                <p className="mt-0.5 text-[11px] font-medium text-brand-800">
+                  Catarina Souza Sociedade Individual de Advocacia
                 </p>
                 <p className="mt-1 text-[11px] leading-4 text-ink-soft">
-                  Atuação dedicada em Trânsito, Família, Cível, Previdenciário e Consumidor.
+                  Sede no Beco da Pena, 29 — Centro Histórico de Diamantina -
+                  MG.
                 </p>
-                <a
-                  href={INSTAGRAM_URL}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="mt-2.5 inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-brand-800 hover:text-brand-700"
-                >
-                  <InstagramIcon size={13} /> {INSTAGRAM_HANDLE}
-                </a>
               </div>
 
               <span className="absolute -left-4 -top-4 -z-10 size-24 border-l border-t border-brand-700/40 sm:-left-7 sm:-top-7 sm:size-32" />
@@ -776,59 +787,74 @@ export default function Home() {
               variants={stagger}
             >
               <motion.p variants={reveal} className="eyebrow">
-                ADVOCACIA HUMANIZADA & RIGOR TÉCNICO
+                SOBRE O ESCRITÓRIO & ADVOGADA TITULAR
               </motion.p>
               <motion.h2
                 variants={reveal}
-                className="mt-4 max-w-2xl font-serif text-4xl leading-[1.09] tracking-[-0.035em] text-ink sm:text-5xl lg:text-[3.45rem]"
+                className="mt-4 max-w-2xl font-serif text-4xl leading-[1.09] tracking-[-0.03em] text-ink sm:text-5xl lg:text-[3.4rem]"
               >
-                Compromisso com a{" "}
-                <span className="italic text-brand-700">verdade jurídica</span>{" "}
-                e o respeito que sua causa exige.
+                Vasto conhecimento jurídico aliado a um{" "}
+                <span className="italic text-brand-800">
+                  atendimento próximo e resolutivo.
+                </span>
               </motion.h2>
 
               <motion.p
                 variants={reveal}
                 className="mt-6 max-w-xl text-[15px] leading-7 text-ink-soft"
               >
-                O escritório{" "}
+                Com atuação consolidada em{" "}
                 <strong className="text-ink">
-                  ALP Advocacia e Consultoria
-                </strong>{" "}
-                foi idealizado pela{" "}
-                <strong className="text-ink">Dra. Ana Letícia Pereira</strong> com
-                uma missão clara: proporcionar uma advocacia transparente,
-                acessível e profundamente combativa. Cada caso é estudado de
-                forma artesanal, buscando a solução técnica mais segura e
-                vantajosa para o cliente.
+                  Diamantina e em toda a Microrregião de Diamantina (MG)
+                </strong>
+                , o escritório{" "}
+                <strong className="text-ink">Catarina Souza Advogada</strong>{" "}
+                destaca-se pela dedicação minuciosa a cada cliente, ética
+                inabalável e compromisso com soluções jurídicas rápidas,
+                seguras e eficientes.
+              </motion.p>
+
+              <motion.p
+                variants={reveal}
+                className="mt-4 max-w-xl text-[15px] leading-7 text-ink-soft"
+              >
+                Seja na proteção de consumidores e aposentados contra{" "}
+                <strong className="text-ink">
+                  empréstimos consignados não contratados e superendividamento
+                </strong>
+                , seja em demandas cíveis, familiares e previdenciárias, cada
+                caso recebe escuta atenta, orientação transparente e estratégia
+                personalizada.
               </motion.p>
 
               {/* Profile Highlight Card */}
               <motion.div
                 variants={reveal}
-                className="mt-6 rounded-sm border border-ink/10 bg-ivory/80 p-5 transition-all hover:border-brand-700/40 hover:bg-ivory"
+                className="mt-6 rounded-xl border border-ink/10 bg-ivory/80 p-5 transition-all hover:border-brand-700/40 hover:bg-ivory"
               >
-                <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
                   <div className="relative size-16 shrink-0 overflow-hidden rounded-full border-2 border-brand-700/40 shadow-sm">
                     <Image
-                      src="/dra-ana-leticia-diploma.jpg"
-                      alt="Dra. Ana Letícia Pereira"
+                      src={IMG_SUPERENDIVIDAMENTO_SRC}
+                      alt="Dra. Catarina Souza"
                       fill
-                      className="object-cover object-[50%_20%]"
+                      className="origin-top scale-[1.8] object-cover object-[50%_10%]"
                     />
                   </div>
                   <div>
-                    <span className="text-[9px] font-bold uppercase tracking-widest text-brand-700">
-                      Liderança Técnica
+                    <span className="text-[9px] font-bold uppercase tracking-widest text-brand-800">
+                      Advogada Titular
                     </span>
                     <h3 className="font-serif text-xl font-semibold text-ink">
-                      Dra. Ana Letícia Pereira
+                      Dra. Catarina Souza
                     </h3>
                     <p className="text-xs text-ink-soft">
-                      Trânsito · Família · Previdenciário (INSS) · Cível · Consumidor
+                      Bancário · Superendividamento · Consignados · Consumidor ·
+                      Cível · Família · INSS
                     </p>
                     <p className="mt-1 text-[11px] font-medium text-brand-900">
-                      Atendimento presencial no Centro de Três Corações e digital para todo o país
+                      Beco da Pena, 29 - Centro, Diamantina - MG · Atendimento
+                      presencial e digital
                     </p>
                   </div>
                 </div>
@@ -836,44 +862,65 @@ export default function Home() {
 
               <motion.div
                 variants={reveal}
-                className="mt-6 grid grid-cols-1 gap-2.5 sm:grid-cols-2 text-xs text-ink font-medium"
+                className="mt-6 grid grid-cols-1 gap-2.5 text-xs font-medium text-ink sm:grid-cols-2"
               >
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="text-brand-700 shrink-0" />
-                  <span>Estudo minucioso e fundamentação jurídica sob medida</span>
+                  <CheckCircle2
+                    size={15}
+                    className="shrink-0 text-brand-800"
+                  />
+                  <span>
+                    Atendimento humanizado, ético e atento às suas necessidades
+                  </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="text-brand-700 shrink-0" />
-                  <span>Transparência total e clareza em todas as explicações</span>
+                  <CheckCircle2
+                    size={15}
+                    className="shrink-0 text-brand-800"
+                  />
+                  <span>
+                    Esclarecimento completo de dúvidas em linguagem clara
+                  </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="text-brand-700 shrink-0" />
-                  <span>Sede no Centro de Três Corações - MG (R. Joaquim Bento Carvalho)</span>
+                  <CheckCircle2
+                    size={15}
+                    className="shrink-0 text-brand-800"
+                  />
+                  <span>
+                    Sede própria no Centro de Diamantina - MG (Beco da Pena, 29)
+                  </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="text-brand-700 shrink-0" />
-                  <span>Atendimento ágil com dedicação humana e ética irrestrita</span>
+                  <CheckCircle2
+                    size={15}
+                    className="shrink-0 text-brand-800"
+                  />
+                  <span>
+                    Nota máxima 5,0 estrelas no Google em 22 avaliações reais
+                  </span>
                 </div>
               </motion.div>
 
-              <motion.div variants={reveal} className="mt-8 flex flex-wrap items-center gap-4">
+              <motion.div
+                variants={reveal}
+                className="mt-8 flex flex-wrap items-center gap-4"
+              >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Ana Letícia! Gostaria de agendar uma consulta sobre meu caso."
+                    "Olá, Dra. Catarina Souza! Gostaria de agendar uma consulta sobre o meu caso."
                   )}
                   target="_blank"
                   size="md"
                   className="rounded-full shadow-md"
                 >
-                  <WhatsAppIcon size={16} /> Iniciar Consulta no WhatsApp
+                  <WhatsAppIcon size={16} /> Falar com a Dra. Catarina
                 </GlowingButton>
                 <a
-                  href={INSTAGRAM_URL}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-ink-soft hover:text-brand-700"
+                  href={`tel:+${WHATSAPP_NUMBER}`}
+                  className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-ink-soft hover:text-brand-800"
                 >
-                  <InstagramIcon size={15} /> {INSTAGRAM_HANDLE}
+                  <Phone size={15} /> {PHONE_DISPLAY}
                 </a>
               </motion.div>
             </motion.div>
@@ -894,17 +941,17 @@ export default function Home() {
               className="flex flex-col justify-between gap-6 md:flex-row md:items-end"
             >
               <Heading
-                eyebrow="ÁREAS DE ATUAÇÃO ESTRATÉGICA"
-                description="Atuação jurídica qualificada para proteger seu direito de dirigir, sua família, seu patrimônio e seus direitos previdenciários e de consumidor."
+                eyebrow="SERVIÇOS JURÍDICOS & PILARES DE ATUAÇÃO"
+                description="Soluções jurídicas personalizadas para defender sua renda, seu patrimônio, seus direitos como consumidor e sua família na Microrregião de Diamantina e em todo o Brasil."
               >
-                Segurança jurídica e combatividade nos{" "}
-                <span className="italic text-brand-700">
-                  momentos mais decisivos.
+                Atuação estratégica e comprometida com{" "}
+                <span className="italic text-brand-800">
+                  a defesa dos seus direitos.
                 </span>
               </Heading>
               <p className="max-w-[270px] pb-1 text-xs leading-6 text-ink-soft">
-                Selecione uma área abaixo para visualizar temas atendidos e falar
-                diretamente com o escritório.
+                Selecione uma especialidade abaixo para ver os detalhes de
+                atuação e iniciar seu atendimento pelo WhatsApp.
               </p>
             </motion.div>
 
@@ -921,10 +968,10 @@ export default function Home() {
                   <motion.article
                     key={area.id}
                     variants={reveal}
-                    className="group flex min-h-[350px] flex-col border border-ink/10 bg-white p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-700/40 hover:shadow-card sm:p-8"
+                    className="group flex min-h-[350px] flex-col rounded-xl border border-ink/10 bg-white p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-700/40 hover:shadow-card sm:p-8"
                   >
                     <div className="flex items-start justify-between">
-                      <span className="grid size-12 place-items-center rounded-full bg-brand-50 text-brand-700 transition-colors group-hover:bg-brand-700 group-hover:text-white">
+                      <span className="grid size-12 place-items-center rounded-full bg-brand-50 text-brand-800 transition-colors group-hover:bg-brand-800 group-hover:text-white">
                         <Icon size={22} strokeWidth={1.5} />
                       </span>
                       <span className="font-serif text-2xl text-brand-700/50">
@@ -959,167 +1006,168 @@ export default function Home() {
                 );
               })}
             </motion.div>
-
-            {/* Banner Oficial de Pilares com Imagem da Dra. Ana Letícia */}
-            <motion.div
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.15 }}
-              transition={{ duration: 0.7 }}
-              className="mt-14 overflow-hidden rounded-[2px] border border-brand-700/20 bg-brand-950 text-white shadow-card"
-            >
-              <div className="grid items-center lg:grid-cols-[1.1fr_0.9fr]">
-                <div className="p-8 sm:p-12 lg:p-14">
-                  <div className="inline-flex items-center gap-2 rounded-full bg-brand-700/30 px-3.5 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-brand-200">
-                    <Sparkles size={13} /> ALP Advocacia e Consultoria
-                  </div>
-                  <h3 className="mt-4 font-serif text-3xl leading-snug sm:text-4xl text-white">
-                    Direito de Trânsito, Família, Cível, Previdenciário e Consumidor com atendimento resolutivo e humano.
-                  </h3>
-                  <p className="mt-4 max-w-xl text-sm leading-7 text-white/75">
-                    Nossa atuação especializada combina combatividade jurídica
-                    com a presteza e transparência que você e sua causa merecem.
-                    Não trabalhamos com modelos genéricos: cada estratégia é
-                    desenhada sob medida para o seu caso.
-                  </p>
-                  <div className="mt-8 flex flex-wrap items-center gap-4">
-                    <GlowingButton
-                      href={getWhatsAppUrl(
-                        "Olá, Dra. Ana Letícia! Gostaria de agendar uma consulta sobre meu processo."
-                      )}
-                      target="_blank"
-                      size="md"
-                      className="rounded-full shadow-md"
-                    >
-                      <WhatsAppIcon size={16} /> Falar no WhatsApp
-                    </GlowingButton>
-                    <a
-                      href={`tel:+${WHATSAPP_NUMBER}`}
-                      className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-brand-200 hover:text-white"
-                    >
-                      <Phone size={14} /> Ligar: {PHONE_DISPLAY}
-                    </a>
-                  </div>
-                </div>
-
-                <div className="relative aspect-[4/3] w-full overflow-hidden bg-brand-900/40 lg:aspect-auto lg:h-full lg:min-h-[420px]">
-                  <Image
-                    src="/dra-ana-leticia-diploma.jpg"
-                    alt="Dra. Ana Letícia Pereira — ALP Advocacia e Consultoria"
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 45vw"
-                    className="object-cover object-[50%_20%]"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-brand-950/70 via-transparent to-transparent lg:bg-gradient-to-r lg:from-brand-950/80 lg:to-transparent" />
-                </div>
-              </div>
-            </motion.div>
           </div>
         </section>
 
-        {/* Propósito & Filosofia de Atuação */}
+        {/* Seção Especial: Orientações Jurídicas em Destaque (Superendividamento & Consignados) */}
         <section
-          id="proposito"
-          className="scroll-mt-24 border-y border-ink/10 bg-[#f4ede3] py-20 sm:py-28 lg:py-32"
+          id="orientacoes"
+          className="scroll-mt-24 border-y border-ink/10 bg-[#f4ede0] py-20 sm:py-28 lg:py-32"
         >
-          <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-[1fr_1fr] lg:gap-16 lg:px-12">
-            {/* Visual presentation card with Books & Office */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.96, y: 16 }}
-              whileInView={{ opacity: 1, scale: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.7 }}
-              className="relative mx-auto w-full max-w-[460px]"
-            >
-              <div className="overflow-hidden rounded-xl border border-brand-700/25 bg-white shadow-card">
-                <div className="relative aspect-[3/4] w-full bg-white">
+          <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+            <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+              <Heading
+                eyebrow="PROTEÇÃO FINANCEIRA & DEFESA DO CONSUMIDOR"
+                description="Confira duas das principais frentes de atuação do escritório Catarina Souza Advogada na proteção da sua renda, aposentadoria e dignidade financeira."
+              >
+                Cobranças abusivas ou dívidas impagáveis?{" "}
+                <span className="italic text-brand-800">
+                  Conheça os seus direitos.
+                </span>
+              </Heading>
+              <GlowingButton
+                href={getWhatsAppUrl(
+                  "Olá, Dra. Catarina Souza! Quero analisar meu caso de dívida bancária / empréstimo consignado."
+                )}
+                target="_blank"
+                size="md"
+                className="rounded-full shadow-sm"
+              >
+                <WhatsAppIcon size={16} /> Analisar Meu Caso no WhatsApp
+              </GlowingButton>
+            </div>
+
+            <div className="mt-12 grid gap-8 lg:grid-cols-2">
+              {/* Card 1: Lei do Superendividamento (imgi_10 full visual) */}
+              <motion.article
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.15 }}
+                transition={{ duration: 0.65 }}
+                className="group grid items-center gap-6 rounded-2xl border border-brand-700/25 bg-white p-4 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-brand-700/45 sm:grid-cols-[1fr_1.05fr] sm:gap-7 sm:p-5"
+              >
+                <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl border border-brand-700/25 bg-brand-950 shadow-md">
                   <Image
-                    src="/dra-ana-leticia-advogada.jpg"
-                    alt="Dra. Ana Letícia Pereira — ALP Advocacia e Consultoria em Três Corações - MG"
+                    src={IMG_SUPERENDIVIDAMENTO_SRC}
+                    alt="Está difícil pagar todas as suas dívidas? Conheça a possibilidade de repactuação prevista na Lei do Superendividamento — Catarina Souza Advogada"
                     fill
-                    sizes="(max-width: 768px) 90vw, 40vw"
-                    className="object-cover object-[50%_15%]"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 28vw"
+                    className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
                   />
-                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-6 text-white">
-                    <p className="font-serif text-xl font-normal">
-                      &ldquo;Antes de ser uma excelente advogada, é um ótimo ser humano.&rdquo;
+                </div>
+                <div className="flex h-full flex-col justify-between py-1 sm:pr-2">
+                  <div>
+                    <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-700/20 bg-brand-50 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-brand-800">
+                      <Landmark size={13} /> Lei nº 14.181/2021
+                    </span>
+                    <h3 className="mt-3.5 font-serif text-2xl leading-tight text-ink sm:text-[1.65rem]">
+                      Repactuação de Dívidas pelo Superendividamento
+                    </h3>
+                    <p className="mt-2.5 text-[13px] leading-6 text-ink-soft">
+                      Quando empréstimos e dívidas comprometem o sustento básico,
+                      a lei permite repactuar todos os débitos em um plano
+                      compatível com sua renda, preservando o mínimo existencial.
                     </p>
-                    <p className="mt-1 text-[11px] uppercase tracking-wider text-brand-200">
-                      Avaliação de cliente no Google Maps
-                    </p>
+                    <ul className="mt-3.5 space-y-1.5 text-xs font-medium text-ink">
+                      <li className="flex items-center gap-2">
+                        <CheckCircle2
+                          size={14}
+                          className="shrink-0 text-brand-800"
+                        />
+                        <span>Proteção da renda e do mínimo existencial</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckCircle2
+                          size={14}
+                          className="shrink-0 text-brand-800"
+                        />
+                        <span>Plano judicial ou extrajudicial de pagamento</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="mt-5 pt-3 border-t border-ink/10">
+                    <a
+                      href={getWhatsAppUrl(
+                        "Olá, Dra. Catarina Souza! Vi a orientação sobre a Lei do Superendividamento e gostaria de saber como funciona a repactuação de dívidas."
+                      )}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex w-full items-center justify-between rounded-xl border border-brand-800/25 bg-brand-50/80 px-4 py-3 text-[11px] font-bold uppercase tracking-[0.12em] text-brand-900 transition-all hover:border-brand-800 hover:bg-brand-800 hover:text-white"
+                    >
+                      <span className="inline-flex items-center gap-2">
+                        <WhatsAppIcon size={15} /> Solicitar análise de dívidas
+                      </span>
+                      <ArrowUpRight size={15} />
+                    </a>
                   </div>
                 </div>
-              </div>
+              </motion.article>
 
-              {/* Decorative accent */}
-              <div className="absolute -bottom-5 -left-5 -z-10 size-32 rounded-full bg-brand-300/40 blur-2xl" />
-              <div className="absolute -right-5 -top-5 -z-10 size-32 rounded-full bg-brand-200/50 blur-2xl" />
-            </motion.div>
-
-            {/* Text and philosophy */}
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              variants={stagger}
-            >
-              <motion.p variants={reveal} className="eyebrow">
-                PROPÓSITO & VOCAÇÃO
-              </motion.p>
-              <motion.h2
-                variants={reveal}
-                className="mt-4 font-serif text-4xl leading-[1.08] tracking-[-0.035em] text-ink sm:text-5xl lg:text-[3.35rem]"
+              {/* Card 2: Empréstimo Consignado Não Contratado (imgi_9 full visual) */}
+              <motion.article
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.15 }}
+                transition={{ duration: 0.65, delay: 0.1 }}
+                className="group grid items-center gap-6 rounded-2xl border border-brand-700/25 bg-white p-4 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-brand-700/45 sm:grid-cols-[1fr_1.05fr] sm:gap-7 sm:p-5"
               >
-                &ldquo;Uma advocacia pautada na ética, honestidade e{" "}
-                <span className="italic text-brand-700">dedicação incansável.</span>
-                &rdquo;
-              </motion.h2>
-
-              <motion.p
-                variants={reveal}
-                className="mt-6 text-[15px] leading-7 text-ink-soft sm:text-base sm:leading-8"
-              >
-                Este princípio guia cada decisão, cada parecer e cada
-                atendimento realizado na{" "}
-                <strong className="text-ink font-semibold">
-                  ALP Advocacia e Consultoria
-                </strong>
-                . Acreditamos que o Direito é um instrumento de justiça,
-                dignidade e tranquilidade para quem enfrenta desafios legais.
-              </motion.p>
-
-              <motion.blockquote
-                variants={reveal}
-                className="mt-6 border-l-2 border-brand-700 pl-5 text-sm italic leading-7 text-ink font-serif sm:text-base"
-              >
-                &ldquo;Profissional dedicada, e principalmente HONESTA! Recomendo sem medo. Antes de ser uma excelente advogada, é um ótimo ser HUMANO. Parabéns pela dedicação e comprometimento!&rdquo;
-                <footer className="mt-2 text-xs font-sans not-italic font-semibold uppercase tracking-wider text-brand-800">
-                  — Jaqueline Barbara (Cliente verificada no Google)
-                </footer>
-              </motion.blockquote>
-
-              <motion.div variants={reveal} className="mt-9 flex flex-wrap items-center gap-4">
-                <GlowingButton
-                  href={getWhatsAppUrl(
-                    "Olá, Dra. Ana Letícia! Conheci seu trabalho e gostaria de solicitar um atendimento."
-                  )}
-                  target="_blank"
-                  size="md"
-                  className="rounded-full shadow-md"
-                >
-                  <WhatsAppIcon size={16} /> Entrar em Contato
-                </GlowingButton>
-                <a
-                  href={INSTAGRAM_URL}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border border-ink/15 px-5 py-3 text-xs font-semibold uppercase tracking-[0.12em] text-ink transition-colors hover:border-brand-700 hover:text-brand-700"
-                >
-                  <InstagramIcon size={15} /> Acompanhar no Instagram{" "}
-                  <ArrowUpRight size={13} />
-                </a>
-              </motion.div>
-            </motion.div>
+                <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl border border-brand-700/25 bg-brand-950 shadow-md">
+                  <Image
+                    src={IMG_CONSIGNADO_SRC}
+                    alt="Descontaram um empréstimo consignado que você não contratou? Saiba o que fazer! — Catarina Souza Advogada"
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 28vw"
+                    className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
+                  />
+                </div>
+                <div className="flex h-full flex-col justify-between py-1 sm:pr-2">
+                  <div>
+                    <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-700/20 bg-brand-50 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-brand-800">
+                      <BadgeAlert size={13} /> Defesa contra Fraudes
+                    </span>
+                    <h3 className="mt-3.5 font-serif text-2xl leading-tight text-ink sm:text-[1.65rem]">
+                      Empréstimo Consignado Não Contratado
+                    </h3>
+                    <p className="mt-2.5 text-[13px] leading-6 text-ink-soft">
+                      Identificou descontos desconhecidos no seu benefício do
+                      INSS ou contracheque? Atuamos com urgência para suspender
+                      as cobranças e buscar restituição e indenização.
+                    </p>
+                    <ul className="mt-3.5 space-y-1.5 text-xs font-medium text-ink">
+                      <li className="flex items-center gap-2">
+                        <CheckCircle2
+                          size={14}
+                          className="shrink-0 text-brand-800"
+                        />
+                        <span>Pedido liminar para suspender descontos</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckCircle2
+                          size={14}
+                          className="shrink-0 text-brand-800"
+                        />
+                        <span>Restituição em dobro e danos morais</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="mt-5 pt-3 border-t border-ink/10">
+                    <a
+                      href={getWhatsAppUrl(
+                        "Olá, Dra. Catarina Souza! Descontaram um empréstimo consignado que eu não contratei e gostaria de saber como proceder."
+                      )}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex w-full items-center justify-between rounded-xl border border-brand-800/25 bg-brand-50/80 px-4 py-3 text-[11px] font-bold uppercase tracking-[0.12em] text-brand-900 transition-all hover:border-brand-800 hover:bg-brand-800 hover:text-white"
+                    >
+                      <span className="inline-flex items-center gap-2">
+                        <WhatsAppIcon size={15} /> Denunciar desconto indevido
+                      </span>
+                      <ArrowUpRight size={15} />
+                    </a>
+                  </div>
+                </div>
+              </motion.article>
+            </div>
           </div>
         </section>
 
@@ -1128,17 +1176,28 @@ export default function Home() {
           <div className="pointer-events-none absolute -left-28 top-1/4 size-96 rounded-full bg-brand-700/20 blur-3xl" />
           <div className="pointer-events-none absolute -right-28 bottom-1/4 size-96 rounded-full bg-brand-800/15 blur-3xl" />
 
-          <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20 lg:px-12">
-            <Heading
-              eyebrow="NOSSO COMPROMISSO PROFISSIONAL"
-              light
-              description="A condução de cada demanda com rigor técnico intransigente, transparência total e acolhimento humano ao tempo e às necessidades de quem nos procura."
-            >
-              A precisão jurídica aliada ao{" "}
-              <span className="italic text-brand-200">
-                respeito que sua causa merece.
-              </span>
-            </Heading>
+          <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.88fr_1.12fr] lg:gap-20 lg:px-12">
+            <div>
+              <Heading
+                eyebrow="NOSSO COMPROMISSO PROFISSIONAL"
+                light
+                description="O reconhecimento como um dos escritórios mais bem avaliados de Diamantina - MG é fruto de um método de trabalho pautado na ética, na escuta atenta e na eficiência técnica."
+              >
+                Dedicação personalizada e{" "}
+                <span className="italic text-brand-200">
+                  compromisso com cada cliente.
+                </span>
+              </Heading>
+
+              <blockquote className="mt-8 rounded-xl border border-brand-400/25 bg-white/5 p-6 font-serif text-base italic leading-7 text-brand-100">
+                &ldquo;Excelente profissional com atendimento humanizado e
+                compromisso com o resultado! Vasto conhecimento na área
+                Jurídica. Esta eu indico.&rdquo;
+                <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-brand-300">
+                  — Ricardo Soares · Avaliação 5,0 ★ no Google
+                </footer>
+              </blockquote>
+            </div>
 
             <motion.div
               initial="hidden"
@@ -1150,18 +1209,18 @@ export default function Home() {
               {[
                 [
                   "01",
-                  "Estudo aprofundado e minucioso do processo",
-                  "Como destacam nossos clientes em avaliações públicas, lemos cada lauda processual com rigor absoluto e desenhamos estratégias sob medida, sem soluções padronizadas.",
+                  "Atendimento humanizado e escuta acolhedora",
+                  "Recebemos cada cliente com atenção integral, tirando todas as dúvidas de forma clara, respeitosa e sem jargões complicados.",
                 ],
                 [
                   "02",
-                  "Transparência irrestrita e explicações claras",
-                  "Você é mantido informado sobre cada movimentação em linguagem direta e compreensível, sabendo com clareza os passos, as chances reais e os prazos em curso.",
+                  "Estratégia jurídica sob medida para o seu caso",
+                  "Analisamos minuciosamente contratos, extratos previdenciários e documentos processuais para construir a tese jurídica mais sólida e eficaz.",
                 ],
                 [
                   "03",
-                  "Combatividade e presteza na defesa de direitos",
-                  "Aliamos atualização jurídica contínua e jurisprudência sólida para defender seus direitos com firmeza perante órgãos administrativos, varas cíveis e tribunais.",
+                  "Ética, responsabilidade e acompanhamento transparente",
+                  "Atuamos com seriedade absoluta do início à conclusão da demanda, mantendo você informado sobre cada avanço do seu processo.",
                 ],
               ].map(([number, title, description]) => (
                 <motion.div
@@ -1174,7 +1233,7 @@ export default function Home() {
                   </span>
                   <div>
                     <h3 className="font-serif text-2xl text-white">{title}</h3>
-                    <p className="mt-2 max-w-lg text-[13px] leading-6 text-white/70">
+                    <p className="mt-2 max-w-lg text-[13px] leading-6 text-brand-100/75">
                       {description}
                     </p>
                   </div>
@@ -1184,7 +1243,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Avaliações no Google (Depoimentos Reais - 5,0 estrelas · 30 avaliações) */}
+        {/* Avaliações no Google (Depoimentos Reais - 5,0 estrelas · 22 avaliações) */}
         <section
           id="avaliacoes"
           className="scroll-mt-24 bg-white py-20 sm:py-28 lg:py-32"
@@ -1192,18 +1251,18 @@ export default function Home() {
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
               <Heading
-                eyebrow="AVALIAÇÕES NO GOOGLE MAPS · NOTA 5,0 ★"
-                description="A reputação consolidada da Dra. Ana Letícia Pereira e da ALP Advocacia e Consultoria é comprovada por quem contratou os serviços. Depoimentos autênticos de clientes verificados no Google."
+                eyebrow="AVALIAÇÕES NO GOOGLE · NOTA 5,0 ★ (22 AVALIAÇÕES)"
+                description="Confira os depoimentos reais de clientes que confiaram suas causas à Dra. Catarina Souza em Diamantina e região."
               >
-                A confiança de quem teve seus direitos{" "}
-                <span className="italic text-brand-700">
-                  defendidos com excelência.
+                Reconhecida pelos clientes pela{" "}
+                <span className="italic text-brand-800">
+                  atenção, ética e excelência.
                 </span>
               </Heading>
 
               {/* Verified Google Badge Card */}
-              <div className="flex flex-col gap-3 sm:flex-row sm:items-center rounded-2xl border border-brand-700/25 bg-ivory/80 p-5 shadow-card md:min-w-[340px]">
-                <div className="flex size-14 shrink-0 items-center justify-center rounded-xl bg-white shadow-sm border border-brand-700/15">
+              <div className="flex flex-col gap-3 rounded-2xl border border-brand-700/25 bg-ivory/80 p-5 shadow-card sm:flex-row sm:items-center md:min-w-[340px]">
+                <div className="flex size-14 shrink-0 items-center justify-center rounded-xl border border-brand-700/15 bg-white shadow-sm">
                   <GoogleIcon size={30} />
                 </div>
                 <div>
@@ -1211,32 +1270,32 @@ export default function Home() {
                     <span className="font-serif text-3xl font-bold leading-none text-ink">
                       5,0
                     </span>
-                    <div className="flex gap-0.5 text-brand-700">
+                    <div className="flex gap-0.5 text-brand-600">
                       {Array.from({ length: 5 }, (_, i) => (
                         <Star
                           key={i}
                           size={14}
-                          className="fill-brand-700 text-brand-700"
+                          className="fill-brand-600 text-brand-600"
                         />
                       ))}
                     </div>
                   </div>
-                  <p className="mt-1 text-[11px] font-semibold text-brand-900 uppercase tracking-wider">
-                    Classificação Máxima Unânime
+                  <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-brand-900">
+                    Catarina Souza Advogada · Diamantina
                   </p>
                   <a
                     href={GOOGLE_MAPS_URL}
                     target="_blank"
                     rel="noreferrer"
-                    className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-brand-700 hover:text-brand-800 transition-colors"
+                    className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-brand-800 transition-colors hover:text-brand-950"
                   >
-                    30 avaliações no Google Maps <ArrowUpRight size={13} />
+                    22 avaliações no Google <ArrowUpRight size={13} />
                   </a>
                 </div>
               </div>
             </div>
 
-            {/* Curated Testimonials Grid - Exactly 6 authentic reviews, NO duplication */}
+            {/* Authentic Google Reviews Grid */}
             <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {clientReviews.map((review) => (
                 <article
@@ -1246,12 +1305,12 @@ export default function Home() {
                   <div>
                     {/* Header: Stars + Date + Google icon */}
                     <div className="flex items-center justify-between gap-2">
-                      <div className="flex gap-1 text-brand-700">
+                      <div className="flex gap-1 text-brand-600">
                         {Array.from({ length: 5 }, (_, i) => (
                           <Star
                             key={i}
                             size={14}
-                            className="fill-brand-700 text-brand-700"
+                            className="fill-brand-600 text-brand-600"
                           />
                         ))}
                       </div>
@@ -1261,16 +1320,16 @@ export default function Home() {
                       </div>
                     </div>
 
-                    {/* Authentic review content - single display */}
-                    <p className="mt-5 text-[14px] leading-relaxed text-ink/85 italic">
+                    {/* Authentic review content */}
+                    <p className="mt-5 text-[14px] italic leading-relaxed text-ink/90">
                       &ldquo;{review.content}&rdquo;
                     </p>
 
                     {/* Owner reply if present */}
                     {review.reply && (
-                      <div className="mt-4 rounded-lg border border-brand-700/20 bg-brand-50/70 p-3 text-[11px] leading-relaxed text-brand-950">
-                        <span className="block font-bold text-[9px] uppercase tracking-wider text-brand-800 mb-0.5">
-                          Resposta de ALP Advocacia:
+                      <div className="mt-4 rounded-lg border border-brand-700/20 bg-brand-50/80 p-3 text-[11px] leading-relaxed text-brand-950">
+                        <span className="mb-0.5 block text-[9px] font-bold uppercase tracking-wider text-brand-800">
+                          Resposta de Catarina Souza Advogada:
                         </span>
                         &ldquo;{review.reply}&rdquo;
                       </div>
@@ -1283,7 +1342,7 @@ export default function Home() {
                       {review.name.charAt(0)}
                     </div>
                     <div className="min-w-0 flex-1">
-                      <p className="font-serif text-base font-semibold text-ink truncate">
+                      <p className="truncate font-serif text-base font-semibold text-ink">
                         {review.name}
                       </p>
                       <p className="text-[10px] uppercase tracking-wider text-ink-soft">
@@ -1296,20 +1355,20 @@ export default function Home() {
             </div>
 
             {/* Bottom Actions and Trust Tags */}
-            <div className="mt-12 flex flex-col sm:flex-row items-center justify-between gap-6 border-t border-ink/10 pt-8">
+            <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-ink/10 pt-8 sm:flex-row">
               <div className="flex flex-wrap items-center gap-2">
                 {[
-                  "Profissional extremamente competente",
-                  "Honesta e dedicada",
-                  "Explicações claras",
-                  "Serviços impecáveis",
-                  "Atendimento humano",
+                  "Atendimento humanizado",
+                  "Compromisso com o resultado",
+                  "Ética, competente e responsável",
+                  "Melhor escritório de Diamantina",
+                  "Tirou todas as dúvidas",
                 ].map((tag) => (
                   <span
                     key={tag}
                     className="inline-flex items-center gap-1.5 rounded-full border border-ink/10 bg-ivory px-3.5 py-1.5 text-[11px] font-medium text-ink-soft"
                   >
-                    <CheckCircle2 size={13} className="text-brand-700" />
+                    <CheckCircle2 size={13} className="text-brand-800" />
                     {tag}
                   </span>
                 ))}
@@ -1319,12 +1378,12 @@ export default function Home() {
                 href={GOOGLE_MAPS_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="group inline-flex shrink-0 items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-brand-800 hover:text-brand-700 transition-colors"
+                className="group inline-flex shrink-0 items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-brand-800 transition-colors hover:text-brand-950"
               >
-                Abrir avaliações no Google Maps{" "}
+                Ver perfil completo no Google Maps{" "}
                 <ArrowUpRight
                   size={15}
-                  className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                  className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
                 />
               </a>
             </div>
@@ -1336,14 +1395,16 @@ export default function Home() {
           id="contato"
           className="scroll-mt-24 bg-ivory py-20 sm:py-28 lg:py-32"
         >
-          <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20 lg:px-12">
+          <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
-                eyebrow="CONTATO & SEDE DO ESCRITÓRIO"
-                description="Agende sua consulta presencial em nosso escritório no Centro de Três Corações ou realize seu atendimento de forma totalmente on-line com segurança e agilidade."
+                eyebrow="CONTATO & SEDE EM DIAMANTINA - MG"
+                description="Agende seu atendimento presencial em nosso escritório no Centro de Diamantina ou fale conosco pelo WhatsApp para atendimento rápido em toda a região."
               >
-                Estamos prontos para{" "}
-                <span className="italic text-brand-700">ouvir o seu caso.</span>
+                Estamos à disposição para{" "}
+                <span className="italic text-brand-800">
+                  defender os seus direitos.
+                </span>
               </Heading>
 
               <div className="mt-9 flex flex-col items-start gap-4">
@@ -1353,94 +1414,121 @@ export default function Home() {
                   size="lg"
                   className="rounded-full shadow-md"
                 >
-                  <WhatsAppIcon size={17} /> Iniciar conversa no WhatsApp
+                  <WhatsAppIcon size={17} /> Iniciar Conversa no WhatsApp
                 </GlowingButton>
                 <p className="text-[11px] leading-5 text-ink-soft">
-                  Atendimento direto com resposta ágil:{" "}
-                  <strong className="text-ink">{PHONE_DISPLAY}</strong>.
+                  Telefone e WhatsApp direto:{" "}
+                  <strong className="text-ink">{PHONE_DISPLAY}</strong>
                 </p>
               </div>
 
               <div className="mt-10 space-y-4 text-xs text-ink-soft">
-                <div className="flex items-center gap-3">
-                  <Clock size={16} className="text-brand-700 shrink-0" />
-                  <span>Aberto 24 horas · Plantão & Atendimento Jurídico Ágil</span>
-                </div>
-                <div className="flex flex-col gap-2 pt-1 text-xs">
-                  <div className="flex items-center gap-3">
-                    <Phone size={16} className="text-brand-700 shrink-0" />
-                    <a
-                      href={`tel:+${WHATSAPP_NUMBER}`}
-                      className="hover:text-brand-700 transition-colors font-medium text-ink"
-                    >
-                      {PHONE_DISPLAY} (WhatsApp e Ligações)
-                    </a>
+                <div className="flex items-start gap-3">
+                  <Clock
+                    size={16}
+                    className="mt-0.5 shrink-0 text-brand-800"
+                  />
+                  <div>
+                    <p className="font-semibold text-ink">
+                      Horário de Funcionamento
+                    </p>
+                    <p className="mt-0.5">
+                      Segunda a Sexta-feira: 08:00 às 18:00
+                    </p>
+                    <p className="text-[11px] text-ink-soft/80">
+                      Sábado e Domingo: Fechado
+                    </p>
                   </div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <InstagramIcon size={16} className="text-brand-700 shrink-0 mt-0.5" />
+
+                <div className="flex items-center gap-3 pt-1">
+                  <Phone size={16} className="shrink-0 text-brand-800" />
                   <a
-                    href={INSTAGRAM_URL}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hover:text-brand-700 transition-colors font-medium text-brand-900 text-xs"
+                    href={`tel:+${WHATSAPP_NUMBER}`}
+                    className="font-medium text-ink transition-colors hover:text-brand-800"
                   >
-                    {INSTAGRAM_HANDLE} (Siga no Instagram)
+                    {PHONE_DISPLAY} (Ligações e WhatsApp)
                   </a>
                 </div>
+
                 <div className="flex items-center gap-3">
-                  <Mail size={16} className="text-brand-700 shrink-0" />
+                  <Mail size={16} className="shrink-0 text-brand-800" />
                   <a
                     href={`mailto:${EMAIL_CONTACT}`}
-                    className="hover:text-brand-700 transition-colors"
+                    className="transition-colors hover:text-brand-800"
                   >
                     {EMAIL_CONTACT}
                   </a>
                 </div>
+
+                <div className="flex items-start gap-3">
+                  <MapPin
+                    size={16}
+                    className="mt-0.5 shrink-0 text-brand-800"
+                  />
+                  <span>{ADDRESS_TEXT}</span>
+                </div>
               </div>
             </div>
 
-            {/* Address & Office Card */}
-            <div className="relative overflow-hidden border border-ink/10 bg-white p-7 sm:p-10 shadow-card">
-              <div className="absolute right-0 top-0 h-1.5 w-32 bg-brand-700" />
+            {/* Address & Office Hours Card */}
+            <div className="relative overflow-hidden rounded-2xl border border-ink/10 bg-white p-7 shadow-card sm:p-10">
+              <div className="absolute right-0 top-0 h-1.5 w-32 bg-brand-800" />
 
               <div className="flex items-center gap-4">
-                <span className="grid size-12 place-items-center rounded-full bg-brand-50 text-brand-700">
+                <span className="grid size-12 place-items-center rounded-full bg-brand-50 text-brand-800">
                   <MapPin size={22} strokeWidth={1.6} />
                 </span>
                 <div>
-                  <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-brand-700">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-brand-800">
                     Sede do Escritório
                   </p>
                   <p className="mt-1 font-serif text-2xl text-ink">
-                    Três Corações · Minas Gerais
+                    Diamantina · Minas Gerais
                   </p>
                 </div>
               </div>
 
-              <address className="mt-7 max-w-md not-italic text-[14px] leading-7 text-ink-soft">
-                <strong className="text-ink font-semibold">
-                  ALP Advocacia e Consultoria
+              <address className="mt-7 max-w-md text-[14px] not-italic leading-7 text-ink-soft">
+                <strong className="font-semibold text-ink">
+                  Catarina Souza Advogada
                 </strong>
                 <br />
-                Dra. Ana Letícia Pereira
+                Dra. Catarina Souza · Serviços Jurídicos na Microrregião de
+                Diamantina, MG
                 <br />
                 {ADDRESS_TEXT}
               </address>
+
+              {/* Weekly schedule table */}
+              <div className="mt-6 rounded-xl border border-ink/10 bg-ivory/70 p-4 text-xs">
+                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-brand-800">
+                  Expediente Semanal
+                </p>
+                <div className="grid grid-cols-2 gap-y-1.5 text-ink-soft">
+                  <span>Segunda a Sexta-feira</span>
+                  <span className="text-right font-semibold text-ink">
+                    08:00 – 18:00
+                  </span>
+                  <span>Sábado e Domingo</span>
+                  <span className="text-right text-ink-soft">Fechado</span>
+                </div>
+              </div>
 
               <div className="my-7 h-px bg-ink/10" />
 
               <div className="flex flex-wrap items-center justify-between gap-4">
                 <p className="text-xs text-ink-soft">
-                  Atendimento presencial no Centro e digital em todo o Brasil
+                  Centro Histórico de Diamantina · Atendimento presencial e
+                  digital
                 </p>
                 <a
                   href={GOOGLE_MAPS_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border border-ink/15 px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-ink transition-colors hover:border-brand-700 hover:bg-brand-50 hover:text-brand-800"
+                  className="inline-flex items-center gap-2 rounded-full border border-ink/15 px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-ink transition-colors hover:border-brand-800 hover:bg-brand-50 hover:text-brand-900"
                 >
-                  Abrir no Google Maps <ArrowUpRight size={14} />
+                  Traçar Rota no Google Maps <ArrowUpRight size={14} />
                 </a>
               </div>
             </div>
@@ -1448,25 +1536,28 @@ export default function Home() {
         </section>
 
         {/* Pre-Footer CTA Strip */}
-        <section className="bg-brand-700 px-5 py-14 text-white sm:px-8 sm:py-16 lg:px-12 shadow-inner">
+        <section className="bg-brand-800 px-5 py-14 text-white shadow-inner sm:px-8 sm:py-16 lg:px-12">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-7 sm:flex-row sm:items-center">
             <div>
-              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-200">
-                ALP ADVOCACIA E CONSULTORIA · DRA. ANA LETÍCIA PEREIRA
+              <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-brand-200">
+                <Sparkles size={13} /> CATARINA SOUZA ADVOGADA · DIAMANTINA -
+                MG
               </p>
-              <h2 className="mt-3 max-w-2xl font-serif text-3xl leading-tight sm:text-4xl text-white">
-                Precisa de uma defesa técnica, ética e comprometida com seus direitos?
+              <h2 className="mt-3 max-w-2xl font-serif text-3xl leading-tight text-white sm:text-4xl">
+                Precisa de orientação jurídica segura, ética e comprometida com
+                o seu resultado?
               </h2>
             </div>
             <a
               href={getWhatsAppUrl(
-                "Olá, Dra. Ana Letícia! Gostaria de agendar uma consulta inicial para avaliar meu caso."
+                "Olá, Dra. Catarina Souza! Gostaria de agendar uma consulta inicial para avaliar meu caso."
               )}
               target="_blank"
               rel="noreferrer"
               className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-full bg-white px-7 py-4 text-[11px] font-bold uppercase tracking-[0.14em] text-brand-900 shadow-md transition-all hover:-translate-y-0.5 hover:bg-brand-50 hover:shadow-lg"
             >
-              <WhatsAppIcon size={17} /> Falar no WhatsApp <ArrowUpRight size={15} />
+              <WhatsAppIcon size={17} /> Falar no WhatsApp{" "}
+              <ArrowUpRight size={15} />
             </a>
           </div>
         </section>
@@ -1475,22 +1566,27 @@ export default function Home() {
         <footer className="bg-brand-950 px-5 py-14 text-white sm:px-8 lg:px-12">
           <div className="mx-auto grid max-w-7xl gap-10 sm:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1fr]">
             <div>
-              <div className="inline-flex rounded-sm bg-white/95 p-3.5 shadow-md">
+              <a
+                href="#inicio"
+                aria-label="Catarina Souza Advogada"
+                className="inline-block"
+              >
                 <Image
-                  src="/logo.png"
+                  src={LOGO_SRC}
                   width={1774}
                   height={887}
-                  alt="ALP Advocacia e Consultoria"
-                  className="h-14 w-auto object-contain"
+                  alt="Catarina Souza Advogada"
+                  className="h-20 w-auto object-contain"
                 />
-              </div>
-              <p className="mt-5 max-w-xs text-xs leading-6 text-white/65">
-                Soluções jurídicas de alta precisão, rigor analítico e dedicação
-                humana. Sede no Centro de Três Corações - MG e atendimento
-                digital seguro em todo o Brasil.
+              </a>
+              <p className="mt-4 max-w-xs text-xs leading-6 text-brand-100/70">
+                Serviços jurídicos com atendimento humanizado, ética e
+                compromisso com o resultado na Microrregião de Diamantina - MG
+                e em todo o Brasil.
               </p>
               <p className="mt-3 text-[11px] font-semibold text-brand-300">
-                Dra. Ana Letícia Pereira · ALP Advocacia e Consultoria
+                Dra. Catarina Souza · Catarina Souza Sociedade Individual de
+                Advocacia
               </p>
             </div>
 
@@ -1498,48 +1594,49 @@ export default function Home() {
               <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-300">
                 Navegação
               </h2>
-              <div className="mt-4 flex flex-col items-start gap-3 text-xs text-white/70">
+              <div className="mt-4 flex flex-col items-start gap-3 text-xs text-brand-100/75">
                 <a className="footer-link" href="#inicio">
                   Início
                 </a>
                 <a className="footer-link" href="#sobre">
-                  O Escritório & Advogada
+                  A Advogada & Escritório
                 </a>
                 <a className="footer-link" href="#atuacao">
                   Áreas de Atuação
                 </a>
-                <a className="footer-link" href="#proposito">
-                  Propósito & Vocação
+                <a className="footer-link" href="#orientacoes">
+                  Superendividamento & Consignados
                 </a>
                 <a className="footer-link" href="#avaliacoes">
                   Avaliações no Google (5,0 ★)
                 </a>
                 <a className="footer-link" href="#contato">
-                  Contato & Sede em Três Corações
+                  Contato & Sede em Diamantina
                 </a>
               </div>
             </div>
 
             <div>
               <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-300">
-                Contato Direto
+                Contato & Endereço
               </h2>
-              <div className="mt-4 flex flex-col items-start gap-2.5 text-xs text-white/70">
+              <div className="mt-4 flex flex-col items-start gap-2.5 text-xs text-brand-100/75">
                 <a
-                  href={getWhatsAppUrl("Olá, Dra. Ana Letícia! Gostaria de solicitar um atendimento.")}
+                  href={getWhatsAppUrl(
+                    "Olá, Dra. Catarina Souza! Gostaria de solicitar um atendimento."
+                  )}
                   target="_blank"
                   rel="noreferrer"
-                  className="footer-link inline-flex items-center gap-2"
+                  className="footer-link inline-flex items-center gap-2 font-medium text-brand-200"
                 >
                   <WhatsAppIcon size={15} /> WhatsApp: {PHONE_DISPLAY}
                 </a>
                 <a
-                  href={INSTAGRAM_URL}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="footer-link inline-flex items-center gap-1.5 font-medium text-brand-200"
+                  href={`tel:+${WHATSAPP_NUMBER}`}
+                  className="footer-link inline-flex items-center gap-2"
                 >
-                  <InstagramIcon size={14} /> {INSTAGRAM_HANDLE}
+                  <Phone size={15} className="shrink-0" /> Telefone:{" "}
+                  {PHONE_DISPLAY}
                 </a>
                 <a
                   href={`mailto:${EMAIL_CONTACT}`}
@@ -1554,15 +1651,21 @@ export default function Home() {
                   className="footer-link inline-flex items-start gap-2"
                 >
                   <MapPin size={15} className="mt-0.5 shrink-0" />
-                  <span>R. Joaquim Bento Carvalho, 108 - Sl 2 - Centro, Três Corações - MG</span>
+                  <span>{ADDRESS_TEXT}</span>
                 </a>
+                <p className="inline-flex items-center gap-2 pt-1 text-[11px] text-brand-200/80">
+                  <Clock size={14} className="shrink-0" /> Seg a Sex: 08:00 às
+                  18:00
+                </p>
               </div>
             </div>
           </div>
 
-          <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-white/15 pt-6 text-[10px] text-white/50 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-white/15 pt-6 text-[10px] text-brand-100/55 sm:flex-row sm:items-center sm:justify-between">
             <p>
-              © {new Date().getFullYear()} ALP Advocacia e Consultoria (Dra. Ana Letícia Pereira). Todos os direitos reservados.
+              © {new Date().getFullYear()} Catarina Souza Advogada (Catarina
+              Souza Sociedade Individual de Advocacia). Todos os direitos
+              reservados.
             </p>
             <p>
               Conteúdo meramente informativo, em estrita conformidade com o
@@ -1572,9 +1675,14 @@ export default function Home() {
         </footer>
 
         {/* Floating WhatsApp Quick Action Button */}
-        <aside aria-label="Acesso rápido WhatsApp" className="fixed bottom-6 right-6 z-50">
+        <aside
+          aria-label="Acesso rápido WhatsApp"
+          className="fixed bottom-6 right-6 z-50"
+        >
           <a
-            href={getWhatsAppUrl("Olá, Dra. Ana Letícia! Gostaria de tirar uma dúvida sobre meu caso.")}
+            href={getWhatsAppUrl(
+              "Olá, Dra. Catarina Souza! Gostaria de tirar uma dúvida sobre meu caso."
+            )}
             target="_blank"
             rel="noreferrer"
             aria-label="Falar agora pelo WhatsApp"
@@ -1606,18 +1714,18 @@ export default function Home() {
                 exit={{ opacity: 0, y: 16, scale: 0.99 }}
                 transition={{ duration: 0.24 }}
                 onClick={(event) => event.stopPropagation()}
-                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-2xl border border-ink/10 bg-ivory p-7 shadow-2xl sm:max-w-xl sm:rounded-sm sm:p-10"
+                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-2xl border border-ink/10 bg-ivory p-7 shadow-2xl sm:max-w-xl sm:rounded-2xl sm:p-10"
               >
                 <button
                   type="button"
                   aria-label="Fechar detalhes da área"
                   onClick={() => setActiveArea(null)}
-                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-full border border-ink/15 text-ink transition-colors hover:border-brand-700 hover:text-brand-700"
+                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-full border border-ink/15 text-ink transition-colors hover:border-brand-800 hover:text-brand-800"
                 >
                   <X size={18} />
                 </button>
 
-                <p className="eyebrow">ÁREA DE ATUAÇÃO ESTRATÉGICA</p>
+                <p className="eyebrow">ESPECIALIDADE JURÍDICA</p>
 
                 <h2
                   id="area-dialog-title"
@@ -1632,7 +1740,7 @@ export default function Home() {
 
                 <div className="mt-6 border-t border-ink/10 pt-5">
                   <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-brand-800">
-                    Principais atuações e demandas atendidas:
+                    Principais demandas atendidas pelo escritório:
                   </p>
                   <ul className="mt-4 space-y-3">
                     {activeArea.topics.map((topic) => (
@@ -1640,14 +1748,14 @@ export default function Home() {
                         key={topic}
                         className="flex items-center gap-3 text-sm text-ink"
                       >
-                        <span className="size-2 rounded-full bg-brand-700 shrink-0" />
+                        <span className="size-2 shrink-0 rounded-full bg-brand-800" />
                         <span>{topic}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-3">
+                <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
                   <GlowingButton
                     href={getWhatsAppUrl(activeArea.whatsAppText)}
                     target="_blank"
@@ -1659,7 +1767,7 @@ export default function Home() {
                   <button
                     type="button"
                     onClick={() => setActiveArea(null)}
-                    className="px-5 py-3 text-xs font-semibold text-ink-soft hover:text-ink transition-colors"
+                    className="px-5 py-3 text-xs font-semibold text-ink-soft transition-colors hover:text-ink"
                   >
                     Fechar
                   </button>
