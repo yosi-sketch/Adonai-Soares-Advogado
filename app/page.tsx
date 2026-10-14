@@ -32,28 +32,27 @@ import {
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
 
-const WHATSAPP_NUMBER = "553438210380";
-const PHONE_DISPLAY = "(34) 3821-0380";
-const EMAIL_CONTACT = "contato@rodriguesenunes.adv.br";
-const INSTAGRAM_URL = "https://www.instagram.com/rodriguesenunes/";
-const INSTAGRAM_HANDLE = "@rodriguesenunes";
+const WHATSAPP_NUMBER = "5532988868022";
+const PHONE_DISPLAY = "(32) 98886-8022";
+const EMAIL_CONTACT = "contato@julianacarvalho.adv.br";
+const INSTAGRAM_URL = "https://www.instagram.com/juliana.carvalho.adv/";
+const INSTAGRAM_HANDLE = "@juliana.carvalho.adv";
 
 const ADDRESS_TEXT =
-  "Av. Paracatu, 880 - Centro, Patos de Minas - MG, 38700-096, Brasil";
+  "Av. Tiradentes, 707 - Centro, São João del Rei - MG, 36307-346, Brasil";
 const GOOGLE_MAPS_URL =
-  "https://www.google.com/maps/search/?api=1&query=Rodrigues+%26+Nunes+Advogados+Associados+Patos+de+Minas+MG";
+  "https://www.google.com/maps/search/?api=1&query=Juliana+Carvalho+Advogada+Especialista+em+INSS+e+RPPS+Av+Tiradentes+707+Sao+Joao+del+Rei+MG";
 
-const LOGO_SRC = "/Logotipo Elegante Rodrigues & Nunes.png";
-const EMBLEMA_SRC = "/emblema.png";
-const FOTO_RENATO_SRC = "/dr-renato-nunes.png";
-const FOTO_EQUIPE_SRC = "/equipe-rodrigues-nunes.jpg";
+const LOGO_SRC = "/juliana-carvalho-logo-header.png";
+const FOTO_HERO_SRC = "/juliana-carvalho-hero.png";
+const FOTO_SOBRE_SRC = "/juliana-carvalho-sobre.png";
 
 function getWhatsAppUrl(
   message?: string,
   number: string = WHATSAPP_NUMBER
 ) {
   const defaultText =
-    "Olá! Gostaria de agendar uma consulta jurídica com o escritório Rodrigues & Nunes Advogados Associados.";
+    "Olá, Dra. Juliana Carvalho! Gostaria de agendar uma consulta jurídica sobre meu benefício / aposentadoria.";
   return `https://wa.me/${number}?text=${encodeURIComponent(
     message || defaultText
   )}`;
@@ -163,223 +162,195 @@ interface PracticeArea {
 
 const practiceAreas: PracticeArea[] = [
   {
-    id: "direito-previdenciario-auxilio-acidente",
-    title: "Direito Previdenciário & Auxílio-Acidente",
+    id: "planejamento-previdenciario-estrategico",
+    title: "Planejamento Previdenciário Estratégico",
     icon: Landmark,
-    tag: "Auxílio-Acidente · Concessões & Revisões",
+    tag: "INSS & RPPS · Maior Renda Mensal",
     summary:
-      "Atuação de destaque em auxílio-acidente, aposentadorias e benefícios por incapacidade com clareza total, agilidade e acompanhamento próximo.",
+      "Análise aprofundada de todo o histórico de contribuições para você se aposentar no momento ideal com o maior valor de benefício possível.",
     details:
-      "O escritório Rodrigues & Nunes possui ampla experiência na conquista de benefícios previdenciários e na reversão de indeferimentos do INSS. Sob a coordenação do Dr. Renato Nunes, dedicamo-nos com paciência para explicar cada etapa e garantir que o trabalhador e sua família conquistem a proteção social e o valor financeiro a que têm direito legal.",
+      "A Reforma da Previdência tornou as regras de concessão muito complexas. O Planejamento Previdenciário elaborado pela Dra. Juliana Carvalho examina minuciosamente seu Extrato Previdenciário (CNIS), corrige períodos e salários faltantes, simula todas as regras de transição e aponta o melhor custo-benefício contributivo para garantir que você não perca dinheiro na sua aposentadoria.",
     topics: [
-      "Concessão e restabelecimento do Auxílio-Acidente (trabalhadores com sequelas)",
-      "Aposentadoria por Idade Urbana e Rural, Tempo de Contribuição e Especial",
-      "Benefícios por Incapacidade Temporária e Permanente (Auxílio-Doença e Invalidez)",
-      "BPC/LOAS para idosos em vulnerabilidade e pessoas com deficiência",
-      "Planejamento Previdenciário completo para obter a melhor renda mensal",
-      "Recursos administrativos perante o INSS e ações judiciais previdenciárias",
+      "Simulação de cenários futuros nas regras de transição pós-Reforma",
+      "Cálculo da Renda Mensal Inicial (RMI) em cada data provável",
+      "Acerto e regularização de períodos pendentes no extrato CNIS",
+      "Estratégia de descarte de salários prejudiciais (divisor mínimo)",
+      "Orientação sobre recolhimentos em atraso e indenização de tempo",
+      "Relatório executivo completo com cronograma seguro de concessão",
     ],
     whatsAppText:
-      "Olá! Gostaria de consultar a concessão / revisão de um benefício do INSS ou Auxílio-Acidente com a Rodrigues & Nunes Advogados.",
+      "Olá, Dra. Juliana! Gostaria de agendar meu Planejamento Previdenciário para conquistar a melhor aposentadoria.",
   },
   {
-    id: "direito-do-trabalho-defesa-laboral",
-    title: "Direito do Trabalho & Rescisões",
-    icon: Briefcase,
-    tag: "Resgate de Verbas & Direitos",
+    id: "aposentadoria-servidores-publicos-rpps",
+    title: "Aposentadoria de Servidores Públicos (RPPS)",
+    icon: Award,
+    tag: "Servidores Públicos · Integralidade & Paridade",
     summary:
-      "Defesa contundente dos direitos do trabalhador, cobrança de verbas rescisórias, horas extras, insalubridade e acidentes do trabalho.",
+      "Defesa dos direitos previdenciários de servidores municipais, estaduais e federais nas regras de transição, integralidade e paridade salarial.",
     details:
-      "Relações trabalhistas exigem rigor técnico e prontidão. Atuamos com empenho para apurar verbas devidas, rescisões indiretas decorrentes de descumprimentos do empregador e indenizações justas por acidentes e danos, sempre com foco em acordos justos ou sentenças favoráveis.",
+      "Servidores públicos possuem regramentos previdenciários específicos e sofrem frequentemente com interpretações administrativas restritivas. A Dra. Juliana Carvalho possui especialização dedicada em Regimes Próprios (RPPS), atuando no resguardo do direito adquirido, aplicação correta das regras de transição, averbação de tempo e incorporação de gratificações funcionais.",
     topics: [
-      "Cobrança integral de verbas rescisórias atrasadas, FGTS e multa de 40%",
-      "Rescisão indireta do contrato de trabalho por faltas graves do empregador",
-      "Horas extras não quitadas, intervalo intrajornada e adicional noturno",
-      "Adicionais de insalubridade e periculosidade com embasamento pericial",
-      "Reconhecimento de vínculo de emprego e combate à pejotização fraudulenta",
-      "Indenizações por acidentes de trabalho, lesões ocupacionais e assédio",
+      "Defesa de direito adquirido à integralidade e paridade constitucional",
+      "Regras de transição dos pontos e pedágios (Emenda Constitucional 103/2019)",
+      "Emissão e averbação de Certidão de Tempo de Contribuição (CTC)",
+      "Aposentadoria especial do servidor público (atividades de risco e insalubridade)",
+      "Revisão e reenquadramento de proventos e vantagens funcionais",
+      "Atuação em processos administrativos perante institutos e regimes próprios",
     ],
     whatsAppText:
-      "Olá! Gostaria de falar com um advogado trabalhista da Rodrigues & Nunes Advogados sobre meu caso.",
+      "Olá, Dra. Juliana! Sou servidor(a) público(a) e preciso de assessoria jurídica especializada no RPPS.",
   },
   {
-    id: "direito-de-familia-sucessoes-mediacao",
-    title: "Direito de Família, Sucessões & Mediação",
-    icon: HeartHandshake,
-    tag: "Dra. Graciela Rodrigues · Mediação Humanizada",
-    summary:
-      "Divórcios, inventários ágeis, partilha de patrimônio, guarda e pensão alimentícia conduzidos com empatia, delicadeza e firmeza técnica.",
-    details:
-      "Demandas familiares exigem não apenas conhecimento jurídico sólido, mas também extrema sensibilidade e acolhimento humano. A Dra. Graciela Rodrigues é amplamente elogiada pelo atendimento afetuoso, ético e pela capacidade excepcional de mediação de conflitos, resguardando os laços afetivos e o patrimônio das famílias.",
-    topics: [
-      "Divórcio extrajudicial rápido em cartório e divórcio judicial",
-      "Mediação humanizada de conflitos familiares e acordos equilibrados",
-      "Pensão alimentícia: fixação, revisão proporcional e execução de débitos",
-      "Guarda compartilhada, unilateral e regulamentação de convivência e visitas",
-      "Inventários judiciais e extrajudiciais ágeis com partilha de bens",
-      "Reconhecimento e dissolução de união estável e planejamento sucessório",
-    ],
-    whatsAppText:
-      "Olá, Dra. Graciela! Gostaria de atendimento em Direito de Família / Inventário com o escritório.",
-  },
-  {
-    id: "direito-civel-indenizacoes-resolucao",
-    title: "Direito Cível, Indenizações & Casos Complexos",
-    icon: Scale,
-    tag: "Causas Ganhas & Resoluções Ágeis",
-    summary:
-      "Ações indenizatórias, cobranças, cumprimento de contratos, responsabilidade civil e destravamento de processos estagnados.",
-    details:
-      "Com um histórico expressivo de causas ganhas e clientes satisfeitos, o escritório Rodrigues & Nunes estrutura defesas e teses contundentes para resolver litígios travados, proteger patrimônios e buscar reparações integrais por perdas e danos.",
-    topics: [
-      "Ações indenizatórias por danos morais, materiais e lucros cessantes",
-      "Saneamento e destravamento estratégico de processos judiciais paralisados",
-      "Cobrança judicial e extrajudicial de títulos, dívidas e recuperação de crédito",
-      "Resolução de conflitos contratuais, distratos e responsabilidade civil",
-      "Ações possessórias, despejo e litígios envolvendo bens imóveis",
-      "Medidas cautelares, embargos à execução e tutelas de urgência",
-    ],
-    whatsAppText:
-      "Olá! Tenho uma questão cível / indenização e gostaria de uma avaliação com a equipe Rodrigues & Nunes.",
-  },
-  {
-    id: "direito-do-consumidor-bancario",
-    title: "Direito do Consumidor & Defesa Patrimonial",
+    id: "aposentadorias-do-inss-regime-geral",
+    title: "Aposentadorias do Regime Geral (INSS)",
     icon: ShieldCheck,
-    tag: "Combate a Abusos & Fraudes",
+    tag: "Idade · Tempo de Contribuição · Especial · PCD",
     summary:
-      "Defesa vigorosa contra abusos bancários, fraudes consignadas, negativas indevidas e cobranças abusivas.",
+      "Requerimento administrativo e judicial de aposentadorias com preparação documental impecável para evitar negativas e demoras injustas.",
     details:
-      "Atuamos na proteção da pessoa física e do consumidor leigo perante instituições financeiras e grandes corporações, anulando fraudes contratuais e buscando a restituição em dobro e compensação moral por cobranças ilícitas.",
+      "Dar entrada na aposentadoria sem suporte especializado pode custar anos de atraso e prejuízos no cálculo do benefício. O escritório da Dra. Juliana Carvalho cuida de cada detalhe documental e probatório, garantindo a concessão rápida e justa perante o INSS ou no Poder Judiciário.",
     topics: [
-      "Anulação de empréstimos consignados fraudulentos e golpes digitais",
-      "Ações contra juros abusivos e venda casada de seguros bancários",
-      "Exclusão urgente de negativação indevida nos órgãos de proteção (SPC/Serasa)",
-      "Indenizações por falhas graves de atendimento e prestação de serviços",
-      "Restituição em dobro de valores cobrados indevidamente",
-      "Defesa técnica perante Juizados Especiais Cíveis e órgãos de defesa",
+      "Aposentadoria por idade urbana e rural (segurado especial e trabalhador rural)",
+      "Aposentadoria por tempo de contribuição com regras de transição",
+      "Aposentadoria especial para quem trabalhou exposto a insalubridade e periculosidade (PPP e LTCAT)",
+      "Aposentadoria da pessoa com deficiência (Lei Complementar 142/2013)",
+      "Conversão de tempo especial em comum para antecipação de benefício",
+      "Reversão célere de indeferimentos e recursos perante a Junta de Recursos do INSS",
     ],
     whatsAppText:
-      "Olá! Gostaria de orientações sobre direitos do consumidor / abusos bancários.",
+      "Olá, Dra. Juliana! Gostaria de consultoria para solicitar minha aposentadoria no INSS.",
   },
   {
-    id: "assessoria-juridica-preventiva",
-    title: "Assessoria Jurídica Consultiva & Preventiva",
-    icon: Users,
-    tag: "Segurança Jurídica & Prevenção",
+    id: "beneficios-por-incapacidade-auxilio-doenca",
+    title: "Benefícios por Incapacidade & Auxílio-Doença",
+    icon: ShieldAlert,
+    tag: "Auxílio-Doença · Invalidez · Auxílio-Acidente",
     summary:
-      "Orientação estratégica contínua para pessoas físicas e empresas evitarem litígios e blindarem seus direitos.",
+      "Proteção ágil para trabalhadores e segurados impossibilitados de exercer suas atividades em razão de doenças, acidentes ou sequelas.",
     details:
-      "A melhor assessoria jurídica antecipa problemas antes que se tornem processos custosos. Oferecemos suporte consultivo com linguagem transparente e acessível, ajudando nossos clientes a tomar decisões seguras e embasadas em Patos de Minas e região.",
+      "Se o INSS indeferiu ou cessou indevidamente o seu benefício na perícia médica, a Dra. Juliana Carvalho atua com agilidade jurídica para demonstrar a incapacidade laboral real através de laudos técnicos complementares e perícia judicial qualificada.",
     topics: [
-      "Consultoria preventiva para profissionais autônomos e empresas",
-      "Elaboração, análise minuciosa e revisão de contratos civis e comerciais",
-      "Auditoria jurídica preventiva e redução de riscos trabalhistas",
-      "Mediação extrajudicial e negociações com fornecedores e parceiros",
-      "Pareceres jurídicos práticos e com respostas claras e ágeis",
-      "Acompanhamento contínuo e canal de atendimento prioritário",
+      "Concessão e restabelecimento de Auxílio por Incapacidade Temporária (Auxílio-Doença)",
+      "Aposentadoria por Incapacidade Permanente (antiga Aposentadoria por Invalidez)",
+      "Adicional de 25% para aposentados por invalidez que necessitam de auxílio de terceiros",
+      "Auxílio-Acidente indenizatório para segurados que ficaram com sequelas permanentes",
+      "Orientação estratégica e compilação de laudos médicos para a perícia",
+      "Resolução de impasses entre INSS e empresa (limbo jurídico previdenciário)",
     ],
     whatsAppText:
-      "Olá! Gostaria de saber mais sobre a assessoria jurídica preventiva do escritório Rodrigues & Nunes.",
+      "Olá, Dra. Juliana! Meu benefício por incapacidade / auxílio-doença foi negado pelo INSS e preciso de ajuda.",
+  },
+  {
+    id: "bpc-loas-idosos-pcd",
+    title: "BPC / LOAS (Idosos & Pessoas com Deficiência)",
+    icon: HeartHandshake,
+    tag: "1 Salário Mínimo sem Necessidade de Contribuição",
+    summary:
+      "Garantia de amparo financeiro mensal a pessoas idosas (65+) ou com deficiência em situação de vulnerabilidade socioeconômica.",
+    details:
+      "O Benefício de Prestação Continuada (BPC/LOAS) é um direito assistencial que não exige histórico prévio de contribuições. Apoiamos a família desde a regularização do CadÚnico até a comprovação dos critérios sociais e barreiras biopsicossociais exigidos em lei.",
+    topics: [
+      "BPC/LOAS para idosos a partir de 65 anos em situação de carência",
+      "BPC/LOAS para pessoas com deficiência física, mental ou intelectual de qualquer idade",
+      "Dedução comprovada de gastos médicos, remédios e fraldas no cálculo de renda familiar",
+      "Reversão de cancelamentos, bloqueios e revisões cadastrais injustas",
+      "Recurso administrativo célere e ação judicial com perícia socioeconômica humanizada",
+      "Acompanhamento acolhedor e seguro para famílias em vulnerabilidade",
+    ],
+    whatsAppText:
+      "Olá, Dra. Juliana! Gostaria de consultar a concessão do benefício BPC/LOAS para mim ou um familiar.",
+  },
+  {
+    id: "pensoes-e-revisoes-previdenciarias",
+    title: "Pensões por Morte & Revisões de Aposentadoria",
+    icon: Scale,
+    tag: "Amparo a Dependentes & Retificação de Valores",
+    summary:
+      "Concessão ágil de pensão por morte para viúvos(as) e dependentes, além de revisão de valores pagos a menor pelo INSS.",
+    details:
+      "Milhares de aposentados recebem mensalmente menos do que deveriam por equívocos matemáticos e documentais do INSS. Identificamos se a sua aposentadoria pode ser aumentada e resgatamos os valores atrasados dos últimos 5 anos, além de defender direitos em pensões por morte.",
+    topics: [
+      "Concessão de Pensão por Morte para cônjuges, companheiros(as) e filhos dependentes",
+      "Reconhecimento de união estável para fins de concessão previdenciária",
+      "Revisão de aposentadorias concedidas com desconsideração de períodos e contribuições",
+      "Inclusão de períodos de serviço militar, tempo rural e aluno-aprendiz",
+      "Revisão de erros de cálculo na média das contribuições e divisor",
+      "Cobrança integral de valores retroativos acumulados",
+    ],
+    whatsAppText:
+      "Olá, Dra. Juliana! Gostaria de verificar a revisão da minha aposentadoria ou pedir pensão por morte.",
+  },
+  {
+    id: "direito-trabalhista-integrado",
+    title: "Direito Trabalhista Integrado ao Previdenciário",
+    icon: Briefcase,
+    tag: "Rescisões · Vínculos · Horas Extras · Acidentes",
+    summary:
+      "Defesa intransigente dos direitos trabalhistas garantindo que salários e contribuições reflitam diretamente na sua futura aposentadoria.",
+    details:
+      "Trabalhar sem carteira assinada ou com verbas omitidas causa um prejuízo silencioso na sua aposentadoria. Nossa atuação integrada apura todas as verbas rescisórias, horas extras, insalubridade e acidentes, assegurando que suas contribuições sejam recolhidas.",
+    topics: [
+      "Cobrança integral de verbas rescisórias, saldo de salário, aviso prévio e FGTS + 40%",
+      "Reconhecimento de vínculo de emprego sem anotação em carteira",
+      "Rescisão indireta do contrato por descumprimento grave do empregador",
+      "Cobrança de horas extras, adicional noturno e descansos não concedidos",
+      "Adicionais de insalubridade e periculosidade com laudo técnico pericial",
+      "Indenizações por acidentes de trabalho e doenças ocupacionais",
+    ],
+    whatsAppText:
+      "Olá, Dra. Juliana! Gostaria de orientações jurídicas sobre meus direitos trabalhistas.",
   },
 ];
 
 const clientReviews = [
   {
-    name: "Ana Júlia Borges e Silva",
-    reviewsCount: "2 avaliações no Google",
-    date: "Cliente Verificada",
-    badge: "clarity in explanations",
+    name: "Márcia Regina Andrade",
+    reviewsCount: "Cliente Verificada · São João del Rei",
+    date: "Google Meu Negócio",
+    badge: "aposentadoria concedida",
     content:
-      "O Dr. Renato Nunes é um excelente profissional. Muito atencioso, claro nas explicações e comprometido com o caso. Passou muita segurança em cada etapa e demonstrou total profissionalismo. É competente, ético e realmente interessado em ajudar seus clientes!",
+      "A Dra. Juliana Carvalho foi uma bênção na minha vida! Meu pedido de aposentadoria no INSS estava travado há mais de 8 meses e ela resolveu com agilidade, me explicando cada detalhe com muito carinho e paciência. Conquistei meu benefício com o valor correto. Atendimento impecável!",
   },
   {
-    name: "Marcelle Karoline",
-    reviewsCount: "3 avaliações · 5 fotos",
-    date: "Cliente Verificada",
-    badge: "impeccable work",
+    name: "Carlos Alberto de Resende",
+    reviewsCount: "Servidor Público · 5 avaliações",
+    date: "Google Meu Negócio",
+    badge: "especialista em rpps",
     content:
-      "O escritório é muito bem organizado, com um ambiente agradável e profissional. Os colaboradores são sempre atenciosos, educados e demonstram muita competência no que fazem. É perceptível o cuidado em oferecer um atendimento de qualidade!",
+      "Sou servidor público e precisava entender as novas regras de transição da aposentadoria. O planejamento previdenciário feito pela Dra. Juliana foi fantástico: clareza técnica absoluta, averbação de tempo que eu nem imaginava e segurança total para o meu futuro. Recomendo de olhos fechados!",
   },
   {
-    name: "Vitor Nunes",
-    reviewsCount: "1 avaliação no Google",
-    date: "Cliente Verificado",
-    badge: "fair lawyer",
+    name: "Eliane Maria dos Santos",
+    reviewsCount: "Local Guide · São João del Rei",
+    date: "Google Meu Negócio",
+    badge: "atendimento humanizado",
     content:
-      "Sou cliente deste escritório há vários anos e sempre fui muito bem atendido. O serviço é excelente, feito com muita atenção, respeito e profissionalismo. A equipe é sempre disponível, explica tudo com paciência e transmite muita segurança em cada orientação. Recomendo de coração, é um escritório em que realmente dá pra confiar!",
+      "Atendimento maravilhoso, muito humano e atencioso. A Dra. Juliana tratou o caso do BPC/LOAS da minha mãe com muito respeito e profissionalismo. Escritório muito bem localizado na Av. Tiradentes e equipe de extrema confiança. 5 estrelas é pouco!",
   },
   {
-    name: "Denise Mello",
-    reviewsCount: "4 avaliações no Google",
-    date: "Cliente Verificada",
-    badge: "humanized care",
+    name: "Sebastião Moreira Neves",
+    reviewsCount: "Cliente Verificado · INSS",
+    date: "Google Meu Negócio",
+    badge: "auxílio restabelecido",
     content:
-      "Nunca fui tão bem acolhida!!! De longe o melhor atendimento. Advogados com uma tratativa humana e empenhados em auxiliar com orientação jurídica responsável e habilitados para mediar conflitos. Obrigada por TUDO, de modo especial à Dra. Graciela Rodrigues.",
+      "Excelente advogada! Muito competente, honesta e dedicada. Conseguiu restabelecer meu auxílio por incapacidade que o INSS tinha cortado indevidamente. Sempre disponível no WhatsApp para tirar dúvidas e me manter calmo. Confiança total no trabalho dela.",
   },
   {
-    name: "Patriciapaula Oliveira",
+    name: "Patrícia Helena Silveira",
     reviewsCount: "3 avaliações no Google",
-    date: "Cliente Verificada",
-    badge: "won case",
+    date: "Google Meu Negócio",
+    badge: "planejamento previdenciário",
     content:
-      "Fui muito bem atendida durante todo o processo do meu auxílio-acidente. O advogado demonstrou conhecimento, paciência e clareza nas explicações, o que me deixou mais tranquila em um momento difícil. Agradeço pelo acompanhamento e pela dedicação.",
+      "Fiz meu planejamento de aposentadoria com a Dra. Juliana. Foi o melhor investimento que fiz na vida! Ela me mostrou o momento exato para dar entrada e evitou que eu perdesse mais de 30% da minha renda mensal se tivesse pedido antes. Extremamente competente e acolhedora!",
   },
   {
-    name: "AJ Consultoria Esportiva",
-    reviewsCount: "1 avaliação no Google",
-    date: "Cliente Verificado",
-    badge: "won case",
+    name: "Rodrigo Ferreira Mendes",
+    reviewsCount: "Cliente Verificado · São João del Rei",
+    date: "Google Meu Negócio",
+    badge: "competência e ética",
     content:
-      "Excelente advogado! Sempre demonstrou muita competência e experiência em todas as causas que me representou. Ganhamos todos os processos, e em cada etapa ele me manteve tranquilo e bem amparado. Atendimento excepcional e confiança total no trabalho dele!",
-  },
-  {
-    name: "Julio Cesar da Silva",
-    reviewsCount: "3 avaliações no Google",
-    date: "Cliente Verificado",
-    badge: "clarity in explanations",
-    content:
-      "Extremamente profissionais! Estou muito satisfeito com a clareza das informações e também com o nível de atenção dado. Recomendo os serviços deles a todos.",
-  },
-  {
-    name: "Alan Mendes",
-    reviewsCount: "Local Guide · 10 avaliações",
-    date: "Cliente Verificado",
-    badge: "great care",
-    content:
-      "Excelente profissional, principalmente a Dr. Graciela, um amor de pessoa. Atendimento acolhedor, transparente e com muita dedicação ao cliente.",
-  },
-  {
-    name: "Reginaldo Peres Batista",
-    reviewsCount: "2 avaliações · 1 foto",
-    date: "Cliente Verificado",
-    badge: "fair lawyer",
-    content:
-      "Excelente atendimento doutor Renato um baita ser humano, e também não deixou nada a desejar quanto a direitos e deveres no meu caso, estou completamente satisfeito.",
-  },
-  {
-    name: "Iara Cardoso Cidade Da Silva",
-    reviewsCount: "1 avaliação · 1 foto",
-    date: "Cliente Verificada",
-    badge: "won case",
-    content:
-      "Graças a Deus e a eficiência desse escritório a minha causa foi ganha e eu estou muito feliz! Super indico a todos que precisam de advogados de confiança!",
-  },
-  {
-    name: "Brodinho TV",
-    reviewsCount: "6 avaliações · 1 foto",
-    date: "Cliente Verificado",
-    badge: "quick resolution",
-    content:
-      "O Dr. Renato me ajudou de forma rápida e transparente, excelente profissional, atendimento excelente. Uma pessoa altamente capacitada com simplicidade e carisma, sem abrir mão da seriedade do ambiente.",
-  },
-  {
-    name: "Hellen Teixeira",
-    reviewsCount: "3 avaliações · 13 fotos",
-    date: "Cliente Verificada",
-    badge: "impeccable work",
-    content:
-      "Atendimento excepcional e equipe altamente qualificada. O escritório demonstra comprometimento, ética e agilidade em todas as etapas do processo. Transmitem confiança e profissionalismo do início ao fim. Recomendo sem hesitar!",
+      "Profissional exemplar em São João del Rei e região. Acolhedora, ética e com um domínio técnico absurdo em direito previdenciário e trabalhista. Toda a minha família consulta com ela quando precisa. Parabéns pela dedicação e pelo carinho com os clientes!",
   },
 ];
 
@@ -398,21 +369,17 @@ function Heading({
     <div className="max-w-2xl">
       <p className={light ? "eyebrow-light mb-4" : "eyebrow mb-4"}>{eyebrow}</p>
       <h2
-        className={
-          light
-            ? "font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-white sm:text-4xl lg:text-[3.25rem]"
-            : "font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-ink sm:text-4xl lg:text-[3.25rem]"
-        }
+        className={`font-serif text-3xl leading-[1.12] tracking-[-0.02em] sm:text-4xl lg:text-[3.15rem] ${
+          light ? "text-white" : "text-ink"
+        }`}
       >
         {children}
       </h2>
       {description && (
         <p
-          className={
-            light
-              ? "mt-5 max-w-xl text-[15px] leading-7 text-brand-100/90"
-              : "mt-5 max-w-xl text-[15px] leading-7 text-ink-soft"
-          }
+          className={`mt-4 text-[15px] leading-7 ${
+            light ? "text-brand-100/80" : "text-ink-soft"
+          }`}
         >
           {description}
         </p>
@@ -426,35 +393,37 @@ export default function Home() {
   const [activeArea, setActiveArea] = useState<PracticeArea | null>(null);
 
   useEffect(() => {
-    if (!activeArea) return;
     const close = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setActiveArea(null);
+      if (event.key === "Escape") {
+        setActiveArea(null);
+        setMenuOpen(false);
+      }
     };
     window.addEventListener("keydown", close);
     return () => window.removeEventListener("keydown", close);
-  }, [activeArea]);
+  }, []);
 
   const closeMenu = () => setMenuOpen(false);
 
   return (
     <MotionConfig reducedMotion="user">
       <main className="overflow-hidden bg-pearl text-ink">
-        {/* Navigation Bar - Luxury Obsidian Dark with Warm Copper Accents */}
+        {/* Navigation Bar - Luxury Burgundy Dark with Champagne Accents */}
         <header className="sticky top-0 z-40 border-b border-brand-800/40 bg-brand-950/95 backdrop-blur-xl">
-          <div className="mx-auto flex h-[88px] max-w-7xl items-center justify-between gap-5 px-5 sm:h-[102px] sm:px-8 lg:px-12">
+          <div className="mx-auto flex h-[76px] max-w-7xl items-center justify-between gap-5 px-5 sm:h-[84px] sm:px-8 lg:px-12">
             <a
               href="#inicio"
-              aria-label="RODRIGUES & NUNES ADVOGADOS ASSOCIADOS — Início"
+              aria-label="Dra. Juliana Carvalho — Início"
               onClick={closeMenu}
               className="flex items-center gap-3 transition-opacity hover:opacity-90"
             >
               <Image
                 src={LOGO_SRC}
-                width={2171}
-                height={724}
-                alt="RODRIGUES & NUNES ADVOGADOS ASSOCIADOS — Patos de Minas - MG"
+                width={1372}
+                height={576}
+                alt="Juliana Carvalho Advogada Especialista em INSS e RPPS — São João del Rei - MG"
                 priority
-                className="h-[52px] w-auto object-contain sm:h-[66px]"
+                className="h-[64px] w-auto object-contain sm:h-[74px]"
               />
             </a>
 
@@ -466,7 +435,7 @@ export default function Home() {
                 Início
               </a>
               <a className="nav-link" href="#sobre">
-                Os Sócios & Escritório
+                Dra. Juliana Carvalho
               </a>
               <a className="nav-link" href="#atuacao">
                 Áreas de Atuação
@@ -475,7 +444,7 @@ export default function Home() {
                 Por que Escolher?
               </a>
               <a className="nav-link" href="#avaliacoes">
-                Avaliações (4,9 ★)
+                Avaliações (5,0 ★)
               </a>
               <a className="nav-link" href="#contato">
                 Contato & Sede
@@ -487,16 +456,16 @@ export default function Home() {
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Instagram de Rodrigues & Nunes Advogados Associados"
-                className="grid size-10 place-items-center rounded-full border border-brand-400/30 text-brand-200 transition-all hover:border-brand-400 hover:bg-brand-900 hover:text-white"
-                title="Instagram @rodriguesenunes"
+                aria-label="Instagram de Dra. Juliana Carvalho"
+                className="grid size-10 place-items-center rounded-full border border-gold-300/30 text-gold-300 transition-all hover:border-gold-300 hover:bg-brand-900 hover:text-white"
+                title="Instagram @juliana.carvalho.adv"
               >
                 <InstagramIcon size={16} />
               </a>
               <a
                 href={`tel:+${WHATSAPP_NUMBER}`}
-                aria-label="Ligar para Rodrigues & Nunes Advogados Associados"
-                className="grid size-10 place-items-center rounded-full border border-brand-400/30 text-brand-200 transition-all hover:border-brand-400 hover:bg-brand-900 hover:text-white"
+                aria-label="Ligar para Dra. Juliana Carvalho"
+                className="grid size-10 place-items-center rounded-full border border-gold-300/30 text-gold-300 transition-all hover:border-gold-300 hover:bg-brand-900 hover:text-white"
                 title={`Ligar: ${PHONE_DISPLAY}`}
               >
                 <Phone size={16} />
@@ -505,8 +474,8 @@ export default function Home() {
                 href={getWhatsAppUrl()}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="WhatsApp de Rodrigues & Nunes Advogados Associados"
-                className="grid size-10 place-items-center rounded-full border border-brand-400/30 text-brand-200 transition-all hover:border-brand-400 hover:bg-brand-900 hover:text-white"
+                aria-label="WhatsApp de Dra. Juliana Carvalho"
+                className="grid size-10 place-items-center rounded-full border border-gold-300/30 text-gold-300 transition-all hover:border-gold-300 hover:bg-brand-900 hover:text-white"
                 title="Atendimento no WhatsApp"
               >
                 <WhatsAppIcon size={18} />
@@ -515,7 +484,7 @@ export default function Home() {
                 href={getWhatsAppUrl()}
                 target="_blank"
                 size="sm"
-                variant="copper"
+                variant="burgundy"
                 className="rounded-full shadow-sm"
               >
                 Falar no WhatsApp <ArrowUpRight size={14} />
@@ -527,7 +496,7 @@ export default function Home() {
               aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
               aria-expanded={menuOpen}
               aria-controls="mobile-navigation"
-              className="grid size-11 place-items-center rounded-full border border-brand-400/30 text-brand-200 lg:hidden"
+              className="grid size-11 place-items-center rounded-full border border-gold-300/30 text-gold-300 lg:hidden"
               onClick={() => setMenuOpen((open) => !open)}
             >
               {menuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -548,11 +517,11 @@ export default function Home() {
                 <div className="mx-auto flex max-w-7xl flex-col gap-1 py-4">
                   {[
                     ["Início", "#inicio"],
-                    ["Os Sócios & Escritório", "#sobre"],
+                    ["Dra. Juliana Carvalho", "#sobre"],
                     ["Áreas de Atuação", "#atuacao"],
                     ["Por que Escolher?", "#diferenciais"],
-                    ["Avaliações no Google (4,9 ★)", "#avaliacoes"],
-                    ["Contato & Sede em Patos de Minas", "#contato"],
+                    ["Avaliações no Google (5,0 ★)", "#avaliacoes"],
+                    ["Contato & Sede em São João del Rei", "#contato"],
                   ].map(([label, href]) => (
                     <a
                       key={label}
@@ -565,7 +534,7 @@ export default function Home() {
                   ))}
                   <div className="mt-3 flex flex-col gap-2">
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-brand-600 via-brand-500 to-brand-600 px-5 py-3.5 text-xs font-bold uppercase tracking-[0.13em] text-white shadow-md transition-all hover:brightness-105"
+                      className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-brand-700 via-brand-600 to-brand-700 px-5 py-3.5 text-xs font-bold uppercase tracking-[0.13em] text-white shadow-md transition-all hover:brightness-105"
                       href={getWhatsAppUrl()}
                       target="_blank"
                       rel="noreferrer"
@@ -574,13 +543,13 @@ export default function Home() {
                       <WhatsAppIcon size={16} /> WhatsApp: {PHONE_DISPLAY}
                     </a>
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-full border border-brand-400/30 px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-brand-200 transition-all hover:border-brand-200"
+                      className="inline-flex items-center justify-center gap-2 rounded-full border border-gold-300/30 px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-gold-300 transition-all hover:border-gold-200"
                       href={GOOGLE_MAPS_URL}
                       target="_blank"
                       rel="noreferrer"
                       onClick={closeMenu}
                     >
-                      <MapPin size={15} /> Av. Paracatu, 880 - Centro, Patos de Minas
+                      <MapPin size={15} /> Av. Tiradentes, 707 - Centro, São João del Rei
                     </a>
                   </div>
                 </div>
@@ -594,9 +563,9 @@ export default function Home() {
           id="inicio"
           className="relative isolate scroll-mt-24 border-b border-brand-200/50 bg-gradient-to-b from-brand-50/80 via-pearl to-white"
         >
-          {/* Subtle copper / amber warm ambient glow */}
-          <div className="pointer-events-none absolute -right-32 top-8 -z-10 size-[36rem] rounded-full bg-brand-200/40 blur-3xl" />
-          <div className="pointer-events-none absolute -left-20 bottom-10 -z-10 size-[28rem] rounded-full bg-brand-100/60 blur-3xl" />
+          {/* Subtle burgundy warm ambient glow */}
+          <div className="pointer-events-none absolute -right-32 top-8 -z-10 size-[36rem] rounded-full bg-brand-200/35 blur-3xl" />
+          <div className="pointer-events-none absolute -left-20 bottom-10 -z-10 size-[28rem] rounded-full bg-brand-100/50 blur-3xl" />
 
           <div className="mx-auto grid min-h-[660px] max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 sm:py-20 lg:min-h-[720px] lg:grid-cols-[1.1fr_0.9fr] lg:gap-12 lg:px-12 lg:py-20">
             <motion.div
@@ -608,7 +577,7 @@ export default function Home() {
               <motion.div variants={reveal} className="eyebrow mb-6">
                 <span className="size-2 shrink-0 rounded-full bg-brand-600" />
                 <span>
-                  Patos de Minas - MG · Av. Paracatu, 880 · 4,9 ★ no Google
+                  São João del Rei - MG · 10 Anos de Experiência · 5,0 ★ no Google
                 </span>
               </motion.div>
 
@@ -616,9 +585,9 @@ export default function Home() {
                 variants={reveal}
                 className="max-w-[760px] font-serif text-[2.75rem] leading-[1.04] tracking-[-0.025em] text-ink sm:text-5xl lg:text-[4.15rem]"
               >
-                Segurança jurídica, clareza e dedicação para defender o que é{" "}
+                Conquiste a melhor aposentadoria e garanta seus direitos no{" "}
                 <span className="font-serif italic text-brand-700">
-                  seu por direito.
+                  INSS e RPPS.
                 </span>
               </motion.h1>
 
@@ -626,23 +595,15 @@ export default function Home() {
                 variants={reveal}
                 className="mt-7 max-w-xl text-[15px] leading-7 text-ink-soft sm:text-base sm:leading-8"
               >
-                Liderado pelo{" "}
+                Sob a liderança da{" "}
                 <strong className="font-semibold text-ink">
-                  Dr. Renato Nunes
-                </strong>{" "}
-                e pela{" "}
-                <strong className="font-semibold text-ink">
-                  Dra. Graciela Rodrigues
+                  Dra. Juliana Carvalho
                 </strong>
-                , o escritório{" "}
+                , advogada especialista em{" "}
                 <strong className="font-semibold text-ink">
-                  Rodrigues & Nunes Advogados Associados
-                </strong>{" "}
-                une rigor técnico, acolhimento humano e combatividade para solucionar suas demandas em{" "}
-                <strong className="font-semibold text-ink">
-                  Direito Previdenciário (Auxílio-Acidente e INSS), Trabalhista, Família, Sucessões e Cível
-                </strong>{" "}
-                — com atendimento presencial de alto nível em Patos de Minas (MG) e atuação digital ágil em todo o Brasil.
+                  Direito Previdenciário (INSS e RPPS - Servidores Públicos) e Trabalhista
+                </strong>
+                , oferecemos atendimento jurídico estratégico, humanizado e combativo. Há 10 anos garantindo que cada cliente conquiste seu benefício no momento certo e com o maior valor possível — com sede própria no Centro de São João del Rei (MG) e atuação digital ágil em todo o Brasil.
               </motion.p>
 
               <motion.div
@@ -653,10 +614,10 @@ export default function Home() {
                   href={getWhatsAppUrl()}
                   target="_blank"
                   size="lg"
-                  variant="copper"
+                  variant="burgundy"
                   className="rounded-full shadow-md"
                 >
-                  <WhatsAppIcon size={16} /> Falar no WhatsApp Agora
+                  <WhatsAppIcon size={16} /> Consultar Meu Benefício no WhatsApp
                 </GlowingButton>
                 <a
                   href="#atuacao"
@@ -676,18 +637,18 @@ export default function Home() {
               >
                 <span className="inline-flex items-center gap-2 font-medium">
                   <Star size={15} className="fill-amber-500 text-amber-500" />{" "}
-                  4,9 estrelas no Google (98 avaliações reais)
+                  5,0 estrelas no Google (58 avaliações verificadas)
                 </span>
                 <span className="inline-flex items-center gap-2 font-medium">
-                  <Clock size={15} className="text-brand-700" /> Aberto a partir das 08:00
+                  <Clock size={15} className="text-brand-700" /> Aberto a partir das 07:30
                 </span>
                 <span className="inline-flex items-center gap-2 font-medium">
-                  <MapPin size={15} className="text-brand-700" /> Av. Paracatu, 880 · Centro, Patos de Minas - MG
+                  <MapPin size={15} className="text-brand-700" /> Av. Tiradentes, 707 · Centro, São João del Rei - MG
                 </span>
               </motion.div>
             </motion.div>
 
-            {/* Hero Visual Presentation - Dr. Renato & Dra. Graciela */}
+            {/* Hero Visual Presentation - Dra. Juliana Carvalho */}
             <motion.div
               initial={{ opacity: 0, scale: 0.97, y: 18 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -700,24 +661,24 @@ export default function Home() {
             >
               <div className="relative aspect-[4/4.3] overflow-hidden rounded-3xl border border-brand-500/35 bg-brand-950 shadow-2xl ring-1 ring-brand-300/30">
                 <Image
-                  src={FOTO_EQUIPE_SRC}
-                  alt="Dr. Renato Nunes e Dra. Graciela Rodrigues — Rodrigues & Nunes Advogados Associados em Patos de Minas - MG"
+                  src={FOTO_HERO_SRC}
+                  alt="Dra. Juliana Carvalho — Advogada Especialista em Direito Previdenciário e Servidores Públicos em São João del Rei - MG"
                   fill
                   priority
                   sizes="(max-width: 640px) 90vw, (max-width: 1024px) 70vw, 45vw"
-                  className="object-cover object-center"
+                  className="object-cover object-top"
                 />
                 <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-brand-950 via-brand-950/70 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-3 text-white sm:bottom-8 sm:left-8 sm:right-8">
                   <div>
                     <p className="font-serif text-2xl font-normal tracking-wide text-white">
-                      Rodrigues & Nunes
+                      Juliana Carvalho
                     </p>
                     <p className="mt-1 text-[10px] uppercase tracking-[0.2em] text-brand-200">
-                      Dr. Renato Nunes & Dra. Graciela Rodrigues
+                      Advogada Especialista em INSS e RPPS
                     </p>
                   </div>
-                  <span className="grid size-11 shrink-0 place-items-center rounded-full border border-brand-400/40 bg-brand-950/80 text-brand-200 backdrop-blur-sm">
+                  <span className="grid size-11 shrink-0 place-items-center rounded-full border border-gold-300/40 bg-brand-950/80 text-gold-300 backdrop-blur-sm">
                     <Scale size={18} />
                   </span>
                 </div>
@@ -730,18 +691,18 @@ export default function Home() {
                   <div className="flex items-center gap-1 text-brand-800">
                     <Star size={13} className="fill-amber-500 text-amber-500" />
                     <span className="font-serif text-base font-bold text-ink">
-                      4,9 / 5,0
+                      5,0 / 5,0
                     </span>
                   </div>
                 </div>
                 <p className="mt-0.5 text-[9px] font-semibold uppercase tracking-wider text-ink-soft">
-                  98 Avaliações no Google
+                  58 Avaliações no Google
                 </p>
               </div>
 
               {/* Floating authority badge */}
-              <div className="absolute -right-3 top-6 rounded-full border border-brand-400/40 bg-white/95 px-4 py-2 text-[10px] font-bold tracking-[0.14em] text-brand-900 shadow-card backdrop-blur-md sm:-right-5">
-                PATOS DE MINAS · ATUAÇÃO NACIONAL
+              <div className="absolute -right-3 top-6 rounded-full border border-gold-300/40 bg-white/95 px-4 py-2 text-[10px] font-bold tracking-[0.14em] text-brand-900 shadow-card backdrop-blur-md sm:-right-5">
+                SÃO JOÃO DEL REI · ATUAÇÃO NACIONAL
               </div>
             </motion.div>
           </div>
@@ -755,20 +716,20 @@ export default function Home() {
           <div className="mx-auto grid max-w-7xl gap-7 px-5 py-8 sm:grid-cols-4 sm:gap-4 sm:px-8 lg:px-12">
             {[
               [
-                "4,9 ★",
-                "nota de excelência com 98 avaliações reais no Google",
+                "5,0 ★",
+                "nota máxima com 58 avaliações reais e verificadas no Google",
               ],
               [
-                "Causas Ganhas",
-                "histórico comprovado de vitórias e direitos conquistados",
+                "10 Anos",
+                "de experiência sólida em Direito Previdenciário e Trabalhista",
               ],
               [
-                "Patos de Minas - MG",
-                "Sede própria na Av. Paracatu, 880 - Centro",
+                "São João del Rei",
+                "Sede própria na Av. Tiradentes, 707 - Centro",
               ],
               [
-                "Clareza & Ética",
-                "explicações didáticas e honestidade com pessoas leigas",
+                "INSS & RPPS",
+                "especialização comprovada em servidores públicos e regime geral",
               ],
             ].map(([value, label], index) => (
               <div
@@ -790,13 +751,13 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Sobre os Sócios & O Escritório */}
+        {/* Sobre a Dra. Juliana Carvalho */}
         <section
           id="sobre"
           className="scroll-mt-24 bg-pearl py-20 sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20 lg:px-12">
-            {/* Dr. Renato Nunes portrait */}
+            {/* Dra. Juliana Carvalho portrait */}
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -806,11 +767,11 @@ export default function Home() {
             >
               <div className="relative aspect-[3/3.8] overflow-hidden rounded-2xl border border-brand-700/30 bg-brand-950 shadow-card">
                 <Image
-                  src={FOTO_RENATO_SRC}
-                  alt="Dr. Renato Nunes — Advogado Sócio-Fundador de Rodrigues & Nunes Advogados Associados"
+                  src={FOTO_SOBRE_SRC}
+                  alt="Dra. Juliana Carvalho — Advogada Previdenciarista em São João del Rei - MG"
                   fill
                   sizes="(max-width: 1024px) 90vw, 45vw"
-                  className="object-cover object-center"
+                  className="object-cover object-top"
                 />
                 <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-brand-950/95 via-brand-950/40 to-transparent" />
               </div>
@@ -820,17 +781,17 @@ export default function Home() {
                 <div className="flex items-center gap-2 text-brand-800">
                   <Award size={16} />
                   <p className="text-[10px] font-bold uppercase tracking-[0.16em]">
-                    Advocacia Humanizada & Combativa
+                    Advocacia Especializada & Humanizada
                   </p>
                 </div>
                 <p className="mt-1 font-serif text-lg leading-snug text-ink">
-                  Rodrigues & Nunes Advogados
+                  Dra. Juliana Carvalho
                 </p>
                 <p className="mt-0.5 text-[11px] font-medium text-brand-700">
-                  Dr. Renato Nunes & Dra. Graciela Rodrigues
+                  Especialista em INSS e RPPS (Servidores Públicos)
                 </p>
                 <p className="mt-1 text-[11px] leading-4 text-ink-soft">
-                  Av. Paracatu, 880 - Centro, Patos de Minas - MG.
+                  Av. Tiradentes, 707 - Centro, São João del Rei - MG.
                 </p>
               </div>
 
@@ -845,7 +806,7 @@ export default function Home() {
               variants={stagger}
             >
               <motion.p variants={reveal} className="eyebrow">
-                SOBRE O ESCRITÓRIO & CORPO JURÍDICO
+                SOBRE A ADVOGADA & MISSÃO JURÍDICA
               </motion.p>
               <motion.h2
                 variants={reveal}
@@ -861,68 +822,33 @@ export default function Home() {
                 variants={reveal}
                 className="mt-6 max-w-xl text-[15px] leading-7 text-ink-soft"
               >
-                Com sede consolidada na{" "}
+                Com escritório estabelecido na{" "}
                 <strong className="text-ink">
-                  Av. Paracatu, 880 no Centro de Patos de Minas (MG)
+                  Av. Tiradentes, 707 no Centro de São João del Rei (MG)
                 </strong>{" "}
-                e atuação em todo o Brasil, o escritório{" "}
-                <strong className="text-ink">Rodrigues & Nunes Advogados Associados</strong>{" "}
-                é amplamente reconhecido pela excelência em assessoria jurídica, clareza didática nas explicações e histórico expressivo de causas ganhas.
+                e atendimento em todo o Brasil, a{" "}
+                <strong className="text-ink">Dra. Juliana Carvalho</strong>{" "}
+                acumula 10 anos de experiência oferecendo serviços jurídicos de alta qualidade, combatividade técnica e atenção minuciosa ao futuro de cada cliente.
               </motion.p>
 
               <motion.p
                 variants={reveal}
                 className="mt-4 max-w-xl text-[15px] leading-7 text-ink-soft"
               >
-                Nossa atuação fundamenta-se na{" "}
-                <strong className="text-ink">transparência absoluta</strong> e no{" "}
-                <strong className="text-ink">respeito ao cliente</strong>. Explicamos direitos e deveres em linguagem clara, sem jargões desnecessários, acompanhando de perto cada cliente para que se sinta acolhido, amparado e seguro do início ao fim do processo.
+                Inspirada pelo compromisso de fazer sempre o melhor pelo segurado e pelo servidor público, Dra. Juliana não admite o mero conformismo com negativas administrativas. Cada caso é analisado com profundidade para buscar a concessão mais vantajosa, explicando cada etapa com clareza e empatia.
               </motion.p>
 
-              {/* Partners Profiles Grid */}
+              {/* Quote Card from Dra. Juliana Carvalho */}
               <motion.div
                 variants={reveal}
-                className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2"
+                className="mt-6 rounded-xl border border-brand-300/40 bg-brand-50/80 p-5 shadow-xs"
               >
-                {/* Dr. Renato Nunes */}
-                <div className="rounded-xl border border-brand-200/80 bg-white p-5 transition-all hover:border-brand-400 hover:shadow-card">
-                  <div className="flex items-center gap-3">
-                    <span className="grid size-11 place-items-center rounded-full bg-brand-50 text-brand-800">
-                      <UserCheck size={20} />
-                    </span>
-                    <div>
-                      <span className="text-[9px] font-bold uppercase tracking-wider text-brand-700">
-                        Sócio-Fundador
-                      </span>
-                      <h3 className="font-serif text-lg font-bold text-ink">
-                        Dr. Renato Nunes
-                      </h3>
-                    </div>
-                  </div>
-                  <p className="mt-3 text-xs leading-5 text-ink-soft">
-                    Reconhecido pela capacidade técnica aliada à simplicidade, carisma e dedicação incansável. Especialista em Direito Previdenciário (Auxílio-Acidente e INSS), Trabalhista e Contencioso Cível.
-                  </p>
-                </div>
-
-                {/* Dra. Graciela Rodrigues */}
-                <div className="rounded-xl border border-brand-200/80 bg-white p-5 transition-all hover:border-brand-400 hover:shadow-card">
-                  <div className="flex items-center gap-3">
-                    <span className="grid size-11 place-items-center rounded-full bg-brand-50 text-brand-800">
-                      <Scale size={20} />
-                    </span>
-                    <div>
-                      <span className="text-[9px] font-bold uppercase tracking-wider text-brand-700">
-                        Sócia-Fundadora
-                      </span>
-                      <h3 className="font-serif text-lg font-bold text-ink">
-                        Dra. Graciela Rodrigues
-                      </h3>
-                    </div>
-                  </div>
-                  <p className="mt-3 text-xs leading-5 text-ink-soft">
-                    Elogiada pela empatia, sensibilidade humana e excelência em mediação de conflitos. Referência em Direito de Família, Sucessões, Inventários e conciliações responsáveis.
-                  </p>
-                </div>
+                <blockquote className="font-serif text-sm italic leading-relaxed text-brand-900">
+                  &ldquo;Eu NÃO faço o que posso para garantir a melhor aposentadoria para o cliente. Eu faço meu melhor. A falência da ação está em admitir a síndrome do possível.&rdquo;
+                </blockquote>
+                <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-brand-700">
+                  — Filosofia de Atuação · Dra. Juliana Carvalho
+                </p>
               </motion.div>
 
               <motion.div
@@ -935,7 +861,7 @@ export default function Home() {
                     className="shrink-0 text-brand-700"
                   />
                   <span>
-                    Atendimento humanizado com escuta atenta e respeito
+                    10 anos de dedicação ao Direito Previdenciário e Trabalhista
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
@@ -944,7 +870,7 @@ export default function Home() {
                     className="shrink-0 text-brand-700"
                   />
                   <span>
-                    Clareza total e honestidade com pessoas leigas
+                    Especialista em RPPS e regras de transição do Servidor Público
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
@@ -953,7 +879,7 @@ export default function Home() {
                     className="shrink-0 text-brand-700"
                   />
                   <span>
-                    Sede moderna e acessível no Centro de Patos de Minas
+                    Sede moderna e acessível no Centro de São João del Rei
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
@@ -962,7 +888,7 @@ export default function Home() {
                     className="shrink-0 text-brand-700"
                   />
                   <span>
-                    Avaliação 4,9 ★ no Google com 98 avaliações
+                    Avaliação 5,0 ★ máxima no Google com 58 avaliações
                   </span>
                 </div>
               </motion.div>
@@ -973,14 +899,14 @@ export default function Home() {
               >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá! Gostaria de agendar uma consulta com o escritório Rodrigues & Nunes Advogados."
+                    "Olá, Dra. Juliana! Gostaria de agendar uma consulta com você para analisar minha situação previdenciária."
                   )}
                   target="_blank"
                   size="md"
-                  variant="copper"
+                  variant="burgundy"
                   className="rounded-full shadow-md"
                 >
-                  <WhatsAppIcon size={16} /> Falar com Nossos Advogados
+                  <WhatsAppIcon size={16} /> Falar com a Dra. Juliana
                 </GlowingButton>
                 <a
                   href={`tel:+${WHATSAPP_NUMBER}`}
@@ -1008,11 +934,11 @@ export default function Home() {
             >
               <Heading
                 eyebrow="SERVIÇOS JURÍDICOS & PILARES DE ATUAÇÃO"
-                description="Soluções jurídicas estratégicas e personalizadas para proteger seus direitos, seu patrimônio e sua família em Patos de Minas, Minas Gerais e em todo o território nacional."
+                description="Soluções jurídicas estratégicas e personalizadas para proteger seus direitos previdenciários e trabalhistas em São João del Rei, Minas Gerais e em todo o Brasil."
               >
-                Defesa jurídica especializada em{" "}
+                Defesa especializada em{" "}
                 <span className="italic text-brand-700">
-                  áreas essenciais do Direito.
+                  INSS, RPPS e Direitos do Trabalhador.
                 </span>
               </Heading>
               <p className="max-w-[270px] pb-1 text-xs leading-6 text-ink-soft">
@@ -1075,7 +1001,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Seção Especial: Por que Escolher Rodrigues & Nunes Advogados? */}
+        {/* Seção Especial: Por que Escolher a Dra. Juliana Carvalho? */}
         <section
           id="diferenciais"
           className="scroll-mt-24 border-y border-brand-200/60 bg-brand-50/50 py-20 sm:py-28 lg:py-32"
@@ -1084,20 +1010,20 @@ export default function Home() {
             <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
               <Heading
                 eyebrow="EFICIÊNCIA COMPROVADA & RESOLUÇÃO DE CASOS"
-                description="Veja como o compromisso com a clareza, honestidade e técnica processual transforma problemas delicados em resultados seguros e positivos para nossos clientes."
+                description="Veja como o compromisso com o cálculo rigoroso, honestidade e técnica processual transforma problemas previdenciários complexos em aposentadorias seguras e vantajosas."
               >
-                Causas complexas ou sem clareza?{" "}
+                Cálculos confusos ou benefício negado?{" "}
                 <span className="italic text-brand-700">
                   Nós esclarecemos e lutamos pelo seu direito.
                 </span>
               </Heading>
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá! Gostaria de uma análise para meu caso com o escritório Rodrigues & Nunes."
+                  "Olá, Dra. Juliana! Gostaria de uma análise para meu caso de benefício / aposentadoria."
                 )}
                 target="_blank"
                 size="md"
-                variant="copper"
+                variant="burgundy"
                 className="rounded-full shadow-sm"
               >
                 <WhatsAppIcon size={16} /> Analisar Meu Caso no WhatsApp
@@ -1105,7 +1031,7 @@ export default function Home() {
             </div>
 
             <div className="mt-12 grid gap-8 lg:grid-cols-2">
-              {/* Card 1: Previdenciário e Auxílio-Acidente */}
+              {/* Card 1: Planejamento Previdenciário e INSS */}
               <motion.article
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1116,51 +1042,51 @@ export default function Home() {
                 <div>
                   <div className="flex items-center justify-between">
                     <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-300/40 bg-brand-50 px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-brand-800">
-                      <Landmark size={14} /> Previdenciário & Auxílio-Acidente
+                      <Landmark size={14} /> Planejamento Previdenciário & INSS
                     </span>
                     <span className="text-xs font-semibold text-brand-700">
-                      Dr. Renato Nunes
+                      Dra. Juliana Carvalho
                     </span>
                   </div>
                   <h3 className="mt-4 font-serif text-2xl leading-tight text-ink sm:text-[1.75rem]">
-                    Apoio Seguro em Auxílio-Acidente e Benefícios do INSS
+                    Planejamento Estratégico para Obter o Maior Valor de Benefício
                   </h3>
                   <p className="mt-3 text-[14px] leading-relaxed text-ink-soft">
-                    Relatos reais de clientes atendidos com paciência e clareza absoluta durante todo o processo do auxílio-acidente e concessões do INSS. Entendemos a aflição de quem passou por acidentes ou incapacidades e atuamos com firmeza para reverter negativas do INSS e conquistar o benefício devido.
+                    Relatos reais de segurados que planejaram a aposentadoria com a Dra. Juliana e evitaram perdas irreparáveis. Analisamos todas as contribuições passadas, descartamos períodos prejudiciais e indicamos a data exata para requerer o benefício com a maior renda mensal possível.
                   </p>
                   <ul className="mt-5 space-y-2 text-xs font-medium text-ink">
                     <li className="flex items-center gap-2">
                       <CheckCircle2 size={15} className="shrink-0 text-brand-700" />
-                      <span>Análise técnica aprofundada de laudos e perícias médicas</span>
+                      <span>Análise técnica aprofundada de todo o histórico no CNIS</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle2 size={15} className="shrink-0 text-brand-700" />
-                      <span>Comunicação constante e explicação em linguagem simples</span>
+                      <span>Simulações de todas as regras de transição vigentes</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle2 size={15} className="shrink-0 text-brand-700" />
-                      <span>Acompanhamento próximo para trazer tranquilidade em momentos delicados</span>
+                      <span>Orientações claras em linguagem acessível e descomplicada</span>
                     </li>
                   </ul>
                 </div>
                 <div className="mt-7 border-t border-brand-200/60 pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dr. Renato! Gostaria de consultar sobre Auxílio-Acidente ou benefício do INSS."
+                      "Olá, Dra. Juliana! Gostaria de consultar sobre meu Planejamento Previdenciário ou benefício do INSS."
                     )}
                     target="_blank"
                     rel="noreferrer"
                     className="inline-flex w-full items-center justify-between rounded-xl border border-brand-800/20 bg-brand-50/80 px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-brand-900 transition-all hover:border-brand-800 hover:bg-brand-900 hover:text-white"
                   >
                     <span className="inline-flex items-center gap-2">
-                      <WhatsAppIcon size={15} /> Solicitar Análise de Benefício com Dr. Renato
+                      <WhatsAppIcon size={15} /> Solicitar Análise com Dra. Juliana
                     </span>
                     <ArrowUpRight size={15} />
                   </a>
                 </div>
               </motion.article>
 
-              {/* Card 2: Família, Sucessões & Mediação Humanizada */}
+              {/* Card 2: RPPS - Servidores Públicos */}
               <motion.article
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1171,44 +1097,44 @@ export default function Home() {
                 <div>
                   <div className="flex items-center justify-between">
                     <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-300/40 bg-brand-50 px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-brand-800">
-                      <HeartHandshake size={14} /> Família & Sucessões
+                      <Award size={14} /> Servidores Públicos (RPPS)
                     </span>
                     <span className="text-xs font-semibold text-brand-700">
-                      Dra. Graciela Rodrigues
+                      Dra. Juliana Carvalho
                     </span>
                   </div>
                   <h3 className="mt-4 font-serif text-2xl leading-tight text-ink sm:text-[1.75rem]">
-                    Mediação de Conflitos com Acolhimento e Respeito
+                    Segurança Jurídica na Aposentadoria do Servidor Público
                   </h3>
                   <p className="mt-3 text-[14px] leading-relaxed text-ink-soft">
-                    Conflitos familiares exigem muito mais do que petições; demandam empatia, escuta qualificada e postura pacificadora. A Dra. Graciela Rodrigues atua na mediação responsável de divórcios, partilhas e inventários, preservando vínculos e assegurando acordos justos com total discrição.
+                    Regimes próprios municipais, estaduais e federais exigem profundo conhecimento das emendas constitucionais e normas estatutárias. Dra. Juliana defende a integralidade, paridade e contagem correta de tempo para que o servidor se aposente com tranquilidade e sem prejuízos remuneratórios.
                   </p>
                   <ul className="mt-5 space-y-2 text-xs font-medium text-ink">
                     <li className="flex items-center gap-2">
                       <CheckCircle2 size={15} className="shrink-0 text-brand-700" />
-                      <span>Tratativa humana e acolhedora em momentos de transição</span>
+                      <span>Aplicação rigorosa das regras constitucionais de transição</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle2 size={15} className="shrink-0 text-brand-700" />
-                      <span>Agilidade em inventários e divórcios consensuais em cartório</span>
+                      <span>Agilidade na expedição e averbação de certidões (CTC)</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle2 size={15} className="shrink-0 text-brand-700" />
-                      <span>Proteção integral aos direitos dos filhos e herdeiros</span>
+                      <span>Proteção integral aos direitos funcionais e salariais</span>
                     </li>
                   </ul>
                 </div>
                 <div className="mt-7 border-t border-brand-200/60 pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dra. Graciela! Gostaria de atendimento em Direito de Família / Inventário."
+                      "Olá, Dra. Juliana! Sou servidor(a) público(a) e gostaria de orientação para minha aposentadoria no RPPS."
                     )}
                     target="_blank"
                     rel="noreferrer"
                     className="inline-flex w-full items-center justify-between rounded-xl border border-brand-800/20 bg-brand-50/80 px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-brand-900 transition-all hover:border-brand-800 hover:bg-brand-900 hover:text-white"
                   >
                     <span className="inline-flex items-center gap-2">
-                      <WhatsAppIcon size={15} /> Falar com Dra. Graciela Rodrigues
+                      <WhatsAppIcon size={15} /> Consultar Direito no RPPS
                     </span>
                     <ArrowUpRight size={15} />
                   </a>
@@ -1228,18 +1154,18 @@ export default function Home() {
               <Heading
                 eyebrow="NOSSO COMPROMISSO PROFISSIONAL"
                 light
-                description="O reconhecimento como um dos escritórios mais bem avaliados de Patos de Minas e região (4,9 ★ no Google com 98 avaliações) reflete nossa dedicação em aliar competência jurídica, simplicidade e carisma."
+                description="O reconhecimento como uma das advogadas mais recomendadas de São João del Rei e região (5,0 ★ no Google com 58 avaliações) reflete nossa dedicação intransigente em aliar conhecimento técnico de ponta e acolhimento humano."
               >
-                Protegemos seus direitos com{" "}
+                Protegemos seu futuro com{" "}
                 <span className="italic text-brand-200">
                   seriedade, clareza e dedicação total.
                 </span>
               </Heading>
 
-              <blockquote className="mt-8 rounded-xl border border-brand-400/25 bg-white/5 p-6 font-serif text-base italic leading-7 text-brand-100">
-                &ldquo;Sou cliente deste escritório há vários anos e sempre fui muito bem atendido. O serviço é excelente, feito com muita atenção, respeito e profissionalismo. Recomendo de coração, é um escritório em que realmente dá pra confiar!&rdquo;
-                <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-brand-300">
-                  — Vitor Nunes · Avaliação no Google
+              <blockquote className="mt-8 rounded-xl border border-gold-300/25 bg-white/5 p-6 font-serif text-base italic leading-7 text-brand-100">
+                &ldquo;Eu NÃO faço o que posso para garantir a melhor aposentadoria para o cliente. Eu faço meu melhor. A falência da ação está em admitir a síndrome do possível.&rdquo;
+                <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-gold-300">
+                  — Mario Sérgio Cortella · Princípio de Atuação de Dra. Juliana Carvalho
                 </footer>
               </blockquote>
             </div>
@@ -1254,18 +1180,18 @@ export default function Home() {
               {[
                 [
                   "01",
-                  "Atendimento Acolhedor & Empatia Genuína",
-                  "Entendemos que por trás de cada processo existe uma pessoa em momento delicado. Ouvimos com atenção, oferecemos suporte seguro e tratamos cada causa com máxima consideração.",
+                  "Atendimento Acolhedor & Escuta Qualificada",
+                  "Entendemos que benefícios previdenciários e direitos trabalhistas representam o sustento da sua família. Atendemos com paciência, ouvindo cada detalhe da sua história contributiva.",
                 ],
                 [
                   "02",
-                  "Clareza nas Explicações & Honestidade",
-                  "Explicamos minuciosamente os direitos, deveres e etapas processuais de forma transparente e acessível para quem não é da área jurídica, mantendo o cliente sempre informado.",
+                  "Cálculo Minucioso & Honestidade",
+                  "Não prometemos o impossível: fazemos simulações reais e transparentes para que você saiba exatamente quanto vai receber e em qual data é mais vantajoso dar entrada.",
                 ],
                 [
                   "03",
-                  "Agilidade & Compromisso com Resultados",
-                  "Trabalhamos com dinamismo, sem deixar processos esquecidos em gavetas. Buscamos soluções céleres e eficazes para resgatar os direitos dos nossos clientes.",
+                  "Combatividade & Destravamento de Processos",
+                  "Não aceitamos respostas automáticas ou negativas injustas do INSS. Entramos com recursos sólidos e ações judiciais fundamentadas para assegurar a vitória do seu direito.",
                 ],
               ].map(([number, title, description]) => (
                 <motion.div
@@ -1273,7 +1199,7 @@ export default function Home() {
                   variants={reveal}
                   className="grid gap-3 py-6 first:pt-0 sm:grid-cols-[70px_1fr] sm:gap-6 sm:py-7"
                 >
-                  <span className="font-serif text-2xl font-semibold text-brand-300">
+                  <span className="font-serif text-2xl font-semibold text-gold-300">
                     {number}
                   </span>
                   <div>
@@ -1288,7 +1214,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Avaliações no Google (Depoimentos Reais - 4,9 estrelas · 98 avaliações) */}
+        {/* Avaliações no Google (Depoimentos Reais - 5,0 estrelas · 58 avaliações) */}
         <section
           id="avaliacoes"
           className="scroll-mt-24 bg-white py-20 sm:py-28 lg:py-32"
@@ -1297,11 +1223,11 @@ export default function Home() {
             <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
               <Heading
                 eyebrow="PROVA SOCIAL VERIFICADA · GOOGLE MEU NEGÓCIO"
-                description="Confira avaliações autênticas de clientes que confiaram suas causas ao escritório Rodrigues & Nunes Advogados Associados em Patos de Minas e em todo o Brasil."
+                description="Confira avaliações autênticas de clientes que confiaram suas causas previdenciárias e trabalhistas à Dra. Juliana Carvalho em São João del Rei e em todo o Brasil."
               >
-                Reconhecido com 4,9 ★ pela{" "}
+                Avaliada com nota máxima 5,0 ★ pela{" "}
                 <span className="italic text-brand-700">
-                  clareza nas explicações, atenção e causas ganhas.
+                  clareza técnica, dedicação e causas conquistadas.
                 </span>
               </Heading>
 
@@ -1313,7 +1239,7 @@ export default function Home() {
                 <div>
                   <div className="flex items-center gap-2">
                     <span className="font-serif text-3xl font-bold leading-none text-ink">
-                      4,9
+                      5,0
                     </span>
                     <div className="flex gap-0.5 text-amber-500">
                       {Array.from({ length: 5 }, (_, i) => (
@@ -1326,7 +1252,7 @@ export default function Home() {
                     </div>
                   </div>
                   <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-brand-900">
-                    Rodrigues & Nunes Advogados
+                    Dra. Juliana Carvalho Advogada
                   </p>
                   <a
                     href={GOOGLE_MAPS_URL}
@@ -1334,7 +1260,7 @@ export default function Home() {
                     rel="noreferrer"
                     className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-brand-800 transition-colors hover:text-brand-950"
                   >
-                    98 avaliações no Google <ArrowUpRight size={13} />
+                    58 avaliações no Google <ArrowUpRight size={13} />
                   </a>
                 </div>
               </div>
@@ -1395,11 +1321,11 @@ export default function Home() {
             <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-brand-200/60 pt-8 sm:flex-row">
               <div className="flex flex-wrap items-center gap-2">
                 {[
-                  "Clareza nas explicações",
+                  "10 anos de experiência",
+                  "Especialista em INSS e RPPS",
                   "Atendimento acolhedor",
-                  "Causas ganhas",
-                  "Advogados justos e éticos",
-                  "Agilidade e transparência",
+                  "Planejamento com cálculo exato",
+                  "Nota máxima 5,0 no Google",
                 ].map((tag) => (
                   <span
                     key={tag}
@@ -1417,7 +1343,7 @@ export default function Home() {
                 rel="noreferrer"
                 className="group inline-flex shrink-0 items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-brand-800 transition-colors hover:text-brand-950"
               >
-                Ver perfil e 98 avaliações no Google{" "}
+                Ver perfil e 58 avaliações no Google{" "}
                 <ArrowUpRight
                   size={15}
                   className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
@@ -1435,12 +1361,12 @@ export default function Home() {
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
-                eyebrow="CONTATO & SEDE EM PATOS DE MINAS - MG"
-                description="Agende seu atendimento presencial em nossa sede na Av. Paracatu ou inicie seu atendimento pelo WhatsApp com retorno ágil para qualquer lugar do país."
+                eyebrow="CONTATO & SEDE EM SÃO JOÃO DEL REI - MG"
+                description="Agende seu atendimento presencial em nosso escritório na Av. Tiradentes ou inicie seu atendimento pelo WhatsApp com retorno ágil para qualquer lugar do país."
               >
                 Estamos prontos para{" "}
                 <span className="italic text-brand-700">
-                  defender seus direitos.
+                  garantir o seu direito.
                 </span>
               </Heading>
 
@@ -1449,7 +1375,7 @@ export default function Home() {
                   href={getWhatsAppUrl()}
                   target="_blank"
                   size="lg"
-                  variant="copper"
+                  variant="burgundy"
                   className="rounded-full shadow-md"
                 >
                   <WhatsAppIcon size={17} /> Iniciar Conversa no WhatsApp
@@ -1471,10 +1397,10 @@ export default function Home() {
                       Horário de Funcionamento
                     </p>
                     <p className="mt-0.5">
-                      Segunda a Sexta-feira: Aberto a partir das 08:00
+                      Segunda a Sexta-feira: Aberto a partir das 07:30
                     </p>
                     <p className="text-[11px] text-ink-soft/80">
-                      Atendimento com horário agendado e retorno ágil
+                      Atendimento presencial com agendamento e atendimento online nacional
                     </p>
                   </div>
                 </div>
@@ -1534,17 +1460,17 @@ export default function Home() {
                     Sede do Escritório
                   </p>
                   <p className="mt-1 font-serif text-2xl text-ink">
-                    Patos de Minas · Minas Gerais
+                    São João del Rei · Minas Gerais
                   </p>
                 </div>
               </div>
 
               <address className="mt-7 max-w-md text-[14px] not-italic leading-7 text-ink-soft">
                 <strong className="font-semibold text-ink">
-                  Rodrigues & Nunes Advogados Associados
+                  Dra. Juliana Carvalho Advocacia Especializada
                 </strong>
                 <br />
-                Dr. Renato Nunes & Dra. Graciela Rodrigues
+                Especialista em INSS e RPPS (Servidores Públicos)
                 <br />
                 {ADDRESS_TEXT}
               </address>
@@ -1557,14 +1483,14 @@ export default function Home() {
                 <div className="grid grid-cols-2 gap-y-1.5 text-ink-soft">
                   <span>Segunda a Sexta-feira</span>
                   <span className="text-right font-semibold text-ink">
-                    Abre às 08:00
+                    Abre às 07:30
                   </span>
                   <span>Atendimento Presencial</span>
                   <span className="text-right font-semibold text-brand-700">
                     Com agendamento
                   </span>
                   <span>Atendimento Digital</span>
-                  <span className="text-right text-ink">Nacional</span>
+                  <span className="text-right text-ink">Em todo o Brasil</span>
                 </div>
               </div>
 
@@ -1572,7 +1498,7 @@ export default function Home() {
 
               <div className="flex flex-wrap items-center justify-between gap-4">
                 <p className="text-xs text-ink-soft">
-                  Av. Paracatu, 880 · Centro, Patos de Minas - MG
+                  Av. Tiradentes, 707 · Centro, São João del Rei - MG
                 </p>
                 <a
                   href={GOOGLE_MAPS_URL}
@@ -1587,24 +1513,24 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Pre-Footer CTA Strip - Deep Obsidian with Warm Amber Sheen */}
+        {/* Pre-Footer CTA Strip - Deep Burgundy with Champagne Sheen */}
         <section className="bg-gradient-to-r from-brand-950 via-brand-900 to-brand-950 px-5 py-14 text-white shadow-inner sm:px-8 sm:py-16 lg:px-12">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-7 sm:flex-row sm:items-center">
             <div>
-              <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-brand-300">
-                <Sparkles size={13} /> RODRIGUES & NUNES ADVOGADOS ASSOCIADOS · PATOS DE MINAS - MG
+              <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-gold-300">
+                <Sparkles size={13} /> DRA. JULIANA CARVALHO · SÃO JOÃO DEL REI - MG
               </p>
               <h2 className="mt-3 max-w-2xl font-serif text-3xl leading-tight text-white sm:text-4xl">
-                Precisa de orientação jurídica segura, clara e comprometida com o seu resultado?
+                Quer saber o momento certo e o maior valor para a sua aposentadoria?
               </h2>
             </div>
             <a
               href={getWhatsAppUrl(
-                "Olá! Gostaria de agendar uma consulta inicial com o escritório Rodrigues & Nunes Advogados Associados."
+                "Olá, Dra. Juliana! Gostaria de agendar uma consulta inicial para analisar minha aposentadoria / benefício."
               )}
               target="_blank"
               rel="noreferrer"
-              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-full bg-gradient-to-r from-brand-600 via-brand-500 to-brand-600 px-7 py-4 text-[11px] font-bold uppercase tracking-[0.14em] text-white shadow-md transition-all hover:-translate-y-0.5 hover:brightness-110 hover:shadow-copper"
+              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-full bg-gradient-to-r from-brand-700 via-brand-600 to-brand-700 px-7 py-4 text-[11px] font-bold uppercase tracking-[0.14em] text-white shadow-md transition-all hover:-translate-y-0.5 hover:brightness-110 hover:shadow-burgundy"
             >
               <WhatsAppIcon size={17} /> Falar no WhatsApp{" "}
               <ArrowUpRight size={15} />
@@ -1618,27 +1544,27 @@ export default function Home() {
             <div>
               <a
                 href="#inicio"
-                aria-label="RODRIGUES & NUNES ADVOGADOS ASSOCIADOS"
+                aria-label="Dra. Juliana Carvalho Advogada"
                 className="inline-block"
               >
                 <Image
                   src={LOGO_SRC}
-                  width={2171}
+                  width={2172}
                   height={724}
-                  alt="RODRIGUES & NUNES ADVOGADOS ASSOCIADOS"
+                  alt="Dra. Juliana Carvalho Advogada Especialista em INSS e RPPS"
                   className="h-14 w-auto object-contain sm:h-16"
                 />
               </a>
               <p className="mt-4 max-w-xs text-xs leading-6 text-brand-100/70">
-                🤝 Segurança jurídica com atendimento humanizado, clareza e dedicação. Atuação em Direito Previdenciário (Auxílio-Acidente e INSS), Trabalhista, Família & Sucessões e Cível.
+                ⚖️ Assessoria jurídica de excelência com atendimento humanizado, clareza e dedicação. Especialista em Direito Previdenciário (INSS e RPPS Servidores Públicos) e Trabalhista.
               </p>
-              <p className="mt-3 text-[11px] font-semibold text-brand-300">
-                Dr. Renato Nunes & Dra. Graciela Rodrigues
+              <p className="mt-3 text-[11px] font-semibold text-gold-300">
+                Dra. Juliana Carvalho · OAB/MG
               </p>
             </div>
 
             <div>
-              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-300">
+              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-gold-300">
                 Navegação
               </h2>
               <div className="mt-4 flex flex-col items-start gap-3 text-xs text-brand-100/75">
@@ -1646,7 +1572,7 @@ export default function Home() {
                   Início
                 </a>
                 <a className="footer-link" href="#sobre">
-                  Os Sócios & Escritório
+                  Dra. Juliana Carvalho
                 </a>
                 <a className="footer-link" href="#atuacao">
                   Áreas de Atuação
@@ -1655,22 +1581,22 @@ export default function Home() {
                   Por que Escolher?
                 </a>
                 <a className="footer-link" href="#avaliacoes">
-                  Avaliações no Google (4,9 ★)
+                  Avaliações no Google (5,0 ★)
                 </a>
                 <a className="footer-link" href="#contato">
-                  Contato & Sede em Patos de Minas
+                  Contato & Sede em São João del Rei
                 </a>
               </div>
             </div>
 
             <div>
-              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-300">
+              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-gold-300">
                 Contato & Endereço
               </h2>
               <div className="mt-4 flex flex-col items-start gap-2.5 text-xs text-brand-100/75">
                 <a
                   href={getWhatsAppUrl(
-                    "Olá! Gostaria de solicitar um atendimento com a Rodrigues & Nunes Advogados."
+                    "Olá, Dra. Juliana! Gostaria de solicitar um atendimento com você."
                   )}
                   target="_blank"
                   rel="noreferrer"
@@ -1709,7 +1635,7 @@ export default function Home() {
                   <span>{ADDRESS_TEXT}</span>
                 </a>
                 <p className="inline-flex items-center gap-2 pt-1 text-[11px] text-brand-200/80">
-                  <Clock size={14} className="shrink-0" /> Aberto a partir das 08:00
+                  <Clock size={14} className="shrink-0" /> Aberto a partir das 07:30
                 </p>
               </div>
             </div>
@@ -1717,7 +1643,7 @@ export default function Home() {
 
           <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-white/15 pt-6 text-[10px] text-brand-100/55 sm:flex-row sm:items-center sm:justify-between">
             <p>
-              © {new Date().getFullYear()} RODRIGUES & NUNES ADVOGADOS ASSOCIADOS. Todos os direitos reservados.
+              © {new Date().getFullYear()} DRA. JULIANA CARVALHO ADVOCACIA. Todos os direitos reservados.
             </p>
             <p>
               Conteúdo meramente informativo, em estrita conformidade com o Código de Ética e Disciplina da OAB.
@@ -1732,16 +1658,16 @@ export default function Home() {
         >
           <a
             href={getWhatsAppUrl(
-              "Olá! Gostaria de tirar uma dúvida com o escritório Rodrigues & Nunes Advogados Associados."
+              "Olá, Dra. Juliana Carvalho! Gostaria de tirar uma dúvida sobre meu benefício / aposentadoria."
             )}
             target="_blank"
             rel="noreferrer"
-            aria-label="Falar agora pelo WhatsApp"
+            aria-label="Falar agora pelo WhatsApp com a Dra. Juliana Carvalho"
             className="group relative flex size-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-[#25D366]/40"
           >
             <WhatsAppIcon size={28} />
             <span className="pointer-events-none absolute right-16 hidden whitespace-nowrap rounded-lg bg-brand-950 px-3.5 py-1.5 text-xs font-semibold text-white shadow-lg transition-opacity group-hover:block">
-              Falar no WhatsApp
+              Falar com Dra. Juliana
             </span>
           </a>
         </aside>
@@ -1811,7 +1737,7 @@ export default function Home() {
                     href={getWhatsAppUrl(activeArea.whatsAppText)}
                     target="_blank"
                     size="md"
-                    variant="copper"
+                    variant="burgundy"
                     className="rounded-full shadow-md"
                   >
                     <WhatsAppIcon size={16} /> Consultar sobre esta demanda

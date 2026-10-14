@@ -1,34 +1,32 @@
-# RODRIGUES & NUNES ADVOGADOS ASSOCIADOS
-## Dr. Renato Nunes & Dra. Graciela Rodrigues · Patos de Minas - MG
+# DRA. JULIANA CARVALHO — ADVOCACIA ESPECIALIZADA
+## Especialista em INSS e RPPS (Servidores Públicos) · São João del Rei - MG
 
 ## Plataforma
-Site institucional responsivo e de alto padrão desenvolvido em Next.js 16 (App Router), projetado para transmitir autoridade jurídica, clareza, transparência, acolhimento humano e resolução ágil, com navegação fluida, modais interativos para detalhamento de áreas de atuação e integração direta com WhatsApp e Google Maps.
+Site institucional responsivo e de alto padrão desenvolvido em Next.js 16 (App Router), projetado para transmitir autoridade jurídica, combatividade, acolhimento humano e clareza técnica, com navegação fluida, modais interativos para detalhamento de áreas de atuação e integração direta com WhatsApp e Google Maps.
 
 ## Público
-Trabalhadores, segurados do INSS, famílias, cidadãos e empresários que buscam concessão de auxílio-acidente e benefícios previdenciários, defesa firme em causas trabalhistas, mediação humanizada em direito de família, partilhas e inventários, e soluções cíveis em Patos de Minas, Minas Gerais e em todo o território nacional.
+Trabalhadores, segurados do INSS, servidores públicos municipais, estaduais e federais (RPPS) e suas famílias que buscam a melhor aposentadoria, planejamento previdenciário minucioso, concessão e restabelecimento de auxílio-doença, BPC/LOAS, pensão por morte e direitos trabalhistas em São João del Rei, Campo das Vertentes, Minas Gerais e em todo o território nacional.
 
 ## Objetivo
-Apresentar o escritório RODRIGUES & NUNES ADVOGADOS ASSOCIADOS e seus sócios-titulares Dr. Renato Nunes e Dra. Graciela Rodrigues, sediado na Av. Paracatu, 880 - Centro, Patos de Minas - MG, evidenciando o atendimento resolutivo e humanizado, prova social de destaque (4,9 estrelas com 98 avaliações no Google Meu Negócio) e facilitar o contato e agendamento imediato via WhatsApp.
+Apresentar a advogada especialista Dra. Juliana Carvalho e seu escritório, sediado na Av. Tiradentes, 707 - Centro, São João del Rei - MG, evidenciando seus 10 anos de experiência sólida, nota máxima de 5,0 estrelas com 58 avaliações no Google Meu Negócio, e facilitando o contato e consultoria imediata via WhatsApp.
 
 ## Identidade Visual
-- Marca: RODRIGUES & NUNES ADVOGADOS ASSOCIADOS
-- Logotipo: Emblema geométrico entrelaçado em cobre/bronze com tipografia serifada nobre (`public/Logotipo Elegante Rodrigues & Nunes.png` e `public/logo.png`).
-- Emblema Oficial: Símbolo em cobre nobre recortado em alta resolução (`public/emblema.png`).
-- Paleta extraída diretamente do logo:
-  - Cobre nobre e âmbar quente (`#C98246`, `#E2964C`, `#B26A30`, `#D8A473`)
-  - Bronze profundo e conhaque (`#8E4E1F`, `#6B3814`, `#42200A`)
-  - Ônix e obsidian luxuoso (`#0B0E14`, `#121722`)
-  - Marfim e pérola quente (`#FAF8F5`, `#FDF9F4`, `#F8EFE4`)
-- Tipografia: Cinzel nos títulos (serifada elegante e clássica, alinhada ao logotipo) e Plus Jakarta Sans para leitura corporativa limpa, ágil e moderna.
-- Tom: Ético, acolhedor, transparente, claro, técnico, resolutivo e altamente confiável.
+- Marca: Juliana Carvalho Advogada Especialista em INSS e RPPS (Servidores Públicos)
+- Logotipo: Monograma J&C entrelaçado com tipografia serifada romana clássica em fundo Borgonha nobre (`public/Monograma J&C em Borgonha Elegante.png` e `public/juliana-carvalho-logo.png`).
+- Paleta extraída diretamente do logo e identidade visual:
+  - Borgonha Nobre / Marsala (`#472231`, `#611C3C`, `#7D274F`, `#48152C`, `#2F0D1C`)
+  - Champanhe e Ouro Rosa suave (`#C5927B`, `#D4AB97`, `#E5CBBD`, `#F1DFD5`)
+  - Ônix e Velvet Dark (`#17060D`, `#140A10`)
+  - Marfim e Pérola acolhedor (`#FAF6F7`, `#FBF6F8`, `#F6EBF1`)
+- Tipografia: Cormorant Garamond nos títulos (serifada elegante, clássica e alinhada ao logotipo) e Plus Jakarta Sans para leitura clara, moderna e acessível.
+- Tom: Inspirador, acolhedor, técnico, resolutivo, transparente e focado na melhor aposentadoria.
 
 ## Conteúdo e Mídia
-- Logotipo oficial em alta definição (`public/Logotipo Elegante Rodrigues & Nunes.png` e `public/logo.png`).
-- Emblema oficial recortado (`public/emblema.png`).
-- Foto oficial do Dr. Renato Nunes na poltrona clássica (`public/dr-renato-nunes.png`).
-- Foto executiva da equipe Dr. Renato Nunes & Dra. Graciela Rodrigues (`public/equipe-rodrigues-nunes.jpg`).
-- Endereço físico: Av. Paracatu, 880 - Centro, Patos de Minas - MG, 38700-096, Brasil.
-- Telefone / WhatsApp: (34) 3821-0380.
-- Redes Sociais: Instagram @rodriguesenunes (https://www.instagram.com/rodriguesenunes/).
-- Horário de funcionamento: Segunda a Sexta-feira a partir das 08:00 (Abre às 08:00).
-- Prova social: 4,9 estrelas com 98 avaliações no Google Meu Negócio.
+- Logotipo oficial em alta definição (`public/Monograma J&C em Borgonha Elegante.png` e `public/juliana-carvalho-logo.png`).
+- Foto de Juliana Carvalho em blazer bordô com citação de Cortella (`public/juliana-carvalho-hero.png`).
+- Retrato oficial de Juliana Carvalho "Sobre Elas Advogada Previdenciarista" (`public/juliana-carvalho-sobre.png`).
+- Endereço físico: Av. Tiradentes, 707 - Centro, São João del Rei - MG, 36307-346, Brasil.
+- Telefone / WhatsApp: (32) 98886-8022.
+- Redes Sociais: Instagram @juliana.carvalho.adv (https://www.instagram.com/juliana.carvalho.adv/).
+- Horário de funcionamento: Segunda a Sexta-feira a partir das 07:30 (Abre às 07:30).
+- Prova social: 5,0 estrelas com 58 avaliações no Google Meu Negócio.

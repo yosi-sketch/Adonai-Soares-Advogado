@@ -1,11 +1,11 @@
 import type { Metadata, Viewport } from "next";
-import { Cinzel, Plus_Jakarta_Sans } from "next/font/google";
+import { Cormorant_Garamond, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
-const displayFont = Cinzel({
+const displayFont = Cormorant_Garamond({
   variable: "--font-display",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -17,63 +17,62 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#0b0e14",
+  themeColor: "#17060d",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.rodriguesenunes.adv.br"),
+  metadataBase: new URL("https://www.julianacarvalho.adv.br"),
   title:
-    "RODRIGUES & NUNES ADVOGADOS ASSOCIADOS | Patos de Minas - MG | Atuação Nacional",
+    "Dra. Juliana Carvalho | Advogada Especialista em INSS e RPPS (Servidores Públicos) | São João del Rei - MG",
   description:
-    "Assessoria jurídica de excelência com atendimento acolhedor, clareza e dedicação. Dr. Renato Nunes e Dra. Graciela Rodrigues. Atuação destacada em Direito Previdenciário (Auxílio-Acidente, Aposentadorias e INSS), Trabalhista, Família & Sucessões e Cível. Sede na Av. Paracatu, 880 - Centro, Patos de Minas - MG. Avaliação 4,9 ★ no Google com 98 avaliações.",
+    "Assessoria jurídica de excelência em Direito Previdenciário (INSS e RPPS Servidores Públicos) e Trabalhista com 10 anos de experiência. Dra. Juliana Carvalho. Planejamento previdenciário estratégico, concessão da melhor aposentadoria e benefícios. Sede na Av. Tiradentes, 707 - Centro, São João del Rei - MG. Avaliação máxima 5,0 ★ no Google com 58 avaliações.",
   keywords: [
-    "Rodrigues & Nunes Advogados Associados",
-    "Rodrigues e Nunes Advocacia",
-    "Dr. Renato Nunes Advogado",
-    "Dra. Graciela Rodrigues Advogada",
-    "Advogado Patos de Minas",
-    "Advocacia Patos de Minas MG",
-    "Advogado em Patos de Minas",
-    "Direito Previdenciário Patos de Minas",
-    "Auxílio-Acidente Patos de Minas",
-    "Advogado INSS Patos de Minas",
-    "Advogado Trabalhista Patos de Minas",
-    "Direito de Família Patos de Minas",
-    "Mediação de Conflitos Patos de Minas",
-    "Av. Paracatu 880 Patos de Minas",
-    "Escritório de Advocacia Alto Paranaíba",
-    "Escritório de Advocacia Minas Gerais",
+    "Juliana Carvalho Advogada",
+    "Dra Juliana Carvalho",
+    "Advogada Especialista em INSS e RPPS",
+    "Direito Previdenciário São João del Rei",
+    "Advogado INSS São João del Rei MG",
+    "Aposentadoria Servidor Público RPPS",
+    "Planejamento Previdenciário São João del Rei",
+    "Advogada Previdenciarista Minas Gerais",
+    "Benefício por Incapacidade INSS",
+    "Auxílio-Acidente e Auxílio-Doença",
+    "BPC LOAS São João del Rei",
+    "Advogado Trabalhista São João del Rei",
+    "Av Tiradentes 707 São João del Rei",
+    "Escritório de Advocacia Previdenciária Campo das Vertentes",
   ],
-  authors: [
-    { name: "Dr. Renato Nunes" },
-    { name: "Dra. Graciela Rodrigues" },
-    { name: "Rodrigues & Nunes Advogados Associados" },
-  ],
-  creator: "Rodrigues & Nunes Advogados Associados",
-  publisher: "Rodrigues & Nunes Advogados Associados",
+  authors: [{ name: "Dra. Juliana Carvalho" }],
+  creator: "Dra. Juliana Carvalho — Advocacia Especializada",
+  publisher: "Dra. Juliana Carvalho — Advocacia Especializada",
   formatDetection: {
     telephone: true,
     address: true,
   },
   icons: {
-    icon: "/icon.png",
-    apple: "/apple-icon.png",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [
+      { url: "/apple-icon.png", sizes: "512x512" },
+    ],
   },
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.rodriguesenunes.adv.br",
+    url: "https://www.julianacarvalho.adv.br",
     title:
-      "RODRIGUES & NUNES ADVOGADOS ASSOCIADOS | Segurança Jurídica & Clareza",
+      "Dra. Juliana Carvalho | Especialista em INSS e RPPS (Servidores Públicos)",
     description:
-      "Excelência jurídica em Patos de Minas - MG com atendimento presencial e atuação nacional. Dr. Renato Nunes & Dra. Graciela Rodrigues. Avaliação 4,9 ★ no Google (98 avaliações).",
-    siteName: "Rodrigues & Nunes Advogados Associados",
+      "Assessoria jurídica com 10 anos de experiência, dedicação incansável e atendimento humanizado. Concessão da melhor aposentadoria e defesa dos seus direitos previdenciários e trabalhistas. 5,0 ★ no Google (58 avaliações).",
+    siteName: "Juliana Carvalho Advocacia Previdenciária & Trabalhista",
     images: [
       {
-        url: "/Logotipo Elegante Rodrigues & Nunes.png",
-        width: 2171,
+        url: "/Monograma J&C em Borgonha Elegante.png",
+        width: 2172,
         height: 724,
-        alt: "Rodrigues & Nunes Advogados Associados — Patos de Minas - MG",
+        alt: "Dra. Juliana Carvalho Advogada — São João del Rei - MG",
       },
     ],
   },
@@ -87,43 +86,36 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Rodrigues & Nunes Advogados Associados",
-    alternateName:
-      "Rodrigues & Nunes Advocacia | Dr. Renato Nunes & Dra. Graciela Rodrigues",
+    name: "Juliana Carvalho Advogada Especialista em INSS e RPPS (Servidores públicos)",
+    alternateName: "Juliana Carvalho Advocacia Previdenciária & Trabalhista",
     founder: [
       {
         "@type": "Person",
-        name: "Dr. Renato Nunes",
+        name: "Dra. Juliana Carvalho",
         jobTitle:
-          "Advogado Especialista em Direito Previdenciário, Trabalhista e Cível",
-      },
-      {
-        "@type": "Person",
-        name: "Dra. Graciela Rodrigues",
-        jobTitle:
-          "Advogada Especialista em Direito de Família, Sucessões e Mediação de Conflitos",
+          "Advogada Especialista em Direito Previdenciário (INSS e RPPS) e Trabalhista",
       },
     ],
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Av. Paracatu, 880 - Centro",
-      addressLocality: "Patos de Minas",
+      streetAddress: "Av. Tiradentes, 707 - Centro",
+      addressLocality: "São João del Rei",
       addressRegion: "MG",
-      postalCode: "38700-096",
+      postalCode: "36307-346",
       addressCountry: "BR",
     },
-    telephone: "+55-34-3821-0380",
-    url: "https://www.rodriguesenunes.adv.br",
-    image: "https://www.rodriguesenunes.adv.br/logo.png",
+    telephone: "+55-32-98886-8022",
+    url: "https://www.julianacarvalho.adv.br",
+    image: "https://www.julianacarvalho.adv.br/Monograma%20J%26C%20em%20Borgonha%20Elegante.png",
     priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "98",
+      ratingValue: "5.0",
+      reviewCount: "58",
     },
     areaServed: [
-      "Patos de Minas",
-      "Alto Paranaíba",
+      "São João del Rei",
+      "Campo das Vertentes",
       "Minas Gerais",
       "Brasil",
     ],
@@ -137,7 +129,7 @@ export default function RootLayout({
           "Thursday",
           "Friday",
         ],
-        opens: "08:00",
+        opens: "07:30",
         closes: "18:00",
       },
     ],
