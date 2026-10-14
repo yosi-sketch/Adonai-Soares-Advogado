@@ -9,7 +9,16 @@ interface GlowingButtonProps {
   onClick?: () => void;
   className?: string;
   size?: "sm" | "md" | "lg";
-  variant?: "silver" | "platinum" | "dark" | "outline" | "white" | "gold" | "champagne";
+  variant?:
+    | "copper"
+    | "bronze"
+    | "silver"
+    | "platinum"
+    | "dark"
+    | "outline"
+    | "white"
+    | "gold"
+    | "champagne";
 }
 
 export default function GlowingButton({
@@ -27,22 +36,26 @@ export default function GlowingButton({
     lg: "px-7 py-4 text-xs tracking-[0.14em]",
   }[size];
 
-  // Metallic platinum/silver gradients matching the new logo
+  // Metallic copper/bronze and luxury dark gradients matching the new Rodrigues & Nunes logo
   const variantClasses = {
+    copper:
+      "border border-amber-300/40 bg-gradient-to-r from-brand-600 via-brand-500 to-brand-600 text-white font-bold shadow-md shadow-brand-800/30 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-copper",
+    bronze:
+      "border border-amber-300/40 bg-gradient-to-r from-brand-700 via-brand-600 to-brand-700 text-white font-bold shadow-md shadow-brand-900/30 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-copper",
     platinum:
-      "border border-white/60 bg-gradient-to-r from-brand-100 via-white to-brand-200 text-brand-950 font-bold shadow-md shadow-brand-950/20 hover:-translate-y-0.5 hover:shadow-silver hover:brightness-105",
+      "border border-brand-300/60 bg-gradient-to-r from-brand-100 via-white to-brand-200 text-brand-950 font-bold shadow-md shadow-brand-950/15 hover:-translate-y-0.5 hover:shadow-copper hover:brightness-105",
     silver:
-      "border border-brand-300/40 bg-gradient-to-r from-brand-200 via-brand-100 to-brand-300 text-brand-950 font-bold shadow-sm hover:-translate-y-0.5 hover:shadow-silver hover:brightness-105",
+      "border border-brand-300/60 bg-gradient-to-r from-brand-100 via-white to-brand-200 text-brand-950 font-bold shadow-md shadow-brand-950/15 hover:-translate-y-0.5 hover:shadow-copper hover:brightness-105",
     champagne:
-      "border border-white/60 bg-gradient-to-r from-brand-100 via-white to-brand-200 text-brand-950 font-bold shadow-md shadow-brand-950/20 hover:-translate-y-0.5 hover:shadow-silver hover:brightness-105",
+      "border border-amber-200/60 bg-gradient-to-r from-brand-50 via-brand-100 to-brand-200 text-brand-950 font-bold shadow-sm hover:-translate-y-0.5 hover:shadow-copper hover:brightness-105",
     dark:
-      "border border-brand-500/50 bg-brand-900 text-white shadow-sm shadow-brand-950/40 hover:-translate-y-0.5 hover:border-brand-300 hover:bg-brand-950 hover:shadow-silver",
+      "border border-brand-700/50 bg-brand-950 text-brand-100 shadow-sm shadow-brand-950/40 hover:-translate-y-0.5 hover:border-brand-400 hover:bg-brand-900 hover:text-white hover:shadow-copper",
     gold:
-      "border border-white/60 bg-gradient-to-r from-brand-100 via-white to-brand-200 text-brand-950 font-bold shadow-md shadow-brand-950/20 hover:-translate-y-0.5 hover:shadow-silver hover:brightness-105",
+      "border border-amber-300/50 bg-gradient-to-r from-brand-600 via-brand-500 to-brand-600 text-white font-bold shadow-md shadow-brand-800/30 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-copper",
     outline:
-      "border border-brand-600/40 bg-transparent text-brand-900 hover:-translate-y-0.5 hover:border-brand-700 hover:bg-brand-50 hover:text-black",
+      "border border-brand-600/50 bg-transparent text-brand-900 hover:-translate-y-0.5 hover:border-brand-700 hover:bg-brand-50 hover:text-black",
     white:
-      "border border-white bg-white text-brand-950 shadow-sm hover:-translate-y-0.5 hover:bg-brand-50 hover:text-brand-950 hover:shadow-md",
+      "border border-brand-200 bg-white text-brand-950 shadow-sm hover:-translate-y-0.5 hover:bg-brand-50 hover:text-brand-950 hover:shadow-md",
   }[variant];
 
   const classes =

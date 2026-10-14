@@ -1,15 +1,15 @@
-# ORNELAS E FERREIRA - ADVOGADOS
-## Dra. Izabella Ornelas & Dr. Breno Nilson Ferreira · Sete Lagoas - MG
+# RODRIGUES & NUNES ADVOGADOS ASSOCIADOS
+## Dr. Renato Nunes & Dra. Graciela Rodrigues · Patos de Minas - MG
 
-Site institucional de alto padrão do escritório **ORNELAS E FERREIRA - ADVOGADOS**, sediado no Edifício Márcio Paulino (Centro Comercial) em Sete Lagoas - MG, com atuação nacional em Direito Previdenciário (INSS), Trabalhista, Criminal (Plantão 24h), Família e Direito Público.
+Site institucional de alto padrão do escritório **RODRIGUES & NUNES ADVOGADOS ASSOCIADOS**, sediado na Av. Paracatu, 880 - Centro, Patos de Minas - MG, com atuação destacada em Direito Previdenciário (Auxílio-Acidente, Aposentadorias e INSS), Trabalhista, Família & Sucessões e Contencioso Cível.
 
 ## Destaques
-- **Identidade Visual Metálica:** Prata platina, titânio e ônix imperial extraídos diretamente do logotipo oficial com o Templo da Justiça.
-- **Tipografia Nobre:** Cinzel nos títulos e Plus Jakarta Sans no corpo de texto.
-- **Prova Social de Destaque:** 4,9 estrelas com mais de 129 avaliações no Google Meu Negócio.
-- **Contato Direto:** WhatsApp (31) 99088-2518 e atendimento 24 horas.
-- **Localização:** Edifício Márcio Paulino, Av. Dep. Emílio Vasconcelos Costa, 133 - 2º andar, Sala 8, Centro, Sete Lagoas - MG.
-- **Instagram:** [@ornelaseferreira.adv](https://www.instagram.com/ornelaseferreira.adv)
+- **Identidade Visual Nobre em Cobre & Ônix:** Paleta extraída diretamente do logotipo oficial, combinando tons de cobre, âmbar e bronze quente com fundo obsidian profundo e marfim acolhedor.
+- **Tipografia Refinada:** Cinzel nos títulos em perfeita harmonia com o serif do logotipo e Plus Jakarta Sans para leitura clara e confortável.
+- **Prova Social Verificada:** Avaliação de excelência 4,9 estrelas com 98 avaliações reais no Google Meu Negócio.
+- **Contato Ágil:** WhatsApp (34) 3821-0380 com redirecionamentos personalizados por área de atuação.
+- **Localização:** Av. Paracatu, 880 - Centro, Patos de Minas - MG, 38700-096, Brasil.
+- **Instagram:** [@rodriguesenunes](https://www.instagram.com/rodriguesenunes/)
 
 ## Tecnologias
 - Next.js 16 (App Router + Turbopack)

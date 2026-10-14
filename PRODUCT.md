@@ -1,33 +1,34 @@
-# ORNELAS E FERREIRA - ADVOGADOS
-## Dra. Izabella Ornelas & Dr. Breno Nilson Ferreira · Sete Lagoas - MG
+# RODRIGUES & NUNES ADVOGADOS ASSOCIADOS
+## Dr. Renato Nunes & Dra. Graciela Rodrigues · Patos de Minas - MG
 
 ## Plataforma
-Site institucional responsivo e de alto padrão desenvolvido em Next.js 16 (App Router), projetado para transmitir autoridade jurídica, sofisticação, precisão técnica e atendimento humanizado, com navegação fluida, modais interativos para detalhamento de áreas de atuação e integração direta com WhatsApp e Google Maps.
+Site institucional responsivo e de alto padrão desenvolvido em Next.js 16 (App Router), projetado para transmitir autoridade jurídica, clareza, transparência, acolhimento humano e resolução ágil, com navegação fluida, modais interativos para detalhamento de áreas de atuação e integração direta com WhatsApp e Google Maps.
 
 ## Público
-Pessoas físicas, trabalhadores, segurados do INSS, famílias, cidadãos e empresários que buscam concessão de aposentadorias e benefícios previdenciários, defesa contundente em causas trabalhistas, assistência jurídica criminal estratégica (plantão 24h), soluções em direito de família, inventários e direito público em Sete Lagoas, Minas Gerais e em todo o território nacional.
+Trabalhadores, segurados do INSS, famílias, cidadãos e empresários que buscam concessão de auxílio-acidente e benefícios previdenciários, defesa firme em causas trabalhistas, mediação humanizada em direito de família, partilhas e inventários, e soluções cíveis em Patos de Minas, Minas Gerais e em todo o território nacional.
 
 ## Objetivo
-Apresentar o escritório ORNELAS E FERREIRA - ADVOGADOS e seus sócios-titulares Dra. Izabella Ornelas e Dr. Breno Nilson Ferreira, sediado no Edifício Márcio Paulino (Centro Comercial) em Sete Lagoas - MG, evidenciando o atendimento resolutivo e humanizado, prova social de destaque (4,9 estrelas com mais de 129 avaliações no Google Meu Negócio) e facilitar o contato e agendamento imediato via WhatsApp.
+Apresentar o escritório RODRIGUES & NUNES ADVOGADOS ASSOCIADOS e seus sócios-titulares Dr. Renato Nunes e Dra. Graciela Rodrigues, sediado na Av. Paracatu, 880 - Centro, Patos de Minas - MG, evidenciando o atendimento resolutivo e humanizado, prova social de destaque (4,9 estrelas com 98 avaliações no Google Meu Negócio) e facilitar o contato e agendamento imediato via WhatsApp.
 
 ## Identidade Visual
-- Marca: ORNELAS E FERREIRA - ADVOGADOS
-- Logotipo: Templo clássico greco-romano com colunata e balança da justiça em relevo metálico prateado/platina sobre fundo transparente (`public/logo.png`, `public/logo-ornelas-ferreira.png` e `public/Emblema Jurídico Ornelas & Ferreira.png`).
-- Emblema 3D: Insígnia em relevo metálico 3D cromado/prateado com textura de titânio grafite profundo (`public/emblema-ornelas-ferreira.webp` e `public/imgi_3_641164449_18039544235558482_7982539639553271157_n.webp`).
+- Marca: RODRIGUES & NUNES ADVOGADOS ASSOCIADOS
+- Logotipo: Emblema geométrico entrelaçado em cobre/bronze com tipografia serifada nobre (`public/Logotipo Elegante Rodrigues & Nunes.png` e `public/logo.png`).
+- Emblema Oficial: Símbolo em cobre nobre recortado em alta resolução (`public/emblema.png`).
 - Paleta extraída diretamente do logo:
-  - Prata platina luminosa e cromo polido (`#ffffff`, `#f5f7fa`, `#e5ebf1`, `#d0d8e2`)
-  - Aço escovado e titânio acetinado (`#b5c0cc`, `#93a1b1`, `#748395`)
-  - Grafite escuro e ardósia metálica (`#596778`, `#424e5d`, `#29323d`)
-  - Ônix e noite imperial profunda (`#161b22`, `#0a0d12`)
-  - Pérola e papel platina (`#f8fafc`, `#f4f6f9`)
-- Tipografia: Cinzel nos títulos e cabeçalhos (inspirada em epigrafia clássica romana em perfeita consonância com a fachada do templo no logotipo) e Plus Jakarta Sans para leitura corporativa limpa e moderna.
-- Tom: Ético, técnico, firme, ágil, acolhedor e altamente sofisticado.
+  - Cobre nobre e âmbar quente (`#C98246`, `#E2964C`, `#B26A30`, `#D8A473`)
+  - Bronze profundo e conhaque (`#8E4E1F`, `#6B3814`, `#42200A`)
+  - Ônix e obsidian luxuoso (`#0B0E14`, `#121722`)
+  - Marfim e pérola quente (`#FAF8F5`, `#FDF9F4`, `#F8EFE4`)
+- Tipografia: Cinzel nos títulos (serifada elegante e clássica, alinhada ao logotipo) e Plus Jakarta Sans para leitura corporativa limpa, ágil e moderna.
+- Tom: Ético, acolhedor, transparente, claro, técnico, resolutivo e altamente confiável.
 
 ## Conteúdo e Mídia
-- Logotipo oficial em alta definição com fundo transparente (`public/logo.png`).
-- Emblema 3D oficial em relevo metálico (`public/emblema-ornelas-ferreira.webp`).
-- Endereço físico: Edifício Márcio Paulino | Centro Comercial — Av. Dep. Emílio Vasconcelos Costa, 133 - Segundo andar, Sala 8 - Centro, Sete Lagoas - MG, 35700-009, Brasil.
-- Telefone / WhatsApp: (31) 99088-2518.
-- Redes Sociais: Instagram @ornelaseferreira.adv (https://www.instagram.com/ornelaseferreira.adv).
-- Horário de funcionamento: Aberto 24 horas (Plantão Jurídico / Atendimento Ágil).
-- Prova social: 4,9 estrelas com mais de 129 avaliações no Google Meu Negócio.
+- Logotipo oficial em alta definição (`public/Logotipo Elegante Rodrigues & Nunes.png` e `public/logo.png`).
+- Emblema oficial recortado (`public/emblema.png`).
+- Foto oficial do Dr. Renato Nunes na poltrona clássica (`public/dr-renato-nunes.png`).
+- Foto executiva da equipe Dr. Renato Nunes & Dra. Graciela Rodrigues (`public/equipe-rodrigues-nunes.jpg`).
+- Endereço físico: Av. Paracatu, 880 - Centro, Patos de Minas - MG, 38700-096, Brasil.
+- Telefone / WhatsApp: (34) 3821-0380.
+- Redes Sociais: Instagram @rodriguesenunes (https://www.instagram.com/rodriguesenunes/).
+- Horário de funcionamento: Segunda a Sexta-feira a partir das 08:00 (Abre às 08:00).
+- Prova social: 4,9 estrelas com 98 avaliações no Google Meu Negócio.

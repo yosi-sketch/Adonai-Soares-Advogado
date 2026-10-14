@@ -13,11 +13,8 @@ import {
   ArrowUpRight,
   Award,
   Briefcase,
-  Building2,
   CheckCircle2,
   Clock,
-  FileCheck,
-  FileText,
   HeartHandshake,
   Landmark,
   Mail,
@@ -35,26 +32,28 @@ import {
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
 
-const WHATSAPP_NUMBER = "5531990882518";
-const PHONE_DISPLAY = "(31) 99088-2518";
-const EMAIL_CONTACT = "contato@ornelaseferreira.adv.br";
-const INSTAGRAM_URL = "https://www.instagram.com/ornelaseferreira.adv";
-const INSTAGRAM_HANDLE = "@ornelaseferreira.adv";
+const WHATSAPP_NUMBER = "553438210380";
+const PHONE_DISPLAY = "(34) 3821-0380";
+const EMAIL_CONTACT = "contato@rodriguesenunes.adv.br";
+const INSTAGRAM_URL = "https://www.instagram.com/rodriguesenunes/";
+const INSTAGRAM_HANDLE = "@rodriguesenunes";
 
 const ADDRESS_TEXT =
-  "Edifício Márcio Paulino | Centro Comercial — Av. Dep. Emílio Vasconcelos Costa, 133 - Segundo andar, Sala 8 - Centro, Sete Lagoas - MG, 35700-009, Brasil";
+  "Av. Paracatu, 880 - Centro, Patos de Minas - MG, 38700-096, Brasil";
 const GOOGLE_MAPS_URL =
-  "https://www.google.com/maps/search/?api=1&query=ORNELAS+E+FERREIRA+-+ADVOGADOS+Sete+Lagoas+MG";
+  "https://www.google.com/maps/search/?api=1&query=Rodrigues+%26+Nunes+Advogados+Associados+Patos+de+Minas+MG";
 
-const LOGO_SRC = "/logo.png";
-const EMBLEMA_3D_SRC = "/emblema-ornelas-ferreira.webp";
+const LOGO_SRC = "/Logotipo Elegante Rodrigues & Nunes.png";
+const EMBLEMA_SRC = "/emblema.png";
+const FOTO_RENATO_SRC = "/dr-renato-nunes.png";
+const FOTO_EQUIPE_SRC = "/equipe-rodrigues-nunes.jpg";
 
 function getWhatsAppUrl(
   message?: string,
   number: string = WHATSAPP_NUMBER
 ) {
   const defaultText =
-    "Olá! Gostaria de agendar uma consulta jurídica com o escritório Ornelas & Ferreira Advogados.";
+    "Olá! Gostaria de agendar uma consulta jurídica com o escritório Rodrigues & Nunes Advogados Associados.";
   return `https://wa.me/${number}?text=${encodeURIComponent(
     message || defaultText
   )}`;
@@ -76,7 +75,7 @@ function WhatsAppIcon({
       fill="currentColor"
       className={className}
     >
-      <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.63C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.59 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67ZM8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7.02 8.48 7.02 9.69C7.02 10.9 7.9 12.07 8.02 12.23C8.15 12.39 9.74 14.85 12.19 15.91C12.77 16.16 13.23 16.31 13.58 16.42C14.17 16.61 14.71 16.58 15.13 16.52C15.6 16.45 16.58 15.93 16.78 15.35C16.99 14.77 16.99 14.27 16.93 14.17C16.86 14.07 16.71 14.01 16.47 13.89C16.24 13.77 15.11 13.21 14.9 13.14C14.69 13.06 14.54 13.02 14.39 13.25C14.23 13.47 13.8 13.98 13.67 14.13C13.54 14.27 13.41 14.29 13.18 14.17C12.95 14.06 11.98 13.74 10.84 12.72C9.95 11.92 9.34 10.94 9.17 10.65C9.01 10.36 9.15 10.2 9.27 10.08C9.37 9.98 9.5 9.8 9.62 9.66C9.74 9.52 9.78 9.42 9.86 9.26C9.94 9.1 9.9 8.95 9.84 8.83C9.78 8.71 9.32 7.57 9.13 7.11C8.94 6.66 8.75 6.72 8.6 6.71C8.47 6.71 8.31 6.71 8.15 6.71L8.53 7.33Z" />
+      <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.63C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.59 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67ZM8.53 7.33C8.37 7.39 8.1 7.39 7.87 7.64C7.65 7.89 7.02 8.48 7.02 9.69C7.02 10.9 7.9 12.07 8.02 12.23C8.15 12.39 9.74 14.85 12.19 15.91C12.77 16.16 13.23 16.31 13.58 16.42C14.17 16.61 14.71 16.58 15.13 16.52C15.6 16.45 16.58 15.93 16.78 15.35C16.99 14.77 16.99 14.27 16.93 14.17C16.86 14.07 16.71 14.01 16.47 13.89C16.24 13.77 15.11 13.21 14.9 13.14C14.69 13.06 14.54 13.02 14.39 13.25C14.23 13.47 13.8 13.98 13.67 14.13C13.54 14.27 13.41 14.29 13.18 14.17C12.95 14.06 11.98 13.74 10.84 12.72C9.95 11.92 9.34 10.94 9.17 10.65C9.01 10.36 9.15 10.2 9.27 10.08C9.37 9.98 9.5 9.8 9.62 9.66C9.74 9.52 9.78 9.42 9.86 9.26C9.94 9.1 9.9 8.95 9.84 8.83C9.78 8.71 9.32 7.57 9.13 7.11C8.94 6.66 8.75 6.72 8.6 6.71C8.47 6.71 8.31 6.71 8.15 6.71L8.53 7.33Z" />
     </svg>
   );
 }
@@ -164,223 +163,223 @@ interface PracticeArea {
 
 const practiceAreas: PracticeArea[] = [
   {
-    id: "direito-previdenciario-inss",
-    title: "Direito Previdenciário (INSS & Concessões)",
+    id: "direito-previdenciario-auxilio-acidente",
+    title: "Direito Previdenciário & Auxílio-Acidente",
     icon: Landmark,
-    tag: "Concessão Ágil & Revisões",
+    tag: "Auxílio-Acidente · Concessões & Revisões",
     summary:
-      "Aposentadorias, BPC/LOAS e benefícios por incapacidade concedidos com celeridade extrema e planejamento previdenciário seguro.",
+      "Atuação de destaque em auxílio-acidente, aposentadorias e benefícios por incapacidade com clareza total, agilidade e acompanhamento próximo.",
     details:
-      "Ter o benefício previdenciário negado ou atrasado pelo INSS compromete a subsistência de famílias e trabalhadores. Sob a liderança da Dra. Izabella Ornelas, nosso escritório é amplamente reconhecido pela rapidez e eficiência na liberação de aposentadorias especiais, auxílios e BPC/LOAS em tempo recorde, tanto na esfera administrativa quanto judicial.",
+      "O escritório Rodrigues & Nunes possui ampla experiência na conquista de benefícios previdenciários e na reversão de indeferimentos do INSS. Sob a coordenação do Dr. Renato Nunes, dedicamo-nos com paciência para explicar cada etapa e garantir que o trabalhador e sua família conquistem a proteção social e o valor financeiro a que têm direito legal.",
     topics: [
-      "Concessão célere de BPC/LOAS para idosos e pessoas com deficiência",
-      "Aposentadoria por Idade, Tempo de Contribuição e Especial (insalubridade)",
+      "Concessão e restabelecimento do Auxílio-Acidente (trabalhadores com sequelas)",
+      "Aposentadoria por Idade Urbana e Rural, Tempo de Contribuição e Especial",
       "Benefícios por Incapacidade Temporária e Permanente (Auxílio-Doença e Invalidez)",
-      "Auxílio-Acidente, Salário-Maternidade e Pensão por Morte",
-      "Planejamento Previdenciário completo para conquista da melhor renda mensal",
-      "Reversão de indeferimentos do INSS e Recursos Administrativos ou Judiciais",
+      "BPC/LOAS para idosos em vulnerabilidade e pessoas com deficiência",
+      "Planejamento Previdenciário completo para obter a melhor renda mensal",
+      "Recursos administrativos perante o INSS e ações judiciais previdenciárias",
     ],
     whatsAppText:
-      "Olá, Dra. Izabella! Gostaria de consultar a concessão / revisão de um benefício do INSS.",
+      "Olá! Gostaria de consultar a concessão / revisão de um benefício do INSS ou Auxílio-Acidente com a Rodrigues & Nunes Advogados.",
   },
   {
-    id: "direito-trabalhista-defesa",
-    title: "Direito do Trabalho & Defesa Laboral",
+    id: "direito-do-trabalho-defesa-laboral",
+    title: "Direito do Trabalho & Rescisões",
     icon: Briefcase,
-    tag: "Resgate de Direitos & Rescisões",
+    tag: "Resgate de Verbas & Direitos",
     summary:
-      "Atuação firme para trabalhadores e consultoria preventiva para empresas, destravando causas complexas e verbas rescisórias devidas.",
+      "Defesa contundente dos direitos do trabalhador, cobrança de verbas rescisórias, horas extras, insalubridade e acidentes do trabalho.",
     details:
-      "Relações de trabalho geram litígios que demandam técnica processual aguçada e agilidade. Atuamos com dedicação notável na cobrança de verbas devidas, rescisões indiretas por faltas graves do empregador, estabilidades violadas e acidentes de trabalho, além de assessoria preventiva e contenciosa estratégica.",
+      "Relações trabalhistas exigem rigor técnico e prontidão. Atuamos com empenho para apurar verbas devidas, rescisões indiretas decorrentes de descumprimentos do empregador e indenizações justas por acidentes e danos, sempre com foco em acordos justos ou sentenças favoráveis.",
     topics: [
-      "Rescisão indireta do contrato de trabalho (justa causa do empregador)",
-      "Cobrança de verbas rescisórias inadimplidas, FGTS e multas rescisórias",
+      "Cobrança integral de verbas rescisórias atrasadas, FGTS e multa de 40%",
+      "Rescisão indireta do contrato de trabalho por faltas graves do empregador",
       "Horas extras não quitadas, intervalo intrajornada e adicional noturno",
-      "Adicionais de insalubridade e periculosidade com suporte pericial",
-      "Reconhecimento de vínculo empregatício formal e combate à pejotização irregular",
-      "Indenizações por acidentes de trabalho, doenças ocupacionais e assédio moral",
+      "Adicionais de insalubridade e periculosidade com embasamento pericial",
+      "Reconhecimento de vínculo de emprego e combate à pejotização fraudulenta",
+      "Indenizações por acidentes de trabalho, lesões ocupacionais e assédio",
     ],
     whatsAppText:
-      "Olá! Gostaria de falar com um advogado especialista em Direito do Trabalho sobre meu caso.",
+      "Olá! Gostaria de falar com um advogado trabalhista da Rodrigues & Nunes Advogados sobre meu caso.",
   },
   {
-    id: "direito-penal-criminal-plantao-24h",
-    title: "Direito Criminal & Penal Estratégico (Plantão 24h)",
-    icon: ShieldAlert,
-    tag: "Plantão 24h · Dr. Breno Nilson Ferreira",
-    summary:
-      "Atuação contundente e imediata em prisões em flagrante, audiências de custódia, inquéritos policiais, júri e habeas corpus.",
-    details:
-      "Nos momentos mais críticos onde a liberdade individual está em jogo, a intervenção imediata e de alto gabarito técnico é indispensável. O Dr. Breno Nilson Ferreira lidera a defesa criminal com prontidão 24 horas, atuando com sigilo absoluto, estratégia contundente e excelência processual perante autoridades policiais e tribunais.",
-    topics: [
-      "Plantão 24 horas para atendimento imediato em delegacias e prisões em flagrante",
-      "Audiências de Custódia e pedidos urgentes de Liberdade Provisória ou Revogação de Prisão",
-      "Impetração célere de Habeas Corpus perante TJMG, STJ e STF",
-      "Acompanhamento estratégico em Inquéritos Policiais e investigações",
-      "Defesa criminal técnica em Ações Penais e atuação no Tribunal do Júri",
-      "Crimes contra o patrimônio, pessoa, crimes tributários, econômicos e da lei de drogas",
-    ],
-    whatsAppText:
-      "Olá, Dr. Breno! Preciso de atendimento criminal urgente / Plantão 24 horas.",
-  },
-  {
-    id: "direito-de-familia-sucessoes",
-    title: "Direito de Família & Sucessões",
+    id: "direito-de-familia-sucessoes-mediacao",
+    title: "Direito de Família, Sucessões & Mediação",
     icon: HeartHandshake,
-    tag: "Atendimento Humanizado & Sigiloso",
+    tag: "Dra. Graciela Rodrigues · Mediação Humanizada",
     summary:
-      "Divórcios consensuais e litigiosos, partilha de patrimônio, pensão alimentícia, guarda e inventários extrajudiciais ágeis.",
+      "Divórcios, inventários ágeis, partilha de patrimônio, guarda e pensão alimentícia conduzidos com empatia, delicadeza e firmeza técnica.",
     details:
-      "Demandas familiares exigem não apenas conhecimento jurídico rigoroso, mas também extrema empatia, equilíbrio e humanização. A Dra. Izabella Ornelas conduz cada caso com discrição exemplar, priorizando a pacificação de conflitos ou defendendo com firmeza os direitos de pais, filhos e herdeiros.",
+      "Demandas familiares exigem não apenas conhecimento jurídico sólido, mas também extrema sensibilidade e acolhimento humano. A Dra. Graciela Rodrigues é amplamente elogiada pelo atendimento afetuoso, ético e pela capacidade excepcional de mediação de conflitos, resguardando os laços afetivos e o patrimônio das famílias.",
     topics: [
-      "Divórcio extrajudicial rápido em cartório e divórcio judicial contencioso",
-      "Pensão alimentícia: fixação justa, pedidos de revisão e execuções de débito",
-      "Guarda compartilhada, unilateral e regulamentação de convivência parental",
-      "Inventário extrajudicial em cartório de notas e inventário judicial com partilha",
-      "Reconhecimento e dissolução de união estável com partilha de bens",
-      "Planejamento sucessório familiar, doações em vida e elaboração de testamentos",
+      "Divórcio extrajudicial rápido em cartório e divórcio judicial",
+      "Mediação humanizada de conflitos familiares e acordos equilibrados",
+      "Pensão alimentícia: fixação, revisão proporcional e execução de débitos",
+      "Guarda compartilhada, unilateral e regulamentação de convivência e visitas",
+      "Inventários judiciais e extrajudiciais ágeis com partilha de bens",
+      "Reconhecimento e dissolução de união estável e planejamento sucessório",
     ],
     whatsAppText:
-      "Olá, Dra. Izabella! Gostaria de consultoria jurídica em Direito de Família / Inventário.",
+      "Olá, Dra. Graciela! Gostaria de atendimento em Direito de Família / Inventário com o escritório.",
   },
   {
-    id: "direito-publico-administrativo",
-    title: "Direito Público & Administrativo",
-    icon: Building2,
-    tag: "Servidores Públicos & Defesa Institucional",
-    summary:
-      "Defesa técnica de servidores públicos, sindicâncias, PADs, concursos públicos, licitações e mandados de segurança.",
-    details:
-      "O Direito Público requer profundo conhecimento da legislação administrativa e da jurisprudência dos tribunais superiores. Assessoramos servidores públicos municipais, estaduais e federais em procedimentos disciplinares, direitos remuneratórios e ações contra arbitrariedades da administração pública.",
-    topics: [
-      "Defesa técnica em Processos Administrativos Disciplinares (PAD) e sindicâncias",
-      "Mandados de Segurança contra atos ilegais ou abusivos do Poder Público",
-      "Ações judiciais de defesa de direitos e verbas devidas a servidores públicos",
-      "Impugnação de editais e defesas em concursos públicos e nomeações",
-      "Defesa técnica em Ações de Improbidade Administrativa e Ações Civis Públicas",
-      "Assessoria em licitações, contratos administrativos e recursos perante tribunais de contas",
-    ],
-    whatsAppText:
-      "Olá! Gostaria de atendimento em Direito Público / Defesa de Servidor com o escritório.",
-  },
-  {
-    id: "contencioso-civel-casos-complexos",
-    title: "Contencioso Cível & Resolução de Casos Complexos",
+    id: "direito-civel-indenizacoes-resolucao",
+    title: "Direito Cível, Indenizações & Casos Complexos",
     icon: Scale,
-    tag: "Destravamento de Processos Antigos",
+    tag: "Causas Ganhas & Resoluções Ágeis",
     summary:
-      "Estratégia jurídica para resolver litígios travados há anos, cobranças, indenizações e contratos com alta técnica processual.",
+      "Ações indenizatórias, cobranças, cumprimento de contratos, responsabilidade civil e destravamento de processos estagnados.",
     details:
-      "Clientes chegam ao nosso escritório com causas paradas há anos por falta de movimentação ou estratégias ineficazes anteriores. Com dinamismo e determinação, reestruturamos teses, atuamos fortemente no saneamento processual e entregamos soluções onde outros profissionais não viam saída.",
+      "Com um histórico expressivo de causas ganhas e clientes satisfeitos, o escritório Rodrigues & Nunes estrutura defesas e teses contundentes para resolver litígios travados, proteger patrimônios e buscar reparações integrais por perdas e danos.",
     topics: [
-      "Análise profunda e destravamento de processos judiciais cíveis paralisados",
-      "Ações indenizatórias por danos materiais, morais, estéticos e lucros cessantes",
+      "Ações indenizatórias por danos morais, materiais e lucros cessantes",
+      "Saneamento e destravamento estratégico de processos judiciais paralisados",
       "Cobrança judicial e extrajudicial de títulos, dívidas e recuperação de crédito",
-      "Direito do Consumidor estratégico e ações contra abusos bancários e contratuais",
-      "Elaboração, análise preventiva e rescisão de contratos civis e comerciais",
+      "Resolução de conflitos contratuais, distratos e responsabilidade civil",
+      "Ações possessórias, despejo e litígios envolvendo bens imóveis",
       "Medidas cautelares, embargos à execução e tutelas de urgência",
     ],
     whatsAppText:
-      "Olá! Tenho um processo cível em andamento / caso complexo e gostaria de uma avaliação.",
+      "Olá! Tenho uma questão cível / indenização e gostaria de uma avaliação com a equipe Rodrigues & Nunes.",
+  },
+  {
+    id: "direito-do-consumidor-bancario",
+    title: "Direito do Consumidor & Defesa Patrimonial",
+    icon: ShieldCheck,
+    tag: "Combate a Abusos & Fraudes",
+    summary:
+      "Defesa vigorosa contra abusos bancários, fraudes consignadas, negativas indevidas e cobranças abusivas.",
+    details:
+      "Atuamos na proteção da pessoa física e do consumidor leigo perante instituições financeiras e grandes corporações, anulando fraudes contratuais e buscando a restituição em dobro e compensação moral por cobranças ilícitas.",
+    topics: [
+      "Anulação de empréstimos consignados fraudulentos e golpes digitais",
+      "Ações contra juros abusivos e venda casada de seguros bancários",
+      "Exclusão urgente de negativação indevida nos órgãos de proteção (SPC/Serasa)",
+      "Indenizações por falhas graves de atendimento e prestação de serviços",
+      "Restituição em dobro de valores cobrados indevidamente",
+      "Defesa técnica perante Juizados Especiais Cíveis e órgãos de defesa",
+    ],
+    whatsAppText:
+      "Olá! Gostaria de orientações sobre direitos do consumidor / abusos bancários.",
+  },
+  {
+    id: "assessoria-juridica-preventiva",
+    title: "Assessoria Jurídica Consultiva & Preventiva",
+    icon: Users,
+    tag: "Segurança Jurídica & Prevenção",
+    summary:
+      "Orientação estratégica contínua para pessoas físicas e empresas evitarem litígios e blindarem seus direitos.",
+    details:
+      "A melhor assessoria jurídica antecipa problemas antes que se tornem processos custosos. Oferecemos suporte consultivo com linguagem transparente e acessível, ajudando nossos clientes a tomar decisões seguras e embasadas em Patos de Minas e região.",
+    topics: [
+      "Consultoria preventiva para profissionais autônomos e empresas",
+      "Elaboração, análise minuciosa e revisão de contratos civis e comerciais",
+      "Auditoria jurídica preventiva e redução de riscos trabalhistas",
+      "Mediação extrajudicial e negociações com fornecedores e parceiros",
+      "Pareceres jurídicos práticos e com respostas claras e ágeis",
+      "Acompanhamento contínuo e canal de atendimento prioritário",
+    ],
+    whatsAppText:
+      "Olá! Gostaria de saber mais sobre a assessoria jurídica preventiva do escritório Rodrigues & Nunes.",
   },
 ];
 
 const clientReviews = [
   {
-    name: "Patrícia Caroline",
-    reviewsCount: "11 avaliações no Google",
-    date: "Cliente Verificado",
-    badge: "quick resolution",
-    content:
-      "Atendimento de primeira, a advogada Isabella é muito eficiente, flexível, pontual, prestativa, justa e excelente profissional. Tinha uma causa a mais de 10 anos que o advogado anterior não dava esperanças, aí contratei a Isabela e ela resolveu em menos de 5 meses.",
-  },
-  {
-    name: "Guilherme Rodrigues Figueiredo",
-    reviewsCount: "8 avaliações · 5 fotos",
-    date: "Cliente Verificado",
-    badge: "capable lawyers",
-    content:
-      "Tive contato com o Dr. Breno Nilson Ferreira, profissional exemplar de vasto conhecimento na área e de altíssimo gabarito. Se está procurando um advogado para resolver seu problema e sem dor de cabeça, pode contratar esse escritório e descansar tranquilamente a noite.",
-  },
-  {
-    name: "Kleidsonn Dayann",
-    reviewsCount: "5 avaliações · 1 foto",
-    date: "Cliente Verificado",
-    badge: "impeccable work",
-    content:
-      "Excelente escritório! Atendimento de altíssima qualidade, com profissionais competentes, atenciosos e extremamente comprometidos com o cliente. Desde o primeiro contato até a resolução do caso, fui tratado com respeito e transparência. Recomendo sem nenhuma dúvida!",
-  },
-  {
-    name: "Eliana Lucia",
-    reviewsCount: "1 avaliação no Google",
-    date: "Cliente Verificado",
-    badge: "efficiency",
-    content:
-      "Minha experiência foi muito positiva e satisfatória. Em meio a um caso complicado, me deparei com uma pessoa muito humana com um profissionalismo exemplar, que está sempre a disposição pra nos atender. Muito obrigada D. Izabela e sua equipe.",
-  },
-  {
-    name: "Marcos",
-    reviewsCount: "Local Guide · 167 avaliações · 513 fotos",
-    date: "Cliente Verificado",
-    badge: "capable lawyers",
-    content:
-      "Dra Isabella e Dr Breno. Muito competentes, atenciosos e dedicados ao que fazem. Atendimento humanizado nos momentos de dificuldade. Muito profissionalismo no trabalho. Me ajudaram muito.",
-  },
-  {
-    name: "Vanessa Silva",
-    reviewsCount: "Local Guide · 32 avaliações · 1 foto",
-    date: "Cliente Verificado",
-    badge: "quick resolution",
-    content:
-      "Dra. Izabella é muito boa, conseguiu o benefício da minha mãe em poucos dias.",
-  },
-  {
-    name: "Advaldo Alves Silva",
-    reviewsCount: "1 avaliação no Google",
-    date: "Cliente Verificado",
-    badge: "efficiency",
-    content:
-      "Quero expressar minha profunda gratidão pelo excelente serviço que a Dra. Isabela prestou como minha advogada trabalhista. Sua competência, dedicação e habilidade em lidar com meu caso foram verdadeiramente notáveis.",
-  },
-  {
-    name: "Maisa Ornelas",
+    name: "Ana Júlia Borges e Silva",
     reviewsCount: "2 avaliações no Google",
-    date: "Cliente Verificado",
+    date: "Cliente Verificada",
+    badge: "clarity in explanations",
+    content:
+      "O Dr. Renato Nunes é um excelente profissional. Muito atencioso, claro nas explicações e comprometido com o caso. Passou muita segurança em cada etapa e demonstrou total profissionalismo. É competente, ético e realmente interessado em ajudar seus clientes!",
+  },
+  {
+    name: "Marcelle Karoline",
+    reviewsCount: "3 avaliações · 5 fotos",
+    date: "Cliente Verificada",
     badge: "impeccable work",
     content:
-      "A Dra Izabella é de uma competência indescritível. Ela pensa até no conforto do deslocamento de seus clientes. Além de ser super inteligente, dedicada e firme em todos esses anos que ela tem de advocacia.",
+      "O escritório é muito bem organizado, com um ambiente agradável e profissional. Os colaboradores são sempre atenciosos, educados e demonstram muita competência no que fazem. É perceptível o cuidado em oferecer um atendimento de qualidade!",
   },
   {
-    name: "Otto Elian",
-    reviewsCount: "Local Guide · 25 avaliações",
+    name: "Vitor Nunes",
+    reviewsCount: "1 avaliação no Google",
     date: "Cliente Verificado",
-    badge: "capable lawyers",
+    badge: "fair lawyer",
     content:
-      "Breno e Izabella: Vocês são muito responsáveis e competentes. Resolve tudo com muita seriedade e atenção. Super indico!",
+      "Sou cliente deste escritório há vários anos e sempre fui muito bem atendido. O serviço é excelente, feito com muita atenção, respeito e profissionalismo. A equipe é sempre disponível, explica tudo com paciência e transmite muita segurança em cada orientação. Recomendo de coração, é um escritório em que realmente dá pra confiar!",
   },
   {
-    name: "Renilson Campos",
-    reviewsCount: "Local Guide · 8 avaliações · 6 fotos",
-    date: "Cliente Verificado",
-    badge: "efficiency",
-    content:
-      "Os melhores advogados que já tive! Muito atenciosos, pontuais e sempre disponíveis quando precisei. Muito obrigado!!",
-  },
-  {
-    name: "Juliana Rocha Rocha",
-    reviewsCount: "3 avaliações · 1 foto",
-    date: "Cliente Verificado",
-    badge: "impeccable work",
-    content:
-      "Super recomendo profissionais de super competência gratidão Isabella pelo trabalho impecável que fez pra minha mãe. Muito obrigada.",
-  },
-  {
-    name: "Natanne Ramalho",
+    name: "Denise Mello",
     reviewsCount: "4 avaliações no Google",
-    date: "Cliente Verificado",
-    badge: "capable lawyers",
+    date: "Cliente Verificada",
+    badge: "humanized care",
     content:
-      "Izabella é sempre muito atenciosa, e esclarecedora, sanando as dúvidas e auxiliando em todo o processo necessário. Indico a profissional de olhos fechados. Obrigada e parabéns pelo excelente profissionalismo.",
+      "Nunca fui tão bem acolhida!!! De longe o melhor atendimento. Advogados com uma tratativa humana e empenhados em auxiliar com orientação jurídica responsável e habilitados para mediar conflitos. Obrigada por TUDO, de modo especial à Dra. Graciela Rodrigues.",
+  },
+  {
+    name: "Patriciapaula Oliveira",
+    reviewsCount: "3 avaliações no Google",
+    date: "Cliente Verificada",
+    badge: "won case",
+    content:
+      "Fui muito bem atendida durante todo o processo do meu auxílio-acidente. O advogado demonstrou conhecimento, paciência e clareza nas explicações, o que me deixou mais tranquila em um momento difícil. Agradeço pelo acompanhamento e pela dedicação.",
+  },
+  {
+    name: "AJ Consultoria Esportiva",
+    reviewsCount: "1 avaliação no Google",
+    date: "Cliente Verificado",
+    badge: "won case",
+    content:
+      "Excelente advogado! Sempre demonstrou muita competência e experiência em todas as causas que me representou. Ganhamos todos os processos, e em cada etapa ele me manteve tranquilo e bem amparado. Atendimento excepcional e confiança total no trabalho dele!",
+  },
+  {
+    name: "Julio Cesar da Silva",
+    reviewsCount: "3 avaliações no Google",
+    date: "Cliente Verificado",
+    badge: "clarity in explanations",
+    content:
+      "Extremamente profissionais! Estou muito satisfeito com a clareza das informações e também com o nível de atenção dado. Recomendo os serviços deles a todos.",
+  },
+  {
+    name: "Alan Mendes",
+    reviewsCount: "Local Guide · 10 avaliações",
+    date: "Cliente Verificado",
+    badge: "great care",
+    content:
+      "Excelente profissional, principalmente a Dr. Graciela, um amor de pessoa. Atendimento acolhedor, transparente e com muita dedicação ao cliente.",
+  },
+  {
+    name: "Reginaldo Peres Batista",
+    reviewsCount: "2 avaliações · 1 foto",
+    date: "Cliente Verificado",
+    badge: "fair lawyer",
+    content:
+      "Excelente atendimento doutor Renato um baita ser humano, e também não deixou nada a desejar quanto a direitos e deveres no meu caso, estou completamente satisfeito.",
+  },
+  {
+    name: "Iara Cardoso Cidade Da Silva",
+    reviewsCount: "1 avaliação · 1 foto",
+    date: "Cliente Verificada",
+    badge: "won case",
+    content:
+      "Graças a Deus e a eficiência desse escritório a minha causa foi ganha e eu estou muito feliz! Super indico a todos que precisam de advogados de confiança!",
+  },
+  {
+    name: "Brodinho TV",
+    reviewsCount: "6 avaliações · 1 foto",
+    date: "Cliente Verificado",
+    badge: "quick resolution",
+    content:
+      "O Dr. Renato me ajudou de forma rápida e transparente, excelente profissional, atendimento excelente. Uma pessoa altamente capacitada com simplicidade e carisma, sem abrir mão da seriedade do ambiente.",
+  },
+  {
+    name: "Hellen Teixeira",
+    reviewsCount: "3 avaliações · 13 fotos",
+    date: "Cliente Verificada",
+    badge: "impeccable work",
+    content:
+      "Atendimento excepcional e equipe altamente qualificada. O escritório demonstra comprometimento, ética e agilidade em todas as etapas do processo. Transmitem confiança e profissionalismo do início ao fim. Recomendo sem hesitar!",
   },
 ];
 
@@ -411,7 +410,7 @@ function Heading({
         <p
           className={
             light
-              ? "mt-5 max-w-xl text-[15px] leading-7 text-brand-100/85"
+              ? "mt-5 max-w-xl text-[15px] leading-7 text-brand-100/90"
               : "mt-5 max-w-xl text-[15px] leading-7 text-ink-soft"
           }
         >
@@ -440,22 +439,22 @@ export default function Home() {
   return (
     <MotionConfig reducedMotion="user">
       <main className="overflow-hidden bg-pearl text-ink">
-        {/* Navigation Bar - Titanium Dark with Polished Platinum Accents */}
-        <header className="sticky top-0 z-40 border-b border-brand-700/30 bg-brand-950/95 backdrop-blur-xl">
+        {/* Navigation Bar - Luxury Obsidian Dark with Warm Copper Accents */}
+        <header className="sticky top-0 z-40 border-b border-brand-800/40 bg-brand-950/95 backdrop-blur-xl">
           <div className="mx-auto flex h-[88px] max-w-7xl items-center justify-between gap-5 px-5 sm:h-[102px] sm:px-8 lg:px-12">
             <a
               href="#inicio"
-              aria-label="ORNELAS E FERREIRA - ADVOGADOS — Início"
+              aria-label="RODRIGUES & NUNES ADVOGADOS ASSOCIADOS — Início"
               onClick={closeMenu}
               className="flex items-center gap-3 transition-opacity hover:opacity-90"
             >
               <Image
                 src={LOGO_SRC}
-                width={2172}
+                width={2171}
                 height={724}
-                alt="ORNELAS E FERREIRA - ADVOGADOS — Sete Lagoas - MG"
+                alt="RODRIGUES & NUNES ADVOGADOS ASSOCIADOS — Patos de Minas - MG"
                 priority
-                className="h-[54px] w-auto object-contain sm:h-[68px]"
+                className="h-[52px] w-auto object-contain sm:h-[66px]"
               />
             </a>
 
@@ -488,16 +487,16 @@ export default function Home() {
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Instagram de Ornelas e Ferreira Advogados"
-                className="grid size-10 place-items-center rounded-full border border-brand-400/30 text-brand-200 transition-all hover:border-brand-200 hover:bg-brand-900 hover:text-white"
-                title="Instagram @ornelaseferreira.adv"
+                aria-label="Instagram de Rodrigues & Nunes Advogados Associados"
+                className="grid size-10 place-items-center rounded-full border border-brand-400/30 text-brand-200 transition-all hover:border-brand-400 hover:bg-brand-900 hover:text-white"
+                title="Instagram @rodriguesenunes"
               >
                 <InstagramIcon size={16} />
               </a>
               <a
                 href={`tel:+${WHATSAPP_NUMBER}`}
-                aria-label="Ligar para Ornelas e Ferreira Advogados"
-                className="grid size-10 place-items-center rounded-full border border-brand-400/30 text-brand-200 transition-all hover:border-brand-200 hover:bg-brand-900 hover:text-white"
+                aria-label="Ligar para Rodrigues & Nunes Advogados Associados"
+                className="grid size-10 place-items-center rounded-full border border-brand-400/30 text-brand-200 transition-all hover:border-brand-400 hover:bg-brand-900 hover:text-white"
                 title={`Ligar: ${PHONE_DISPLAY}`}
               >
                 <Phone size={16} />
@@ -506,8 +505,8 @@ export default function Home() {
                 href={getWhatsAppUrl()}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="WhatsApp de Ornelas e Ferreira Advogados"
-                className="grid size-10 place-items-center rounded-full border border-brand-400/30 text-brand-200 transition-all hover:border-brand-200 hover:bg-brand-900 hover:text-white"
+                aria-label="WhatsApp de Rodrigues & Nunes Advogados Associados"
+                className="grid size-10 place-items-center rounded-full border border-brand-400/30 text-brand-200 transition-all hover:border-brand-400 hover:bg-brand-900 hover:text-white"
                 title="Atendimento no WhatsApp"
               >
                 <WhatsAppIcon size={18} />
@@ -516,7 +515,7 @@ export default function Home() {
                 href={getWhatsAppUrl()}
                 target="_blank"
                 size="sm"
-                variant="platinum"
+                variant="copper"
                 className="rounded-full shadow-sm"
               >
                 Falar no WhatsApp <ArrowUpRight size={14} />
@@ -528,7 +527,7 @@ export default function Home() {
               aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
               aria-expanded={menuOpen}
               aria-controls="mobile-navigation"
-              className="grid size-11 place-items-center rounded-full border border-brand-400/25 text-brand-200 lg:hidden"
+              className="grid size-11 place-items-center rounded-full border border-brand-400/30 text-brand-200 lg:hidden"
               onClick={() => setMenuOpen((open) => !open)}
             >
               {menuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -544,7 +543,7 @@ export default function Home() {
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.22 }}
-                className="overflow-hidden border-t border-brand-700/25 bg-brand-950 px-6 lg:hidden"
+                className="overflow-hidden border-t border-brand-800/40 bg-brand-950 px-6 lg:hidden"
               >
                 <div className="mx-auto flex max-w-7xl flex-col gap-1 py-4">
                   {[
@@ -553,7 +552,7 @@ export default function Home() {
                     ["Áreas de Atuação", "#atuacao"],
                     ["Por que Escolher?", "#diferenciais"],
                     ["Avaliações no Google (4,9 ★)", "#avaliacoes"],
-                    ["Contato & Sede em Sete Lagoas", "#contato"],
+                    ["Contato & Sede em Patos de Minas", "#contato"],
                   ].map(([label, href]) => (
                     <a
                       key={label}
@@ -566,7 +565,7 @@ export default function Home() {
                   ))}
                   <div className="mt-3 flex flex-col gap-2">
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-brand-100 via-white to-brand-200 px-5 py-3.5 text-xs font-bold uppercase tracking-[0.13em] text-brand-950 shadow-md transition-all hover:brightness-105"
+                      className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-brand-600 via-brand-500 to-brand-600 px-5 py-3.5 text-xs font-bold uppercase tracking-[0.13em] text-white shadow-md transition-all hover:brightness-105"
                       href={getWhatsAppUrl()}
                       target="_blank"
                       rel="noreferrer"
@@ -575,13 +574,13 @@ export default function Home() {
                       <WhatsAppIcon size={16} /> WhatsApp: {PHONE_DISPLAY}
                     </a>
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-full border border-brand-400/25 px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-brand-200 transition-all hover:border-brand-200"
+                      className="inline-flex items-center justify-center gap-2 rounded-full border border-brand-400/30 px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-brand-200 transition-all hover:border-brand-200"
                       href={GOOGLE_MAPS_URL}
                       target="_blank"
                       rel="noreferrer"
                       onClick={closeMenu}
                     >
-                      <MapPin size={15} /> Edifício Márcio Paulino, Sala 8, Sete Lagoas
+                      <MapPin size={15} /> Av. Paracatu, 880 - Centro, Patos de Minas
                     </a>
                   </div>
                 </div>
@@ -593,9 +592,9 @@ export default function Home() {
         {/* Hero Section */}
         <section
           id="inicio"
-          className="relative isolate scroll-mt-24 border-b border-brand-300/30 bg-gradient-to-b from-brand-50/70 via-pearl to-white"
+          className="relative isolate scroll-mt-24 border-b border-brand-200/50 bg-gradient-to-b from-brand-50/80 via-pearl to-white"
         >
-          {/* Subtle platinum / silver ambient glow */}
+          {/* Subtle copper / amber warm ambient glow */}
           <div className="pointer-events-none absolute -right-32 top-8 -z-10 size-[36rem] rounded-full bg-brand-200/40 blur-3xl" />
           <div className="pointer-events-none absolute -left-20 bottom-10 -z-10 size-[28rem] rounded-full bg-brand-100/60 blur-3xl" />
 
@@ -609,7 +608,7 @@ export default function Home() {
               <motion.div variants={reveal} className="eyebrow mb-6">
                 <span className="size-2 shrink-0 rounded-full bg-brand-600" />
                 <span>
-                  Sete Lagoas - MG · Edifício Márcio Paulino · 4,9 ★ no Google
+                  Patos de Minas - MG · Av. Paracatu, 880 · 4,9 ★ no Google
                 </span>
               </motion.div>
 
@@ -617,9 +616,9 @@ export default function Home() {
                 variants={reveal}
                 className="max-w-[760px] font-serif text-[2.75rem] leading-[1.04] tracking-[-0.025em] text-ink sm:text-5xl lg:text-[4.15rem]"
               >
-                Protegemos seus direitos e reduzimos riscos com{" "}
+                Segurança jurídica, clareza e dedicação para defender o que é{" "}
                 <span className="font-serif italic text-brand-700">
-                  excelência e rapidez.
+                  seu por direito.
                 </span>
               </motion.h1>
 
@@ -627,23 +626,23 @@ export default function Home() {
                 variants={reveal}
                 className="mt-7 max-w-xl text-[15px] leading-7 text-ink-soft sm:text-base sm:leading-8"
               >
-                Atuação de destaque liderada pela{" "}
+                Liderado pelo{" "}
                 <strong className="font-semibold text-ink">
-                  Dra. Izabella Ornelas
+                  Dr. Renato Nunes
                 </strong>{" "}
-                e pelo{" "}
+                e pela{" "}
                 <strong className="font-semibold text-ink">
-                  Dr. Breno Nilson Ferreira
-                </strong>{" "}
-                no escritório{" "}
-                <strong className="font-semibold text-ink">
-                  Ornelas & Ferreira Advogados
+                  Dra. Graciela Rodrigues
                 </strong>
-                . Especialistas em{" "}
+                , o escritório{" "}
                 <strong className="font-semibold text-ink">
-                  Direito Previdenciário (INSS), Trabalhista, Criminal (Plantão 24h), Família e Direito Público
+                  Rodrigues & Nunes Advogados Associados
                 </strong>{" "}
-                — com atendimento presencial de alto nível em Sete Lagoas (MG) e atuação firme em todo o Brasil.
+                une rigor técnico, acolhimento humano e combatividade para solucionar suas demandas em{" "}
+                <strong className="font-semibold text-ink">
+                  Direito Previdenciário (Auxílio-Acidente e INSS), Trabalhista, Família, Sucessões e Cível
+                </strong>{" "}
+                — com atendimento presencial de alto nível em Patos de Minas (MG) e atuação digital ágil em todo o Brasil.
               </motion.p>
 
               <motion.div
@@ -654,7 +653,7 @@ export default function Home() {
                   href={getWhatsAppUrl()}
                   target="_blank"
                   size="lg"
-                  variant="platinum"
+                  variant="copper"
                   className="rounded-full shadow-md"
                 >
                   <WhatsAppIcon size={16} /> Falar no WhatsApp Agora
@@ -673,24 +672,22 @@ export default function Home() {
 
               <motion.div
                 variants={reveal}
-                className="mt-12 flex flex-wrap items-center gap-x-7 gap-y-4 border-t border-brand-300/40 pt-6 text-xs text-ink-soft"
+                className="mt-12 flex flex-wrap items-center gap-x-7 gap-y-4 border-t border-brand-200/70 pt-6 text-xs text-ink-soft"
               >
                 <span className="inline-flex items-center gap-2 font-medium">
                   <Star size={15} className="fill-amber-500 text-amber-500" />{" "}
-                  4,9 estrelas no Google (129 avaliações)
+                  4,9 estrelas no Google (98 avaliações reais)
                 </span>
                 <span className="inline-flex items-center gap-2 font-medium">
-                  <Clock size={15} className="text-brand-700" /> Atendimento 24h &
-                  Plantão Criminal Ativo
+                  <Clock size={15} className="text-brand-700" /> Aberto a partir das 08:00
                 </span>
                 <span className="inline-flex items-center gap-2 font-medium">
-                  <MapPin size={15} className="text-brand-700" /> Edifício Márcio
-                  Paulino, Sala 8 · Centro, Sete Lagoas - MG
+                  <MapPin size={15} className="text-brand-700" /> Av. Paracatu, 880 · Centro, Patos de Minas - MG
                 </span>
               </motion.div>
             </motion.div>
 
-            {/* Hero Emblem Presentation - 3D Metallic Insignia */}
+            {/* Hero Visual Presentation - Dr. Renato & Dra. Graciela */}
             <motion.div
               initial={{ opacity: 0, scale: 0.97, y: 18 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -699,25 +696,25 @@ export default function Home() {
                 delay: 0.18,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="relative mx-auto w-full max-w-[480px] lg:ml-auto lg:mr-2"
+              className="relative mx-auto w-full max-w-[500px] lg:ml-auto lg:mr-2"
             >
-              <div className="relative aspect-square overflow-hidden rounded-3xl border border-brand-500/35 bg-brand-950 shadow-2xl ring-1 ring-brand-300/30">
+              <div className="relative aspect-[4/4.3] overflow-hidden rounded-3xl border border-brand-500/35 bg-brand-950 shadow-2xl ring-1 ring-brand-300/30">
                 <Image
-                  src={EMBLEMA_3D_SRC}
-                  alt="ORNELAS & FERREIRA - ADVOGADOS — Emblema Jurídico Metálico Oficial em Sete Lagoas - MG"
+                  src={FOTO_EQUIPE_SRC}
+                  alt="Dr. Renato Nunes e Dra. Graciela Rodrigues — Rodrigues & Nunes Advogados Associados em Patos de Minas - MG"
                   fill
                   priority
-                  sizes="(max-width: 640px) 90vw, (max-width: 1024px) 70vw, 42vw"
+                  sizes="(max-width: 640px) 90vw, (max-width: 1024px) 70vw, 45vw"
                   className="object-cover object-center"
                 />
                 <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-brand-950 via-brand-950/70 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-3 text-white sm:bottom-8 sm:left-8 sm:right-8">
                   <div>
                     <p className="font-serif text-2xl font-normal tracking-wide text-white">
-                      Ornelas & Ferreira
+                      Rodrigues & Nunes
                     </p>
                     <p className="mt-1 text-[10px] uppercase tracking-[0.2em] text-brand-200">
-                      Advogados Associados · Sete Lagoas - MG
+                      Dr. Renato Nunes & Dra. Graciela Rodrigues
                     </p>
                   </div>
                   <span className="grid size-11 shrink-0 place-items-center rounded-full border border-brand-400/40 bg-brand-950/80 text-brand-200 backdrop-blur-sm">
@@ -727,7 +724,7 @@ export default function Home() {
               </div>
 
               {/* Floating Google rating badge */}
-              <div className="absolute -bottom-3 -left-3 rounded-2xl border border-brand-300/50 bg-white/95 p-3.5 shadow-card backdrop-blur-md sm:-left-5">
+              <div className="absolute -bottom-3 -left-3 rounded-2xl border border-brand-200/80 bg-white/95 p-3.5 shadow-card backdrop-blur-md sm:-left-5">
                 <div className="flex items-center gap-2">
                   <GoogleIcon size={16} />
                   <div className="flex items-center gap-1 text-brand-800">
@@ -738,13 +735,13 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="mt-0.5 text-[9px] font-semibold uppercase tracking-wider text-ink-soft">
-                  129 Avaliações no Google
+                  98 Avaliações no Google
                 </p>
               </div>
 
               {/* Floating authority badge */}
               <div className="absolute -right-3 top-6 rounded-full border border-brand-400/40 bg-white/95 px-4 py-2 text-[10px] font-bold tracking-[0.14em] text-brand-900 shadow-card backdrop-blur-md sm:-right-5">
-                ATUAÇÃO NACIONAL · PLANTÃO 24H
+                PATOS DE MINAS · ATUAÇÃO NACIONAL
               </div>
             </motion.div>
           </div>
@@ -753,32 +750,32 @@ export default function Home() {
         {/* Highlights Banner */}
         <section
           aria-label="Credenciais e Destaques"
-          className="border-b border-brand-200/50 bg-white"
+          className="border-b border-brand-200/60 bg-white"
         >
           <div className="mx-auto grid max-w-7xl gap-7 px-5 py-8 sm:grid-cols-4 sm:gap-4 sm:px-8 lg:px-12">
             {[
               [
                 "4,9 ★",
-                "nota máxima com 129 avaliações reais no Google Maps",
+                "nota de excelência com 98 avaliações reais no Google",
               ],
               [
-                "Plantão 24 Horas",
-                "prontidão criminal para emergências e flagrantes",
+                "Causas Ganhas",
+                "histórico comprovado de vitórias e direitos conquistados",
               ],
               [
-                "Sete Lagoas - MG",
-                "Edifício Márcio Paulino, Av. Dep. Emílio Vasconcelos, 133",
+                "Patos de Minas - MG",
+                "Sede própria na Av. Paracatu, 880 - Centro",
               ],
               [
-                "Atuação Nacional",
-                "atendimento em Direito Previdenciário, Trabalhista e Cível",
+                "Clareza & Ética",
+                "explicações didáticas e honestidade com pessoas leigas",
               ],
             ].map(([value, label], index) => (
               <div
                 key={label}
                 className={
                   index > 0
-                    ? "flex items-center gap-4 sm:justify-center sm:border-l sm:border-brand-200/60"
+                    ? "flex items-center gap-4 sm:justify-center sm:border-l sm:border-brand-200/70"
                     : "flex items-center gap-4 sm:justify-center"
                 }
               >
@@ -799,18 +796,18 @@ export default function Home() {
           className="scroll-mt-24 bg-pearl py-20 sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20 lg:px-12">
-            {/* 3D Insignia Presentation */}
+            {/* Dr. Renato Nunes portrait */}
             <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={reveal}
-              className="relative mx-auto w-full max-w-[500px]"
+              className="relative mx-auto w-full max-w-[480px]"
             >
-              <div className="relative aspect-square overflow-hidden rounded-2xl border border-brand-700/30 bg-brand-950 shadow-card">
+              <div className="relative aspect-[3/3.8] overflow-hidden rounded-2xl border border-brand-700/30 bg-brand-950 shadow-card">
                 <Image
-                  src={EMBLEMA_3D_SRC}
-                  alt="Escritório Ornelas e Ferreira Advogados em Sete Lagoas - MG"
+                  src={FOTO_RENATO_SRC}
+                  alt="Dr. Renato Nunes — Advogado Sócio-Fundador de Rodrigues & Nunes Advogados Associados"
                   fill
                   sizes="(max-width: 1024px) 90vw, 45vw"
                   className="object-cover object-center"
@@ -819,21 +816,21 @@ export default function Home() {
               </div>
 
               {/* Authority badge card */}
-              <div className="absolute -bottom-6 right-3 max-w-[340px] rounded-xl border border-brand-300/60 bg-white px-5 py-4 shadow-card sm:-right-6 sm:px-6">
+              <div className="absolute -bottom-6 right-3 max-w-[340px] rounded-xl border border-brand-200 bg-white px-5 py-4 shadow-card sm:-right-6 sm:px-6">
                 <div className="flex items-center gap-2 text-brand-800">
                   <Award size={16} />
                   <p className="text-[10px] font-bold uppercase tracking-[0.16em]">
-                    Advocacia de Alta Performance
+                    Advocacia Humanizada & Combativa
                   </p>
                 </div>
                 <p className="mt-1 font-serif text-lg leading-snug text-ink">
-                  Ornelas & Ferreira Advogados
+                  Rodrigues & Nunes Advogados
                 </p>
                 <p className="mt-0.5 text-[11px] font-medium text-brand-700">
-                  Dra. Izabella Ornelas & Dr. Breno Nilson Ferreira
+                  Dr. Renato Nunes & Dra. Graciela Rodrigues
                 </p>
                 <p className="mt-1 text-[11px] leading-4 text-ink-soft">
-                  Edifício Márcio Paulino, Av. Dep. Emílio Vasconcelos Costa, 133 - Sala 8, Sete Lagoas - MG.
+                  Av. Paracatu, 880 - Centro, Patos de Minas - MG.
                 </p>
               </div>
 
@@ -856,7 +853,7 @@ export default function Home() {
               >
                 Rigor técnico e determinação aliados a um{" "}
                 <span className="italic text-brand-700">
-                  atendimento humanizado, ágil e resolutivo.
+                  atendimento acolhedor, transparente e resolutivo.
                 </span>
               </motion.h2>
 
@@ -864,22 +861,22 @@ export default function Home() {
                 variants={reveal}
                 className="mt-6 max-w-xl text-[15px] leading-7 text-ink-soft"
               >
-                Com sede de destaque no{" "}
+                Com sede consolidada na{" "}
                 <strong className="text-ink">
-                  Edifício Márcio Paulino no Centro de Sete Lagoas (MG)
+                  Av. Paracatu, 880 no Centro de Patos de Minas (MG)
                 </strong>{" "}
                 e atuação em todo o Brasil, o escritório{" "}
-                <strong className="text-ink">Ornelas & Ferreira Advogados</strong>{" "}
-                consolida-se como referência máxima em assessoria jurídica especializada, construindo um histórico consistente de causas vitoriosas e processos destravados com rapidez surpreendente.
+                <strong className="text-ink">Rodrigues & Nunes Advogados Associados</strong>{" "}
+                é amplamente reconhecido pela excelência em assessoria jurídica, clareza didática nas explicações e histórico expressivo de causas ganhas.
               </motion.p>
 
               <motion.p
                 variants={reveal}
                 className="mt-4 max-w-xl text-[15px] leading-7 text-ink-soft"
               >
-                Nossa atuação é pautada em dois pilares inegociáveis: a{" "}
-                <strong className="text-ink">técnica jurídica impecável</strong>{" "}
-                e o <strong className="text-ink">acolhimento humano</strong> de cada pessoa que nos confia seu problema. Nos dedicamos pessoalmente para entender a fundo sua dor, assegurar transparência absoluta e lutar pelo melhor resultado no menor tempo possível.
+                Nossa atuação fundamenta-se na{" "}
+                <strong className="text-ink">transparência absoluta</strong> e no{" "}
+                <strong className="text-ink">respeito ao cliente</strong>. Explicamos direitos e deveres em linguagem clara, sem jargões desnecessários, acompanhando de perto cada cliente para que se sinta acolhido, amparado e seguro do início ao fim do processo.
               </motion.p>
 
               {/* Partners Profiles Grid */}
@@ -887,43 +884,43 @@ export default function Home() {
                 variants={reveal}
                 className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2"
               >
-                {/* Dra. Izabella Ornelas */}
-                <div className="rounded-xl border border-brand-200/70 bg-white p-5 transition-all hover:border-brand-400 hover:shadow-card">
+                {/* Dr. Renato Nunes */}
+                <div className="rounded-xl border border-brand-200/80 bg-white p-5 transition-all hover:border-brand-400 hover:shadow-card">
                   <div className="flex items-center gap-3">
                     <span className="grid size-11 place-items-center rounded-full bg-brand-50 text-brand-800">
                       <UserCheck size={20} />
                     </span>
                     <div>
                       <span className="text-[9px] font-bold uppercase tracking-wider text-brand-700">
-                        Sócia-Fundadora
+                        Sócio-Fundador
                       </span>
                       <h3 className="font-serif text-lg font-bold text-ink">
-                        Dra. Izabella Ornelas
+                        Dr. Renato Nunes
                       </h3>
                     </div>
                   </div>
                   <p className="mt-3 text-xs leading-5 text-ink-soft">
-                    Reconhecida por anos de experiência, dedicação incansável e atendimento profundamente humanizado. Especialista em Direito Previdenciário (concessões céleres), Trabalhista e de Família.
+                    Reconhecido pela capacidade técnica aliada à simplicidade, carisma e dedicação incansável. Especialista em Direito Previdenciário (Auxílio-Acidente e INSS), Trabalhista e Contencioso Cível.
                   </p>
                 </div>
 
-                {/* Dr. Breno Nilson Ferreira */}
-                <div className="rounded-xl border border-brand-200/70 bg-white p-5 transition-all hover:border-brand-400 hover:shadow-card">
+                {/* Dra. Graciela Rodrigues */}
+                <div className="rounded-xl border border-brand-200/80 bg-white p-5 transition-all hover:border-brand-400 hover:shadow-card">
                   <div className="flex items-center gap-3">
                     <span className="grid size-11 place-items-center rounded-full bg-brand-50 text-brand-800">
                       <Scale size={20} />
                     </span>
                     <div>
                       <span className="text-[9px] font-bold uppercase tracking-wider text-brand-700">
-                        Sócio-Fundador
+                        Sócia-Fundadora
                       </span>
                       <h3 className="font-serif text-lg font-bold text-ink">
-                        Dr. Breno Nilson Ferreira
+                        Dra. Graciela Rodrigues
                       </h3>
                     </div>
                   </div>
                   <p className="mt-3 text-xs leading-5 text-ink-soft">
-                    Profissional exemplar de altíssimo gabarito e vasto conhecimento jurídico. Referência em Direito Criminal & Penal Estratégico (plantão 24h), Direito Público e litígios complexos.
+                    Elogiada pela empatia, sensibilidade humana e excelência em mediação de conflitos. Referência em Direito de Família, Sucessões, Inventários e conciliações responsáveis.
                   </p>
                 </div>
               </motion.div>
@@ -938,7 +935,7 @@ export default function Home() {
                     className="shrink-0 text-brand-700"
                   />
                   <span>
-                    Atendimento humanizado com suporte e escuta atenta
+                    Atendimento humanizado com escuta atenta e respeito
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
@@ -947,7 +944,7 @@ export default function Home() {
                     className="shrink-0 text-brand-700"
                   />
                   <span>
-                    Agilidade e rapidez comprovada na resolução de casos
+                    Clareza total e honestidade com pessoas leigas
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
@@ -956,7 +953,7 @@ export default function Home() {
                     className="shrink-0 text-brand-700"
                   />
                   <span>
-                    Sede moderna no Edifício Márcio Paulino (Sala 8)
+                    Sede moderna e acessível no Centro de Patos de Minas
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
@@ -965,7 +962,7 @@ export default function Home() {
                     className="shrink-0 text-brand-700"
                   />
                   <span>
-                    Avaliação 4,9 ★ no Google com mais de 129 avaliações
+                    Avaliação 4,9 ★ no Google com 98 avaliações
                   </span>
                 </div>
               </motion.div>
@@ -976,11 +973,11 @@ export default function Home() {
               >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá! Gostaria de agendar uma consulta com a equipe Ornelas & Ferreira Advogados."
+                    "Olá! Gostaria de agendar uma consulta com o escritório Rodrigues & Nunes Advogados."
                   )}
                   target="_blank"
                   size="md"
-                  variant="platinum"
+                  variant="copper"
                   className="rounded-full shadow-md"
                 >
                   <WhatsAppIcon size={16} /> Falar com Nossos Advogados
@@ -1011,7 +1008,7 @@ export default function Home() {
             >
               <Heading
                 eyebrow="SERVIÇOS JURÍDICOS & PILARES DE ATUAÇÃO"
-                description="Estratégias jurídicas completas e interdisciplinares para proteger seus direitos, seu patrimônio e sua liberdade em Sete Lagoas, Minas Gerais e em todo o território nacional."
+                description="Soluções jurídicas estratégicas e personalizadas para proteger seus direitos, seu patrimônio e sua família em Patos de Minas, Minas Gerais e em todo o território nacional."
               >
                 Defesa jurídica especializada em{" "}
                 <span className="italic text-brand-700">
@@ -1037,7 +1034,7 @@ export default function Home() {
                   <motion.article
                     key={area.id}
                     variants={reveal}
-                    className="group flex min-h-[350px] flex-col rounded-xl border border-brand-200/70 bg-pearl p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-500 hover:shadow-card sm:p-8"
+                    className="group flex min-h-[350px] flex-col rounded-xl border border-brand-200/80 bg-pearl p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-500 hover:shadow-card sm:p-8"
                   >
                     <div className="flex items-start justify-between">
                       <span className="grid size-12 place-items-center rounded-full bg-white text-brand-800 shadow-sm transition-colors group-hover:bg-brand-900 group-hover:text-white">
@@ -1078,7 +1075,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Seção Especial: Por que Escolher Ornelas & Ferreira Advogados? */}
+        {/* Seção Especial: Por que Escolher Rodrigues & Nunes Advogados? */}
         <section
           id="diferenciais"
           className="scroll-mt-24 border-y border-brand-200/60 bg-brand-50/50 py-20 sm:py-28 lg:py-32"
@@ -1087,20 +1084,20 @@ export default function Home() {
             <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
               <Heading
                 eyebrow="EFICIÊNCIA COMPROVADA & RESOLUÇÃO DE CASOS"
-                description="Veja como o compromisso com a celeridade e o conhecimento técnico transformam problemas aparentemente insolúveis em desfechos rápidos e favoráveis."
+                description="Veja como o compromisso com a clareza, honestidade e técnica processual transforma problemas delicados em resultados seguros e positivos para nossos clientes."
               >
-                Causas travadas ou sem esperança?{" "}
+                Causas complexas ou sem clareza?{" "}
                 <span className="italic text-brand-700">
-                  Nós destravamos e buscamos o seu direito.
+                  Nós esclarecemos e lutamos pelo seu direito.
                 </span>
               </Heading>
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá! Gostaria de uma análise para destravar / conduzir meu caso com o escritório Ornelas & Ferreira."
+                  "Olá! Gostaria de uma análise para meu caso com o escritório Rodrigues & Nunes."
                 )}
                 target="_blank"
                 size="md"
-                variant="platinum"
+                variant="copper"
                 className="rounded-full shadow-sm"
               >
                 <WhatsAppIcon size={16} /> Analisar Meu Caso no WhatsApp
@@ -1108,7 +1105,7 @@ export default function Home() {
             </div>
 
             <div className="mt-12 grid gap-8 lg:grid-cols-2">
-              {/* Card 1: Celeridade Previdenciária e Trabalhista */}
+              {/* Card 1: Previdenciário e Auxílio-Acidente */}
               <motion.article
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1119,51 +1116,51 @@ export default function Home() {
                 <div>
                   <div className="flex items-center justify-between">
                     <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-300/40 bg-brand-50 px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-brand-800">
-                      <Landmark size={14} /> Previdenciário & Trabalhista
+                      <Landmark size={14} /> Previdenciário & Auxílio-Acidente
                     </span>
                     <span className="text-xs font-semibold text-brand-700">
-                      Concessões Ágeis
+                      Dr. Renato Nunes
                     </span>
                   </div>
                   <h3 className="mt-4 font-serif text-2xl leading-tight text-ink sm:text-[1.75rem]">
-                    Processos de 10 Anos Resolvidos em Meses
+                    Apoio Seguro em Auxílio-Acidente e Benefícios do INSS
                   </h3>
                   <p className="mt-3 text-[14px] leading-relaxed text-ink-soft">
-                    Histórias reais como a de clientes que aguardavam há uma década sem esperança e viram seu problema solucionado em menos de 5 meses pela Dra. Izabella Ornelas, ou benefícios do INSS liberados em poucos dias. Atuamos com estratégia proativa e peticionamento assertivo para furar filas e acelerar o julgamento.
+                    Relatos reais de clientes atendidos com paciência e clareza absoluta durante todo o processo do auxílio-acidente e concessões do INSS. Entendemos a aflição de quem passou por acidentes ou incapacidades e atuamos com firmeza para reverter negativas do INSS e conquistar o benefício devido.
                   </p>
                   <ul className="mt-5 space-y-2 text-xs font-medium text-ink">
                     <li className="flex items-center gap-2">
                       <CheckCircle2 size={15} className="shrink-0 text-brand-700" />
-                      <span>Análise documental minuciosa no primeiro atendimento</span>
+                      <span>Análise técnica aprofundada de laudos e perícias médicas</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle2 size={15} className="shrink-0 text-brand-700" />
-                      <span>Cobrança constante de prazos judiciais e administrativos</span>
+                      <span>Comunicação constante e explicação em linguagem simples</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle2 size={15} className="shrink-0 text-brand-700" />
-                      <span>Informação clara e acolhedora em cada etapa ao cliente</span>
+                      <span>Acompanhamento próximo para trazer tranquilidade em momentos delicados</span>
                     </li>
                   </ul>
                 </div>
                 <div className="mt-7 border-t border-brand-200/60 pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dra. Izabella! Gostaria de consultar um benefício do INSS ou demanda trabalhista."
+                      "Olá, Dr. Renato! Gostaria de consultar sobre Auxílio-Acidente ou benefício do INSS."
                     )}
                     target="_blank"
                     rel="noreferrer"
                     className="inline-flex w-full items-center justify-between rounded-xl border border-brand-800/20 bg-brand-50/80 px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-brand-900 transition-all hover:border-brand-800 hover:bg-brand-900 hover:text-white"
                   >
                     <span className="inline-flex items-center gap-2">
-                      <WhatsAppIcon size={15} /> Solicitar Análise com Dra. Izabella
+                      <WhatsAppIcon size={15} /> Solicitar Análise de Benefício com Dr. Renato
                     </span>
                     <ArrowUpRight size={15} />
                   </a>
                 </div>
               </motion.article>
 
-              {/* Card 2: Plantão Criminal 24h & Defesa Estratégica */}
+              {/* Card 2: Família, Sucessões & Mediação Humanizada */}
               <motion.article
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1174,44 +1171,44 @@ export default function Home() {
                 <div>
                   <div className="flex items-center justify-between">
                     <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-300/40 bg-brand-50 px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-brand-800">
-                      <ShieldAlert size={14} /> Plantão 24 Horas
+                      <HeartHandshake size={14} /> Família & Sucessões
                     </span>
                     <span className="text-xs font-semibold text-brand-700">
-                      Dr. Breno Nilson Ferreira
+                      Dra. Graciela Rodrigues
                     </span>
                   </div>
                   <h3 className="mt-4 font-serif text-2xl leading-tight text-ink sm:text-[1.75rem]">
-                    Prontidão Imediata em Matéria Criminal & Penal
+                    Mediação de Conflitos com Acolhimento e Respeito
                   </h3>
                   <p className="mt-3 text-[14px] leading-relaxed text-ink-soft">
-                    Flagrantes, audiências de custódia e inquéritos não esperam o horário comercial. O Dr. Breno Nilson Ferreira oferece retaguarda criminal de altíssimo gabarito 24 horas por dia, garantindo o respeito estrito às garantias constitucionais e a construção imediata da tese defensiva.
+                    Conflitos familiares exigem muito mais do que petições; demandam empatia, escuta qualificada e postura pacificadora. A Dra. Graciela Rodrigues atua na mediação responsável de divórcios, partilhas e inventários, preservando vínculos e assegurando acordos justos com total discrição.
                   </p>
                   <ul className="mt-5 space-y-2 text-xs font-medium text-ink">
                     <li className="flex items-center gap-2">
                       <CheckCircle2 size={15} className="shrink-0 text-brand-700" />
-                      <span>Atendimento urgente 24h em delegacias e presídios</span>
+                      <span>Tratativa humana e acolhedora em momentos de transição</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle2 size={15} className="shrink-0 text-brand-700" />
-                      <span>Habeas Corpus ágil e defesas em audiências de custódia</span>
+                      <span>Agilidade em inventários e divórcios consensuais em cartório</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle2 size={15} className="shrink-0 text-brand-700" />
-                      <span>Atuação segura para que você descanse tranquilamente à noite</span>
+                      <span>Proteção integral aos direitos dos filhos e herdeiros</span>
                     </li>
                   </ul>
                 </div>
                 <div className="mt-7 border-t border-brand-200/60 pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dr. Breno! Preciso de atendimento urgente em Direito Criminal / Plantão 24 horas."
+                      "Olá, Dra. Graciela! Gostaria de atendimento em Direito de Família / Inventário."
                     )}
                     target="_blank"
                     rel="noreferrer"
                     className="inline-flex w-full items-center justify-between rounded-xl border border-brand-800/20 bg-brand-50/80 px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-brand-900 transition-all hover:border-brand-800 hover:bg-brand-900 hover:text-white"
                   >
                     <span className="inline-flex items-center gap-2">
-                      <WhatsAppIcon size={15} /> Acionar Plantão 24h com Dr. Breno
+                      <WhatsAppIcon size={15} /> Falar com Dra. Graciela Rodrigues
                     </span>
                     <ArrowUpRight size={15} />
                   </a>
@@ -1223,26 +1220,26 @@ export default function Home() {
 
         {/* Nosso Compromisso Ético e Operacional */}
         <section className="relative overflow-hidden bg-brand-950 py-20 text-white sm:py-28 lg:py-32">
-          <div className="pointer-events-none absolute -left-28 top-1/4 size-96 rounded-full bg-brand-800/20 blur-3xl" />
-          <div className="pointer-events-none absolute -right-28 bottom-1/4 size-96 rounded-full bg-brand-700/15 blur-3xl" />
+          <div className="pointer-events-none absolute -left-28 top-1/4 size-96 rounded-full bg-brand-700/20 blur-3xl" />
+          <div className="pointer-events-none absolute -right-28 bottom-1/4 size-96 rounded-full bg-brand-600/15 blur-3xl" />
 
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.88fr_1.12fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
                 eyebrow="NOSSO COMPROMISSO PROFISSIONAL"
                 light
-                description="O reconhecimento como um dos escritórios mais bem avaliados de Minas Gerais (4,9 ★ no Google com 129 avaliações) é fruto direto de uma advocacia que combina inteligência processual e empatia humana."
+                description="O reconhecimento como um dos escritórios mais bem avaliados de Patos de Minas e região (4,9 ★ no Google com 98 avaliações) reflete nossa dedicação em aliar competência jurídica, simplicidade e carisma."
               >
-                Protegemos direitos e reduzimos riscos com{" "}
+                Protegemos seus direitos com{" "}
                 <span className="italic text-brand-200">
-                  seriedade e atenção total.
+                  seriedade, clareza e dedicação total.
                 </span>
               </Heading>
 
               <blockquote className="mt-8 rounded-xl border border-brand-400/25 bg-white/5 p-6 font-serif text-base italic leading-7 text-brand-100">
-                &ldquo;Se está procurando um advogado para resolver seu problema e sem dor de cabeça, pode contratar esse escritório e descansar tranquilamente a noite.&rdquo;
+                &ldquo;Sou cliente deste escritório há vários anos e sempre fui muito bem atendido. O serviço é excelente, feito com muita atenção, respeito e profissionalismo. Recomendo de coração, é um escritório em que realmente dá pra confiar!&rdquo;
                 <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-brand-300">
-                  — Guilherme Rodrigues Figueiredo · Avaliação no Google
+                  — Vitor Nunes · Avaliação no Google
                 </footer>
               </blockquote>
             </div>
@@ -1257,18 +1254,18 @@ export default function Home() {
               {[
                 [
                   "01",
-                  "Atendimento Humanizado & Escuta Acolhedora",
-                  "Entendemos que por trás de cada processo existe uma família, um trabalhador ou uma empresa em momento delicado. Explicamos cada passo de forma acessível e transparente.",
+                  "Atendimento Acolhedor & Empatia Genuína",
+                  "Entendemos que por trás de cada processo existe uma pessoa em momento delicado. Ouvimos com atenção, oferecemos suporte seguro e tratamos cada causa com máxima consideração.",
                 ],
                 [
                   "02",
-                  "Celeridade e Rapidez Incomparável na Condução",
-                  "Não deixamos processos acumularem poeira. Pressionamos prazos, acionamos vias extrajudiciais e judiciais dinâmicas para entregar a solução no menor tempo legal possível.",
+                  "Clareza nas Explicações & Honestidade",
+                  "Explicamos minuciosamente os direitos, deveres e etapas processuais de forma transparente e acessível para quem não é da área jurídica, mantendo o cliente sempre informado.",
                 ],
                 [
                   "03",
-                  "Estrutura de Excelência no Centro de Sete Lagoas",
-                  "Localização privilegiada no Edifício Márcio Paulino (Sala 8), com estrutura confortável, sigilo profissional absoluto e tecnologia para atender clientes de qualquer lugar do Brasil.",
+                  "Agilidade & Compromisso com Resultados",
+                  "Trabalhamos com dinamismo, sem deixar processos esquecidos em gavetas. Buscamos soluções céleres e eficazes para resgatar os direitos dos nossos clientes.",
                 ],
               ].map(([number, title, description]) => (
                 <motion.div
@@ -1291,7 +1288,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Avaliações no Google (Depoimentos Reais - 4,9 estrelas · 129 avaliações) */}
+        {/* Avaliações no Google (Depoimentos Reais - 4,9 estrelas · 98 avaliações) */}
         <section
           id="avaliacoes"
           className="scroll-mt-24 bg-white py-20 sm:py-28 lg:py-32"
@@ -1300,11 +1297,11 @@ export default function Home() {
             <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
               <Heading
                 eyebrow="PROVA SOCIAL VERIFICADA · GOOGLE MEU NEGÓCIO"
-                description="Confira depoimentos autênticos de quem confiou suas causas mais importantes ao escritório Ornelas & Ferreira Advogados em Sete Lagoas e em todo o Brasil."
+                description="Confira avaliações autênticas de clientes que confiaram suas causas ao escritório Rodrigues & Nunes Advogados Associados em Patos de Minas e em todo o Brasil."
               >
                 Reconhecido com 4,9 ★ pela{" "}
                 <span className="italic text-brand-700">
-                  eficiência, competência e trabalho impecável.
+                  clareza nas explicações, atenção e causas ganhas.
                 </span>
               </Heading>
 
@@ -1329,7 +1326,7 @@ export default function Home() {
                     </div>
                   </div>
                   <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-brand-900">
-                    Ornelas & Ferreira Advogados
+                    Rodrigues & Nunes Advogados
                   </p>
                   <a
                     href={GOOGLE_MAPS_URL}
@@ -1337,7 +1334,7 @@ export default function Home() {
                     rel="noreferrer"
                     className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-brand-800 transition-colors hover:text-brand-950"
                   >
-                    129 avaliações no Google <ArrowUpRight size={13} />
+                    98 avaliações no Google <ArrowUpRight size={13} />
                   </a>
                 </div>
               </div>
@@ -1398,11 +1395,11 @@ export default function Home() {
             <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-brand-200/60 pt-8 sm:flex-row">
               <div className="flex flex-wrap items-center gap-2">
                 {[
-                  "Atendimento humanizado",
-                  "Profissionais competentes",
-                  "Resolução rápida",
-                  "Trabalho impecável",
-                  "Plantão 24h ativo",
+                  "Clareza nas explicações",
+                  "Atendimento acolhedor",
+                  "Causas ganhas",
+                  "Advogados justos e éticos",
+                  "Agilidade e transparência",
                 ].map((tag) => (
                   <span
                     key={tag}
@@ -1420,7 +1417,7 @@ export default function Home() {
                 rel="noreferrer"
                 className="group inline-flex shrink-0 items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-brand-800 transition-colors hover:text-brand-950"
               >
-                Ver perfil e 129 avaliações no Google{" "}
+                Ver perfil e 98 avaliações no Google{" "}
                 <ArrowUpRight
                   size={15}
                   className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
@@ -1438,8 +1435,8 @@ export default function Home() {
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
-                eyebrow="CONTATO & SEDE EM SETE LAGOAS - MG"
-                description="Agende seu atendimento presencial em nosso escritório no Edifício Márcio Paulino ou inicie seu atendimento pelo WhatsApp com retorno ágil para qualquer lugar do país."
+                eyebrow="CONTATO & SEDE EM PATOS DE MINAS - MG"
+                description="Agende seu atendimento presencial em nossa sede na Av. Paracatu ou inicie seu atendimento pelo WhatsApp com retorno ágil para qualquer lugar do país."
               >
                 Estamos prontos para{" "}
                 <span className="italic text-brand-700">
@@ -1452,7 +1449,7 @@ export default function Home() {
                   href={getWhatsAppUrl()}
                   target="_blank"
                   size="lg"
-                  variant="platinum"
+                  variant="copper"
                   className="rounded-full shadow-md"
                 >
                   <WhatsAppIcon size={17} /> Iniciar Conversa no WhatsApp
@@ -1474,10 +1471,10 @@ export default function Home() {
                       Horário de Funcionamento
                     </p>
                     <p className="mt-0.5">
-                      Aberto 24 horas (Plantão Jurídico e Atendimento Emergencial)
+                      Segunda a Sexta-feira: Aberto a partir das 08:00
                     </p>
                     <p className="text-[11px] text-ink-soft/80">
-                      Segunda a Domingo: Atendimento Ágil
+                      Atendimento com horário agendado e retorno ágil
                     </p>
                   </div>
                 </div>
@@ -1537,17 +1534,17 @@ export default function Home() {
                     Sede do Escritório
                   </p>
                   <p className="mt-1 font-serif text-2xl text-ink">
-                    Sete Lagoas · Minas Gerais
+                    Patos de Minas · Minas Gerais
                   </p>
                 </div>
               </div>
 
               <address className="mt-7 max-w-md text-[14px] not-italic leading-7 text-ink-soft">
                 <strong className="font-semibold text-ink">
-                  Ornelas & Ferreira Advogados
+                  Rodrigues & Nunes Advogados Associados
                 </strong>
                 <br />
-                Dra. Izabella Ornelas & Dr. Breno Nilson Ferreira
+                Dr. Renato Nunes & Dra. Graciela Rodrigues
                 <br />
                 {ADDRESS_TEXT}
               </address>
@@ -1555,16 +1552,16 @@ export default function Home() {
               {/* Weekly schedule table */}
               <div className="mt-6 rounded-xl border border-brand-200/60 bg-pearl p-4 text-xs">
                 <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-brand-800">
-                  Expediente & Plantão
+                  Expediente & Atendimento
                 </p>
                 <div className="grid grid-cols-2 gap-y-1.5 text-ink-soft">
-                  <span>Atendimento & Recepção</span>
+                  <span>Segunda a Sexta-feira</span>
                   <span className="text-right font-semibold text-ink">
-                    Aberto 24 Horas
+                    Abre às 08:00
                   </span>
-                  <span>Plantão Criminal</span>
-                  <span className="text-right font-semibold text-emerald-700">
-                    24 Horas Ativo
+                  <span>Atendimento Presencial</span>
+                  <span className="text-right font-semibold text-brand-700">
+                    Com agendamento
                   </span>
                   <span>Atendimento Digital</span>
                   <span className="text-right text-ink">Nacional</span>
@@ -1575,7 +1572,7 @@ export default function Home() {
 
               <div className="flex flex-wrap items-center justify-between gap-4">
                 <p className="text-xs text-ink-soft">
-                  Edifício Márcio Paulino · Centro Comercial, Sete Lagoas
+                  Av. Paracatu, 880 · Centro, Patos de Minas - MG
                 </p>
                 <a
                   href={GOOGLE_MAPS_URL}
@@ -1590,24 +1587,24 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Pre-Footer CTA Strip - Deep Titanium Slate with Platinum Sheen */}
+        {/* Pre-Footer CTA Strip - Deep Obsidian with Warm Amber Sheen */}
         <section className="bg-gradient-to-r from-brand-950 via-brand-900 to-brand-950 px-5 py-14 text-white shadow-inner sm:px-8 sm:py-16 lg:px-12">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-7 sm:flex-row sm:items-center">
             <div>
-              <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-brand-200">
-                <Sparkles size={13} /> ORNELAS & FERREIRA ADVOGADOS · SETE LAGOAS - MG
+              <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-brand-300">
+                <Sparkles size={13} /> RODRIGUES & NUNES ADVOGADOS ASSOCIADOS · PATOS DE MINAS - MG
               </p>
               <h2 className="mt-3 max-w-2xl font-serif text-3xl leading-tight text-white sm:text-4xl">
-                Precisa de apoio jurídico seguro, rápido e comprometido com o seu resultado?
+                Precisa de orientação jurídica segura, clara e comprometida com o seu resultado?
               </h2>
             </div>
             <a
               href={getWhatsAppUrl(
-                "Olá! Gostaria de agendar uma consulta inicial com o escritório Ornelas & Ferreira Advogados."
+                "Olá! Gostaria de agendar uma consulta inicial com o escritório Rodrigues & Nunes Advogados Associados."
               )}
               target="_blank"
               rel="noreferrer"
-              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-full bg-gradient-to-r from-brand-100 via-white to-brand-200 px-7 py-4 text-[11px] font-bold uppercase tracking-[0.14em] text-brand-950 shadow-md transition-all hover:-translate-y-0.5 hover:brightness-105 hover:shadow-lg"
+              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-full bg-gradient-to-r from-brand-600 via-brand-500 to-brand-600 px-7 py-4 text-[11px] font-bold uppercase tracking-[0.14em] text-white shadow-md transition-all hover:-translate-y-0.5 hover:brightness-110 hover:shadow-copper"
             >
               <WhatsAppIcon size={17} /> Falar no WhatsApp{" "}
               <ArrowUpRight size={15} />
@@ -1621,22 +1618,22 @@ export default function Home() {
             <div>
               <a
                 href="#inicio"
-                aria-label="ORNELAS E FERREIRA - ADVOGADOS"
+                aria-label="RODRIGUES & NUNES ADVOGADOS ASSOCIADOS"
                 className="inline-block"
               >
                 <Image
                   src={LOGO_SRC}
-                  width={2172}
+                  width={2171}
                   height={724}
-                  alt="ORNELAS E FERREIRA - ADVOGADOS"
-                  className="h-16 w-auto object-contain sm:h-20"
+                  alt="RODRIGUES & NUNES ADVOGADOS ASSOCIADOS"
+                  className="h-14 w-auto object-contain sm:h-16"
                 />
               </a>
               <p className="mt-4 max-w-xs text-xs leading-6 text-brand-100/70">
-                🤝 Protegemos direitos e reduzimos riscos. Atuação nacional em Direito Previdenciário (INSS), Trabalhista, Criminal (Plantão 24h), Família e Direito Público.
+                🤝 Segurança jurídica com atendimento humanizado, clareza e dedicação. Atuação em Direito Previdenciário (Auxílio-Acidente e INSS), Trabalhista, Família & Sucessões e Cível.
               </p>
               <p className="mt-3 text-[11px] font-semibold text-brand-300">
-                Dra. Izabella Ornelas & Dr. Breno Nilson Ferreira
+                Dr. Renato Nunes & Dra. Graciela Rodrigues
               </p>
             </div>
 
@@ -1661,7 +1658,7 @@ export default function Home() {
                   Avaliações no Google (4,9 ★)
                 </a>
                 <a className="footer-link" href="#contato">
-                  Contato & Sede em Sete Lagoas
+                  Contato & Sede em Patos de Minas
                 </a>
               </div>
             </div>
@@ -1673,7 +1670,7 @@ export default function Home() {
               <div className="mt-4 flex flex-col items-start gap-2.5 text-xs text-brand-100/75">
                 <a
                   href={getWhatsAppUrl(
-                    "Olá! Gostaria de solicitar um atendimento com a Ornelas & Ferreira Advogados."
+                    "Olá! Gostaria de solicitar um atendimento com a Rodrigues & Nunes Advogados."
                   )}
                   target="_blank"
                   rel="noreferrer"
@@ -1712,7 +1709,7 @@ export default function Home() {
                   <span>{ADDRESS_TEXT}</span>
                 </a>
                 <p className="inline-flex items-center gap-2 pt-1 text-[11px] text-brand-200/80">
-                  <Clock size={14} className="shrink-0" /> Aberto 24 Horas · Plantão Jurídico
+                  <Clock size={14} className="shrink-0" /> Aberto a partir das 08:00
                 </p>
               </div>
             </div>
@@ -1720,7 +1717,7 @@ export default function Home() {
 
           <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-white/15 pt-6 text-[10px] text-brand-100/55 sm:flex-row sm:items-center sm:justify-between">
             <p>
-              © {new Date().getFullYear()} ORNELAS E FERREIRA - ADVOGADOS. Todos os direitos reservados.
+              © {new Date().getFullYear()} RODRIGUES & NUNES ADVOGADOS ASSOCIADOS. Todos os direitos reservados.
             </p>
             <p>
               Conteúdo meramente informativo, em estrita conformidade com o Código de Ética e Disciplina da OAB.
@@ -1735,7 +1732,7 @@ export default function Home() {
         >
           <a
             href={getWhatsAppUrl(
-              "Olá! Gostaria de tirar uma dúvida com o escritório Ornelas & Ferreira Advogados."
+              "Olá! Gostaria de tirar uma dúvida com o escritório Rodrigues & Nunes Advogados Associados."
             )}
             target="_blank"
             rel="noreferrer"
@@ -1814,7 +1811,7 @@ export default function Home() {
                     href={getWhatsAppUrl(activeArea.whatsAppText)}
                     target="_blank"
                     size="md"
-                    variant="platinum"
+                    variant="copper"
                     className="rounded-full shadow-md"
                   >
                     <WhatsAppIcon size={16} /> Consultar sobre esta demanda
