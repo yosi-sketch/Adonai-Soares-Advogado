@@ -1,16 +1,16 @@
-# GISELE FERREIRA ADVOGADA
-## Advocacia Especializada em Direito de Família e Sucessões, Previdenciário (INSS), Cível e Consumidor · Nova Serrana - MG
+# DR. HUDSON DE FREITAS ADVOGADO CRIMINAL
+## Advocacia Criminal Especializada · Ituiutaba - MG · Plantão 24 Horas
 
-Site institucional e landing page de alto padrão da **Dra. Gisele Ferreira**, sediada na R. Europa, 176 - Belvedere, Nova Serrana - MG, com atuação de destaque em Direito de Família e Sucessões (divórcios, inventários, partilhas), concessão e revisão de benefícios do INSS, contratos civis e resolução extrajudicial de litígios.
+Site institucional e landing page de alto padrão do **Dr. Hudson de Freitas**, sediado na Av. Minas Gerais, 15 - Camargo, Ituiutaba - MG, com atuação de destaque em Direito Penal e Processual Penal, flagrantes, audiências de custódia, inquérito policial, Tribunal do Júri e recursos nos Tribunais Superiores (TJMG, STJ e STF).
 
 ## Destaques
-- **Identidade Visual Nobre em Vinho Marsala & Ouro Rosé Metálico:** Paleta extraída diretamente do novo logotipo oficial, combinando o tom marcante do monograma "G" em vinho marsala nobre (`#621523`, `#7D2336`, `#180509`) com o requinte do monograma "F" e da balança em ouro rosé metálico (`#C68478`, `#D29084`, `#E4AE9C`, `#F6DDD4`) e fundo em pérola marfim acolhedor (`#FAF6F5`).
-- **Tipografia Refinada:** Cormorant Garamond nos títulos em harmonia com a tipografia romana clássica do logotipo e Plus Jakarta Sans para leitura clara, moderna e acessível.
-- **Prova Social Verificada:** Avaliação de 4,9 estrelas com 12 avaliações reais e verificadas no Google Meu Negócio.
-- **Contato Ágil:** WhatsApp (37) 99164-2670 com mensagens contextualizadas por área de atuação e botão flutuante para contato instantâneo.
-- **Localização:** R. Europa, 176 - Belvedere, Nova Serrana - MG, 35526-720, Brasil.
-- **Instagram:** [@gisele.fferreiraadv](https://www.instagram.com/gisele.fferreiraadv/)
-- **Horário de Atendimento:** Segunda a Sexta-feira das 08:00 às 18:00.
+- **Identidade Visual Nobre em Ouro Champanhe Metálico & Obsidian Dark:** Paleta extraída diretamente do novo logotipo oficial com capitel de coluna jônica e monograma "HF" em ouro champanhe acetinado (`#C8A876`, `#DFBA73`, `#B38F58`, `#8B6F47`), equilibrada com a imponência do preto ônix/obsidian (`#0B0E14`, `#161D2B`) e o marfim pérola acolhedor (`#FAF7F2`).
+- **Tipografia Imperial e Moderna:** Fontes Cinzel e Cormorant Garamond nos títulos (harmonia total com as linhas greco-romanas do logotipo) e Plus Jakarta Sans para leitura confortável e transparente no corpo de texto.
+- **Prova Social Verificada:** Avaliação de 4,9 estrelas com 10 avaliações reais e verificadas no Google Meu Negócio.
+- **Plantão Criminal 24h & Contato Ágil:** WhatsApp (34) 99973-7556 com mensagens contextualizadas por especialidade criminal e botão flutuante para contato imediato.
+- **Localização:** Av. Minas Gerais, 15 - Camargo, Ituiutaba - MG, 38305-006, Brasil.
+- **Instagram:** [@hudsondefreitasfreitas](https://www.instagram.com/hudsondefreitasfreitas/)
+- **Horário de Atendimento:** Plantão Criminal 24 Horas para Urgências; Expediente comercial de Segunda a Sexta-feira das 08:00 às 18:00.
 
 ## Tecnologias
 - Next.js 16 (App Router + Turbopack)
@@ -18,3 +18,4 @@ Site institucional e landing page de alto padrão da **Dra. Gisele Ferreira**, s
 - Tailwind CSS v4
 - Framer Motion
 - Lucide React
+- Sharp

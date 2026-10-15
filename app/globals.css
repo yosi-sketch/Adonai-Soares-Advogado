@@ -1,47 +1,48 @@
 @import "tailwindcss";
 
 :root {
-  color-scheme: light;
-  --brand-wine-light: #fbf7f6;
-  --brand-wine-accent: #c68478;
-  --brand-wine: #621523;
-  --brand-wine-dark: #480e1a;
-  --brand-obsidian: #180509;
-  --brand-ink: #1a080c;
-  --brand-ink-soft: #553c42;
-  --brand-pearl: #faf6f5;
-  --brand-paper: #ffffff;
+  color-scheme: dark;
+  --brand-gold-light: #f4efe6;
+  --brand-gold-accent: #c8a876;
+  --brand-gold: #c8a876;
+  --brand-gold-dark: #8b6f47;
+  --brand-obsidian: #07090e;
+  --brand-charcoal: #0c1017;
+  --brand-surface: #101520;
+  --brand-ink: #f8fafc;
+  --brand-ink-soft: #94a3b8;
+  --brand-pearl: #07090e;
+  --brand-paper: #0c1017;
 }
 
 @theme inline {
-  --font-serif: var(--font-display), "Cormorant Garamond", "Playfair Display", "Times New Roman", serif;
+  --font-serif: var(--font-cinzel), var(--font-display), "Cormorant Garamond", "Times New Roman", serif;
   --font-sans: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
-  --color-ink: #1a080c;
-  --color-ink-soft: #553c42;
-  --color-pearl: #faf6f5;
-  --color-brand-50: #fbf7f6;
-  --color-brand-100: #f6ece9;
-  --color-brand-200: #ebd5cf;
-  --color-brand-300: #dbb2a8;
-  --color-brand-400: #c68478;
-  --color-brand-500: #9c4e48;
-  --color-brand-600: #7d2336;
-  --color-brand-700: #621523;
-  --color-brand-800: #480e1a;
-  --color-brand-900: #330a12;
-  --color-brand-950: #180509;
-  --color-gold-100: #fdf2ee;
-  --color-gold-200: #f6ddd4;
-  --color-gold-300: #e4ae9c;
-  --color-gold-400: #d29084;
-  --color-gold-500: #c68478;
-  --color-gold-600: #b06e62;
-  --color-gold-700: #8f4d42;
-  --shadow-card: 0 18px 48px rgba(24, 5, 9, 0.06);
-  --shadow-burgundy: 0 10px 30px rgba(98, 21, 35, 0.28);
-  --shadow-rosegold: 0 10px 30px rgba(198, 132, 120, 0.25);
-  --shadow-copper: 0 10px 30px rgba(98, 21, 35, 0.25);
-  --shadow-glow: 0 0 35px rgba(228, 174, 156, 0.35);
+  --color-ink: #f8fafc;
+  --color-ink-soft: #94a3b8;
+  --color-pearl: #07090e;
+  --color-brand-50: #0a0e16;
+  --color-brand-100: #0f1420;
+  --color-brand-200: #171f2f;
+  --color-brand-300: #242f44;
+  --color-brand-400: #c8a876;
+  --color-brand-500: #b38f58;
+  --color-brand-600: #967440;
+  --color-brand-700: #74572c;
+  --color-brand-800: #543d1d;
+  --color-brand-900: #0c1017;
+  --color-brand-950: #07090e;
+  --color-gold-100: #fbf8f3;
+  --color-gold-200: #f4efe6;
+  --color-gold-300: #e3d5c2;
+  --color-gold-400: #dfba73;
+  --color-gold-500: #c8a876;
+  --color-gold-600: #b38f58;
+  --color-gold-700: #8b6f47;
+  --shadow-card: 0 18px 48px rgba(0, 0, 0, 0.55);
+  --shadow-gold: 0 10px 30px rgba(200, 168, 118, 0.28);
+  --shadow-obsidian: 0 16px 45px rgba(0, 0, 0, 0.7);
+  --shadow-glow: 0 0 35px rgba(200, 168, 118, 0.3);
 }
 
 html {
@@ -50,15 +51,15 @@ html {
 }
 
 body {
-  background: var(--brand-pearl);
-  color: var(--brand-ink);
+  background: #07090e;
+  color: #f1f5f9;
   font-family: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
-  caret-color: var(--brand-wine);
+  caret-color: #c8a876;
 }
 
 ::selection {
-  background: #621523;
-  color: #ffffff;
+  background: #c8a876;
+  color: #07090e;
 }
 
 .eyebrow,
@@ -74,11 +75,11 @@ body {
 }
 
 .eyebrow {
-  color: #621523;
+  color: #c8a876;
 }
 
 .eyebrow-light {
-  color: #e4ae9c;
+  color: #dfba73;
 }
 
 .eyebrow::before,
@@ -93,7 +94,7 @@ body {
 .nav-link {
   position: relative;
   padding-block: 0.5rem;
-  color: #e4ae9c;
+  color: #dfba73;
   font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -107,7 +108,7 @@ body {
   bottom: 0;
   left: 0;
   height: 1px;
-  background: #c68478;
+  background: #c8a876;
   content: "";
   transform: scaleX(0);
   transform-origin: left;
@@ -127,7 +128,7 @@ body {
 }
 
 .footer-link:hover {
-  color: #f6ece9;
+  color: #ffffff;
 }
 
 ::-webkit-scrollbar {
@@ -135,17 +136,17 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #180509;
+  background: #07090e;
 }
 
 ::-webkit-scrollbar-thumb {
-  border: 2px solid #180509;
+  border: 2px solid #07090e;
   border-radius: 999px;
-  background: #621523;
+  background: #74572c;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #7d2336;
+  background: #c8a876;
 }
 
 @media (prefers-reduced-motion: reduce) {

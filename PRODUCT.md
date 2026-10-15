@@ -1,32 +1,33 @@
-# GISELE FERREIRA ADVOGADA
-## Advocacia Especializada em Direito de Família e Sucessões, Previdenciário (INSS), Cível e Consumidor · Nova Serrana - MG
+# DR. HUDSON DE FREITAS ADVOGADO CRIMINAL
+## Advocacia Criminal Especializada · Ituiutaba - MG · Atendimento Penal 24 Horas
 
 ## Plataforma
-Site institucional e landing page responsiva de altíssimo padrão desenvolvida em Next.js 16 (App Router) e Tailwind CSS v4, projetada para transmitir autoridade jurídica, combatividade, acolhimento humano, transparência e rigor técnico, com navegação fluida, modais interativos para detalhamento de áreas de atuação e integração direta com WhatsApp e Google Maps.
+Site institucional e landing page responsiva de altíssimo padrão desenvolvida em Next.js 16 (App Router) e Tailwind CSS v4, projetada para transmitir autoridade jurídica, combatividade incisiva, prontidão em situações de urgência penal, transparência e rigor técnico, com navegação fluida, modais interativos para detalhamento de áreas de atuação criminal e integração direta com WhatsApp e Google Maps.
 
 ## Público
-Famílias e pessoas físicas necessitando de divórcios, inventários ágeis em cartório ou judiciais, pensão alimentícia, guarda e planejamento sucessório; trabalhadores e segurados buscando aposentadorias, auxílios e BPC/LOAS no INSS; cidadãos lesados por negativações indevidas, fraudes bancárias ou quebras contratuais em Nova Serrana, Minas Gerais e em todo o território nacional.
+Cidadãos, familiares e empresários que enfrentam prisões em flagrante, audiências de custódia, investigações e oitivas em inquérito policial, processos no Tribunal do Júri, prisões preventivas com necessidade de Habeas Corpus perante o TJMG, STJ e STF, acusações de crimes patrimoniais e econômicos, ou demandas de execução penal em Ituiutaba, Triângulo Mineiro e em todo o território nacional.
 
 ## Objetivo
-Apresentar a advocacia de excelência liderada pela Dra. Gisele Ferreira, sediada na R. Europa, 176 - Belvedere, Nova Serrana - MG, evidenciando a expressiva nota de 4,9 estrelas com 12 avaliações no Google Meu Negócio, e viabilizando o contato direto e consultoria imediata via WhatsApp.
+Apresentar a advocacia de excelência liderada pelo Dr. Hudson de Freitas, sediada na Av. Minas Gerais, 15 - Camargo, Ituiutaba - MG, evidenciando a expressiva nota de 4,9 estrelas com 10 avaliações no Google Meu Negócio, e viabilizando o contato direto e socorro jurídico imediato 24h via WhatsApp.
 
 ## Identidade Visual
-- Marca: Gisele Ferreira Advogada
-- Logotipo: Brasão clássico com balança da justiça e monograma "GF" em ouro rosé metálico e vinho marsala, acompanhado da tipografia serifada imperial "GISELE FERREIRA" (`public/logo-gisele-ferreira.png`, `public/logo.png`, `public/Logotipo Jurídico Gisele Ferreira.png`).
+- Marca: Dr. Hudson de Freitas Advogado Criminal / Hudson de Freitas Advocacia
+- Logotipo: Capitel de coluna jônica greco-romana e monograma arquitetônico "HF" esculpido em ouro champanhe acetinado metálico 3D (`public/logo-hudson-de-freitas.png`, `public/logo-trimmed.png`).
 - Paleta extraída diretamente do novo logo oficial:
-  - Vinho Marsala Nobre (`#621523`, `#7D2336`, `#480E1A`, `#330A12`)
-  - Ouro Rosé & Champanhe Rosé Metálico (`#C68478`, `#D29084`, `#E4AE9C`, `#F6DDD4`, `#9C4E48`)
-  - Preto Ônix / Obsidian Dark (`#180509`, `#1A080C`)
-  - Pérola e Marfim Nobre acolhedor (`#FAF6F5`, `#FBF7F6`, `#F6ECE9`)
-- Tipografia: Cormorant Garamond nos títulos (serifada elegante, clássica e de alta autoridade, alinhada à marca) e Plus Jakarta Sans para leitura clara, moderna e acessível no corpo de texto.
-- Tom de voz: Acolhedor, combativo, transparente, preciso e resolutivo.
+  - Ouro Champanhe Metálico Primário (`#C8A876`, `#DFBA73`, `#B38F58`)
+  - Marfim / Dourado Claro em Alta Luminosidade (`#F8F4EF`, `#E3D5C2`, `#F3EBE1`)
+  - Bronze & Sombra Dourada Profunda (`#8B6F47`, `#7A6752`, `#543D1D`, `#463421`)
+  - Preto Ônix / Obsidian Dark de Alta Autoridade (`#0B0E14`, `#111622`, `#161D2B`)
+  - Pérola e Marfim Acolhedor (`#FAF7F2`, `#FBF9F5`)
+- Tipografia: Cinzel e Cormorant Garamond nos títulos (harmonia com o capitel jônico romano clássico do logotipo) e Plus Jakarta Sans para leitura clara, moderna e acessível no corpo de texto.
+- Tom de voz: Firme, combativo, ético, sigiloso, protetivo e humanizado.
 
 ## Conteúdo e Mídia
-- Logotipo oficial em alta definição (`public/logo-gisele-ferreira.png`, `public/logo.png`).
-- Foto hero: Dra. Gisele Ferreira no escritório com laptop e livro de Direito de Família (`public/dra-gisele-ferreira-mesa.png`, `public/hero.png`).
-- Foto sobre: Dra. Gisele Ferreira em traje social preto elegante (`public/dra-gisele-ferreira-perfil.png`, `public/sobre.png`).
-- Endereço físico: R. Europa, 176 - Belvedere, Nova Serrana - MG, 35526-720, Brasil.
-- Telefone / WhatsApp: (37) 99164-2670.
-- Redes Sociais: Instagram @gisele.fferreiraadv (https://www.instagram.com/gisele.fferreiraadv/).
-- Horário de funcionamento: Segunda a Sexta-feira das 08:00 às 18:00.
-- Prova social: 4,9 estrelas com 12 avaliações no Google Meu Negócio.
+- Logotipo oficial em alta definição (`public/logo-hudson-de-freitas.png`, `public/logo-trimmed.png`).
+- Foto hero: Dr. Hudson de Freitas de terno social em postura de autoridade no escritório moderno (`public/dr-hudson-em-pe.png`).
+- Foto sobre: Dr. Hudson de Freitas trabalhando concentrado no notebook na mesa de atendimento (`public/dr-hudson-mesa.png`).
+- Endereço físico: Av. Minas Gerais, 15 - Camargo, Ituiutaba - MG, 38305-006, Brasil.
+- Telefone / WhatsApp Plantão 24h: (34) 99973-7556.
+- Redes Sociais: Instagram @hudsondefreitasfreitas (https://www.instagram.com/hudsondefreitasfreitas/).
+- Horário de funcionamento: Plantão Criminal 24 Horas para Prisões e Flagrantes; Expediente de Segunda a Sexta-feira das 08:00 às 18:00.
+- Prova social: 4,9 estrelas com 10 avaliações no Google Meu Negócio.
