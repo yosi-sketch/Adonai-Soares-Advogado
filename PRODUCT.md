@@ -1,32 +1,32 @@
-# DRA. JULIANA CARVALHO — ADVOCACIA ESPECIALIZADA
-## Especialista em INSS e RPPS (Servidores Públicos) · São João del Rei - MG
+# VALADARES E SOUZA — SOCIEDADE DE ADVOGADAS
+## Especialistas em Direito do Passageiro Aéreo, Consumidor, Cível e Previdenciário · Ouro Preto - MG
 
 ## Plataforma
 Site institucional responsivo e de alto padrão desenvolvido em Next.js 16 (App Router), projetado para transmitir autoridade jurídica, combatividade, acolhimento humano e clareza técnica, com navegação fluida, modais interativos para detalhamento de áreas de atuação e integração direta com WhatsApp e Google Maps.
 
 ## Público
-Trabalhadores, segurados do INSS, servidores públicos municipais, estaduais e federais (RPPS) e suas famílias que buscam a melhor aposentadoria, planejamento previdenciário minucioso, concessão e restabelecimento de auxílio-doença, BPC/LOAS, pensão por morte e direitos trabalhistas em São João del Rei, Campo das Vertentes, Minas Gerais e em todo o território nacional.
+Passageiros aéreos prejudicados por cancelamento ou atraso de voos e extravio de bagagens, consumidores com cobranças abusivas ou negativações indevidas, clientes que buscam elaboração de contratos, inventários, partilhas ou soluções extrajudiciais ágeis em Ouro Preto, Minas Gerais e em todo o território nacional.
 
 ## Objetivo
-Apresentar a advogada especialista Dra. Juliana Carvalho e seu escritório, sediado na Av. Tiradentes, 707 - Centro, São João del Rei - MG, evidenciando seus 10 anos de experiência sólida, nota máxima de 5,0 estrelas com 58 avaliações no Google Meu Negócio, e facilitando o contato e consultoria imediata via WhatsApp.
+Apresentar a Valadares e Souza - Sociedade de Advogadas, liderada pelas advogadas Dra. Patrícia Valadares e Dra. Iasmin Souza, sediada na R. João XXIII, 296 - Ouro Preto - MG, evidenciando a nota máxima de 5,0 estrelas com 39 avaliações no Google Meu Negócio, e facilitando o contato e consultoria imediata via WhatsApp.
 
 ## Identidade Visual
-- Marca: Juliana Carvalho Advogada Especialista em INSS e RPPS (Servidores Públicos)
-- Logotipo: Monograma J&C entrelaçado com tipografia serifada romana clássica em fundo Borgonha nobre (`public/Monograma J&C em Borgonha Elegante.png` e `public/juliana-carvalho-logo.png`).
-- Paleta extraída diretamente do logo e identidade visual:
-  - Borgonha Nobre / Marsala (`#472231`, `#611C3C`, `#7D274F`, `#48152C`, `#2F0D1C`)
-  - Champanhe e Ouro Rosa suave (`#C5927B`, `#D4AB97`, `#E5CBBD`, `#F1DFD5`)
-  - Ônix e Velvet Dark (`#17060D`, `#140A10`)
-  - Marfim e Pérola acolhedor (`#FAF6F7`, `#FBF6F8`, `#F6EBF1`)
+- Marca: Valadares e Souza - Sociedade de Advogadas
+- Logotipo: Monograma metálico "VS" geométrico em ouro rosé / bronze champanhe com tipografia serifada clássica em bordô marsala (`public/valadares-souza-logo.png` e `public/Logotipo Jurídico Valadares & Souza.png`).
+- Paleta extraída diretamente do logo e posts da marca:
+  - Bordô Marsala Nobre (`#5A1E28`, `#641E28`, `#7D2739`, `#46141E`, `#1C070B`)
+  - Champanhe Bronze & Ouro Rosé metálico (`#BE957F`, `#D1B29F`, `#E4CFC2`, `#F4EBE5`)
+  - Preto Ônix / Obsidian Dark (`#1C070B`, `#1A090D`)
+  - Pérola e Marfim acolhedor (`#FAF6F4`, `#FBF7F6`, `#F6ECE9`)
 - Tipografia: Cormorant Garamond nos títulos (serifada elegante, clássica e alinhada ao logotipo) e Plus Jakarta Sans para leitura clara, moderna e acessível.
-- Tom: Inspirador, acolhedor, técnico, resolutivo, transparente e focado na melhor aposentadoria.
+- Tom: Combativo, técnico, transparente, acolhedor e altamente resolutivo.
 
 ## Conteúdo e Mídia
-- Logotipo oficial em alta definição (`public/Monograma J&C em Borgonha Elegante.png` e `public/juliana-carvalho-logo.png`).
-- Foto de Juliana Carvalho em blazer bordô com citação de Cortella (`public/juliana-carvalho-hero.png`).
-- Retrato oficial de Juliana Carvalho "Sobre Elas Advogada Previdenciarista" (`public/juliana-carvalho-sobre.png`).
-- Endereço físico: Av. Tiradentes, 707 - Centro, São João del Rei - MG, 36307-346, Brasil.
-- Telefone / WhatsApp: (32) 98886-8022.
-- Redes Sociais: Instagram @juliana.carvalho.adv (https://www.instagram.com/juliana.carvalho.adv/).
-- Horário de funcionamento: Segunda a Sexta-feira a partir das 07:30 (Abre às 07:30).
-- Prova social: 5,0 estrelas com 58 avaliações no Google Meu Negócio.
+- Logotipo oficial em alta definição (`public/valadares-souza-logo.png`).
+- Foto da equipe no escritório com Dra. Patrícia e Dra. Iasmin (`public/valadares-souza-equipe.jpg`).
+- Foto de atuação e atendimento (`public/valadares-souza-atendimento.png`).
+- Endereço físico: R. João XXIII, 296 - Ouro Preto, MG, 35404-332, Brasil.
+- Telefone / WhatsApp: (31) 97128-8470.
+- Redes Sociais: Instagram @valadaresesouza (https://www.instagram.com/valadaresesouza/).
+- Horário de funcionamento: Segunda a Sexta-feira das 08:00 às 18:00.
+- Prova social: 5,0 estrelas com 39 avaliações no Google Meu Negócio.

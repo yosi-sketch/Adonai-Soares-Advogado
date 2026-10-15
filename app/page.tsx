@@ -15,44 +15,47 @@ import {
   Briefcase,
   CheckCircle2,
   Clock,
+  FileText,
+  Handshake,
   HeartHandshake,
   Landmark,
   Mail,
   MapPin,
   Menu,
   Phone,
+  Plane,
   Scale,
   ShieldAlert,
   ShieldCheck,
   Sparkles,
   Star,
-  UserCheck,
   Users,
   X,
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
 
-const WHATSAPP_NUMBER = "5532988868022";
-const PHONE_DISPLAY = "(32) 98886-8022";
-const EMAIL_CONTACT = "contato@julianacarvalho.adv.br";
-const INSTAGRAM_URL = "https://www.instagram.com/juliana.carvalho.adv/";
-const INSTAGRAM_HANDLE = "@juliana.carvalho.adv";
+const WHATSAPP_NUMBER = "5531971288470";
+const PHONE_DISPLAY = "(31) 97128-8470";
+const EMAIL_CONTACT = "contato@valadaresesouza.adv.br";
+const INSTAGRAM_URL = "https://www.instagram.com/valadaresesouza/";
+const INSTAGRAM_HANDLE = "@valadaresesouza";
 
 const ADDRESS_TEXT =
-  "Av. Tiradentes, 707 - Centro, São João del Rei - MG, 36307-346, Brasil";
+  "R. João XXIII, 296 - Ouro Preto, MG, 35404-332, Brasil";
 const GOOGLE_MAPS_URL =
-  "https://www.google.com/maps/search/?api=1&query=Juliana+Carvalho+Advogada+Especialista+em+INSS+e+RPPS+Av+Tiradentes+707+Sao+Joao+del+Rei+MG";
+  "https://www.google.com/search?q=Valadares+e+Souza+-+Sociedade+de+Advogadas%0AOuro+Preto+%C2%B7+MG";
 
-const LOGO_SRC = "/juliana-carvalho-logo-header.png";
-const FOTO_HERO_SRC = "/juliana-carvalho-hero.png";
-const FOTO_SOBRE_SRC = "/juliana-carvalho-sobre.png";
+const LOGO_SRC = "/valadares-souza-logo-horizontal.png";
+const LOGO_STACKED_SRC = "/valadares-souza-logo-light.png";
+const FOTO_HERO_SRC = "/valadares-souza-equipe.jpg";
+const FOTO_SOBRE_SRC = "/valadares-souza-atendimento.png";
 
 function getWhatsAppUrl(
   message?: string,
   number: string = WHATSAPP_NUMBER
 ) {
   const defaultText =
-    "Olá, Dra. Juliana Carvalho! Gostaria de agendar uma consulta jurídica sobre meu benefício / aposentadoria.";
+    "Olá, Dra. Patrícia e Dra. Iasmin! Gostaria de consultar sobre meus direitos com a Valadares & Souza Sociedade de Advogadas.";
   return `https://wa.me/${number}?text=${encodeURIComponent(
     message || defaultText
   )}`;
@@ -162,195 +165,199 @@ interface PracticeArea {
 
 const practiceAreas: PracticeArea[] = [
   {
-    id: "planejamento-previdenciario-estrategico",
-    title: "Planejamento Previdenciário Estratégico",
-    icon: Landmark,
-    tag: "INSS & RPPS · Maior Renda Mensal",
+    id: "direito-do-passageiro-aereo-viagens",
+    title: "Direito do Passageiro Aéreo & Viagens",
+    icon: Plane,
+    tag: "Voos Cancelados · Atrasos · Bagagens · Reembolsos",
     summary:
-      "Análise aprofundada de todo o histórico de contribuições para você se aposentar no momento ideal com o maior valor de benefício possível.",
+      "Indenização contra companhias aéreas por voo cancelado, atraso excessivo, perda de conexão, extravio de bagagem e negativas de reembolso. Prazo de até 5 anos.",
     details:
-      "A Reforma da Previdência tornou as regras de concessão muito complexas. O Planejamento Previdenciário elaborado pela Dra. Juliana Carvalho examina minuciosamente seu Extrato Previdenciário (CNIS), corrige períodos e salários faltantes, simula todas as regras de transição e aponta o melhor custo-benefício contributivo para garantir que você não perca dinheiro na sua aposentadoria.",
+      "Problemas com voos e companhias aéreas causam estresse, despesas inesperadas e perda de compromissos importantes. O escritório Valadares e Souza possui atuação comprovada na reversão de negativas de companhias aéreas e na conquista de indenizações justas por danos materiais e morais, mesmo quando a empresa tenta se esquivar da responsabilidade.",
     topics: [
-      "Simulação de cenários futuros nas regras de transição pós-Reforma",
-      "Cálculo da Renda Mensal Inicial (RMI) em cada data provável",
-      "Acerto e regularização de períodos pendentes no extrato CNIS",
-      "Estratégia de descarte de salários prejudiciais (divisor mínimo)",
-      "Orientação sobre recolhimentos em atraso e indenização de tempo",
-      "Relatório executivo completo com cronograma seguro de concessão",
+      "Indenização por cancelamento unilateral e atrasos superiores a 4 horas",
+      "Extravio definitivo, avarias ou demora injustificada na devolução de bagagem",
+      "Perda de conexão aérea e preterição de embarque (overbooking)",
+      "Reversão célere de negativas de reembolso de passagens e taxas",
+      "Ressarcimento de gastos emergenciais com alimentação, hospedagem e transporte",
+      "Prazo legal de até 5 anos para requerer seus direitos retroativos",
     ],
     whatsAppText:
-      "Olá, Dra. Juliana! Gostaria de agendar meu Planejamento Previdenciário para conquistar a melhor aposentadoria.",
+      "Olá, Dra. Patrícia e Dra. Iasmin! Tive um problema com uma companhia aérea / viagem e gostaria de saber sobre minha indenização.",
   },
   {
-    id: "aposentadoria-servidores-publicos-rpps",
-    title: "Aposentadoria de Servidores Públicos (RPPS)",
-    icon: Award,
-    tag: "Servidores Públicos · Integralidade & Paridade",
-    summary:
-      "Defesa dos direitos previdenciários de servidores municipais, estaduais e federais nas regras de transição, integralidade e paridade salarial.",
-    details:
-      "Servidores públicos possuem regramentos previdenciários específicos e sofrem frequentemente com interpretações administrativas restritivas. A Dra. Juliana Carvalho possui especialização dedicada em Regimes Próprios (RPPS), atuando no resguardo do direito adquirido, aplicação correta das regras de transição, averbação de tempo e incorporação de gratificações funcionais.",
-    topics: [
-      "Defesa de direito adquirido à integralidade e paridade constitucional",
-      "Regras de transição dos pontos e pedágios (Emenda Constitucional 103/2019)",
-      "Emissão e averbação de Certidão de Tempo de Contribuição (CTC)",
-      "Aposentadoria especial do servidor público (atividades de risco e insalubridade)",
-      "Revisão e reenquadramento de proventos e vantagens funcionais",
-      "Atuação em processos administrativos perante institutos e regimes próprios",
-    ],
-    whatsAppText:
-      "Olá, Dra. Juliana! Sou servidor(a) público(a) e preciso de assessoria jurídica especializada no RPPS.",
-  },
-  {
-    id: "aposentadorias-do-inss-regime-geral",
-    title: "Aposentadorias do Regime Geral (INSS)",
+    id: "direito-do-consumidor-reparacao-de-danos",
+    title: "Direito do Consumidor & Reparação de Danos",
     icon: ShieldCheck,
-    tag: "Idade · Tempo de Contribuição · Especial · PCD",
+    tag: "SPC/Serasa · Danos Morais · Fraudes · Cobranças Abusivas",
     summary:
-      "Requerimento administrativo e judicial de aposentadorias com preparação documental impecável para evitar negativas e demoras injustas.",
+      "Defesa incisiva contra abusos de empresas, negativações indevidas, golpes financeiros, fraudes bancárias e produtos ou serviços defeituosos.",
     details:
-      "Dar entrada na aposentadoria sem suporte especializado pode custar anos de atraso e prejuízos no cálculo do benefício. O escritório da Dra. Juliana Carvalho cuida de cada detalhe documental e probatório, garantindo a concessão rápida e justa perante o INSS ou no Poder Judiciário.",
+      "Relações de consumo desiguais exigem advogadas combativas e técnicas. Atuamos com agilidade para limpar seu nome, anular cobranças fraudulentas, recuperar valores pagos indevidamente em dobro e pleitear indenizações justas por danos morais perante a Justiça ou em acordos extrajudiciais.",
     topics: [
-      "Aposentadoria por idade urbana e rural (segurado especial e trabalhador rural)",
-      "Aposentadoria por tempo de contribuição com regras de transição",
-      "Aposentadoria especial para quem trabalhou exposto a insalubridade e periculosidade (PPP e LTCAT)",
-      "Aposentadoria da pessoa com deficiência (Lei Complementar 142/2013)",
-      "Conversão de tempo especial em comum para antecipação de benefício",
-      "Reversão célere de indeferimentos e recursos perante a Junta de Recursos do INSS",
+      "Exclusão liminar de inscrição indevida nos cadastros de SPC e Serasa",
+      "Indenização por dano moral em razão de negativação irregular ou constrangimento",
+      "Ações contra fraudes financeiras, empréstimos não autorizados e golpes do Pix",
+      "Cobranças indevidas de operadoras de telefonia, energia, bancos e planos",
+      "Descumprimento de prazos e contratos de prestação de serviços",
+      "Substituição de produtos com vício ou restituição integral corrigida",
     ],
     whatsAppText:
-      "Olá, Dra. Juliana! Gostaria de consultoria para solicitar minha aposentadoria no INSS.",
+      "Olá, doutoras! Gostaria de uma análise para um caso de direito do consumidor / cobrança indevida.",
   },
   {
-    id: "beneficios-por-incapacidade-auxilio-doenca",
-    title: "Benefícios por Incapacidade & Auxílio-Doença",
-    icon: ShieldAlert,
-    tag: "Auxílio-Doença · Invalidez · Auxílio-Acidente",
+    id: "direito-civil-contratos-estrategicos",
+    title: "Direito Civil & Contratos Estratégicos",
+    icon: FileText,
+    tag: "Contratos · Responsabilidade Civil · Notificações",
     summary:
-      "Proteção ágil para trabalhadores e segurados impossibilitados de exercer suas atividades em razão de doenças, acidentes ou sequelas.",
+      "Segurança jurídica na elaboração, revisão e rescisão de contratos, além de ações de responsabilidade civil, indenizações e cobranças.",
     details:
-      "Se o INSS indeferiu ou cessou indevidamente o seu benefício na perícia médica, a Dra. Juliana Carvalho atua com agilidade jurídica para demonstrar a incapacidade laboral real através de laudos técnicos complementares e perícia judicial qualificada.",
+      "Um contrato bem estruturado previne prejuízos e garante a proteção do seu patrimônio. A Valadares e Souza Sociedade de Advogadas presta assessoria consultiva e contenciosa minuciosa, assegurando clareza de cláusulas, garantias contratuais sólidas e resolução eficaz de inadimplementos.",
     topics: [
-      "Concessão e restabelecimento de Auxílio por Incapacidade Temporária (Auxílio-Doença)",
-      "Aposentadoria por Incapacidade Permanente (antiga Aposentadoria por Invalidez)",
-      "Adicional de 25% para aposentados por invalidez que necessitam de auxílio de terceiros",
-      "Auxílio-Acidente indenizatório para segurados que ficaram com sequelas permanentes",
-      "Orientação estratégica e compilação de laudos médicos para a perícia",
-      "Resolução de impasses entre INSS e empresa (limbo jurídico previdenciário)",
+      "Elaboração e revisão criteriosa de contratos civis, imobiliários e comerciais",
+      "Ações indenizatórias por descumprimento de obrigações e quebra de contrato",
+      "Execução e cobrança judicial e extrajudicial de títulos de crédito e dívidas",
+      "Notificações extrajudiciais formais para constituir em mora e resguardar direitos",
+      "Ações possessórias, usucapião e regularização imobiliária em Minas Gerais",
+      "Consultoria preventiva para evitar litígios prolongados e desgastantes",
     ],
     whatsAppText:
-      "Olá, Dra. Juliana! Meu benefício por incapacidade / auxílio-doença foi negado pelo INSS e preciso de ajuda.",
+      "Olá! Gostaria de consultoria jurídica em Direito Civil / análise contratual com a Valadares e Souza.",
   },
   {
-    id: "bpc-loas-idosos-pcd",
-    title: "BPC / LOAS (Idosos & Pessoas com Deficiência)",
-    icon: HeartHandshake,
-    tag: "1 Salário Mínimo sem Necessidade de Contribuição",
+    id: "resolucao-extrajudicial-acordos-ageis",
+    title: "Resolução Extrajudicial & Acordos Ágeis",
+    icon: Handshake,
+    tag: "Negociação Direta · Solução Rápida sem Processo",
     summary:
-      "Garantia de amparo financeiro mensal a pessoas idosas (65+) ou com deficiência em situação de vulnerabilidade socioeconômica.",
+      "Negociação direta estratégica para resolver conflitos de forma célere, econômica e amigável, sem a lentidão e os custos de uma disputa judicial.",
     details:
-      "O Benefício de Prestação Continuada (BPC/LOAS) é um direito assistencial que não exige histórico prévio de contribuições. Apoiamos a família desde a regularização do CadÚnico até a comprovação dos critérios sociais e barreiras biopsicossociais exigidos em lei.",
+      "Muitos dos maiores êxitos do escritório Valadares e Souza acontecem antes mesmo de ingressar na Justiça. Nossa postura negociadora firme e assertiva permite obter acordos justos, reembolsos e indenizações com velocidade incomparável e tranquilidade emocional para o cliente.",
     topics: [
-      "BPC/LOAS para idosos a partir de 65 anos em situação de carência",
-      "BPC/LOAS para pessoas com deficiência física, mental ou intelectual de qualquer idade",
-      "Dedução comprovada de gastos médicos, remédios e fraldas no cálculo de renda familiar",
-      "Reversão de cancelamentos, bloqueios e revisões cadastrais injustas",
-      "Recurso administrativo célere e ação judicial com perícia socioeconômica humanizada",
-      "Acompanhamento acolhedor e seguro para famílias em vulnerabilidade",
+      "Negociação extrajudicial direta com companhias aéreas, seguradoras e empresas",
+      "Redação e homologação de termos de acordo com validade de título executivo",
+      "Mediação entre partes em litígios patrimoniais e contratuais",
+      "Notificações formais para viabilizar composição imediata amigável",
+      "Economia significativa de despesas processuais, custas e anos de espera",
+      "Preservação de relações comerciais e soluções sob medida para cada cliente",
     ],
     whatsAppText:
-      "Olá, Dra. Juliana! Gostaria de consultar a concessão do benefício BPC/LOAS para mim ou um familiar.",
+      "Olá! Preciso de auxílio para negociar e resolver um impasse de forma rápida e extrajudicial.",
   },
   {
-    id: "pensoes-e-revisoes-previdenciarias",
-    title: "Pensões por Morte & Revisões de Aposentadoria",
-    icon: Scale,
-    tag: "Amparo a Dependentes & Retificação de Valores",
+    id: "direito-de-familia-sucessoes",
+    title: "Direito de Família & Sucessões",
+    icon: Users,
+    tag: "Inventários · Divórcios · Partilha · Sucessões",
     summary:
-      "Concessão ágil de pensão por morte para viúvos(as) e dependentes, além de revisão de valores pagos a menor pelo INSS.",
+      "Apoio jurídico acolhedor e seguro em momentos delicados, garantindo a preservação do patrimônio familiar e o respeito aos direitos de cada herdeiro.",
     details:
-      "Milhares de aposentados recebem mensalmente menos do que deveriam por equívocos matemáticos e documentais do INSS. Identificamos se a sua aposentadoria pode ser aumentada e resgatamos os valores atrasados dos últimos 5 anos, além de defender direitos em pensões por morte.",
+      "Demandas familiares exigem sensibilidade humana ímpar aliada a domínio técnico absoluto. Cuidamos do inventário em cartório ou judicial com agilidade, prevenindo atritos entre herdeiros e orientando divórcios, guarda e partilhas com total discrição e ética.",
     topics: [
-      "Concessão de Pensão por Morte para cônjuges, companheiros(as) e filhos dependentes",
-      "Reconhecimento de união estável para fins de concessão previdenciária",
-      "Revisão de aposentadorias concedidas com desconsideração de períodos e contribuições",
-      "Inclusão de períodos de serviço militar, tempo rural e aluno-aprendiz",
-      "Revisão de erros de cálculo na média das contribuições e divisor",
-      "Cobrança integral de valores retroativos acumulados",
+      "Inventário extrajudicial em cartório célere e inventário judicial complexo",
+      "Planejamento sucessório estratégico para proteção e transmissão de bens",
+      "Divórcio consensual e litigioso com partilha justa de patrimônio",
+      "Fixação, revisão e execução de pensão alimentícia",
+      "Reconhecimento e dissolução de união estável",
+      "Consultoria patrimonial preventiva para famílias e casais",
     ],
     whatsAppText:
-      "Olá, Dra. Juliana! Gostaria de verificar a revisão da minha aposentadoria ou pedir pensão por morte.",
+      "Olá, doutoras! Gostaria de orientação jurídica sobre inventário, partilha ou direito de família.",
   },
   {
-    id: "direito-trabalhista-integrado",
-    title: "Direito Trabalhista Integrado ao Previdenciário",
-    icon: Briefcase,
-    tag: "Rescisões · Vínculos · Horas Extras · Acidentes",
+    id: "previdenciario-trabalhista",
+    title: "Previdenciário & Trabalhista",
+    icon: Landmark,
+    tag: "INSS · Aposentadorias · Rescisões · Direitos",
     summary:
-      "Defesa intransigente dos direitos trabalhistas garantindo que salários e contribuições reflitam diretamente na sua futura aposentadoria.",
+      "Orientação e defesa de direitos perante o INSS e na esfera trabalhista, resguardando o fruto do seu trabalho e a tranquilidade da sua família.",
     details:
-      "Trabalhar sem carteira assinada ou com verbas omitidas causa um prejuízo silencioso na sua aposentadoria. Nossa atuação integrada apura todas as verbas rescisórias, horas extras, insalubridade e acidentes, assegurando que suas contribuições sejam recolhidas.",
+      "Atuamos para destravar benefícios do INSS que foram indevidamente indeferidos, orientar pedidos de aposentadoria e defender trabalhadores que tiveram direitos trabalhistas e verbas rescisórias suprimidas por empregadores.",
     topics: [
-      "Cobrança integral de verbas rescisórias, saldo de salário, aviso prévio e FGTS + 40%",
-      "Reconhecimento de vínculo de emprego sem anotação em carteira",
-      "Rescisão indireta do contrato por descumprimento grave do empregador",
-      "Cobrança de horas extras, adicional noturno e descansos não concedidos",
-      "Adicionais de insalubridade e periculosidade com laudo técnico pericial",
-      "Indenizações por acidentes de trabalho e doenças ocupacionais",
+      "Requerimento e recurso de benefícios previdenciários e auxílios do INSS",
+      "Análise documental e orientação para concessão de aposentadorias",
+      "Cobrança integral de verbas rescisórias, férias, 13º e FGTS não depositado",
+      "Horas extras, adicionais noturnos e intervalos intrajornada não pagos",
+      "Reconhecimento de vínculo empregatício e anotação em carteira",
+      "Indenizações por acidentes de trabalho e condições insalubres",
     ],
     whatsAppText:
-      "Olá, Dra. Juliana! Gostaria de orientações jurídicas sobre meus direitos trabalhistas.",
+      "Olá! Gostaria de consultoria sobre direitos previdenciários / INSS ou trabalhistas.",
   },
 ];
 
 const clientReviews = [
   {
-    name: "Márcia Regina Andrade",
-    reviewsCount: "Cliente Verificada · São João del Rei",
+    name: "Laélia Gomes",
+    reviewsCount: "Local Guide · 19 avaliações · Curitiba",
     date: "Google Meu Negócio",
-    badge: "aposentadoria concedida",
+    badge: "melhor advogada de viagens",
     content:
-      "A Dra. Juliana Carvalho foi uma bênção na minha vida! Meu pedido de aposentadoria no INSS estava travado há mais de 8 meses e ela resolveu com agilidade, me explicando cada detalhe com muito carinho e paciência. Conquistei meu benefício com o valor correto. Atendimento impecável!",
+      "Eu tenho a MELHOR ADVOGADA de viagens da vidaaa!!! Venho agradecer às advogadas, em especial à advogada Patrícia. Moro em Curitiba, então meu atendimento foi todo online, e não tenho nada a reclamar; pelo contrário, ela me atendeu com extrema atenção, rapidez e competência!",
   },
   {
-    name: "Carlos Alberto de Resende",
-    reviewsCount: "Servidor Público · 5 avaliações",
+    name: "Ely Moraes",
+    reviewsCount: "Local Guide · 18 avaliações · 121 fotos",
     date: "Google Meu Negócio",
-    badge: "especialista em rpps",
+    badge: "reembolso cia aérea",
     content:
-      "Sou servidor público e precisava entender as novas regras de transição da aposentadoria. O planejamento previdenciário feito pela Dra. Juliana foi fantástico: clareza técnica absoluta, averbação de tempo que eu nem imaginava e segurança total para o meu futuro. Recomendo de olhos fechados!",
+      "Melhores advogados possíveis. Recomendo fortemente. Conseguimos reverter uma negativa de companhia aérea que não queria pagar o reembolso. Enfim justiça feita pelas advogadas!",
   },
   {
-    name: "Eliane Maria dos Santos",
-    reviewsCount: "Local Guide · São João del Rei",
+    name: "Vinicius Nazario Coelho",
+    reviewsCount: "Cliente Verificado · 3 avaliações",
     date: "Google Meu Negócio",
-    badge: "atendimento humanizado",
+    badge: "indenização por atraso de voo",
     content:
-      "Atendimento maravilhoso, muito humano e atencioso. A Dra. Juliana tratou o caso do BPC/LOAS da minha mãe com muito respeito e profissionalismo. Escritório muito bem localizado na Av. Tiradentes e equipe de extrema confiança. 5 estrelas é pouco!",
+      "Tive uma experiência excelente com o escritório! Entrei em contato por causa de um problema com uma companhia aérea — meu voo atrasou várias horas e eu já estava achando que não teria nenhum tipo de compensação. As advogadas foram super atenciosas, competentes e resolveram tudo com maestria!",
   },
   {
-    name: "Sebastião Moreira Neves",
-    reviewsCount: "Cliente Verificado · INSS",
+    name: "Vitoria Cristina",
+    reviewsCount: "Cliente Verificada · 6 avaliações",
     date: "Google Meu Negócio",
-    badge: "auxílio restabelecido",
+    badge: "atendimento personalizado",
     content:
-      "Excelente advogada! Muito competente, honesta e dedicada. Conseguiu restabelecer meu auxílio por incapacidade que o INSS tinha cortado indevidamente. Sempre disponível no WhatsApp para tirar dúvidas e me manter calmo. Confiança total no trabalho dela.",
+      "Serviço de extrema atenção com muita eficiência e qualidade, ambas advogadas que lá trabalham desempenham suas atividades sendo ótimas ouvintes, com acompanhamento personalizado dos casos para que assim o resultado seja o melhor possível aos clientes! Super satisfeita.",
   },
   {
-    name: "Patrícia Helena Silveira",
-    reviewsCount: "3 avaliações no Google",
+    name: "Julia Miranda",
+    reviewsCount: "Cliente Verificada · 3 avaliações",
     date: "Google Meu Negócio",
-    badge: "planejamento previdenciário",
+    badge: "paciência & segurança",
     content:
-      "Fiz meu planejamento de aposentadoria com a Dra. Juliana. Foi o melhor investimento que fiz na vida! Ela me mostrou o momento exato para dar entrada e evitou que eu perdesse mais de 30% da minha renda mensal se tivesse pedido antes. Extremamente competente e acolhedora!",
+      "Simplesmente adorei o atendimento! A Patrícia e a Iasmin são profissionais incríveis, muito dedicadas e prestativas. Me passaram segurança em todos os momentos, explicaram cada detalhe com paciência e nunca me deixaram sem resposta. Com certeza voltarei mais vezes e já indiquei para amigos e familiares!",
   },
   {
-    name: "Rodrigo Ferreira Mendes",
-    reviewsCount: "Cliente Verificado · São João del Rei",
+    name: "Margareth Meira",
+    reviewsCount: "Cliente Verificada · Google Meu Negócio",
     date: "Google Meu Negócio",
-    badge: "competência e ética",
+    badge: "resolvido sem ir à justiça",
     content:
-      "Profissional exemplar em São João del Rei e região. Acolhedora, ética e com um domínio técnico absurdo em direito previdenciário e trabalhista. Toda a minha família consulta com ela quando precisa. Parabéns pela dedicação e pelo carinho com os clientes!",
+      "Rápidas! As advogadas são excelentes, maravilhosas e educadas e melhor: resolvi meu problema sem precisar ir na justiça! Muito obrigada pela dedicação e eficiência.",
+  },
+  {
+    name: "Ana Carolina Coelho",
+    reviewsCount: "Cliente Verificada · 5 avaliações",
+    date: "Google Meu Negócio",
+    badge: "indenização recebida",
+    content:
+      "Fui cliente delas e fui extremamente bem atendida e acolhida na minha demanda. O resultado veio e eu não poderia estar mais feliz após receber minha indenização! Confio e recomendo de olhos fechados.",
+  },
+  {
+    name: "Bernardo Indalecio",
+    reviewsCount: "Cliente Recorrente · 5 avaliações",
+    date: "Google Meu Negócio",
+    badge: "agilidade & astúcia",
+    content:
+      "Fui cliente do escritório mais de uma vez e em nenhuma delas me arrependi de ter contratado!! São muito atenciosas e astutas, sempre resolveram meus problemas com agilidade e sempre me mantiveram informado de tudo sobre meus processos.",
+  },
+  {
+    name: "Lucas Mourino",
+    reviewsCount: "Cliente Verificado · 7 avaliações",
+    date: "Google Meu Negócio",
+    badge: "problema com agência de viagem",
+    content:
+      "Atendimento profissional, eficiente e que resolveu meu problema com uma agência de viagem. Recomendo a todos!",
   },
 ];
 
@@ -408,22 +415,22 @@ export default function Home() {
   return (
     <MotionConfig reducedMotion="user">
       <main className="overflow-hidden bg-pearl text-ink">
-        {/* Navigation Bar - Luxury Burgundy Dark with Champagne Accents */}
+        {/* Navigation Bar - Luxury Dark Wine with Champagne Rose-Gold Accents */}
         <header className="sticky top-0 z-40 border-b border-brand-800/40 bg-brand-950/95 backdrop-blur-xl">
           <div className="mx-auto flex h-[76px] max-w-7xl items-center justify-between gap-5 px-5 sm:h-[84px] sm:px-8 lg:px-12">
             <a
               href="#inicio"
-              aria-label="Dra. Juliana Carvalho — Início"
+              aria-label="Valadares e Souza Sociedade de Advogadas — Início"
               onClick={closeMenu}
-              className="flex items-center gap-3 transition-opacity hover:opacity-90"
+              className="flex items-center gap-3 transition-opacity hover:opacity-95"
             >
               <Image
                 src={LOGO_SRC}
-                width={1372}
-                height={576}
-                alt="Juliana Carvalho Advogada Especialista em INSS e RPPS — São João del Rei - MG"
+                width={1060}
+                height={200}
+                alt="Valadares e Souza - Sociedade de Advogadas"
                 priority
-                className="h-[64px] w-auto object-contain sm:h-[74px]"
+                className="h-[44px] w-auto object-contain sm:h-[52px]"
               />
             </a>
 
@@ -435,7 +442,7 @@ export default function Home() {
                 Início
               </a>
               <a className="nav-link" href="#sobre">
-                Dra. Juliana Carvalho
+                Sobre as Advogadas
               </a>
               <a className="nav-link" href="#atuacao">
                 Áreas de Atuação
@@ -456,15 +463,15 @@ export default function Home() {
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Instagram de Dra. Juliana Carvalho"
+                aria-label="Instagram Valadares e Souza"
                 className="grid size-10 place-items-center rounded-full border border-gold-300/30 text-gold-300 transition-all hover:border-gold-300 hover:bg-brand-900 hover:text-white"
-                title="Instagram @juliana.carvalho.adv"
+                title="Instagram @valadaresesouza"
               >
                 <InstagramIcon size={16} />
               </a>
               <a
                 href={`tel:+${WHATSAPP_NUMBER}`}
-                aria-label="Ligar para Dra. Juliana Carvalho"
+                aria-label="Ligar para o escritório Valadares e Souza"
                 className="grid size-10 place-items-center rounded-full border border-gold-300/30 text-gold-300 transition-all hover:border-gold-300 hover:bg-brand-900 hover:text-white"
                 title={`Ligar: ${PHONE_DISPLAY}`}
               >
@@ -474,7 +481,7 @@ export default function Home() {
                 href={getWhatsAppUrl()}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="WhatsApp de Dra. Juliana Carvalho"
+                aria-label="WhatsApp Valadares e Souza"
                 className="grid size-10 place-items-center rounded-full border border-gold-300/30 text-gold-300 transition-all hover:border-gold-300 hover:bg-brand-900 hover:text-white"
                 title="Atendimento no WhatsApp"
               >
@@ -517,11 +524,11 @@ export default function Home() {
                 <div className="mx-auto flex max-w-7xl flex-col gap-1 py-4">
                   {[
                     ["Início", "#inicio"],
-                    ["Dra. Juliana Carvalho", "#sobre"],
+                    ["Sobre as Advogadas", "#sobre"],
                     ["Áreas de Atuação", "#atuacao"],
                     ["Por que Escolher?", "#diferenciais"],
                     ["Avaliações no Google (5,0 ★)", "#avaliacoes"],
-                    ["Contato & Sede em São João del Rei", "#contato"],
+                    ["Contato & Sede em Ouro Preto", "#contato"],
                   ].map(([label, href]) => (
                     <a
                       key={label}
@@ -549,7 +556,7 @@ export default function Home() {
                       rel="noreferrer"
                       onClick={closeMenu}
                     >
-                      <MapPin size={15} /> Av. Tiradentes, 707 - Centro, São João del Rei
+                      <MapPin size={15} /> R. João XXIII, 296 - Ouro Preto, MG
                     </a>
                   </div>
                 </div>
@@ -577,7 +584,7 @@ export default function Home() {
               <motion.div variants={reveal} className="eyebrow mb-6">
                 <span className="size-2 shrink-0 rounded-full bg-brand-600" />
                 <span>
-                  São João del Rei - MG · 10 Anos de Experiência · 5,0 ★ no Google
+                  Ouro Preto - MG · Atendimento em Todo o Brasil · 5,0 ★ no Google
                 </span>
               </motion.div>
 
@@ -585,9 +592,9 @@ export default function Home() {
                 variants={reveal}
                 className="max-w-[760px] font-serif text-[2.75rem] leading-[1.04] tracking-[-0.025em] text-ink sm:text-5xl lg:text-[4.15rem]"
               >
-                Conquiste a melhor aposentadoria e garanta seus direitos no{" "}
+                Defesa jurídica estratégica, célere e humanizada para{" "}
                 <span className="font-serif italic text-brand-700">
-                  INSS e RPPS.
+                  garantir seus direitos.
                 </span>
               </motion.h1>
 
@@ -597,13 +604,17 @@ export default function Home() {
               >
                 Sob a liderança da{" "}
                 <strong className="font-semibold text-ink">
-                  Dra. Juliana Carvalho
-                </strong>
-                , advogada especialista em{" "}
+                  Dra. Patrícia Valadares
+                </strong>{" "}
+                e da{" "}
                 <strong className="font-semibold text-ink">
-                  Direito Previdenciário (INSS e RPPS - Servidores Públicos) e Trabalhista
+                  Dra. Iasmin Souza
                 </strong>
-                , oferecemos atendimento jurídico estratégico, humanizado e combativo. Há 10 anos garantindo que cada cliente conquiste seu benefício no momento certo e com o maior valor possível — com sede própria no Centro de São João del Rei (MG) e atuação digital ágil em todo o Brasil.
+                , o escritório{" "}
+                <strong className="font-semibold text-ink">
+                  Valadares e Souza - Sociedade de Advogadas
+                </strong>{" "}
+                alia combatividade técnica, escuta qualificada e excelência processual. Especialistas em indenizações por problemas com companhias aéreas (voos cancelados, atrasos e bagagens), direito do consumidor, cível e soluções extrajudiciais de conflitos. Sede em Ouro Preto (MG) com atendimento online ágil em todo o Brasil.
               </motion.p>
 
               <motion.div
@@ -617,7 +628,7 @@ export default function Home() {
                   variant="burgundy"
                   className="rounded-full shadow-md"
                 >
-                  <WhatsAppIcon size={16} /> Consultar Meu Benefício no WhatsApp
+                  <WhatsAppIcon size={16} /> Consultar Meu Caso no WhatsApp
                 </GlowingButton>
                 <a
                   href="#atuacao"
@@ -637,18 +648,18 @@ export default function Home() {
               >
                 <span className="inline-flex items-center gap-2 font-medium">
                   <Star size={15} className="fill-amber-500 text-amber-500" />{" "}
-                  5,0 estrelas no Google (58 avaliações verificadas)
+                  5,0 estrelas no Google (39 avaliações verificadas)
                 </span>
                 <span className="inline-flex items-center gap-2 font-medium">
-                  <Clock size={15} className="text-brand-700" /> Aberto a partir das 07:30
+                  <Clock size={15} className="text-brand-700" /> Atendimento de Segunda a Sexta
                 </span>
                 <span className="inline-flex items-center gap-2 font-medium">
-                  <MapPin size={15} className="text-brand-700" /> Av. Tiradentes, 707 · Centro, São João del Rei - MG
+                  <MapPin size={15} className="text-brand-700" /> R. João XXIII, 296 · Ouro Preto - MG
                 </span>
               </motion.div>
             </motion.div>
 
-            {/* Hero Visual Presentation - Dra. Juliana Carvalho */}
+            {/* Hero Visual Presentation - Dra. Patrícia & Dra. Iasmin */}
             <motion.div
               initial={{ opacity: 0, scale: 0.97, y: 18 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -662,7 +673,7 @@ export default function Home() {
               <div className="relative aspect-[4/4.3] overflow-hidden rounded-3xl border border-brand-500/35 bg-brand-950 shadow-2xl ring-1 ring-brand-300/30">
                 <Image
                   src={FOTO_HERO_SRC}
-                  alt="Dra. Juliana Carvalho — Advogada Especialista em Direito Previdenciário e Servidores Públicos em São João del Rei - MG"
+                  alt="Dra. Patrícia Valadares e Dra. Iasmin Souza — Valadares e Souza Sociedade de Advogadas em Ouro Preto - MG"
                   fill
                   priority
                   sizes="(max-width: 640px) 90vw, (max-width: 1024px) 70vw, 45vw"
@@ -672,10 +683,10 @@ export default function Home() {
                 <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-3 text-white sm:bottom-8 sm:left-8 sm:right-8">
                   <div>
                     <p className="font-serif text-2xl font-normal tracking-wide text-white">
-                      Juliana Carvalho
+                      Valadares & Souza
                     </p>
                     <p className="mt-1 text-[10px] uppercase tracking-[0.2em] text-brand-200">
-                      Advogada Especialista em INSS e RPPS
+                      Sociedade de Advogadas · Ouro Preto - MG
                     </p>
                   </div>
                   <span className="grid size-11 shrink-0 place-items-center rounded-full border border-gold-300/40 bg-brand-950/80 text-gold-300 backdrop-blur-sm">
@@ -684,8 +695,13 @@ export default function Home() {
                 </div>
               </div>
 
+              {/* Floating authority badge */}
+              <div className="absolute -left-3 top-6 z-10 rounded-full border border-gold-300/40 bg-white/95 px-4 py-2 text-[10px] font-bold tracking-[0.14em] text-brand-900 shadow-card backdrop-blur-md sm:-left-5">
+                OURO PRETO · ATENDIMENTO BRASIL
+              </div>
+
               {/* Floating Google rating badge */}
-              <div className="absolute -bottom-3 -left-3 rounded-2xl border border-brand-200/80 bg-white/95 p-3.5 shadow-card backdrop-blur-md sm:-left-5">
+              <div className="absolute -bottom-5 -right-3 z-10 rounded-2xl border border-brand-200/80 bg-white/95 p-3.5 shadow-card backdrop-blur-md sm:-right-5">
                 <div className="flex items-center gap-2">
                   <GoogleIcon size={16} />
                   <div className="flex items-center gap-1 text-brand-800">
@@ -696,13 +712,8 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="mt-0.5 text-[9px] font-semibold uppercase tracking-wider text-ink-soft">
-                  58 Avaliações no Google
+                  39 Avaliações no Google
                 </p>
-              </div>
-
-              {/* Floating authority badge */}
-              <div className="absolute -right-3 top-6 rounded-full border border-gold-300/40 bg-white/95 px-4 py-2 text-[10px] font-bold tracking-[0.14em] text-brand-900 shadow-card backdrop-blur-md sm:-right-5">
-                SÃO JOÃO DEL REI · ATUAÇÃO NACIONAL
               </div>
             </motion.div>
           </div>
@@ -717,19 +728,19 @@ export default function Home() {
             {[
               [
                 "5,0 ★",
-                "nota máxima com 58 avaliações reais e verificadas no Google",
+                "nota máxima com 39 avaliações reais e verificadas no Google",
               ],
               [
-                "10 Anos",
-                "de experiência sólida em Direito Previdenciário e Trabalhista",
+                "Até 5 Anos",
+                "de prazo para buscar indenização contra companhias aéreas",
               ],
               [
-                "São João del Rei",
-                "Sede própria na Av. Tiradentes, 707 - Centro",
+                "Ouro Preto",
+                "sede própria na R. João XXIII, 296 com atendimento presencial",
               ],
               [
-                "INSS & RPPS",
-                "especialização comprovada em servidores públicos e regime geral",
+                "100% Online",
+                "atendimento digital célere e seguro para clientes de todo o país",
               ],
             ].map(([value, label], index) => (
               <div
@@ -751,13 +762,13 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Sobre a Dra. Juliana Carvalho */}
+        {/* Sobre a Sociedade de Advogadas */}
         <section
           id="sobre"
           className="scroll-mt-24 bg-pearl py-20 sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20 lg:px-12">
-            {/* Dra. Juliana Carvalho portrait */}
+            {/* Valadares e Souza portrait */}
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -768,7 +779,7 @@ export default function Home() {
               <div className="relative aspect-[3/3.8] overflow-hidden rounded-2xl border border-brand-700/30 bg-brand-950 shadow-card">
                 <Image
                   src={FOTO_SOBRE_SRC}
-                  alt="Dra. Juliana Carvalho — Advogada Previdenciarista em São João del Rei - MG"
+                  alt="Valadares e Souza Sociedade de Advogadas — Dra. Patrícia e Dra. Iasmin"
                   fill
                   sizes="(max-width: 1024px) 90vw, 45vw"
                   className="object-cover object-top"
@@ -785,13 +796,13 @@ export default function Home() {
                   </p>
                 </div>
                 <p className="mt-1 font-serif text-lg leading-snug text-ink">
-                  Dra. Juliana Carvalho
+                  Dra. Patrícia & Dra. Iasmin
                 </p>
                 <p className="mt-0.5 text-[11px] font-medium text-brand-700">
-                  Especialista em INSS e RPPS (Servidores Públicos)
+                  Valadares e Souza - Sociedade de Advogadas
                 </p>
                 <p className="mt-1 text-[11px] leading-4 text-ink-soft">
-                  Av. Tiradentes, 707 - Centro, São João del Rei - MG.
+                  R. João XXIII, 296 - Ouro Preto, MG. Atendimento nacional.
                 </p>
               </div>
 
@@ -806,7 +817,7 @@ export default function Home() {
               variants={stagger}
             >
               <motion.p variants={reveal} className="eyebrow">
-                SOBRE A ADVOGADA & MISSÃO JURÍDICA
+                SOBRE O ESCRITÓRIO & ADVOGADAS
               </motion.p>
               <motion.h2
                 variants={reveal}
@@ -822,32 +833,34 @@ export default function Home() {
                 variants={reveal}
                 className="mt-6 max-w-xl text-[15px] leading-7 text-ink-soft"
               >
-                Com escritório estabelecido na{" "}
+                Com sede em{" "}
                 <strong className="text-ink">
-                  Av. Tiradentes, 707 no Centro de São João del Rei (MG)
+                  Ouro Preto (MG) na Rua João XXIII, 296
                 </strong>{" "}
-                e atendimento em todo o Brasil, a{" "}
-                <strong className="text-ink">Dra. Juliana Carvalho</strong>{" "}
-                acumula 10 anos de experiência oferecendo serviços jurídicos de alta qualidade, combatividade técnica e atenção minuciosa ao futuro de cada cliente.
+                e atuação digital presente em diversos estados brasileiros, a{" "}
+                <strong className="text-ink">
+                  Valadares e Souza - Sociedade de Advogadas
+                </strong>{" "}
+                nasceu da união entre solidez jurídica, ética e um compromisso inegociável com a satisfação do cliente.
               </motion.p>
 
               <motion.p
                 variants={reveal}
                 className="mt-4 max-w-xl text-[15px] leading-7 text-ink-soft"
               >
-                Inspirada pelo compromisso de fazer sempre o melhor pelo segurado e pelo servidor público, Dra. Juliana não admite o mero conformismo com negativas administrativas. Cada caso é analisado com profundidade para buscar a concessão mais vantajosa, explicando cada etapa com clareza e empatia.
+                Liderado pelas advogadas Dra. Patrícia e Dra. Iasmin, o escritório é amplamente elogiado pela escuta atenta, clareza didática ao esclarecer dúvidas e acompanhamento constante em cada etapa processual. Aqui, você nunca fica sem respostas sobre o seu caso.
               </motion.p>
 
-              {/* Quote Card from Dra. Juliana Carvalho */}
+              {/* Quote Card */}
               <motion.div
                 variants={reveal}
                 className="mt-6 rounded-xl border border-brand-300/40 bg-brand-50/80 p-5 shadow-xs"
               >
                 <blockquote className="font-serif text-sm italic leading-relaxed text-brand-900">
-                  &ldquo;Eu NÃO faço o que posso para garantir a melhor aposentadoria para o cliente. Eu faço meu melhor. A falência da ação está em admitir a síndrome do possível.&rdquo;
+                  &ldquo;Não prometem nada, mas entregam tudo! Ambas advogadas desempenham suas atividades sendo ótimas ouvintes, com acompanhamento personalizado para que o resultado seja o melhor possível.&rdquo;
                 </blockquote>
                 <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-brand-700">
-                  — Filosofia de Atuação · Dra. Juliana Carvalho
+                  — Filosofia de Atuação · Valadares e Souza Sociedade de Advogadas
                 </p>
               </motion.div>
 
@@ -861,7 +874,7 @@ export default function Home() {
                     className="shrink-0 text-brand-700"
                   />
                   <span>
-                    10 anos de dedicação ao Direito Previdenciário e Trabalhista
+                    Atuação especializada em Direito do Passageiro Aéreo
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
@@ -870,7 +883,7 @@ export default function Home() {
                     className="shrink-0 text-brand-700"
                   />
                   <span>
-                    Especialista em RPPS e regras de transição do Servidor Público
+                    Capacidade resolutiva extrajudicial célere sem processo
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
@@ -879,7 +892,7 @@ export default function Home() {
                     className="shrink-0 text-brand-700"
                   />
                   <span>
-                    Sede moderna e acessível no Centro de São João del Rei
+                    Sede moderna e acessível em Ouro Preto - MG
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
@@ -888,7 +901,7 @@ export default function Home() {
                     className="shrink-0 text-brand-700"
                   />
                   <span>
-                    Avaliação 5,0 ★ máxima no Google com 58 avaliações
+                    Nota máxima 5,0 ★ no Google com 39 avaliações
                   </span>
                 </div>
               </motion.div>
@@ -899,14 +912,14 @@ export default function Home() {
               >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Juliana! Gostaria de agendar uma consulta com você para analisar minha situação previdenciária."
+                    "Olá, Dra. Patrícia e Dra. Iasmin! Gostaria de agendar uma consulta jurídica para meu caso."
                   )}
                   target="_blank"
                   size="md"
                   variant="burgundy"
                   className="rounded-full shadow-md"
                 >
-                  <WhatsAppIcon size={16} /> Falar com a Dra. Juliana
+                  <WhatsAppIcon size={16} /> Falar com as Advogadas
                 </GlowingButton>
                 <a
                   href={`tel:+${WHATSAPP_NUMBER}`}
@@ -934,15 +947,15 @@ export default function Home() {
             >
               <Heading
                 eyebrow="SERVIÇOS JURÍDICOS & PILARES DE ATUAÇÃO"
-                description="Soluções jurídicas estratégicas e personalizadas para proteger seus direitos previdenciários e trabalhistas em São João del Rei, Minas Gerais e em todo o Brasil."
+                description="Soluções jurídicas estratégicas, personalizadas e combativas para proteger seus direitos e reparar danos em Ouro Preto, Minas Gerais e em todo o Brasil."
               >
-                Defesa especializada em{" "}
+                Atuação especializada em{" "}
                 <span className="italic text-brand-700">
-                  INSS, RPPS e Direitos do Trabalhador.
+                  Passageiro Aéreo, Consumidor, Cível e Previdenciário.
                 </span>
               </Heading>
               <p className="max-w-[270px] pb-1 text-xs leading-6 text-ink-soft">
-                Selecione uma área abaixo para conferir os detalhes de
+                Selecione uma especialidade abaixo para conferir os detalhes de
                 atuação e iniciar seu atendimento direto pelo WhatsApp.
               </p>
             </motion.div>
@@ -1001,7 +1014,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Seção Especial: Por que Escolher a Dra. Juliana Carvalho? */}
+        {/* Seção Especial: Por que Escolher a Valadares e Souza? */}
         <section
           id="diferenciais"
           className="scroll-mt-24 border-y border-brand-200/60 bg-brand-50/50 py-20 sm:py-28 lg:py-32"
@@ -1010,16 +1023,16 @@ export default function Home() {
             <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
               <Heading
                 eyebrow="EFICIÊNCIA COMPROVADA & RESOLUÇÃO DE CASOS"
-                description="Veja como o compromisso com o cálculo rigoroso, honestidade e técnica processual transforma problemas previdenciários complexos em aposentadorias seguras e vantajosas."
+                description="Veja como o compromisso com a celeridade, a técnica e a empatia transforma problemas jurídicos angustiantes em reparações justas e tranquilidade."
               >
-                Cálculos confusos ou benefício negado?{" "}
+                Voo cancelado ou direitos violados?{" "}
                 <span className="italic text-brand-700">
                   Nós esclarecemos e lutamos pelo seu direito.
                 </span>
               </Heading>
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá, Dra. Juliana! Gostaria de uma análise para meu caso de benefício / aposentadoria."
+                  "Olá, doutoras! Gostaria de uma análise para meu caso com uma companhia aérea ou fornecedor."
                 )}
                 target="_blank"
                 size="md"
@@ -1031,7 +1044,7 @@ export default function Home() {
             </div>
 
             <div className="mt-12 grid gap-8 lg:grid-cols-2">
-              {/* Card 1: Planejamento Previdenciário e INSS */}
+              {/* Card 1: Companhia Aérea e Passageiro */}
               <motion.article
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1042,51 +1055,51 @@ export default function Home() {
                 <div>
                   <div className="flex items-center justify-between">
                     <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-300/40 bg-brand-50 px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-brand-800">
-                      <Landmark size={14} /> Planejamento Previdenciário & INSS
+                      <Plane size={14} /> Direito do Passageiro Aéreo
                     </span>
                     <span className="text-xs font-semibold text-brand-700">
-                      Dra. Juliana Carvalho
+                      Prazo de até 5 Anos
                     </span>
                   </div>
                   <h3 className="mt-4 font-serif text-2xl leading-tight text-ink sm:text-[1.75rem]">
-                    Planejamento Estratégico para Obter o Maior Valor de Benefício
+                    Indenização por Atrasos, Cancelamentos e Bagagens Extraviadas
                   </h3>
                   <p className="mt-3 text-[14px] leading-relaxed text-ink-soft">
-                    Relatos reais de segurados que planejaram a aposentadoria com a Dra. Juliana e evitaram perdas irreparáveis. Analisamos todas as contribuições passadas, descartamos períodos prejudiciais e indicamos a data exata para requerer o benefício com a maior renda mensal possível.
+                    Muitos passageiros desconhecem que têm até 5 anos para exigir compensação financeira por problemas em voos domésticos. Revertemos negativas das companhias aéreas, conquistamos indenizações por danos morais e materiais e recuperamos despesas com alimentação e hospedagem.
                   </p>
                   <ul className="mt-5 space-y-2 text-xs font-medium text-ink">
                     <li className="flex items-center gap-2">
                       <CheckCircle2 size={15} className="shrink-0 text-brand-700" />
-                      <span>Análise técnica aprofundada de todo o histórico no CNIS</span>
+                      <span>Reversão comprovada de negativas de reembolso de companhias aéreas</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle2 size={15} className="shrink-0 text-brand-700" />
-                      <span>Simulações de todas as regras de transição vigentes</span>
+                      <span>Indenizações por danos morais em atrasos graves e perda de conexão</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle2 size={15} className="shrink-0 text-brand-700" />
-                      <span>Orientações claras em linguagem acessível e descomplicada</span>
+                      <span>Atendimento 100% online para passageiros de qualquer estado do Brasil</span>
                     </li>
                   </ul>
                 </div>
                 <div className="mt-7 border-t border-brand-200/60 pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dra. Juliana! Gostaria de consultar sobre meu Planejamento Previdenciário ou benefício do INSS."
+                      "Olá, doutoras! Tive um problema com um voo ou companhia aérea e gostaria de saber se tenho direito à indenização."
                     )}
                     target="_blank"
                     rel="noreferrer"
                     className="inline-flex w-full items-center justify-between rounded-xl border border-brand-800/20 bg-brand-50/80 px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-brand-900 transition-all hover:border-brand-800 hover:bg-brand-900 hover:text-white"
                   >
                     <span className="inline-flex items-center gap-2">
-                      <WhatsAppIcon size={15} /> Solicitar Análise com Dra. Juliana
+                      <WhatsAppIcon size={15} /> Analisar Direito aéreo no WhatsApp
                     </span>
                     <ArrowUpRight size={15} />
                   </a>
                 </div>
               </motion.article>
 
-              {/* Card 2: RPPS - Servidores Públicos */}
+              {/* Card 2: Resolução Extrajudicial Ágil */}
               <motion.article
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1097,44 +1110,44 @@ export default function Home() {
                 <div>
                   <div className="flex items-center justify-between">
                     <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-300/40 bg-brand-50 px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-brand-800">
-                      <Award size={14} /> Servidores Públicos (RPPS)
+                      <Handshake size={14} /> Resolução Célere
                     </span>
                     <span className="text-xs font-semibold text-brand-700">
-                      Dra. Juliana Carvalho
+                      Sem Processo Judicial
                     </span>
                   </div>
                   <h3 className="mt-4 font-serif text-2xl leading-tight text-ink sm:text-[1.75rem]">
-                    Segurança Jurídica na Aposentadoria do Servidor Público
+                    Solução de Conflitos sem Precisar ir na Justiça
                   </h3>
                   <p className="mt-3 text-[14px] leading-relaxed text-ink-soft">
-                    Regimes próprios municipais, estaduais e federais exigem profundo conhecimento das emendas constitucionais e normas estatutárias. Dra. Juliana defende a integralidade, paridade e contagem correta de tempo para que o servidor se aposente com tranquilidade e sem prejuízos remuneratórios.
+                    Nem toda causa precisa aguardar anos de tramitação nos tribunais. Dra. Patrícia e Dra. Iasmin atuam com alta capacidade de negociação e mediação, resolvendo conflitos de forma direta com fornecedores, agências e empresas, garantindo o resultado desejado com máxima agilidade.
                   </p>
                   <ul className="mt-5 space-y-2 text-xs font-medium text-ink">
                     <li className="flex items-center gap-2">
                       <CheckCircle2 size={15} className="shrink-0 text-brand-700" />
-                      <span>Aplicação rigorosa das regras constitucionais de transição</span>
+                      <span>Negociação direta com departamentos jurídicos e ouvidorias</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle2 size={15} className="shrink-0 text-brand-700" />
-                      <span>Agilidade na expedição e averbação de certidões (CTC)</span>
+                      <span>Economia substancial de tempo, desgaste emocional e custas</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle2 size={15} className="shrink-0 text-brand-700" />
-                      <span>Proteção integral aos direitos funcionais e salariais</span>
+                      <span>Termos de acordo com validade jurídica e segurança plena</span>
                     </li>
                   </ul>
                 </div>
                 <div className="mt-7 border-t border-brand-200/60 pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dra. Juliana! Sou servidor(a) público(a) e gostaria de orientação para minha aposentadoria no RPPS."
+                      "Olá, doutoras! Gostaria de saber como resolver meu conflito de forma extrajudicial e rápida."
                     )}
                     target="_blank"
                     rel="noreferrer"
                     className="inline-flex w-full items-center justify-between rounded-xl border border-brand-800/20 bg-brand-50/80 px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-brand-900 transition-all hover:border-brand-800 hover:bg-brand-900 hover:text-white"
                   >
                     <span className="inline-flex items-center gap-2">
-                      <WhatsAppIcon size={15} /> Consultar Direito no RPPS
+                      <WhatsAppIcon size={15} /> Consultar Acordo Extrajudicial
                     </span>
                     <ArrowUpRight size={15} />
                   </a>
@@ -1154,18 +1167,18 @@ export default function Home() {
               <Heading
                 eyebrow="NOSSO COMPROMISSO PROFISSIONAL"
                 light
-                description="O reconhecimento como uma das advogadas mais recomendadas de São João del Rei e região (5,0 ★ no Google com 58 avaliações) reflete nossa dedicação intransigente em aliar conhecimento técnico de ponta e acolhimento humano."
+                description="O reconhecimento unânime com nota máxima 5,0 ★ no Google reflete nossa dedicação intransigente em aliar combatividade técnica, comunicação acolhedora e retorno rápido para cada cliente."
               >
-                Protegemos seu futuro com{" "}
+                Protegemos seus direitos com{" "}
                 <span className="italic text-brand-200">
                   seriedade, clareza e dedicação total.
                 </span>
               </Heading>
 
               <blockquote className="mt-8 rounded-xl border border-gold-300/25 bg-white/5 p-6 font-serif text-base italic leading-7 text-brand-100">
-                &ldquo;Eu NÃO faço o que posso para garantir a melhor aposentadoria para o cliente. Eu faço meu melhor. A falência da ação está em admitir a síndrome do possível.&rdquo;
+                &ldquo;Serviço de extrema atenção com muita eficiência e qualidade, ambas advogadas que lá trabalham desempenham suas atividades sendo ótimas ouvintes, com acompanhamento personalizado dos casos para que assim o resultado seja o melhor possível aos clientes!&rdquo;
                 <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-gold-300">
-                  — Mario Sérgio Cortella · Princípio de Atuação de Dra. Juliana Carvalho
+                  — Avaliação Verificada · Google Meu Negócio
                 </footer>
               </blockquote>
             </div>
@@ -1181,17 +1194,17 @@ export default function Home() {
                 [
                   "01",
                   "Atendimento Acolhedor & Escuta Qualificada",
-                  "Entendemos que benefícios previdenciários e direitos trabalhistas representam o sustento da sua família. Atendemos com paciência, ouvindo cada detalhe da sua história contributiva.",
+                  "Entendemos que conflitos jurídicos geram angústia e incerteza. Atendemos com paciência, ouvindo com atenção cada detalhe para traçar a melhor estratégia sob medida.",
                 ],
                 [
                   "02",
-                  "Cálculo Minucioso & Honestidade",
-                  "Não prometemos o impossível: fazemos simulações reais e transparentes para que você saiba exatamente quanto vai receber e em qual data é mais vantajoso dar entrada.",
+                  "Comunicação Clara & Devolutivas Frequentes",
+                  "Não deixamos clientes sem resposta. Explicamos cada etapa do processo em linguagem simples e descomplicada, mantendo você sempre informado.",
                 ],
                 [
                   "03",
-                  "Combatividade & Destravamento de Processos",
-                  "Não aceitamos respostas automáticas ou negativas injustas do INSS. Entramos com recursos sólidos e ações judiciais fundamentadas para assegurar a vitória do seu direito.",
+                  "Combatividade & Destravamento de Demandas",
+                  "Não aceitamos negativas automáticas de companhias aéreas ou empresas. Atuamos com firmeza e fundamentação técnica sólida para assegurar a vitória do seu direito.",
                 ],
               ].map(([number, title, description]) => (
                 <motion.div
@@ -1214,7 +1227,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Avaliações no Google (Depoimentos Reais - 5,0 estrelas · 58 avaliações) */}
+        {/* Avaliações no Google (Depoimentos Reais - 5,0 estrelas · 39 avaliações) */}
         <section
           id="avaliacoes"
           className="scroll-mt-24 bg-white py-20 sm:py-28 lg:py-32"
@@ -1223,11 +1236,11 @@ export default function Home() {
             <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
               <Heading
                 eyebrow="PROVA SOCIAL VERIFICADA · GOOGLE MEU NEGÓCIO"
-                description="Confira avaliações autênticas de clientes que confiaram suas causas previdenciárias e trabalhistas à Dra. Juliana Carvalho em São João del Rei e em todo o Brasil."
+                description="Confira avaliações autênticas de clientes que confiaram suas causas ao escritório Valadares e Souza - Sociedade de Advogadas em Ouro Preto e em todo o Brasil."
               >
                 Avaliada com nota máxima 5,0 ★ pela{" "}
                 <span className="italic text-brand-700">
-                  clareza técnica, dedicação e causas conquistadas.
+                  clareza técnica, atenção e resultados conquistados.
                 </span>
               </Heading>
 
@@ -1252,7 +1265,7 @@ export default function Home() {
                     </div>
                   </div>
                   <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-brand-900">
-                    Dra. Juliana Carvalho Advogada
+                    Valadares e Souza - Sociedade de Advogadas
                   </p>
                   <a
                     href={GOOGLE_MAPS_URL}
@@ -1260,7 +1273,7 @@ export default function Home() {
                     rel="noreferrer"
                     className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-brand-800 transition-colors hover:text-brand-950"
                   >
-                    58 avaliações no Google <ArrowUpRight size={13} />
+                    39 avaliações no Google <ArrowUpRight size={13} />
                   </a>
                 </div>
               </div>
@@ -1321,10 +1334,10 @@ export default function Home() {
             <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-brand-200/60 pt-8 sm:flex-row">
               <div className="flex flex-wrap items-center gap-2">
                 {[
-                  "10 anos de experiência",
-                  "Especialista em INSS e RPPS",
-                  "Atendimento acolhedor",
-                  "Planejamento com cálculo exato",
+                  "Especialistas em Passageiro Aéreo",
+                  "Resolução célere sem justiça",
+                  "Atendimento acolhedor e próximo",
+                  "Comunicação clara e transparente",
                   "Nota máxima 5,0 no Google",
                 ].map((tag) => (
                   <span
@@ -1343,7 +1356,7 @@ export default function Home() {
                 rel="noreferrer"
                 className="group inline-flex shrink-0 items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-brand-800 transition-colors hover:text-brand-950"
               >
-                Ver perfil e 58 avaliações no Google{" "}
+                Ver perfil e 39 avaliações no Google{" "}
                 <ArrowUpRight
                   size={15}
                   className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
@@ -1361,12 +1374,12 @@ export default function Home() {
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
-                eyebrow="CONTATO & SEDE EM SÃO JOÃO DEL REI - MG"
-                description="Agende seu atendimento presencial em nosso escritório na Av. Tiradentes ou inicie seu atendimento pelo WhatsApp com retorno ágil para qualquer lugar do país."
+                eyebrow="CONTATO & SEDE EM OURO PRETO - MG"
+                description="Agende seu atendimento presencial em nossa sede em Ouro Preto ou inicie seu atendimento online pelo WhatsApp com retorno ágil para qualquer lugar do Brasil."
               >
-                Estamos prontos para{" "}
+                Estamos prontas para{" "}
                 <span className="italic text-brand-700">
-                  garantir o seu direito.
+                  defender seus direitos.
                 </span>
               </Heading>
 
@@ -1397,10 +1410,10 @@ export default function Home() {
                       Horário de Funcionamento
                     </p>
                     <p className="mt-0.5">
-                      Segunda a Sexta-feira: Aberto a partir das 07:30
+                      Segunda a Sexta-feira: 08:00 às 18:00
                     </p>
                     <p className="text-[11px] text-ink-soft/80">
-                      Atendimento presencial com agendamento e atendimento online nacional
+                      Atendimento presencial com agendamento prévio e atendimento online nacional
                     </p>
                   </div>
                 </div>
@@ -1460,17 +1473,17 @@ export default function Home() {
                     Sede do Escritório
                   </p>
                   <p className="mt-1 font-serif text-2xl text-ink">
-                    São João del Rei · Minas Gerais
+                    Ouro Preto · Minas Gerais
                   </p>
                 </div>
               </div>
 
               <address className="mt-7 max-w-md text-[14px] not-italic leading-7 text-ink-soft">
                 <strong className="font-semibold text-ink">
-                  Dra. Juliana Carvalho Advocacia Especializada
+                  Valadares e Souza - Sociedade de Advogadas
                 </strong>
                 <br />
-                Especialista em INSS e RPPS (Servidores Públicos)
+                Dra. Patrícia Valadares & Dra. Iasmin Souza
                 <br />
                 {ADDRESS_TEXT}
               </address>
@@ -1483,7 +1496,7 @@ export default function Home() {
                 <div className="grid grid-cols-2 gap-y-1.5 text-ink-soft">
                   <span>Segunda a Sexta-feira</span>
                   <span className="text-right font-semibold text-ink">
-                    Abre às 07:30
+                    08:00 às 18:00
                   </span>
                   <span>Atendimento Presencial</span>
                   <span className="text-right font-semibold text-brand-700">
@@ -1498,7 +1511,7 @@ export default function Home() {
 
               <div className="flex flex-wrap items-center justify-between gap-4">
                 <p className="text-xs text-ink-soft">
-                  Av. Tiradentes, 707 · Centro, São João del Rei - MG
+                  R. João XXIII, 296 · Ouro Preto - MG
                 </p>
                 <a
                   href={GOOGLE_MAPS_URL}
@@ -1518,15 +1531,15 @@ export default function Home() {
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-7 sm:flex-row sm:items-center">
             <div>
               <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-gold-300">
-                <Sparkles size={13} /> DRA. JULIANA CARVALHO · SÃO JOÃO DEL REI - MG
+                <Sparkles size={13} /> VALADARES & SOUZA · SOCIEDADE DE ADVOGADAS
               </p>
               <h2 className="mt-3 max-w-2xl font-serif text-3xl leading-tight text-white sm:text-4xl">
-                Quer saber o momento certo e o maior valor para a sua aposentadoria?
+                Teve problemas com voo, negativação indevida ou precisa de assessoria jurídica?
               </h2>
             </div>
             <a
               href={getWhatsAppUrl(
-                "Olá, Dra. Juliana! Gostaria de agendar uma consulta inicial para analisar minha aposentadoria / benefício."
+                "Olá, doutoras! Gostaria de agendar uma consulta inicial com a Valadares e Souza Sociedade de Advogadas."
               )}
               target="_blank"
               rel="noreferrer"
@@ -1544,22 +1557,22 @@ export default function Home() {
             <div>
               <a
                 href="#inicio"
-                aria-label="Dra. Juliana Carvalho Advogada"
+                aria-label="Valadares e Souza Sociedade de Advogadas"
                 className="inline-block"
               >
                 <Image
                   src={LOGO_SRC}
-                  width={2172}
-                  height={724}
-                  alt="Dra. Juliana Carvalho Advogada Especialista em INSS e RPPS"
-                  className="h-14 w-auto object-contain sm:h-16"
+                  width={1060}
+                  height={200}
+                  alt="Valadares e Souza - Sociedade de Advogadas"
+                  className="h-11 w-auto object-contain sm:h-12"
                 />
               </a>
               <p className="mt-4 max-w-xs text-xs leading-6 text-brand-100/70">
-                ⚖️ Assessoria jurídica de excelência com atendimento humanizado, clareza e dedicação. Especialista em Direito Previdenciário (INSS e RPPS Servidores Públicos) e Trabalhista.
+                ⚖️ Assessoria jurídica de excelência com atendimento humanizado, clareza e dedicação. Especialistas em Direito do Passageiro Aéreo, Consumidor, Cível e Previdenciário.
               </p>
               <p className="mt-3 text-[11px] font-semibold text-gold-300">
-                Dra. Juliana Carvalho · OAB/MG
+                Dra. Patrícia Valadares & Dra. Iasmin Souza · OAB/MG
               </p>
             </div>
 
@@ -1572,7 +1585,7 @@ export default function Home() {
                   Início
                 </a>
                 <a className="footer-link" href="#sobre">
-                  Dra. Juliana Carvalho
+                  Sobre as Advogadas
                 </a>
                 <a className="footer-link" href="#atuacao">
                   Áreas de Atuação
@@ -1584,7 +1597,7 @@ export default function Home() {
                   Avaliações no Google (5,0 ★)
                 </a>
                 <a className="footer-link" href="#contato">
-                  Contato & Sede em São João del Rei
+                  Contato & Sede em Ouro Preto
                 </a>
               </div>
             </div>
@@ -1596,7 +1609,7 @@ export default function Home() {
               <div className="mt-4 flex flex-col items-start gap-2.5 text-xs text-brand-100/75">
                 <a
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Juliana! Gostaria de solicitar um atendimento com você."
+                    "Olá, doutoras! Gostaria de solicitar um atendimento com o escritório."
                   )}
                   target="_blank"
                   rel="noreferrer"
@@ -1635,7 +1648,7 @@ export default function Home() {
                   <span>{ADDRESS_TEXT}</span>
                 </a>
                 <p className="inline-flex items-center gap-2 pt-1 text-[11px] text-brand-200/80">
-                  <Clock size={14} className="shrink-0" /> Aberto a partir das 07:30
+                  <Clock size={14} className="shrink-0" /> Atendimento de Segunda a Sexta
                 </p>
               </div>
             </div>
@@ -1643,7 +1656,7 @@ export default function Home() {
 
           <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-white/15 pt-6 text-[10px] text-brand-100/55 sm:flex-row sm:items-center sm:justify-between">
             <p>
-              © {new Date().getFullYear()} DRA. JULIANA CARVALHO ADVOCACIA. Todos os direitos reservados.
+              © {new Date().getFullYear()} VALADARES E SOUZA - SOCIEDADE DE ADVOGADAS. Todos os direitos reservados.
             </p>
             <p>
               Conteúdo meramente informativo, em estrita conformidade com o Código de Ética e Disciplina da OAB.
@@ -1658,16 +1671,16 @@ export default function Home() {
         >
           <a
             href={getWhatsAppUrl(
-              "Olá, Dra. Juliana Carvalho! Gostaria de tirar uma dúvida sobre meu benefício / aposentadoria."
+              "Olá, Dra. Patrícia e Dra. Iasmin! Gostaria de tirar uma dúvida sobre meu caso."
             )}
             target="_blank"
             rel="noreferrer"
-            aria-label="Falar agora pelo WhatsApp com a Dra. Juliana Carvalho"
+            aria-label="Falar agora pelo WhatsApp com a Valadares e Souza"
             className="group relative flex size-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-[#25D366]/40"
           >
             <WhatsAppIcon size={28} />
             <span className="pointer-events-none absolute right-16 hidden whitespace-nowrap rounded-lg bg-brand-950 px-3.5 py-1.5 text-xs font-semibold text-white shadow-lg transition-opacity group-hover:block">
-              Falar com Dra. Juliana
+              Falar no WhatsApp
             </span>
           </a>
         </aside>

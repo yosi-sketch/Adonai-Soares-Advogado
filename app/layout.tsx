@@ -17,41 +17,43 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#17060d",
+  themeColor: "#1c070b",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.julianacarvalho.adv.br"),
+  metadataBase: new URL("https://www.valadaresesouza.adv.br"),
   title:
-    "Dra. Juliana Carvalho | Advogada Especialista em INSS e RPPS (Servidores Públicos) | São João del Rei - MG",
+    "Valadares & Souza | Sociedade de Advogadas · Ouro Preto - MG",
   description:
-    "Assessoria jurídica de excelência em Direito Previdenciário (INSS e RPPS Servidores Públicos) e Trabalhista com 10 anos de experiência. Dra. Juliana Carvalho. Planejamento previdenciário estratégico, concessão da melhor aposentadoria e benefícios. Sede na Av. Tiradentes, 707 - Centro, São João del Rei - MG. Avaliação máxima 5,0 ★ no Google com 58 avaliações.",
+    "Assessoria jurídica de excelência, humanizada e resolutiva. Dra. Patrícia Valadares e Dra. Iasmin Souza. Especialistas em Direito do Passageiro Aéreo (indenização por atraso, cancelamento e extravio de bagagem), Direito do Consumidor, Cível e Previdenciário. Sede na R. João XXIII, 296 - Ouro Preto, MG. Avaliação máxima 5,0 ★ no Google.",
   keywords: [
-    "Juliana Carvalho Advogada",
-    "Dra Juliana Carvalho",
-    "Advogada Especialista em INSS e RPPS",
-    "Direito Previdenciário São João del Rei",
-    "Advogado INSS São João del Rei MG",
-    "Aposentadoria Servidor Público RPPS",
-    "Planejamento Previdenciário São João del Rei",
-    "Advogada Previdenciarista Minas Gerais",
-    "Benefício por Incapacidade INSS",
-    "Auxílio-Acidente e Auxílio-Doença",
-    "BPC LOAS São João del Rei",
-    "Advogado Trabalhista São João del Rei",
-    "Av Tiradentes 707 São João del Rei",
-    "Escritório de Advocacia Previdenciária Campo das Vertentes",
+    "Valadares e Souza",
+    "Valadares e Souza Sociedade de Advogadas",
+    "Advogadas Ouro Preto MG",
+    "Dra Patricia Valadares",
+    "Dra Iasmin Souza",
+    "Direito do Passageiro Aéreo",
+    "Indenização Voo Cancelado",
+    "Atraso de Voo Reembolso Indenização",
+    "Extravio de Bagagem Companhia Aérea",
+    "Direito do Consumidor Ouro Preto",
+    "Reparação de Danos Ouro Preto",
+    "Advocacia Ouro Preto Minas Gerais",
+    "Rua João XXIII 296 Ouro Preto",
+    "Advogado de Viagens",
   ],
-  authors: [{ name: "Dra. Juliana Carvalho" }],
-  creator: "Dra. Juliana Carvalho — Advocacia Especializada",
-  publisher: "Dra. Juliana Carvalho — Advocacia Especializada",
+  authors: [
+    { name: "Dra. Patrícia Valadares" },
+    { name: "Dra. Iasmin Souza" },
+  ],
+  creator: "Valadares e Souza - Sociedade de Advogadas",
+  publisher: "Valadares e Souza - Sociedade de Advogadas",
   formatDetection: {
     telephone: true,
     address: true,
   },
   icons: {
     icon: [
-      { url: "/favicon.ico" },
       { url: "/icon.png", type: "image/png", sizes: "512x512" },
     ],
     apple: [
@@ -61,18 +63,18 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.julianacarvalho.adv.br",
+    url: "https://www.valadaresesouza.adv.br",
     title:
-      "Dra. Juliana Carvalho | Especialista em INSS e RPPS (Servidores Públicos)",
+      "Valadares & Souza | Sociedade de Advogadas · Ouro Preto - MG",
     description:
-      "Assessoria jurídica com 10 anos de experiência, dedicação incansável e atendimento humanizado. Concessão da melhor aposentadoria e defesa dos seus direitos previdenciários e trabalhistas. 5,0 ★ no Google (58 avaliações).",
-    siteName: "Juliana Carvalho Advocacia Previdenciária & Trabalhista",
+      "Assessoria jurídica com atendimento humanizado, rigor técnico e excelência. Defesa combativa em Direito do Passageiro Aéreo, Consumidor, Cível e Previdenciário. 5,0 ★ no Google (39 avaliações).",
+    siteName: "Valadares & Souza - Sociedade de Advogadas",
     images: [
       {
-        url: "/Monograma J&C em Borgonha Elegante.png",
-        width: 2172,
-        height: 724,
-        alt: "Dra. Juliana Carvalho Advogada — São João del Rei - MG",
+        url: "/valadares-souza-logo.png",
+        width: 1024,
+        height: 341,
+        alt: "Valadares & Souza - Sociedade de Advogadas",
       },
     ],
   },
@@ -86,37 +88,41 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Juliana Carvalho Advogada Especialista em INSS e RPPS (Servidores públicos)",
-    alternateName: "Juliana Carvalho Advocacia Previdenciária & Trabalhista",
+    name: "Valadares e Souza - Sociedade de Advogadas",
+    alternateName: "Valadares & Souza Sociedade de Advogadas",
     founder: [
       {
         "@type": "Person",
-        name: "Dra. Juliana Carvalho",
-        jobTitle:
-          "Advogada Especialista em Direito Previdenciário (INSS e RPPS) e Trabalhista",
+        name: "Dra. Patrícia Valadares",
+        jobTitle: "Advogada Sócia Fundadora",
+      },
+      {
+        "@type": "Person",
+        name: "Dra. Iasmin Souza",
+        jobTitle: "Advogada Sócia Fundadora",
       },
     ],
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Av. Tiradentes, 707 - Centro",
-      addressLocality: "São João del Rei",
+      streetAddress: "R. João XXIII, 296",
+      addressLocality: "Ouro Preto",
       addressRegion: "MG",
-      postalCode: "36307-346",
+      postalCode: "35404-332",
       addressCountry: "BR",
     },
-    telephone: "+55-32-98886-8022",
-    url: "https://www.julianacarvalho.adv.br",
-    image: "https://www.julianacarvalho.adv.br/Monograma%20J%26C%20em%20Borgonha%20Elegante.png",
+    telephone: "+55-31-97128-8470",
+    url: "https://www.valadaresesouza.adv.br",
+    image: "https://www.valadaresesouza.adv.br/valadares-souza-logo.png",
     priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "58",
+      reviewCount: "39",
     },
     areaServed: [
-      "São João del Rei",
-      "Campo das Vertentes",
+      "Ouro Preto",
       "Minas Gerais",
+      "Curitiba",
       "Brasil",
     ],
     openingHoursSpecification: [
@@ -129,7 +135,7 @@ export default function RootLayout({
           "Thursday",
           "Friday",
         ],
-        opens: "07:30",
+        opens: "08:00",
         closes: "18:00",
       },
     ],
