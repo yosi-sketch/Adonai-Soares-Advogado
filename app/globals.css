@@ -3,41 +3,45 @@
 :root {
   color-scheme: light;
   --brand-wine-light: #fbf7f6;
-  --brand-wine-accent: #be957f;
-  --brand-wine: #641e28;
-  --brand-wine-dark: #46141e;
-  --brand-obsidian: #1c070b;
-  --brand-ink: #1a090d;
-  --brand-ink-soft: #503c42;
-  --brand-pearl: #faf6f4;
+  --brand-wine-accent: #c68478;
+  --brand-wine: #621523;
+  --brand-wine-dark: #480e1a;
+  --brand-obsidian: #180509;
+  --brand-ink: #1a080c;
+  --brand-ink-soft: #553c42;
+  --brand-pearl: #faf6f5;
   --brand-paper: #ffffff;
 }
 
 @theme inline {
   --font-serif: var(--font-display), "Cormorant Garamond", "Playfair Display", "Times New Roman", serif;
   --font-sans: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
-  --color-ink: #1a090d;
-  --color-ink-soft: #503c42;
-  --color-pearl: #faf6f4;
+  --color-ink: #1a080c;
+  --color-ink-soft: #553c42;
+  --color-pearl: #faf6f5;
   --color-brand-50: #fbf7f6;
   --color-brand-100: #f6ece9;
   --color-brand-200: #ebd5cf;
   --color-brand-300: #dbb2a8;
-  --color-brand-400: #c48679;
-  --color-brand-500: #9e4453;
-  --color-brand-600: #7d2739;
-  --color-brand-700: #641e28;
-  --color-brand-800: #46141e;
-  --color-brand-900: #380e15;
-  --color-brand-950: #1c070b;
-  --color-gold-200: #f4ebe5;
-  --color-gold-300: #e4cfc2;
-  --color-gold-400: #d1b29f;
-  --color-gold-500: #be957f;
-  --shadow-card: 0 18px 48px rgba(28, 7, 11, 0.07);
-  --shadow-burgundy: 0 10px 30px rgba(100, 30, 40, 0.28);
-  --shadow-copper: 0 10px 30px rgba(100, 30, 40, 0.25);
-  --shadow-glow: 0 0 35px rgba(209, 178, 159, 0.3);
+  --color-brand-400: #c68478;
+  --color-brand-500: #9c4e48;
+  --color-brand-600: #7d2336;
+  --color-brand-700: #621523;
+  --color-brand-800: #480e1a;
+  --color-brand-900: #330a12;
+  --color-brand-950: #180509;
+  --color-gold-100: #fdf2ee;
+  --color-gold-200: #f6ddd4;
+  --color-gold-300: #e4ae9c;
+  --color-gold-400: #d29084;
+  --color-gold-500: #c68478;
+  --color-gold-600: #b06e62;
+  --color-gold-700: #8f4d42;
+  --shadow-card: 0 18px 48px rgba(24, 5, 9, 0.06);
+  --shadow-burgundy: 0 10px 30px rgba(98, 21, 35, 0.28);
+  --shadow-rosegold: 0 10px 30px rgba(198, 132, 120, 0.25);
+  --shadow-copper: 0 10px 30px rgba(98, 21, 35, 0.25);
+  --shadow-glow: 0 0 35px rgba(228, 174, 156, 0.35);
 }
 
 html {
@@ -53,7 +57,7 @@ body {
 }
 
 ::selection {
-  background: #641e28;
+  background: #621523;
   color: #ffffff;
 }
 
@@ -70,11 +74,11 @@ body {
 }
 
 .eyebrow {
-  color: #641e28;
+  color: #621523;
 }
 
 .eyebrow-light {
-  color: #e4cfc2;
+  color: #e4ae9c;
 }
 
 .eyebrow::before,
@@ -89,7 +93,7 @@ body {
 .nav-link {
   position: relative;
   padding-block: 0.5rem;
-  color: #e4cfc2;
+  color: #e4ae9c;
   font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -103,7 +107,7 @@ body {
   bottom: 0;
   left: 0;
   height: 1px;
-  background: #be957f;
+  background: #c68478;
   content: "";
   transform: scaleX(0);
   transform-origin: left;
@@ -131,17 +135,17 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #1c070b;
+  background: #180509;
 }
 
 ::-webkit-scrollbar-thumb {
-  border: 2px solid #1c070b;
+  border: 2px solid #180509;
   border-radius: 999px;
-  background: #641e28;
+  background: #621523;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #7d2739;
+  background: #7d2336;
 }
 
 @media (prefers-reduced-motion: reduce) {

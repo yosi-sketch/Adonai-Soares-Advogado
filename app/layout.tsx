@@ -17,37 +17,34 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#1c070b",
+  themeColor: "#180509",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.valadaresesouza.adv.br"),
+  metadataBase: new URL("https://www.giseleferreiraadv.com.br"),
   title:
-    "Valadares & Souza | Sociedade de Advogadas · Ouro Preto - MG",
+    "Gisele Ferreira Advogada · Advocacia Especializada em Nova Serrana - MG",
   description:
-    "Assessoria jurídica de excelência, humanizada e resolutiva. Dra. Patrícia Valadares e Dra. Iasmin Souza. Especialistas em Direito do Passageiro Aéreo (indenização por atraso, cancelamento e extravio de bagagem), Direito do Consumidor, Cível e Previdenciário. Sede na R. João XXIII, 296 - Ouro Preto, MG. Avaliação máxima 5,0 ★ no Google.",
+    "Assessoria jurídica de excelência, humanizada e resolutiva. Dra. Gisele Ferreira. Especialista em Direito de Família e Sucessões (divórcios, inventários, partilhas), Direito Previdenciário (INSS), Direito Civil, Consumidor e Resolução Extrajudicial. Sede na R. Europa, 176 - Belvedere, Nova Serrana - MG. Avaliação 4,9 ★ no Google.",
   keywords: [
-    "Valadares e Souza",
-    "Valadares e Souza Sociedade de Advogadas",
-    "Advogadas Ouro Preto MG",
-    "Dra Patricia Valadares",
-    "Dra Iasmin Souza",
-    "Direito do Passageiro Aéreo",
-    "Indenização Voo Cancelado",
-    "Atraso de Voo Reembolso Indenização",
-    "Extravio de Bagagem Companhia Aérea",
-    "Direito do Consumidor Ouro Preto",
-    "Reparação de Danos Ouro Preto",
-    "Advocacia Ouro Preto Minas Gerais",
-    "Rua João XXIII 296 Ouro Preto",
-    "Advogado de Viagens",
+    "Gisele Ferreira Advogada",
+    "Dra Gisele Ferreira",
+    "Advogada Nova Serrana MG",
+    "Advocacia Nova Serrana",
+    "Direito de Família Nova Serrana",
+    "Divórcio e Inventário Nova Serrana",
+    "Pensão Alimentícia Nova Serrana",
+    "Advogada Previdenciária Nova Serrana INSS",
+    "Aposentadoria INSS Nova Serrana",
+    "Advogada Belvedere Nova Serrana",
+    "Rua Europa 176 Belvedere Nova Serrana",
+    "Gisele Ferreira Advocacia",
   ],
   authors: [
-    { name: "Dra. Patrícia Valadares" },
-    { name: "Dra. Iasmin Souza" },
+    { name: "Dra. Gisele Ferreira" },
   ],
-  creator: "Valadares e Souza - Sociedade de Advogadas",
-  publisher: "Valadares e Souza - Sociedade de Advogadas",
+  creator: "Gisele Ferreira Advogada",
+  publisher: "Gisele Ferreira Advogada",
   formatDetection: {
     telephone: true,
     address: true,
@@ -63,18 +60,18 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.valadaresesouza.adv.br",
+    url: "https://www.giseleferreiraadv.com.br",
     title:
-      "Valadares & Souza | Sociedade de Advogadas · Ouro Preto - MG",
+      "Gisele Ferreira Advogada · Advocacia Especializada em Nova Serrana - MG",
     description:
-      "Assessoria jurídica com atendimento humanizado, rigor técnico e excelência. Defesa combativa em Direito do Passageiro Aéreo, Consumidor, Cível e Previdenciário. 5,0 ★ no Google (39 avaliações).",
-    siteName: "Valadares & Souza - Sociedade de Advogadas",
+      "Assessoria jurídica com atendimento humanizado, rigor técnico e excelência. Defesa dedicada em Direito de Família, Previdenciário, Cível e Consumidor. 4,9 ★ no Google com 12 avaliações.",
+    siteName: "Gisele Ferreira Advogada",
     images: [
       {
-        url: "/valadares-souza-logo.png",
+        url: "/logo-gisele-ferreira.png",
         width: 1024,
-        height: 341,
-        alt: "Valadares & Souza - Sociedade de Advogadas",
+        height: 682,
+        alt: "Gisele Ferreira Advogada - Logotipo Oficial",
       },
     ],
   },
@@ -88,41 +85,37 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Valadares e Souza - Sociedade de Advogadas",
-    alternateName: "Valadares & Souza Sociedade de Advogadas",
+    name: "Gisele Ferreira Advogada",
+    alternateName: "Dra. Gisele Ferreira Advocacia",
     founder: [
       {
         "@type": "Person",
-        name: "Dra. Patrícia Valadares",
-        jobTitle: "Advogada Sócia Fundadora",
-      },
-      {
-        "@type": "Person",
-        name: "Dra. Iasmin Souza",
-        jobTitle: "Advogada Sócia Fundadora",
+        name: "Dra. Gisele Ferreira",
+        jobTitle: "Advogada Fundadora",
       },
     ],
     address: {
       "@type": "PostalAddress",
-      streetAddress: "R. João XXIII, 296",
-      addressLocality: "Ouro Preto",
+      streetAddress: "R. Europa, 176 - Belvedere",
+      addressLocality: "Nova Serrana",
       addressRegion: "MG",
-      postalCode: "35404-332",
+      postalCode: "35526-720",
       addressCountry: "BR",
     },
-    telephone: "+55-31-97128-8470",
-    url: "https://www.valadaresesouza.adv.br",
-    image: "https://www.valadaresesouza.adv.br/valadares-souza-logo.png",
+    telephone: "+55-37-99164-2670",
+    url: "https://www.giseleferreiraadv.com.br",
+    image: "https://www.giseleferreiraadv.com.br/logo-gisele-ferreira.png",
     priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "5.0",
-      reviewCount: "39",
+      ratingValue: "4.9",
+      reviewCount: "12",
     },
     areaServed: [
-      "Ouro Preto",
+      "Nova Serrana",
       "Minas Gerais",
-      "Curitiba",
+      "Divinópolis",
+      "Bom Despacho",
       "Brasil",
     ],
     openingHoursSpecification: [
@@ -138,6 +131,9 @@ export default function RootLayout({
         opens: "08:00",
         closes: "18:00",
       },
+    ],
+    sameAs: [
+      "https://www.instagram.com/gisele.fferreiraadv/",
     ],
   };
 

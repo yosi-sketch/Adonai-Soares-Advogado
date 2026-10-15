@@ -11,6 +11,7 @@ interface GlowingButtonProps {
   size?: "sm" | "md" | "lg";
   variant?:
     | "burgundy"
+    | "rosegold"
     | "copper"
     | "bronze"
     | "silver"
@@ -37,10 +38,12 @@ export default function GlowingButton({
     lg: "px-7 py-4 text-xs tracking-[0.14em]",
   }[size];
 
-  // Metallic deep burgundy and luxury champagne gradients matching Valadares e Souza visual identity
+  // Metallic deep burgundy and luxury rose gold gradients matching Gisele Ferreira visual identity
   const variantClasses = {
     burgundy:
       "border border-rose-300/30 bg-gradient-to-r from-brand-700 via-brand-600 to-brand-700 text-white font-bold shadow-md shadow-brand-900/35 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-burgundy",
+    rosegold:
+      "border border-gold-300/50 bg-gradient-to-r from-gold-500 via-gold-400 to-gold-500 text-white font-bold shadow-md shadow-brand-950/25 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-rosegold",
     copper:
       "border border-rose-300/30 bg-gradient-to-r from-brand-700 via-brand-600 to-brand-700 text-white font-bold shadow-md shadow-brand-900/35 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-burgundy",
     bronze:

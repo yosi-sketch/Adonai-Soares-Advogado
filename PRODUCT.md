@@ -1,32 +1,32 @@
-# VALADARES E SOUZA — SOCIEDADE DE ADVOGADAS
-## Especialistas em Direito do Passageiro Aéreo, Consumidor, Cível e Previdenciário · Ouro Preto - MG
+# GISELE FERREIRA ADVOGADA
+## Advocacia Especializada em Direito de Família e Sucessões, Previdenciário (INSS), Cível e Consumidor · Nova Serrana - MG
 
 ## Plataforma
-Site institucional responsivo e de alto padrão desenvolvido em Next.js 16 (App Router), projetado para transmitir autoridade jurídica, combatividade, acolhimento humano e clareza técnica, com navegação fluida, modais interativos para detalhamento de áreas de atuação e integração direta com WhatsApp e Google Maps.
+Site institucional e landing page responsiva de altíssimo padrão desenvolvida em Next.js 16 (App Router) e Tailwind CSS v4, projetada para transmitir autoridade jurídica, combatividade, acolhimento humano, transparência e rigor técnico, com navegação fluida, modais interativos para detalhamento de áreas de atuação e integração direta com WhatsApp e Google Maps.
 
 ## Público
-Passageiros aéreos prejudicados por cancelamento ou atraso de voos e extravio de bagagens, consumidores com cobranças abusivas ou negativações indevidas, clientes que buscam elaboração de contratos, inventários, partilhas ou soluções extrajudiciais ágeis em Ouro Preto, Minas Gerais e em todo o território nacional.
+Famílias e pessoas físicas necessitando de divórcios, inventários ágeis em cartório ou judiciais, pensão alimentícia, guarda e planejamento sucessório; trabalhadores e segurados buscando aposentadorias, auxílios e BPC/LOAS no INSS; cidadãos lesados por negativações indevidas, fraudes bancárias ou quebras contratuais em Nova Serrana, Minas Gerais e em todo o território nacional.
 
 ## Objetivo
-Apresentar a Valadares e Souza - Sociedade de Advogadas, liderada pelas advogadas Dra. Patrícia Valadares e Dra. Iasmin Souza, sediada na R. João XXIII, 296 - Ouro Preto - MG, evidenciando a nota máxima de 5,0 estrelas com 39 avaliações no Google Meu Negócio, e facilitando o contato e consultoria imediata via WhatsApp.
+Apresentar a advocacia de excelência liderada pela Dra. Gisele Ferreira, sediada na R. Europa, 176 - Belvedere, Nova Serrana - MG, evidenciando a expressiva nota de 4,9 estrelas com 12 avaliações no Google Meu Negócio, e viabilizando o contato direto e consultoria imediata via WhatsApp.
 
 ## Identidade Visual
-- Marca: Valadares e Souza - Sociedade de Advogadas
-- Logotipo: Monograma metálico "VS" geométrico em ouro rosé / bronze champanhe com tipografia serifada clássica em bordô marsala (`public/valadares-souza-logo.png` e `public/Logotipo Jurídico Valadares & Souza.png`).
-- Paleta extraída diretamente do logo e posts da marca:
-  - Bordô Marsala Nobre (`#5A1E28`, `#641E28`, `#7D2739`, `#46141E`, `#1C070B`)
-  - Champanhe Bronze & Ouro Rosé metálico (`#BE957F`, `#D1B29F`, `#E4CFC2`, `#F4EBE5`)
-  - Preto Ônix / Obsidian Dark (`#1C070B`, `#1A090D`)
-  - Pérola e Marfim acolhedor (`#FAF6F4`, `#FBF7F6`, `#F6ECE9`)
-- Tipografia: Cormorant Garamond nos títulos (serifada elegante, clássica e alinhada ao logotipo) e Plus Jakarta Sans para leitura clara, moderna e acessível.
-- Tom: Combativo, técnico, transparente, acolhedor e altamente resolutivo.
+- Marca: Gisele Ferreira Advogada
+- Logotipo: Brasão clássico com balança da justiça e monograma "GF" em ouro rosé metálico e vinho marsala, acompanhado da tipografia serifada imperial "GISELE FERREIRA" (`public/logo-gisele-ferreira.png`, `public/logo.png`, `public/Logotipo Jurídico Gisele Ferreira.png`).
+- Paleta extraída diretamente do novo logo oficial:
+  - Vinho Marsala Nobre (`#621523`, `#7D2336`, `#480E1A`, `#330A12`)
+  - Ouro Rosé & Champanhe Rosé Metálico (`#C68478`, `#D29084`, `#E4AE9C`, `#F6DDD4`, `#9C4E48`)
+  - Preto Ônix / Obsidian Dark (`#180509`, `#1A080C`)
+  - Pérola e Marfim Nobre acolhedor (`#FAF6F5`, `#FBF7F6`, `#F6ECE9`)
+- Tipografia: Cormorant Garamond nos títulos (serifada elegante, clássica e de alta autoridade, alinhada à marca) e Plus Jakarta Sans para leitura clara, moderna e acessível no corpo de texto.
+- Tom de voz: Acolhedor, combativo, transparente, preciso e resolutivo.
 
 ## Conteúdo e Mídia
-- Logotipo oficial em alta definição (`public/valadares-souza-logo.png`).
-- Foto da equipe no escritório com Dra. Patrícia e Dra. Iasmin (`public/valadares-souza-equipe.jpg`).
-- Foto de atuação e atendimento (`public/valadares-souza-atendimento.png`).
-- Endereço físico: R. João XXIII, 296 - Ouro Preto, MG, 35404-332, Brasil.
-- Telefone / WhatsApp: (31) 97128-8470.
-- Redes Sociais: Instagram @valadaresesouza (https://www.instagram.com/valadaresesouza/).
+- Logotipo oficial em alta definição (`public/logo-gisele-ferreira.png`, `public/logo.png`).
+- Foto hero: Dra. Gisele Ferreira no escritório com laptop e livro de Direito de Família (`public/dra-gisele-ferreira-mesa.png`, `public/hero.png`).
+- Foto sobre: Dra. Gisele Ferreira em traje social preto elegante (`public/dra-gisele-ferreira-perfil.png`, `public/sobre.png`).
+- Endereço físico: R. Europa, 176 - Belvedere, Nova Serrana - MG, 35526-720, Brasil.
+- Telefone / WhatsApp: (37) 99164-2670.
+- Redes Sociais: Instagram @gisele.fferreiraadv (https://www.instagram.com/gisele.fferreiraadv/).
 - Horário de funcionamento: Segunda a Sexta-feira das 08:00 às 18:00.
-- Prova social: 5,0 estrelas com 39 avaliações no Google Meu Negócio.
+- Prova social: 4,9 estrelas com 12 avaliações no Google Meu Negócio.

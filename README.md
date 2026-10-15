@@ -1,15 +1,15 @@
-# VALADARES E SOUZA — SOCIEDADE DE ADVOGADAS
-## Especialistas em Direito do Passageiro Aéreo, Consumidor, Cível e Previdenciário · Ouro Preto - MG
+# GISELE FERREIRA ADVOGADA
+## Advocacia Especializada em Direito de Família e Sucessões, Previdenciário (INSS), Cível e Consumidor · Nova Serrana - MG
 
-Site institucional de alto padrão da **Valadares e Souza - Sociedade de Advogadas**, liderada pelas advogadas **Dra. Patrícia Valadares** e **Dra. Iasmin Souza**, sediada na R. João XXIII, 296 - Ouro Preto, MG, com atuação de destaque em indenizações contra companhias aéreas, defesa do consumidor, direito civil e resolução extrajudicial de litígios.
+Site institucional e landing page de alto padrão da **Dra. Gisele Ferreira**, sediada na R. Europa, 176 - Belvedere, Nova Serrana - MG, com atuação de destaque em Direito de Família e Sucessões (divórcios, inventários, partilhas), concessão e revisão de benefícios do INSS, contratos civis e resolução extrajudicial de litígios.
 
 ## Destaques
-- **Identidade Visual Nobre em Bordô Marsala & Bronze Rosé / Champanhe:** Paleta extraída diretamente do novo logotipo oficial, combinando tons nobres de vinho e marsala (`#5A1E28`, `#641E28`, `#1C070B`) com o requinte do monograma em ouro rosé e champanhe bronze (`#BE957F`, `#D1B29F`, `#E4CFC2`) e fundo em pérola marfim acolhedor (`#FAF6F4`).
-- **Tipografia Refinada:** Cormorant Garamond nos títulos em perfeita harmonia com o serif romano clássico do logotipo e Plus Jakarta Sans para leitura clara, moderna e acessível.
-- **Prova Social Verificada:** Avaliação máxima de 5,0 estrelas com 39 avaliações reais no Google Meu Negócio.
-- **Contato Ágil:** WhatsApp (31) 97128-8470 com mensagens contextualizadas por área de atuação.
-- **Localização:** R. João XXIII, 296 - Ouro Preto, MG, 35404-332, Brasil.
-- **Instagram:** [@valadaresesouza](https://www.instagram.com/valadaresesouza/)
+- **Identidade Visual Nobre em Vinho Marsala & Ouro Rosé Metálico:** Paleta extraída diretamente do novo logotipo oficial, combinando o tom marcante do monograma "G" em vinho marsala nobre (`#621523`, `#7D2336`, `#180509`) com o requinte do monograma "F" e da balança em ouro rosé metálico (`#C68478`, `#D29084`, `#E4AE9C`, `#F6DDD4`) e fundo em pérola marfim acolhedor (`#FAF6F5`).
+- **Tipografia Refinada:** Cormorant Garamond nos títulos em harmonia com a tipografia romana clássica do logotipo e Plus Jakarta Sans para leitura clara, moderna e acessível.
+- **Prova Social Verificada:** Avaliação de 4,9 estrelas com 12 avaliações reais e verificadas no Google Meu Negócio.
+- **Contato Ágil:** WhatsApp (37) 99164-2670 com mensagens contextualizadas por área de atuação e botão flutuante para contato instantâneo.
+- **Localização:** R. Europa, 176 - Belvedere, Nova Serrana - MG, 35526-720, Brasil.
+- **Instagram:** [@gisele.fferreiraadv](https://www.instagram.com/gisele.fferreiraadv/)
 - **Horário de Atendimento:** Segunda a Sexta-feira das 08:00 às 18:00.
 
 ## Tecnologias
