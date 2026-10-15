@@ -1,9 +1,9 @@
 import type { Metadata, Viewport } from "next";
-import { Cinzel, Cormorant_Garamond, Plus_Jakarta_Sans } from "next/font/google";
+import { Playfair_Display, Cormorant_Garamond, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
-const cinzelFont = Cinzel({
-  variable: "--font-cinzel",
+const playfairFont = Playfair_Display({
+  variable: "--font-serif",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800", "900"],
   display: "swap",
@@ -24,35 +24,33 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#07090e",
+  themeColor: "#0d090b",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.hudsondefreitas.adv.br"),
+  metadataBase: new URL("https://www.leticiasaldanha.adv.br"),
   title:
-    "Dr. Hudson de Freitas · Advogado Criminalista em Ituiutaba - MG",
+    "Dra. Letícia Saldanha · Advocacia Trabalhista & Previdenciária em Cataguases - MG",
   description:
-    "Defesa criminal estratégica, combativa e intransigente em Ituiutaba - MG e tribunais de todo o Brasil. Dr. Hudson de Freitas Advogado Criminalista. Plantão 24h para flagrantes, audiência de custódia, inquérito policial, Tribunal do Júri e habeas corpus perante TJMG, STJ e STF. Sede na Av. Minas Gerais, 15 - Camargo, Ituiutaba - MG. Avaliação 4,9 ★ no Google.",
+    "Advocacia especializada, humanizada e combativa em Direito Trabalhista e Previdenciário (INSS, BPC/LOAS, Aposentadorias, Auxílios e Rescisão Indireta). Atendimento presencial no Calçadão Shopping (Cataguases - MG) e online em todo o Brasil. Nota 4,9 ★ no Google com mais de 70 avaliações.",
   keywords: [
-    "Dr Hudson de Freitas",
-    "Hudson de Freitas Advogado",
-    "Advogado Criminal Ituiutaba",
-    "Advogado Criminalista Ituiutaba MG",
-    "Advocacia Criminal Ituiutaba",
-    "Plantão Criminal 24h Ituiutaba",
-    "Audiência de Custódia Ituiutaba",
-    "Prisão em Flagrante Ituiutaba",
-    "Tribunal do Júri Ituiutaba",
-    "Habeas Corpus TJMG STJ STF",
-    "Advogado Penal Ituiutaba",
-    "Defesa Criminal Ituiutaba MG",
-    "Av Minas Gerais 15 Camargo Ituiutaba",
+    "Letícia Saldanha Advocacia",
+    "Dra Letícia Saldanha",
+    "Advogada em Cataguases",
+    "Advogada Trabalhista Cataguases MG",
+    "Advocacia Previdenciária Cataguases",
+    "Aposentadoria INSS Cataguases",
+    "BPC LOAS Cataguases MG",
+    "Auxílio Doença INSS Cataguases",
+    "Rescisão Indireta do Trabalho",
+    "Calçadão Shopping Cataguases",
+    "Advogado Zona da Mata Mineira",
+    "Consultoria Jurídica Trabalhista MG",
+    "Direito Previdenciário Minas Gerais",
   ],
-  authors: [
-    { name: "Dr. Hudson de Freitas" },
-  ],
-  creator: "Dr. Hudson de Freitas Advogado Criminal",
-  publisher: "Dr. Hudson de Freitas Advogado Criminal",
+  authors: [{ name: "Dra. Letícia Saldanha" }],
+  creator: "Letícia Saldanha Advocacia e Consultoria Especializada",
+  publisher: "Letícia Saldanha Advocacia e Consultoria Especializada",
   formatDetection: {
     telephone: true,
     address: true,
@@ -65,25 +63,23 @@ export const metadata: Metadata = {
       { url: "/icon.png", type: "image/png", sizes: "512x512" },
     ],
     shortcut: "/favicon.ico",
-    apple: [
-      { url: "/apple-icon.png", sizes: "180x180" },
-    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180" }],
   },
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.hudsondefreitas.adv.br",
+    url: "https://www.leticiasaldanha.adv.br",
     title:
-      "Dr. Hudson de Freitas · Advogado Criminalista em Ituiutaba - MG",
+      "Dra. Letícia Saldanha · Advocacia Trabalhista & Previdenciária em Cataguases - MG",
     description:
-      "Defesa penal de alta complexidade, combate técnico e disponibilidade imediata. Atuação em flagrantes, inquéritos, Tribunal do Júri e Tribunais Superiores. Avaliação 4,9 ★ no Google com 10 avaliações.",
-    siteName: "Dr. Hudson de Freitas Advogado Criminal",
+      "Atendimento humanizado, combativo e acolhedor para proteger seus direitos no trabalho e garantir seus benefícios no INSS. Nota 4,9 ★ no Google com mais de 70 avaliações.",
+    siteName: "Letícia Saldanha Advocacia",
     images: [
       {
-        url: "/logo-hudson-de-freitas.png",
+        url: "/logo-leticia-saldanha.png",
         width: 1024,
-        height: 682,
-        alt: "Dr. Hudson de Freitas Advocacia - Logotipo Oficial",
+        height: 512,
+        alt: "Letícia Saldanha Advocacia e Consultoria Especializada - Logotipo Oficial",
       },
     ],
   },
@@ -97,39 +93,40 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Dr. Hudson de Freitas Advogado Criminal",
-    alternateName: "Hudson de Freitas Advocacia",
+    name: "Letícia Saldanha Advocacia",
+    alternateName: "Letícia Saldanha Advocacia e Consultoria Especializada",
     founder: [
       {
         "@type": "Person",
-        name: "Dr. Hudson de Freitas",
-        jobTitle: "Advogado Criminalista",
+        name: "Dra. Letícia Saldanha",
+        jobTitle: "Advogada Trabalhista e Previdenciarista",
       },
     ],
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Av. Minas Gerais, 15 - Camargo",
-      addressLocality: "Ituiutaba",
+      streetAddress: "Praça Rui Barbosa, 170 - Sl 108 - Centro (Calçadão Shopping)",
+      addressLocality: "Cataguases",
       addressRegion: "MG",
-      postalCode: "38305-006",
+      postalCode: "36770-034",
       addressCountry: "BR",
     },
-    telephone: "+55-34-99973-7556",
-    url: "https://www.hudsondefreitas.adv.br",
-    image: "https://www.hudsondefreitas.adv.br/logo-hudson-de-freitas.png",
-    priceRange: "$$$",
+    telephone: "+55-32-98499-7442",
+    url: "https://www.leticiasaldanha.adv.br",
+    image: "https://www.leticiasaldanha.adv.br/logo-leticia-saldanha.png",
+    priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "4.9",
-      reviewCount: "10",
+      reviewCount: "70",
     },
     areaServed: [
-      "Ituiutaba",
-      "Triângulo Mineiro",
+      "Cataguases",
+      "Leopoldina",
+      "Muriaé",
+      "Ubá",
+      "Juiz de Fora",
+      "Zona da Mata Mineira",
       "Minas Gerais",
-      "Uberlândia",
-      "Capinópolis",
-      "Santa Vitória",
       "Brasil",
     ],
     openingHoursSpecification: [
@@ -141,22 +138,18 @@ export default function RootLayout({
           "Wednesday",
           "Thursday",
           "Friday",
-          "Saturday",
-          "Sunday",
         ],
-        opens: "00:00",
-        closes: "23:59",
+        opens: "09:00",
+        closes: "18:00",
       },
     ],
-    sameAs: [
-      "https://www.instagram.com/hudsondefreitasfreitas/",
-    ],
+    sameAs: ["https://www.instagram.com/leticiasaldanha.adv/"],
   };
 
   return (
     <html
       lang="pt-BR"
-      className={`${bodyFont.variable} ${displayFont.variable} ${cinzelFont.variable} scroll-smooth`}
+      className={`${bodyFont.variable} ${displayFont.variable} ${playfairFont.variable} scroll-smooth`}
     >
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -168,7 +161,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen overflow-x-clip bg-[#07090e] font-sans text-slate-100 antialiased selection:bg-brand-400 selection:text-brand-950">
+      <body className="min-h-screen overflow-x-clip bg-[#0d090b] font-sans text-stone-100 antialiased selection:bg-[#d49389] selection:text-[#0d090b]">
         {children}
       </body>
     </html>

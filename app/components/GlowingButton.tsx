@@ -10,8 +10,8 @@ interface GlowingButtonProps {
   className?: string;
   size?: "sm" | "md" | "lg";
   variant?:
-    | "burgundy"
     | "rosegold"
+    | "burgundy"
     | "copper"
     | "bronze"
     | "silver"
@@ -30,7 +30,7 @@ export default function GlowingButton({
   onClick,
   className = "",
   size = "md",
-  variant = "gold",
+  variant = "rosegold",
 }: GlowingButtonProps) {
   const sizeClasses = {
     sm: "px-5 py-3 text-[10px] tracking-[0.13em]",
@@ -38,34 +38,34 @@ export default function GlowingButton({
     lg: "px-7 py-4 text-xs tracking-[0.14em]",
   }[size];
 
-  // Metallic champagne gold, bronze and luxury obsidian gradients matching Dr. Hudson de Freitas visual identity
+  // Metallic rose gold, marsala wine and velvet plum obsidian gradients for Letícia Saldanha Advocacia
   const variantClasses = {
-    burgundy:
-      "border border-amber-300/40 bg-gradient-to-r from-brand-500 via-gold-400 to-brand-500 text-brand-950 font-bold shadow-md shadow-brand-950/25 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-gold",
-    gold:
-      "border border-amber-300/40 bg-gradient-to-r from-brand-500 via-gold-400 to-brand-500 text-brand-950 font-bold shadow-md shadow-brand-950/25 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-gold",
     rosegold:
-      "border border-gold-400/50 bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 text-brand-950 font-bold shadow-md shadow-brand-950/25 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-gold",
+      "border border-rose-200/50 bg-gradient-to-r from-[#c47d73] via-[#e8aea6] to-[#c47d73] text-[#190c10] font-bold shadow-md shadow-[#0d090b]/40 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-rosegold",
+    gold:
+      "border border-rose-200/50 bg-gradient-to-r from-[#c47d73] via-[#e8aea6] to-[#c47d73] text-[#190c10] font-bold shadow-md shadow-[#0d090b]/40 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-rosegold",
+    burgundy:
+      "border border-[#d49389]/40 bg-gradient-to-r from-[#4a1521] via-[#682330] to-[#4a1521] text-[#fdf5f3] font-bold shadow-md shadow-[#0d090b]/30 hover:-translate-y-0.5 hover:brightness-115 hover:shadow-rosegold",
     copper:
-      "border border-brand-400/40 bg-gradient-to-r from-brand-600 via-brand-500 to-brand-600 text-white font-bold shadow-md shadow-brand-950/30 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-gold",
+      "border border-[#d49389]/40 bg-gradient-to-r from-[#b36b61] via-[#d49389] to-[#b36b61] text-white font-bold shadow-md shadow-[#0d090b]/30 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-rosegold",
     bronze:
-      "border border-brand-500/40 bg-gradient-to-r from-brand-700 via-brand-600 to-brand-700 text-white font-bold shadow-md shadow-brand-950/40 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-gold",
+      "border border-[#914f46]/40 bg-gradient-to-r from-[#6b3730] via-[#914f46] to-[#6b3730] text-white font-bold shadow-md shadow-[#0d090b]/40 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-rosegold",
     platinum:
-      "border border-brand-300/60 bg-gradient-to-r from-brand-100 via-white to-brand-200 text-brand-950 font-bold shadow-md shadow-brand-950/15 hover:-translate-y-0.5 hover:shadow-gold hover:brightness-105",
+      "border border-rose-100/60 bg-gradient-to-r from-[#faeae6] via-white to-[#faeae6] text-[#191115] font-bold shadow-md shadow-[#0d090b]/15 hover:-translate-y-0.5 hover:shadow-rosegold hover:brightness-105",
     silver:
-      "border border-brand-300/60 bg-gradient-to-r from-brand-100 via-white to-brand-200 text-brand-950 font-bold shadow-md shadow-brand-950/15 hover:-translate-y-0.5 hover:shadow-gold hover:brightness-105",
+      "border border-rose-100/60 bg-gradient-to-r from-[#faeae6] via-white to-[#faeae6] text-[#191115] font-bold shadow-md shadow-[#0d090b]/15 hover:-translate-y-0.5 hover:shadow-rosegold hover:brightness-105",
     champagne:
-      "border border-gold-300/60 bg-gradient-to-r from-brand-50 via-gold-200 to-brand-100 text-brand-950 font-bold shadow-sm hover:-translate-y-0.5 hover:shadow-gold hover:brightness-105",
+      "border border-[#f2d2cb]/60 bg-gradient-to-r from-[#fdf5f3] via-[#faeae6] to-[#fdf5f3] text-[#191115] font-bold shadow-sm hover:-translate-y-0.5 hover:shadow-rosegold hover:brightness-105",
     dark:
-      "border border-gold-400/35 bg-brand-950 text-gold-300 shadow-sm shadow-brand-950/50 hover:-translate-y-0.5 hover:border-gold-300 hover:bg-brand-900 hover:text-white hover:shadow-gold",
+      "border border-[#d49389]/35 bg-[#140e11] text-[#f2d2cb] shadow-sm shadow-[#0d090b]/50 hover:-translate-y-0.5 hover:border-[#e8aea6] hover:bg-[#22161c] hover:text-white hover:shadow-rosegold",
     outline:
-      "border border-brand-500/50 bg-transparent text-brand-700 hover:-translate-y-0.5 hover:border-brand-600 hover:bg-brand-50 hover:text-brand-950",
+      "border border-[#d49389]/60 bg-transparent text-[#e8aea6] hover:-translate-y-0.5 hover:border-[#f2d2cb] hover:bg-[#d49389]/15 hover:text-white",
     white:
-      "border border-brand-200 bg-white text-brand-950 shadow-sm hover:-translate-y-0.5 hover:bg-brand-50 hover:text-brand-950 hover:shadow-md",
+      "border border-[#f2d2cb] bg-white text-[#191115] shadow-sm hover:-translate-y-0.5 hover:bg-[#fdf5f3] hover:text-[#0d090b] hover:shadow-md",
   }[variant];
 
   const classes =
-    "inline-flex items-center justify-center gap-2 rounded-lg font-bold uppercase transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-amber-400 select-none text-center cursor-pointer " +
+    "inline-flex items-center justify-center gap-2 rounded-lg font-bold uppercase transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#d49389] select-none text-center cursor-pointer " +
     sizeClasses +
     " " +
     variantClasses +

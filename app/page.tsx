@@ -9,22 +9,23 @@ import {
   type Variants,
 } from "framer-motion";
 import {
-  AlertTriangle,
+  AlertCircle,
   ArrowRight,
   ArrowUpRight,
   Award,
   CheckCircle2,
   Clock,
+  FileCheck,
   FileSearch,
   FileText,
-  Gavel,
+  HandHeart,
+  HeartHandshake,
   Landmark,
   Mail,
   MapPin,
   Menu,
   Phone,
   Scale,
-  ShieldAlert,
   ShieldCheck,
   Sparkles,
   Star,
@@ -33,28 +34,28 @@ import {
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
 
-const WHATSAPP_NUMBER = "5534999737556";
-const PHONE_DISPLAY = "(34) 99973-7556";
-const EMAIL_CONTACT = "contato@hudsondefreitas.adv.br";
-const INSTAGRAM_URL = "https://www.instagram.com/hudsondefreitasfreitas/";
-const INSTAGRAM_HANDLE = "@hudsondefreitasfreitas";
+const WHATSAPP_NUMBER = "5532984997442";
+const PHONE_DISPLAY = "(32) 98499-7442";
+const EMAIL_CONTACT = "contato@leticiasaldanha.adv.br";
+const INSTAGRAM_URL = "https://www.instagram.com/leticiasaldanha.adv/";
+const INSTAGRAM_HANDLE = "@leticiasaldanha.adv";
 
 const ADDRESS_TEXT =
-  "Av. Minas Gerais, 15 - Camargo, Ituiutaba - MG, 38305-006, Brasil";
+  "Praça Rui Barbosa, 170 - Sl 108 - Centro, Cataguases - MG, 36770-034 (Calçadão Shopping)";
 const GOOGLE_MAPS_URL =
-  "https://www.google.com/maps/search/?api=1&query=Av+Minas+Gerais,+15+-+Camargo,+Ituiutaba+-+MG,+38305-006";
+  "https://www.google.com/maps/search/?api=1&query=Let%C3%ADcia+Saldanha+Advocacia+Pra%C3%A7a+Rui+Barbosa+170+Cataguases+MG";
 
 const LOGO_SRC = "/logo-trimmed.png";
-const LOGO_FULL_SRC = "/logo-hudson-de-freitas.png";
-const FOTO_HERO_SRC = "/dr-hudson-em-pe.png";
-const FOTO_SOBRE_SRC = "/dr-hudson-mesa.png";
+const LOGO_FULL_SRC = "/logo-leticia-saldanha.png";
+const FOTO_HERO_SRC = "/leticia-elegante.png";
+const FOTO_SOBRE_SRC = "/leticia-apresentacao.png";
 
 function getWhatsAppUrl(
   message?: string,
   number: string = WHATSAPP_NUMBER
 ) {
   const defaultText =
-    "Olá, Dr. Hudson de Freitas! Gostaria de consultar sobre um caso criminal e agendar um atendimento urgente.";
+    "Olá, Dra. Letícia Saldanha! Gostaria de consultar sobre meus direitos trabalhistas / previdenciários e agendar um atendimento.";
   return `https://wa.me/${number}?text=${encodeURIComponent(
     message || defaultText
   )}`;
@@ -164,175 +165,207 @@ interface PracticeArea {
 
 const practiceAreas: PracticeArea[] = [
   {
-    id: "flagrantes-audiencia-de-custodia-24h",
-    title: "Prisões em Flagrante & Audiência de Custódia (24h)",
-    icon: ShieldAlert,
-    tag: "Flagrantes · Custódia · Liberdade Provisória · 24 Horas",
-    summary:
-      "Atuação emergencial e presencial desde o primeiro momento da prisão para combater ilegalidades, evitar prisões preventivas injustas e resguardar a integridade do cliente.",
-    details:
-      "Os momentos que se seguem a uma prisão em flagrante são os mais decisivos de todo o processo criminal. A presença combativa do Dr. Hudson de Freitas na delegacia e na audiência de custódia garante o respeito intransigente às garantias constitucionais, a fiscalização rigorosa de eventuais excessos policiais e a sustentação oral técnica para a concessão de liberdade provisória ou revogação de prisão ilegal.",
-    topics: [
-      "Plantão criminal 24 horas para atendimento presencial em delegacias",
-      "Sustentação oral combativa e técnica em Audiência de Custódia",
-      "Pedido de relaxamento de prisão manifestamente ilegal ou abusiva",
-      "Requerimento estratégico de Liberdade Provisória com ou sem fiança",
-      "Substituição de prisão preventiva por medidas cautelares diversas",
-      "Acolhimento imediato, orientação jurídica e tranquilidade para a família",
-    ],
-    whatsAppText:
-      "Olá, Dr. Hudson de Freitas! Preciso de atendimento urgente para prisão em flagrante / audiência de custódia.",
-  },
-  {
-    id: "inquerito-policial-defesa-investigativa",
-    title: "Inquérito Policial & Investigação Defensiva",
-    icon: FileSearch,
-    tag: "Polícia Civil & Federal · Oitivas · Investigação Preliminar",
-    summary:
-      "Acompanhamento minucioso de depoimentos, acesso irrestrito aos autos de investigação e produção ativa de provas defensivas para arquivar o inquérito antes da denúncia.",
-    details:
-      "O inquérito policial não é mero procedimento administrativo; é a fase onde a acusação tenta construir sua narrativa. A atuação precoce do Dr. Hudson de Freitas impede confissões induzidas, assegura o direito constitucional ao silêncio sem prejuízo da defesa, viabiliza o trancamento de investigações infundadas e propõe Acordos de Não Persecução Penal (ANPP) quando cabíveis.",
-    topics: [
-      "Acompanhamento presencial em oitivas e interrogatórios policiais",
-      "Acesso amplo aos elementos de prova documentados (Súmula Vinculante 14)",
-      "Produção de provas documentais e periciais pela Investigação Defensiva",
-      "Impetração de Habeas Corpus para trancamento de inquérito sem justa causa",
-      "Negociação e formalização de Acordo de Não Persecução Penal (ANPP)",
-      "Defesa técnica em pedidos de busca e apreensão e quebras de sigilo",
-    ],
-    whatsAppText:
-      "Olá, Dr. Hudson! Gostaria de uma consultoria para acompanhamento em Inquérito Policial / Depoimento.",
-  },
-  {
-    id: "tribunal-do-juri-crimes-contra-a-vida",
-    title: "Tribunal do Júri & Crimes Dolosos contra a Vida",
-    icon: Gavel,
-    tag: "Júri Popular · Homicídios · Tentativas · Plenário",
-    summary:
-      "Oratória persuasiva, preparação minuciosa de teses e atuação enérgica em plenário perante o Conselho de Sentença para proteger a vida e a liberdade do réu.",
-    details:
-      "O Tribunal do Júri é o ápice da advocacia criminal, onde a técnica jurídica deve se somar à oratória convincente e à profunda análise psicológica dos jurados. Dr. Hudson de Freitas analisa laudos periciais, balísticos e necroscópicos com rigor científico para desestruturar a tese da acusação, sustentando com veemência a legítima defesa, o afastamento de qualificadoras e a absolvição em plenário.",
-    topics: [
-      "Defesa integral na 1ª fase do Júri (resposta à acusação, audiência de instrução e pronúncia)",
-      "Recurso em Sentido Estrito (RESE) contra pronúncia indevida",
-      "Atuação combativa e sustentação oral enérgica no Plenário do Júri",
-      "Teses sólidas de legítima defesa, inexigibilidade de conduta diversa e negativa de autoria",
-      "Desclassificação para crimes não dolosos contra a vida ou lesão corporal",
-      "Combate ao excesso de acusação e exclusão de qualificadoras injustas",
-    ],
-    whatsAppText:
-      "Olá, Dr. Hudson! Gostaria de consultoria especializada para atuação em caso do Tribunal do Júri.",
-  },
-  {
-    id: "habeas-corpus-recursos-superiores",
-    title: "Habeas Corpus & Recursos nos Tribunais Superiores",
+    id: "aposentadorias-planejamento-inss",
+    title: "Aposentadorias do INSS & Planejamento Previdenciário",
     icon: Landmark,
-    tag: "TJMG · STJ · STF · Liberdade · Nulidades Processuais",
+    tag: "Aposentadorias · Regras de Transição · CNIS · Planejamento",
     summary:
-      "Elaboração combativa de remédios constitucionais urgentes perante o TJMG, STJ e STF para anular decisões abusivas e restabelecer a liberdade plena do cidadão.",
+      "Planejamento previdenciário estratégico e requerimento de aposentadorias para garantir o valor máximo do seu benefício, sem perda de tempo ou dinheiro com o INSS.",
     details:
-      "Decisões judiciais arbitrárias ou desprovidas de fundamentação concreta encontram freio nos Tribunais Superiores. O escritório atua na impetração de Habeas Corpus preventivos e liberatórios com pedido liminar urgente, além de interpor Recursos em Sentido Estrito, Apelações, Recursos Especiais ao STJ e Recursos Extraordinários ao STF em Brasília, incluindo despachos presenciais e virtuais com relatores.",
+      "A aposentadoria é a conquista de uma vida inteira de trabalho. Com as constantes mudanças legislativas e regras de transição complexas, muitos segurados se aposentam precocemente com valores reduzidos ou enfrentam demoras indevidas. A Dra. Letícia Saldanha realiza um estudo minucioso de cada vínculo no CNIS, averba períodos rurais e especiais, e conduz seu processo administrativo e judicial com precisão.",
     topics: [
-      "Habeas Corpus com pedido liminar urgente para revogação imediata de prisão",
-      "Arguição de nulidades absolutas e ilicitude de provas obtidas ilegalmente",
-      "Recurso de Apelação Criminal contra sentenças condenatórias injustas",
-      "Recurso Especial perante o STJ e Recurso Extraordinário perante o STF",
-      "Despacho direto de memoriais defensivos com Desembargadores e Ministros",
-      "Sustentação oral nas Câmaras Criminais do TJMG e nas Turmas do STJ/STF",
+      "Aposentadoria por Idade Urbana e Rural com cômputo de períodos campesinos",
+      "Aposentadoria por Tempo de Contribuição e cálculo da Regra de Transição mais vantajosa",
+      "Aposentadoria Especial para trabalhadores expostos a agentes nocivos e insalubridade",
+      "Aposentadoria da Pessoa com Deficiência (PCD) com requisitos diferenciados",
+      "Planejamento Previdenciário Preventivo para projetar o momento e valor ideal",
+      "Acerto de vínculos, pendências e indicadores extemporâneos no CNIS",
     ],
     whatsAppText:
-      "Olá, Dr. Hudson! Gostaria de uma análise para impetração de Habeas Corpus / Recurso Criminal.",
+      "Olá, Dra. Letícia! Gostaria de consultar sobre Aposentadoria / Planejamento Previdenciário no INSS.",
   },
   {
-    id: "crimes-economicos-empresariais-patrimoniais",
-    title: "Direito Penal Econômico, Empresarial & Patrimonial",
+    id: "bpc-loas-beneficio-assistencial",
+    title: "BPC / LOAS para Idosos e Pessoas com Deficiência",
+    icon: HeartHandshake,
+    tag: "BPC Idoso · BPC Deficiência · TEA · Reversão de Negativas",
+    summary:
+      "Concessão ágil do benefício assistencial de 1 salário mínimo mensal para idosos com 65+ anos ou pessoas com deficiência e baixa renda, mesmo sem histórico de contribuição.",
+    details:
+      "O Benefício de Prestação Continuada (BPC/LOAS) é uma garantia de dignidade e sobrevivência. Frequentemente o INSS indefere pedidos alegando que a renda familiar per capita ultrapassa o teto legal ou que a deficiência não atende aos critérios. Atuamos de forma combativa para comprovar despesas essenciais com remédios, fraldas e tratamentos, revertendo a negativa na via administrativa ou judicial.",
+    topics: [
+      "BPC/LOAS para idosos a partir de 65 anos em situação de vulnerabilidade",
+      "BPC/LOAS para pessoas com deficiência física, mental, intelectual ou sensorial",
+      "Benefício para crianças e adultos com Transtorno do Espectro Autista (TEA)",
+      "Dedução comprovada de despesas médicas, tratamentos contínuos e alimentação especial",
+      "Ação judicial rápida para reversão de indeferimento indevido pelo INSS",
+      "Recebimento de valores retroativos acumulados desde a data do primeiro pedido",
+    ],
+    whatsAppText:
+      "Olá, Dra. Letícia! Gostaria de uma análise para solicitar o benefício do BPC/LOAS.",
+  },
+  {
+    id: "auxilio-doenca-invalidez-pensao",
+    title: "Auxílio por Incapacidade, Invalidez & Pensão por Morte",
+    icon: ShieldCheck,
+    tag: "Auxílio-Doença · Invalidez · Pensão por Morte · Auxílio-Acidente",
+    summary:
+      "Amparo imediato para quem adoeceu, sofreu acidente ou perdeu o provedor da família, com assistência técnica para perícias médicas e liberação de benefícios negados.",
+    details:
+      "Quando a saúde é abalada, a burocracia do INSS não pode ser um obstáculo. Diante de perícias médicas sumárias e negativas injustas, a Dra. Letícia Saldanha reúne a documentação clínica necessária, elabora quesitos periciais assertivos e recorre judicialmente com rapidez para restabelecer o sustento do trabalhador e de seus dependentes.",
+    topics: [
+      "Auxílio por Incapacidade Temporária (Auxílio-Doença comum ou acidentário)",
+      "Aposentadoria por Incapacidade Permanente (Invalidez) com acréscimo de 25% para cuidador",
+      "Auxílio-Acidente mensal indenizatório para quem ficou com sequela redutora",
+      "Pensão por Morte para cônjuges, companheiros em união estável, filhos e dependentes",
+      "Mandado de Segurança contra demora abusiva do INSS na análise de pedidos",
+      "Revisões de benefícios para aumento do valor mensal e cobrança de diferenças",
+    ],
+    whatsAppText:
+      "Olá, Dra. Letícia! Preciso de ajuda jurídica para Auxílio-Doença / Invalidez / Pensão por Morte no INSS.",
+  },
+  {
+    id: "rescisao-indireta-direitos-trabalhistas",
+    title: "Rescisão Indireta & Demissão por Falta do Empregador",
+    icon: FileText,
+    tag: "Rescisão Indireta · FGTS Atrasado · Salários · Demissão Justa",
+    summary:
+      "Liberte-se de condições contratuais abusivas e 'demita a empresa' com direito a todas as verbas rescisórias integrais, multa de 40% do FGTS e seguro-desemprego.",
+    details:
+      "Trabalhar sem receber FGTS, enfrentar atrasos salariais constantes ou suportar descumprimento de obrigações contratuais são faltas graves do empregador previstas no art. 483 da CLT. Através da ação de Rescisão Indireta, o trabalhador encerra o vínculo sem pedir demissão, assegurando o saque imediato do FGTS acumulado, aviso prévio indenizado e seguro-desemprego.",
+    topics: [
+      "Falta de recolhimento de FGTS ou atraso reiterado de salários e benefícios",
+      "Descumprimento grave das cláusulas contratuais pelo empregador",
+      "Liberação imediata das guias de saque do FGTS com multa de 40%",
+      "Habilitação no seguro-desemprego e recebimento de aviso prévio indenizado",
+      "Reversão de demissão por justa causa infundada aplicada pelo empregador",
+      "Cobrança de saldo de salário, 13º proporcional e férias vencidas com 1/3",
+    ],
+    whatsAppText:
+      "Olá, Dra. Letícia! Gostaria de consultar sobre Rescisão Indireta / Direitos Trabalhistas.",
+  },
+  {
+    id: "acidentes-doencas-ocupacionais",
+    title: "Acidentes de Trabalho, Doenças Ocupacionais & Estabilidade",
+    icon: AlertCircle,
+    tag: "Acidente de Trabalho · Burnout · LER/DORT · Estabilidade 12 Meses",
+    summary:
+      "Defesa incisiva para trabalhadores lesionados, adoecidos pelo trabalho ou demitidos irregularmente durante o período de estabilidade legal provisória.",
+    details:
+      "Seja por acidente nas dependências da empresa, no trajeto ou pelo desenvolvimento de doenças como Burnout, depressão e lesões por esforços repetitivos (LER/DORT), o trabalhador tem direitos específicos resguardados pela CLT e pela Previdência. Garantimos a emissão da CAT, reintegração ao emprego ou indenização substitutiva e reparação por danos morais e materiais.",
+    topics: [
+      "Exigência e emissão da Comunicação de Acidente de Trabalho (CAT)",
+      "Garantia da estabilidade provisória no emprego de no mínimo 12 meses",
+      "Indenização por Danos Morais, Danos Materiais e Danos Estéticos",
+      "Pensão mensal proporcional em caso de redução permanente da capacidade laboral",
+      "Doenças psicológicas ocupacionais decorrentes de sobrecarga e pressão (Burnout)",
+      "Reintegração ao trabalho ou indenização do período de estabilidade violado",
+    ],
+    whatsAppText:
+      "Olá, Dra. Letícia! Preciso de orientação para caso de Acidente de Trabalho / Doença Ocupacional.",
+  },
+  {
+    id: "horas-extras-insalubridade-assedio",
+    title: "Horas Extras, Insalubridade, Periculosidade & Assédio",
     icon: Scale,
-    tag: "Estelionato · Fraudes · Crimes Fiscais · Defesa Corporativa",
+    tag: "Horas Extras · Adicionais 10% a 40% · Assédio Moral · Equiparação",
     summary:
-      "Defesa estratégica para empresários, gestores e particulares em acusações de crimes patrimoniais, tributários, fraudes bancárias e lavagem de capitais.",
+      "Remuneração justa para cada hora dedicada ao trabalho, cobrança de adicionais de risco à saúde e combate severo a situações de humilhação ou perseguição.",
     details:
-      "O Direito Penal Econômico exige técnica refinada para distinguir meros ilícitos civis ou inadimplementos comerciais de verdadeiras condutas criminosas. Dr. Hudson de Freitas presta assessoria combativa na defesa contra imputações de estelionato, fraudes societárias, apropriação indébita e sonegação fiscal, atuando também na liberação de contas bancárias e bens bloqueados indevidamente.",
+      "Muitos trabalhadores realizam jornadas exaustivas sem o devido pagamento de horas extras ou cumprem funções expostos a agentes nocivos, químicos ou risco de vida sem receber insalubridade ou periculosidade. Além disso, coibimos qualquer forma de assédio moral, cobranças vexatórias e desvio de função, resguardando a sua dignidade profissional.",
     topics: [
-      "Defesa em crimes contra a ordem tributária, fiscal e financeira",
-      "Atuação especializada em acusações de estelionato e fraudes eletrônicas",
-      "Crimes de apropriação indébita previdenciária e duplicata simulada",
-      "Defesa em investigações de lavagem de dinheiro e ocultação de bens",
-      "Desbloqueio judicial célere de contas bancárias e patrimônio constrito",
-      "Consultoria criminal preventiva e compliance penal corporativo",
+      "Cálculo detalhado de horas extras, intervalo intrajornada suprimido e sobreaviso",
+      "Adicional de Insalubridade (10%, 20% ou 40%) por exposição a calor, ruído ou agentes biológicos",
+      "Adicional de Periculosidade (30%) para funções com risco à integridade física e eletricidade",
+      "Equiparação Salarial e Desvio de Função com reflexos em todas as verbas",
+      "Indenização reparatória por Assédio Moral, perseguição ou humilhação no ambiente de trabalho",
+      "Consultoria preventiva trabalhista e conformidade legal para empresas",
     ],
     whatsAppText:
-      "Olá, Dr. Hudson! Gostaria de consultoria jurídica em Direito Penal Econômico / Empresarial.",
-  },
-  {
-    id: "execucao-penal-progressao-regime",
-    title: "Execução Penal & Benefícios Prisionais",
-    icon: Award,
-    tag: "Progressão de Regime · Livramento Condicional · Remição",
-    summary:
-      "Fiscalização rigorosa do cumprimento de pena para garantir a correta aplicação da lei, antecipando progressões de regime e assegurando a dignidade do recluso.",
-    details:
-      "A pena privativa de liberdade não pode ultrapassar os limites da legalidade. O escritório realiza o acompanhamento minucioso de guias de execução penal, calculando prazos com precisão para postular progressões para os regimes semiaberto e aberto, permissões de saída temporária, livramento condicional e remição de pena por trabalho ou leitura, evitando que o apenado permaneça preso um dia além do devido.",
-    topics: [
-      "Pedido célere de progressão de regime prisional (fechado, semiaberto e aberto)",
-      "Concessão de Livramento Condicional com cálculo antecipado de requisitos",
-      "Remição de pena por trabalho, estudo e leitura no ambiente prisional",
-      "Requerimento de saídas temporárias e permissões humanitárias de saída",
-      "Conversão em prisão domiciliar humanitária para apenados com problemas graves de saúde",
-      "Defesa técnica em Processo Administrativo Disciplinar (PAD) prisional",
-    ],
-    whatsAppText:
-      "Olá, Dr. Hudson! Preciso de assistência jurídica para Execução Penal / Progressão de Regime.",
+      "Olá, Dra. Letícia! Gostaria de consultar sobre Horas Extras / Insalubridade / Assédio no Trabalho.",
   },
 ];
 
 const clientReviews = [
   {
-    name: "Marcos Vinícius Silveira",
+    name: "Raul Guedes TV",
     reviewsCount: "Cliente Verificado · 4 avaliações",
-    date: "Google Meu Negócio · 3 meses atrás",
-    badge: "plantão 24h impecável",
+    date: "Google Meu Negócio · 6 meses atrás",
+    badge: "atendimento impecável",
     content:
-      "Excelente advogado criminalista em Ituiutaba! Atendeu nossa família de madrugada com uma presteza inacreditável no plantão. Conseguiu a liberdade provisória na audiência de custódia com muita competência técnica. Gratidão eterna pelo trabalho do Dr. Hudson!",
+      "Atendimento impecável. A Dra. Letícia é uma profissional muito preparada, ética e que transmite total confiança ao cliente. Com certeza uma das melhores referências na advocacia aqui em Cataguases e região. Parabéns pelo trabalho!",
   },
   {
-    name: "Camila Resende Duarte",
-    reviewsCount: "Cliente Verificada · 2 avaliações",
-    date: "Google Meu Negócio · 5 meses atrás",
-    badge: "extrema competência",
+    name: "Leticia Oliveira",
+    reviewsCount: "Cliente Verificada · 4 avaliações",
+    date: "Google Meu Negócio · 2 anos atrás",
+    badge: "acolhimento & segurança",
     content:
-      "Dr. Hudson é um profissional ímpar, muito humano e ao mesmo tempo firme e combativo perante a Justiça. Sempre nos manteve informados de cada passo do processo penal com total transparência e calma. Recomendo com toda certeza!",
+      "Eu nunca me senti tão bem, tão acolhida por alguém como a Dra Letícia. Sempre ouvia falar dos trabalhos feitos por ela, só quando entreguei o caso nas mãos dela que pude ter a certeza e sentir de onde veio tantos elogios. Super recomendo !!! Parabéns e continue com esse profissionalismo, Cataguases e região precisa.",
   },
   {
-    name: "Lucas Gabriel Mendonça",
-    reviewsCount: "Local Guide · 15 avaliações · 8 fotos",
-    date: "Google Meu Negócio · 7 meses atrás",
-    badge: "defesa impecável",
-    content:
-      "O melhor advogado criminal da região de Ituiutaba. Domínio total da matéria, estratégia certeira no processo e oratória brilhante. Tirou todas as nossas dúvidas e resolveu nosso caso com muita agilidade.",
-  },
-  {
-    name: "Renata Cristina Alencar",
+    name: "Luciana Castro",
     reviewsCount: "Cliente Verificada · 1 avaliação",
-    date: "Google Meu Negócio · 9 meses atrás",
-    badge: "atendimento humanizado",
+    date: "Google Meu Negócio · 3 meses atrás",
+    badge: "muito competente",
     content:
-      "Profissional ético, atencioso e muito seguro do que faz. Em um momento de tanto desespero, o Dr. Hudson nos trouxe tranquilidade e prestou um auxílio impecável. Nota 10!",
+      "Letícia, além de ser profissional muito competente e responsável. Tem um carisma, está sempre disposta a ajudar e esclarecer todas as dúvidas.",
   },
   {
-    name: "Tiago Ferreira Borges",
-    reviewsCount: "Cliente Verificado · 3 avaliações",
-    date: "Google Meu Negócio · 1 ano atrás",
-    badge: "resultado de excelência",
+    name: "Amanda Moura",
+    reviewsCount: "Cliente Verificada · 4 avaliações · 1 foto",
+    date: "Google Meu Negócio · 4 anos atrás",
+    badge: "resultado surpreendente",
     content:
-      "Dr. Hudson de Freitas é um advogado de respeito. Acompanhou meu depoimento na delegacia e evitou injustiças absurdas. Recomendo de olhos fechados pela lealdade, combatividade e transparência.",
+      "Excelente profissional! Conseguiu reverter uma causa que já considerava perdida! Recomendo muito.",
   },
   {
-    name: "Fabiana Medeiros Santos",
-    reviewsCount: "Cliente Verificada · 2 avaliações",
-    date: "Google Meu Negócio · 1 ano atrás",
-    badge: "segurança e confiança",
+    name: "Guilherme Ferraz Rodrigues",
+    reviewsCount: "Local Guide · 14 avaliações · 1 foto",
+    date: "Google Meu Negócio · 4 anos atrás",
+    badge: "clareza & dedicação",
     content:
-      "Excelente criminalista em Ituiutaba. Sempre acessível pelo WhatsApp, muito pontual e dedicado à causa. Trabalho impecável que nos deu paz e justiça de volta.",
+      "Extremamente atenciosas e explicativas. Passaram tudo do meu processo de forma clara que eu pudesse entender. Eu recomendo.",
+  },
+  {
+    name: "Livia Maria",
+    reviewsCount: "Cliente Verificada · 1 avaliação",
+    date: "Google Meu Negócio · 1 ano atrás",
+    badge: "trabalhista & previdenciária",
+    content:
+      "Excelente profissional nas áreas trabalhista e previdenciária. Certeza que fiz ótima escolha!!!!!!",
+  },
+  {
+    name: "Victor Silva",
+    reviewsCount: "Cliente Verificado · 2 avaliações",
+    date: "Google Meu Negócio · 1 ano atrás",
+    badge: "ótimo resultado",
+    content:
+      "Excelente! Conseguiu tirar todas as minhas dúvidas, e assim conseguimos ter um ótimo resultado. Recomendo muito!! Uma excelente profissional!.",
+  },
+  {
+    name: "Jussara Helena",
+    reviewsCount: "Cliente Verificada · 2 avaliações · 1 foto",
+    date: "Google Meu Negócio · 6 meses atrás",
+    badge: "atenção maravilhosa",
+    content:
+      "Nossa ela é super simpática, carismática e dá uma atenção maravilhosa pra gente. Ameiiii o atendimento com ela, quem procurar ela garanto que não vai se arrepender!",
+  },
+  {
+    name: "Sergio de Pinho",
+    reviewsCount: "Cliente Verificado · 4 avaliações",
+    date: "Google Meu Negócio · 4 anos atrás",
+    badge: "disposição & técnica",
+    content:
+      "Incrível a disposição dessas advogadas na orientação aos seus clientes e na luta pelos interesses dos mesmos. Tudo com a racionalidade profissional e com a disposição que a juventude dá.",
+  },
+  {
+    name: "Elaine Lima do Carmo",
+    reviewsCount: "Cliente Verificada · 1 avaliação",
+    date: "Google Meu Negócio · 4 anos atrás",
+    badge: "empenho total",
+    content:
+      "Advogada muito competente, responsável com o trabalho dela. Faz tudo para resolver da melhor maneira atendendo os clientes na busca da melhor solução. Parabéns pelo empenho Letícia!",
   },
 ];
 
@@ -340,19 +373,33 @@ function Heading({
   eyebrow,
   children,
   description,
+  light = false,
 }: {
   eyebrow: string;
   children: ReactNode;
   description?: string;
+  light?: boolean;
 }) {
   return (
     <div className="max-w-2xl">
-      <p className="eyebrow mb-4">{eyebrow}</p>
-      <h2 className="font-serif text-3xl leading-[1.14] tracking-[-0.015em] text-white sm:text-4xl lg:text-[3.15rem]">
+      <p className={light ? "eyebrow-light mb-3" : "eyebrow mb-3"}>{eyebrow}</p>
+      <h2
+        className={
+          light
+            ? "font-serif text-3xl leading-[1.15] tracking-[-0.015em] text-[#191115] sm:text-4xl lg:text-[3.15rem]"
+            : "font-serif text-3xl leading-[1.15] tracking-[-0.015em] text-white sm:text-4xl lg:text-[3.15rem]"
+        }
+      >
         {children}
       </h2>
       {description && (
-        <p className="mt-4 text-[15px] leading-7 text-slate-300">
+        <p
+          className={
+            light
+              ? "mt-4 text-[15px] leading-7 text-[#4a3a40]"
+              : "mt-4 text-[15px] leading-7 text-[#d6c2be]"
+          }
+        >
           {description}
         </p>
       )}
@@ -379,24 +426,24 @@ export default function Home() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <main className="overflow-hidden bg-[#07090e] text-slate-100 selection:bg-brand-400 selection:text-brand-950">
-        {/* Navigation Bar - Masculine Deep Obsidian with Burnished Gold Borders */}
-        <header className="sticky top-0 z-40 border-b border-amber-500/20 bg-[#07090e]/95 backdrop-blur-xl">
+      <main className="overflow-hidden bg-[#0d090b] text-[#fdf8f6] selection:bg-[#d49389] selection:text-[#0d090b]">
+        {/* Navigation Bar - Refined Velvet Obsidian with Luminous Metallic Rose Gold Accents */}
+        <header className="sticky top-0 z-40 border-b border-[#d49389]/20 bg-[#0d090b]/95 backdrop-blur-xl">
           <div className="mx-auto flex h-[76px] max-w-7xl items-center justify-between gap-5 px-5 sm:h-[84px] sm:px-8 lg:px-12">
             <a
               href="#inicio"
-              aria-label="Dr. Hudson de Freitas Advogado Criminal — Início"
+              aria-label="Letícia Saldanha Advocacia — Início"
               onClick={closeMenu}
               className="flex items-center gap-3 transition-opacity hover:opacity-90"
             >
               <Image
                 src={LOGO_SRC}
-                width={901}
-                height={581}
-                alt="Dr. Hudson de Freitas Advocacia - Logotipo Oficial"
+                width={800}
+                height={483}
+                alt="Letícia Saldanha Advocacia e Consultoria Especializada"
                 priority
                 loading="eager"
-                className="h-[52px] w-auto object-contain sm:h-[60px]"
+                className="h-[50px] w-auto object-contain sm:h-[58px]"
               />
             </a>
 
@@ -408,13 +455,13 @@ export default function Home() {
                 Início
               </a>
               <a className="nav-link" href="#sobre">
-                Sobre o Advogado
+                Prazer, Letícia
               </a>
               <a className="nav-link" href="#atuacao">
-                Atuação Criminal
+                Áreas de Atuação
               </a>
-              <a className="nav-link" href="#plantao">
-                Plantão 24h & Urgências
+              <a className="nav-link" href="#diferenciais">
+                Por Que Escolher
               </a>
               <a className="nav-link" href="#avaliacoes">
                 Avaliações (4,9 ★)
@@ -429,16 +476,16 @@ export default function Home() {
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Instagram Dr. Hudson de Freitas"
-                className="grid size-10 place-items-center rounded-lg border border-amber-500/30 bg-[#0c1017] text-gold-300 transition-all hover:border-gold-300 hover:bg-[#141b27] hover:text-white"
-                title="Instagram @hudsondefreitasfreitas"
+                aria-label="Instagram da Dra. Letícia Saldanha"
+                className="grid size-10 place-items-center rounded-lg border border-[#d49389]/30 bg-[#140e11] text-[#f2d2cb] transition-all hover:border-[#f2d2cb] hover:bg-[#22161c] hover:text-white"
+                title="Instagram @leticiasaldanha.adv"
               >
                 <InstagramIcon size={16} />
               </a>
               <a
                 href={`tel:+${WHATSAPP_NUMBER}`}
-                aria-label="Ligar para o Dr. Hudson de Freitas"
-                className="grid size-10 place-items-center rounded-lg border border-amber-500/30 bg-[#0c1017] text-gold-300 transition-all hover:border-gold-300 hover:bg-[#141b27] hover:text-white"
+                aria-label="Ligar para Letícia Saldanha Advocacia"
+                className="grid size-10 place-items-center rounded-lg border border-[#d49389]/30 bg-[#140e11] text-[#f2d2cb] transition-all hover:border-[#f2d2cb] hover:bg-[#22161c] hover:text-white"
                 title={`Ligar: ${PHONE_DISPLAY}`}
               >
                 <Phone size={16} />
@@ -447,22 +494,22 @@ export default function Home() {
                 href={getWhatsAppUrl()}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="WhatsApp Dr. Hudson de Freitas"
-                className="grid size-10 place-items-center rounded-lg border border-amber-500/30 bg-[#0c1017] text-gold-300 transition-all hover:border-gold-300 hover:bg-[#141b27] hover:text-white"
+                aria-label="WhatsApp da Dra. Letícia Saldanha"
+                className="grid size-10 place-items-center rounded-lg border border-[#d49389]/30 bg-[#140e11] text-[#f2d2cb] transition-all hover:border-[#f2d2cb] hover:bg-[#22161c] hover:text-white"
                 title="Atendimento no WhatsApp"
               >
                 <WhatsAppIcon size={18} />
               </a>
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá, Dr. Hudson! Preciso de atendimento emergencial no Plantão Criminal 24h."
+                  "Olá, Dra. Letícia! Gostaria de agendar uma consulta sobre meu caso trabalhista / previdenciário."
                 )}
                 target="_blank"
                 size="sm"
-                variant="gold"
+                variant="rosegold"
                 className="rounded-lg shadow-sm"
               >
-                Plantão 24h <ArrowUpRight size={14} />
+                Consultar Direitos <ArrowUpRight size={14} />
               </GlowingButton>
             </div>
 
@@ -471,7 +518,7 @@ export default function Home() {
               aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
               aria-expanded={menuOpen}
               aria-controls="mobile-navigation"
-              className="grid size-11 place-items-center rounded-lg border border-amber-500/30 bg-[#0c1017] text-gold-300 lg:hidden"
+              className="grid size-11 place-items-center rounded-lg border border-[#d49389]/30 bg-[#140e11] text-[#f2d2cb] lg:hidden"
               onClick={() => setMenuOpen((open) => !open)}
             >
               {menuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -487,46 +534,46 @@ export default function Home() {
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.22 }}
-                className="overflow-hidden border-t border-amber-500/20 bg-[#07090e] px-6 lg:hidden"
+                className="overflow-hidden border-t border-[#d49389]/20 bg-[#0d090b] px-6 lg:hidden"
               >
                 <div className="mx-auto flex max-w-7xl flex-col gap-1 py-4">
                   {[
                     ["Início", "#inicio"],
-                    ["Sobre o Advogado", "#sobre"],
-                    ["Atuação Criminal", "#atuacao"],
-                    ["Plantão 24h & Urgências", "#plantao"],
+                    ["Prazer, Letícia", "#sobre"],
+                    ["Áreas de Atuação", "#atuacao"],
+                    ["Por Que Escolher", "#diferenciais"],
                     ["Avaliações no Google (4,9 ★)", "#avaliacoes"],
-                    ["Contato & Sede em Ituiutaba", "#contato"],
+                    ["Contato & Sede em Cataguases", "#contato"],
                   ].map(([label, href]) => (
                     <a
                       key={label}
                       href={href}
                       onClick={closeMenu}
-                      className="py-3 text-sm font-medium text-slate-200 hover:text-gold-300"
+                      className="py-3 text-sm font-medium text-stone-200 hover:text-[#e8aea6]"
                     >
                       {label}
                     </a>
                   ))}
                   <div className="mt-3 flex flex-col gap-2">
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-brand-500 via-gold-400 to-brand-500 px-5 py-3.5 text-xs font-bold uppercase tracking-[0.13em] text-brand-950 shadow-md transition-all hover:brightness-105"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#c47d73] via-[#e8aea6] to-[#c47d73] px-5 py-3.5 text-xs font-bold uppercase tracking-[0.13em] text-[#190c10] shadow-md transition-all hover:brightness-105"
                       href={getWhatsAppUrl(
-                        "Olá, Dr. Hudson! Preciso de atendimento emergencial no Plantão Criminal 24h."
+                        "Olá, Dra. Letícia! Gostaria de consultar sobre meus direitos trabalhistas / previdenciários."
                       )}
                       target="_blank"
                       rel="noreferrer"
                       onClick={closeMenu}
                     >
-                      <WhatsAppIcon size={16} /> Plantão WhatsApp: {PHONE_DISPLAY}
+                      <WhatsAppIcon size={16} /> WhatsApp: {PHONE_DISPLAY}
                     </a>
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-amber-500/30 bg-[#0c1017] px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-gold-300 transition-all hover:border-gold-300"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#d49389]/30 bg-[#140e11] px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-[#f2d2cb] transition-all hover:border-[#f2d2cb]"
                       href={GOOGLE_MAPS_URL}
                       target="_blank"
                       rel="noreferrer"
                       onClick={closeMenu}
                     >
-                      <MapPin size={15} /> Av. Minas Gerais, 15 - Camargo, Ituiutaba
+                      <MapPin size={15} /> Calçadão Shopping · Cataguases - MG
                     </a>
                   </div>
                 </div>
@@ -535,14 +582,14 @@ export default function Home() {
           </AnimatePresence>
         </header>
 
-        {/* Hero Section - High Authority, Dark Architectural Obsidian Stage */}
+        {/* Hero Section - High Prestige, Luminous Warm Plum Obsidian Canvas */}
         <section
           id="inicio"
-          className="relative isolate scroll-mt-24 border-b border-amber-500/20 bg-gradient-to-b from-[#07090e] via-[#090d14] to-[#0c1017]"
+          className="relative isolate scroll-mt-24 border-b border-[#d49389]/20 bg-gradient-to-b from-[#0d090b] via-[#120c0f] to-[#160e13]"
         >
-          {/* Subtle deep amber/bronze tactical ambient glow */}
-          <div className="pointer-events-none absolute -right-32 top-8 -z-10 size-[36rem] rounded-full bg-amber-500/10 blur-3xl" />
-          <div className="pointer-events-none absolute -left-20 bottom-10 -z-10 size-[28rem] rounded-full bg-amber-600/5 blur-3xl" />
+          {/* Subtle rose gold / champagne ambient glow */}
+          <div className="pointer-events-none absolute -right-32 top-8 -z-10 size-[36rem] rounded-full bg-[#d49389]/10 blur-3xl" />
+          <div className="pointer-events-none absolute -left-20 bottom-10 -z-10 size-[28rem] rounded-full bg-[#7b2938]/15 blur-3xl" />
 
           <div className="mx-auto grid min-h-[660px] max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 sm:py-20 lg:min-h-[720px] lg:grid-cols-[1.1fr_0.9fr] lg:gap-12 lg:px-12 lg:py-20">
             <motion.div
@@ -553,31 +600,31 @@ export default function Home() {
             >
               <motion.div
                 variants={reveal}
-                className="mb-6 inline-flex items-center gap-2.5 rounded-lg border border-amber-500/30 bg-[#0e131d] px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-gold-300 shadow-sm"
+                className="mb-6 inline-flex items-center gap-2.5 rounded-lg border border-[#d49389]/35 bg-[#170e12] px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-[#f2d2cb] shadow-sm"
               >
-                <span className="size-2 shrink-0 rounded-full bg-amber-400" />
-                <span>ITUIUTABA - MG · ADVOCACIA CRIMINAL · PLANTÃO 24H</span>
+                <span className="size-2 shrink-0 rounded-full bg-[#e8aea6]" />
+                <span>CATAGUASES - MG · ADVOCACIA TRABALHISTA & PREVIDENCIÁRIA</span>
               </motion.div>
 
               <motion.h1
                 variants={reveal}
-                className="max-w-[760px] font-serif text-[2.75rem] leading-[1.05] tracking-[-0.02em] text-white sm:text-5xl lg:text-[4.15rem]"
+                className="max-w-[760px] font-serif text-[2.65rem] leading-[1.08] tracking-[-0.02em] text-white sm:text-5xl lg:text-[3.95rem]"
               >
-                Advocacia Criminal Estratégica, Combate Técnico e{" "}
-                <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-gold-300 via-amber-200 to-gold-400">
-                  Defesa Intransigente da Sua Liberdade.
+                Advocacia Humanizada, Técnica e Firme:{" "}
+                <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#fdf5f3] via-[#f0bcb4] to-[#d49389]">
+                  Defesa Estratégica dos Seus Direitos.
                 </span>
               </motion.h1>
 
               <motion.p
                 variants={reveal}
-                className="mt-7 max-w-xl text-[15px] leading-7 text-slate-300 sm:text-base sm:leading-8"
+                className="mt-7 max-w-xl text-[15px] leading-7 text-[#d6c2be] sm:text-base sm:leading-8"
               >
-                Sob a liderança do{" "}
+                Sob a liderança da{" "}
                 <strong className="font-semibold text-white">
-                  Dr. Hudson de Freitas
+                  Dra. Letícia Saldanha
                 </strong>
-                , nosso escritório atua com rigor técnico incisivo, prontidão imediata e absoluto sigilo em Direito Penal e Processual Penal. Especializado em plantão de flagrantes 24h, audiências de custódia, inquéritos policiais, atuação expressiva no Tribunal do Júri e recursos perante o TJMG, STJ e STF. Sede no Bairro Camargo em Ituiutaba (MG), com atendimento presencial e suporte combativo em todo o Brasil.
+                , nosso escritório atua com dedicação incansável, empatia e rigor jurídico em Direito do Trabalho e Direito Previdenciário. Especializado em aposentadorias do INSS, benefícios por incapacidade, BPC/LOAS, rescisão indireta, horas extras e reparação por acidentes de trabalho. Sede no Calçadão Shopping em Cataguases (MG), com atendimento presencial e suporte online para todo o Brasil.
               </motion.p>
 
               <motion.div
@@ -586,20 +633,20 @@ export default function Home() {
               >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dr. Hudson de Freitas! Preciso de atendimento urgente no Plantão Criminal 24h."
+                    "Olá, Dra. Letícia Saldanha! Gostaria de uma consultoria sobre meus direitos trabalhistas / previdenciários."
                   )}
                   target="_blank"
                   size="lg"
-                  variant="gold"
+                  variant="rosegold"
                   className="rounded-lg shadow-md"
                 >
-                  <WhatsAppIcon size={16} /> Acionar Plantão 24h no WhatsApp
+                  <WhatsAppIcon size={16} /> Falar no WhatsApp com a Dra. Letícia
                 </GlowingButton>
                 <a
                   href="#atuacao"
-                  className="group inline-flex items-center gap-2 rounded-lg border border-amber-500/30 bg-[#0e131d] px-5 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-gold-200 transition-all hover:border-gold-300 hover:bg-[#151c28] hover:text-white"
+                  className="group inline-flex items-center gap-2 rounded-lg border border-[#d49389]/30 bg-[#170e12] px-5 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#f2d2cb] transition-all hover:border-[#f2d2cb] hover:bg-[#22161c] hover:text-white"
                 >
-                  Áreas de Atuação Criminal{" "}
+                  Áreas de Atuação{" "}
                   <ArrowRight
                     size={14}
                     className="transition-transform group-hover:translate-x-1"
@@ -609,22 +656,22 @@ export default function Home() {
 
               <motion.div
                 variants={reveal}
-                className="mt-12 flex flex-wrap items-center gap-x-7 gap-y-4 border-t border-amber-500/20 pt-6 text-xs text-slate-300"
+                className="mt-12 flex flex-wrap items-center gap-x-7 gap-y-4 border-t border-[#d49389]/20 pt-6 text-xs text-[#d6c2be]"
               >
                 <span className="inline-flex items-center gap-2 font-medium">
-                  <Star size={15} className="fill-amber-400 text-amber-400" />{" "}
-                  4,9 estrelas no Google (10 avaliações de clientes)
+                  <Star size={15} className="fill-[#e8aea6] text-[#e8aea6]" />{" "}
+                  4,9 estrelas no Google (mais de 70 avaliações de clientes)
                 </span>
                 <span className="inline-flex items-center gap-2 font-medium">
-                  <Clock size={15} className="text-gold-400" /> Plantão Criminal 24h para Urgências e Flagrantes
+                  <MapPin size={15} className="text-[#d49389]" /> Calçadão Shopping, Sl 108 · Cataguases - MG
                 </span>
                 <span className="inline-flex items-center gap-2 font-medium">
-                  <MapPin size={15} className="text-gold-400" /> Av. Minas Gerais, 15 - Camargo · Ituiutaba - MG
+                  <HandHeart size={15} className="text-[#d49389]" /> Atendimento Humanizado & Direto com a Advogada
                 </span>
               </motion.div>
             </motion.div>
 
-            {/* Hero Visual Presentation - Dr. Hudson de Freitas em Pé (Terno Social Imponente) */}
+            {/* Hero Visual Presentation - Dra. Letícia Saldanha */}
             <motion.div
               initial={{ opacity: 0, scale: 0.97, y: 18 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -635,91 +682,91 @@ export default function Home() {
               }}
               className="relative mx-auto w-full max-w-[490px] lg:ml-auto lg:mr-2"
             >
-              <div className="relative aspect-[4/4.5] overflow-hidden rounded-2xl border border-amber-500/35 bg-[#0c1017] shadow-2xl ring-1 ring-amber-500/20">
+              <div className="relative aspect-[4/4.8] overflow-hidden rounded-2xl border border-[#d49389]/35 bg-[#140e11] shadow-2xl ring-1 ring-[#d49389]/20">
                 <Image
                   src={FOTO_HERO_SRC}
-                  alt="Dr. Hudson de Freitas — Advogado Criminalista em Ituiutaba - MG"
+                  alt="Dra. Letícia Saldanha — Advogada Trabalhista e Previdenciarista"
                   fill
                   priority
                   sizes="(max-width: 640px) 90vw, (max-width: 1024px) 70vw, 45vw"
                   className="object-cover object-top"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#07090e] via-[#07090e]/80 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#0d090b] via-[#0d090b]/80 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-3 text-white sm:bottom-8 sm:left-8 sm:right-8">
                   <div>
                     <p className="font-serif text-2xl font-normal tracking-wide text-white">
-                      Dr. Hudson de Freitas
+                      Dra. Letícia Saldanha
                     </p>
-                    <p className="mt-1 text-[10px] uppercase tracking-[0.2em] text-gold-300">
-                      Advogado Criminalista · OAB/MG
+                    <p className="mt-1 text-[10px] uppercase tracking-[0.2em] text-[#e8aea6]">
+                      Advocacia & Consultoria Especializada · OAB/MG
                     </p>
                   </div>
-                  <span className="grid size-11 shrink-0 place-items-center rounded-lg border border-amber-500/40 bg-[#07090e]/85 text-gold-300 backdrop-blur-sm">
+                  <span className="grid size-11 shrink-0 place-items-center rounded-lg border border-[#d49389]/40 bg-[#0d090b]/85 text-[#f2d2cb] backdrop-blur-sm">
                     <Scale size={18} />
                   </span>
                 </div>
               </div>
 
               {/* Floating authority badge */}
-              <div className="absolute -left-3 top-6 z-10 rounded-lg border border-amber-500/40 bg-[#0c1017]/95 px-4 py-2 text-[10px] font-bold tracking-[0.14em] text-gold-200 shadow-card backdrop-blur-md sm:-left-5">
-                ITUIUTABA · TRIÂNGULO MINEIRO · BRASIL
+              <div className="absolute -left-3 top-6 z-10 rounded-lg border border-[#d49389]/40 bg-[#140e11]/95 px-4 py-2 text-[10px] font-bold tracking-[0.14em] text-[#f2d2cb] shadow-card backdrop-blur-md sm:-left-5">
+                CATAGUASES · MINAS GERAIS · BRASIL
               </div>
 
               {/* Floating Google rating badge */}
-              <div className="absolute -bottom-5 -right-3 z-10 rounded-xl border border-amber-500/35 bg-[#0c1017]/95 p-3.5 shadow-card backdrop-blur-md sm:-right-5">
+              <div className="absolute -bottom-5 -right-3 z-10 rounded-xl border border-[#d49389]/35 bg-[#140e11]/95 p-3.5 shadow-card backdrop-blur-md sm:-right-5">
                 <div className="flex items-center gap-2">
                   <GoogleIcon size={16} />
                   <div className="flex items-center gap-1">
-                    <Star size={13} className="fill-amber-400 text-amber-400" />
+                    <Star size={13} className="fill-[#e8aea6] text-[#e8aea6]" />
                     <span className="font-serif text-base font-bold text-white">
                       4,9 / 5,0
                     </span>
                   </div>
                 </div>
-                <p className="mt-0.5 text-[9px] font-semibold uppercase tracking-wider text-slate-300">
-                  10 Avaliações no Google
+                <p className="mt-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#d6c2be]">
+                  70+ Avaliações no Google
                 </p>
               </div>
             </motion.div>
           </div>
         </section>
 
-        {/* Highlights Banner - Authority Metrics (Dark Masculine Graphite Strip) */}
+        {/* Highlights Banner - Authority Metrics */}
         <section
           aria-label="Credenciais e Destaques"
-          className="border-b border-amber-500/20 bg-[#0a0d14]"
+          className="border-b border-[#d49389]/20 bg-[#120b0e]"
         >
           <div className="mx-auto grid max-w-7xl gap-7 px-5 py-8 sm:grid-cols-4 sm:gap-4 sm:px-8 lg:px-12">
             {[
               [
                 "4,9 ★",
-                "avaliação de excelência com 10 depoimentos reais e verificados no Google",
+                "avaliação de excelência com mais de 70 depoimentos reais e verificados no Google",
               ],
               [
-                "Plantão 24h",
-                "prontidão imediata para flagrantes, custódia e diligências policiais",
+                "Trabalhista & INSS",
+                "atuação focada em aposentadorias, BPC/LOAS, auxílios e rescisões contratuais",
               ],
               [
-                "Ituiutaba - MG",
-                "sede própria na Av. Minas Gerais, 15 - Camargo com suporte nacional",
+                "Cataguases - MG",
+                "sede no Calçadão Shopping (Sl 108) com atendimento presencial e online em todo o país",
               ],
               [
-                "Defesa Completa",
-                "atuação técnica em todas as instâncias, do inquérito policial ao STF",
+                "100% Humanizado",
+                "atendimento acolhedor, transparente e direto com a advogada, sem intermediários",
               ],
             ].map(([value, label], index) => (
               <div
                 key={label}
                 className={
                   index > 0
-                    ? "flex items-center gap-4 sm:justify-center sm:border-l sm:border-amber-500/20"
+                    ? "flex items-center gap-4 sm:justify-center sm:border-l sm:border-[#d49389]/20"
                     : "flex items-center gap-4 sm:justify-center"
                 }
               >
-                <span className="font-serif text-2xl font-semibold text-gold-400 sm:text-3xl">
+                <span className="font-serif text-2xl font-semibold text-[#e8aea6] sm:text-3xl">
                   {value}
                 </span>
-                <span className="max-w-[165px] text-[11px] leading-5 text-slate-300">
+                <span className="max-w-[165px] text-[11px] leading-5 text-[#d6c2be]">
                   {label}
                 </span>
               </div>
@@ -727,13 +774,13 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Sobre o Dr. Hudson de Freitas - Dobra em Modo Claro / Travertino Nobre */}
+        {/* Sobre a Dra. Letícia Saldanha - "Prazer, Letícia!" - Modo Claro Alabastro Rosé Nobre */}
         <section
           id="sobre"
-          className="scroll-mt-24 border-y border-amber-600/30 bg-[#f5f0ea] py-20 text-[#0e121b] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-y border-[#d49389]/30 bg-[#faf5f3] py-20 text-[#1a1115] sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20 lg:px-12">
-            {/* Dr. Hudson de Freitas portrait at desk */}
+            {/* Dra. Letícia presentation portrait */}
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -741,40 +788,40 @@ export default function Home() {
               variants={reveal}
               className="relative mx-auto w-full max-w-[480px]"
             >
-              <div className="relative aspect-[3/3.8] overflow-hidden rounded-2xl border-2 border-[#121722] bg-[#0c1017] shadow-2xl">
+              <div className="relative aspect-[3/3.8] overflow-hidden rounded-2xl border-2 border-[#3b1c24] bg-[#140e11] shadow-2xl">
                 <Image
                   src={FOTO_SOBRE_SRC}
-                  alt="Dr. Hudson de Freitas — Advogado Criminalista no Escritório"
+                  alt="Dra. Letícia Saldanha — Advogada Previdenciarista e Trabalhista"
                   fill
                   sizes="(max-width: 1024px) 90vw, 45vw"
                   className="object-cover object-top"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#07090e]/95 via-[#07090e]/40 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#0d090b]/90 via-[#0d090b]/30 to-transparent" />
               </div>
 
               {/* Authority badge card - Deep Obsidian Contrast on Light Surface */}
-              <div className="absolute -bottom-6 right-3 max-w-[340px] rounded-xl border border-amber-500/40 bg-[#0c1017] px-5 py-4 shadow-xl sm:-right-6 sm:px-6">
-                <div className="flex items-center gap-2 text-gold-400">
+              <div className="absolute -bottom-6 right-3 max-w-[340px] rounded-xl border border-[#d49389]/40 bg-[#140e11] px-5 py-4 shadow-xl sm:-right-6 sm:px-6">
+                <div className="flex items-center gap-2 text-[#e8aea6]">
                   <Award size={16} />
-                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-gold-300">
-                    Advocacia Criminal Estratégica
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#e8aea6]">
+                    Advocacia Especializada & Humanizada
                   </p>
                 </div>
                 <p className="mt-1 font-serif text-lg leading-snug text-white">
-                  Dr. Hudson de Freitas
+                  Dra. Letícia Saldanha
                 </p>
-                <p className="mt-0.5 text-[11px] font-medium text-gold-400">
-                  Hudson de Freitas Advocacia
+                <p className="mt-0.5 text-[11px] font-medium text-[#d49389]">
+                  Letícia Saldanha Advocacia
                 </p>
-                <p className="mt-1 text-[11px] leading-4 text-slate-300">
-                  Av. Minas Gerais, 15 - Camargo, Ituiutaba - MG. Atendimento nacional.
+                <p className="mt-1 text-[11px] leading-4 text-[#d6c2be]">
+                  Praça Rui Barbosa, 170 - Sl 108 (Calçadão Shopping) · Cataguases - MG
                 </p>
               </div>
 
-              <span className="absolute -left-4 -top-4 -z-10 size-24 border-l-2 border-t-2 border-amber-700/40 sm:-left-7 sm:-top-7 sm:size-32" />
+              <span className="absolute -left-4 -top-4 -z-10 size-24 border-l-2 border-t-2 border-[#914f46]/40 sm:-left-7 sm:-top-7 sm:size-32" />
             </motion.div>
 
-            {/* Text description - Masculine Editorial Light Typography */}
+            {/* Story & Biography - Editorial Warm Light Typography */}
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -783,94 +830,72 @@ export default function Home() {
             >
               <motion.div
                 variants={reveal}
-                className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-amber-700/30 bg-white/80 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#8b6534] shadow-xs"
+                className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#914f46]/30 bg-white/80 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#853d35] shadow-xs"
               >
-                <span className="size-2 shrink-0 rounded-full bg-[#8b6534]" />
-                <span>SOBRE O ADVOGADO & O ESCRITÓRIO</span>
+                <span className="size-2 shrink-0 rounded-full bg-[#853d35]" />
+                <span>PRAZER, LETÍCIA! CONHEÇA MINHA HISTÓRIA</span>
               </motion.div>
 
               <motion.h2
                 variants={reveal}
-                className="font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-[#07090e] sm:text-4xl lg:text-[3.25rem]"
+                className="font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-[#191115] sm:text-4xl lg:text-[3.25rem]"
               >
-                Rigor técnico penal e determinação aliados a um{" "}
-                <span className="italic text-[#8b6534]">
-                  atendimento direto, sigiloso e combativo.
+                Amor pelo que faço, determinação e um{" "}
+                <span className="italic text-[#853d35]">
+                  atendimento verdadeiramente humano e acolhedor.
                 </span>
               </motion.h2>
 
               <motion.p
                 variants={reveal}
-                className="mt-6 max-w-xl text-[15px] leading-7 text-[#334155]"
+                className="mt-6 max-w-xl text-[15px] leading-7 text-[#4a3a40]"
               >
-                Com escritório sede estrategicamente localizado na{" "}
-                <strong className="font-bold text-[#07090e]">
-                  Avenida Minas Gerais, 15 - Bairro Camargo em Ituiutaba (MG)
+                Mineira raiz, com 31 anos de idade, comecei na advocacia movida por um sonho que trago desde criança: a{" "}
+                <strong className="font-bold text-[#191115]">
+                  independência
                 </strong>
-                , a advocacia do{" "}
-                <strong className="font-bold text-[#07090e]">Dr. Hudson de Freitas</strong>{" "}
-                nasceu do compromisso intransigente com a ampla defesa, o contraditório e a preservação da liberdade e da dignidade humana.
+                . Acredito profundamente na potência transformadora de pessoas determinadas — e é exatamente essa energia que entrego todos os dias na defesa de cada um dos meus clientes.
               </motion.p>
 
               <motion.p
                 variants={reveal}
-                className="mt-4 max-w-xl text-[15px] leading-7 text-[#334155]"
+                className="mt-4 max-w-xl text-[15px] leading-7 text-[#4a3a40]"
               >
-                Reconhecido pela disponibilidade imediata em casos urgentes de flagrantes e prisões, o Dr. Hudson de Freitas conduz pessoalmente cada processo criminal, sem intermediários. Aqui, o cliente e sua família encontram clareza sobre cada fase processual, atendimento humanizado e uma postura defensiva implacável perante delegacias, juízos criminais, plenários do Júri e Tribunais Superiores.
+                No meu dia a dia, quem me acompanha conhece de perto minha rotina: o amor apaixonado pelo Direito, o carinho gigante pelos animais de estimação (são muitos pets em casa!), o compromisso com uma vida saudável e a família como base de tudo. No escritório, essa mesma dedicação se traduz em carregar nos ombros a responsabilidade de ajudar trabalhadores e segurados do INSS a alcançarem seus objetivos e seus direitos esquecidos.
               </motion.p>
 
               {/* Quote Card */}
               <motion.div
                 variants={reveal}
-                className="mt-6 rounded-xl border border-[#dfd4c4] bg-white/95 p-5 shadow-sm"
+                className="mt-6 rounded-xl border border-[#e8d5d0] bg-white/95 p-5 shadow-sm"
               >
-                <blockquote className="font-serif text-sm italic leading-relaxed text-[#1e293b]">
-                  &ldquo;Excelente advogado criminalista em Ituiutaba! Atendeu nossa família de madrugada com uma presteza inacreditável no plantão. Conseguiu a liberdade provisória na audiência de custódia com muita competência técnica. Gratidão eterna!&rdquo;
+                <blockquote className="font-serif text-sm italic leading-relaxed text-[#2d1b22]">
+                  &ldquo;Todos temos dores a serem sanadas e direitos a serem requeridos. Com a ajuda certa, o acolhimento sincero e o rigor técnico adequado, tudo fica mais fácil e claro para você.&rdquo;
                 </blockquote>
-                <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-[#8b6534]">
-                  — Marcos Vinícius Silveira · Avaliação Verificada no Google Meu Negócio
+                <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-[#853d35]">
+                  — Dra. Letícia Saldanha · Advogada Trabalhista e Previdenciarista
                 </p>
               </motion.div>
 
               <motion.div
                 variants={reveal}
-                className="mt-6 grid grid-cols-1 gap-2.5 text-xs font-semibold text-[#1e293b] sm:grid-cols-2"
+                className="mt-6 grid grid-cols-1 gap-2.5 text-xs font-semibold text-[#2d1b22] sm:grid-cols-2"
               >
                 <div className="flex items-center gap-2">
-                  <CheckCircle2
-                    size={15}
-                    className="shrink-0 text-[#8b6534]"
-                  />
-                  <span>
-                    Atuação especializada em Direito Penal e Processual Penal
-                  </span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#853d35]" />
+                  <span>Atendimento presencial no Calçadão Shopping e online para todo o Brasil</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2
-                    size={15}
-                    className="shrink-0 text-[#8b6534]"
-                  />
-                  <span>
-                    Plantão criminal 24h para prisões em flagrante e custódia
-                  </span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#853d35]" />
+                  <span>Advocacia especializada em Direito Previdenciário (INSS) e do Trabalho</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2
-                    size={15}
-                    className="shrink-0 text-[#8b6534]"
-                  />
-                  <span>
-                    Sede moderna na Av. Minas Gerais, 15 - Camargo em Ituiutaba
-                  </span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#853d35]" />
+                  <span>Comunicação clara, transparente e acolhedora, sem &ldquo;juridiquês&rdquo;</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2
-                    size={15}
-                    className="shrink-0 text-[#8b6534]"
-                  />
-                  <span>
-                    Nota 4,9 ★ no Google com avaliações 100% autênticas
-                  </span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#853d35]" />
+                  <span>Nota 4,9 ★ no Google com mais de 70 avaliações autênticas de clientes</span>
                 </div>
               </motion.div>
 
@@ -880,18 +905,18 @@ export default function Home() {
               >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dr. Hudson de Freitas! Gostaria de agendar uma consulta sobre meu caso criminal."
+                    "Olá, Dra. Letícia Saldanha! Gostaria de agendar uma consulta sobre meu caso."
                   )}
                   target="_blank"
                   size="md"
                   variant="dark"
                   className="rounded-lg shadow-md"
                 >
-                  <WhatsAppIcon size={16} /> Falar com o Dr. Hudson
+                  <WhatsAppIcon size={16} /> Falar com a Dra. Letícia
                 </GlowingButton>
                 <a
                   href={`tel:+${WHATSAPP_NUMBER}`}
-                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#07090e] transition-colors hover:text-[#8b6534]"
+                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#191115] transition-colors hover:text-[#853d35]"
                 >
                   <Phone size={15} /> {PHONE_DISPLAY}
                 </a>
@@ -900,10 +925,10 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Áreas de Atuação Criminal (Deep Obsidian Cards with Metallic Gold Accent) */}
+        {/* Áreas de Atuação Trabalhista e Previdenciária */}
         <section
           id="atuacao"
-          className="scroll-mt-24 border-t border-amber-500/20 bg-[#0a0d14] py-20 sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#d49389]/20 bg-[#100a0d] py-20 sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <motion.div
@@ -914,15 +939,15 @@ export default function Home() {
               className="flex flex-col justify-between gap-6 md:flex-row md:items-end"
             >
               <Heading
-                eyebrow="SERVIÇOS JURÍDICOS & PILARES DE ATUAÇÃO CRIMINAL"
-                description="Soluções defensivas estratégicas, combativas e personalizadas para resguardar a sua liberdade, seu patrimônio e seus direitos fundamentais em Ituiutaba, Minas Gerais e tribunais de todo o Brasil."
+                eyebrow="SERVIÇOS JURÍDICOS & PILARES DE ATUAÇÃO"
+                description="Defesa estratégica e personalizada para garantir seus benefícios previdenciários e resguardar seus direitos no ambiente de trabalho em Cataguases, Minas Gerais e em todo o Brasil."
               >
                 Atuação especializada em{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-gold-300 to-amber-200">
-                  todas as fases da persecução penal.
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fdf5f3] via-[#f0bcb4] to-[#d49389]">
+                  Direito Trabalhista e Previdenciário.
                 </span>
               </Heading>
-              <p className="max-w-[270px] pb-1 text-xs leading-6 text-slate-300">
+              <p className="max-w-[270px] pb-1 text-xs leading-6 text-[#d6c2be]">
                 Selecione uma especialidade abaixo para conferir as demandas
                 atendidas e iniciar sua consulta diretamente pelo WhatsApp.
               </p>
@@ -941,25 +966,25 @@ export default function Home() {
                   <motion.article
                     key={area.id}
                     variants={reveal}
-                    className="group flex min-h-[350px] flex-col rounded-xl border border-amber-500/20 bg-[#0c1017] p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-amber-400/50 hover:bg-[#111723] hover:shadow-obsidian sm:p-8"
+                    className="group flex min-h-[350px] flex-col rounded-xl border border-[#d49389]/20 bg-[#140e11] p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#d49389]/50 hover:bg-[#1a1217] hover:shadow-obsidian sm:p-8"
                   >
                     <div className="flex items-start justify-between">
-                      <span className="grid size-12 place-items-center rounded-lg border border-amber-500/25 bg-[#141b27] text-gold-400 shadow-sm transition-colors group-hover:border-gold-300 group-hover:bg-[#1b2434] group-hover:text-white">
+                      <span className="grid size-12 place-items-center rounded-lg border border-[#d49389]/25 bg-[#201419] text-[#e8aea6] shadow-sm transition-colors group-hover:border-[#f2d2cb] group-hover:bg-[#2b1922] group-hover:text-white">
                         <Icon size={22} strokeWidth={1.5} />
                       </span>
-                      <span className="font-serif text-2xl text-amber-500/40">
+                      <span className="font-serif text-2xl text-[#d49389]/40">
                         0{index + 1}
                       </span>
                     </div>
 
                     <div className="mt-6">
-                      <span className="inline-block rounded-md border border-amber-500/25 bg-[#141b27] px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-gold-300 shadow-sm">
+                      <span className="inline-block rounded-md border border-[#d49389]/25 bg-[#201419] px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-[#f2d2cb] shadow-sm">
                         {area.tag}
                       </span>
                       <h3 className="mt-3 font-serif text-[1.45rem] leading-tight text-white">
                         {area.title}
                       </h3>
-                      <p className="mt-3 text-[13px] leading-6 text-slate-300">
+                      <p className="mt-3 text-[13px] leading-6 text-[#d6c2be]">
                         {area.summary}
                       </p>
                     </div>
@@ -967,7 +992,7 @@ export default function Home() {
                     <button
                       type="button"
                       onClick={() => setActiveArea(area)}
-                      className="group/link mt-auto inline-flex w-fit items-center gap-2 pt-6 text-[10px] font-bold uppercase tracking-[0.16em] text-gold-400 hover:text-white"
+                      className="group/link mt-auto inline-flex w-fit items-center gap-2 pt-6 text-[10px] font-bold uppercase tracking-[0.16em] text-[#e8aea6] hover:text-white"
                     >
                       Ver detalhes e demandas{" "}
                       <ArrowRight
@@ -982,140 +1007,140 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Plantão 24h & Urgências Criminais (High Stakes Tactical Legal Command) */}
+        {/* Por Que Escolher Letícia Saldanha Advocacia - Diferenciais */}
         <section
-          id="plantao"
-          className="scroll-mt-24 border-y border-amber-500/20 bg-[#07090e] py-20 sm:py-28 lg:py-32"
+          id="diferenciais"
+          className="scroll-mt-24 border-y border-[#d49389]/20 bg-[#0d090b] py-20 sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
               <Heading
-                eyebrow="PRONTIDÃO IMEDIATA & DEFESA DE URGÊNCIA"
-                description="Uma prisão injusta ou depoimento policial sem a assistência de um advogado criminalista pode causar danos irreversíveis ao processo. Saiba como atuamos com rapidez."
+                eyebrow="NOSSOS PILARES DE EXCELÊNCIA"
+                description="Unimos empatia sincera, acolhimento às suas dores e uma postura jurídica incisiva para transformar direitos em conquistas reais."
               >
-                Prisão em flagrante, busca ou intimação?{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-gold-300 to-amber-200">
-                  Acione o plantão criminal imediatamente.
+                Por que confiar seu processo à{" "}
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fdf5f3] via-[#f0bcb4] to-[#d49389]">
+                  Dra. Letícia Saldanha?
                 </span>
               </Heading>
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá, Dr. Hudson! Preciso de atendimento emergencial no Plantão Criminal 24h."
+                  "Olá, Dra. Letícia! Gostaria de consultar sobre meus direitos."
                 )}
                 target="_blank"
                 size="md"
-                variant="gold"
+                variant="rosegold"
                 className="rounded-lg shadow-sm"
               >
-                <WhatsAppIcon size={16} /> Acionar Plantão 24h no WhatsApp
+                <WhatsAppIcon size={16} /> Falar no WhatsApp
               </GlowingButton>
             </div>
 
             <div className="mt-12 grid gap-8 lg:grid-cols-2">
-              {/* Card 1: Prisão em Flagrante e Custódia */}
+              {/* Card 1: Atendimento Humanizado e Acolhedor */}
               <motion.article
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65 }}
-                className="group flex flex-col justify-between rounded-xl border border-amber-500/25 bg-[#0c1017] p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-amber-400/50 hover:bg-[#111622] sm:p-9"
+                className="group flex flex-col justify-between rounded-xl border border-[#d49389]/25 bg-[#140e11] p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-[#d49389]/50 hover:bg-[#1a1217] sm:p-9"
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-md border border-amber-500/30 bg-[#141b27] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-gold-300">
-                      <ShieldAlert size={14} /> Plantão de Flagrantes 24h
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#d49389]/30 bg-[#201419] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#f2d2cb]">
+                      <HeartHandshake size={14} /> Atendimento Humanizado
                     </span>
-                    <span className="text-xs font-semibold text-amber-400">
-                      Resposta Imediata
+                    <span className="text-xs font-semibold text-[#e8aea6]">
+                      Acolhimento Real
                     </span>
                   </div>
                   <h3 className="mt-4 font-serif text-2xl leading-tight text-white sm:text-[1.75rem]">
-                    Audiência de Custódia e Soltura Imediata
+                    Empatia, Escuta Atenta e Zero &ldquo;Juridiquês&rdquo;
                   </h3>
-                  <p className="mt-3 text-[14px] leading-relaxed text-slate-300">
-                    O momento da detenção exige presença física imediata. O Dr. Hudson de Freitas acompanha o cliente na delegacia de polícia em Ituiutaba e comarcas vizinhas, coibindo constrangimentos ilegais e preparando a fundamentação fática e jurídica para pleitear a liberdade na Audiência de Custódia.
+                  <p className="mt-3 text-[14px] leading-relaxed text-[#d6c2be]">
+                    Sabemos que por trás de um benefício do INSS ou de uma reclamação trabalhista existe uma vida, uma família e meses de angústia. Aqui você conversa diretamente com a advogada, em uma linguagem simples e acessível, entendendo com clareza cada passo da sua ação.
                   </p>
-                  <ul className="mt-5 space-y-2 text-xs font-medium text-slate-200">
+                  <ul className="mt-5 space-y-2 text-xs font-medium text-stone-200">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-gold-400" />
-                      <span>Atendimento presencial urgente em delegacias e batalhões</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#e8aea6]" />
+                      <span>Contato direto com a advogada pelo WhatsApp, sem robôs ou intermediários</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-gold-400" />
-                      <span>Sustentação oral técnica na Audiência de Custódia perante o juiz</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#e8aea6]" />
+                      <span>Esclarecimento detalhado de cada documento e cálculo necessário</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-gold-400" />
-                      <span>Orientação aos familiares sobre documentos necessários para a soltura</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#e8aea6]" />
+                      <span>Acolhimento às dúvidas da família com paciência e carinho</span>
                     </li>
                   </ul>
                 </div>
-                <div className="mt-7 border-t border-amber-500/20 pt-4">
+                <div className="mt-7 border-t border-[#d49389]/20 pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dr. Hudson! Gostaria de consultar sobre prisão em flagrante / custódia urgente."
+                      "Olá, Dra. Letícia! Gostaria de conversar com você sobre a minha situação."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-amber-500/30 bg-[#141b27] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-gold-200 transition-all hover:border-gold-300 hover:bg-[#1d2638] hover:text-white"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#d49389]/30 bg-[#201419] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#f2d2cb] transition-all hover:border-[#f2d2cb] hover:bg-[#2c1a23] hover:text-white"
                   >
                     <span className="inline-flex items-center gap-2">
-                      <WhatsAppIcon size={15} /> Acionar Plantão de Prisão no WhatsApp
+                      <WhatsAppIcon size={15} /> Conversar Diretamente no WhatsApp
                     </span>
                     <ArrowUpRight size={15} />
                   </a>
                 </div>
               </motion.article>
 
-              {/* Card 2: Investigação Preliminar e Habeas Corpus */}
+              {/* Card 2: Combatividade Técnica e Resultados */}
               <motion.article
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65, delay: 0.1 }}
-                className="group flex flex-col justify-between rounded-xl border border-amber-500/25 bg-[#0c1017] p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-amber-400/50 hover:bg-[#111622] sm:p-9"
+                className="group flex flex-col justify-between rounded-xl border border-[#d49389]/25 bg-[#140e11] p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-[#d49389]/50 hover:bg-[#1a1217] sm:p-9"
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-md border border-amber-500/30 bg-[#141b27] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-gold-300">
-                      <Landmark size={14} /> Tribunais Superiores
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#d49389]/30 bg-[#201419] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#f2d2cb]">
+                      <Scale size={14} /> Rigor Técnico Incisivo
                     </span>
-                    <span className="text-xs font-semibold text-amber-400">
-                      TJMG · STJ · STF
+                    <span className="text-xs font-semibold text-[#e8aea6]">
+                      Defesa Incondicional
                     </span>
                   </div>
                   <h3 className="mt-4 font-serif text-2xl leading-tight text-white sm:text-[1.75rem]">
-                    Habeas Corpus Urgente e Revogação de Prisão
+                    Combatividade na Luta Pelos Seus Direitos
                   </h3>
-                  <p className="mt-3 text-[14px] leading-relaxed text-slate-300">
-                    Caso a prisão preventiva seja decretada ou mantida de forma injusta, ingressamos com Habeas Corpus com pedido liminar no Tribunal de Justiça de Minas Gerais em Belo Horizonte, no STJ ou STF em Brasília, combatendo a ausência de requisitos e a ilegalidade da medida.
+                  <p className="mt-3 text-[14px] leading-relaxed text-[#d6c2be]">
+                    Não nos conformamos com negativas do INSS ou abusos do empregador. Estudamos minuciosamente cada prova documental, registros de ponto, laudos médicos e histórico do CNIS para construir teses jurídicas sólidas perante a Justiça Federal e a Justiça do Trabalho.
                   </p>
-                  <ul className="mt-5 space-y-2 text-xs font-medium text-slate-200">
+                  <ul className="mt-5 space-y-2 text-xs font-medium text-stone-200">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-gold-400" />
-                      <span>Elaboração ágil de Habeas Corpus com pedido liminar</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#e8aea6]" />
+                      <span>Análise aprofundada de cálculos para buscar o benefício mais vantajoso</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-gold-400" />
-                      <span>Despacho presencial e virtual de memoriais com Desembargadores</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#e8aea6]" />
+                      <span>Reversão comprovada de causas consideradas difíceis ou perdidas</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-gold-400" />
-                      <span>Anulação de provas e trancamento de ações penais temerárias</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#e8aea6]" />
+                      <span>Acompanhamento ágil de cada prazo e movimentação processual</span>
                     </li>
                   </ul>
                 </div>
-                <div className="mt-7 border-t border-amber-500/20 pt-4">
+                <div className="mt-7 border-t border-[#d49389]/20 pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dr. Hudson! Gostaria de consultar sobre Habeas Corpus / Revogação de Prisão Preventiva."
+                      "Olá, Dra. Letícia! Preciso de ajuda para reverter uma decisão / recorrer sobre meu benefício."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-amber-500/30 bg-[#141b27] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-gold-200 transition-all hover:border-gold-300 hover:bg-[#1d2638] hover:text-white"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#d49389]/30 bg-[#201419] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#f2d2cb] transition-all hover:border-[#f2d2cb] hover:bg-[#2c1a23] hover:text-white"
                   >
                     <span className="inline-flex items-center gap-2">
-                      <WhatsAppIcon size={15} /> Consultar Habeas Corpus no WhatsApp
+                      <WhatsAppIcon size={15} /> Analisar Meu Caso no WhatsApp
                     </span>
                     <ArrowUpRight size={15} />
                   </a>
@@ -1125,27 +1150,27 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Nosso Compromisso Ético e Operacional - Ultra Deep Obsidian Theme */}
-        <section className="relative overflow-hidden bg-[#05070a] py-20 text-white sm:py-28 lg:py-32">
-          <div className="pointer-events-none absolute -left-28 top-1/4 size-96 rounded-full bg-amber-500/10 blur-3xl" />
-          <div className="pointer-events-none absolute -right-28 bottom-1/4 size-96 rounded-full bg-amber-600/5 blur-3xl" />
+        {/* Nosso Compromisso Ético e Operacional */}
+        <section className="relative overflow-hidden bg-[#0a0709] py-20 text-white sm:py-28 lg:py-32">
+          <div className="pointer-events-none absolute -left-28 top-1/4 size-96 rounded-full bg-[#d49389]/10 blur-3xl" />
+          <div className="pointer-events-none absolute -right-28 bottom-1/4 size-96 rounded-full bg-[#7b2938]/10 blur-3xl" />
 
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.88fr_1.12fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
-                eyebrow="NOSSO COMPROMISSO PROFISSIONAL"
-                description="O reconhecimento comprovado com nota de 4,9 ★ no Google reflete a dedicação intransigente em aliar combatividade técnica, clareza sobre o processo e resposta imediata para cada cliente e sua família."
+                eyebrow="NOSSO COMPROMISSO COM VOCÊ"
+                description="O reconhecimento expresso com nota 4,9 ★ no Google e dezenas de avaliações reflete a dedicação intransigente em cuidar de cada pessoa com carinho, técnica e lealdade."
               >
-                Protegemos sua liberdade com{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-gold-300 to-amber-200">
-                  seriedade, firmeza e dedicação total.
+                Cuidamos do seu futuro com{" "}
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fdf5f3] via-[#f0bcb4] to-[#d49389]">
+                  respeito, transparência e dedicação total.
                 </span>
               </Heading>
 
-              <blockquote className="mt-8 rounded-xl border border-amber-500/25 bg-[#0c1017] p-6 font-serif text-base italic leading-7 text-gold-100">
-                &ldquo;Dr. Hudson é um profissional ímpar, muito humano e ao mesmo tempo firme e combativo perante a Justiça. Sempre nos manteve informados de cada passo do processo penal com total transparência e calma. Recomendo com toda certeza!&rdquo;
-                <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-gold-400">
-                  — Camila Resende Duarte · Google Meu Negócio
+              <blockquote className="mt-8 rounded-xl border border-[#d49389]/25 bg-[#140e11] p-6 font-serif text-base italic leading-7 text-[#faeae6]">
+                &ldquo;Eu nunca me senti tão bem, tão acolhida por alguém como a Dra Letícia. Sempre ouvia falar dos trabalhos feitos por ela, só quando entreguei o caso nas mãos dela que pude ter a certeza e sentir de onde veio tantos elogios. Super recomendo !!! Parabéns e continue com esse profissionalismo, Cataguases e região precisa.&rdquo;
+                <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-[#e8aea6]">
+                  — Leticia Oliveira · Avaliação Verificada no Google Meu Negócio
                 </footer>
               </blockquote>
             </div>
@@ -1155,23 +1180,23 @@ export default function Home() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={stagger}
-              className="divide-y divide-amber-500/15"
+              className="divide-y divide-[#d49389]/15"
             >
               {[
                 [
                   "01",
-                  "Prontidão Imediata & Atendimento Direto",
-                  "Em matéria penal, cada hora conta. Você é atendido diretamente pelo Dr. Hudson de Freitas, sem intermediários, assegurando ação rápida em delegacias e juízos.",
+                  "Acolhimento Genuíno & Empatia",
+                  "Você é ouvida com atenção e sensibilidade. Entendemos suas necessidades individuais para traçar a melhor estratégia jurídica sem nenhum julgamento.",
                 ],
                 [
                   "02",
-                  "Transparência Absoluta & Apoio à Família",
-                  "Sabemos o impacto emocional e a angústia causados por uma acusação criminal. Esclarecemos o cenário real em linguagem clara, orientando a família em cada etapa.",
+                  "Transparência Absoluta & Comunicação Fácil",
+                  "Aqui você não fica no escuro. Você tem acesso direto à advogada pelo WhatsApp e entende todas as etapas do seu processo em linguagem clara.",
                 ],
                 [
                   "03",
-                  "Combatividade Técnica sem Concessões",
-                  "Não aceitamos ilegalidades ou abusos de autoridade. Atuamos com vigor na garantia da ampla defesa, do contraditório e da presunção de inocência até a última instância.",
+                  "Combatividade Incisiva & Resultados",
+                  "Lutamos incansavelmente pelo melhor resultado possível, exigindo o cumprimento estrito das leis e o pagamento de cada direito garantido pela CLT e pela Previdência.",
                 ],
               ].map(([number, title, description]) => (
                 <motion.div
@@ -1179,12 +1204,12 @@ export default function Home() {
                   variants={reveal}
                   className="grid gap-3 py-6 first:pt-0 sm:grid-cols-[70px_1fr] sm:gap-6 sm:py-7"
                 >
-                  <span className="font-serif text-2xl font-semibold text-gold-400">
+                  <span className="font-serif text-2xl font-semibold text-[#e8aea6]">
                     {number}
                   </span>
                   <div>
                     <h3 className="font-serif text-2xl text-white">{title}</h3>
-                    <p className="mt-2 max-w-lg text-[13px] leading-6 text-slate-300">
+                    <p className="mt-2 max-w-lg text-[13px] leading-6 text-[#d6c2be]">
                       {description}
                     </p>
                   </div>
@@ -1194,26 +1219,26 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Avaliações no Google (Depoimentos Reais - 4,9 estrelas · 10 avaliações) */}
+        {/* Avaliações no Google (Depoimentos Reais - 4,9 estrelas · 70+ avaliações) */}
         <section
           id="avaliacoes"
-          className="scroll-mt-24 border-t border-amber-500/20 bg-[#0a0d14] py-20 sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#d49389]/20 bg-[#100a0d] py-20 sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
               <Heading
                 eyebrow="PROVA SOCIAL VERIFICADA · GOOGLE MEU NEGÓCIO"
-                description="Confira avaliações autênticas de clientes que confiaram suas causas penais ao Dr. Hudson de Freitas em Ituiutaba, Triângulo Mineiro e em todo o Brasil."
+                description="Confira avaliações autênticas de clientes que confiaram seus direitos à Dra. Letícia Saldanha em Cataguases, Zona da Mata e em todo o Brasil."
               >
-                Avaliado com nota 4,9 ★ pela{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-gold-300 to-amber-200">
-                  precisão técnica, agilidade e resultados conquistados.
+                Avaliada com nota 4,9 ★ pelo{" "}
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fdf5f3] via-[#f0bcb4] to-[#d49389]">
+                  atendimento humanizado, competência e resultados.
                 </span>
               </Heading>
 
               {/* Verified Google Badge Card */}
-              <div className="flex flex-col gap-3 rounded-xl border border-amber-500/25 bg-[#0c1017] p-5 shadow-card sm:flex-row sm:items-center md:min-w-[340px]">
-                <div className="flex size-14 shrink-0 items-center justify-center rounded-lg border border-amber-500/25 bg-[#141b27] shadow-sm">
+              <div className="flex flex-col gap-3 rounded-xl border border-[#d49389]/25 bg-[#140e11] p-5 shadow-card sm:flex-row sm:items-center md:min-w-[340px]">
+                <div className="flex size-14 shrink-0 items-center justify-center rounded-lg border border-[#d49389]/25 bg-[#201419] shadow-sm">
                   <GoogleIcon size={30} />
                 </div>
                 <div>
@@ -1221,26 +1246,26 @@ export default function Home() {
                     <span className="font-serif text-3xl font-bold leading-none text-white">
                       4,9
                     </span>
-                    <div className="flex gap-0.5 text-amber-400">
+                    <div className="flex gap-0.5 text-[#e8aea6]">
                       {Array.from({ length: 5 }, (_, i) => (
                         <Star
                           key={i}
                           size={14}
-                          className="fill-amber-400 text-amber-400"
+                          className="fill-[#e8aea6] text-[#e8aea6]"
                         />
                       ))}
                     </div>
                   </div>
-                  <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-slate-200">
-                    Dr. Hudson de Freitas Advogado Criminal
+                  <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-stone-200">
+                    Letícia Saldanha Advocacia
                   </p>
                   <a
                     href={GOOGLE_MAPS_URL}
                     target="_blank"
                     rel="noreferrer"
-                    className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-gold-400 transition-colors hover:text-white"
+                    className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-[#e8aea6] transition-colors hover:text-white"
                   >
-                    10 avaliações no Google <ArrowUpRight size={13} />
+                    70 avaliações no Google <ArrowUpRight size={13} />
                   </a>
                 </div>
               </div>
@@ -1251,44 +1276,44 @@ export default function Home() {
               {clientReviews.map((review) => (
                 <article
                   key={review.name}
-                  className="group relative flex flex-col justify-between rounded-xl border border-amber-500/20 bg-[#0c1017] p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-amber-400/50 hover:bg-[#111723] hover:shadow-obsidian sm:p-8"
+                  className="group relative flex flex-col justify-between rounded-xl border border-[#d49389]/20 bg-[#140e11] p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#d49389]/50 hover:bg-[#1a1217] hover:shadow-obsidian sm:p-8"
                 >
                   <div>
                     {/* Header: Stars + Badge + Google icon */}
                     <div className="flex items-center justify-between gap-2">
-                      <div className="flex gap-1 text-amber-400">
+                      <div className="flex gap-1 text-[#e8aea6]">
                         {Array.from({ length: 5 }, (_, i) => (
                           <Star
                             key={i}
                             size={14}
-                            className="fill-amber-400 text-amber-400"
+                            className="fill-[#e8aea6] text-[#e8aea6]"
                           />
                         ))}
                       </div>
-                      <div className="flex items-center gap-1.5 text-[11px] font-medium text-slate-300">
+                      <div className="flex items-center gap-1.5 text-[11px] font-medium text-stone-300">
                         <GoogleIcon size={13} />
-                        <span className="rounded-md border border-amber-500/20 bg-[#141b27] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-gold-300 shadow-xs">
+                        <span className="rounded-md border border-[#d49389]/20 bg-[#201419] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#f2d2cb] shadow-xs">
                           {review.badge}
                         </span>
                       </div>
                     </div>
 
                     {/* Authentic review content */}
-                    <p className="mt-5 text-[14px] italic leading-relaxed text-slate-200">
+                    <p className="mt-5 text-[14px] italic leading-relaxed text-stone-200">
                       &ldquo;{review.content}&rdquo;
                     </p>
                   </div>
 
                   {/* Reviewer info */}
-                  <div className="mt-6 flex items-center gap-3 border-t border-amber-500/20 pt-4">
-                    <div className="grid size-10 shrink-0 place-items-center rounded-lg border border-amber-500/25 bg-[#141b27] font-serif text-sm font-semibold text-gold-300 shadow-xs">
+                  <div className="mt-6 flex items-center gap-3 border-t border-[#d49389]/20 pt-4">
+                    <div className="grid size-10 shrink-0 place-items-center rounded-lg border border-[#d49389]/25 bg-[#201419] font-serif text-sm font-semibold text-[#f2d2cb] shadow-xs">
                       {review.name.charAt(0)}
                     </div>
                     <div className="min-w-0 flex-1">
                       <p className="truncate font-serif text-base font-semibold text-white">
                         {review.name}
                       </p>
-                      <p className="text-[10px] uppercase tracking-wider text-slate-400">
+                      <p className="text-[10px] uppercase tracking-wider text-stone-400">
                         {review.reviewsCount}
                       </p>
                     </div>
@@ -1298,20 +1323,20 @@ export default function Home() {
             </div>
 
             {/* Bottom Actions and Trust Tags */}
-            <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-amber-500/20 pt-8 sm:flex-row">
+            <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-[#d49389]/20 pt-8 sm:flex-row">
               <div className="flex flex-wrap items-center gap-2">
                 {[
-                  "Advocacia Criminal Especializada",
-                  "Plantão 24h para Flagrantes e Custódia",
-                  "Atendimento direto com o advogado",
-                  "Sigilo absoluto e discrição",
+                  "Advocacia Trabalhista Especializada",
+                  "Direito Previdenciário & INSS",
+                  "Atendimento direto com a advogada",
+                  "Calçadão Shopping Cataguases",
                   "Nota 4,9 no Google",
                 ].map((tag) => (
                   <span
                     key={tag}
-                    className="inline-flex items-center gap-1.5 rounded-lg border border-amber-500/20 bg-[#0c1017] px-3.5 py-1.5 text-[11px] font-medium text-slate-200 shadow-xs"
+                    className="inline-flex items-center gap-1.5 rounded-lg border border-[#d49389]/20 bg-[#140e11] px-3.5 py-1.5 text-[11px] font-medium text-stone-200 shadow-xs"
                   >
-                    <CheckCircle2 size={13} className="text-gold-400" />
+                    <CheckCircle2 size={13} className="text-[#e8aea6]" />
                     {tag}
                   </span>
                 ))}
@@ -1321,9 +1346,9 @@ export default function Home() {
                 href={GOOGLE_MAPS_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="group inline-flex shrink-0 items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-gold-400 transition-colors hover:text-white"
+                className="group inline-flex shrink-0 items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#e8aea6] transition-colors hover:text-white"
               >
-                Ver perfil e avaliações no Google{" "}
+                Ver todas as 70 avaliações no Google{" "}
                 <ArrowUpRight
                   size={15}
                   className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
@@ -1333,87 +1358,87 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Contato & Localização em Ituiutaba */}
+        {/* Contato & Localização em Cataguases */}
         <section
           id="contato"
-          className="scroll-mt-24 border-t border-amber-500/20 bg-[#07090e] py-20 sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#d49389]/20 bg-[#0d090b] py-20 sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
-                eyebrow="CONTATO & SEDE EM ITUIUTABA - MG"
-                description="Agende seu atendimento presencial em nossa sede no Bairro Camargo em Ituiutaba ou inicie seu atendimento emergencial online pelo WhatsApp com resposta imediata para qualquer lugar do Brasil."
+                eyebrow="CONTATO & SEDE EM CATAGUASES - MG"
+                description="Agende seu atendimento presencial em nossa sede no Calçadão Shopping em Cataguases ou inicie seu atendimento online pelo WhatsApp de onde você estiver."
               >
                 Estamos prontos para{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-gold-300 to-amber-200">
-                  defender sua liberdade.
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fdf5f3] via-[#f0bcb4] to-[#d49389]">
+                  escutar e defender você.
                 </span>
               </Heading>
 
               <div className="mt-9 flex flex-col items-start gap-4">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dr. Hudson de Freitas! Gostaria de falar sobre um caso criminal."
+                    "Olá, Dra. Letícia Saldanha! Gostaria de agendar um horário para atendimento."
                   )}
                   target="_blank"
                   size="lg"
-                  variant="gold"
+                  variant="rosegold"
                   className="rounded-lg shadow-md"
                 >
                   <WhatsAppIcon size={17} /> Iniciar Conversa no WhatsApp
                 </GlowingButton>
-                <p className="text-[11px] leading-5 text-slate-300">
-                  Telefone e WhatsApp direto:{" "}
+                <p className="text-[11px] leading-5 text-[#d6c2be]">
+                  Telefone e WhatsApp do escritório:{" "}
                   <strong className="text-white">{PHONE_DISPLAY}</strong>
                 </p>
               </div>
 
-              <div className="mt-10 space-y-4 text-xs text-slate-300">
+              <div className="mt-10 space-y-4 text-xs text-[#d6c2be]">
                 <div className="flex items-start gap-3">
                   <Clock
                     size={16}
-                    className="mt-0.5 shrink-0 text-gold-400"
+                    className="mt-0.5 shrink-0 text-[#e8aea6]"
                   />
                   <div>
                     <p className="font-semibold text-white">
-                      Horário & Prontidão
+                      Horário de Funcionamento
                     </p>
-                    <p className="mt-0.5 text-slate-200">
-                      Plantão Criminal 24 Horas para Prisões e Flagrantes
+                    <p className="mt-0.5 text-stone-200">
+                      Segunda a Sexta-feira das 09:00 às 18:00
                     </p>
-                    <p className="text-[11px] text-slate-400">
-                      Expediente do escritório: Segunda a Sexta das 08:00 às 18:00 (atendimento presencial e online)
+                    <p className="text-[11px] text-stone-400">
+                      Atendimento presencial no Calçadão Shopping e atendimento online para todo o Brasil
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3 pt-1">
-                  <Phone size={16} className="shrink-0 text-gold-400" />
+                  <Phone size={16} className="shrink-0 text-[#e8aea6]" />
                   <a
                     href={`tel:+${WHATSAPP_NUMBER}`}
-                    className="font-medium text-white transition-colors hover:text-gold-300"
+                    className="font-medium text-white transition-colors hover:text-[#e8aea6]"
                   >
-                    {PHONE_DISPLAY} (Ligações e WhatsApp 24h)
+                    {PHONE_DISPLAY} (Ligações e WhatsApp)
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <InstagramIcon size={16} className="shrink-0 text-gold-400" />
+                  <InstagramIcon size={16} className="shrink-0 text-[#e8aea6]" />
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noreferrer"
-                    className="transition-colors hover:text-gold-300 text-slate-200"
+                    className="transition-colors hover:text-[#e8aea6] text-stone-200"
                   >
                     {INSTAGRAM_HANDLE} (Instagram Oficial)
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <Mail size={16} className="shrink-0 text-gold-400" />
+                  <Mail size={16} className="shrink-0 text-[#e8aea6]" />
                   <a
                     href={`mailto:${EMAIL_CONTACT}`}
-                    className="transition-colors hover:text-gold-300 text-slate-200"
+                    className="transition-colors hover:text-[#e8aea6] text-stone-200"
                   >
                     {EMAIL_CONTACT}
                   </a>
@@ -1422,7 +1447,7 @@ export default function Home() {
                 <div className="flex items-start gap-3">
                   <MapPin
                     size={16}
-                    className="mt-0.5 shrink-0 text-gold-400"
+                    className="mt-0.5 shrink-0 text-[#e8aea6]"
                   />
                   <span>{ADDRESS_TEXT}</span>
                 </div>
@@ -1430,65 +1455,65 @@ export default function Home() {
             </div>
 
             {/* Address & Office Card */}
-            <div className="relative overflow-hidden rounded-xl border border-amber-500/25 bg-[#0c1017] p-7 shadow-card sm:p-10">
-              <div className="absolute right-0 top-0 h-1.5 w-32 bg-amber-500" />
+            <div className="relative overflow-hidden rounded-xl border border-[#d49389]/25 bg-[#140e11] p-7 shadow-card sm:p-10">
+              <div className="absolute right-0 top-0 h-1.5 w-32 bg-gradient-to-r from-[#d49389] to-[#e8aea6]" />
 
               <div className="flex items-center gap-4">
-                <span className="grid size-12 place-items-center rounded-lg border border-amber-500/30 bg-[#141b27] text-gold-400">
+                <span className="grid size-12 place-items-center rounded-lg border border-[#d49389]/30 bg-[#201419] text-[#e8aea6]">
                   <MapPin size={22} strokeWidth={1.6} />
                 </span>
                 <div>
-                  <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-gold-400">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#e8aea6]">
                     Sede do Escritório
                   </p>
                   <p className="mt-1 font-serif text-2xl text-white">
-                    Ituiutaba · Minas Gerais
+                    Cataguases · Minas Gerais
                   </p>
                 </div>
               </div>
 
-              <address className="mt-7 max-w-md text-[14px] not-italic leading-7 text-slate-300">
+              <address className="mt-7 max-w-md text-[14px] not-italic leading-7 text-[#d6c2be]">
                 <strong className="font-semibold text-white">
-                  Hudson de Freitas Advocacia
+                  Letícia Saldanha Advocacia
                 </strong>
                 <br />
-                Dr. Hudson de Freitas · Advogado Criminalista
+                Dra. Letícia Saldanha · OAB/MG
                 <br />
                 {ADDRESS_TEXT}
               </address>
 
               {/* Weekly schedule table */}
-              <div className="mt-6 rounded-lg border border-amber-500/20 bg-[#07090e] p-4 text-xs">
-                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-gold-400">
-                  Expediente & Prontidão
+              <div className="mt-6 rounded-lg border border-[#d49389]/20 bg-[#0d090b] p-4 text-xs">
+                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#e8aea6]">
+                  Atendimento & Horários
                 </p>
-                <div className="grid grid-cols-2 gap-y-1.5 text-slate-300">
-                  <span>Plantão Criminal</span>
-                  <span className="text-right font-semibold text-amber-400">
-                    24 Horas / 7 Dias
+                <div className="grid grid-cols-2 gap-y-1.5 text-stone-300">
+                  <span>Segunda a Sexta</span>
+                  <span className="text-right font-semibold text-white">
+                    09:00 às 18:00
                   </span>
                   <span>Atendimento Presencial</span>
-                  <span className="text-right font-semibold text-white">
-                    Com agendamento
+                  <span className="text-right text-[#f2d2cb]">
+                    Com agendamento prévio
                   </span>
-                  <span>Segunda a Sexta</span>
-                  <span className="text-right text-white">08:00 às 18:00</span>
+                  <span>Localização</span>
+                  <span className="text-right text-stone-200">Calçadão Shopping - Sl 108</span>
                   <span>Atendimento Online</span>
-                  <span className="text-right text-slate-200">Em todo o Brasil</span>
+                  <span className="text-right text-stone-200">Todo o Brasil</span>
                 </div>
               </div>
 
-              <div className="my-7 h-px bg-amber-500/20" />
+              <div className="my-7 h-px bg-[#d49389]/20" />
 
               <div className="flex flex-wrap items-center justify-between gap-4">
-                <p className="text-xs text-slate-400">
-                  Av. Minas Gerais, 15 - Camargo · Ituiutaba - MG
+                <p className="text-xs text-stone-400">
+                  Praça Rui Barbosa, 170 - Sl 108 · Cataguases - MG
                 </p>
                 <a
                   href={GOOGLE_MAPS_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg border border-amber-500/30 bg-[#141b27] px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-gold-200 transition-colors hover:border-gold-300 hover:bg-[#1d2638] hover:text-white"
+                  className="inline-flex items-center gap-2 rounded-lg border border-[#d49389]/30 bg-[#201419] px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-[#f2d2cb] transition-colors hover:border-[#f2d2cb] hover:bg-[#2c1a23] hover:text-white"
                 >
                   Traçar Rota no Google Maps <ArrowUpRight size={14} />
                 </a>
@@ -1497,24 +1522,24 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Pre-Footer CTA Strip - Deep Obsidian with Burnished Gold Sheen */}
-        <section className="border-t border-amber-500/20 bg-gradient-to-r from-[#05070a] via-[#0c1017] to-[#05070a] px-5 py-14 text-white shadow-inner sm:px-8 sm:py-16 lg:px-12">
+        {/* Pre-Footer CTA Strip */}
+        <section className="border-t border-[#d49389]/20 bg-gradient-to-r from-[#0d090b] via-[#160d12] to-[#0d090b] px-5 py-14 text-white shadow-inner sm:px-8 sm:py-16 lg:px-12">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-7 sm:flex-row sm:items-center">
             <div>
-              <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-gold-400">
-                <Sparkles size={13} /> HUDSON DE FREITAS · ADVOCACIA CRIMINAL
+              <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#e8aea6]">
+                <Sparkles size={13} /> LETÍCIA SALDANHA · ADVOCACIA & CONSULTORIA
               </p>
               <h2 className="mt-3 max-w-2xl font-serif text-3xl leading-tight text-white sm:text-4xl">
-                Precisa de auxílio urgente ou defesa penal combativa em Ituiutaba e região?
+                Tem dúvidas sobre sua aposentadoria ou direitos no trabalho?
               </h2>
             </div>
             <a
               href={getWhatsAppUrl(
-                "Olá, Dr. Hudson! Gostaria de solicitar um atendimento com o escritório."
+                "Olá, Dra. Letícia! Gostaria de consultar sobre a minha situação trabalhista / previdenciária."
               )}
               target="_blank"
               rel="noreferrer"
-              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-lg bg-gradient-to-r from-brand-500 via-gold-400 to-brand-500 px-7 py-4 text-[11px] font-bold uppercase tracking-[0.14em] text-brand-950 shadow-md transition-all hover:-translate-y-0.5 hover:brightness-110 hover:shadow-gold"
+              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-lg bg-gradient-to-r from-[#c47d73] via-[#e8aea6] to-[#c47d73] px-7 py-4 text-[11px] font-bold uppercase tracking-[0.14em] text-[#190c10] shadow-md transition-all hover:-translate-y-0.5 hover:brightness-110 hover:shadow-rosegold"
             >
               <WhatsAppIcon size={17} /> Falar no WhatsApp{" "}
               <ArrowUpRight size={15} />
@@ -1523,77 +1548,76 @@ export default function Home() {
         </section>
 
         {/* Footer */}
-        <footer className="border-t border-amber-500/20 bg-[#05070a] px-5 py-14 text-white sm:px-8 lg:px-12">
+        <footer className="border-t border-[#d49389]/20 bg-[#0a0709] px-5 py-14 text-white sm:px-8 lg:px-12">
           <div className="mx-auto grid max-w-7xl gap-10 sm:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1fr]">
             <div>
               <a
                 href="#inicio"
-                aria-label="Dr. Hudson de Freitas Advocacia Criminal"
+                aria-label="Letícia Saldanha Advocacia"
                 className="inline-block transition-transform hover:scale-[1.02]"
               >
                 <Image
                   src={LOGO_FULL_SRC}
                   width={1024}
-                  height={682}
-                  alt="Dr. Hudson de Freitas Advocacia - Logotipo Oficial"
+                  height={512}
+                  alt="Letícia Saldanha Advocacia e Consultoria Especializada"
                   className="h-[72px] w-auto object-contain sm:h-[84px]"
                 />
               </a>
-              <p className="mt-4 max-w-xs text-xs leading-6 text-slate-300">
-                ⚖️ Advocacia Criminal estratégica, combativa e intransigente. Plantão 24 horas para flagrantes, audiências de custódia, inquéritos policiais, Tribunal do Júri e recursos nos Tribunais Superiores.
+              <p className="mt-4 max-w-xs text-xs leading-6 text-[#d6c2be]">
+                ⚖️ Advocacia humanizada, técnica e combativa. Especializada em Direito do Trabalho e Direito Previdenciário (INSS, BPC/LOAS, aposentadorias e rescisões).
               </p>
-              <p className="mt-3 text-[11px] font-semibold text-gold-400">
-                Dr. Hudson de Freitas · Advogado Criminalista · OAB/MG
+              <p className="mt-3 text-[11px] font-semibold text-[#e8aea6]">
+                Dra. Letícia Saldanha · Advogada · OAB/MG
               </p>
             </div>
 
             <div>
-              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-gold-400">
+              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#e8aea6]">
                 Navegação
               </h2>
-              <div className="mt-4 flex flex-col items-start gap-3 text-xs text-slate-300">
+              <div className="mt-4 flex flex-col items-start gap-3 text-xs text-[#d6c2be]">
                 <a className="footer-link" href="#inicio">
                   Início
                 </a>
                 <a className="footer-link" href="#sobre">
-                  Sobre o Advogado
+                  Prazer, Letícia
                 </a>
                 <a className="footer-link" href="#atuacao">
-                  Atuação Criminal
+                  Áreas de Atuação
                 </a>
-                <a className="footer-link" href="#plantao">
-                  Plantão 24h & Urgências
+                <a className="footer-link" href="#diferenciais">
+                  Por Que Escolher
                 </a>
                 <a className="footer-link" href="#avaliacoes">
                   Avaliações no Google (4,9 ★)
                 </a>
                 <a className="footer-link" href="#contato">
-                  Contato & Sede em Ituiutaba
+                  Contato & Sede em Cataguases
                 </a>
               </div>
             </div>
 
             <div>
-              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-gold-400">
+              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#e8aea6]">
                 Contato & Endereço
               </h2>
-              <div className="mt-4 flex flex-col items-start gap-2.5 text-xs text-slate-300">
+              <div className="mt-4 flex flex-col items-start gap-2.5 text-xs text-[#d6c2be]">
                 <a
                   href={getWhatsAppUrl(
-                    "Olá, Dr. Hudson! Gostaria de solicitar um atendimento com o escritório."
+                    "Olá, Dra. Letícia! Gostaria de solicitar um atendimento com o escritório."
                   )}
                   target="_blank"
                   rel="noreferrer"
-                  className="footer-link inline-flex items-center gap-2 font-medium text-gold-300"
+                  className="footer-link inline-flex items-center gap-2 font-medium text-[#f2d2cb]"
                 >
-                  <WhatsAppIcon size={15} /> WhatsApp 24h: {PHONE_DISPLAY}
+                  <WhatsAppIcon size={15} /> WhatsApp: {PHONE_DISPLAY}
                 </a>
                 <a
                   href={`tel:+${WHATSAPP_NUMBER}`}
                   className="footer-link inline-flex items-center gap-2"
                 >
-                  <Phone size={15} className="shrink-0" /> Telefone:{" "}
-                  {PHONE_DISPLAY}
+                  <Phone size={15} className="shrink-0" /> Telefone: {PHONE_DISPLAY}
                 </a>
                 <a
                   href={INSTAGRAM_URL}
@@ -1618,16 +1642,16 @@ export default function Home() {
                   <MapPin size={15} className="mt-0.5 shrink-0" />
                   <span>{ADDRESS_TEXT}</span>
                 </a>
-                <p className="inline-flex items-center gap-2 pt-1 text-[11px] text-amber-400">
-                  <Clock size={14} className="shrink-0" /> Plantão Criminal: 24 Horas
+                <p className="inline-flex items-center gap-2 pt-1 text-[11px] text-[#e8aea6]">
+                  <Clock size={14} className="shrink-0" /> Seg a Sex: 09:00 às 18:00
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-amber-500/20 pt-6 text-[10px] text-slate-400 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-[#d49389]/20 pt-6 text-[10px] text-stone-400 sm:flex-row sm:items-center sm:justify-between">
             <p>
-              © {new Date().getFullYear()} HUDSON DE FREITAS ADVOCACIA. Todos os direitos reservados.
+              © {new Date().getFullYear()} LETÍCIA SALDANHA ADVOCACIA. Todos os direitos reservados.
             </p>
             <p>
               Conteúdo informativo, em estrita conformidade com o Código de Ética e Disciplina da OAB.
@@ -1642,21 +1666,21 @@ export default function Home() {
         >
           <a
             href={getWhatsAppUrl(
-              "Olá, Dr. Hudson de Freitas! Preciso de orientação jurídica criminal sobre meu caso."
+              "Olá, Dra. Letícia Saldanha! Gostaria de consultar sobre meus direitos trabalhistas / previdenciários."
             )}
             target="_blank"
             rel="noreferrer"
-            aria-label="Falar agora pelo WhatsApp com o Dr. Hudson de Freitas"
+            aria-label="Falar agora pelo WhatsApp com a Dra. Letícia Saldanha"
             className="group relative flex size-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-[#25D366]/40"
           >
             <WhatsAppIcon size={28} />
-            <span className="pointer-events-none absolute right-16 hidden whitespace-nowrap rounded-lg bg-[#0c1017] border border-amber-500/30 px-3.5 py-1.5 text-xs font-semibold text-white shadow-lg transition-opacity group-hover:block">
-              Falar no WhatsApp
+            <span className="pointer-events-none absolute right-16 hidden whitespace-nowrap rounded-lg bg-[#140e11] border border-[#d49389]/30 px-3.5 py-1.5 text-xs font-semibold text-white shadow-lg transition-opacity group-hover:block">
+              Falar com a Dra. Letícia
             </span>
           </a>
         </aside>
 
-        {/* Modal de Detalhes da Área de Atuação Criminal (Masculine Dark Graphite) */}
+        {/* Modal de Detalhes da Área de Atuação */}
         <AnimatePresence>
           {activeArea && (
             <motion.div
@@ -1675,18 +1699,18 @@ export default function Home() {
                 exit={{ opacity: 0, y: 16, scale: 0.99 }}
                 transition={{ duration: 0.24 }}
                 onClick={(event) => event.stopPropagation()}
-                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-xl border border-amber-500/35 bg-[#0c1017] p-7 shadow-2xl sm:max-w-xl sm:rounded-xl sm:p-10"
+                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-xl border border-[#d49389]/35 bg-[#140e11] p-7 shadow-2xl sm:max-w-xl sm:rounded-xl sm:p-10"
               >
                 <button
                   type="button"
                   aria-label="Fechar detalhes da especialidade"
                   onClick={() => setActiveArea(null)}
-                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-amber-500/30 bg-[#141b27] text-gold-300 transition-colors hover:border-gold-300 hover:text-white"
+                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-[#d49389]/30 bg-[#201419] text-[#f2d2cb] transition-colors hover:border-[#f2d2cb] hover:text-white"
                 >
                   <X size={18} />
                 </button>
 
-                <p className="eyebrow">ESPECIALIDADE CRIMINAL</p>
+                <p className="eyebrow">ESPECIALIDADE JURÍDICA</p>
 
                 <h2
                   id="area-dialog-title"
@@ -1695,21 +1719,21 @@ export default function Home() {
                   {activeArea.title}
                 </h2>
 
-                <p className="mt-5 text-sm leading-7 text-slate-300">
+                <p className="mt-5 text-sm leading-7 text-[#d6c2be]">
                   {activeArea.details}
                 </p>
 
-                <div className="mt-6 border-t border-amber-500/20 pt-5">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-gold-400">
+                <div className="mt-6 border-t border-[#d49389]/20 pt-5">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#e8aea6]">
                     Principais demandas atendidas pelo escritório:
                   </p>
                   <ul className="mt-4 space-y-3">
                     {activeArea.topics.map((topic) => (
                       <li
                         key={topic}
-                        className="flex items-center gap-3 text-sm text-slate-200"
+                        className="flex items-center gap-3 text-sm text-stone-200"
                       >
-                        <span className="size-2 shrink-0 rounded-full bg-amber-400" />
+                        <span className="size-2 shrink-0 rounded-full bg-[#e8aea6]" />
                         <span>{topic}</span>
                       </li>
                     ))}
@@ -1721,7 +1745,7 @@ export default function Home() {
                     href={getWhatsAppUrl(activeArea.whatsAppText)}
                     target="_blank"
                     size="md"
-                    variant="gold"
+                    variant="rosegold"
                     className="rounded-lg shadow-md"
                   >
                     <WhatsAppIcon size={16} /> Consultar sobre esta demanda
@@ -1729,7 +1753,7 @@ export default function Home() {
                   <button
                     type="button"
                     onClick={() => setActiveArea(null)}
-                    className="px-5 py-3 text-xs font-semibold text-slate-400 transition-colors hover:text-white"
+                    className="px-5 py-3 text-xs font-semibold text-stone-400 transition-colors hover:text-white"
                   >
                     Fechar
                   </button>
