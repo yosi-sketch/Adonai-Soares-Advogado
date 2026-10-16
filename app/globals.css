@@ -2,48 +2,51 @@
 
 :root {
   color-scheme: dark;
-  --brand-gold-light: #fff8e7;
-  --brand-gold-accent: #f2d078;
-  --brand-gold: #d4af37;
-  --brand-gold-dark: #8c6224;
-  --brand-bronze-dark: #4a300a;
-  --brand-obsidian: #0b0a09;
-  --brand-charcoal: #12100d;
-  --brand-surface: #191612;
-  --brand-ink: #fdfbf7;
-  --brand-ink-soft: #ded8ca;
-  --brand-pearl: #0b0a09;
-  --brand-paper: #12100d;
+  --brand-gold-light: #fdf6cc;
+  --brand-gold-highlight: #fcf3a3;
+  --brand-gold-accent: #f9d26c;
+  --brand-gold: #d49b29;
+  --brand-gold-dark: #c08322;
+  --brand-bronze-dark: #8e5813;
+  --brand-bronze-deep: #5a370b;
+  --brand-obsidian: #080706;
+  --brand-charcoal: #110f0c;
+  --brand-surface: #181512;
+  --brand-surface-elevated: #221d17;
+  --brand-ink: #fdfcf9;
+  --brand-ink-soft: #dfd7c8;
+  --brand-pearl: #080706;
+  --brand-paper: #110f0c;
 }
 
 @theme inline {
   --font-serif: var(--font-serif), var(--font-display), "Playfair Display", "Cormorant Garamond", "Cinzel", serif;
   --font-sans: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
-  --color-ink: #fdfbf7;
-  --color-ink-soft: #ded8ca;
-  --color-pearl: #0b0a09;
-  --color-brand-50: #0f0d0b;
-  --color-brand-100: #171410;
-  --color-brand-200: #1f1b15;
-  --color-brand-300: #2d261e;
-  --color-brand-400: #d4af37;
-  --color-brand-500: #c59b27;
-  --color-brand-600: #a9801c;
-  --color-brand-700: #8c6224;
-  --color-brand-800: #6d4914;
-  --color-brand-900: #4a300a;
-  --color-brand-950: #0b0a09;
-  --color-gold-100: #fff9e6;
-  --color-gold-200: #fbf3d5;
-  --color-gold-300: #faeac2;
-  --color-gold-400: #f2d078;
-  --color-gold-500: #d4af37;
-  --color-gold-600: #c59b27;
-  --color-gold-700: #8c6224;
-  --shadow-card: 0 18px 48px rgba(0, 0, 0, 0.65);
-  --shadow-gold: 0 10px 30px rgba(212, 175, 55, 0.28);
-  --shadow-obsidian: 0 16px 45px rgba(0, 0, 0, 0.85);
-  --shadow-glow: 0 0 35px rgba(212, 175, 55, 0.25);
+  --color-ink: #fdfcf9;
+  --color-ink-soft: #dfd7c8;
+  --color-pearl: #080706;
+  --color-brand-50: #0d0b09;
+  --color-brand-100: #15130f;
+  --color-brand-200: #1d1914;
+  --color-brand-300: #29231c;
+  --color-brand-400: #d49b29;
+  --color-brand-500: #c08322;
+  --color-brand-600: #a7701a;
+  --color-brand-700: #8e5813;
+  --color-brand-800: #5a370b;
+  --color-brand-900: #362105;
+  --color-brand-950: #080706;
+  --color-gold-100: #fffceb;
+  --color-gold-200: #fcf3a3;
+  --color-gold-300: #fae48f;
+  --color-gold-400: #f9d26c;
+  --color-gold-500: #d49b29;
+  --color-gold-600: #c08322;
+  --color-gold-700: #8e5813;
+  --shadow-card: 0 18px 48px rgba(0, 0, 0, 0.72);
+  --shadow-gold: 0 10px 30px rgba(212, 155, 41, 0.28);
+  --shadow-obsidian: 0 16px 45px rgba(0, 0, 0, 0.88);
+  --shadow-glow: 0 0 35px rgba(249, 210, 108, 0.25);
 }
 
 html {
@@ -52,15 +55,15 @@ html {
 }
 
 body {
-  background: #0b0a09;
-  color: #fdfbf7;
+  background: #080706;
+  color: #fdfcf9;
   font-family: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
-  caret-color: #d4af37;
+  caret-color: #d49b29;
 }
 
 ::selection {
-  background: #d4af37;
-  color: #0b0a09;
+  background: #d49b29;
+  color: #080706;
 }
 
 .eyebrow,
@@ -76,11 +79,11 @@ body {
 }
 
 .eyebrow {
-  color: #d4af37;
+  color: #d49b29;
 }
 
 .eyebrow-light {
-  color: #f2d078;
+  color: #c08322;
 }
 
 .eyebrow::before,
@@ -95,7 +98,7 @@ body {
 .nav-link {
   position: relative;
   padding-block: 0.5rem;
-  color: #ded8ca;
+  color: #dfd7c8;
   font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -109,7 +112,7 @@ body {
   bottom: 0;
   left: 0;
   height: 1px;
-  background: #d4af37;
+  background: #d49b29;
   content: "";
   transform: scaleX(0);
   transform-origin: left;
@@ -137,17 +140,17 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0b0a09;
+  background: #080706;
 }
 
 ::-webkit-scrollbar-thumb {
-  border: 2px solid #0b0a09;
+  border: 2px solid #080706;
   border-radius: 999px;
-  background: #6d4914;
+  background: #5a370b;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #d4af37;
+  background: #d49b29;
 }
 
 @media (prefers-reduced-motion: reduce) {

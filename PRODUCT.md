@@ -1,33 +1,33 @@
-# MARIANA ESTEVES ADVOCACIA PREVIDENCIÁRIA
-## Advocacia Previdenciária Especializada INSS · Contagem - MG · Atendimento Online Brasil
+# APOLINÁRIO ADVOGADOS
+## Advocacia Especializada & Consultoria Jurídica · Dra. Yara Aline Apolinário (OAB/MG 156.433) · Atendimento Online Brasil
 
 ## Plataforma
-Site institucional e landing page responsiva de altíssimo padrão desenvolvida em Next.js 16 (App Router) e Tailwind CSS v4, projetada para transmitir sofisticação, acolhimento humanizado, combatividade técnica, transparência e rigor jurídico, com navegação fluida, modais interativos para detalhamento de áreas de atuação e integração direta com WhatsApp e Google Maps.
+Site institucional e landing page responsiva de altíssimo padrão desenvolvida em Next.js 16 (App Router) e Tailwind CSS v4, projetada para transmitir autoridade jurídica, sofisticação clássica, transparência e acolhimento humanizado, com navegação fluida, modais interativos para detalhamento das especialidades e integração direta com WhatsApp.
 
 ## Público
-Segurados do INSS, trabalhadores urbanos e rurais, idosos, pessoas com deficiência, dependentes, gestantes e famílias que necessitam de amparo jurídico especializado em Direito Previdenciário (Aposentadorias por Idade, Tempo de Contribuição, Especial e Rural, BPC/LOAS, pensão por morte, auxílio-doença por incapacidade, salário-maternidade e revisões de benefícios) em Contagem, Região Metropolitana de Belo Horizonte e em todo o território nacional.
+Trabalhadores urbanos e rurais, segurados do INSS, gestantes, idosos, passageiros aéreos que sofreram cancelamentos, atrasos de voo ou extravio de bagagem, além de cidadãos e empreendedores que buscam elaboração e revisão segura de contratos em Minas Gerais e em todo o território nacional.
 
 ## Objetivo
-Apresentar a advocacia de excelência liderada pela Dra. Mariana Esteves de Carvalho (OAB/MG 172.375), sediada na R. Maria da Conceição Hilário, 263 - Jardim Vera Cruz, Contagem - MG, evidenciando a expressiva nota de 4,9 estrelas com mais de 50 avaliações autênticas no Google Meu Negócio, e viabilizando o contato direto e humanizado via WhatsApp.
+Apresentar a advocacia de excelência liderada pela Dra. Yara Aline Apolinário (OAB/MG 156.433), evidenciando a expressiva nota máxima de 5,0 estrelas com mais de 40 avaliações autênticas no Google Meu Negócio, e viabilizando o contato direto e humanizado via WhatsApp (31) 99585-9111.
 
 ## Identidade Visual
-- Marca: Mariana Esteves Advocacia Previdenciária / Dra. Mariana Esteves de Carvalho (OAB/MG 172.375)
-- Logotipo: Monograma "ME" geométrico com facetas douradas e tipografia romana clássica em ouro nobre metálico (`public/logo.png`, `public/monogram.png`, `public/favicon.svg`).
+- Marca: Apolinário Advogados / Dra. Yara Aline Apolinário (OAB/MG 156.433)
+- Logotipo: Monograma com a inicial "A" em placa com moldura dourada chanfrada e tipografia romana clássica em ouro nobre metálico (`public/logo.png`, `public/logo-trimmed.png`, `public/monogram.png`, `public/favicon.svg`).
 - Paleta extraída diretamente do novo logo oficial:
-  - Ouro Nobre Metálico Primário (`#D4AF37`, `#F2D078`, `#FAEAC2`, `#C59B27`)
-  - Ouro Champanhe / Iluminação (`#FFF9E6`, `#FBF3D5`, `#FFF8E7`)
-  - Bronze Esculpido & Sombra Dourada Profunda (`#8C6224`, `#6D4914`, `#4A300A`)
-  - Velvet Obsidian / Ônix Noturno de Alta Autoridade (`#0B0A09`, `#12100D`, `#191612`, `#221E18`)
-  - Marfim Dourado Nobre para contraste claro (`#FAF8F4`, `#F5EFEB`, `#E6DCCE`)
-- Tipografia: Cormorant Garamond e Playfair Display nos títulos (harmonia com a sofisticação e elegância do monograma ME) e Plus Jakarta Sans para leitura clara, moderna e acolhedora no corpo de texto.
+  - Ouro Metálico Nobre Primário (`#D49B29`, `#F9D26C`, `#FCF3A3`, `#C08322`)
+  - Ouro Champanhe & Iluminação (`#FFFCEB`, `#FAE48F`, `#FDF6CC`)
+  - Bronze & Sombra Dourada Profunda (`#8E5813`, `#5A370B`, `#362105`)
+  - Velvet Obsidian / Ônix Noturno de Alta Autoridade (`#080706`, `#110F0C`, `#181512`, `#221D17`)
+  - Marfim Dourado Nobre para contraste claro no Sobre (`#FAF8F4`, `#E8DECB`)
+- Tipografia: Cormorant Garamond e Playfair Display nos títulos (harmonia com a sofisticação e elegância da tipografia do logotipo) e Plus Jakarta Sans para leitura clara, moderna e acolhedora no corpo de texto.
 - Tom de voz: Empático, humanizado, ético, combativo, transparente e resolutivo.
 
 ## Conteúdo e Mídia
 - Logotipo oficial em alta definição (`public/logo.png`, `public/logo-trimmed.png`, `public/monogram.png`).
-- Foto hero: Dra. Mariana Esteves em retrato elegante com blazer preto e acessórios dourados (`public/mariana-elegante.png`).
-- Foto sobre: Apresentação institucional "Prazer, Mariana!" com blazer branco e credencial oficial OAB/MG 172.375 (`public/mariana-apresentacao.png`).
-- Endereço físico: R. Maria da Conceição Hilário, 263 - Jardim Vera Cruz, Contagem - MG, 32265-300.
-- Telefone / WhatsApp: (31) 98389-2013.
-- Redes Sociais: Instagram @marianaestevesinss (https://www.instagram.com/marianaestevesinss/).
-- Horário de funcionamento: Segunda a Sexta das 08:00 às 18:00 (atendimento presencial e online).
-- Prova social: 4,9 estrelas com mais de 50 avaliações autênticas no Google Meu Negócio.
+- Foto hero: Dra. Yara Aline Apolinário em retrato elegante com terno preto e blusa camelo/bronze (`public/yara-apolinario-hero.jpg`).
+- Foto sobre: Apresentação institucional da advogada (`public/yara-apolinario-apresentacao.jpg`).
+- Telefone / WhatsApp: (31) 99585-9111.
+- E-mail: contato@apolinarioadvogados.com.br.
+- Redes Sociais: Instagram @advogada_yara_apolinario (https://www.instagram.com/advogada_yara_apolinario/).
+- Horário de funcionamento: Segunda a Sexta das 08:30 às 18:00 (atendimento presencial e online).
+- Prova social: Nota máxima de 5,0 estrelas com 41+ avaliações autênticas no Google Meu Negócio.

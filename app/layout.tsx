@@ -24,33 +24,35 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#0b0a09",
+  themeColor: "#080706",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.marianaesteves.adv.br"),
+  metadataBase: new URL("https://www.apolinarioadvogados.com.br"),
   title:
-    "Dra. Mariana Esteves · Advogada Previdenciária INSS em Contagem - MG",
+    "Apolinário Advogados · Dra. Yara Aline Apolinário | Advocacia & Consultoria Jurídica",
   description:
-    "Advocacia Previdenciária especializada e humanizada em Contagem - MG. Aposentadorias (Idade, Tempo, Especial, Rural), BPC/LOAS, Auxílio-Doença, Pensão por Morte e Planejamento Previdenciário. Dra. Mariana Esteves de Carvalho (OAB/MG 172.375). Nota 4,9 ★ no Google.",
+    "Advocacia especializada, combativa e humanizada liderada pela Dra. Yara Aline Apolinário (OAB/MG 156.433). Direito Previdenciário (Aposentadorias, BPC/LOAS, Salário-Maternidade), Direito do Trabalho e Direitos dos Passageiros Aéreos. Atendimento presencial e online em todo o Brasil. Nota 5,0 ★ no Google.",
   keywords: [
-    "Mariana Esteves Advogada",
-    "Dra Mariana Esteves",
-    "Mariana Esteves de Carvalho",
-    "Advogada Previdenciária Contagem",
-    "Advocacia Previdenciária Contagem MG",
-    "Aposentadoria INSS Contagem",
-    "BPC LOAS Contagem MG",
-    "Auxílio Doença INSS Contagem",
-    "Pensão por Morte Contagem",
-    "Planejamento Previdenciário Contagem",
-    "Advogado INSS Contagem e BH",
-    "OAB MG 172375",
-    "Direito Previdenciário Minas Gerais",
+    "Apolinário Advogados",
+    "Dra. Yara Aline Apolinário",
+    "Yara Apolinário Advogada",
+    "Advocacia Apolinário",
+    "OAB MG 156433",
+    "Advogada Previdenciária MG",
+    "Aposentadoria INSS",
+    "BPC LOAS",
+    "Salário Maternidade INSS",
+    "Advogada Trabalhista Minas Gerais",
+    "Direitos dos Passageiros Aéreos",
+    "Voo Cancelado Indenização",
+    "Atraso de Voo e Extravio de Bagagem",
+    "Consultoria Jurídica Contratos",
+    "Atendimento Online Brasil",
   ],
-  authors: [{ name: "Dra. Mariana Esteves de Carvalho" }],
-  creator: "Mariana Esteves Advocacia Previdenciária",
-  publisher: "Mariana Esteves Advocacia Previdenciária",
+  authors: [{ name: "Dra. Yara Aline Apolinário" }],
+  creator: "Apolinário Advogados",
+  publisher: "Apolinário Advogados",
   formatDetection: {
     telephone: true,
     address: true,
@@ -68,18 +70,18 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.marianaesteves.adv.br",
+    url: "https://www.apolinarioadvogados.com.br",
     title:
-      "Dra. Mariana Esteves · Advogada Previdenciária INSS em Contagem - MG",
+      "Apolinário Advogados · Dra. Yara Aline Apolinário | Advocacia & Consultoria Jurídica",
     description:
-      "Atendimento humanizado, combativo e acolhedor para garantir seus benefícios no INSS. Aposentadoria, BPC/LOAS, Auxílio-Doença e Pensão por Morte. Nota 4,9 ★ no Google com mais de 50 avaliações.",
-    siteName: "Mariana Esteves Advocacia Previdenciária",
+      "Atendimento jurídico de excelência, humanizado e focado em resultados. Previdenciário (INSS e Maternidade), Trabalhista e Direito do Passageiro Aéreo. Nota 5,0 ★ no Google.",
+    siteName: "Apolinário Advogados",
     images: [
       {
         url: "/logo.png",
         width: 1024,
-        height: 402,
-        alt: "Mariana Esteves Advocacia Previdenciária - Logotipo Oficial",
+        height: 409,
+        alt: "Apolinário Advogados - Logotipo Oficial",
       },
     ],
   },
@@ -93,39 +95,27 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Mariana Esteves Advocacia Previdenciária",
-    alternateName: "Mariana Esteves – Advogada Previdenciária INSS (Aposentadoria, Auxílio-Doença, BPC LOAS, Pensão por Morte)",
+    name: "Apolinário Advogados",
+    alternateName: "Dra. Yara Aline Apolinário – Advocacia & Consultoria Jurídica",
     founder: [
       {
         "@type": "Person",
-        name: "Dra. Mariana Esteves de Carvalho",
-        jobTitle: "Advogada Previdenciarista (OAB/MG 172.375)",
+        name: "Dra. Yara Aline Apolinário",
+        jobTitle: "Advogada Fundadora (OAB/MG 156.433)",
       },
     ],
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "R. Maria da Conceição Hilário, 263 - Jardim Vera Cruz",
-      addressLocality: "Contagem",
-      addressRegion: "MG",
-      postalCode: "32265-300",
-      addressCountry: "BR",
-    },
-    telephone: "+55-31-98389-2013",
-    url: "https://www.marianaesteves.adv.br",
-    image: "https://www.marianaesteves.adv.br/logo.png",
+    telephone: "+55-31-99585-9111",
+    url: "https://www.apolinarioadvogados.com.br",
+    image: "https://www.apolinarioadvogados.com.br/logo.png",
     priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "50",
+      ratingValue: "5.0",
+      reviewCount: "41",
     },
     areaServed: [
-      "Contagem",
       "Belo Horizonte",
-      "Betim",
-      "Ibirité",
-      "Ribeirão das Neves",
-      "Região Metropolitana de Belo Horizonte",
+      "Santa Bárbara",
       "Minas Gerais",
       "Brasil",
     ],
@@ -139,11 +129,14 @@ export default function RootLayout({
           "Thursday",
           "Friday",
         ],
-        opens: "08:00",
+        opens: "08:30",
         closes: "18:00",
       },
     ],
-    sameAs: ["https://www.instagram.com/marianaestevesinss/"],
+    sameAs: [
+      "https://www.instagram.com/advogada_yara_apolinario/",
+      "https://wa.me/5531995859111",
+    ],
   };
 
   return (
@@ -161,7 +154,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen overflow-x-clip bg-[#0b0a09] font-sans text-stone-100 antialiased selection:bg-[#d4af37] selection:text-[#0b0a09]">
+      <body className="min-h-screen overflow-x-clip bg-[#080706] font-sans text-stone-100 antialiased selection:bg-[#d49b29] selection:text-[#080706]">
         {children}
       </body>
     </html>

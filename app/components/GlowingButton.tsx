@@ -34,26 +34,26 @@ export default function GlowingButton({
     lg: "px-7 py-4 text-xs tracking-[0.14em]",
   }[size];
 
-  // Metallic gold, warm champagne and obsidian gradients for Mariana Esteves Advocacia Previdenciária
+  // Metallic gold, warm champagne and velvet obsidian gradients for Apolinário Advogados
   const variantClasses = {
     gold:
-      "border border-amber-200/50 bg-gradient-to-r from-[#c59b27] via-[#f2d078] to-[#c59b27] text-[#140e07] font-bold shadow-md shadow-[#0b0a09]/40 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-gold",
+      "border border-[#fcf3a3]/50 bg-gradient-to-r from-[#c08322] via-[#f9d26c] to-[#c08322] text-[#0a0805] font-bold shadow-md shadow-[#080706]/40 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-gold",
     rosegold:
-      "border border-amber-200/50 bg-gradient-to-r from-[#c59b27] via-[#f2d078] to-[#c59b27] text-[#140e07] font-bold shadow-md shadow-[#0b0a09]/40 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-gold",
+      "border border-[#fcf3a3]/50 bg-gradient-to-r from-[#c08322] via-[#f9d26c] to-[#c08322] text-[#0a0805] font-bold shadow-md shadow-[#080706]/40 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-gold",
     champagne:
-      "border border-[#faeac2]/60 bg-gradient-to-r from-[#fff9e6] via-[#fbf3d5] to-[#fff9e6] text-[#140e07] font-bold shadow-sm hover:-translate-y-0.5 hover:shadow-gold hover:brightness-105",
+      "border border-[#f9d26c]/60 bg-gradient-to-r from-[#fffceb] via-[#fae48f] to-[#fffceb] text-[#0a0805] font-bold shadow-sm hover:-translate-y-0.5 hover:shadow-gold hover:brightness-105",
     bronze:
-      "border border-[#8c6224]/40 bg-gradient-to-r from-[#6d4914] via-[#8c6224] to-[#6d4914] text-white font-bold shadow-md shadow-[#0b0a09]/40 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-gold",
+      "border border-[#8e5813]/40 bg-gradient-to-r from-[#5a370b] via-[#8e5813] to-[#5a370b] text-white font-bold shadow-md shadow-[#080706]/40 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-gold",
     dark:
-      "border border-[#d4af37]/35 bg-[#12100d] text-[#faeac2] shadow-sm shadow-[#0b0a09]/50 hover:-translate-y-0.5 hover:border-[#f2d078] hover:bg-[#1f1b15] hover:text-white hover:shadow-gold",
+      "border border-[#d49b29]/35 bg-[#110f0c] text-[#fdf6cc] shadow-sm shadow-[#080706]/50 hover:-translate-y-0.5 hover:border-[#f9d26c] hover:bg-[#1d1914] hover:text-white hover:shadow-gold",
     outline:
-      "border border-[#d4af37]/60 bg-transparent text-[#f2d078] hover:-translate-y-0.5 hover:border-[#faeac2] hover:bg-[#d4af37]/15 hover:text-white",
+      "border border-[#d49b29]/60 bg-transparent text-[#f9d26c] hover:-translate-y-0.5 hover:border-[#fcf3a3] hover:bg-[#d49b29]/15 hover:text-white",
     white:
-      "border border-[#faeac2] bg-white text-[#140e07] shadow-sm hover:-translate-y-0.5 hover:bg-[#fff9e6] hover:text-[#0b0a09] hover:shadow-md",
+      "border border-[#fae48f] bg-white text-[#0a0805] shadow-sm hover:-translate-y-0.5 hover:bg-[#fffceb] hover:text-[#080706] hover:shadow-md",
   }[variant];
 
   const classes =
-    "inline-flex items-center justify-center gap-2 rounded-lg font-bold uppercase transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#d4af37] select-none text-center cursor-pointer " +
+    "inline-flex items-center justify-center gap-2 rounded-lg font-bold uppercase transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#d49b29] select-none text-center cursor-pointer " +
     sizeClasses +
     " " +
     variantClasses +

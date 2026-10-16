@@ -1,17 +1,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <defs>
-    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFF2BF" />
-      <stop offset="25%" stop-color="#F2D078" />
-      <stop offset="55%" stop-color="#D4AF37" />
-      <stop offset="85%" stop-color="#C59B27" />
-      <stop offset="100%" stop-color="#8C6224" />
+    <linearGradient id="goldFrame" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCF3A3" />
+      <stop offset="25%" stop-color="#EEC461" />
+      <stop offset="50%" stop-color="#D49B29" />
+      <stop offset="75%" stop-color="#F9D26C" />
+      <stop offset="100%" stop-color="#8E5813" />
     </linearGradient>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#191612" />
-      <stop offset="100%" stop-color="#0B0A09" />
+    <linearGradient id="goldPlate" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCE688" />
+      <stop offset="40%" stop-color="#CD9737" />
+      <stop offset="70%" stop-color="#F9D26C" />
+      <stop offset="100%" stop-color="#8E5813" />
+    </linearGradient>
+    <linearGradient id="darkBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A1713" />
+      <stop offset="100%" stop-color="#080706" />
     </linearGradient>
   </defs>
-  <rect width="64" height="64" rx="14" fill="url(#bgGrad)" stroke="#D4AF37" stroke-opacity="0.45" stroke-width="1.5" />
-  <text x="32" y="42" font-family="'Cormorant Garamond', 'Playfair Display', 'Cinzel', serif" font-size="27" font-weight="700" fill="url(#goldGrad)" text-anchor="middle" letter-spacing="0.5">ME</text>
+  <!-- Background Rounded Plaque -->
+  <rect width="64" height="64" rx="12" fill="url(#darkBg)" />
+  <!-- Golden Border Box -->
+  <rect x="6" y="6" width="52" height="52" rx="4" fill="none" stroke="url(#goldFrame)" stroke-width="2.5" />
+  <rect x="9" y="9" width="46" height="46" rx="2" fill="none" stroke="#080706" stroke-width="1.2" />
+  <rect x="11" y="11" width="42" height="42" fill="url(#goldPlate)" />
+  <!-- Letter A with Serif and Swoosh in Dark Contrast -->
+  <path d="M32 15 L21 44 L25.5 44 L28 37 L36 37 L38.5 44 L43 44 Z M32 23 L29.5 33 L34.5 33 Z" fill="#0C0A07" />
+  <!-- Gold highlight on the A -->
+  <path d="M26 31 Q33 26 42 27 Q34 29 28 33 Z" fill="url(#goldFrame)" />
 </svg>
