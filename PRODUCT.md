@@ -1,33 +1,34 @@
-# APOLINÁRIO ADVOGADOS
-## Advocacia Especializada & Consultoria Jurídica · Dra. Yara Aline Apolinário (OAB/MG 156.433) · Atendimento Online Brasil
+# TOMAZ HENRIQUE ADVOCACIA
+## Advogado Especializado em Direito Trabalhista e Previdenciário · Dr. Tomaz Henrique · Itaúna - MG
 
 ## Plataforma
 Site institucional e landing page responsiva de altíssimo padrão desenvolvida em Next.js 16 (App Router) e Tailwind CSS v4, projetada para transmitir autoridade jurídica, sofisticação clássica, transparência e acolhimento humanizado, com navegação fluida, modais interativos para detalhamento das especialidades e integração direta com WhatsApp.
 
 ## Público
-Trabalhadores urbanos e rurais, segurados do INSS, gestantes, idosos, passageiros aéreos que sofreram cancelamentos, atrasos de voo ou extravio de bagagem, além de cidadãos e empreendedores que buscam elaboração e revisão segura de contratos em Minas Gerais e em todo o território nacional.
+Trabalhadores da indústria, comércio e serviços, segurados do INSS, aposentados, pensionistas, beneficiários do BPC/LOAS, além de cidadãos e empresas que necessitam de assessoria consultiva e contenciosa nas áreas trabalhista, previdenciária e cível em Itaúna, Pará de Minas, Divinópolis e em toda a região de Minas Gerais.
 
 ## Objetivo
-Apresentar a advocacia de excelência liderada pela Dra. Yara Aline Apolinário (OAB/MG 156.433), evidenciando a expressiva nota máxima de 5,0 estrelas com mais de 40 avaliações autênticas no Google Meu Negócio, e viabilizando o contato direto e humanizado via WhatsApp (31) 99585-9111.
+Apresentar a advocacia de excelência liderada pelo Dr. Tomaz Henrique, destacando a expressiva nota máxima de 5,0 estrelas com 37 avaliações autênticas no Google Meu Negócio, e viabilizando o contato direto e humanizado via WhatsApp (37) 99841-2455 e atendimento presencial no Centro de Itaúna - MG.
 
 ## Identidade Visual
-- Marca: Apolinário Advogados / Dra. Yara Aline Apolinário (OAB/MG 156.433)
-- Logotipo: Monograma com a inicial "A" em placa com moldura dourada chanfrada e tipografia romana clássica em ouro nobre metálico (`public/logo.png`, `public/logo-trimmed.png`, `public/monogram.png`, `public/favicon.svg`).
+- Marca: Tomaz Henrique Advocacia / Tomaz Henrique Advogado Especializado
+- Logotipo: Selo circular clássico com o pórtico romano de 4 colunas em relevo de bronze metálico e cobre nobre escovado, com a inscrição arqueada "TOMAZ HENRIQUE" no arco superior e "ESCRITÓRIO DE ADVOCACIA" no arco inferior (`public/logo-seal.png`, `public/logo.png`).
 - Paleta extraída diretamente do novo logo oficial:
-  - Ouro Metálico Nobre Primário (`#D49B29`, `#F9D26C`, `#FCF3A3`, `#C08322`)
-  - Ouro Champanhe & Iluminação (`#FFFCEB`, `#FAE48F`, `#FDF6CC`)
-  - Bronze & Sombra Dourada Profunda (`#8E5813`, `#5A370B`, `#362105`)
-  - Velvet Obsidian / Ônix Noturno de Alta Autoridade (`#080706`, `#110F0C`, `#181512`, `#221D17`)
-  - Marfim Dourado Nobre para contraste claro no Sobre (`#FAF8F4`, `#E8DECB`)
-- Tipografia: Cormorant Garamond e Playfair Display nos títulos (harmonia com a sofisticação e elegância da tipografia do logotipo) e Plus Jakarta Sans para leitura clara, moderna e acolhedora no corpo de texto.
-- Tom de voz: Empático, humanizado, ético, combativo, transparente e resolutivo.
+  - Bronze Metálico Nobre Primário (`#C97F48`, `#D48C52`, `#E5A26C`, `#A86131`)
+  - Realce em Cobre Quente e Champanhe (`#FDF6EE`, `#FAE0C8`, `#F4CBA4`)
+  - Bronze Profundo & Sombra Densa (`#80441C`, `#54280C`, `#361705`)
+  - Velvet Bronze Obsidian de Alta Autoridade (`#090706`, `#120E0B`, `#1A1410`, `#231B15`)
+  - Mármore Alabastro / Marfim Nobre para contraste claro no Sobre (`#FAF7F2`, `#E8DECB`)
+- Tipografia: Cinzel (`--font-cinzel`) para a marca monumental romana e Playfair Display / Cormorant Garamond nos títulos editoriais (perfeita harmonia com a tipografia do selo clássico), combinados com Plus Jakarta Sans para leitura confortável e límpida no corpo de texto.
+- Tom de voz: Empático, ético, atencioso aos detalhes, combativo, transparente e resolutivo.
 
 ## Conteúdo e Mídia
-- Logotipo oficial em alta definição (`public/logo.png`, `public/logo-trimmed.png`, `public/monogram.png`).
-- Foto hero: Dra. Yara Aline Apolinário em retrato elegante com terno preto e blusa camelo/bronze (`public/yara-apolinario-hero.jpg`).
-- Foto sobre: Apresentação institucional da advogada (`public/yara-apolinario-apresentacao.jpg`).
-- Telefone / WhatsApp: (31) 99585-9111.
-- E-mail: contato@apolinarioadvogados.com.br.
-- Redes Sociais: Instagram @advogada_yara_apolinario (https://www.instagram.com/advogada_yara_apolinario/).
-- Horário de funcionamento: Segunda a Sexta das 08:30 às 18:00 (atendimento presencial e online).
-- Prova social: Nota máxima de 5,0 estrelas com 41+ avaliações autênticas no Google Meu Negócio.
+- Logotipo e selo oficial em alta definição (`public/logo-seal.png`, `public/logo.png`).
+- Foto hero: Dr. Tomaz Henrique em terno azul com gravata verde e sobreposição do widget de autoridade (`public/tomaz-henrique-hero.jpg`).
+- Foto sobre: Apresentação institucional com Dr. Tomaz sorridente em sua mesa com Vade Mecum e crucifixo (`public/tomaz-henrique-apresentacao.png`).
+- Telefone / WhatsApp: (37) 99841-2455.
+- E-mail: contato@tomazhenrique.adv.br.
+- Redes Sociais: Instagram @advogado.tomaz (https://www.instagram.com/advogado.tomaz/).
+- Endereço da Sede: Rua Godofredo Gonçalves, 159, (Próximo à Clinaus) - Centro, Itaúna - MG, 35680-047, Brasil.
+- Horário de funcionamento: Segunda a Sexta das 08:30 às 18:00 (atendimento presencial com hora marcada e online).
+- Prova social: Nota máxima de 5,0 estrelas com 37 avaliações autênticas no Google Meu Negócio.

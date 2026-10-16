@@ -11,14 +11,12 @@ import {
   CheckCircle2,
   Clock,
   FileText,
-  HandHeart,
   HeartHandshake,
   Landmark,
   Mail,
   MapPin,
   Menu,
   Phone,
-  Plane,
   Scale,
   ShieldCheck,
   Sparkles,
@@ -28,28 +26,27 @@ import {
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
 
-const WHATSAPP_NUMBER = "5531995859111";
-const PHONE_DISPLAY = "(31) 99585-9111";
-const EMAIL_CONTACT = "contato@apolinarioadvogados.com.br";
-const INSTAGRAM_URL = "https://www.instagram.com/advogada_yara_apolinario/";
-const INSTAGRAM_HANDLE = "@advogada_yara_apolinario";
+const WHATSAPP_NUMBER = "5537998412455";
+const PHONE_DISPLAY = "(37) 99841-2455";
+const EMAIL_CONTACT = "contato@tomazhenrique.adv.br";
+const INSTAGRAM_URL = "https://www.instagram.com/advogado.tomaz/";
+const INSTAGRAM_HANDLE = "@advogado.tomaz";
 
 const ADDRESS_TEXT =
-  "Minas Gerais · Atendimento Presencial com Agendamento Prévio e Assessoria Online para Todo o Brasil";
+  "Rua Godofredo Gonçalves, 159, (Próximo à Clinaus) - Centro, Itaúna - MG, 35680-047, Brasil";
 const GOOGLE_MAPS_URL =
-  "https://www.google.com/maps/search/?api=1&query=Apolin%C3%A1rio+Advogados+Yara+Aline+Apolinario";
+  "https://www.google.com/maps/search/?api=1&query=Tomaz+Henrique+Advogado+Especializado+Itauna";
 
-const LOGO_SRC = "/logo.png";
-const LOGO_FULL_SRC = "/logo.png";
-const FOTO_HERO_SRC = "/yara-apolinario-hero.jpg";
-const FOTO_SOBRE_SRC = "/yara-apolinario-apresentacao.jpg";
+const LOGO_SEAL_SRC = "/logo-seal.png";
+const FOTO_HERO_SRC = "/tomaz-henrique-hero.jpg";
+const FOTO_SOBRE_SRC = "/tomaz-henrique-apresentacao.png";
 
 function getWhatsAppUrl(
   message?: string,
   number: string = WHATSAPP_NUMBER
 ) {
   const defaultText =
-    "Olá, Dra. Yara Aline Apolinário! Gostaria de consultar sobre meus direitos e agendar um atendimento com o escritório Apolinário Advogados.";
+    "Olá, Dr. Tomaz Henrique! Gostaria de consultar sobre meus direitos e agendar um atendimento no escritório.";
   return `https://wa.me/${number}?text=${encodeURIComponent(
     message || defaultText
   )}`;
@@ -143,7 +140,7 @@ const reveal: Variants = {
 
 const stagger: Variants = {
   hidden: {},
-  visible: { transition: { staggerChildren: 0.09, delayChildren: 0.04 } },
+  visible: { transition: { staggerChildren: 0.08, delayChildren: 0.04 } },
 };
 
 interface PracticeArea {
@@ -159,223 +156,271 @@ interface PracticeArea {
 
 const practiceAreas: PracticeArea[] = [
   {
-    id: "direito-previdenciario-inss",
-    title: "Direito Previdenciário & Benefícios do INSS",
-    icon: Landmark,
-    tag: "Aposentadorias · BPC/LOAS · Auxílio-Doença · Planejamento",
-    summary:
-      "Planejamento previdenciário estratégico e requerimento de benefícios do INSS para assegurar o valor máximo, sem travas burocráticas ou perdas financeiras.",
-    details:
-      "A Dra. Yara Aline Apolinário atua com rigor técnico e combatividade na análise profunda do seu CNIS, computando vínculos de trabalho, períodos rurais e especiais, revertendo negativas do INSS e garantindo o melhor benefício na via administrativa ou judicial com rapidez e total transparência.",
-    topics: [
-      "Aposentadoria por Idade Urbana e Rural com cômputo de períodos de lavoura",
-      "Aposentadoria por Tempo de Contribuição e cálculo da Regra de Transição mais vantajosa",
-      "Aposentadoria Especial para trabalhadores com exposição a agentes nocivos e insalubres",
-      "Auxílio por Incapacidade Temporária (Auxílio-Doença) e Aposentadoria por Invalidez",
-      "Pensão por Morte para dependentes com comprovação segura de união estável",
-      "Cobrança judicial de parcelas atrasadas acumuladas dos últimos 5 anos",
-    ],
-    whatsAppText:
-      "Olá, Dra. Yara Aline! Gostaria de consultar sobre meus direitos previdenciários no INSS.",
-  },
-  {
-    id: "salario-maternidade-urbano-rural",
-    title: "Salário-Maternidade Urbano & Rural",
-    icon: Sparkles,
-    tag: "Maternidade · Desempregadas · MEI · Agricultoras",
-    summary:
-      "Concessão ágil de até 4 meses de benefício para gestantes, mães adotantes, autônomas, microempreendedoras (MEI) e trabalhadoras desempregadas no período de graça.",
-    details:
-      "O salário-maternidade é um direito fundamental de amparo à mãe e ao recém-nascido. Muitas mães desconhecem que mesmo desempregadas, contribuintes individuais ou trabalhadoras do meio rural têm direito ao recebimento integral das parcelas. Cuidamos de toda a comprovação documental para liberar seu benefício sem contratempos.",
-    topics: [
-      "Salário-Maternidade para trabalhadoras desempregadas que mantêm qualidade de segurada",
-      "Benefício para MEIs, autônomas e contribuintes facultativas",
-      "Salário-Maternidade Rural para trabalhadoras da agricultura familiar e seguradas especiais",
-      "Amparo financeiro em casos de adoção, guarda judicial para adoção e parto prematuro",
-      "Reversão imediata de indeferimentos e atrasos injustificados no INSS",
-      "Recebimento integral das 4 parcelas do benefício diretamente na conta bancária",
-    ],
-    whatsAppText:
-      "Olá, Dra. Yara Aline! Gostaria de uma análise para solicitar o meu Salário-Maternidade.",
-  },
-  {
-    id: "direito-do-trabalho",
-    title: "Direito do Trabalho & Defesa do Trabalhador",
+    id: "direito-do-trabalho-itauna",
+    title: "Direito Trabalhista & Defesa do Trabalhador",
     icon: Briefcase,
-    tag: "Rescisão Indireta · Horas Extras · Acidentes · Verbas Devidas",
+    tag: "Rescisão · Horas Extras · Insalubridade · Acidentes",
     summary:
-      "Atuação assertiva e combativa em reclamatórias trabalhistas para assegurar o pagamento integral de todas as verbas rescisórias e direitos violados.",
+      "Atuação combativa em reclamatórias trabalhistas para assegurar o pagamento integral de todas as verbas rescisórias, adicionais e direitos sonegados pelo empregador.",
     details:
-      "Defendemos trabalhadores que enfrentam abusos no ambiente corporativo, atrasos de salários, jornadas excessivas sem compensação, assédio moral ou acidentes de trabalho. Buscamos a justa reparação com estratégia e combatividade na Justiça do Trabalho.",
+      "O Dr. Tomaz Henrique é referência em Itaúna na defesa firme dos direitos dos trabalhadores. Atuamos com minúcia técnica no cálculo de horas extras, adicionais de insalubridade e periculosidade, indenizações por acidente de trabalho ou doença ocupacional, assédio moral e pedidos de rescisão indireta quando o empregador descumpre a lei.",
     topics: [
-      "Rescisão Indireta do Contrato de Trabalho por falta grave ou descumprimento do empregador",
-      "Cobrança de Horas Extras, adicional noturno e intervalos intrajornada não concedidos",
-      "Indenização por Acidente de Trabalho, doenças ocupacionais e estabilidade provisória",
-      "Reconhecimento de vínculo de emprego sem carteira assinada e liberação de FGTS + multa",
-      "Indenização por Danos Morais em decorrência de assédio moral ou tratamento degradante",
-      "Equiparação Salarial e diferenças por acúmulo ou desvio de função",
+      "Cobrança integral de verbas rescisórias e multas dos artigos 467 e 477 da CLT",
+      "Rescisão Indireta do Contrato de Trabalho por falta grave ou atraso de salários",
+      "Cálculo e cobrança de Horas Extras, intervalo intrajornada e adicional noturno",
+      "Adicionais de Insalubridade e Periculosidade para funções de risco ou agentes nocivos",
+      "Indenização por Acidente de Trabalho, estabilidade provisória e pensão vitalícia",
+      "Reconhecimento de vínculo empregatício sem carteira assinada e liberação de FGTS",
     ],
     whatsAppText:
-      "Olá, Dra. Yara Aline! Gostaria de consultar sobre meus direitos trabalhistas.",
+      "Olá, Dr. Tomaz Henrique! Gostaria de consultar sobre meus direitos trabalhistas.",
   },
   {
-    id: "direitos-passageiros-aereos",
-    title: "Direitos dos Passageiros Aéreos",
-    icon: Plane,
-    tag: "Voo Cancelado · Atraso Superior a 4h · Bagagem Extraviada · Overbooking",
+    id: "direito-previdenciario-inss-itauna",
+    title: "Aposentadorias do INSS & Planejamento",
+    icon: Landmark,
+    tag: "Tempo de Contribuição · Idade · Especial · Planejamento",
     summary:
-      "Reparação justa e indenização por danos morais e materiais contra companhias aéreas diante de transtornos em viagens nacionais e internacionais.",
+      "Planejamento previdenciário e requerimento estratégico de aposentadorias para garantir o benefício mais vantajoso, sem atrasos ou prejuízos financeiros.",
     details:
-      "Passageiros aéreos contam com proteção especial no Código de Defesa do Consumidor e normas da ANAC. Se o seu voo foi cancelado de última hora, atrasou excessivamente, sua bagagem foi perdida ou danificada, ou você foi impedido de embarcar por sobreposição de assentos, atuamos com rapidez para buscar sua devida indenização financeira.",
+      "O planejamento previdenciário analisa a fundo todo o histórico de contribuições no CNIS, averbando períodos trabalhados sem registro, tempo de serviço rural ou em condições insalubres/especiais. O Dr. Tomaz Henrique atua na via administrativa e judicial para buscar a regra de transição mais favorável e o valor máximo da sua aposentadoria.",
     topics: [
-      "Indenização por Cancelamento de Voo sem reacomodação ou assistência material devida",
-      "Atrasos de Voo superiores a 4 horas com perda de compromissos ou conexões",
-      "Extravio definitivo ou temporário de bagagem e ressarcimento por pertences danificados",
-      "Preterição de Embarque (Overbooking) por venda excessiva de passagens pela companhia",
-      "Reembolso de gastos imprevistos com hospedagem, alimentação e transporte emergencial",
-      "Atuação ágil e 100% online sem necessidade de burocracias desgastantes",
+      "Aposentadoria por Idade Urbana e Rural com cômputo de períodos de atividade no campo",
+      "Aposentadoria por Tempo de Contribuição e aplicação da Regra de Transição mais benéfica",
+      "Aposentadoria Especial para trabalhadores expostos a agentes nocivos e insalubres (PPP)",
+      "Planejamento Previdenciário com cálculo prévio do melhor momento para requerer o benefício",
+      "Reversão de negativas do INSS e cobrança das parcelas atrasadas retroativas",
+      "Acerto de vínculos e pendências no extrato previdenciário (CNIS)",
     ],
     whatsAppText:
-      "Olá, Dra. Yara Aline! Tive um problema com meu voo e gostaria de saber sobre indenização.",
+      "Olá, Dr. Tomaz Henrique! Gostaria de uma análise para planejar ou requerer minha aposentadoria no INSS.",
   },
   {
-    id: "bpc-loas-assistencial",
+    id: "beneficios-incapacidade-auxilio-doenca",
+    title: "Auxílio-Doença & Benefícios por Incapacidade",
+    icon: Scale,
+    tag: "Auxílio por Incapacidade · Invalidez · Auxílio-Acidente",
+    summary:
+      "Defesa rigorosa perante o INSS e na Justiça Federal para concessão e restabelecimento de auxílio-doença e aposentadoria por incapacidade permanente.",
+    details:
+      "Diante da recusa injusta da perícia médica do INSS, realizamos um levantamento probatório criterioso com laudos, exames e atestados médicos atualizados. Buscamos a liminar judicial para implantação imediata do benefício por incapacidade temporária (auxílio-doença) ou a conversão em aposentadoria por invalidez, além do recebimento dos retroativos.",
+    topics: [
+      "Auxílio por Incapacidade Temporária (antigo Auxílio-Doença) negado ou cancelado indevidamente",
+      "Aposentadoria por Incapacidade Permanente (Aposentadoria por Invalidez)",
+      "Auxílio-Acidente mensal para trabalhadores que ficaram com sequelas redutoras da capacidade",
+      "Acompanhamento pericial e formulação de quesitos técnicos especializados",
+      "Ações judiciais contra altas médicas programadas do INSS sem melhora clínica",
+      "Garantia de recebimento dos valores retroativos desde a data do primeiro requerimento",
+    ],
+    whatsAppText:
+      "Olá, Dr. Tomaz Henrique! Tive meu benefício por incapacidade/auxílio-doença negado pelo INSS e preciso de ajuda.",
+  },
+  {
+    id: "bpc-loas-idosos-deficientes",
     title: "BPC / LOAS para Idosos e Pessoas com Deficiência",
     icon: HeartHandshake,
-    tag: "1 Salário Mínimo Mensal · Sem Contribuição Prévia · Reversão de Negativas",
+    tag: "1 Salário Mínimo Mensal · Sem Contribuição · Reversão de Negativa",
     summary:
-      "Concessão célere do benefício assistencial de 1 salário mínimo mensal para idosos com 65+ anos ou pessoas com deficiência e impedimentos de longo prazo de baixa renda.",
+      "Concessão ágil de 1 salário mínimo mensal para idosos com 65 anos ou mais e pessoas com deficiência em situação de vulnerabilidade social.",
     details:
-      "O Benefício de Prestação Continuada (BPC/LOAS) garante dignidade e sustento fundamental. Se o INSS negou o seu pedido alegando renda superior ao teto ou não reconhecendo a condição de saúde, atuamos de forma incisiva demonstrando despesas com farmácia e tratamentos para reverter a negativa.",
+      "O Benefício de Prestação Continuada (BPC/LOAS) é uma garantia constitucional fundamental. Se o INSS indeferiu o seu pedido alegando renda familiar acima do limite ou não reconheceu os impedimentos de longo prazo, ingressamos com ação judicial demonstrando gastos reais com medicamentos, fraldas, exames e alimentação especial para reverter a negativa.",
     topics: [
-      "BPC/LOAS para idosos a partir de 65 anos em situação de vulnerabilidade financeira",
-      "BPC/LOAS para pessoas com deficiência física, intelectual, mental ou sensorial",
-      "Benefício para crianças e adultos diagnosticados com Transtorno do Espectro Autista (TEA)",
-      "Dedução comprovada de gastos médicos essenciais, exames e cuidadores",
-      "Ação judicial rápida para liberação do benefício e pagamento dos retroativos devidos",
-      "Acompanhamento cuidadoso com linguagem acessível para toda a família",
+      "BPC/LOAS para idosos a partir de 65 anos sem renda ou contribuição ao INSS",
+      "BPC/LOAS para pessoas com deficiência física, intelectual, motora ou sensorial",
+      "Benefício para crianças e jovens com Transtorno do Espectro Autista (TEA)",
+      "Abatimento comprovado de gastos médicos essenciais da renda familiar per capita",
+      "Ação judicial célere para liberação do benefício e quitação de parcelas retroativas",
+      "Orientação completa e humanizada para a família em todas as fases do processo",
     ],
     whatsAppText:
-      "Olá, Dra. Yara Aline! Gostaria de consultar sobre a concessão do BPC/LOAS.",
+      "Olá, Dr. Tomaz Henrique! Gostaria de consultar sobre o benefício BPC/LOAS.",
   },
   {
-    id: "consultoria-juridica-contratos",
-    title: "Consultoria Jurídica, Contratos & Prevenção de Riscos",
-    icon: FileText,
-    tag: "Elaboração de Contratos · Revisão Preventiva · Segurança Patrimonial",
+    id: "pensao-por-morte-salario-maternidade",
+    title: "Pensão por Morte & Benefícios aos Dependentes",
+    icon: Sparkles,
+    tag: "Pensão por Morte · Salário-Maternidade · Dependência Econômica",
     summary:
-      "Assessoria jurídica consultiva para confecção, análise minuciosa e reestruturação de instrumentos contratuais, blindando seus interesses contra litígios futuros.",
+      "Amparo seguro e humanizado para dependentes obterem a pensão por morte e trabalhadoras conquistarem o salário-maternidade sem burocracias.",
     details:
-      "Um contrato bem estruturado é a maior garantia de tranquilidade e proteção patrimonial. A Dra. Yara Aline Apolinário analisa cláusulas de risco, elabora contratos personalizados e conduz negociações extrajudiciais com foco na segurança do cliente e na clareza dos termos acordados.",
+      "Em momentos delicados como o falecimento do provedor da família ou a chegada de um filho, a segurança financeira é urgente. Auxiliamos na comprovação de união estável, dependência de filhos ou pais, bem como na liberação de até 4 meses de salário-maternidade para autônomas, MEIs, desempregadas ou trabalhadoras rurais.",
     topics: [
-      "Elaboração e revisão técnica de contratos cíveis, comerciais e de prestação de serviços",
-      "Reestruturação de cláusulas leoninas, abusivas ou desequilibradas",
-      "Contratos de compra e venda, locação e cessão de direitos patrimoniais",
-      "Distratos, acordos extrajudiciais e termos de confidencialidade",
-      "Consultoria jurídica preventiva para autônomos e pequenos empreendedores",
-      "Pareceres jurídicos objetivos para tomada de decisões com segurança",
+      "Pensão por Morte para cônjuge, companheiro(a) com prova segura de união estável",
+      "Pensão por Morte para filhos menores ou dependentes inválidos",
+      "Salário-Maternidade para trabalhadoras desempregadas no período de graça",
+      "Salário-Maternidade para MEIs, contribuintes facultativas e seguradas especiais rurais",
+      "Revisão de valores de benefícios concedidos com erro de cálculo no INSS",
+      "Recebimento de valores atrasados acumulados desde o falecimento ou nascimento",
     ],
     whatsAppText:
-      "Olá, Dra. Yara Aline! Gostaria de assessoria jurídica para elaboração ou revisão de contratos.",
+      "Olá, Dr. Tomaz Henrique! Gostaria de consultar sobre Pensão por Morte ou Salário-Maternidade.",
+  },
+  {
+    id: "direito-do-consumidor-contratos-civel",
+    title: "Direito do Consumidor, Cível & Contratos",
+    icon: FileText,
+    tag: "Indenizações · Negativação Indevida · Contratos · Defesa Cível",
+    summary:
+      "Defesa incisiva contra abusos comerciais, negativações indevidas em órgãos de proteção ao crédito e assessoria em contratos civis e comerciais.",
+    details:
+      "Atuamos na reparação por danos morais e materiais decorrentes de cobranças abusivas, negativações ilegais no SPC e Serasa, golpes bancários e fraudes no crédito consignado. Também elaboramos e revisamos contratos para assegurar blindagem patrimonial e segurança jurídica aos nossos clientes.",
+    topics: [
+      "Indenização por negativação indevida no SPC/Serasa e exclusão imediata do nome",
+      "Ações contra fraudes em empréstimos consignados, cartões e golpes bancários",
+      "Elaboração, análise e revisão técnica de contratos civis, locatícios e comerciais",
+      "Defesa do consumidor em vícios de produtos, falha de serviços e cláusulas abusivas",
+      "Cobrança extrajudicial e judicial de títulos, notas promissórias e créditos devidos",
+      "Soluções amigáveis e mediação de conflitos para evitar litígios desnecessários",
+    ],
+    whatsAppText:
+      "Olá, Dr. Tomaz Henrique! Gostaria de assessoria jurídica na área Cível / Consumidor / Contratos.",
   },
 ];
 
 const clientReviews = [
   {
-    name: "Daniela Mudesto",
-    reviewsCount: "Cliente Verificada · 2 avaliações",
-    date: "Google Meu Negócio · 2 meses atrás",
-    badge: "ética & excelência",
+    name: "Tarsis Lucas",
+    reviewsCount: "1 avaliação no Google",
+    date: "Google Meu Negócio",
+    badge: "atendimento qualificado",
     content:
-      "Tive uma excelente experiência! Atendimento extremamente profissional, humano e atencioso. A dedicação, a competência e o compromisso em buscar a melhor solução para cada situação transmitem muita confiança e tranquilidade. Recomendo de olhos fechados para quem procura um trabalho sério, ético e de excelência. Sucesso sempre!",
+      "Ótimo atendimento profissional de qualidade e bem qualificado para prestar o atendimento necessário.",
   },
   {
-    name: "Adrielle Reis",
-    reviewsCount: "Cliente Verificada · 5 avaliações",
-    date: "Google Meu Negócio · 1 mês atrás",
-    badge: "causa ganha",
+    name: "Luciano R Miranda",
+    reviewsCount: "2 avaliações no Google",
+    date: "Google Meu Negócio",
+    badge: "excelência & acolhimento",
     content:
-      "A Dra. Yara é uma excelente advogada. Cuidou muito bem do meu caso e me deu todo suporte necessário durante o processo. Não me deixou na mão e me orientou com clareza, tanto que resultou em uma causa ganha. Indico para todos!",
+      "Só elogios, atendimento excelente sem contar aquela cerveja gelada enquanto espera sua vez. Recomendo muito!",
   },
   {
-    name: "Leonardo Fernandes Neto",
-    reviewsCount: "Cliente Verificado · 2 avaliações",
-    date: "Google Meu Negócio · 3 meses atrás",
-    badge: "clareza & dedicação",
+    name: "Braulio Silva",
+    reviewsCount: "2 avaliações no Google",
+    date: "Google Meu Negócio",
+    badge: "atenção aos detalhes",
     content:
-      "Excelente profissional! O escritório Apolinário Advogados refez meu contrato com muita dedicação, clareza e profissionalismo. Sempre muito atenciosa e disponível para esclarecer minhas dúvidas. Fiquei muito satisfeito com o atendimento e recomendo seu trabalho com total confiança.",
+      "Um ótimo profissional. Atencioso em todos os detalhes, super indico.",
   },
   {
-    name: "Rithielle Dias",
-    reviewsCount: "Cliente Verificada · 1 avaliação",
-    date: "Google Meu Negócio · 1 mês atrás",
-    badge: "atendimento 100%",
+    name: "Alexandre Fernandes",
+    reviewsCount: "7 avaliações no Google",
+    date: "Google Meu Negócio",
+    badge: "ética & empatia",
     content:
-      "Excelente atendimento! Atenciosa, transparente e tirou todas as minhas dúvidas do início ao fim do processo. Uma assessoria impecável que traz muita paz de espírito.",
+      "Excelente advogado, comportamento ético e empatia com seus clientes. Fui bem atendido e o problema solucionado.",
   },
   {
-    name: "Vanessa Barão",
-    reviewsCount: "Cliente Verificada · 5 avaliações · 10 fotos",
-    date: "Google Meu Negócio · 3 meses atrás",
-    badge: "representa sua causa",
+    name: "Nilmar Machado",
+    reviewsCount: "8 avaliações no Google",
+    date: "Google Meu Negócio",
+    badge: "informação clara",
     content:
-      "Perfeito! Atendimento com excelência e dedicação total. Representa com excelência a sua causa do começo ao fim. ✨",
+      "Ótimo profissional, atencioso aos detalhes e muito bom em repassar as informações.",
   },
   {
-    name: "Thainara Fernandes",
-    reviewsCount: "Cliente Verificada · 5 avaliações · 1 foto",
-    date: "Google Meu Negócio · 1 mês atrás",
-    badge: "cuidado & respeito",
+    name: "Jéssica Alves",
+    reviewsCount: "4 avaliações no Google",
+    date: "Google Meu Negócio",
+    badge: "melhor da cidade",
     content:
-      "Escritório competente e serviços altamente qualificados. Profissional além de muito capacitada, tem um carinho especial por ajudar as pessoas a resolverem suas pendências com todo cuidado e respeito! Super indico!!",
+      "Advogado extremamente profissional e capacitado. Melhor da cidade trabalhista e previdenciario!!",
   },
   {
-    name: "Willian Alves",
-    reviewsCount: "Cliente Verificado · 1 avaliação",
-    date: "Google Meu Negócio · 2 meses atrás",
-    badge: "transparência total",
+    name: "Tainara Cristina",
+    reviewsCount: "1 avaliação no Google",
+    date: "Google Meu Negócio",
+    badge: "o melhor de itaúna",
     content:
-      "Uma excelente empresa onde a transparência e a responsabilidade com os clientes são o foco principal. Profissionalismo e humanidade andam juntos para o melhor atendimento. Parabéns pelo trabalho!",
+      "Um excelente advogado, está de parabéns 👏👏👏👏👏 na minha opinião o melhor de Itaúna 😍",
   },
   {
-    name: "Isabella Bispo",
-    reviewsCount: "Local Guide · 8 avaliações · 2 fotos",
-    date: "Google Meu Negócio · 1 mês atrás",
-    badge: "segurança & ética",
+    name: "Rafael Silva",
+    reviewsCount: "4 avaliações no Google",
+    date: "Google Meu Negócio",
+    badge: "competente e honesto",
     content:
-      "A Dra. Yara é uma excelente profissional! Desde o primeiro atendimento, foi muito atenciosa, ética e esclareceu todas as minhas dúvidas. Demonstrou muito conhecimento e segurança durante todo o processo, além de sempre me manter informada sobre cada etapa.",
+      "Advogado muito competente e honesto! Transmite muita segurança durante todo o processo.",
   },
   {
-    name: "Guilherme Moura Cascone",
-    reviewsCount: "Cliente Verificado · 2 avaliações",
-    date: "Google Meu Negócio · 3 meses atrás",
-    badge: "profundo conhecimento",
+    name: "Pedro Henrique",
+    reviewsCount: "2 avaliações no Google",
+    date: "Google Meu Negócio",
+    badge: "super indico",
     content:
-      "Excelente experiência! Desde o primeiro contato me deparei com extremo profissionalismo e transparência. Demonstram profundo conhecimento jurídico e conduzem cada etapa do processo com muita organização.",
+      "Ótimo profissional! Excelente advogado. Super indico!",
   },
   {
-    name: "Leonardo Machado",
-    reviewsCount: "Cliente Verificado · 3 avaliações",
-    date: "Google Meu Negócio · 1 mês atrás",
-    badge: "acolhedora & eficiente",
+    name: "Thales Henrique",
+    reviewsCount: "3 avaliações no Google",
+    date: "Google Meu Negócio",
+    badge: "advogado excepcional",
     content:
-      "Já tive a oportunidade de atuar em parceria com ela em um caso e também de acompanhar de perto o cuidado que ela tem com processos. É uma profissional extremamente acolhedora e eficiente em resultados.",
+      "Advogado excepcional, atendimento excelente !",
   },
   {
-    name: "Guilherme Henrique",
-    reviewsCount: "Cliente Verificado · 3 avaliações",
-    date: "Google Meu Negócio · 2 meses atrás",
-    badge: "orientação exemplar",
+    name: "Jairo Henrique",
+    reviewsCount: "1 avaliação no Google",
+    date: "Google Meu Negócio",
+    badge: "muito competente",
     content:
-      "Gostaria de agradecer pelo excelente atendimento e profissionalismo. Fui muito bem orientado durante todo o processo, com clareza, atenção e dedicação em cada etapa. Sempre disponível para esclarecer minhas dúvidas.",
+      "Excelente profissional, muito competente!",
   },
   {
-    name: "Marcos Henrique Rangel",
-    reviewsCount: "Cliente Verificado · 2 avaliações",
-    date: "Google Meu Negócio · 2 meses atrás",
-    badge: "comprometimento",
+    name: "Rafael Victor",
+    reviewsCount: "1 avaliação no Google",
+    date: "Google Meu Negócio",
+    badge: "melhor da região",
     content:
-      "Muito bem orientado juridicamente. Profissionalismo, competência, ética e comprometimento total com o cliente. Escritório de alta credibilidade!",
+      "O melhor de Itaúna e região!",
+  },
+  {
+    name: "Paulo Tadeu",
+    reviewsCount: "1 avaliação no Google",
+    date: "Google Meu Negócio",
+    badge: "extremamente qualificado",
+    content:
+      "Profissional extremamente qualificado! Recomendo!!!",
+  },
+  {
+    name: "Tainan Duarte",
+    reviewsCount: "1 avaliação no Google",
+    date: "Google Meu Negócio",
+    badge: "excelente advogado",
+    content:
+      "Super indico, excelente advogado.",
+  },
+  {
+    name: "Ana Paula Macieira",
+    reviewsCount: "Local Guide · 3 avaliações · 37 fotos",
+    date: "Google Meu Negócio",
+    badge: "recomendo",
+    content:
+      "Excelente Advogado!! Recomendo!!",
+  },
+  {
+    name: "Antunes Paiva",
+    reviewsCount: "Local Guide · 14 avaliações",
+    date: "Google Meu Negócio",
+    badge: "grande profissional",
+    content:
+      "Grande profissional! Dedicado e comprometido com seus clientes.",
+  },
+  {
+    name: "Daiane Miranda",
+    reviewsCount: "2 avaliações no Google",
+    date: "Google Meu Negócio",
+    badge: "excelente profissional",
+    content:
+      "Excelente profissional.",
+  },
+  {
+    name: "Jonatas Rabelo",
+    reviewsCount: "2 avaliações no Google",
+    date: "Google Meu Negócio",
+    badge: "competência comprovada",
+    content:
+      "Excelente profissional.",
   },
 ];
 
@@ -396,7 +441,7 @@ function Heading({
       <h2
         className={
           light
-            ? "mt-4 font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-[#140e07] sm:text-4xl lg:text-[3.25rem]"
+            ? "mt-4 font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-[#1c130b] sm:text-4xl lg:text-[3.25rem]"
             : "mt-4 font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-white sm:text-4xl lg:text-[3.25rem]"
         }
       >
@@ -406,8 +451,8 @@ function Heading({
         <p
           className={
             light
-              ? "mt-4 text-[15px] leading-7 text-[#4a3f31]"
-              : "mt-4 text-[15px] leading-7 text-[#dfd7c8]"
+              ? "mt-4 text-[15px] leading-7 text-[#4f3d2f]"
+              : "mt-4 text-[15px] leading-7 text-[#dfd6cb]"
           }
         >
           {description}
@@ -436,25 +481,34 @@ export default function Home() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <main className="overflow-hidden bg-[#080706] text-[#fdfcf9] selection:bg-[#d49b29] selection:text-[#080706]">
-        {/* Navigation Bar - Refined Velvet Obsidian with Luminous Metallic Gold Accents */}
-        <header className="sticky top-0 z-40 border-b border-[#d49b29]/20 bg-[#080706]/95 backdrop-blur-xl">
-          <div className="mx-auto flex h-[88px] max-w-7xl items-center justify-between gap-5 px-5 sm:h-[98px] sm:px-8 lg:px-12">
+      <main className="overflow-hidden bg-[#090706] text-[#fcfbfa] selection:bg-[#c97f48] selection:text-[#090706]">
+        {/* Navigation Bar - Refined Velvet Bronze Obsidian Canvas */}
+        <header className="sticky top-0 z-40 border-b border-[#c97f48]/20 bg-[#090706]/95 backdrop-blur-xl">
+          <div className="mx-auto flex h-[104px] max-w-7xl items-center justify-between gap-6 px-5 sm:h-[116px] sm:px-8 lg:px-12">
             <a
               href="#inicio"
-              aria-label="Apolinário Advogados — Início"
+              aria-label="Tomaz Henrique — Escritório de Advocacia"
               onClick={closeMenu}
-              className="flex items-center gap-3 transition-opacity hover:opacity-90"
+              className="flex items-center gap-4 transition-opacity hover:opacity-90"
             >
-              <Image
-                src={LOGO_SRC}
-                width={1024}
-                height={409}
-                alt="Apolinário Advogados — Logotipo Oficial"
-                priority
-                loading="eager"
-                className="h-[67px] w-auto object-contain sm:h-[78px]"
-              />
+              <div className="relative size-[68px] shrink-0 overflow-hidden rounded-full border-2 border-[#c97f48]/60 bg-white shadow-md sm:size-[80px]">
+                <Image
+                  src={LOGO_SEAL_SRC}
+                  alt="Selo Oficial Tomaz Henrique Escritório de Advocacia"
+                  fill
+                  priority
+                  sizes="80px"
+                  className="object-cover"
+                />
+              </div>
+              <div className="flex flex-col">
+                <span className="font-cinzel text-xl font-bold tracking-wider text-white sm:text-2xl">
+                  TOMAZ HENRIQUE
+                </span>
+                <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#d48c52] sm:text-[13px]">
+                  Escritório de Advocacia
+                </span>
+              </div>
             </a>
 
             <nav
@@ -465,7 +519,7 @@ export default function Home() {
                 Início
               </a>
               <a className="nav-link" href="#sobre">
-                Dra. Yara Apolinário
+                Dr. Tomaz Henrique
               </a>
               <a className="nav-link" href="#atuacao">
                 Áreas de Atuação
@@ -477,7 +531,7 @@ export default function Home() {
                 Avaliações (5,0 ★)
               </a>
               <a className="nav-link" href="#contato">
-                Contato & Atendimento
+                Contato & Sede
               </a>
             </nav>
 
@@ -486,16 +540,16 @@ export default function Home() {
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Instagram da Dra. Yara Aline Apolinário"
-                className="grid size-10 place-items-center rounded-lg border border-[#d49b29]/30 bg-[#110f0c] text-[#fdf6cc] transition-all hover:border-[#f9d26c] hover:bg-[#1d1914] hover:text-white"
+                aria-label="Instagram do Dr. Tomaz Henrique"
+                className="grid size-10 place-items-center rounded-lg border border-[#c97f48]/30 bg-[#120e0b] text-[#fae0c8] transition-all hover:border-[#e5a26c] hover:bg-[#1f1610] hover:text-white"
                 title={`Instagram ${INSTAGRAM_HANDLE}`}
               >
                 <InstagramIcon size={16} />
               </a>
               <a
                 href={`tel:+${WHATSAPP_NUMBER}`}
-                aria-label="Ligar para Apolinário Advogados"
-                className="grid size-10 place-items-center rounded-lg border border-[#d49b29]/30 bg-[#110f0c] text-[#fdf6cc] transition-all hover:border-[#f9d26c] hover:bg-[#1d1914] hover:text-white"
+                aria-label="Ligar para Tomaz Henrique Advogado"
+                className="grid size-10 place-items-center rounded-lg border border-[#c97f48]/30 bg-[#120e0b] text-[#fae0c8] transition-all hover:border-[#e5a26c] hover:bg-[#1f1610] hover:text-white"
                 title={`Ligar: ${PHONE_DISPLAY}`}
               >
                 <Phone size={16} />
@@ -504,15 +558,15 @@ export default function Home() {
                 href={getWhatsAppUrl()}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="WhatsApp Apolinário Advogados"
-                className="grid size-10 place-items-center rounded-lg border border-[#d49b29]/30 bg-[#110f0c] text-[#fdf6cc] transition-all hover:border-[#f9d26c] hover:bg-[#1d1914] hover:text-white"
+                aria-label="WhatsApp Dr. Tomaz Henrique"
+                className="grid size-10 place-items-center rounded-lg border border-[#c97f48]/30 bg-[#120e0b] text-[#fae0c8] transition-all hover:border-[#e5a26c] hover:bg-[#1f1610] hover:text-white"
                 title="Atendimento no WhatsApp"
               >
                 <WhatsAppIcon size={18} />
               </a>
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá, Dra. Yara Aline! Gostaria de agendar uma consulta com o escritório Apolinário Advogados."
+                  "Olá, Dr. Tomaz Henrique! Gostaria de agendar uma consulta com seu escritório."
                 )}
                 target="_blank"
                 size="sm"
@@ -528,7 +582,7 @@ export default function Home() {
               aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
               aria-expanded={menuOpen}
               aria-controls="mobile-navigation"
-              className="grid size-11 place-items-center rounded-lg border border-[#d49b29]/30 bg-[#110f0c] text-[#fdf6cc] lg:hidden"
+              className="grid size-11 place-items-center rounded-lg border border-[#c97f48]/30 bg-[#120e0b] text-[#fae0c8] lg:hidden"
               onClick={() => setMenuOpen((open) => !open)}
             >
               {menuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -544,31 +598,31 @@ export default function Home() {
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.22 }}
-                className="overflow-hidden border-t border-[#d49b29]/20 bg-[#080706] px-6 lg:hidden"
+                className="overflow-hidden border-t border-[#c97f48]/20 bg-[#090706] px-6 lg:hidden"
               >
                 <div className="mx-auto flex max-w-7xl flex-col gap-1 py-4">
                   {[
                     ["Início", "#inicio"],
-                    ["Dra. Yara Apolinário", "#sobre"],
+                    ["Dr. Tomaz Henrique", "#sobre"],
                     ["Áreas de Atuação", "#atuacao"],
                     ["Por Que Escolher", "#diferenciais"],
                     ["Avaliações no Google (5,0 ★)", "#avaliacoes"],
-                    ["Contato & Atendimento", "#contato"],
+                    ["Contato & Sede", "#contato"],
                   ].map(([label, href]) => (
                     <a
                       key={label}
                       href={href}
                       onClick={closeMenu}
-                      className="py-3 text-sm font-medium text-stone-200 hover:text-[#f9d26c]"
+                      className="py-3 text-sm font-medium text-stone-200 hover:text-[#e5a26c]"
                     >
                       {label}
                     </a>
                   ))}
                   <div className="mt-3 flex flex-col gap-2">
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#c08322] via-[#f9d26c] to-[#c08322] px-5 py-3.5 text-xs font-bold uppercase tracking-[0.13em] text-[#0a0805] shadow-md transition-all hover:brightness-105"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#8f4d22] via-[#c97f48] to-[#8f4d22] px-5 py-3.5 text-xs font-bold uppercase tracking-[0.13em] text-white shadow-md transition-all hover:brightness-105"
                       href={getWhatsAppUrl(
-                        "Olá, Dra. Yara Aline! Gostaria de consultar sobre o meu caso."
+                        "Olá, Dr. Tomaz Henrique! Gostaria de consultar sobre o meu caso."
                       )}
                       target="_blank"
                       rel="noreferrer"
@@ -577,7 +631,7 @@ export default function Home() {
                       <WhatsAppIcon size={16} /> WhatsApp: {PHONE_DISPLAY}
                     </a>
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#d49b29]/30 bg-[#110f0c] px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-[#fdf6cc] transition-all hover:border-[#f9d26c]"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#c97f48]/30 bg-[#120e0b] px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-[#fae0c8] transition-all hover:border-[#e5a26c]"
                       href={INSTAGRAM_URL}
                       target="_blank"
                       rel="noreferrer"
@@ -592,14 +646,14 @@ export default function Home() {
           </AnimatePresence>
         </header>
 
-        {/* Hero Section - High Prestige, Luminous Warm Obsidian Canvas */}
+        {/* Hero Section - High Prestige Bronze & Obsidian Tone */}
         <section
           id="inicio"
-          className="relative isolate scroll-mt-24 border-b border-[#d49b29]/20 bg-gradient-to-b from-[#080706] via-[#110f0c] to-[#15130f]"
+          className="relative isolate scroll-mt-24 border-b border-[#c97f48]/20 bg-gradient-to-b from-[#090706] via-[#120e0b] to-[#17110c]"
         >
-          {/* Subtle gold ambient glow */}
-          <div className="pointer-events-none absolute -right-32 top-8 -z-10 size-[36rem] rounded-full bg-[#d49b29]/10 blur-3xl" />
-          <div className="pointer-events-none absolute -left-20 bottom-10 -z-10 size-[28rem] rounded-full bg-[#8e5813]/15 blur-3xl" />
+          {/* Subtle metallic bronze ambient glow */}
+          <div className="pointer-events-none absolute -right-32 top-8 -z-10 size-[36rem] rounded-full bg-[#c97f48]/10 blur-3xl" />
+          <div className="pointer-events-none absolute -left-20 bottom-10 -z-10 size-[28rem] rounded-full bg-[#743c18]/15 blur-3xl" />
 
           <div className="mx-auto grid min-h-[660px] max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 sm:py-20 lg:min-h-[720px] lg:grid-cols-[1.1fr_0.9fr] lg:gap-12 lg:px-12 lg:py-20">
             <motion.div
@@ -610,31 +664,31 @@ export default function Home() {
             >
               <motion.div
                 variants={reveal}
-                className="mb-6 inline-flex items-center gap-2.5 rounded-lg border border-[#d49b29]/35 bg-[#15130f] px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-[#fdf6cc] shadow-sm"
+                className="mb-6 inline-flex items-center gap-2.5 rounded-lg border border-[#c97f48]/35 bg-[#17110c] px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-[#fae0c8] shadow-sm"
               >
-                <span className="size-2 shrink-0 rounded-full bg-[#f9d26c]" />
-                <span>APOLINÁRIO ADVOGADOS · OAB/MG 156.433</span>
+                <span className="size-2 shrink-0 rounded-full bg-[#e5a26c]" />
+                <span>TOMAZ HENRIQUE ADVOGADO ESPECIALIZADO · ITAÚNA - MG</span>
               </motion.div>
 
               <motion.h1
                 variants={reveal}
-                className="max-w-[760px] font-serif text-[2.65rem] leading-[1.08] tracking-[-0.02em] text-white sm:text-5xl lg:text-[3.95rem]"
+                className="max-w-[760px] font-serif text-[2.65rem] leading-[1.08] tracking-[-0.02em] text-white sm:text-5xl lg:text-[3.85rem]"
               >
-                Advocacia Estratégica & Humanizada:{" "}
-                <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#fffceb] via-[#f9d26c] to-[#d49b29]">
-                  Seus Direitos com Rigor Técnico e Respeito.
+                Advocacia Trabalhista & Previdenciária:{" "}
+                <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#fdf6ee] via-[#fae0c8] to-[#c97f48]">
+                  Seus Direitos com Rigor Técnico, Ética e Combatividade.
                 </span>
               </motion.h1>
 
               <motion.p
                 variants={reveal}
-                className="mt-7 max-w-xl text-[15px] leading-7 text-[#dfd7c8] sm:text-base sm:leading-8"
+                className="mt-7 max-w-xl text-[15px] leading-7 text-[#dfd6cb] sm:text-base sm:leading-8"
               >
-                Liderado pela{" "}
+                Liderado pelo{" "}
                 <strong className="font-semibold text-white">
-                  Dra. Yara Aline Apolinário (OAB/MG 156.433)
+                  Dr. Tomaz Henrique
                 </strong>
-                , o escritório Apolinário Advogados oferece uma advocacia combativa, ética e transparente. Atuação especializada em Direito Previdenciário (Aposentadorias, BPC/LOAS e Salário-Maternidade), Direito do Trabalho e Direitos dos Passageiros Aéreos. Atendimento presencial e assessoria jurídica 100% online para todo o Brasil.
+                , o escritório Tomaz Henrique Advocacia é referência em Itaúna e região na defesa incisiva dos direitos de trabalhadores e segurados do INSS. Aliamos atenção minuciosa aos detalhes, atuação ética comprovada e atendimento humanizado para transformar seus direitos em conquistas seguras.
               </motion.p>
 
               <motion.div
@@ -643,18 +697,18 @@ export default function Home() {
               >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Yara Aline! Gostaria de consultar sobre meus direitos e agendar um atendimento."
+                    "Olá, Dr. Tomaz Henrique! Gostaria de consultar sobre meus direitos e agendar um atendimento."
                   )}
                   target="_blank"
                   size="lg"
                   variant="gold"
                   className="rounded-lg shadow-md"
                 >
-                  <WhatsAppIcon size={16} /> Falar no WhatsApp com a Dra. Yara
+                  <WhatsAppIcon size={16} /> Falar no WhatsApp com o Dr. Tomaz
                 </GlowingButton>
                 <a
                   href="#atuacao"
-                  className="group inline-flex items-center gap-2 rounded-lg border border-[#d49b29]/30 bg-[#15130f] px-5 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#fdf6cc] transition-all hover:border-[#f9d26c] hover:bg-[#1d1914] hover:text-white"
+                  className="group inline-flex items-center gap-2 rounded-lg border border-[#c97f48]/30 bg-[#17110c] px-5 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#fae0c8] transition-all hover:border-[#e5a26c] hover:bg-[#211812] hover:text-white"
                 >
                   Áreas de Atuação{" "}
                   <ArrowRight
@@ -666,22 +720,22 @@ export default function Home() {
 
               <motion.div
                 variants={reveal}
-                className="mt-12 flex flex-wrap items-center gap-x-7 gap-y-4 border-t border-[#d49b29]/20 pt-6 text-xs text-[#dfd7c8]"
+                className="mt-12 flex flex-wrap items-center gap-x-7 gap-y-4 border-t border-[#c97f48]/20 pt-6 text-xs text-[#dfd6cb]"
               >
                 <span className="inline-flex items-center gap-2 font-medium">
-                  <Star size={15} className="fill-[#f9d26c] text-[#f9d26c]" />{" "}
-                  5,0 estrelas no Google (41+ avaliações reais de clientes)
+                  <Star size={15} className="fill-[#e5a26c] text-[#e5a26c]" />{" "}
+                  5,0 estrelas no Google (37+ avaliações reais e verificadas)
                 </span>
                 <span className="inline-flex items-center gap-2 font-medium">
-                  <ShieldCheck size={15} className="text-[#d49b29]" /> OAB/MG 156.433
+                  <ShieldCheck size={15} className="text-[#c97f48]" /> Sede no Centro de Itaúna - MG
                 </span>
                 <span className="inline-flex items-center gap-2 font-medium">
-                  <HandHeart size={15} className="text-[#d49b29]" /> Atendimento Humanizado & Direto com a Advogada
+                  <HeartHandshake size={15} className="text-[#c97f48]" /> Atendimento Humanizado & Direto com o Advogado
                 </span>
               </motion.div>
             </motion.div>
 
-            {/* Hero Visual Presentation - Dra. Yara Aline Apolinário */}
+            {/* Hero Visual Presentation - Dr. Tomaz Henrique */}
             <motion.div
               initial={{ opacity: 0, scale: 0.97, y: 18 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -692,49 +746,49 @@ export default function Home() {
               }}
               className="relative mx-auto w-full max-w-[490px] lg:ml-auto lg:mr-2"
             >
-              <div className="relative aspect-[4/4.8] overflow-hidden rounded-2xl border border-[#d49b29]/35 bg-[#110f0c] shadow-2xl ring-1 ring-[#d49b29]/20">
+              <div className="relative aspect-[4/4.8] overflow-hidden rounded-2xl border border-[#c97f48]/35 bg-[#120e0b] shadow-2xl ring-1 ring-[#c97f48]/20">
                 <Image
                   src={FOTO_HERO_SRC}
-                  alt="Dra. Yara Aline Apolinário — Advogada Fundadora Apolinário Advogados"
+                  alt="Dr. Tomaz Henrique — Advogado Especializado em Itaúna"
                   fill
                   priority
                   sizes="(max-width: 640px) 90vw, (max-width: 1024px) 70vw, 45vw"
                   className="object-cover object-top"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#080706] via-[#080706]/80 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#090706] via-[#090706]/85 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-3 text-white sm:bottom-8 sm:left-8 sm:right-8">
                   <div>
                     <p className="font-serif text-2xl font-normal tracking-wide text-white">
-                      Dra. Yara Aline Apolinário
+                      Dr. Tomaz Henrique
                     </p>
-                    <p className="mt-1 text-[10px] uppercase tracking-[0.2em] text-[#f9d26c]">
-                      Apolinário Advogados · OAB/MG 156.433
+                    <p className="mt-1 text-[10px] uppercase tracking-[0.2em] text-[#e5a26c]">
+                      Tomaz Henrique Advocacia · Itaúna - MG
                     </p>
                   </div>
-                  <span className="grid size-11 shrink-0 place-items-center rounded-lg border border-[#d49b29]/40 bg-[#080706]/85 text-[#fdf6cc] backdrop-blur-sm">
+                  <span className="grid size-11 shrink-0 place-items-center rounded-lg border border-[#c97f48]/40 bg-[#090706]/85 text-[#fae0c8] backdrop-blur-sm">
                     <Scale size={18} />
                   </span>
                 </div>
               </div>
 
               {/* Floating authority badge */}
-              <div className="absolute -left-3 top-6 z-10 rounded-lg border border-[#d49b29]/40 bg-[#110f0c]/95 px-4 py-2 text-[10px] font-bold tracking-[0.14em] text-[#fdf6cc] shadow-card backdrop-blur-md sm:-left-5">
-                MINAS GERAIS · ATENDIMENTO BRASIL
+              <div className="absolute -left-3 top-6 z-10 rounded-lg border border-[#c97f48]/40 bg-[#120e0b]/95 px-4 py-2 text-[10px] font-bold tracking-[0.14em] text-[#fae0c8] shadow-card backdrop-blur-md sm:-left-5">
+                ITAÚNA - MG · ATENDIMENTO REGIONAL
               </div>
 
               {/* Floating Google rating badge */}
-              <div className="absolute -bottom-5 -right-3 z-10 rounded-xl border border-[#d49b29]/35 bg-[#110f0c]/95 p-3.5 shadow-card backdrop-blur-md sm:-right-5">
+              <div className="absolute -bottom-5 -right-3 z-10 rounded-xl border border-[#c97f48]/35 bg-[#120e0b]/95 p-3.5 shadow-card backdrop-blur-md sm:-right-5">
                 <div className="flex items-center gap-2">
                   <GoogleIcon size={16} />
                   <div className="flex items-center gap-1">
-                    <Star size={13} className="fill-[#f9d26c] text-[#f9d26c]" />
+                    <Star size={13} className="fill-[#e5a26c] text-[#e5a26c]" />
                     <span className="font-serif text-base font-bold text-white">
                       5,0 / 5,0
                     </span>
                   </div>
                 </div>
-                <p className="mt-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#dfd7c8]">
-                  41+ Avaliações no Google
+                <p className="mt-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#dfd6cb]">
+                  37 Avaliações no Google
                 </p>
               </div>
             </motion.div>
@@ -744,39 +798,39 @@ export default function Home() {
         {/* Highlights Banner - Authority Metrics */}
         <section
           aria-label="Credenciais e Destaques"
-          className="border-b border-[#d49b29]/20 bg-[#0d0b09]"
+          className="border-b border-[#c97f48]/20 bg-[#0e0a08]"
         >
           <div className="mx-auto grid max-w-7xl gap-7 px-5 py-8 sm:grid-cols-4 sm:gap-4 sm:px-8 lg:px-12">
             {[
               [
                 "5,0 ★",
-                "nota máxima no Google com 41+ depoimentos autênticos e verificados",
+                "nota máxima no Google com 37 avaliações autênticas e verificadas",
               ],
               [
-                "OAB/MG 156.433",
-                "advocacia sólida e combativa em Previdenciário, Trabalhista e Consumidor",
+                "Trabalhista & INSS",
+                "especialização combativa em causas trabalhistas e benefícios previdenciários",
               ],
               [
-                "Atendimento Brasil",
-                "suporte presencial em MG e atendimento 100% online para todo o território nacional",
+                "Centro de Itaúna",
+                "escritório estruturado na Rua Godofredo Gonçalves 159 (próximo à Clinaus)",
               ],
               [
-                "100% Humanizado",
-                "atendimento acolhedor, transparente e direto com a advogada, sem barreiras",
+                "Atenção ao Detalhe",
+                "cuidado minucioso em cada cálculo, documento e fase do processo judicial",
               ],
             ].map(([value, label], index) => (
               <div
                 key={label}
                 className={
                   index > 0
-                    ? "flex items-center gap-4 sm:justify-center sm:border-l sm:border-[#d49b29]/20"
+                    ? "flex items-center gap-4 sm:justify-center sm:border-l sm:border-[#c97f48]/20"
                     : "flex items-center gap-4 sm:justify-center"
                 }
               >
-                <span className="font-serif text-2xl font-semibold text-[#f9d26c] sm:text-3xl">
+                <span className="font-serif text-2xl font-semibold text-[#e5a26c] sm:text-3xl">
                   {value}
                 </span>
-                <span className="max-w-[165px] text-[11px] leading-5 text-[#dfd7c8]">
+                <span className="max-w-[165px] text-[11px] leading-5 text-[#dfd6cb]">
                   {label}
                 </span>
               </div>
@@ -784,13 +838,13 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Sobre a Dra. Yara Aline Apolinário - Modo Claro Ouro Marfim Nobre */}
+        {/* Sobre o Dr. Tomaz Henrique - Editorial Warm Alabaster Canvas */}
         <section
           id="sobre"
-          className="scroll-mt-24 border-y border-[#d49b29]/30 bg-[#faf8f4] py-20 text-[#19140e] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-y border-[#c97f48]/30 bg-[#faf7f2] py-20 text-[#1c130b] sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20 lg:px-12">
-            {/* Dra. Yara presentation portrait */}
+            {/* Dr. Tomaz presentation portrait */}
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -798,37 +852,37 @@ export default function Home() {
               variants={reveal}
               className="relative mx-auto w-full max-w-[480px]"
             >
-              <div className="relative aspect-[3/3.8] overflow-hidden rounded-2xl border-2 border-[#5a370b] bg-[#110f0c] shadow-2xl">
+              <div className="relative aspect-[3/3.8] overflow-hidden rounded-2xl border-2 border-[#54280c] bg-[#120e0b] shadow-2xl">
                 <Image
                   src={FOTO_SOBRE_SRC}
-                  alt="Dra. Yara Aline Apolinário — Advogada OAB/MG 156.433"
+                  alt="Dr. Tomaz Henrique — Advogado em Itaúna MG"
                   fill
                   sizes="(max-width: 1024px) 90vw, 45vw"
                   className="object-cover object-top"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#080706]/90 via-[#080706]/30 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#090706]/90 via-[#090706]/30 to-transparent" />
               </div>
 
-              {/* Authority badge card - Deep Obsidian Contrast on Light Surface */}
-              <div className="absolute -bottom-6 right-3 max-w-[340px] rounded-xl border border-[#d49b29]/40 bg-[#110f0c] px-5 py-4 shadow-xl sm:-right-6 sm:px-6">
-                <div className="flex items-center gap-2 text-[#f9d26c]">
+              {/* Authority badge card - Deep Obsidian Bronze Contrast on Light Surface */}
+              <div className="absolute -bottom-6 right-3 max-w-[340px] rounded-xl border border-[#c97f48]/40 bg-[#120e0b] px-5 py-4 shadow-xl sm:-right-6 sm:px-6">
+                <div className="flex items-center gap-2 text-[#e5a26c]">
                   <Award size={16} />
-                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#f9d26c]">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#e5a26c]">
                     Advocacia Especializada & Consultoria
                   </p>
                 </div>
                 <p className="mt-1 font-serif text-lg leading-snug text-white">
-                  Dra. Yara Aline Apolinário
+                  Dr. Tomaz Henrique
                 </p>
-                <p className="mt-0.5 text-[11px] font-medium text-[#d49b29]">
-                  OAB/MG 156.433 · Apolinário Advogados
+                <p className="mt-0.5 text-[11px] font-medium text-[#c97f48]">
+                  Tomaz Henrique Advocacia · Itaúna - MG
                 </p>
-                <p className="mt-1 text-[11px] leading-4 text-[#dfd7c8]">
-                  Minas Gerais · Atendimento Online Seguro em Todo o Brasil
+                <p className="mt-1 text-[11px] leading-4 text-[#dfd6cb]">
+                  Rua Godofredo Gonçalves, 159 - Centro (Próximo à Clinaus)
                 </p>
               </div>
 
-              <span className="absolute -left-4 -top-4 -z-10 size-24 border-l-2 border-t-2 border-[#8e5813]/40 sm:-left-7 sm:-top-7 sm:size-32" />
+              <span className="absolute -left-4 -top-4 -z-10 size-24 border-l-2 border-t-2 border-[#80441c]/40 sm:-left-7 sm:-top-7 sm:size-32" />
             </motion.div>
 
             {/* Story & Biography - Editorial Warm Light Typography */}
@@ -840,72 +894,72 @@ export default function Home() {
             >
               <motion.div
                 variants={reveal}
-                className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#8e5813]/30 bg-white/80 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#8e5813] shadow-xs"
+                className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#80441c]/30 bg-white/80 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#80441c] shadow-xs"
               >
-                <span className="size-2 shrink-0 rounded-full bg-[#8e5813]" />
-                <span>CONHEÇA A DRA. YARA ALINE APOLINÁRIO</span>
+                <span className="size-2 shrink-0 rounded-full bg-[#80441c]" />
+                <span>CONHEÇA O DR. TOMAZ HENRIQUE</span>
               </motion.div>
 
               <motion.h2
                 variants={reveal}
-                className="font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-[#19140e] sm:text-4xl lg:text-[3.25rem]"
+                className="font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-[#1c130b] sm:text-4xl lg:text-[3.25rem]"
               >
-                Compromisso com a verdade, combatividade jurídica e um{" "}
-                <span className="italic text-[#8e5813]">
-                  atendimento verdadeiramente humano e resolutivo.
+                Mais que um patrono da causa: um{" "}
+                <span className="italic text-[#80441c]">
+                  defensor incansável e atencioso em cada detalhe.
                 </span>
               </motion.h2>
 
               <motion.p
                 variants={reveal}
-                className="mt-6 max-w-xl text-[15px] leading-7 text-[#4a3f31]"
+                className="mt-6 max-w-xl text-[15px] leading-7 text-[#4f3d2f]"
               >
-                Inscrita na{" "}
-                <strong className="font-bold text-[#19140e]">
-                  OAB/MG sob o nº 156.433
+                Com escritório sediado no coração de{" "}
+                <strong className="font-bold text-[#1c130b]">
+                  Itaúna - MG
                 </strong>
-                , a Dra. Yara Aline Apolinário conduz o escritório Apolinário Advogados com a missão inegociável de assegurar que cidadãos, trabalhadores, mães e consumidores tenham seus direitos plenamente respeitados e efetivados.
+                , o Dr. Tomaz Henrique consolidou uma atuação jurídica marcada pela seriedade, conduta ética exemplar e profundo rigor técnico. Sua prática é orientada pelo compromisso de que cada trabalhador, segurado e cidadão tenha seus direitos plenamente compreendidos, defendidos e concretizados.
               </motion.p>
 
               <motion.p
                 variants={reveal}
-                className="mt-4 max-w-xl text-[15px] leading-7 text-[#4a3f31]"
+                className="mt-4 max-w-xl text-[15px] leading-7 text-[#4f3d2f]"
               >
-                Com ampla atuação em Direito Previdenciário (aposentadorias, BPC/LOAS e salário-maternidade), Direito do Trabalho e Direitos dos Passageiros Aéreos, o escritório alia rigor técnico processual a uma escuta atenta e personalizada. Aqui, cada cliente tem contato direto com a advogada, acompanhando cada andamento em linguagem clara e objetiva.
+                Especialista em Direito Trabalhista e Previdenciário (INSS), o escritório destaca-se pelo acolhimento próximo e pela transparência em cada explicação. Aqui, você não enfrenta termos burocráticos indecifráveis: você conversa diretamente com o advogado responsável pelo seu processo, com clareza em todas as etapas e estratégia desenhada sob medida.
               </motion.p>
 
-              {/* Quote Card */}
+              {/* Authentic Client Quote Card */}
               <motion.div
                 variants={reveal}
                 className="mt-6 rounded-xl border border-[#e8decb] bg-white/95 p-5 shadow-sm"
               >
-                <blockquote className="font-serif text-sm italic leading-relaxed text-[#2a2013]">
-                  &ldquo;A advocacia séria se constrói com dedicação incansável, transparência em cada explicação e a coragem de lutar pelo que é justo em benefício de quem confia em nosso trabalho.&rdquo;
+                <blockquote className="font-serif text-sm italic leading-relaxed text-[#2c1b10]">
+                  &ldquo;Excelente advogado, comportamento ético e empatia com seus clientes. Fui bem atendido e o problema solucionado.&rdquo;
                 </blockquote>
-                <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-[#8e5813]">
-                  — Dra. Yara Aline Apolinário · OAB/MG 156.433
+                <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-[#80441c]">
+                  — Alexandre Fernandes · Avaliação Verificada no Google Meu Negócio
                 </p>
               </motion.div>
 
               <motion.div
                 variants={reveal}
-                className="mt-6 grid grid-cols-1 gap-2.5 text-xs font-semibold text-[#2a2013] sm:grid-cols-2"
+                className="mt-6 grid grid-cols-1 gap-2.5 text-xs font-semibold text-[#2c1b10] sm:grid-cols-2"
               >
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#8e5813]" />
-                  <span>Atendimento presencial em Minas Gerais e online para todo o Brasil</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#80441c]" />
+                  <span>Sede no Centro de Itaúna (Rua Godofredo Gonçalves 159)</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#8e5813]" />
-                  <span>Especialista em Previdenciário (INSS e Salário-Maternidade) e Trabalhista</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#80441c]" />
+                  <span>Especialista em Direito do Trabalho e Benefícios do INSS</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#8e5813]" />
-                  <span>Defesa ágil dos direitos de passageiros contra companhias aéreas</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#80441c]" />
+                  <span>Análise probatória rigorosa e atenção máxima aos detalhes</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#8e5813]" />
-                  <span>Nota máxima 5,0 ★ no Google com mais de 40 avaliações autênticas</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#80441c]" />
+                  <span>Nota máxima 5,0 ★ no Google com 37 avaliações reais</span>
                 </div>
               </motion.div>
 
@@ -915,18 +969,18 @@ export default function Home() {
               >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Yara Aline! Gostaria de agendar uma consulta sobre o meu caso."
+                    "Olá, Dr. Tomaz Henrique! Gostaria de agendar uma consulta sobre o meu caso."
                   )}
                   target="_blank"
                   size="md"
                   variant="dark"
                   className="rounded-lg shadow-md"
                 >
-                  <WhatsAppIcon size={16} /> Falar com a Dra. Yara
+                  <WhatsAppIcon size={16} /> Falar com o Dr. Tomaz
                 </GlowingButton>
                 <a
                   href={`tel:+${WHATSAPP_NUMBER}`}
-                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#19140e] transition-colors hover:text-[#8e5813]"
+                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#1c130b] transition-colors hover:text-[#80441c]"
                 >
                   <Phone size={15} /> {PHONE_DISPLAY}
                 </a>
@@ -935,10 +989,10 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Áreas de Atuação Apolinário Advogados */}
+        {/* Áreas de Atuação Tomaz Henrique Advocacia */}
         <section
           id="atuacao"
-          className="scroll-mt-24 border-t border-[#d49b29]/20 bg-[#0d0b09] py-20 sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#c97f48]/20 bg-[#0e0a08] py-20 sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <motion.div
@@ -950,15 +1004,15 @@ export default function Home() {
             >
               <Heading
                 eyebrow="SERVIÇOS JURÍDICOS & PILARES DE ATUAÇÃO"
-                description="Defesa especializada, estratégica e personalizada para resguardar seus direitos em demandas previdenciárias, trabalhistas, contratuais e do consumidor."
+                description="Defesa especializada, estratégica e personalizada para resguardar seus direitos em demandas trabalhistas, previdenciárias, contratuais e cíveis."
               >
                 Atuação jurídica sólida em{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fffceb] via-[#f9d26c] to-[#d49b29]">
-                  Minas Gerais e em Todo o Brasil.
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fdf6ee] via-[#fae0c8] to-[#c97f48]">
+                  Itaúna, Região e Minas Gerais.
                 </span>
               </Heading>
-              <p className="max-w-[270px] pb-1 text-xs leading-6 text-[#dfd7c8]">
-                Selecione uma área abaixo para conferir as demandas
+              <p className="max-w-[270px] pb-1 text-xs leading-6 text-[#dfd6cb]">
+                Selecione uma especialidade abaixo para conferir as demandas
                 atendidas e iniciar sua consulta diretamente pelo WhatsApp.
               </p>
             </motion.div>
@@ -976,25 +1030,25 @@ export default function Home() {
                   <motion.article
                     key={area.id}
                     variants={reveal}
-                    className="group flex min-h-[350px] flex-col rounded-xl border border-[#d49b29]/20 bg-[#110f0c] p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#d49b29]/50 hover:bg-[#181512] hover:shadow-obsidian sm:p-8"
+                    className="group flex min-h-[350px] flex-col rounded-xl border border-[#c97f48]/20 bg-[#120e0b] p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#c97f48]/50 hover:bg-[#1a1410] hover:shadow-obsidian sm:p-8"
                   >
                     <div className="flex items-start justify-between">
-                      <span className="grid size-12 place-items-center rounded-lg border border-[#d49b29]/25 bg-[#1d1914] text-[#f9d26c] shadow-sm transition-colors group-hover:border-[#fae48f] group-hover:bg-[#29231c] group-hover:text-white">
+                      <span className="grid size-12 place-items-center rounded-lg border border-[#c97f48]/25 bg-[#211812] text-[#e5a26c] shadow-sm transition-colors group-hover:border-[#fae0c8] group-hover:bg-[#2d2119] group-hover:text-white">
                         <Icon size={22} strokeWidth={1.5} />
                       </span>
-                      <span className="font-serif text-2xl text-[#d49b29]/40">
+                      <span className="font-serif text-2xl text-[#c97f48]/40">
                         0{index + 1}
                       </span>
                     </div>
 
                     <div className="mt-6">
-                      <span className="inline-block rounded-md border border-[#d49b29]/25 bg-[#1d1914] px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-[#fdf6cc] shadow-sm">
+                      <span className="inline-block rounded-md border border-[#c97f48]/25 bg-[#211812] px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-[#fae0c8] shadow-sm">
                         {area.tag}
                       </span>
                       <h3 className="mt-3 font-serif text-[1.45rem] leading-tight text-white">
                         {area.title}
                       </h3>
-                      <p className="mt-3 text-[13px] leading-6 text-[#dfd7c8]">
+                      <p className="mt-3 text-[13px] leading-6 text-[#dfd6cb]">
                         {area.summary}
                       </p>
                     </div>
@@ -1002,7 +1056,7 @@ export default function Home() {
                     <button
                       type="button"
                       onClick={() => setActiveArea(area)}
-                      className="group/link mt-auto inline-flex w-fit items-center gap-2 pt-6 text-[10px] font-bold uppercase tracking-[0.16em] text-[#f9d26c] hover:text-white"
+                      className="group/link mt-auto inline-flex w-fit items-center gap-2 pt-6 text-[10px] font-bold uppercase tracking-[0.16em] text-[#e5a26c] hover:text-white"
                     >
                       Ver detalhes e demandas{" "}
                       <ArrowRight
@@ -1017,25 +1071,25 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Por Que Escolher Apolinário Advogados - Diferenciais */}
+        {/* Por Que Escolher Tomaz Henrique Advocacia - Diferenciais */}
         <section
           id="diferenciais"
-          className="scroll-mt-24 border-y border-[#d49b29]/20 bg-[#080706] py-20 sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-y border-[#c97f48]/20 bg-[#090706] py-20 sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
               <Heading
                 eyebrow="NOSSOS PILARES DE EXCELÊNCIA"
-                description="Unimos acolhimento sincero, proximidade humana e uma postura jurídica firme para transformar direitos em conquistas reais."
+                description="Unimos acolhimento sincero, atenção aos mínimos detalhes e uma postura jurídica firme para transformar direitos em conquistas reais."
               >
-                Por que confiar seu caso à{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fffceb] via-[#f9d26c] to-[#d49b29]">
-                  Dra. Yara Aline Apolinário?
+                Por que confiar seu caso ao{" "}
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fdf6ee] via-[#fae0c8] to-[#c97f48]">
+                  Dr. Tomaz Henrique?
                 </span>
               </Heading>
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá, Dra. Yara Aline! Gostaria de consultar sobre a minha situação jurídica."
+                  "Olá, Dr. Tomaz Henrique! Gostaria de consultar sobre a minha situação jurídica."
                 )}
                 target="_blank"
                 size="md"
@@ -1047,52 +1101,52 @@ export default function Home() {
             </div>
 
             <div className="mt-12 grid gap-8 lg:grid-cols-2">
-              {/* Card 1: Atendimento Humanizado e Acolhedor */}
+              {/* Card 1: Atenção aos Mínimos Detalhes & Ética */}
               <motion.article
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65 }}
-                className="group flex flex-col justify-between rounded-xl border border-[#d49b29]/25 bg-[#110f0c] p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-[#d49b29]/50 hover:bg-[#181512] sm:p-9"
+                className="group flex flex-col justify-between rounded-xl border border-[#c97f48]/25 bg-[#120e0b] p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-[#c97f48]/50 hover:bg-[#1a1410] sm:p-9"
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#d49b29]/30 bg-[#1d1914] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#fdf6cc]">
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#c97f48]/30 bg-[#211812] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#fae0c8]">
                       <HeartHandshake size={14} /> Atendimento Humanizado
                     </span>
-                    <span className="text-xs font-semibold text-[#f9d26c]">
+                    <span className="text-xs font-semibold text-[#e5a26c]">
                       Acolhimento Real
                     </span>
                   </div>
                   <h3 className="mt-4 font-serif text-2xl leading-tight text-white sm:text-[1.75rem]">
-                    Empatia, Escuta Atenta e Zero &ldquo;Juridiquês&rdquo;
+                    Atenção em Todos os Detalhes & Comunicação Clara
                   </h3>
-                  <p className="mt-3 text-[14px] leading-relaxed text-[#dfd7c8]">
-                    Entendemos que por trás de cada processo existe a história de uma família, meses de expectativa ou uma injustiça que precisa ser reparada. No escritório Apolinário Advogados, você conversa diretamente com a Dra. Yara Aline, com explicações francas, acessíveis e suporte contínuo.
+                  <p className="mt-3 text-[14px] leading-relaxed text-[#dfd6cb]">
+                    Sabemos que por trás de cada ação trabalhista ou pedido no INSS existe a subsistência de uma família e anos de dedicação. No escritório Tomaz Henrique, você é recebido com cordialidade, paciência e respeito, com explicações objetivas e sem nenhum obstáculo de comunicação.
                   </p>
                   <ul className="mt-5 space-y-2 text-xs font-medium text-stone-200">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#f9d26c]" />
-                      <span>Contato direto pelo WhatsApp com a advogada responsável pelo seu caso</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#e5a26c]" />
+                      <span>Contato direto pelo WhatsApp com o Dr. Tomaz Henrique</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#f9d26c]" />
-                      <span>Esclarecimento detalhado de cada cálculo, documento e fase processual</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#e5a26c]" />
+                      <span>Esclarecimento detalhado de cada cálculo e fase processual</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#f9d26c]" />
-                      <span>Acolhimento dedicado a trabalhadores, mães e famílias em situação delicada</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#e5a26c]" />
+                      <span>Atendimento acolhedor, transparente e com total empatia</span>
                     </li>
                   </ul>
                 </div>
-                <div className="mt-7 border-t border-[#d49b29]/20 pt-4">
+                <div className="mt-7 border-t border-[#c97f48]/20 pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dra. Yara Aline! Gostaria de conversar com você sobre a minha situação."
+                      "Olá, Dr. Tomaz Henrique! Gostaria de conversar diretamente com você sobre minha situação."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#d49b29]/30 bg-[#1d1914] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#fdf6cc] transition-all hover:border-[#f9d26c] hover:bg-[#29231c] hover:text-white"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#c97f48]/30 bg-[#211812] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#fae0c8] transition-all hover:border-[#e5a26c] hover:bg-[#2d2119] hover:text-white"
                   >
                     <span className="inline-flex items-center gap-2">
                       <WhatsAppIcon size={15} /> Conversar Diretamente no WhatsApp
@@ -1102,52 +1156,52 @@ export default function Home() {
                 </div>
               </motion.article>
 
-              {/* Card 2: Combatividade Técnica e Resultados */}
+              {/* Card 2: Combatividade Técnica e Rigor Processual */}
               <motion.article
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65, delay: 0.1 }}
-                className="group flex flex-col justify-between rounded-xl border border-[#d49b29]/25 bg-[#110f0c] p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-[#d49b29]/50 hover:bg-[#181512] sm:p-9"
+                className="group flex flex-col justify-between rounded-xl border border-[#c97f48]/25 bg-[#120e0b] p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-[#c97f48]/50 hover:bg-[#1a1410] sm:p-9"
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#d49b29]/30 bg-[#1d1914] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#fdf6cc]">
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#c97f48]/30 bg-[#211812] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#fae0c8]">
                       <Scale size={14} /> Rigor Técnico Incisivo
                     </span>
-                    <span className="text-xs font-semibold text-[#f9d26c]">
+                    <span className="text-xs font-semibold text-[#e5a26c]">
                       Resultados Comprovados
                     </span>
                   </div>
                   <h3 className="mt-4 font-serif text-2xl leading-tight text-white sm:text-[1.75rem]">
-                    Combatividade na Luta Pelos Seus Direitos
+                    Combatividade Jurídica & Foco no Resultado Máximo
                   </h3>
-                  <p className="mt-3 text-[14px] leading-relaxed text-[#dfd7c8]">
-                    Não nos conformamos com negativas infundadas de órgãos públicos ou abusos praticados por grandes empresas e companhias aéreas. Construímos teses jurídicas sólidas, amparadas na legislação vigente e nas melhores decisões dos tribunais do país.
+                  <p className="mt-3 text-[14px] leading-relaxed text-[#dfd6cb]">
+                    Não nos conformamos com negativas administrativas sem fundamento do INSS ou abusos contratuais de empregadores. Estruturamos provas documentais e periciais contundentes para buscar o valor justo e tempestivo de cada indenização ou benefício.
                   </p>
                   <ul className="mt-5 space-y-2 text-xs font-medium text-stone-200">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#f9d26c]" />
-                      <span>Análise jurídica aprofundada para buscar a indenização e o benefício máximo</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#e5a26c]" />
+                      <span>Análise aprofundada de holerites, contratos e extratos previdenciários</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#f9d26c]" />
-                      <span>Histórico consistente de causas vitoriosas e acordos vantajosos</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#e5a26c]" />
+                      <span>Atuação firme na Justiça do Trabalho e na Justiça Federal</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#f9d26c]" />
-                      <span>Acompanhamento tempestivo de cada prazo e movimentação do seu caso</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#e5a26c]" />
+                      <span>Acompanhamento rigoroso de prazos e recursos em todas as instâncias</span>
                     </li>
                   </ul>
                 </div>
-                <div className="mt-7 border-t border-[#d49b29]/20 pt-4">
+                <div className="mt-7 border-t border-[#c97f48]/20 pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dra. Yara Aline! Preciso de ajuda jurídica para analisar meu caso."
+                      "Olá, Dr. Tomaz Henrique! Preciso de ajuda jurídica para analisar meu caso."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#d49b29]/30 bg-[#1d1914] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#fdf6cc] transition-all hover:border-[#f9d26c] hover:bg-[#29231c] hover:text-white"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#c97f48]/30 bg-[#211812] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#fae0c8] transition-all hover:border-[#e5a26c] hover:bg-[#2d2119] hover:text-white"
                   >
                     <span className="inline-flex items-center gap-2">
                       <WhatsAppIcon size={15} /> Analisar Meu Caso no WhatsApp
@@ -1160,27 +1214,27 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Nosso Compromisso Ético e Operacional */}
-        <section className="relative overflow-hidden bg-[#070605] py-20 text-white sm:py-28 lg:py-32">
-          <div className="pointer-events-none absolute -left-28 top-1/4 size-96 rounded-full bg-[#d49b29]/10 blur-3xl" />
-          <div className="pointer-events-none absolute -right-28 bottom-1/4 size-96 rounded-full bg-[#8e5813]/10 blur-3xl" />
+        {/* Nosso Compromisso com Você */}
+        <section className="relative overflow-hidden bg-[#090706] py-20 text-white sm:py-28 lg:py-32">
+          <div className="pointer-events-none absolute -left-28 top-1/4 size-96 rounded-full bg-[#c97f48]/10 blur-3xl" />
+          <div className="pointer-events-none absolute -right-28 bottom-1/4 size-96 rounded-full bg-[#743c18]/10 blur-3xl" />
 
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.88fr_1.12fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
                 eyebrow="NOSSO COMPROMISSO COM VOCÊ"
-                description="A nota 5,0 ★ no Google com dezenas de avaliações autênticas reflete a lealdade inegociável em defender cada cliente com rigor, transparência e respeito."
+                description="A nota 5,0 ★ no Google com 37 avaliações autênticas reflete a lealdade inegociável em defender cada cliente com rigor, transparência e respeito."
               >
                 Cuidamos do seu caso com{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fffceb] via-[#f9d26c] to-[#d49b29]">
-                  respeito, transparência e combatividade total.
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fdf6ee] via-[#fae0c8] to-[#c97f48]">
+                  ética, transparência e combatividade total.
                 </span>
               </Heading>
 
-              <blockquote className="mt-8 rounded-xl border border-[#d49b29]/25 bg-[#110f0c] p-6 font-serif text-base italic leading-7 text-[#fae48f]">
-                &ldquo;Tive uma excelente experiência! Atendimento extremamente profissional, humano e atencioso. A dedicação, a competência e o compromisso em buscar a melhor solução transmitem muita confiança e tranquilidade. Recomendo de olhos fechados.&rdquo;
-                <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-[#f9d26c]">
-                  — Daniela Mudesto · Avaliação Verificada no Google Meu Negócio
+              <blockquote className="mt-8 rounded-xl border border-[#c97f48]/25 bg-[#120e0b] p-6 font-serif text-base italic leading-7 text-[#fae0c8]">
+                &ldquo;Um ótimo profissional. Atencioso em todos os detalhes, super indico.&rdquo;
+                <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-[#e5a26c]">
+                  — Braulio Silva · Avaliação Verificada no Google Meu Negócio
                 </footer>
               </blockquote>
             </div>
@@ -1190,13 +1244,13 @@ export default function Home() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={stagger}
-              className="divide-y divide-[#d49b29]/15"
+              className="divide-y divide-[#c97f48]/15"
             >
               {[
                 [
                   "01",
                   "Acolhimento Humanizado & Empatia",
-                  "Você é ouvido com atenção e sensibilidade. Analisamos cada detalhe da sua situação para traçar a melhor rota jurídica sem nenhum julgamento.",
+                  "Você é ouvido com atenção e sensibilidade. Analisamos cada detalhe da sua situação para traçar a melhor rota jurídica sem julgamentos.",
                 ],
                 [
                   "02",
@@ -1214,12 +1268,12 @@ export default function Home() {
                   variants={reveal}
                   className="grid gap-3 py-6 first:pt-0 sm:grid-cols-[70px_1fr] sm:gap-6 sm:py-7"
                 >
-                  <span className="font-serif text-2xl font-semibold text-[#f9d26c]">
+                  <span className="font-serif text-2xl font-semibold text-[#e5a26c]">
                     {number}
                   </span>
                   <div>
                     <h3 className="font-serif text-2xl text-white">{title}</h3>
-                    <p className="mt-2 max-w-lg text-[13px] leading-6 text-[#dfd7c8]">
+                    <p className="mt-2 max-w-lg text-[13px] leading-6 text-[#dfd6cb]">
                       {description}
                     </p>
                   </div>
@@ -1229,26 +1283,26 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Avaliações no Google (Depoimentos Reais - 5,0 estrelas · 41+ avaliações) */}
+        {/* Avaliações no Google (Depoimentos Reais dos Clientes - 5,0 ★ · 37 avaliações) */}
         <section
           id="avaliacoes"
-          className="scroll-mt-24 border-t border-[#d49b29]/20 bg-[#0d0b09] py-20 sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#c97f48]/20 bg-[#0e0a08] py-20 sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
               <Heading
                 eyebrow="PROVA SOCIAL VERIFICADA · GOOGLE MEU NEGÓCIO"
-                description="Confira avaliações autênticas de clientes que confiaram seus direitos e processos ao escritório Apolinário Advogados."
+                description="Confira avaliações autênticas de clientes que confiaram seus direitos trabalhistas e previdenciários ao Dr. Tomaz Henrique."
               >
-                Avaliada com nota máxima 5,0 ★ pela{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fffceb] via-[#f9d26c] to-[#d49b29]">
-                  competência, transparência e causas ganhas.
+                Avaliado com nota máxima 5,0 ★ pela{" "}
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fdf6ee] via-[#fae0c8] to-[#c97f48]">
+                  competência, atenção aos detalhes e ética.
                 </span>
               </Heading>
 
               {/* Verified Google Badge Card */}
-              <div className="flex flex-col gap-3 rounded-xl border border-[#d49b29]/25 bg-[#110f0c] p-5 shadow-card sm:flex-row sm:items-center md:min-w-[340px]">
-                <div className="flex size-14 shrink-0 items-center justify-center rounded-lg border border-[#d49b29]/25 bg-[#1d1914] shadow-sm">
+              <div className="flex flex-col gap-3 rounded-xl border border-[#c97f48]/25 bg-[#120e0b] p-5 shadow-card sm:flex-row sm:items-center md:min-w-[340px]">
+                <div className="flex size-14 shrink-0 items-center justify-center rounded-lg border border-[#c97f48]/25 bg-[#211812] shadow-sm">
                   <GoogleIcon size={30} />
                 </div>
                 <div>
@@ -1256,26 +1310,26 @@ export default function Home() {
                     <span className="font-serif text-3xl font-bold leading-none text-white">
                       5,0
                     </span>
-                    <div className="flex gap-0.5 text-[#f9d26c]">
+                    <div className="flex gap-0.5 text-[#e5a26c]">
                       {Array.from({ length: 5 }, (_, i) => (
                         <Star
                           key={i}
                           size={14}
-                          className="fill-[#f9d26c] text-[#f9d26c]"
+                          className="fill-[#e5a26c] text-[#e5a26c]"
                         />
                       ))}
                     </div>
                   </div>
                   <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-stone-200">
-                    Apolinário Advogados
+                    Tomaz Henrique Advocacia
                   </p>
                   <a
                     href={GOOGLE_MAPS_URL}
                     target="_blank"
                     rel="noreferrer"
-                    className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-[#f9d26c] transition-colors hover:text-white"
+                    className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-[#e5a26c] transition-colors hover:text-white"
                   >
-                    41+ avaliações no Google <ArrowUpRight size={13} />
+                    37 avaliações no Google <ArrowUpRight size={13} />
                   </a>
                 </div>
               </div>
@@ -1286,23 +1340,23 @@ export default function Home() {
               {clientReviews.map((review) => (
                 <article
                   key={review.name}
-                  className="group relative flex flex-col justify-between rounded-xl border border-[#d49b29]/20 bg-[#110f0c] p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#d49b29]/50 hover:bg-[#181512] hover:shadow-obsidian sm:p-8"
+                  className="group relative flex flex-col justify-between rounded-xl border border-[#c97f48]/20 bg-[#120e0b] p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#c97f48]/50 hover:bg-[#1a1410] hover:shadow-obsidian sm:p-8"
                 >
                   <div>
                     {/* Header: Stars + Badge + Google icon */}
                     <div className="flex items-center justify-between gap-2">
-                      <div className="flex gap-1 text-[#f9d26c]">
+                      <div className="flex gap-1 text-[#e5a26c]">
                         {Array.from({ length: 5 }, (_, i) => (
                           <Star
                             key={i}
                             size={14}
-                            className="fill-[#f9d26c] text-[#f9d26c]"
+                            className="fill-[#e5a26c] text-[#e5a26c]"
                           />
                         ))}
                       </div>
                       <div className="flex items-center gap-1.5 text-[11px] font-medium text-stone-300">
                         <GoogleIcon size={13} />
-                        <span className="rounded-md border border-[#d49b29]/20 bg-[#1d1914] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#fdf6cc] shadow-xs">
+                        <span className="rounded-md border border-[#c97f48]/20 bg-[#211812] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#fae0c8] shadow-xs">
                           {review.badge}
                         </span>
                       </div>
@@ -1315,8 +1369,8 @@ export default function Home() {
                   </div>
 
                   {/* Reviewer info */}
-                  <div className="mt-6 flex items-center gap-3 border-t border-[#d49b29]/20 pt-4">
-                    <div className="grid size-10 shrink-0 place-items-center rounded-lg border border-[#d49b29]/25 bg-[#1d1914] font-serif text-sm font-semibold text-[#fdf6cc] shadow-xs">
+                  <div className="mt-6 flex items-center gap-3 border-t border-[#c97f48]/20 pt-4">
+                    <div className="grid size-10 shrink-0 place-items-center rounded-lg border border-[#c97f48]/25 bg-[#211812] font-serif text-sm font-semibold text-[#fae0c8] shadow-xs">
                       {review.name.charAt(0)}
                     </div>
                     <div className="min-w-0 flex-1">
@@ -1333,21 +1387,21 @@ export default function Home() {
             </div>
 
             {/* Bottom Actions and Trust Tags */}
-            <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-[#d49b29]/20 pt-8 sm:flex-row">
+            <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-[#c97f48]/20 pt-8 sm:flex-row">
               <div className="flex flex-wrap items-center gap-2">
                 {[
-                  "Advocacia Previdenciária & INSS",
-                  "Salário-Maternidade Urbano & Rural",
-                  "Direito do Trabalho & Verbas Rescisórias",
-                  "Direitos dos Passageiros Aéreos",
-                  "Atendimento Direto com a Advogada",
-                  "Nota 5,0 no Google",
+                  "Advogado em Itaúna - MG",
+                  "Advogado Trabalhista Especializado",
+                  "Aposentadorias e Benefícios do INSS",
+                  "Auxílio-Doença & Incapacidade",
+                  "BPC / LOAS Idosos e PcD",
+                  "Nota 5,0 com 37 Avaliações",
                 ].map((tag) => (
                   <span
                     key={tag}
-                    className="inline-flex items-center gap-1.5 rounded-lg border border-[#d49b29]/20 bg-[#110f0c] px-3.5 py-1.5 text-[11px] font-medium text-stone-200 shadow-xs"
+                    className="inline-flex items-center gap-1.5 rounded-lg border border-[#c97f48]/20 bg-[#120e0b] px-3.5 py-1.5 text-[11px] font-medium text-stone-200 shadow-xs"
                   >
-                    <CheckCircle2 size={13} className="text-[#f9d26c]" />
+                    <CheckCircle2 size={13} className="text-[#e5a26c]" />
                     {tag}
                   </span>
                 ))}
@@ -1357,7 +1411,7 @@ export default function Home() {
                 href={GOOGLE_MAPS_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="group inline-flex shrink-0 items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#f9d26c] transition-colors hover:text-white"
+                className="group inline-flex shrink-0 items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#e5a26c] transition-colors hover:text-white"
               >
                 Ver todas as avaliações no Google{" "}
                 <ArrowUpRight
@@ -1369,19 +1423,19 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Contato & Atendimento Nacional */}
+        {/* Contato & Localização da Sede em Itaúna */}
         <section
           id="contato"
-          className="scroll-mt-24 border-t border-[#d49b29]/20 bg-[#080706] py-20 sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#c97f48]/20 bg-[#090706] py-20 sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
-                eyebrow="CONTATO & ATENDIMENTO NACIONAL"
-                description="Inicie seu atendimento diretamente pelo WhatsApp ou agende uma reunião presencial em nosso escritório. Prestamos assistência jurídica para clientes de todo o Brasil."
+                eyebrow="CONTATO & ATENDIMENTO EM ITAÚNA"
+                description="Inicie seu atendimento diretamente pelo WhatsApp ou agende uma reunião presencial em nosso escritório no Centro de Itaúna. Prestamos assistência ágil para clientes de toda a região."
               >
                 Estamos prontos para{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fffceb] via-[#f9d26c] to-[#d49b29]">
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fdf6ee] via-[#fae0c8] to-[#c97f48]">
                   escutar e defender você.
                 </span>
               </Heading>
@@ -1389,7 +1443,7 @@ export default function Home() {
               <div className="mt-9 flex flex-col items-start gap-4">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Yara Aline! Gostaria de agendar um horário para atendimento."
+                    "Olá, Dr. Tomaz Henrique! Gostaria de agendar um horário para atendimento."
                   )}
                   target="_blank"
                   size="lg"
@@ -1398,17 +1452,17 @@ export default function Home() {
                 >
                   <WhatsAppIcon size={17} /> Iniciar Conversa no WhatsApp
                 </GlowingButton>
-                <p className="text-[11px] leading-5 text-[#dfd7c8]">
-                  Telefone e WhatsApp profissional:{" "}
+                <p className="text-[11px] leading-5 text-[#dfd6cb]">
+                  Telefone e WhatsApp do escritório:{" "}
                   <strong className="text-white">{PHONE_DISPLAY}</strong>
                 </p>
               </div>
 
-              <div className="mt-10 space-y-4 text-xs text-[#dfd7c8]">
+              <div className="mt-10 space-y-4 text-xs text-[#dfd6cb]">
                 <div className="flex items-start gap-3">
                   <Clock
                     size={16}
-                    className="mt-0.5 shrink-0 text-[#f9d26c]"
+                    className="mt-0.5 shrink-0 text-[#e5a26c]"
                   />
                   <div>
                     <p className="font-semibold text-white">
@@ -1418,38 +1472,38 @@ export default function Home() {
                       Segunda a Sexta-feira das 08:30 às 18:00
                     </p>
                     <p className="text-[11px] text-stone-400">
-                      Atendimento presencial com agendamento prévio e consultoria jurídica online para todo o território nacional
+                      Atendimento presencial no Centro de Itaúna e assessoria jurídica online para todo o estado
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3 pt-1">
-                  <Phone size={16} className="shrink-0 text-[#f9d26c]" />
+                  <Phone size={16} className="shrink-0 text-[#e5a26c]" />
                   <a
                     href={`tel:+${WHATSAPP_NUMBER}`}
-                    className="font-medium text-white transition-colors hover:text-[#f9d26c]"
+                    className="font-medium text-white transition-colors hover:text-[#e5a26c]"
                   >
                     {PHONE_DISPLAY} (Ligações e WhatsApp)
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <InstagramIcon size={16} className="shrink-0 text-[#f9d26c]" />
+                  <InstagramIcon size={16} className="shrink-0 text-[#e5a26c]" />
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noreferrer"
-                    className="transition-colors hover:text-[#f9d26c] text-stone-200"
+                    className="transition-colors hover:text-[#e5a26c] text-stone-200"
                   >
                     {INSTAGRAM_HANDLE} (Instagram Oficial)
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <Mail size={16} className="shrink-0 text-[#f9d26c]" />
+                  <Mail size={16} className="shrink-0 text-[#e5a26c]" />
                   <a
                     href={`mailto:${EMAIL_CONTACT}`}
-                    className="transition-colors hover:text-[#f9d26c] text-stone-200"
+                    className="transition-colors hover:text-[#e5a26c] text-stone-200"
                   >
                     {EMAIL_CONTACT}
                   </a>
@@ -1458,7 +1512,7 @@ export default function Home() {
                 <div className="flex items-start gap-3">
                   <MapPin
                     size={16}
-                    className="mt-0.5 shrink-0 text-[#f9d26c]"
+                    className="mt-0.5 shrink-0 text-[#e5a26c]"
                   />
                   <span>{ADDRESS_TEXT}</span>
                 </div>
@@ -1466,36 +1520,42 @@ export default function Home() {
             </div>
 
             {/* Office & Schedule Card */}
-            <div className="relative overflow-hidden rounded-xl border border-[#d49b29]/25 bg-[#110f0c] p-7 shadow-card sm:p-10">
-              <div className="absolute right-0 top-0 h-1.5 w-32 bg-gradient-to-r from-[#d49b29] to-[#f9d26c]" />
+            <div className="relative overflow-hidden rounded-xl border border-[#c97f48]/25 bg-[#120e0b] p-7 shadow-card sm:p-10">
+              <div className="absolute right-0 top-0 h-1.5 w-32 bg-gradient-to-r from-[#c97f48] to-[#fae0c8]" />
 
               <div className="flex items-center gap-4">
-                <span className="grid size-12 place-items-center rounded-lg border border-[#d49b29]/30 bg-[#1d1914] text-[#f9d26c]">
-                  <Scale size={22} strokeWidth={1.6} />
-                </span>
+                <div className="relative size-[68px] shrink-0 overflow-hidden rounded-full border-2 border-[#c97f48]/50 bg-white shadow-md sm:size-[76px]">
+                  <Image
+                    src={LOGO_SEAL_SRC}
+                    alt="Selo Tomaz Henrique"
+                    fill
+                    sizes="76px"
+                    className="object-cover"
+                  />
+                </div>
                 <div>
-                  <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#f9d26c]">
-                    Escritório Jurídico
+                  <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#e5a26c]">
+                    Sede do Escritório
                   </p>
-                  <p className="mt-1 font-serif text-2xl text-white">
-                    Apolinário Advogados
+                  <p className="mt-0.5 font-cinzel text-2xl font-bold text-white">
+                    Tomaz Henrique Advocacia
                   </p>
                 </div>
               </div>
 
-              <address className="mt-7 max-w-md text-[14px] not-italic leading-7 text-[#dfd7c8]">
+              <address className="mt-7 max-w-md text-[14px] not-italic leading-7 text-[#dfd6cb]">
                 <strong className="font-semibold text-white">
-                  Dra. Yara Aline Apolinário
+                  Dr. Tomaz Henrique
                 </strong>
                 <br />
-                Inscrição na OAB: OAB/MG 156.433
+                Advogado Especializado em Direito Trabalhista e Previdenciário
                 <br />
                 {ADDRESS_TEXT}
               </address>
 
               {/* Weekly schedule table */}
-              <div className="mt-6 rounded-lg border border-[#d49b29]/20 bg-[#080706] p-4 text-xs">
-                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#f9d26c]">
+              <div className="mt-6 rounded-lg border border-[#c97f48]/20 bg-[#090706] p-4 text-xs">
+                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#e5a26c]">
                   Atendimento & Horários
                 </p>
                 <div className="grid grid-cols-2 gap-y-1.5 text-stone-300">
@@ -1504,31 +1564,31 @@ export default function Home() {
                     08:30 às 18:00
                   </span>
                   <span>Atendimento Presencial</span>
-                  <span className="text-right text-[#fdf6cc]">
-                    Com agendamento prévio
+                  <span className="text-right text-[#fae0c8]">
+                    Centro de Itaúna - MG
                   </span>
-                  <span>Sede Regional</span>
-                  <span className="text-right text-stone-200">Minas Gerais</span>
+                  <span>Referência</span>
+                  <span className="text-right text-stone-200">Próximo à Clinaus</span>
                   <span>Atendimento Online</span>
-                  <span className="text-right text-stone-200">Todo o Brasil</span>
+                  <span className="text-right text-stone-200">Todo o Estado</span>
                 </div>
               </div>
 
-              <div className="my-7 h-px bg-[#d49b29]/20" />
+              <div className="my-7 h-px bg-[#c97f48]/20" />
 
               <div className="flex flex-wrap items-center justify-between gap-4">
                 <p className="text-xs text-stone-400">
-                  Atendimento presencial e online em todo o Brasil
+                  Atendimento acolhedor e com hora marcada em Itaúna
                 </p>
                 <a
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Yara Aline! Gostaria de agendar um atendimento com o escritório."
+                    "Olá, Dr. Tomaz Henrique! Gostaria de agendar um atendimento no escritório."
                   )}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg border border-[#d49b29]/30 bg-[#1d1914] px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-[#fdf6cc] transition-colors hover:border-[#f9d26c] hover:bg-[#29231c] hover:text-white"
+                  className="inline-flex items-center gap-2 rounded-lg border border-[#c97f48]/30 bg-[#211812] px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-[#fae0c8] transition-colors hover:border-[#e5a26c] hover:bg-[#2d2119] hover:text-white"
                 >
-                  <WhatsAppIcon size={14} /> Falar com a Advogada <ArrowUpRight size={14} />
+                  <WhatsAppIcon size={14} /> Falar com o Advogado <ArrowUpRight size={14} />
                 </a>
               </div>
             </div>
@@ -1536,11 +1596,11 @@ export default function Home() {
         </section>
 
         {/* Pre-Footer CTA Strip */}
-        <section className="border-t border-[#d49b29]/20 bg-gradient-to-r from-[#080706] via-[#15130f] to-[#080706] px-5 py-14 text-white shadow-inner sm:px-8 sm:py-16 lg:px-12">
+        <section className="border-t border-[#c97f48]/20 bg-gradient-to-r from-[#090706] via-[#17110c] to-[#090706] px-5 py-14 text-white shadow-inner sm:px-8 sm:py-16 lg:px-12">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-7 sm:flex-row sm:items-center">
             <div>
-              <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#f9d26c]">
-                <Sparkles size={13} /> APOLINÁRIO ADVOGADOS · OAB/MG 156.433
+              <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#e5a26c]">
+                <Sparkles size={13} /> TOMAZ HENRIQUE ADVOCACIA · ITAÚNA - MG
               </p>
               <h2 className="mt-3 max-w-2xl font-serif text-3xl leading-tight text-white sm:text-4xl">
                 Precisa de orientação jurídica especializada e segura?
@@ -1548,11 +1608,11 @@ export default function Home() {
             </div>
             <a
               href={getWhatsAppUrl(
-                "Olá, Dra. Yara Aline! Gostaria de consultar sobre meus direitos com o escritório Apolinário Advogados."
+                "Olá, Dr. Tomaz Henrique! Gostaria de consultar sobre meus direitos com seu escritório."
               )}
               target="_blank"
               rel="noreferrer"
-              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-lg bg-gradient-to-r from-[#c08322] via-[#f9d26c] to-[#c08322] px-7 py-4 text-[11px] font-bold uppercase tracking-[0.14em] text-[#0a0805] shadow-md transition-all hover:-translate-y-0.5 hover:brightness-110 hover:shadow-gold"
+              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-lg bg-gradient-to-r from-[#8f4d22] via-[#c97f48] to-[#8f4d22] px-7 py-4 text-[11px] font-bold uppercase tracking-[0.14em] text-white shadow-md transition-all hover:-translate-y-0.5 hover:brightness-110 hover:shadow-bronze"
             >
               <WhatsAppIcon size={17} /> Falar no WhatsApp{" "}
               <ArrowUpRight size={15} />
@@ -1561,40 +1621,50 @@ export default function Home() {
         </section>
 
         {/* Footer */}
-        <footer className="border-t border-[#d49b29]/20 bg-[#060504] px-5 py-14 text-white sm:px-8 lg:px-12">
+        <footer className="border-t border-[#c97f48]/20 bg-[#070504] px-5 py-14 text-white sm:px-8 lg:px-12">
           <div className="mx-auto grid max-w-7xl gap-10 sm:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1fr]">
             <div>
               <a
                 href="#inicio"
-                aria-label="Apolinário Advogados"
-                className="inline-block transition-transform hover:scale-[1.02]"
+                aria-label="Tomaz Henrique — Escritório de Advocacia"
+                className="inline-flex items-center gap-4 transition-transform hover:scale-[1.02]"
               >
-                <Image
-                  src={LOGO_FULL_SRC}
-                  width={1024}
-                  height={409}
-                  alt="Apolinário Advogados — Logotipo Oficial"
-                  className="h-[90px] w-auto object-contain sm:h-[106px]"
-                />
+                <div className="relative size-[78px] shrink-0 overflow-hidden rounded-full border-2 border-[#c97f48]/50 bg-white shadow-md sm:size-[88px]">
+                  <Image
+                    src={LOGO_SEAL_SRC}
+                    alt="Tomaz Henrique — Escritório de Advocacia"
+                    fill
+                    sizes="88px"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="flex flex-col">
+                  <span className="font-cinzel text-2xl font-bold tracking-wider text-white sm:text-[1.75rem]">
+                    TOMAZ HENRIQUE
+                  </span>
+                  <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#d48c52]">
+                    Escritório de Advocacia
+                  </span>
+                </div>
               </a>
-              <p className="mt-4 max-w-xs text-xs leading-6 text-[#dfd7c8]">
-                ⚖️ Advocacia combativa, especializada e humanizada. Direito Previdenciário (INSS e Salário-Maternidade), Direito do Trabalho e Direitos dos Passageiros Aéreos.
+              <p className="mt-4 max-w-xs text-xs leading-6 text-[#dfd6cb]">
+                ⚖️ Advocacia especializada em Direito Trabalhista e Previdenciário (INSS). Atuação ética, combativa e com extrema atenção aos detalhes no Centro de Itaúna - MG.
               </p>
-              <p className="mt-3 text-[11px] font-semibold text-[#f9d26c]">
-                Dra. Yara Aline Apolinário · Advogada · OAB/MG 156.433
+              <p className="mt-3 text-[11px] font-semibold text-[#e5a26c]">
+                Dr. Tomaz Henrique · Advogado Especializado
               </p>
             </div>
 
             <div>
-              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#f9d26c]">
+              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#e5a26c]">
                 Navegação
               </h2>
-              <div className="mt-4 flex flex-col items-start gap-3 text-xs text-[#dfd7c8]">
+              <div className="mt-4 flex flex-col items-start gap-3 text-xs text-[#dfd6cb]">
                 <a className="footer-link" href="#inicio">
                   Início
                 </a>
                 <a className="footer-link" href="#sobre">
-                  Dra. Yara Apolinário
+                  Dr. Tomaz Henrique
                 </a>
                 <a className="footer-link" href="#atuacao">
                   Áreas de Atuação
@@ -1606,23 +1676,23 @@ export default function Home() {
                   Avaliações no Google (5,0 ★)
                 </a>
                 <a className="footer-link" href="#contato">
-                  Contato & Atendimento
+                  Contato & Sede
                 </a>
               </div>
             </div>
 
             <div>
-              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#f9d26c]">
+              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#e5a26c]">
                 Contato & Atendimento
               </h2>
-              <div className="mt-4 flex flex-col items-start gap-2.5 text-xs text-[#dfd7c8]">
+              <div className="mt-4 flex flex-col items-start gap-2.5 text-xs text-[#dfd6cb]">
                 <a
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Yara Aline! Gostaria de solicitar um atendimento com o escritório Apolinário Advogados."
+                    "Olá, Dr. Tomaz Henrique! Gostaria de solicitar um atendimento com o escritório."
                   )}
                   target="_blank"
                   rel="noreferrer"
-                  className="footer-link inline-flex items-center gap-2 font-medium text-[#fdf6cc]"
+                  className="footer-link inline-flex items-center gap-2 font-medium text-[#fae0c8]"
                 >
                   <WhatsAppIcon size={15} /> WhatsApp: {PHONE_DISPLAY}
                 </a>
@@ -1650,16 +1720,16 @@ export default function Home() {
                   <MapPin size={15} className="mt-0.5 shrink-0" />
                   <span>{ADDRESS_TEXT}</span>
                 </div>
-                <p className="inline-flex items-center gap-2 pt-1 text-[11px] text-[#f9d26c]">
+                <p className="inline-flex items-center gap-2 pt-1 text-[11px] text-[#e5a26c]">
                   <Clock size={14} className="shrink-0" /> Seg a Sex: 08:30 às 18:00
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-[#d49b29]/20 pt-6 text-[10px] text-stone-400 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-[#c97f48]/20 pt-6 text-[10px] text-stone-400 sm:flex-row sm:items-center sm:justify-between">
             <p>
-              © {new Date().getFullYear()} APOLINÁRIO ADVOGADOS · DRA. YARA ALINE APOLINÁRIO. Todos os direitos reservados.
+              © {new Date().getFullYear()} TOMAZ HENRIQUE ADVOCACIA · DR. TOMAZ HENRIQUE. Todos os direitos reservados.
             </p>
             <p>
               Conteúdo informativo, em estrita conformidade com o Código de Ética e Disciplina da OAB.
@@ -1674,16 +1744,16 @@ export default function Home() {
         >
           <a
             href={getWhatsAppUrl(
-              "Olá, Dra. Yara Aline! Gostaria de consultar sobre meus direitos com o escritório Apolinário Advogados."
+              "Olá, Dr. Tomaz Henrique! Gostaria de consultar sobre meus direitos com seu escritório."
             )}
             target="_blank"
             rel="noreferrer"
-            aria-label="Falar agora pelo WhatsApp com a Dra. Yara Aline Apolinário"
+            aria-label="Falar agora pelo WhatsApp com o Dr. Tomaz Henrique"
             className="group relative flex size-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-[#25D366]/40"
           >
             <WhatsAppIcon size={28} />
-            <span className="pointer-events-none absolute right-16 hidden whitespace-nowrap rounded-lg bg-[#110f0c] border border-[#d49b29]/30 px-3.5 py-1.5 text-xs font-semibold text-white shadow-lg transition-opacity group-hover:block">
-              Falar com a Dra. Yara
+            <span className="pointer-events-none absolute right-16 hidden whitespace-nowrap rounded-lg bg-[#120e0b] border border-[#c97f48]/30 px-3.5 py-1.5 text-xs font-semibold text-white shadow-lg transition-opacity group-hover:block">
+              Falar com o Dr. Tomaz
             </span>
           </a>
         </aside>
@@ -1707,13 +1777,13 @@ export default function Home() {
                 exit={{ opacity: 0, y: 16, scale: 0.99 }}
                 transition={{ duration: 0.24 }}
                 onClick={(event) => event.stopPropagation()}
-                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-xl border border-[#d49b29]/35 bg-[#110f0c] p-7 shadow-2xl sm:max-w-xl sm:rounded-xl sm:p-10"
+                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-xl border border-[#c97f48]/35 bg-[#120e0b] p-7 shadow-2xl sm:max-w-xl sm:rounded-xl sm:p-10"
               >
                 <button
                   type="button"
                   aria-label="Fechar detalhes da especialidade"
                   onClick={() => setActiveArea(null)}
-                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-[#d49b29]/30 bg-[#1d1914] text-[#fdf6cc] transition-colors hover:border-[#f9d26c] hover:text-white"
+                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-[#c97f48]/30 bg-[#211812] text-[#fae0c8] transition-colors hover:border-[#e5a26c] hover:text-white"
                 >
                   <X size={18} />
                 </button>
@@ -1727,12 +1797,12 @@ export default function Home() {
                   {activeArea.title}
                 </h2>
 
-                <p className="mt-5 text-sm leading-7 text-[#dfd7c8]">
+                <p className="mt-5 text-sm leading-7 text-[#dfd6cb]">
                   {activeArea.details}
                 </p>
 
-                <div className="mt-6 border-t border-[#d49b29]/20 pt-5">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#f9d26c]">
+                <div className="mt-6 border-t border-[#c97f48]/20 pt-5">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#e5a26c]">
                     Principais demandas atendidas pelo escritório:
                   </p>
                   <ul className="mt-4 space-y-3">
@@ -1741,7 +1811,7 @@ export default function Home() {
                         key={topic}
                         className="flex items-center gap-3 text-sm text-stone-200"
                       >
-                        <span className="size-2 shrink-0 rounded-full bg-[#f9d26c]" />
+                        <span className="size-2 shrink-0 rounded-full bg-[#e5a26c]" />
                         <span>{topic}</span>
                       </li>
                     ))}

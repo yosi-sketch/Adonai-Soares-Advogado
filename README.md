@@ -1,15 +1,15 @@
-# APOLINÁRIO ADVOGADOS
-## Advocacia Especializada & Consultoria Jurídica · Dra. Yara Aline Apolinário (OAB/MG 156.433) · Atendimento Online Brasil
+# TOMAZ HENRIQUE ADVOCACIA
+## Advogado Especializado em Direito Trabalhista e Previdenciário · Dr. Tomaz Henrique · Itaúna - MG
 
-Site institucional e landing page de alto padrão da **Dra. Yara Aline Apolinário (OAB/MG 156.433)**, fundadora do escritório Apolinário Advogados, com atuação de destaque em Direito Previdenciário (aposentadorias, BPC/LOAS e salário-maternidade), Direito do Trabalho e Direitos dos Passageiros Aéreos.
+Site institucional e landing page de alto padrão do **Dr. Tomaz Henrique**, titular do escritório Tomaz Henrique Advocacia, com atuação de destaque em Direito do Trabalho (rescisões, horas extras, insalubridade, acidentes de trabalho) e Direito Previdenciário (aposentadorias, BPC/LOAS e auxílio-doença).
 
 ## Destaques
-- **Identidade Visual Nobre em Ouro Metálico & Ônix Noturno:** Paleta extraída diretamente do novo logotipo oficial com monograma "A" em placa com moldura dourada chanfrada (`#D49B29`, `#F9D26C`, `#FCF3A3`, `#C08322`), equilibrada com a sofisticação do ônix obsidian (`#080706`, `#110F0C`, `#181512`) e o marfim nobre acolhedor (`#FAF8F4`).
-- **Tipografia Editorial e Clássica:** Fontes Cormorant Garamond e Playfair Display nos títulos (harmonia total com a tipografia romana e serifada do logotipo) e Plus Jakarta Sans para leitura confortável, moderna e acolhedora no corpo de texto.
-- **Prova Social Verificada:** Avaliação de 5,0 estrelas com mais de 40 avaliações reais e verificadas no Google Meu Negócio.
-- **Contato Ágil e Humanizado:** WhatsApp (31) 99585-9111 com mensagens contextualizadas por especialidade e botão flutuante para contato imediato.
-- **Atendimento Nacional:** Atendimento presencial em Minas Gerais e assessoria jurídica 100% online para todo o Brasil.
-- **Instagram:** [@advogada_yara_apolinario](https://www.instagram.com/advogada_yara_apolinario/)
+- **Identidade Visual Nobre em Bronze Metálico & Cobre Quente:** Paleta extraída diretamente do novo logotipo oficial em selo circular neoclássico (`#C97F48`, `#D48C52`, `#E5A26C`, `#A86131`), equilibrada com a sofisticação do veludo obsidiana (`#090706`, `#120E0B`, `#1A1410`) e o alabastro acolhedor (`#FAF7F2`).
+- **Tipografia Monumental e Clássica:** Tipografia Cinzel nos títulos da marca e Playfair Display / Cormorant Garamond nos títulos editoriais (harmonia total com a tipografia romana e serifada do selo oficial) e Plus Jakarta Sans para leitura confortável e moderna no corpo de texto.
+- **Prova Social Verificada:** Avaliação de 5,0 estrelas com 37 avaliações reais e verificadas no Google Meu Negócio.
+- **Contato Ágil e Humanizado:** WhatsApp (37) 99841-2455 com mensagens contextualizadas por especialidade e botão flutuante para contato imediato.
+- **Sede no Centro de Itaúna - MG:** Rua Godofredo Gonçalves, 159 (próximo à Clinaus) com atendimento presencial e assessoria online.
+- **Instagram:** [@advogado.tomaz](https://www.instagram.com/advogado.tomaz/)
 - **Horário de Atendimento:** Segunda a Sexta-feira das 08:30 às 18:00.
 
 ## Tecnologias

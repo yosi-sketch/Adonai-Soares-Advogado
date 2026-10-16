@@ -2,51 +2,53 @@
 
 :root {
   color-scheme: dark;
-  --brand-gold-light: #fdf6cc;
-  --brand-gold-highlight: #fcf3a3;
-  --brand-gold-accent: #f9d26c;
-  --brand-gold: #d49b29;
-  --brand-gold-dark: #c08322;
-  --brand-bronze-dark: #8e5813;
-  --brand-bronze-deep: #5a370b;
-  --brand-obsidian: #080706;
-  --brand-charcoal: #110f0c;
-  --brand-surface: #181512;
-  --brand-surface-elevated: #221d17;
-  --brand-ink: #fdfcf9;
-  --brand-ink-soft: #dfd7c8;
-  --brand-pearl: #080706;
-  --brand-paper: #110f0c;
+  --brand-bronze-light: #fdf6ee;
+  --brand-bronze-highlight: #fae0c8;
+  --brand-bronze-accent: #e5a26c;
+  --brand-bronze: #c97f48;
+  --brand-bronze-dark: #a86131;
+  --brand-bronze-deep: #80441c;
+  --brand-bronze-shadow: #54280c;
+  --brand-obsidian: #090706;
+  --brand-charcoal: #120e0b;
+  --brand-surface: #1a1410;
+  --brand-surface-elevated: #231b15;
+  --brand-ink: #fcfbfa;
+  --brand-ink-soft: #dfd6cb;
+  --brand-pearl: #090706;
+  --brand-paper: #120e0b;
 }
 
 @theme inline {
-  --font-serif: var(--font-serif), var(--font-display), "Playfair Display", "Cormorant Garamond", "Cinzel", serif;
+  --font-serif: var(--font-serif), var(--font-display), "Playfair Display", "Cormorant Garamond", serif;
+  --font-cinzel: var(--font-cinzel), "Cinzel", "Trajan Pro", serif;
   --font-sans: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
-  --color-ink: #fdfcf9;
-  --color-ink-soft: #dfd7c8;
-  --color-pearl: #080706;
-  --color-brand-50: #0d0b09;
-  --color-brand-100: #15130f;
-  --color-brand-200: #1d1914;
-  --color-brand-300: #29231c;
-  --color-brand-400: #d49b29;
-  --color-brand-500: #c08322;
-  --color-brand-600: #a7701a;
-  --color-brand-700: #8e5813;
-  --color-brand-800: #5a370b;
-  --color-brand-900: #362105;
-  --color-brand-950: #080706;
-  --color-gold-100: #fffceb;
-  --color-gold-200: #fcf3a3;
-  --color-gold-300: #fae48f;
-  --color-gold-400: #f9d26c;
-  --color-gold-500: #d49b29;
-  --color-gold-600: #c08322;
-  --color-gold-700: #8e5813;
-  --shadow-card: 0 18px 48px rgba(0, 0, 0, 0.72);
-  --shadow-gold: 0 10px 30px rgba(212, 155, 41, 0.28);
+  --color-ink: #fcfbfa;
+  --color-ink-soft: #dfd6cb;
+  --color-pearl: #090706;
+  --color-brand-50: #0e0a08;
+  --color-brand-100: #17110c;
+  --color-brand-200: #211812;
+  --color-brand-300: #2d2119;
+  --color-brand-400: #c97f48;
+  --color-brand-500: #a86131;
+  --color-brand-600: #8f4d22;
+  --color-brand-700: #743c18;
+  --color-brand-800: #54280c;
+  --color-brand-900: #361705;
+  --color-brand-950: #090706;
+  --color-gold-100: #fdf6ee;
+  --color-gold-200: #fae0c8;
+  --color-gold-300: #f4cba4;
+  --color-gold-400: #e5a26c;
+  --color-gold-500: #c97f48;
+  --color-gold-600: #a86131;
+  --color-gold-700: #80441c;
+  --shadow-card: 0 18px 48px rgba(0, 0, 0, 0.76);
+  --shadow-gold: 0 10px 30px rgba(201, 127, 72, 0.28);
+  --shadow-bronze: 0 10px 30px rgba(201, 127, 72, 0.32);
   --shadow-obsidian: 0 16px 45px rgba(0, 0, 0, 0.88);
-  --shadow-glow: 0 0 35px rgba(249, 210, 108, 0.25);
+  --shadow-glow: 0 0 35px rgba(229, 162, 108, 0.28);
 }
 
 html {
@@ -55,15 +57,19 @@ html {
 }
 
 body {
-  background: #080706;
-  color: #fdfcf9;
+  background: #090706;
+  color: #fcfbfa;
   font-family: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
-  caret-color: #d49b29;
+  caret-color: #c97f48;
 }
 
 ::selection {
-  background: #d49b29;
-  color: #080706;
+  background: #c97f48;
+  color: #090706;
+}
+
+.font-cinzel {
+  font-family: var(--font-cinzel), "Cinzel", "Playfair Display", serif;
 }
 
 .eyebrow,
@@ -79,11 +85,11 @@ body {
 }
 
 .eyebrow {
-  color: #d49b29;
+  color: #d48c52;
 }
 
 .eyebrow-light {
-  color: #c08322;
+  color: #8f4d22;
 }
 
 .eyebrow::before,
@@ -98,7 +104,7 @@ body {
 .nav-link {
   position: relative;
   padding-block: 0.5rem;
-  color: #dfd7c8;
+  color: #dfd6cb;
   font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -112,7 +118,7 @@ body {
   bottom: 0;
   left: 0;
   height: 1px;
-  background: #d49b29;
+  background: #c97f48;
   content: "";
   transform: scaleX(0);
   transform-origin: left;
@@ -140,17 +146,17 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #080706;
+  background: #090706;
 }
 
 ::-webkit-scrollbar-thumb {
-  border: 2px solid #080706;
+  border: 2px solid #090706;
   border-radius: 999px;
-  background: #5a370b;
+  background: #54280c;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #d49b29;
+  background: #c97f48;
 }
 
 @media (prefers-reduced-motion: reduce) {
