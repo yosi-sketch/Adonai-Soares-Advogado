@@ -1,16 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <defs>
-    <linearGradient id="roseGold" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FCE1DC" />
-      <stop offset="40%" stop-color="#EFA8A1" />
-      <stop offset="70%" stop-color="#D49389" />
-      <stop offset="100%" stop-color="#A65850" />
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF2BF" />
+      <stop offset="25%" stop-color="#F2D078" />
+      <stop offset="55%" stop-color="#D4AF37" />
+      <stop offset="85%" stop-color="#C59B27" />
+      <stop offset="100%" stop-color="#8C6224" />
     </linearGradient>
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1A1215" />
-      <stop offset="100%" stop-color="#0D090A" />
+      <stop offset="0%" stop-color="#191612" />
+      <stop offset="100%" stop-color="#0B0A09" />
     </linearGradient>
   </defs>
-  <rect width="64" height="64" rx="14" fill="url(#bgGrad)" stroke="#D49389" stroke-opacity="0.35" stroke-width="1.5" />
-  <text x="32" y="42" font-family="'Playfair Display', 'Cormorant Garamond', 'Times New Roman', serif" font-size="28" font-weight="700" fill="url(#roseGold)" text-anchor="middle" letter-spacing="-1">LS</text>
+  <rect width="64" height="64" rx="14" fill="url(#bgGrad)" stroke="#D4AF37" stroke-opacity="0.45" stroke-width="1.5" />
+  <text x="32" y="42" font-family="'Cormorant Garamond', 'Playfair Display', 'Cinzel', serif" font-size="27" font-weight="700" fill="url(#goldGrad)" text-anchor="middle" letter-spacing="0.5">ME</text>
 </svg>

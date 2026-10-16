@@ -24,33 +24,33 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#0d090b",
+  themeColor: "#0b0a09",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.leticiasaldanha.adv.br"),
+  metadataBase: new URL("https://www.marianaesteves.adv.br"),
   title:
-    "Dra. Letícia Saldanha · Advocacia Trabalhista & Previdenciária em Cataguases - MG",
+    "Dra. Mariana Esteves · Advogada Previdenciária INSS em Contagem - MG",
   description:
-    "Advocacia especializada, humanizada e combativa em Direito Trabalhista e Previdenciário (INSS, BPC/LOAS, Aposentadorias, Auxílios e Rescisão Indireta). Atendimento presencial no Calçadão Shopping (Cataguases - MG) e online em todo o Brasil. Nota 4,9 ★ no Google com mais de 70 avaliações.",
+    "Advocacia Previdenciária especializada e humanizada em Contagem - MG. Aposentadorias (Idade, Tempo, Especial, Rural), BPC/LOAS, Auxílio-Doença, Pensão por Morte e Planejamento Previdenciário. Dra. Mariana Esteves de Carvalho (OAB/MG 172.375). Nota 4,9 ★ no Google.",
   keywords: [
-    "Letícia Saldanha Advocacia",
-    "Dra Letícia Saldanha",
-    "Advogada em Cataguases",
-    "Advogada Trabalhista Cataguases MG",
-    "Advocacia Previdenciária Cataguases",
-    "Aposentadoria INSS Cataguases",
-    "BPC LOAS Cataguases MG",
-    "Auxílio Doença INSS Cataguases",
-    "Rescisão Indireta do Trabalho",
-    "Calçadão Shopping Cataguases",
-    "Advogado Zona da Mata Mineira",
-    "Consultoria Jurídica Trabalhista MG",
+    "Mariana Esteves Advogada",
+    "Dra Mariana Esteves",
+    "Mariana Esteves de Carvalho",
+    "Advogada Previdenciária Contagem",
+    "Advocacia Previdenciária Contagem MG",
+    "Aposentadoria INSS Contagem",
+    "BPC LOAS Contagem MG",
+    "Auxílio Doença INSS Contagem",
+    "Pensão por Morte Contagem",
+    "Planejamento Previdenciário Contagem",
+    "Advogado INSS Contagem e BH",
+    "OAB MG 172375",
     "Direito Previdenciário Minas Gerais",
   ],
-  authors: [{ name: "Dra. Letícia Saldanha" }],
-  creator: "Letícia Saldanha Advocacia e Consultoria Especializada",
-  publisher: "Letícia Saldanha Advocacia e Consultoria Especializada",
+  authors: [{ name: "Dra. Mariana Esteves de Carvalho" }],
+  creator: "Mariana Esteves Advocacia Previdenciária",
+  publisher: "Mariana Esteves Advocacia Previdenciária",
   formatDetection: {
     telephone: true,
     address: true,
@@ -68,18 +68,18 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.leticiasaldanha.adv.br",
+    url: "https://www.marianaesteves.adv.br",
     title:
-      "Dra. Letícia Saldanha · Advocacia Trabalhista & Previdenciária em Cataguases - MG",
+      "Dra. Mariana Esteves · Advogada Previdenciária INSS em Contagem - MG",
     description:
-      "Atendimento humanizado, combativo e acolhedor para proteger seus direitos no trabalho e garantir seus benefícios no INSS. Nota 4,9 ★ no Google com mais de 70 avaliações.",
-    siteName: "Letícia Saldanha Advocacia",
+      "Atendimento humanizado, combativo e acolhedor para garantir seus benefícios no INSS. Aposentadoria, BPC/LOAS, Auxílio-Doença e Pensão por Morte. Nota 4,9 ★ no Google com mais de 50 avaliações.",
+    siteName: "Mariana Esteves Advocacia Previdenciária",
     images: [
       {
-        url: "/logo-leticia-saldanha.png",
+        url: "/logo.png",
         width: 1024,
-        height: 512,
-        alt: "Letícia Saldanha Advocacia e Consultoria Especializada - Logotipo Oficial",
+        height: 402,
+        alt: "Mariana Esteves Advocacia Previdenciária - Logotipo Oficial",
       },
     ],
   },
@@ -93,39 +93,39 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Letícia Saldanha Advocacia",
-    alternateName: "Letícia Saldanha Advocacia e Consultoria Especializada",
+    name: "Mariana Esteves Advocacia Previdenciária",
+    alternateName: "Mariana Esteves – Advogada Previdenciária INSS (Aposentadoria, Auxílio-Doença, BPC LOAS, Pensão por Morte)",
     founder: [
       {
         "@type": "Person",
-        name: "Dra. Letícia Saldanha",
-        jobTitle: "Advogada Trabalhista e Previdenciarista",
+        name: "Dra. Mariana Esteves de Carvalho",
+        jobTitle: "Advogada Previdenciarista (OAB/MG 172.375)",
       },
     ],
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Praça Rui Barbosa, 170 - Sl 108 - Centro (Calçadão Shopping)",
-      addressLocality: "Cataguases",
+      streetAddress: "R. Maria da Conceição Hilário, 263 - Jardim Vera Cruz",
+      addressLocality: "Contagem",
       addressRegion: "MG",
-      postalCode: "36770-034",
+      postalCode: "32265-300",
       addressCountry: "BR",
     },
-    telephone: "+55-32-98499-7442",
-    url: "https://www.leticiasaldanha.adv.br",
-    image: "https://www.leticiasaldanha.adv.br/logo-leticia-saldanha.png",
+    telephone: "+55-31-98389-2013",
+    url: "https://www.marianaesteves.adv.br",
+    image: "https://www.marianaesteves.adv.br/logo.png",
     priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "4.9",
-      reviewCount: "70",
+      reviewCount: "50",
     },
     areaServed: [
-      "Cataguases",
-      "Leopoldina",
-      "Muriaé",
-      "Ubá",
-      "Juiz de Fora",
-      "Zona da Mata Mineira",
+      "Contagem",
+      "Belo Horizonte",
+      "Betim",
+      "Ibirité",
+      "Ribeirão das Neves",
+      "Região Metropolitana de Belo Horizonte",
       "Minas Gerais",
       "Brasil",
     ],
@@ -139,11 +139,11 @@ export default function RootLayout({
           "Thursday",
           "Friday",
         ],
-        opens: "09:00",
+        opens: "08:00",
         closes: "18:00",
       },
     ],
-    sameAs: ["https://www.instagram.com/leticiasaldanha.adv/"],
+    sameAs: ["https://www.instagram.com/marianaestevesinss/"],
   };
 
   return (
@@ -161,7 +161,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen overflow-x-clip bg-[#0d090b] font-sans text-stone-100 antialiased selection:bg-[#d49389] selection:text-[#0d090b]">
+      <body className="min-h-screen overflow-x-clip bg-[#0b0a09] font-sans text-stone-100 antialiased selection:bg-[#d4af37] selection:text-[#0b0a09]">
         {children}
       </body>
     </html>

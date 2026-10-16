@@ -1,33 +1,33 @@
-# LETÍCIA SALDANHA ADVOCACIA
-## Advocacia Trabalhista & Previdenciária Especializada · Cataguases - MG · Atendimento Online Brasil
+# MARIANA ESTEVES ADVOCACIA PREVIDENCIÁRIA
+## Advocacia Previdenciária Especializada INSS · Contagem - MG · Atendimento Online Brasil
 
 ## Plataforma
 Site institucional e landing page responsiva de altíssimo padrão desenvolvida em Next.js 16 (App Router) e Tailwind CSS v4, projetada para transmitir sofisticação, acolhimento humanizado, combatividade técnica, transparência e rigor jurídico, com navegação fluida, modais interativos para detalhamento de áreas de atuação e integração direta com WhatsApp e Google Maps.
 
 ## Público
-Trabalhadores, empregados, segurados do INSS, idosos, pessoas com deficiência, dependentes e famílias que necessitam de amparo jurídico especializado em Direito do Trabalho (rescisão indireta, horas extras, acidentes de trabalho, assédio, equiparação) e Direito Previdenciário (aposentadorias, BPC/LOAS, pensão por morte, auxílio por incapacidade/doença) em Cataguases, Zona da Mata Mineira e em todo o território nacional.
+Segurados do INSS, trabalhadores urbanos e rurais, idosos, pessoas com deficiência, dependentes, gestantes e famílias que necessitam de amparo jurídico especializado em Direito Previdenciário (Aposentadorias por Idade, Tempo de Contribuição, Especial e Rural, BPC/LOAS, pensão por morte, auxílio-doença por incapacidade, salário-maternidade e revisões de benefícios) em Contagem, Região Metropolitana de Belo Horizonte e em todo o território nacional.
 
 ## Objetivo
-Apresentar a advocacia de excelência liderada pela Dra. Letícia Saldanha, sediada na Praça Rui Barbosa, 170 - Sl 108 - Centro, Cataguases - MG (Calçadão Shopping), evidenciando a expressiva nota de 4,9 estrelas com mais de 70 avaliações autênticas no Google Meu Negócio, e viabilizando o contato direto e humanizado via WhatsApp.
+Apresentar a advocacia de excelência liderada pela Dra. Mariana Esteves de Carvalho (OAB/MG 172.375), sediada na R. Maria da Conceição Hilário, 263 - Jardim Vera Cruz, Contagem - MG, evidenciando a expressiva nota de 4,9 estrelas com mais de 50 avaliações autênticas no Google Meu Negócio, e viabilizando o contato direto e humanizado via WhatsApp.
 
 ## Identidade Visual
-- Marca: Letícia Saldanha Advocacia / Dra. Letícia Saldanha · Advocacia e Consultoria Especializada
-- Logotipo: Monograma "LS" entrelaçado e tipografia clássica esculpidos em ouro rosé metálico (`public/logo-trimmed.png`, `public/logo-leticia-saldanha.png`, `public/monogram.png`).
+- Marca: Mariana Esteves Advocacia Previdenciária / Dra. Mariana Esteves de Carvalho (OAB/MG 172.375)
+- Logotipo: Monograma "ME" geométrico com facetas douradas e tipografia romana clássica em ouro nobre metálico (`public/logo.png`, `public/monogram.png`, `public/favicon.svg`).
 - Paleta extraída diretamente do novo logo oficial:
-  - Ouro Rosé Metálico Primário (`#D49389`, `#E8AEA6`, `#F2CCC5`, `#C47D73`)
-  - Marfim Rosé / Champanhe Suave (`#FDF5F3`, `#FAEAE6`, `#FAF5F3`)
-  - Terracota & Sombra Rosé Profunda (`#914F46`, `#6B3730`, `#4A221D`)
-  - Plum Obsidian / Veludo Noturno de Alta Autoridade (`#0D090B`, `#140E11`, `#1A1217`, `#22161C`)
-  - Vinho Marsala Nobre (`#521822`, `#7B2938`, `#340C14`)
-- Tipografia: Playfair Display e Cormorant Garamond nos títulos (harmonia com a sofisticação e elegância do logotipo) e Plus Jakarta Sans para leitura clara, moderna e acolhedora no corpo de texto.
-- Tom de voz: Empático, humanizado, ético, combativo, transparente e acolhedor.
+  - Ouro Nobre Metálico Primário (`#D4AF37`, `#F2D078`, `#FAEAC2`, `#C59B27`)
+  - Ouro Champanhe / Iluminação (`#FFF9E6`, `#FBF3D5`, `#FFF8E7`)
+  - Bronze Esculpido & Sombra Dourada Profunda (`#8C6224`, `#6D4914`, `#4A300A`)
+  - Velvet Obsidian / Ônix Noturno de Alta Autoridade (`#0B0A09`, `#12100D`, `#191612`, `#221E18`)
+  - Marfim Dourado Nobre para contraste claro (`#FAF8F4`, `#F5EFEB`, `#E6DCCE`)
+- Tipografia: Cormorant Garamond e Playfair Display nos títulos (harmonia com a sofisticação e elegância do monograma ME) e Plus Jakarta Sans para leitura clara, moderna e acolhedora no corpo de texto.
+- Tom de voz: Empático, humanizado, ético, combativo, transparente e resolutivo.
 
 ## Conteúdo e Mídia
-- Logotipo oficial em alta definição (`public/logo-trimmed.png`, `public/logo-leticia-saldanha.png`, `public/monogram.png`).
-- Foto hero: Dra. Letícia Saldanha em retrato elegante (`public/leticia-elegante.png`).
-- Foto sobre: Apresentação institucional "Prazer, Letícia!" (`public/leticia-apresentacao.png`).
-- Endereço físico: Praça Rui Barbosa, 170 - Sl 108 - Centro, Cataguases - MG, 36770-034 (Calçadão Shopping).
-- Telefone / WhatsApp: (32) 98499-7442.
-- Redes Sociais: Instagram @leticiasaldanha.adv (https://www.instagram.com/leticiasaldanha.adv/).
-- Horário de funcionamento: Segunda a Sexta das 09:00 às 18:00 (atendimento presencial e online).
-- Prova social: 4,9 estrelas com mais de 70 avaliações no Google Meu Negócio.
+- Logotipo oficial em alta definição (`public/logo.png`, `public/logo-trimmed.png`, `public/monogram.png`).
+- Foto hero: Dra. Mariana Esteves em retrato elegante com blazer preto e acessórios dourados (`public/mariana-elegante.png`).
+- Foto sobre: Apresentação institucional "Prazer, Mariana!" com blazer branco e credencial oficial OAB/MG 172.375 (`public/mariana-apresentacao.png`).
+- Endereço físico: R. Maria da Conceição Hilário, 263 - Jardim Vera Cruz, Contagem - MG, 32265-300.
+- Telefone / WhatsApp: (31) 98389-2013.
+- Redes Sociais: Instagram @marianaestevesinss (https://www.instagram.com/marianaestevesinss/).
+- Horário de funcionamento: Segunda a Sexta das 08:00 às 18:00 (atendimento presencial e online).
+- Prova social: 4,9 estrelas com mais de 50 avaliações autênticas no Google Meu Negócio.

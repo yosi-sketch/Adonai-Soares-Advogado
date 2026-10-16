@@ -1,23 +1,14 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Image from "next/image";
-import { useEffect, useState, type ReactNode } from "react";
+import { AnimatePresence, motion, type Variants, MotionConfig } from "framer-motion";
 import {
-  AnimatePresence,
-  MotionConfig,
-  motion,
-  type Variants,
-} from "framer-motion";
-import {
-  AlertCircle,
   ArrowRight,
   ArrowUpRight,
   Award,
   CheckCircle2,
   Clock,
-  FileCheck,
-  FileSearch,
-  FileText,
   HandHeart,
   HeartHandshake,
   Landmark,
@@ -34,28 +25,28 @@ import {
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
 
-const WHATSAPP_NUMBER = "5532984997442";
-const PHONE_DISPLAY = "(32) 98499-7442";
-const EMAIL_CONTACT = "contato@leticiasaldanha.adv.br";
-const INSTAGRAM_URL = "https://www.instagram.com/leticiasaldanha.adv/";
-const INSTAGRAM_HANDLE = "@leticiasaldanha.adv";
+const WHATSAPP_NUMBER = "5531983892013";
+const PHONE_DISPLAY = "(31) 98389-2013";
+const EMAIL_CONTACT = "contato@marianaesteves.adv.br";
+const INSTAGRAM_URL = "https://www.instagram.com/marianaestevesinss/";
+const INSTAGRAM_HANDLE = "@marianaestevesinss";
 
 const ADDRESS_TEXT =
-  "Praça Rui Barbosa, 170 - Sl 108 - Centro, Cataguases - MG, 36770-034 (Calçadão Shopping)";
+  "R. Maria da Conceição Hilário, 263 - Jardim Vera Cruz, Contagem - MG, 32265-300";
 const GOOGLE_MAPS_URL =
-  "https://www.google.com/maps/search/?api=1&query=Let%C3%ADcia+Saldanha+Advocacia+Pra%C3%A7a+Rui+Barbosa+170+Cataguases+MG";
+  "https://www.google.com/maps/search/?api=1&query=Mariana+Esteves+Advogada+Previdenci%C3%A1ria+Contagem+MG";
 
-const LOGO_SRC = "/logo-trimmed.png";
-const LOGO_FULL_SRC = "/logo-leticia-saldanha.png";
-const FOTO_HERO_SRC = "/leticia-elegante.png";
-const FOTO_SOBRE_SRC = "/leticia-apresentacao.png";
+const LOGO_SRC = "/logo.png";
+const LOGO_FULL_SRC = "/logo.png";
+const FOTO_HERO_SRC = "/mariana-elegante.png";
+const FOTO_SOBRE_SRC = "/mariana-apresentacao.png";
 
 function getWhatsAppUrl(
   message?: string,
   number: string = WHATSAPP_NUMBER
 ) {
   const defaultText =
-    "Olá, Dra. Letícia Saldanha! Gostaria de consultar sobre meus direitos trabalhistas / previdenciários e agendar um atendimento.";
+    "Olá, Dra. Mariana Esteves! Gostaria de consultar sobre meus direitos no INSS (Aposentadoria / Auxílio / BPC LOAS / Pensão) e agendar um atendimento.";
   return `https://wa.me/${number}?text=${encodeURIComponent(
     message || defaultText
   )}`;
@@ -143,7 +134,7 @@ const reveal: Variants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.65, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] },
   },
 };
 
@@ -168,21 +159,21 @@ const practiceAreas: PracticeArea[] = [
     id: "aposentadorias-planejamento-inss",
     title: "Aposentadorias do INSS & Planejamento Previdenciário",
     icon: Landmark,
-    tag: "Aposentadorias · Regras de Transição · CNIS · Planejamento",
+    tag: "Idade · Tempo · Especial · Rural · Transição",
     summary:
       "Planejamento previdenciário estratégico e requerimento de aposentadorias para garantir o valor máximo do seu benefício, sem perda de tempo ou dinheiro com o INSS.",
     details:
-      "A aposentadoria é a conquista de uma vida inteira de trabalho. Com as constantes mudanças legislativas e regras de transição complexas, muitos segurados se aposentam precocemente com valores reduzidos ou enfrentam demoras indevidas. A Dra. Letícia Saldanha realiza um estudo minucioso de cada vínculo no CNIS, averba períodos rurais e especiais, e conduz seu processo administrativo e judicial com precisão.",
+      "A aposentadoria é a recompensa de uma vida inteira de trabalho. Com as complexas regras de transição da Reforma e exigências do INSS, muitos segurados se aposentam com valores muito inferiores ao que têm direito ou enfrentam demoras indevidas. A Dra. Mariana Esteves realiza um estudo aprofundado do seu CNIS, computa períodos rurais e especiais, e conduz seu processo administrativo ou judicial com total segurança e agilidade.",
     topics: [
       "Aposentadoria por Idade Urbana e Rural com cômputo de períodos campesinos",
       "Aposentadoria por Tempo de Contribuição e cálculo da Regra de Transição mais vantajosa",
       "Aposentadoria Especial para trabalhadores expostos a agentes nocivos e insalubridade",
-      "Aposentadoria da Pessoa com Deficiência (PCD) com requisitos diferenciados",
-      "Planejamento Previdenciário Preventivo para projetar o momento e valor ideal",
+      "Aposentadoria da Pessoa com Deficiência (PCD) com requisitos de idade e tempo reduzidos",
+      "Planejamento Previdenciário Preventivo para projetar o momento e valor exato da aposentadoria",
       "Acerto de vínculos, pendências e indicadores extemporâneos no CNIS",
     ],
     whatsAppText:
-      "Olá, Dra. Letícia! Gostaria de consultar sobre Aposentadoria / Planejamento Previdenciário no INSS.",
+      "Olá, Dra. Mariana! Gostaria de uma análise para minha Aposentadoria / Planejamento Previdenciário no INSS.",
   },
   {
     id: "bpc-loas-beneficio-assistencial",
@@ -190,9 +181,9 @@ const practiceAreas: PracticeArea[] = [
     icon: HeartHandshake,
     tag: "BPC Idoso · BPC Deficiência · TEA · Reversão de Negativas",
     summary:
-      "Concessão ágil do benefício assistencial de 1 salário mínimo mensal para idosos com 65+ anos ou pessoas com deficiência e baixa renda, mesmo sem histórico de contribuição.",
+      "Concessão ágil do benefício assistencial de 1 salário mínimo mensal para idosos com 65+ anos ou pessoas com deficiência e baixa renda, mesmo sem histórico de contribuição ao INSS.",
     details:
-      "O Benefício de Prestação Continuada (BPC/LOAS) é uma garantia de dignidade e sobrevivência. Frequentemente o INSS indefere pedidos alegando que a renda familiar per capita ultrapassa o teto legal ou que a deficiência não atende aos critérios. Atuamos de forma combativa para comprovar despesas essenciais com remédios, fraldas e tratamentos, revertendo a negativa na via administrativa ou judicial.",
+      "O Benefício de Prestação Continuada (BPC/LOAS) é uma garantia de dignidade e sobrevivência. Frequentemente o INSS indefere pedidos alegando que a renda familiar per capita ultrapassa o teto legal ou que a deficiência não atende aos critérios. Atuamos de forma combativa para comprovar despesas essenciais com remédios, fraldas, terapias e tratamentos, revertendo a negativa na via administrativa ou judicial.",
     topics: [
       "BPC/LOAS para idosos a partir de 65 anos em situação de vulnerabilidade",
       "BPC/LOAS para pessoas com deficiência física, mental, intelectual ou sensorial",
@@ -202,170 +193,186 @@ const practiceAreas: PracticeArea[] = [
       "Recebimento de valores retroativos acumulados desde a data do primeiro pedido",
     ],
     whatsAppText:
-      "Olá, Dra. Letícia! Gostaria de uma análise para solicitar o benefício do BPC/LOAS.",
+      "Olá, Dra. Mariana! Gostaria de uma análise para solicitar o benefício do BPC/LOAS.",
   },
   {
-    id: "auxilio-doenca-invalidez-pensao",
-    title: "Auxílio por Incapacidade, Invalidez & Pensão por Morte",
+    id: "auxilio-doenca-invalidez-acidente",
+    title: "Auxílio por Incapacidade, Invalidez & Auxílio-Acidente",
     icon: ShieldCheck,
-    tag: "Auxílio-Doença · Invalidez · Pensão por Morte · Auxílio-Acidente",
+    tag: "Auxílio-Doença · Invalidez · Adicional 25% · Perícia Médica",
     summary:
-      "Amparo imediato para quem adoeceu, sofreu acidente ou perdeu o provedor da família, com assistência técnica para perícias médicas e liberação de benefícios negados.",
+      "Amparo imediato para quem adoeceu ou sofreu acidente e está incapaz de trabalhar, com assistência técnica para perícias médicas e liberação de benefícios negados pelo INSS.",
     details:
-      "Quando a saúde é abalada, a burocracia do INSS não pode ser um obstáculo. Diante de perícias médicas sumárias e negativas injustas, a Dra. Letícia Saldanha reúne a documentação clínica necessária, elabora quesitos periciais assertivos e recorre judicialmente com rapidez para restabelecer o sustento do trabalhador e de seus dependentes.",
+      "Quando a saúde é abalada, a burocracia do INSS não pode ser um obstáculo. Diante de perícias médicas sumárias e negativas injustas, a Dra. Mariana Esteves reúne a documentação clínica necessária, elabora quesitos periciais assertivos e recorre judicialmente com rapidez para restabelecer o sustento do trabalhador e de seus dependentes.",
     topics: [
       "Auxílio por Incapacidade Temporária (Auxílio-Doença comum ou acidentário)",
       "Aposentadoria por Incapacidade Permanente (Invalidez) com acréscimo de 25% para cuidador",
       "Auxílio-Acidente mensal indenizatório para quem ficou com sequela redutora",
-      "Pensão por Morte para cônjuges, companheiros em união estável, filhos e dependentes",
-      "Mandado de Segurança contra demora abusiva do INSS na análise de pedidos",
-      "Revisões de benefícios para aumento do valor mensal e cobrança de diferenças",
+      "Reativação de benefícios indevidamente cessados no 'Pente-Fino' do INSS",
+      "Mandado de Segurança contra demora abusiva do INSS na análise de perícias",
+      "Assistência e quesitos técnicos detalhados para perícia médica judicial",
     ],
     whatsAppText:
-      "Olá, Dra. Letícia! Preciso de ajuda jurídica para Auxílio-Doença / Invalidez / Pensão por Morte no INSS.",
+      "Olá, Dra. Mariana! Preciso de ajuda jurídica para Auxílio-Doença / Invalidez / Perícia no INSS.",
   },
   {
-    id: "rescisao-indireta-direitos-trabalhistas",
-    title: "Rescisão Indireta & Demissão por Falta do Empregador",
-    icon: FileText,
-    tag: "Rescisão Indireta · FGTS Atrasado · Salários · Demissão Justa",
+    id: "pensao-por-morte-dependentes",
+    title: "Pensão por Morte & Direitos dos Dependentes",
+    icon: Users,
+    tag: "Cônjuge · Companheiro(a) · União Estável · Filhos Menores",
     summary:
-      "Liberte-se de condições contratuais abusivas e 'demita a empresa' com direito a todas as verbas rescisórias integrais, multa de 40% do FGTS e seguro-desemprego.",
+      "Segurança e proteção financeira para a família após a perda do segurado, com comprovação sólida de dependência econômica e união estável perante o INSS.",
     details:
-      "Trabalhar sem receber FGTS, enfrentar atrasos salariais constantes ou suportar descumprimento de obrigações contratuais são faltas graves do empregador previstas no art. 483 da CLT. Através da ação de Rescisão Indireta, o trabalhador encerra o vínculo sem pedir demissão, assegurando o saque imediato do FGTS acumulado, aviso prévio indenizado e seguro-desemprego.",
+      "Em momentos delicados de perda, enfrentar a burocracia do INSS para ter acesso à pensão por morte é um desafio doloroso. Atuamos com extrema sensibilidade, celeridade e rigor técnico para comprovar a qualidade de segurado do falecido, a união estável (mesmo sem certidão formal) e garantir o pagamento tempestivo de todos os retroativos aos dependentes.",
     topics: [
-      "Falta de recolhimento de FGTS ou atraso reiterado de salários e benefícios",
-      "Descumprimento grave das cláusulas contratuais pelo empregador",
-      "Liberação imediata das guias de saque do FGTS com multa de 40%",
-      "Habilitação no seguro-desemprego e recebimento de aviso prévio indenizado",
-      "Reversão de demissão por justa causa infundada aplicada pelo empregador",
-      "Cobrança de saldo de salário, 13º proporcional e férias vencidas com 1/3",
+      "Pensão por Morte para cônjuge, companheiro(a) em união estável e filhos dependentes",
+      "Comprovação de união estável por meio de documentos, contas conjuntas e prova testemunhal",
+      "Pensão por morte decorrente de segurado rural ou trabalhador em período de graça",
+      "Pensão vitalícia ou temporária calculada pela faixa etária do beneficiário",
+      "Defesa e restabelecimento de pensões por morte indevidamente canceladas",
+      "Cobrança de todas as parcelas retroativas desde a data do óbito ou do requerimento",
     ],
     whatsAppText:
-      "Olá, Dra. Letícia! Gostaria de consultar sobre Rescisão Indireta / Direitos Trabalhistas.",
+      "Olá, Dra. Mariana! Gostaria de consultar sobre o pedido de Pensão por Morte no INSS.",
   },
   {
-    id: "acidentes-doencas-ocupacionais",
-    title: "Acidentes de Trabalho, Doenças Ocupacionais & Estabilidade",
-    icon: AlertCircle,
-    tag: "Acidente de Trabalho · Burnout · LER/DORT · Estabilidade 12 Meses",
-    summary:
-      "Defesa incisiva para trabalhadores lesionados, adoecidos pelo trabalho ou demitidos irregularmente durante o período de estabilidade legal provisória.",
-    details:
-      "Seja por acidente nas dependências da empresa, no trajeto ou pelo desenvolvimento de doenças como Burnout, depressão e lesões por esforços repetitivos (LER/DORT), o trabalhador tem direitos específicos resguardados pela CLT e pela Previdência. Garantimos a emissão da CAT, reintegração ao emprego ou indenização substitutiva e reparação por danos morais e materiais.",
-    topics: [
-      "Exigência e emissão da Comunicação de Acidente de Trabalho (CAT)",
-      "Garantia da estabilidade provisória no emprego de no mínimo 12 meses",
-      "Indenização por Danos Morais, Danos Materiais e Danos Estéticos",
-      "Pensão mensal proporcional em caso de redução permanente da capacidade laboral",
-      "Doenças psicológicas ocupacionais decorrentes de sobrecarga e pressão (Burnout)",
-      "Reintegração ao trabalho ou indenização do período de estabilidade violado",
-    ],
-    whatsAppText:
-      "Olá, Dra. Letícia! Preciso de orientação para caso de Acidente de Trabalho / Doença Ocupacional.",
-  },
-  {
-    id: "horas-extras-insalubridade-assedio",
-    title: "Horas Extras, Insalubridade, Periculosidade & Assédio",
+    id: "revisoes-beneficios-atrasados",
+    title: "Revisões de Benefícios & Cobrança de Atrasados",
     icon: Scale,
-    tag: "Horas Extras · Adicionais 10% a 40% · Assédio Moral · Equiparação",
+    tag: "Revisão da Vida Toda · Erro de Cálculo · Atrasados dos Últimos 5 Anos",
     summary:
-      "Remuneração justa para cada hora dedicada ao trabalho, cobrança de adicionais de risco à saúde e combate severo a situações de humilhação ou perseguição.",
+      "Cálculo detalhado para verificar se você recebe o valor correto do INSS e cobrança judicial de todas as diferenças financeiras não pagas pela Previdência.",
     details:
-      "Muitos trabalhadores realizam jornadas exaustivas sem o devido pagamento de horas extras ou cumprem funções expostos a agentes nocivos, químicos ou risco de vida sem receber insalubridade ou periculosidade. Além disso, coibimos qualquer forma de assédio moral, cobranças vexatórias e desvio de função, resguardando a sua dignidade profissional.",
+      "Muitos segurados recebem menos do que a lei garante por falhas de enquadramento do INSS, descarte indevido de salários altos, falta de cômputo de períodos especiais ou salários concomitantes. Realizamos um diagnóstico completo do processo de concessão do seu benefício para pleitear o aumento do valor mensal e o recebimento das diferenças atrasadas devidas nos últimos 5 anos.",
     topics: [
-      "Cálculo detalhado de horas extras, intervalo intrajornada suprimido e sobreaviso",
-      "Adicional de Insalubridade (10%, 20% ou 40%) por exposição a calor, ruído ou agentes biológicos",
-      "Adicional de Periculosidade (30%) para funções com risco à integridade física e eletricidade",
-      "Equiparação Salarial e Desvio de Função com reflexos em todas as verbas",
-      "Indenização reparatória por Assédio Moral, perseguição ou humilhação no ambiente de trabalho",
-      "Consultoria preventiva trabalhista e conformidade legal para empresas",
+      "Revisão para cômputo de períodos insalubres ou tempo rural não reconhecidos",
+      "Revisão de atividades concomitantes para quem contribuiu em mais de um emprego",
+      "Revisão do teto constitucional e expurgo de erros nos índices de correção",
+      "Mandado de Segurança contra fila e demora abusiva de decisões no INSS",
+      "Cobrança de diferenças acumuladas (atrasados) dos últimos 5 anos com juros",
+      "Reanálise de benefícios concedidos com regras anteriores ou transitórias",
     ],
     whatsAppText:
-      "Olá, Dra. Letícia! Gostaria de consultar sobre Horas Extras / Insalubridade / Assédio no Trabalho.",
+      "Olá, Dra. Mariana! Gostaria de calcular e verificar se tenho direito a Revisão de Benefício no INSS.",
+  },
+  {
+    id: "salario-maternidade-rural",
+    title: "Salário-Maternidade & Benefícios Rurais",
+    icon: Sparkles,
+    tag: "Maternidade · Desempregadas · Segurada Especial Rural · MEI",
+    summary:
+      "Acolhimento e orientação para gestantes, mães adotantes, desempregadas em período de graça, autônomas e trabalhadoras rurais que necessitam do benefício.",
+    details:
+      "O salário-maternidade é um direito fundamental assegurado não somente para celetistas, mas também para mulheres desempregadas que ainda mantêm a qualidade de segurada, Microempreendedoras Individuais (MEI), contribuintes individuais e produtoras da agricultura familiar. Conduzimos a instrução de provas com assertividade para garantir o recebimento de até 4 meses de benefício sem contratempos.",
+    topics: [
+      "Salário-Maternidade para trabalhadoras desempregadas no período de graça do INSS",
+      "Salário-Maternidade para MEIs, autônomas e contribuintes facultativas",
+      "Salário-Maternidade Rural para agricultoras familiares e seguradas especiais",
+      "Benefício em casos de adoção, guarda judicial para fins de adoção e parto prematuro",
+      "Averbação e reconhecimento de tempo rural para antecipação de aposentadoria",
+      "Regularização de carência e histórico de contribuições perante o INSS",
+    ],
+    whatsAppText:
+      "Olá, Dra. Mariana! Gostaria de consultar sobre Salário-Maternidade ou Benefício Rural no INSS.",
   },
 ];
 
 const clientReviews = [
   {
-    name: "Raul Guedes TV",
+    name: "Natália Vieira",
+    reviewsCount: "Cliente Verificada · 6 avaliações · 1 foto",
+    date: "Google Meu Negócio · 8 meses atrás",
+    badge: "atendimento humanizado",
+    content:
+      "A Dra. Mariana é extremamente competente, atenciosa e possui um atendimento verdadeiramente humanizado. Sempre foi muito honesta, demonstra total domínio do assunto e dá retorno rápido mantendo o cliente ciente de todas as etapas.",
+  },
+  {
+    name: "Henrique Vieira",
+    reviewsCount: "Cliente Verificado · 5 avaliações",
+    date: "Google Meu Negócio · 4 meses atrás",
+    badge: "menos de 3 meses",
+    content:
+      "Meu pai aposentou em menos de 3 meses com ela sem pagar INSS, muito boa essa profissional, super indico sempre!",
+  },
+  {
+    name: "Luciana Simões",
+    reviewsCount: "Cliente Verificada · 3 avaliações",
+    date: "Google Meu Negócio · 4 meses atrás",
+    badge: "super competente",
+    content:
+      "Precisei auxiliar a minha mãe para dar entrada na sua aposentadoria por idade e encontrei a Mariana, que logo me auxiliou com atenção e rapidez em todos os detalhes, uma advogada super competente. Recomendo muito o trabalho dela.",
+  },
+  {
+    name: "aguilar rey",
+    reviewsCount: "Cliente Verificado · 5 avaliações",
+    date: "Google Meu Negócio · 7 meses atrás",
+    badge: "pensão por morte",
+    content:
+      "Doutora Mariana Esteves, foi de extrema excelência com relação ao pedido de pensão por morte da minha mãe. Ressalto que foi muito atenciosa conosco. Se você tem um idoso na sua família precisando resolver algo com o INSS, ela é a pessoa certa.",
+  },
+  {
+    name: "Charles sergio soares Sergio",
+    reviewsCount: "Local Guide · 19 avaliações · 2 fotos",
+    date: "Google Meu Negócio · Recente",
+    badge: "atendimento nota 1000",
+    content:
+      "Recomendo demais, atendimento nota 1000, desde o primeiro contato até a causa sair, super profissional e muito educada.",
+  },
+  {
+    name: "Jose Brandao",
     reviewsCount: "Cliente Verificado · 4 avaliações",
-    date: "Google Meu Negócio · 6 meses atrás",
-    badge: "atendimento impecável",
+    date: "Google Meu Negócio · 1 mês atrás",
+    badge: "excelente advogada",
     content:
-      "Atendimento impecável. A Dra. Letícia é uma profissional muito preparada, ética e que transmite total confiança ao cliente. Com certeza uma das melhores referências na advocacia aqui em Cataguases e região. Parabéns pelo trabalho!",
+      "Uma excelente advogada. Atenciosa, comprometida com o trabalho. Gostei muito do teu atendimento. Muito obrigado!",
   },
   {
-    name: "Leticia Oliveira",
-    reviewsCount: "Cliente Verificada · 4 avaliações",
-    date: "Google Meu Negócio · 2 anos atrás",
-    badge: "acolhimento & segurança",
-    content:
-      "Eu nunca me senti tão bem, tão acolhida por alguém como a Dra Letícia. Sempre ouvia falar dos trabalhos feitos por ela, só quando entreguei o caso nas mãos dela que pude ter a certeza e sentir de onde veio tantos elogios. Super recomendo !!! Parabéns e continue com esse profissionalismo, Cataguases e região precisa.",
-  },
-  {
-    name: "Luciana Castro",
-    reviewsCount: "Cliente Verificada · 1 avaliação",
-    date: "Google Meu Negócio · 3 meses atrás",
-    badge: "muito competente",
-    content:
-      "Letícia, além de ser profissional muito competente e responsável. Tem um carisma, está sempre disposta a ajudar e esclarecer todas as dúvidas.",
-  },
-  {
-    name: "Amanda Moura",
-    reviewsCount: "Cliente Verificada · 4 avaliações · 1 foto",
-    date: "Google Meu Negócio · 4 anos atrás",
-    badge: "resultado surpreendente",
-    content:
-      "Excelente profissional! Conseguiu reverter uma causa que já considerava perdida! Recomendo muito.",
-  },
-  {
-    name: "Guilherme Ferraz Rodrigues",
-    reviewsCount: "Local Guide · 14 avaliações · 1 foto",
-    date: "Google Meu Negócio · 4 anos atrás",
-    badge: "clareza & dedicação",
-    content:
-      "Extremamente atenciosas e explicativas. Passaram tudo do meu processo de forma clara que eu pudesse entender. Eu recomendo.",
-  },
-  {
-    name: "Livia Maria",
-    reviewsCount: "Cliente Verificada · 1 avaliação",
-    date: "Google Meu Negócio · 1 ano atrás",
-    badge: "trabalhista & previdenciária",
-    content:
-      "Excelente profissional nas áreas trabalhista e previdenciária. Certeza que fiz ótima escolha!!!!!!",
-  },
-  {
-    name: "Victor Silva",
+    name: "Cleiton Eduardo",
     reviewsCount: "Cliente Verificado · 2 avaliações",
-    date: "Google Meu Negócio · 1 ano atrás",
-    badge: "ótimo resultado",
+    date: "Google Meu Negócio · 4 meses atrás",
+    badge: "compromisso & dedicação",
     content:
-      "Excelente! Conseguiu tirar todas as minhas dúvidas, e assim conseguimos ter um ótimo resultado. Recomendo muito!! Uma excelente profissional!.",
+      "Excelente profissional! Serviço realizado com qualidade, compromisso e dedicação. Fiquei muito satisfeito com o resultado e recomendo a todos que procuram um trabalho bem feito.",
   },
   {
-    name: "Jussara Helena",
-    reviewsCount: "Cliente Verificada · 2 avaliações · 1 foto",
-    date: "Google Meu Negócio · 6 meses atrás",
-    badge: "atenção maravilhosa",
+    name: "Sandra Mara",
+    reviewsCount: "Cliente Verificada · 3 avaliações",
+    date: "Google Meu Negócio · 3 meses atrás",
+    badge: "resolveu rapidinho",
     content:
-      "Nossa ela é super simpática, carismática e dá uma atenção maravilhosa pra gente. Ameiiii o atendimento com ela, quem procurar ela garanto que não vai se arrepender!",
+      "Ótima profissional, super atenciosa e dedicada, resolveu o caso da minha mãe rapidinho, super indico.",
   },
   {
-    name: "Sergio de Pinho",
-    reviewsCount: "Cliente Verificado · 4 avaliações",
-    date: "Google Meu Negócio · 4 anos atrás",
-    badge: "disposição & técnica",
+    name: "Ursula Fernanda",
+    reviewsCount: "Cliente Verificada · 2 avaliações",
+    date: "Google Meu Negócio · 1 mês atrás",
+    badge: "paciência & segurança",
     content:
-      "Incrível a disposição dessas advogadas na orientação aos seus clientes e na luta pelos interesses dos mesmos. Tudo com a racionalidade profissional e com a disposição que a juventude dá.",
+      "Excelente profissional! Muito competente, atenciosa e comprometida. Sempre esclareceu minhas dúvidas com muita paciência e demonstrou segurança e dedicação em cada etapa.",
   },
   {
-    name: "Elaine Lima do Carmo",
+    name: "Leonardo souza",
+    reviewsCount: "Local Guide · 20 avaliações · 1 foto",
+    date: "Google Meu Negócio · 8 meses atrás",
+    badge: "recomendo 100%",
+    content:
+      "MARIANA é uma excelente profissional, muito dedicada, competente e educada, recomendo 100%.",
+  },
+  {
+    name: "Maria Neto",
     reviewsCount: "Cliente Verificada · 1 avaliação",
-    date: "Google Meu Negócio · 4 anos atrás",
-    badge: "empenho total",
+    date: "Google Meu Negócio · 4 meses atrás",
+    badge: "olhos fechados",
     content:
-      "Advogada muito competente, responsável com o trabalho dela. Faz tudo para resolver da melhor maneira atendendo os clientes na busca da melhor solução. Parabéns pelo empenho Letícia!",
+      "Excelente profissional! Confio e indico de olhos fechados! Mariana é uma advogada atenciosa, dedicada e muito competente!!!!",
+  },
+  {
+    name: "Daniel Elias",
+    reviewsCount: "Cliente Verificado · 2 avaliações · 1 foto",
+    date: "Google Meu Negócio · 5 meses atrás",
+    badge: "aposentadoria resolvida",
+    content:
+      "Ótima advogada. Me ajudou a resolver minha aposentadoria.",
   },
 ];
 
@@ -376,18 +383,18 @@ function Heading({
   light = false,
 }: {
   eyebrow: string;
-  children: ReactNode;
+  children: React.ReactNode;
   description?: string;
   light?: boolean;
 }) {
   return (
-    <div className="max-w-2xl">
-      <p className={light ? "eyebrow-light mb-3" : "eyebrow mb-3"}>{eyebrow}</p>
+    <div>
+      <p className={light ? "eyebrow-light" : "eyebrow"}>{eyebrow}</p>
       <h2
         className={
           light
-            ? "font-serif text-3xl leading-[1.15] tracking-[-0.015em] text-[#191115] sm:text-4xl lg:text-[3.15rem]"
-            : "font-serif text-3xl leading-[1.15] tracking-[-0.015em] text-white sm:text-4xl lg:text-[3.15rem]"
+            ? "mt-4 font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-[#140e07] sm:text-4xl lg:text-[3.25rem]"
+            : "mt-4 font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-white sm:text-4xl lg:text-[3.25rem]"
         }
       >
         {children}
@@ -396,8 +403,8 @@ function Heading({
         <p
           className={
             light
-              ? "mt-4 text-[15px] leading-7 text-[#4a3a40]"
-              : "mt-4 text-[15px] leading-7 text-[#d6c2be]"
+              ? "mt-4 text-[15px] leading-7 text-[#4a3f31]"
+              : "mt-4 text-[15px] leading-7 text-[#dcd4c3]"
           }
         >
           {description}
@@ -426,24 +433,24 @@ export default function Home() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <main className="overflow-hidden bg-[#0d090b] text-[#fdf8f6] selection:bg-[#d49389] selection:text-[#0d090b]">
-        {/* Navigation Bar - Refined Velvet Obsidian with Luminous Metallic Rose Gold Accents */}
-        <header className="sticky top-0 z-40 border-b border-[#d49389]/20 bg-[#0d090b]/95 backdrop-blur-xl">
+      <main className="overflow-hidden bg-[#0b0a09] text-[#fdfbf7] selection:bg-[#d4af37] selection:text-[#0b0a09]">
+        {/* Navigation Bar - Refined Velvet Obsidian with Luminous Metallic Gold Accents */}
+        <header className="sticky top-0 z-40 border-b border-[#d4af37]/20 bg-[#0b0a09]/95 backdrop-blur-xl">
           <div className="mx-auto flex h-[76px] max-w-7xl items-center justify-between gap-5 px-5 sm:h-[84px] sm:px-8 lg:px-12">
             <a
               href="#inicio"
-              aria-label="Letícia Saldanha Advocacia — Início"
+              aria-label="Mariana Esteves Advocacia — Início"
               onClick={closeMenu}
               className="flex items-center gap-3 transition-opacity hover:opacity-90"
             >
               <Image
                 src={LOGO_SRC}
                 width={800}
-                height={483}
-                alt="Letícia Saldanha Advocacia e Consultoria Especializada"
+                height={314}
+                alt="Mariana Esteves Advocacia Previdenciária"
                 priority
                 loading="eager"
-                className="h-[50px] w-auto object-contain sm:h-[58px]"
+                className="h-[46px] w-auto object-contain sm:h-[54px]"
               />
             </a>
 
@@ -455,7 +462,7 @@ export default function Home() {
                 Início
               </a>
               <a className="nav-link" href="#sobre">
-                Prazer, Letícia
+                Prazer, Mariana
               </a>
               <a className="nav-link" href="#atuacao">
                 Áreas de Atuação
@@ -476,16 +483,16 @@ export default function Home() {
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Instagram da Dra. Letícia Saldanha"
-                className="grid size-10 place-items-center rounded-lg border border-[#d49389]/30 bg-[#140e11] text-[#f2d2cb] transition-all hover:border-[#f2d2cb] hover:bg-[#22161c] hover:text-white"
-                title="Instagram @leticiasaldanha.adv"
+                aria-label="Instagram da Dra. Mariana Esteves"
+                className="grid size-10 place-items-center rounded-lg border border-[#d4af37]/30 bg-[#12100d] text-[#faeac2] transition-all hover:border-[#f2d078] hover:bg-[#1f1b15] hover:text-white"
+                title="Instagram @marianaestevesinss"
               >
                 <InstagramIcon size={16} />
               </a>
               <a
                 href={`tel:+${WHATSAPP_NUMBER}`}
-                aria-label="Ligar para Letícia Saldanha Advocacia"
-                className="grid size-10 place-items-center rounded-lg border border-[#d49389]/30 bg-[#140e11] text-[#f2d2cb] transition-all hover:border-[#f2d2cb] hover:bg-[#22161c] hover:text-white"
+                aria-label="Ligar para Mariana Esteves Advocacia"
+                className="grid size-10 place-items-center rounded-lg border border-[#d4af37]/30 bg-[#12100d] text-[#faeac2] transition-all hover:border-[#f2d078] hover:bg-[#1f1b15] hover:text-white"
                 title={`Ligar: ${PHONE_DISPLAY}`}
               >
                 <Phone size={16} />
@@ -494,22 +501,22 @@ export default function Home() {
                 href={getWhatsAppUrl()}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="WhatsApp da Dra. Letícia Saldanha"
-                className="grid size-10 place-items-center rounded-lg border border-[#d49389]/30 bg-[#140e11] text-[#f2d2cb] transition-all hover:border-[#f2d2cb] hover:bg-[#22161c] hover:text-white"
+                aria-label="WhatsApp da Dra. Mariana Esteves"
+                className="grid size-10 place-items-center rounded-lg border border-[#d4af37]/30 bg-[#12100d] text-[#faeac2] transition-all hover:border-[#f2d078] hover:bg-[#1f1b15] hover:text-white"
                 title="Atendimento no WhatsApp"
               >
                 <WhatsAppIcon size={18} />
               </a>
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá, Dra. Letícia! Gostaria de agendar uma consulta sobre meu caso trabalhista / previdenciário."
+                  "Olá, Dra. Mariana Esteves! Gostaria de agendar uma consulta sobre meu benefício no INSS."
                 )}
                 target="_blank"
                 size="sm"
-                variant="rosegold"
+                variant="gold"
                 className="rounded-lg shadow-sm"
               >
-                Consultar Direitos <ArrowUpRight size={14} />
+                Consultar Benefício <ArrowUpRight size={14} />
               </GlowingButton>
             </div>
 
@@ -518,7 +525,7 @@ export default function Home() {
               aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
               aria-expanded={menuOpen}
               aria-controls="mobile-navigation"
-              className="grid size-11 place-items-center rounded-lg border border-[#d49389]/30 bg-[#140e11] text-[#f2d2cb] lg:hidden"
+              className="grid size-11 place-items-center rounded-lg border border-[#d4af37]/30 bg-[#12100d] text-[#faeac2] lg:hidden"
               onClick={() => setMenuOpen((open) => !open)}
             >
               {menuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -534,31 +541,31 @@ export default function Home() {
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.22 }}
-                className="overflow-hidden border-t border-[#d49389]/20 bg-[#0d090b] px-6 lg:hidden"
+                className="overflow-hidden border-t border-[#d4af37]/20 bg-[#0b0a09] px-6 lg:hidden"
               >
                 <div className="mx-auto flex max-w-7xl flex-col gap-1 py-4">
                   {[
                     ["Início", "#inicio"],
-                    ["Prazer, Letícia", "#sobre"],
+                    ["Prazer, Mariana", "#sobre"],
                     ["Áreas de Atuação", "#atuacao"],
                     ["Por Que Escolher", "#diferenciais"],
                     ["Avaliações no Google (4,9 ★)", "#avaliacoes"],
-                    ["Contato & Sede em Cataguases", "#contato"],
+                    ["Contato & Sede em Contagem", "#contato"],
                   ].map(([label, href]) => (
                     <a
                       key={label}
                       href={href}
                       onClick={closeMenu}
-                      className="py-3 text-sm font-medium text-stone-200 hover:text-[#e8aea6]"
+                      className="py-3 text-sm font-medium text-stone-200 hover:text-[#f2d078]"
                     >
                       {label}
                     </a>
                   ))}
                   <div className="mt-3 flex flex-col gap-2">
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#c47d73] via-[#e8aea6] to-[#c47d73] px-5 py-3.5 text-xs font-bold uppercase tracking-[0.13em] text-[#190c10] shadow-md transition-all hover:brightness-105"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#c59b27] via-[#f2d078] to-[#c59b27] px-5 py-3.5 text-xs font-bold uppercase tracking-[0.13em] text-[#140e07] shadow-md transition-all hover:brightness-105"
                       href={getWhatsAppUrl(
-                        "Olá, Dra. Letícia! Gostaria de consultar sobre meus direitos trabalhistas / previdenciários."
+                        "Olá, Dra. Mariana! Gostaria de consultar sobre meus benefícios no INSS."
                       )}
                       target="_blank"
                       rel="noreferrer"
@@ -567,13 +574,13 @@ export default function Home() {
                       <WhatsAppIcon size={16} /> WhatsApp: {PHONE_DISPLAY}
                     </a>
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#d49389]/30 bg-[#140e11] px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-[#f2d2cb] transition-all hover:border-[#f2d2cb]"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#d4af37]/30 bg-[#12100d] px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-[#faeac2] transition-all hover:border-[#f2d078]"
                       href={GOOGLE_MAPS_URL}
                       target="_blank"
                       rel="noreferrer"
                       onClick={closeMenu}
                     >
-                      <MapPin size={15} /> Calçadão Shopping · Cataguases - MG
+                      <MapPin size={15} /> R. Maria da Conceição Hilário, 263 · Contagem - MG
                     </a>
                   </div>
                 </div>
@@ -582,14 +589,14 @@ export default function Home() {
           </AnimatePresence>
         </header>
 
-        {/* Hero Section - High Prestige, Luminous Warm Plum Obsidian Canvas */}
+        {/* Hero Section - High Prestige, Luminous Warm Obsidian Canvas */}
         <section
           id="inicio"
-          className="relative isolate scroll-mt-24 border-b border-[#d49389]/20 bg-gradient-to-b from-[#0d090b] via-[#120c0f] to-[#160e13]"
+          className="relative isolate scroll-mt-24 border-b border-[#d4af37]/20 bg-gradient-to-b from-[#0b0a09] via-[#12100d] to-[#171410]"
         >
-          {/* Subtle rose gold / champagne ambient glow */}
-          <div className="pointer-events-none absolute -right-32 top-8 -z-10 size-[36rem] rounded-full bg-[#d49389]/10 blur-3xl" />
-          <div className="pointer-events-none absolute -left-20 bottom-10 -z-10 size-[28rem] rounded-full bg-[#7b2938]/15 blur-3xl" />
+          {/* Subtle gold ambient glow */}
+          <div className="pointer-events-none absolute -right-32 top-8 -z-10 size-[36rem] rounded-full bg-[#d4af37]/10 blur-3xl" />
+          <div className="pointer-events-none absolute -left-20 bottom-10 -z-10 size-[28rem] rounded-full bg-[#8c6224]/15 blur-3xl" />
 
           <div className="mx-auto grid min-h-[660px] max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 sm:py-20 lg:min-h-[720px] lg:grid-cols-[1.1fr_0.9fr] lg:gap-12 lg:px-12 lg:py-20">
             <motion.div
@@ -600,31 +607,31 @@ export default function Home() {
             >
               <motion.div
                 variants={reveal}
-                className="mb-6 inline-flex items-center gap-2.5 rounded-lg border border-[#d49389]/35 bg-[#170e12] px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-[#f2d2cb] shadow-sm"
+                className="mb-6 inline-flex items-center gap-2.5 rounded-lg border border-[#d4af37]/35 bg-[#171410] px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-[#faeac2] shadow-sm"
               >
-                <span className="size-2 shrink-0 rounded-full bg-[#e8aea6]" />
-                <span>CATAGUASES - MG · ADVOCACIA TRABALHISTA & PREVIDENCIÁRIA</span>
+                <span className="size-2 shrink-0 rounded-full bg-[#f2d078]" />
+                <span>CONTAGEM - MG · ADVOCACIA PREVIDENCIÁRIA INSS</span>
               </motion.div>
 
               <motion.h1
                 variants={reveal}
                 className="max-w-[760px] font-serif text-[2.65rem] leading-[1.08] tracking-[-0.02em] text-white sm:text-5xl lg:text-[3.95rem]"
               >
-                Advocacia Humanizada, Técnica e Firme:{" "}
-                <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#fdf5f3] via-[#f0bcb4] to-[#d49389]">
-                  Defesa Estratégica dos Seus Direitos.
+                Advocacia Previdenciária Estratégica:{" "}
+                <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#fff9e6] via-[#f2d078] to-[#d4af37]">
+                  O Seu Benefício do INSS com Rigor e Agilidade.
                 </span>
               </motion.h1>
 
               <motion.p
                 variants={reveal}
-                className="mt-7 max-w-xl text-[15px] leading-7 text-[#d6c2be] sm:text-base sm:leading-8"
+                className="mt-7 max-w-xl text-[15px] leading-7 text-[#dcd4c3] sm:text-base sm:leading-8"
               >
                 Sob a liderança da{" "}
                 <strong className="font-semibold text-white">
-                  Dra. Letícia Saldanha
+                  Dra. Mariana Esteves de Carvalho (OAB/MG 172.375)
                 </strong>
-                , nosso escritório atua com dedicação incansável, empatia e rigor jurídico em Direito do Trabalho e Direito Previdenciário. Especializado em aposentadorias do INSS, benefícios por incapacidade, BPC/LOAS, rescisão indireta, horas extras e reparação por acidentes de trabalho. Sede no Calçadão Shopping em Cataguases (MG), com atendimento presencial e suporte online para todo o Brasil.
+                , nosso escritório atua com dedicação incansável, transparência e rigor técnico em Direito Previdenciário. Especializado em aposentadorias do INSS, benefícios por incapacidade (auxílio-doença e invalidez), BPC/LOAS para idosos e pessoas com deficiência, pensão por morte e planejamento previdenciário. Sede em Contagem (MG), com atendimento presencial acolhedor e suporte online seguro para todo o Brasil.
               </motion.p>
 
               <motion.div
@@ -633,18 +640,18 @@ export default function Home() {
               >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Letícia Saldanha! Gostaria de uma consultoria sobre meus direitos trabalhistas / previdenciários."
+                    "Olá, Dra. Mariana Esteves! Gostaria de consultar sobre meus direitos no INSS."
                   )}
                   target="_blank"
                   size="lg"
-                  variant="rosegold"
+                  variant="gold"
                   className="rounded-lg shadow-md"
                 >
-                  <WhatsAppIcon size={16} /> Falar no WhatsApp com a Dra. Letícia
+                  <WhatsAppIcon size={16} /> Falar no WhatsApp com a Dra. Mariana
                 </GlowingButton>
                 <a
                   href="#atuacao"
-                  className="group inline-flex items-center gap-2 rounded-lg border border-[#d49389]/30 bg-[#170e12] px-5 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#f2d2cb] transition-all hover:border-[#f2d2cb] hover:bg-[#22161c] hover:text-white"
+                  className="group inline-flex items-center gap-2 rounded-lg border border-[#d4af37]/30 bg-[#171410] px-5 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#faeac2] transition-all hover:border-[#f2d078] hover:bg-[#1f1b15] hover:text-white"
                 >
                   Áreas de Atuação{" "}
                   <ArrowRight
@@ -656,22 +663,22 @@ export default function Home() {
 
               <motion.div
                 variants={reveal}
-                className="mt-12 flex flex-wrap items-center gap-x-7 gap-y-4 border-t border-[#d49389]/20 pt-6 text-xs text-[#d6c2be]"
+                className="mt-12 flex flex-wrap items-center gap-x-7 gap-y-4 border-t border-[#d4af37]/20 pt-6 text-xs text-[#dcd4c3]"
               >
                 <span className="inline-flex items-center gap-2 font-medium">
-                  <Star size={15} className="fill-[#e8aea6] text-[#e8aea6]" />{" "}
-                  4,9 estrelas no Google (mais de 70 avaliações de clientes)
+                  <Star size={15} className="fill-[#f2d078] text-[#f2d078]" />{" "}
+                  4,9 estrelas no Google (mais de 50 avaliações de clientes)
                 </span>
                 <span className="inline-flex items-center gap-2 font-medium">
-                  <MapPin size={15} className="text-[#d49389]" /> Calçadão Shopping, Sl 108 · Cataguases - MG
+                  <MapPin size={15} className="text-[#d4af37]" /> Jardim Vera Cruz · Contagem - MG
                 </span>
                 <span className="inline-flex items-center gap-2 font-medium">
-                  <HandHeart size={15} className="text-[#d49389]" /> Atendimento Humanizado & Direto com a Advogada
+                  <HandHeart size={15} className="text-[#d4af37]" /> Atendimento Humanizado & Direto com a Advogada
                 </span>
               </motion.div>
             </motion.div>
 
-            {/* Hero Visual Presentation - Dra. Letícia Saldanha */}
+            {/* Hero Visual Presentation - Dra. Mariana Esteves */}
             <motion.div
               initial={{ opacity: 0, scale: 0.97, y: 18 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -682,49 +689,49 @@ export default function Home() {
               }}
               className="relative mx-auto w-full max-w-[490px] lg:ml-auto lg:mr-2"
             >
-              <div className="relative aspect-[4/4.8] overflow-hidden rounded-2xl border border-[#d49389]/35 bg-[#140e11] shadow-2xl ring-1 ring-[#d49389]/20">
+              <div className="relative aspect-[4/4.8] overflow-hidden rounded-2xl border border-[#d4af37]/35 bg-[#12100d] shadow-2xl ring-1 ring-[#d4af37]/20">
                 <Image
                   src={FOTO_HERO_SRC}
-                  alt="Dra. Letícia Saldanha — Advogada Trabalhista e Previdenciarista"
+                  alt="Dra. Mariana Esteves de Carvalho — Advogada Previdenciária INSS"
                   fill
                   priority
                   sizes="(max-width: 640px) 90vw, (max-width: 1024px) 70vw, 45vw"
                   className="object-cover object-top"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#0d090b] via-[#0d090b]/80 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#0b0a09] via-[#0b0a09]/80 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-3 text-white sm:bottom-8 sm:left-8 sm:right-8">
                   <div>
                     <p className="font-serif text-2xl font-normal tracking-wide text-white">
-                      Dra. Letícia Saldanha
+                      Dra. Mariana Esteves
                     </p>
-                    <p className="mt-1 text-[10px] uppercase tracking-[0.2em] text-[#e8aea6]">
-                      Advocacia & Consultoria Especializada · OAB/MG
+                    <p className="mt-1 text-[10px] uppercase tracking-[0.2em] text-[#f2d078]">
+                      Advocacia Previdenciária · OAB/MG 172.375
                     </p>
                   </div>
-                  <span className="grid size-11 shrink-0 place-items-center rounded-lg border border-[#d49389]/40 bg-[#0d090b]/85 text-[#f2d2cb] backdrop-blur-sm">
+                  <span className="grid size-11 shrink-0 place-items-center rounded-lg border border-[#d4af37]/40 bg-[#0b0a09]/85 text-[#faeac2] backdrop-blur-sm">
                     <Scale size={18} />
                   </span>
                 </div>
               </div>
 
               {/* Floating authority badge */}
-              <div className="absolute -left-3 top-6 z-10 rounded-lg border border-[#d49389]/40 bg-[#140e11]/95 px-4 py-2 text-[10px] font-bold tracking-[0.14em] text-[#f2d2cb] shadow-card backdrop-blur-md sm:-left-5">
-                CATAGUASES · MINAS GERAIS · BRASIL
+              <div className="absolute -left-3 top-6 z-10 rounded-lg border border-[#d4af37]/40 bg-[#12100d]/95 px-4 py-2 text-[10px] font-bold tracking-[0.14em] text-[#faeac2] shadow-card backdrop-blur-md sm:-left-5">
+                CONTAGEM · MINAS GERAIS · BRASIL
               </div>
 
               {/* Floating Google rating badge */}
-              <div className="absolute -bottom-5 -right-3 z-10 rounded-xl border border-[#d49389]/35 bg-[#140e11]/95 p-3.5 shadow-card backdrop-blur-md sm:-right-5">
+              <div className="absolute -bottom-5 -right-3 z-10 rounded-xl border border-[#d4af37]/35 bg-[#12100d]/95 p-3.5 shadow-card backdrop-blur-md sm:-right-5">
                 <div className="flex items-center gap-2">
                   <GoogleIcon size={16} />
                   <div className="flex items-center gap-1">
-                    <Star size={13} className="fill-[#e8aea6] text-[#e8aea6]" />
+                    <Star size={13} className="fill-[#f2d078] text-[#f2d078]" />
                     <span className="font-serif text-base font-bold text-white">
                       4,9 / 5,0
                     </span>
                   </div>
                 </div>
-                <p className="mt-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#d6c2be]">
-                  70+ Avaliações no Google
+                <p className="mt-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#dcd4c3]">
+                  50+ Avaliações no Google
                 </p>
               </div>
             </motion.div>
@@ -734,21 +741,21 @@ export default function Home() {
         {/* Highlights Banner - Authority Metrics */}
         <section
           aria-label="Credenciais e Destaques"
-          className="border-b border-[#d49389]/20 bg-[#120b0e]"
+          className="border-b border-[#d4af37]/20 bg-[#100d0b]"
         >
           <div className="mx-auto grid max-w-7xl gap-7 px-5 py-8 sm:grid-cols-4 sm:gap-4 sm:px-8 lg:px-12">
             {[
               [
                 "4,9 ★",
-                "avaliação de excelência com mais de 70 depoimentos reais e verificados no Google",
+                "avaliação de excelência com mais de 50 depoimentos reais e verificados no Google",
               ],
               [
-                "Trabalhista & INSS",
-                "atuação focada em aposentadorias, BPC/LOAS, auxílios e rescisões contratuais",
+                "Especialista INSS",
+                "atuação focada em aposentadorias, BPC/LOAS, auxílio-doença e pensão por morte",
               ],
               [
-                "Cataguases - MG",
-                "sede no Calçadão Shopping (Sl 108) com atendimento presencial e online em todo o país",
+                "Contagem - MG",
+                "sede no Jardim Vera Cruz com atendimento presencial e online em todo o Brasil",
               ],
               [
                 "100% Humanizado",
@@ -759,14 +766,14 @@ export default function Home() {
                 key={label}
                 className={
                   index > 0
-                    ? "flex items-center gap-4 sm:justify-center sm:border-l sm:border-[#d49389]/20"
+                    ? "flex items-center gap-4 sm:justify-center sm:border-l sm:border-[#d4af37]/20"
                     : "flex items-center gap-4 sm:justify-center"
                 }
               >
-                <span className="font-serif text-2xl font-semibold text-[#e8aea6] sm:text-3xl">
+                <span className="font-serif text-2xl font-semibold text-[#f2d078] sm:text-3xl">
                   {value}
                 </span>
-                <span className="max-w-[165px] text-[11px] leading-5 text-[#d6c2be]">
+                <span className="max-w-[165px] text-[11px] leading-5 text-[#dcd4c3]">
                   {label}
                 </span>
               </div>
@@ -774,13 +781,13 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Sobre a Dra. Letícia Saldanha - "Prazer, Letícia!" - Modo Claro Alabastro Rosé Nobre */}
+        {/* Sobre a Dra. Mariana Esteves - "Prazer, Mariana!" - Modo Claro Ouro Marfim Nobre */}
         <section
           id="sobre"
-          className="scroll-mt-24 border-y border-[#d49389]/30 bg-[#faf5f3] py-20 text-[#1a1115] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-y border-[#d4af37]/30 bg-[#faf8f4] py-20 text-[#19140e] sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20 lg:px-12">
-            {/* Dra. Letícia presentation portrait */}
+            {/* Dra. Mariana presentation portrait */}
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -788,37 +795,37 @@ export default function Home() {
               variants={reveal}
               className="relative mx-auto w-full max-w-[480px]"
             >
-              <div className="relative aspect-[3/3.8] overflow-hidden rounded-2xl border-2 border-[#3b1c24] bg-[#140e11] shadow-2xl">
+              <div className="relative aspect-[3/3.8] overflow-hidden rounded-2xl border-2 border-[#4a3410] bg-[#12100d] shadow-2xl">
                 <Image
                   src={FOTO_SOBRE_SRC}
-                  alt="Dra. Letícia Saldanha — Advogada Previdenciarista e Trabalhista"
+                  alt="Dra. Mariana Esteves de Carvalho — Advogada Previdenciária OAB/MG 172.375"
                   fill
                   sizes="(max-width: 1024px) 90vw, 45vw"
                   className="object-cover object-top"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#0d090b]/90 via-[#0d090b]/30 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#0b0a09]/90 via-[#0b0a09]/30 to-transparent" />
               </div>
 
               {/* Authority badge card - Deep Obsidian Contrast on Light Surface */}
-              <div className="absolute -bottom-6 right-3 max-w-[340px] rounded-xl border border-[#d49389]/40 bg-[#140e11] px-5 py-4 shadow-xl sm:-right-6 sm:px-6">
-                <div className="flex items-center gap-2 text-[#e8aea6]">
+              <div className="absolute -bottom-6 right-3 max-w-[340px] rounded-xl border border-[#d4af37]/40 bg-[#12100d] px-5 py-4 shadow-xl sm:-right-6 sm:px-6">
+                <div className="flex items-center gap-2 text-[#f2d078]">
                   <Award size={16} />
-                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#e8aea6]">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#f2d078]">
                     Advocacia Especializada & Humanizada
                   </p>
                 </div>
                 <p className="mt-1 font-serif text-lg leading-snug text-white">
-                  Dra. Letícia Saldanha
+                  Dra. Mariana Esteves de Carvalho
                 </p>
-                <p className="mt-0.5 text-[11px] font-medium text-[#d49389]">
-                  Letícia Saldanha Advocacia
+                <p className="mt-0.5 text-[11px] font-medium text-[#d4af37]">
+                  OAB/MG 172.375 · Advogada Previdenciária
                 </p>
-                <p className="mt-1 text-[11px] leading-4 text-[#d6c2be]">
-                  Praça Rui Barbosa, 170 - Sl 108 (Calçadão Shopping) · Cataguases - MG
+                <p className="mt-1 text-[11px] leading-4 text-[#dcd4c3]">
+                  R. Maria da Conceição Hilário, 263 - Jardim Vera Cruz · Contagem - MG
                 </p>
               </div>
 
-              <span className="absolute -left-4 -top-4 -z-10 size-24 border-l-2 border-t-2 border-[#914f46]/40 sm:-left-7 sm:-top-7 sm:size-32" />
+              <span className="absolute -left-4 -top-4 -z-10 size-24 border-l-2 border-t-2 border-[#8c6224]/40 sm:-left-7 sm:-top-7 sm:size-32" />
             </motion.div>
 
             {/* Story & Biography - Editorial Warm Light Typography */}
@@ -830,72 +837,72 @@ export default function Home() {
             >
               <motion.div
                 variants={reveal}
-                className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#914f46]/30 bg-white/80 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#853d35] shadow-xs"
+                className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#8c6224]/30 bg-white/80 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#8c6224] shadow-xs"
               >
-                <span className="size-2 shrink-0 rounded-full bg-[#853d35]" />
-                <span>PRAZER, LETÍCIA! CONHEÇA MINHA HISTÓRIA</span>
+                <span className="size-2 shrink-0 rounded-full bg-[#8c6224]" />
+                <span>PRAZER, MARIANA! CONHEÇA MINHA HISTÓRIA</span>
               </motion.div>
 
               <motion.h2
                 variants={reveal}
-                className="font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-[#191115] sm:text-4xl lg:text-[3.25rem]"
+                className="font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-[#19140e] sm:text-4xl lg:text-[3.25rem]"
               >
-                Amor pelo que faço, determinação e um{" "}
-                <span className="italic text-[#853d35]">
-                  atendimento verdadeiramente humano e acolhedor.
+                Amor pela profissão, dedicação incansável e um{" "}
+                <span className="italic text-[#8c6224]">
+                  atendimento verdadeiramente humano e resolutivo.
                 </span>
               </motion.h2>
 
               <motion.p
                 variants={reveal}
-                className="mt-6 max-w-xl text-[15px] leading-7 text-[#4a3a40]"
+                className="mt-6 max-w-xl text-[15px] leading-7 text-[#4a3f31]"
               >
-                Mineira raiz, com 31 anos de idade, comecei na advocacia movida por um sonho que trago desde criança: a{" "}
-                <strong className="font-bold text-[#191115]">
-                  independência
+                Inscrita na{" "}
+                <strong className="font-bold text-[#19140e]">
+                  OAB/MG sob o nº 172.375
                 </strong>
-                . Acredito profundamente na potência transformadora de pessoas determinadas — e é exatamente essa energia que entrego todos os dias na defesa de cada um dos meus clientes.
+                , exerço a advocacia previdenciária guiada por um propósito inabalável: lutar pelos direitos de segurados, trabalhadores, idosos e famílias que enfrentam a burocracia do INSS e buscam a segurança do seu benefício com rapidez e dignidade.
               </motion.p>
 
               <motion.p
                 variants={reveal}
-                className="mt-4 max-w-xl text-[15px] leading-7 text-[#4a3a40]"
+                className="mt-4 max-w-xl text-[15px] leading-7 text-[#4a3f31]"
               >
-                No meu dia a dia, quem me acompanha conhece de perto minha rotina: o amor apaixonado pelo Direito, o carinho gigante pelos animais de estimação (são muitos pets em casa!), o compromisso com uma vida saudável e a família como base de tudo. No escritório, essa mesma dedicação se traduz em carregar nos ombros a responsabilidade de ajudar trabalhadores e segurados do INSS a alcançarem seus objetivos e seus direitos esquecidos.
+                No meu dia a dia, prezo por um atendimento acolhedor, onde o cliente não é um número de processo, mas alguém cuja história merece respeito e escuta atenta. Seja para acelerar uma aposentadoria, reverter perícias médicas indeferidas de auxílio-doença, conceder o BPC/LOAS ou resguardar uma família com a pensão por morte, o compromisso é estar ao seu lado do início ao fim com total transparência.
               </motion.p>
 
               {/* Quote Card */}
               <motion.div
                 variants={reveal}
-                className="mt-6 rounded-xl border border-[#e8d5d0] bg-white/95 p-5 shadow-sm"
+                className="mt-6 rounded-xl border border-[#e6dcce] bg-white/95 p-5 shadow-sm"
               >
-                <blockquote className="font-serif text-sm italic leading-relaxed text-[#2d1b22]">
-                  &ldquo;Todos temos dores a serem sanadas e direitos a serem requeridos. Com a ajuda certa, o acolhimento sincero e o rigor técnico adequado, tudo fica mais fácil e claro para você.&rdquo;
+                <blockquote className="font-serif text-sm italic leading-relaxed text-[#2a2013]">
+                  &ldquo;A Previdência Social existe para proteger pessoas. O meu trabalho é garantir que cada direito adquirido seja reconhecido sem demoras desnecessárias e com a máxima remuneração que a lei prevê.&rdquo;
                 </blockquote>
-                <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-[#853d35]">
-                  — Dra. Letícia Saldanha · Advogada Trabalhista e Previdenciarista
+                <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-[#8c6224]">
+                  — Dra. Mariana Esteves de Carvalho · OAB/MG 172.375
                 </p>
               </motion.div>
 
               <motion.div
                 variants={reveal}
-                className="mt-6 grid grid-cols-1 gap-2.5 text-xs font-semibold text-[#2d1b22] sm:grid-cols-2"
+                className="mt-6 grid grid-cols-1 gap-2.5 text-xs font-semibold text-[#2a2013] sm:grid-cols-2"
               >
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#853d35]" />
-                  <span>Atendimento presencial no Calçadão Shopping e online para todo o Brasil</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#8c6224]" />
+                  <span>Atendimento presencial no Jardim Vera Cruz em Contagem e online para todo o Brasil</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#853d35]" />
-                  <span>Advocacia especializada em Direito Previdenciário (INSS) e do Trabalho</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#8c6224]" />
+                  <span>Advocacia especializada em Direito Previdenciário (Aposentadorias, BPC/LOAS, Auxílios)</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#853d35]" />
-                  <span>Comunicação clara, transparente e acolhedora, sem &ldquo;juridiquês&rdquo;</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#8c6224]" />
+                  <span>Comunicação transparente, humanizada e constante, sem &ldquo;juridiquês&rdquo;</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#853d35]" />
-                  <span>Nota 4,9 ★ no Google com mais de 70 avaliações autênticas de clientes</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#8c6224]" />
+                  <span>Nota 4,9 ★ no Google com mais de 50 avaliações autênticas de clientes</span>
                 </div>
               </motion.div>
 
@@ -905,18 +912,18 @@ export default function Home() {
               >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Letícia Saldanha! Gostaria de agendar uma consulta sobre meu caso."
+                    "Olá, Dra. Mariana Esteves! Gostaria de agendar uma consulta sobre meu caso."
                   )}
                   target="_blank"
                   size="md"
                   variant="dark"
                   className="rounded-lg shadow-md"
                 >
-                  <WhatsAppIcon size={16} /> Falar com a Dra. Letícia
+                  <WhatsAppIcon size={16} /> Falar com a Dra. Mariana
                 </GlowingButton>
                 <a
                   href={`tel:+${WHATSAPP_NUMBER}`}
-                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#191115] transition-colors hover:text-[#853d35]"
+                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#19140e] transition-colors hover:text-[#8c6224]"
                 >
                   <Phone size={15} /> {PHONE_DISPLAY}
                 </a>
@@ -925,10 +932,10 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Áreas de Atuação Trabalhista e Previdenciária */}
+        {/* Áreas de Atuação Previdenciária */}
         <section
           id="atuacao"
-          className="scroll-mt-24 border-t border-[#d49389]/20 bg-[#100a0d] py-20 sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#d4af37]/20 bg-[#0f0d0b] py-20 sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <motion.div
@@ -940,14 +947,14 @@ export default function Home() {
             >
               <Heading
                 eyebrow="SERVIÇOS JURÍDICOS & PILARES DE ATUAÇÃO"
-                description="Defesa estratégica e personalizada para garantir seus benefícios previdenciários e resguardar seus direitos no ambiente de trabalho em Cataguases, Minas Gerais e em todo o Brasil."
+                description="Defesa especializada e estratégica para garantir seus benefícios previdenciários e resguardar seus direitos perante o INSS em Contagem, na Grande BH e em todo o Brasil."
               >
                 Atuação especializada em{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fdf5f3] via-[#f0bcb4] to-[#d49389]">
-                  Direito Trabalhista e Previdenciário.
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fff9e6] via-[#f2d078] to-[#d4af37]">
+                  Direito Previdenciário do INSS.
                 </span>
               </Heading>
-              <p className="max-w-[270px] pb-1 text-xs leading-6 text-[#d6c2be]">
+              <p className="max-w-[270px] pb-1 text-xs leading-6 text-[#dcd4c3]">
                 Selecione uma especialidade abaixo para conferir as demandas
                 atendidas e iniciar sua consulta diretamente pelo WhatsApp.
               </p>
@@ -966,25 +973,25 @@ export default function Home() {
                   <motion.article
                     key={area.id}
                     variants={reveal}
-                    className="group flex min-h-[350px] flex-col rounded-xl border border-[#d49389]/20 bg-[#140e11] p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#d49389]/50 hover:bg-[#1a1217] hover:shadow-obsidian sm:p-8"
+                    className="group flex min-h-[350px] flex-col rounded-xl border border-[#d4af37]/20 bg-[#12100d] p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#d4af37]/50 hover:bg-[#191612] hover:shadow-obsidian sm:p-8"
                   >
                     <div className="flex items-start justify-between">
-                      <span className="grid size-12 place-items-center rounded-lg border border-[#d49389]/25 bg-[#201419] text-[#e8aea6] shadow-sm transition-colors group-hover:border-[#f2d2cb] group-hover:bg-[#2b1922] group-hover:text-white">
+                      <span className="grid size-12 place-items-center rounded-lg border border-[#d4af37]/25 bg-[#1e1913] text-[#f2d078] shadow-sm transition-colors group-hover:border-[#faeac2] group-hover:bg-[#282118] group-hover:text-white">
                         <Icon size={22} strokeWidth={1.5} />
                       </span>
-                      <span className="font-serif text-2xl text-[#d49389]/40">
+                      <span className="font-serif text-2xl text-[#d4af37]/40">
                         0{index + 1}
                       </span>
                     </div>
 
                     <div className="mt-6">
-                      <span className="inline-block rounded-md border border-[#d49389]/25 bg-[#201419] px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-[#f2d2cb] shadow-sm">
+                      <span className="inline-block rounded-md border border-[#d4af37]/25 bg-[#1e1913] px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-[#faeac2] shadow-sm">
                         {area.tag}
                       </span>
                       <h3 className="mt-3 font-serif text-[1.45rem] leading-tight text-white">
                         {area.title}
                       </h3>
-                      <p className="mt-3 text-[13px] leading-6 text-[#d6c2be]">
+                      <p className="mt-3 text-[13px] leading-6 text-[#dcd4c3]">
                         {area.summary}
                       </p>
                     </div>
@@ -992,7 +999,7 @@ export default function Home() {
                     <button
                       type="button"
                       onClick={() => setActiveArea(area)}
-                      className="group/link mt-auto inline-flex w-fit items-center gap-2 pt-6 text-[10px] font-bold uppercase tracking-[0.16em] text-[#e8aea6] hover:text-white"
+                      className="group/link mt-auto inline-flex w-fit items-center gap-2 pt-6 text-[10px] font-bold uppercase tracking-[0.16em] text-[#f2d078] hover:text-white"
                     >
                       Ver detalhes e demandas{" "}
                       <ArrowRight
@@ -1007,29 +1014,29 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Por Que Escolher Letícia Saldanha Advocacia - Diferenciais */}
+        {/* Por Que Escolher Mariana Esteves Advocacia - Diferenciais */}
         <section
           id="diferenciais"
-          className="scroll-mt-24 border-y border-[#d49389]/20 bg-[#0d090b] py-20 sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-y border-[#d4af37]/20 bg-[#0b0a09] py-20 sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
               <Heading
                 eyebrow="NOSSOS PILARES DE EXCELÊNCIA"
-                description="Unimos empatia sincera, acolhimento às suas dores e uma postura jurídica incisiva para transformar direitos em conquistas reais."
+                description="Unimos acolhimento sincero, proximidade humana e uma postura jurídica firme para transformar direitos previdenciários em conquistas reais."
               >
                 Por que confiar seu processo à{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fdf5f3] via-[#f0bcb4] to-[#d49389]">
-                  Dra. Letícia Saldanha?
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fff9e6] via-[#f2d078] to-[#d4af37]">
+                  Dra. Mariana Esteves?
                 </span>
               </Heading>
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá, Dra. Letícia! Gostaria de consultar sobre meus direitos."
+                  "Olá, Dra. Mariana! Gostaria de consultar sobre meus direitos no INSS."
                 )}
                 target="_blank"
                 size="md"
-                variant="rosegold"
+                variant="gold"
                 className="rounded-lg shadow-sm"
               >
                 <WhatsAppIcon size={16} /> Falar no WhatsApp
@@ -1043,46 +1050,46 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65 }}
-                className="group flex flex-col justify-between rounded-xl border border-[#d49389]/25 bg-[#140e11] p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-[#d49389]/50 hover:bg-[#1a1217] sm:p-9"
+                className="group flex flex-col justify-between rounded-xl border border-[#d4af37]/25 bg-[#12100d] p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-[#d4af37]/50 hover:bg-[#191612] sm:p-9"
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#d49389]/30 bg-[#201419] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#f2d2cb]">
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#d4af37]/30 bg-[#1e1913] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#faeac2]">
                       <HeartHandshake size={14} /> Atendimento Humanizado
                     </span>
-                    <span className="text-xs font-semibold text-[#e8aea6]">
+                    <span className="text-xs font-semibold text-[#f2d078]">
                       Acolhimento Real
                     </span>
                   </div>
                   <h3 className="mt-4 font-serif text-2xl leading-tight text-white sm:text-[1.75rem]">
                     Empatia, Escuta Atenta e Zero &ldquo;Juridiquês&rdquo;
                   </h3>
-                  <p className="mt-3 text-[14px] leading-relaxed text-[#d6c2be]">
-                    Sabemos que por trás de um benefício do INSS ou de uma reclamação trabalhista existe uma vida, uma família e meses de angústia. Aqui você conversa diretamente com a advogada, em uma linguagem simples e acessível, entendendo com clareza cada passo da sua ação.
+                  <p className="mt-3 text-[14px] leading-relaxed text-[#dcd4c3]">
+                    Sabemos que por trás de cada pedido ao INSS existe uma vida inteira de trabalho, uma família que precisa de amparo e meses de incerteza. Aqui você é atendido diretamente pela advogada, em uma conversa clara, compreensível e que respeita seu tempo e suas dúvidas.
                   </p>
                   <ul className="mt-5 space-y-2 text-xs font-medium text-stone-200">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#e8aea6]" />
-                      <span>Contato direto com a advogada pelo WhatsApp, sem robôs ou intermediários</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#f2d078]" />
+                      <span>Contato direto com a Dra. Mariana pelo WhatsApp, sem robôs ou intermediários</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#e8aea6]" />
+                      <CheckCircle2 size={15} className="shrink-0 text-[#f2d078]" />
                       <span>Esclarecimento detalhado de cada documento e cálculo necessário</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#e8aea6]" />
-                      <span>Acolhimento às dúvidas da família com paciência e carinho</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#f2d078]" />
+                      <span>Acolhimento com paciência às dúvidas dos idosos e de toda a família</span>
                     </li>
                   </ul>
                 </div>
-                <div className="mt-7 border-t border-[#d49389]/20 pt-4">
+                <div className="mt-7 border-t border-[#d4af37]/20 pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dra. Letícia! Gostaria de conversar com você sobre a minha situação."
+                      "Olá, Dra. Mariana! Gostaria de conversar com você sobre a minha situação no INSS."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#d49389]/30 bg-[#201419] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#f2d2cb] transition-all hover:border-[#f2d2cb] hover:bg-[#2c1a23] hover:text-white"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#d4af37]/30 bg-[#1e1913] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#faeac2] transition-all hover:border-[#f2d078] hover:bg-[#282118] hover:text-white"
                   >
                     <span className="inline-flex items-center gap-2">
                       <WhatsAppIcon size={15} /> Conversar Diretamente no WhatsApp
@@ -1098,46 +1105,46 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65, delay: 0.1 }}
-                className="group flex flex-col justify-between rounded-xl border border-[#d49389]/25 bg-[#140e11] p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-[#d49389]/50 hover:bg-[#1a1217] sm:p-9"
+                className="group flex flex-col justify-between rounded-xl border border-[#d4af37]/25 bg-[#12100d] p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-[#d4af37]/50 hover:bg-[#191612] sm:p-9"
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#d49389]/30 bg-[#201419] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#f2d2cb]">
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#d4af37]/30 bg-[#1e1913] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#faeac2]">
                       <Scale size={14} /> Rigor Técnico Incisivo
                     </span>
-                    <span className="text-xs font-semibold text-[#e8aea6]">
-                      Defesa Incondicional
+                    <span className="text-xs font-semibold text-[#f2d078]">
+                      Resultados Rápidos
                     </span>
                   </div>
                   <h3 className="mt-4 font-serif text-2xl leading-tight text-white sm:text-[1.75rem]">
                     Combatividade na Luta Pelos Seus Direitos
                   </h3>
-                  <p className="mt-3 text-[14px] leading-relaxed text-[#d6c2be]">
-                    Não nos conformamos com negativas do INSS ou abusos do empregador. Estudamos minuciosamente cada prova documental, registros de ponto, laudos médicos e histórico do CNIS para construir teses jurídicas sólidas perante a Justiça Federal e a Justiça do Trabalho.
+                  <p className="mt-3 text-[14px] leading-relaxed text-[#dcd4c3]">
+                    Não nos conformamos com negativas injustas do INSS ou perícias médicas superficiais. Estudamos cada histórico do CNIS, laudo médico e períodos trabalhados para construir teses jurídicas sólidas perante a Justiça Federal e os órgãos recursais previdenciários.
                   </p>
                   <ul className="mt-5 space-y-2 text-xs font-medium text-stone-200">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#e8aea6]" />
+                      <CheckCircle2 size={15} className="shrink-0 text-[#f2d078]" />
                       <span>Análise aprofundada de cálculos para buscar o benefício mais vantajoso</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#e8aea6]" />
-                      <span>Reversão comprovada de causas consideradas difíceis ou perdidas</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#f2d078]" />
+                      <span>Histórico comprovado de casos concedidos com extrema agilidade</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#e8aea6]" />
-                      <span>Acompanhamento ágil de cada prazo e movimentação processual</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#f2d078]" />
+                      <span>Acompanhamento rigoroso de cada prazo e movimentação do processo</span>
                     </li>
                   </ul>
                 </div>
-                <div className="mt-7 border-t border-[#d49389]/20 pt-4">
+                <div className="mt-7 border-t border-[#d4af37]/20 pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dra. Letícia! Preciso de ajuda para reverter uma decisão / recorrer sobre meu benefício."
+                      "Olá, Dra. Mariana! Preciso de ajuda para reverter uma negativa do INSS / analisar meu benefício."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#d49389]/30 bg-[#201419] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#f2d2cb] transition-all hover:border-[#f2d2cb] hover:bg-[#2c1a23] hover:text-white"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#d4af37]/30 bg-[#1e1913] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#faeac2] transition-all hover:border-[#f2d078] hover:bg-[#282118] hover:text-white"
                   >
                     <span className="inline-flex items-center gap-2">
                       <WhatsAppIcon size={15} /> Analisar Meu Caso no WhatsApp
@@ -1151,26 +1158,26 @@ export default function Home() {
         </section>
 
         {/* Nosso Compromisso Ético e Operacional */}
-        <section className="relative overflow-hidden bg-[#0a0709] py-20 text-white sm:py-28 lg:py-32">
-          <div className="pointer-events-none absolute -left-28 top-1/4 size-96 rounded-full bg-[#d49389]/10 blur-3xl" />
-          <div className="pointer-events-none absolute -right-28 bottom-1/4 size-96 rounded-full bg-[#7b2938]/10 blur-3xl" />
+        <section className="relative overflow-hidden bg-[#090807] py-20 text-white sm:py-28 lg:py-32">
+          <div className="pointer-events-none absolute -left-28 top-1/4 size-96 rounded-full bg-[#d4af37]/10 blur-3xl" />
+          <div className="pointer-events-none absolute -right-28 bottom-1/4 size-96 rounded-full bg-[#8c6224]/10 blur-3xl" />
 
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.88fr_1.12fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
                 eyebrow="NOSSO COMPROMISSO COM VOCÊ"
-                description="O reconhecimento expresso com nota 4,9 ★ no Google e dezenas de avaliações reflete a dedicação intransigente em cuidar de cada pessoa com carinho, técnica e lealdade."
+                description="O reconhecimento expresso com nota 4,9 ★ no Google e dezenas de depoimentos reflete a dedicação intransigente em cuidar de cada segurado com carinho, técnica e lealdade."
               >
                 Cuidamos do seu futuro com{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fdf5f3] via-[#f0bcb4] to-[#d49389]">
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fff9e6] via-[#f2d078] to-[#d4af37]">
                   respeito, transparência e dedicação total.
                 </span>
               </Heading>
 
-              <blockquote className="mt-8 rounded-xl border border-[#d49389]/25 bg-[#140e11] p-6 font-serif text-base italic leading-7 text-[#faeae6]">
-                &ldquo;Eu nunca me senti tão bem, tão acolhida por alguém como a Dra Letícia. Sempre ouvia falar dos trabalhos feitos por ela, só quando entreguei o caso nas mãos dela que pude ter a certeza e sentir de onde veio tantos elogios. Super recomendo !!! Parabéns e continue com esse profissionalismo, Cataguases e região precisa.&rdquo;
-                <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-[#e8aea6]">
-                  — Leticia Oliveira · Avaliação Verificada no Google Meu Negócio
+              <blockquote className="mt-8 rounded-xl border border-[#d4af37]/25 bg-[#12100d] p-6 font-serif text-base italic leading-7 text-[#fbf3d5]">
+                &ldquo;A Dra. Mariana é extremamente competente, atenciosa e possui um atendimento verdadeiramente humanizado. Sempre foi muito honesta, demonstra total domínio do assunto e dá retorno rápido mantendo o cliente ciente de todas as etapas.&rdquo;
+                <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-[#f2d078]">
+                  — Natália Vieira · Avaliação Verificada no Google Meu Negócio
                 </footer>
               </blockquote>
             </div>
@@ -1180,23 +1187,23 @@ export default function Home() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={stagger}
-              className="divide-y divide-[#d49389]/15"
+              className="divide-y divide-[#d4af37]/15"
             >
               {[
                 [
                   "01",
                   "Acolhimento Genuíno & Empatia",
-                  "Você é ouvida com atenção e sensibilidade. Entendemos suas necessidades individuais para traçar a melhor estratégia jurídica sem nenhum julgamento.",
+                  "Você é ouvido com atenção e sensibilidade. Entendemos suas necessidades para traçar a melhor estratégia previdenciária sem nenhum julgamento.",
                 ],
                 [
                   "02",
                   "Transparência Absoluta & Comunicação Fácil",
-                  "Aqui você não fica no escuro. Você tem acesso direto à advogada pelo WhatsApp e entende todas as etapas do seu processo em linguagem clara.",
+                  "Aqui você não fica no escuro. Você tem acesso direto à advogada pelo WhatsApp e entende cada etapa do seu requerimento no INSS em linguagem simples.",
                 ],
                 [
                   "03",
                   "Combatividade Incisiva & Resultados",
-                  "Lutamos incansavelmente pelo melhor resultado possível, exigindo o cumprimento estrito das leis e o pagamento de cada direito garantido pela CLT e pela Previdência.",
+                  "Lutamos incansavelmente pelo melhor resultado possível, exigindo o cumprimento estrito das leis e o pagamento de cada centavo devido pela Previdência.",
                 ],
               ].map(([number, title, description]) => (
                 <motion.div
@@ -1204,12 +1211,12 @@ export default function Home() {
                   variants={reveal}
                   className="grid gap-3 py-6 first:pt-0 sm:grid-cols-[70px_1fr] sm:gap-6 sm:py-7"
                 >
-                  <span className="font-serif text-2xl font-semibold text-[#e8aea6]">
+                  <span className="font-serif text-2xl font-semibold text-[#f2d078]">
                     {number}
                   </span>
                   <div>
                     <h3 className="font-serif text-2xl text-white">{title}</h3>
-                    <p className="mt-2 max-w-lg text-[13px] leading-6 text-[#d6c2be]">
+                    <p className="mt-2 max-w-lg text-[13px] leading-6 text-[#dcd4c3]">
                       {description}
                     </p>
                   </div>
@@ -1219,26 +1226,26 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Avaliações no Google (Depoimentos Reais - 4,9 estrelas · 70+ avaliações) */}
+        {/* Avaliações no Google (Depoimentos Reais - 4,9 estrelas · 50+ avaliações) */}
         <section
           id="avaliacoes"
-          className="scroll-mt-24 border-t border-[#d49389]/20 bg-[#100a0d] py-20 sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#d4af37]/20 bg-[#0f0d0b] py-20 sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
               <Heading
                 eyebrow="PROVA SOCIAL VERIFICADA · GOOGLE MEU NEGÓCIO"
-                description="Confira avaliações autênticas de clientes que confiaram seus direitos à Dra. Letícia Saldanha em Cataguases, Zona da Mata e em todo o Brasil."
+                description="Confira avaliações autênticas de clientes que confiaram seus benefícios à Dra. Mariana Esteves em Contagem, Minas Gerais e em todo o Brasil."
               >
                 Avaliada com nota 4,9 ★ pelo{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fdf5f3] via-[#f0bcb4] to-[#d49389]">
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fff9e6] via-[#f2d078] to-[#d4af37]">
                   atendimento humanizado, competência e resultados.
                 </span>
               </Heading>
 
               {/* Verified Google Badge Card */}
-              <div className="flex flex-col gap-3 rounded-xl border border-[#d49389]/25 bg-[#140e11] p-5 shadow-card sm:flex-row sm:items-center md:min-w-[340px]">
-                <div className="flex size-14 shrink-0 items-center justify-center rounded-lg border border-[#d49389]/25 bg-[#201419] shadow-sm">
+              <div className="flex flex-col gap-3 rounded-xl border border-[#d4af37]/25 bg-[#12100d] p-5 shadow-card sm:flex-row sm:items-center md:min-w-[340px]">
+                <div className="flex size-14 shrink-0 items-center justify-center rounded-lg border border-[#d4af37]/25 bg-[#1e1913] shadow-sm">
                   <GoogleIcon size={30} />
                 </div>
                 <div>
@@ -1246,26 +1253,26 @@ export default function Home() {
                     <span className="font-serif text-3xl font-bold leading-none text-white">
                       4,9
                     </span>
-                    <div className="flex gap-0.5 text-[#e8aea6]">
+                    <div className="flex gap-0.5 text-[#f2d078]">
                       {Array.from({ length: 5 }, (_, i) => (
                         <Star
                           key={i}
                           size={14}
-                          className="fill-[#e8aea6] text-[#e8aea6]"
+                          className="fill-[#f2d078] text-[#f2d078]"
                         />
                       ))}
                     </div>
                   </div>
                   <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-stone-200">
-                    Letícia Saldanha Advocacia
+                    Mariana Esteves Advocacia
                   </p>
                   <a
                     href={GOOGLE_MAPS_URL}
                     target="_blank"
                     rel="noreferrer"
-                    className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-[#e8aea6] transition-colors hover:text-white"
+                    className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-[#f2d078] transition-colors hover:text-white"
                   >
-                    70 avaliações no Google <ArrowUpRight size={13} />
+                    50 avaliações no Google <ArrowUpRight size={13} />
                   </a>
                 </div>
               </div>
@@ -1276,23 +1283,23 @@ export default function Home() {
               {clientReviews.map((review) => (
                 <article
                   key={review.name}
-                  className="group relative flex flex-col justify-between rounded-xl border border-[#d49389]/20 bg-[#140e11] p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#d49389]/50 hover:bg-[#1a1217] hover:shadow-obsidian sm:p-8"
+                  className="group relative flex flex-col justify-between rounded-xl border border-[#d4af37]/20 bg-[#12100d] p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#d4af37]/50 hover:bg-[#191612] hover:shadow-obsidian sm:p-8"
                 >
                   <div>
                     {/* Header: Stars + Badge + Google icon */}
                     <div className="flex items-center justify-between gap-2">
-                      <div className="flex gap-1 text-[#e8aea6]">
+                      <div className="flex gap-1 text-[#f2d078]">
                         {Array.from({ length: 5 }, (_, i) => (
                           <Star
                             key={i}
                             size={14}
-                            className="fill-[#e8aea6] text-[#e8aea6]"
+                            className="fill-[#f2d078] text-[#f2d078]"
                           />
                         ))}
                       </div>
                       <div className="flex items-center gap-1.5 text-[11px] font-medium text-stone-300">
                         <GoogleIcon size={13} />
-                        <span className="rounded-md border border-[#d49389]/20 bg-[#201419] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#f2d2cb] shadow-xs">
+                        <span className="rounded-md border border-[#d4af37]/20 bg-[#1e1913] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#faeac2] shadow-xs">
                           {review.badge}
                         </span>
                       </div>
@@ -1305,8 +1312,8 @@ export default function Home() {
                   </div>
 
                   {/* Reviewer info */}
-                  <div className="mt-6 flex items-center gap-3 border-t border-[#d49389]/20 pt-4">
-                    <div className="grid size-10 shrink-0 place-items-center rounded-lg border border-[#d49389]/25 bg-[#201419] font-serif text-sm font-semibold text-[#f2d2cb] shadow-xs">
+                  <div className="mt-6 flex items-center gap-3 border-t border-[#d4af37]/20 pt-4">
+                    <div className="grid size-10 shrink-0 place-items-center rounded-lg border border-[#d4af37]/25 bg-[#1e1913] font-serif text-sm font-semibold text-[#faeac2] shadow-xs">
                       {review.name.charAt(0)}
                     </div>
                     <div className="min-w-0 flex-1">
@@ -1323,20 +1330,21 @@ export default function Home() {
             </div>
 
             {/* Bottom Actions and Trust Tags */}
-            <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-[#d49389]/20 pt-8 sm:flex-row">
+            <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-[#d4af37]/20 pt-8 sm:flex-row">
               <div className="flex flex-wrap items-center gap-2">
                 {[
-                  "Advocacia Trabalhista Especializada",
-                  "Direito Previdenciário & INSS",
+                  "Advocacia Previdenciária Especializada",
+                  "Aposentadorias do INSS & Planejamento",
+                  "BPC / LOAS Idoso e Deficiência",
                   "Atendimento direto com a advogada",
-                  "Calçadão Shopping Cataguases",
+                  "Contagem & Grande BH",
                   "Nota 4,9 no Google",
                 ].map((tag) => (
                   <span
                     key={tag}
-                    className="inline-flex items-center gap-1.5 rounded-lg border border-[#d49389]/20 bg-[#140e11] px-3.5 py-1.5 text-[11px] font-medium text-stone-200 shadow-xs"
+                    className="inline-flex items-center gap-1.5 rounded-lg border border-[#d4af37]/20 bg-[#12100d] px-3.5 py-1.5 text-[11px] font-medium text-stone-200 shadow-xs"
                   >
-                    <CheckCircle2 size={13} className="text-[#e8aea6]" />
+                    <CheckCircle2 size={13} className="text-[#f2d078]" />
                     {tag}
                   </span>
                 ))}
@@ -1346,9 +1354,9 @@ export default function Home() {
                 href={GOOGLE_MAPS_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="group inline-flex shrink-0 items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#e8aea6] transition-colors hover:text-white"
+                className="group inline-flex shrink-0 items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#f2d078] transition-colors hover:text-white"
               >
-                Ver todas as 70 avaliações no Google{" "}
+                Ver todas as avaliações no Google{" "}
                 <ArrowUpRight
                   size={15}
                   className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
@@ -1358,19 +1366,19 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Contato & Localização em Cataguases */}
+        {/* Contato & Localização em Contagem */}
         <section
           id="contato"
-          className="scroll-mt-24 border-t border-[#d49389]/20 bg-[#0d090b] py-20 sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#d4af37]/20 bg-[#0b0a09] py-20 sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
-                eyebrow="CONTATO & SEDE EM CATAGUASES - MG"
-                description="Agende seu atendimento presencial em nossa sede no Calçadão Shopping em Cataguases ou inicie seu atendimento online pelo WhatsApp de onde você estiver."
+                eyebrow="CONTATO & SEDE EM CONTAGEM - MG"
+                description="Agende seu atendimento presencial em nosso escritório no Jardim Vera Cruz em Contagem ou inicie seu atendimento online pelo WhatsApp de onde você estiver."
               >
                 Estamos prontos para{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fdf5f3] via-[#f0bcb4] to-[#d49389]">
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fff9e6] via-[#f2d078] to-[#d4af37]">
                   escutar e defender você.
                 </span>
               </Heading>
@@ -1378,67 +1386,67 @@ export default function Home() {
               <div className="mt-9 flex flex-col items-start gap-4">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Letícia Saldanha! Gostaria de agendar um horário para atendimento."
+                    "Olá, Dra. Mariana Esteves! Gostaria de agendar um horário para atendimento."
                   )}
                   target="_blank"
                   size="lg"
-                  variant="rosegold"
+                  variant="gold"
                   className="rounded-lg shadow-md"
                 >
                   <WhatsAppIcon size={17} /> Iniciar Conversa no WhatsApp
                 </GlowingButton>
-                <p className="text-[11px] leading-5 text-[#d6c2be]">
+                <p className="text-[11px] leading-5 text-[#dcd4c3]">
                   Telefone e WhatsApp do escritório:{" "}
                   <strong className="text-white">{PHONE_DISPLAY}</strong>
                 </p>
               </div>
 
-              <div className="mt-10 space-y-4 text-xs text-[#d6c2be]">
+              <div className="mt-10 space-y-4 text-xs text-[#dcd4c3]">
                 <div className="flex items-start gap-3">
                   <Clock
                     size={16}
-                    className="mt-0.5 shrink-0 text-[#e8aea6]"
+                    className="mt-0.5 shrink-0 text-[#f2d078]"
                   />
                   <div>
                     <p className="font-semibold text-white">
                       Horário de Funcionamento
                     </p>
                     <p className="mt-0.5 text-stone-200">
-                      Segunda a Sexta-feira das 09:00 às 18:00
+                      Segunda a Sexta-feira das 08:00 às 18:00
                     </p>
                     <p className="text-[11px] text-stone-400">
-                      Atendimento presencial no Calçadão Shopping e atendimento online para todo o Brasil
+                      Atendimento presencial com agendamento prévio e atendimento online seguro para todo o Brasil
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3 pt-1">
-                  <Phone size={16} className="shrink-0 text-[#e8aea6]" />
+                  <Phone size={16} className="shrink-0 text-[#f2d078]" />
                   <a
                     href={`tel:+${WHATSAPP_NUMBER}`}
-                    className="font-medium text-white transition-colors hover:text-[#e8aea6]"
+                    className="font-medium text-white transition-colors hover:text-[#f2d078]"
                   >
                     {PHONE_DISPLAY} (Ligações e WhatsApp)
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <InstagramIcon size={16} className="shrink-0 text-[#e8aea6]" />
+                  <InstagramIcon size={16} className="shrink-0 text-[#f2d078]" />
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noreferrer"
-                    className="transition-colors hover:text-[#e8aea6] text-stone-200"
+                    className="transition-colors hover:text-[#f2d078] text-stone-200"
                   >
                     {INSTAGRAM_HANDLE} (Instagram Oficial)
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <Mail size={16} className="shrink-0 text-[#e8aea6]" />
+                  <Mail size={16} className="shrink-0 text-[#f2d078]" />
                   <a
                     href={`mailto:${EMAIL_CONTACT}`}
-                    className="transition-colors hover:text-[#e8aea6] text-stone-200"
+                    className="transition-colors hover:text-[#f2d078] text-stone-200"
                   >
                     {EMAIL_CONTACT}
                   </a>
@@ -1447,7 +1455,7 @@ export default function Home() {
                 <div className="flex items-start gap-3">
                   <MapPin
                     size={16}
-                    className="mt-0.5 shrink-0 text-[#e8aea6]"
+                    className="mt-0.5 shrink-0 text-[#f2d078]"
                   />
                   <span>{ADDRESS_TEXT}</span>
                 </div>
@@ -1455,65 +1463,65 @@ export default function Home() {
             </div>
 
             {/* Address & Office Card */}
-            <div className="relative overflow-hidden rounded-xl border border-[#d49389]/25 bg-[#140e11] p-7 shadow-card sm:p-10">
-              <div className="absolute right-0 top-0 h-1.5 w-32 bg-gradient-to-r from-[#d49389] to-[#e8aea6]" />
+            <div className="relative overflow-hidden rounded-xl border border-[#d4af37]/25 bg-[#12100d] p-7 shadow-card sm:p-10">
+              <div className="absolute right-0 top-0 h-1.5 w-32 bg-gradient-to-r from-[#d4af37] to-[#f2d078]" />
 
               <div className="flex items-center gap-4">
-                <span className="grid size-12 place-items-center rounded-lg border border-[#d49389]/30 bg-[#201419] text-[#e8aea6]">
+                <span className="grid size-12 place-items-center rounded-lg border border-[#d4af37]/30 bg-[#1e1913] text-[#f2d078]">
                   <MapPin size={22} strokeWidth={1.6} />
                 </span>
                 <div>
-                  <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#e8aea6]">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#f2d078]">
                     Sede do Escritório
                   </p>
                   <p className="mt-1 font-serif text-2xl text-white">
-                    Cataguases · Minas Gerais
+                    Contagem · Minas Gerais
                   </p>
                 </div>
               </div>
 
-              <address className="mt-7 max-w-md text-[14px] not-italic leading-7 text-[#d6c2be]">
+              <address className="mt-7 max-w-md text-[14px] not-italic leading-7 text-[#dcd4c3]">
                 <strong className="font-semibold text-white">
-                  Letícia Saldanha Advocacia
+                  Mariana Esteves Advocacia Previdenciária
                 </strong>
                 <br />
-                Dra. Letícia Saldanha · OAB/MG
+                Dra. Mariana Esteves de Carvalho · OAB/MG 172.375
                 <br />
                 {ADDRESS_TEXT}
               </address>
 
               {/* Weekly schedule table */}
-              <div className="mt-6 rounded-lg border border-[#d49389]/20 bg-[#0d090b] p-4 text-xs">
-                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#e8aea6]">
+              <div className="mt-6 rounded-lg border border-[#d4af37]/20 bg-[#0b0a09] p-4 text-xs">
+                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#f2d078]">
                   Atendimento & Horários
                 </p>
                 <div className="grid grid-cols-2 gap-y-1.5 text-stone-300">
                   <span>Segunda a Sexta</span>
                   <span className="text-right font-semibold text-white">
-                    09:00 às 18:00
+                    08:00 às 18:00
                   </span>
                   <span>Atendimento Presencial</span>
-                  <span className="text-right text-[#f2d2cb]">
+                  <span className="text-right text-[#faeac2]">
                     Com agendamento prévio
                   </span>
                   <span>Localização</span>
-                  <span className="text-right text-stone-200">Calçadão Shopping - Sl 108</span>
+                  <span className="text-right text-stone-200">Jardim Vera Cruz · Contagem - MG</span>
                   <span>Atendimento Online</span>
                   <span className="text-right text-stone-200">Todo o Brasil</span>
                 </div>
               </div>
 
-              <div className="my-7 h-px bg-[#d49389]/20" />
+              <div className="my-7 h-px bg-[#d4af37]/20" />
 
               <div className="flex flex-wrap items-center justify-between gap-4">
                 <p className="text-xs text-stone-400">
-                  Praça Rui Barbosa, 170 - Sl 108 · Cataguases - MG
+                  R. Maria da Conceição Hilário, 263 · Contagem - MG
                 </p>
                 <a
                   href={GOOGLE_MAPS_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg border border-[#d49389]/30 bg-[#201419] px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-[#f2d2cb] transition-colors hover:border-[#f2d2cb] hover:bg-[#2c1a23] hover:text-white"
+                  className="inline-flex items-center gap-2 rounded-lg border border-[#d4af37]/30 bg-[#1e1913] px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-[#faeac2] transition-colors hover:border-[#f2d078] hover:bg-[#282118] hover:text-white"
                 >
                   Traçar Rota no Google Maps <ArrowUpRight size={14} />
                 </a>
@@ -1523,23 +1531,23 @@ export default function Home() {
         </section>
 
         {/* Pre-Footer CTA Strip */}
-        <section className="border-t border-[#d49389]/20 bg-gradient-to-r from-[#0d090b] via-[#160d12] to-[#0d090b] px-5 py-14 text-white shadow-inner sm:px-8 sm:py-16 lg:px-12">
+        <section className="border-t border-[#d4af37]/20 bg-gradient-to-r from-[#0b0a09] via-[#171410] to-[#0b0a09] px-5 py-14 text-white shadow-inner sm:px-8 sm:py-16 lg:px-12">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-7 sm:flex-row sm:items-center">
             <div>
-              <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#e8aea6]">
-                <Sparkles size={13} /> LETÍCIA SALDANHA · ADVOCACIA & CONSULTORIA
+              <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#f2d078]">
+                <Sparkles size={13} /> MARIANA ESTEVES · ADVOCACIA PREVIDENCIÁRIA
               </p>
               <h2 className="mt-3 max-w-2xl font-serif text-3xl leading-tight text-white sm:text-4xl">
-                Tem dúvidas sobre sua aposentadoria ou direitos no trabalho?
+                Tem dúvidas sobre sua aposentadoria ou benefício no INSS?
               </h2>
             </div>
             <a
               href={getWhatsAppUrl(
-                "Olá, Dra. Letícia! Gostaria de consultar sobre a minha situação trabalhista / previdenciária."
+                "Olá, Dra. Mariana! Gostaria de consultar sobre a minha situação no INSS."
               )}
               target="_blank"
               rel="noreferrer"
-              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-lg bg-gradient-to-r from-[#c47d73] via-[#e8aea6] to-[#c47d73] px-7 py-4 text-[11px] font-bold uppercase tracking-[0.14em] text-[#190c10] shadow-md transition-all hover:-translate-y-0.5 hover:brightness-110 hover:shadow-rosegold"
+              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-lg bg-gradient-to-r from-[#c59b27] via-[#f2d078] to-[#c59b27] px-7 py-4 text-[11px] font-bold uppercase tracking-[0.14em] text-[#140e07] shadow-md transition-all hover:-translate-y-0.5 hover:brightness-110 hover:shadow-gold"
             >
               <WhatsAppIcon size={17} /> Falar no WhatsApp{" "}
               <ArrowUpRight size={15} />
@@ -1548,40 +1556,40 @@ export default function Home() {
         </section>
 
         {/* Footer */}
-        <footer className="border-t border-[#d49389]/20 bg-[#0a0709] px-5 py-14 text-white sm:px-8 lg:px-12">
+        <footer className="border-t border-[#d4af37]/20 bg-[#090807] px-5 py-14 text-white sm:px-8 lg:px-12">
           <div className="mx-auto grid max-w-7xl gap-10 sm:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1fr]">
             <div>
               <a
                 href="#inicio"
-                aria-label="Letícia Saldanha Advocacia"
+                aria-label="Mariana Esteves Advocacia"
                 className="inline-block transition-transform hover:scale-[1.02]"
               >
                 <Image
                   src={LOGO_FULL_SRC}
                   width={1024}
-                  height={512}
-                  alt="Letícia Saldanha Advocacia e Consultoria Especializada"
-                  className="h-[72px] w-auto object-contain sm:h-[84px]"
+                  height={402}
+                  alt="Mariana Esteves Advocacia Previdenciária"
+                  className="h-[64px] w-auto object-contain sm:h-[76px]"
                 />
               </a>
-              <p className="mt-4 max-w-xs text-xs leading-6 text-[#d6c2be]">
-                ⚖️ Advocacia humanizada, técnica e combativa. Especializada em Direito do Trabalho e Direito Previdenciário (INSS, BPC/LOAS, aposentadorias e rescisões).
+              <p className="mt-4 max-w-xs text-xs leading-6 text-[#dcd4c3]">
+                ⚖️ Advocacia previdenciária especializada, humanizada e combativa. Aposentadorias, BPC/LOAS, Auxílio-Doença, Pensão por Morte e Planejamento Previdenciário.
               </p>
-              <p className="mt-3 text-[11px] font-semibold text-[#e8aea6]">
-                Dra. Letícia Saldanha · Advogada · OAB/MG
+              <p className="mt-3 text-[11px] font-semibold text-[#f2d078]">
+                Dra. Mariana Esteves de Carvalho · Advogada · OAB/MG 172.375
               </p>
             </div>
 
             <div>
-              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#e8aea6]">
+              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#f2d078]">
                 Navegação
               </h2>
-              <div className="mt-4 flex flex-col items-start gap-3 text-xs text-[#d6c2be]">
+              <div className="mt-4 flex flex-col items-start gap-3 text-xs text-[#dcd4c3]">
                 <a className="footer-link" href="#inicio">
                   Início
                 </a>
                 <a className="footer-link" href="#sobre">
-                  Prazer, Letícia
+                  Prazer, Mariana
                 </a>
                 <a className="footer-link" href="#atuacao">
                   Áreas de Atuação
@@ -1593,23 +1601,23 @@ export default function Home() {
                   Avaliações no Google (4,9 ★)
                 </a>
                 <a className="footer-link" href="#contato">
-                  Contato & Sede em Cataguases
+                  Contato & Sede em Contagem
                 </a>
               </div>
             </div>
 
             <div>
-              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#e8aea6]">
+              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#f2d078]">
                 Contato & Endereço
               </h2>
-              <div className="mt-4 flex flex-col items-start gap-2.5 text-xs text-[#d6c2be]">
+              <div className="mt-4 flex flex-col items-start gap-2.5 text-xs text-[#dcd4c3]">
                 <a
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Letícia! Gostaria de solicitar um atendimento com o escritório."
+                    "Olá, Dra. Mariana! Gostaria de solicitar um atendimento com o escritório."
                   )}
                   target="_blank"
                   rel="noreferrer"
-                  className="footer-link inline-flex items-center gap-2 font-medium text-[#f2d2cb]"
+                  className="footer-link inline-flex items-center gap-2 font-medium text-[#faeac2]"
                 >
                   <WhatsAppIcon size={15} /> WhatsApp: {PHONE_DISPLAY}
                 </a>
@@ -1642,16 +1650,16 @@ export default function Home() {
                   <MapPin size={15} className="mt-0.5 shrink-0" />
                   <span>{ADDRESS_TEXT}</span>
                 </a>
-                <p className="inline-flex items-center gap-2 pt-1 text-[11px] text-[#e8aea6]">
-                  <Clock size={14} className="shrink-0" /> Seg a Sex: 09:00 às 18:00
+                <p className="inline-flex items-center gap-2 pt-1 text-[11px] text-[#f2d078]">
+                  <Clock size={14} className="shrink-0" /> Seg a Sex: 08:00 às 18:00
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-[#d49389]/20 pt-6 text-[10px] text-stone-400 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-[#d4af37]/20 pt-6 text-[10px] text-stone-400 sm:flex-row sm:items-center sm:justify-between">
             <p>
-              © {new Date().getFullYear()} LETÍCIA SALDANHA ADVOCACIA. Todos os direitos reservados.
+              © {new Date().getFullYear()} MARIANA ESTEVES ADVOCACIA PREVIDENCIÁRIA. Todos os direitos reservados.
             </p>
             <p>
               Conteúdo informativo, em estrita conformidade com o Código de Ética e Disciplina da OAB.
@@ -1666,16 +1674,16 @@ export default function Home() {
         >
           <a
             href={getWhatsAppUrl(
-              "Olá, Dra. Letícia Saldanha! Gostaria de consultar sobre meus direitos trabalhistas / previdenciários."
+              "Olá, Dra. Mariana Esteves! Gostaria de consultar sobre meus direitos no INSS."
             )}
             target="_blank"
             rel="noreferrer"
-            aria-label="Falar agora pelo WhatsApp com a Dra. Letícia Saldanha"
+            aria-label="Falar agora pelo WhatsApp com a Dra. Mariana Esteves"
             className="group relative flex size-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-[#25D366]/40"
           >
             <WhatsAppIcon size={28} />
-            <span className="pointer-events-none absolute right-16 hidden whitespace-nowrap rounded-lg bg-[#140e11] border border-[#d49389]/30 px-3.5 py-1.5 text-xs font-semibold text-white shadow-lg transition-opacity group-hover:block">
-              Falar com a Dra. Letícia
+            <span className="pointer-events-none absolute right-16 hidden whitespace-nowrap rounded-lg bg-[#12100d] border border-[#d4af37]/30 px-3.5 py-1.5 text-xs font-semibold text-white shadow-lg transition-opacity group-hover:block">
+              Falar com a Dra. Mariana
             </span>
           </a>
         </aside>
@@ -1699,13 +1707,13 @@ export default function Home() {
                 exit={{ opacity: 0, y: 16, scale: 0.99 }}
                 transition={{ duration: 0.24 }}
                 onClick={(event) => event.stopPropagation()}
-                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-xl border border-[#d49389]/35 bg-[#140e11] p-7 shadow-2xl sm:max-w-xl sm:rounded-xl sm:p-10"
+                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-xl border border-[#d4af37]/35 bg-[#12100d] p-7 shadow-2xl sm:max-w-xl sm:rounded-xl sm:p-10"
               >
                 <button
                   type="button"
                   aria-label="Fechar detalhes da especialidade"
                   onClick={() => setActiveArea(null)}
-                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-[#d49389]/30 bg-[#201419] text-[#f2d2cb] transition-colors hover:border-[#f2d2cb] hover:text-white"
+                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-[#d4af37]/30 bg-[#1e1913] text-[#faeac2] transition-colors hover:border-[#f2d078] hover:text-white"
                 >
                   <X size={18} />
                 </button>
@@ -1719,12 +1727,12 @@ export default function Home() {
                   {activeArea.title}
                 </h2>
 
-                <p className="mt-5 text-sm leading-7 text-[#d6c2be]">
+                <p className="mt-5 text-sm leading-7 text-[#dcd4c3]">
                   {activeArea.details}
                 </p>
 
-                <div className="mt-6 border-t border-[#d49389]/20 pt-5">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#e8aea6]">
+                <div className="mt-6 border-t border-[#d4af37]/20 pt-5">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#f2d078]">
                     Principais demandas atendidas pelo escritório:
                   </p>
                   <ul className="mt-4 space-y-3">
@@ -1733,7 +1741,7 @@ export default function Home() {
                         key={topic}
                         className="flex items-center gap-3 text-sm text-stone-200"
                       >
-                        <span className="size-2 shrink-0 rounded-full bg-[#e8aea6]" />
+                        <span className="size-2 shrink-0 rounded-full bg-[#f2d078]" />
                         <span>{topic}</span>
                       </li>
                     ))}
@@ -1745,7 +1753,7 @@ export default function Home() {
                     href={getWhatsAppUrl(activeArea.whatsAppText)}
                     target="_blank"
                     size="md"
-                    variant="rosegold"
+                    variant="gold"
                     className="rounded-lg shadow-md"
                   >
                     <WhatsAppIcon size={16} /> Consultar sobre esta demanda
