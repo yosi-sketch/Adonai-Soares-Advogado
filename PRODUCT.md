@@ -1,34 +1,35 @@
-# TOMAZ HENRIQUE ADVOCACIA
-## Advogado Especializado em Direito Trabalhista e Previdenciário · Dr. Tomaz Henrique · Itaúna - MG
+# JAQUELINE SOARES ADVOCACIA
+## Escritório de Advocacia · Dra. Jaqueline Soares · Lagoa Santa - MG
 
 ## Plataforma
 Site institucional e landing page responsiva de altíssimo padrão desenvolvida em Next.js 16 (App Router) e Tailwind CSS v4, projetada para transmitir autoridade jurídica, sofisticação clássica, transparência e acolhimento humanizado, com navegação fluida, modais interativos para detalhamento das especialidades e integração direta com WhatsApp.
 
 ## Público
-Trabalhadores da indústria, comércio e serviços, segurados do INSS, aposentados, pensionistas, beneficiários do BPC/LOAS, além de cidadãos e empresas que necessitam de assessoria consultiva e contenciosa nas áreas trabalhista, previdenciária e cível em Itaúna, Pará de Minas, Divinópolis e em toda a região de Minas Gerais.
+Cidadãos, famílias, trabalhadores, aposentados, pensionistas e empresas que necessitam de assessoria consultiva e contenciosa nas áreas de Família & Sucessões, Cível, Consumidor, Trabalhista e Previdenciária em Lagoa Santa, no Vetor Norte de Belo Horizonte (Confins, Pedro Leopoldo, Vespasiano, Santa Luzia) e em todo o estado de Minas Gerais e Brasil (atendimento online).
 
 ## Objetivo
-Apresentar a advocacia de excelência liderada pelo Dr. Tomaz Henrique, destacando a expressiva nota máxima de 5,0 estrelas com 37 avaliações autênticas no Google Meu Negócio, e viabilizando o contato direto e humanizado via WhatsApp (37) 99841-2455 e atendimento presencial no Centro de Itaúna - MG.
+Apresentar a advocacia de excelência liderada pela Dra. Jaqueline Soares, destacando a expressiva nota máxima de 5,0 estrelas com 19 avaliações autênticas no Google Meu Negócio, e viabilizando o contato direto e humanizado via WhatsApp (31) 97577-2112 e atendimento presencial na sede em Lagoa Santa - MG.
 
 ## Identidade Visual
-- Marca: Tomaz Henrique Advocacia / Tomaz Henrique Advogado Especializado
-- Logotipo: Selo circular clássico com o pórtico romano de 4 colunas em relevo de bronze metálico e cobre nobre escovado, com a inscrição arqueada "TOMAZ HENRIQUE" no arco superior e "ESCRITÓRIO DE ADVOCACIA" no arco inferior (`public/logo-seal.png`, `public/logo.png`).
+- Marca: Jaqueline Soares Advocacia / Dra. Jaqueline Soares — Advogada
+- Logotipo: Brasão em escudo dourado com relevo metálico 3D e monograma "JS" no centro, encimando a inscrição em caixa alta "JAQUELINE SOARES" e "ADVOCACIA" com filetes horizontais dourados (`public/logo.png`, `public/logo-seal.png`).
 - Paleta extraída diretamente do novo logo oficial:
-  - Bronze Metálico Nobre Primário (`#C97F48`, `#D48C52`, `#E5A26C`, `#A86131`)
-  - Realce em Cobre Quente e Champanhe (`#FDF6EE`, `#FAE0C8`, `#F4CBA4`)
-  - Bronze Profundo & Sombra Densa (`#80441C`, `#54280C`, `#361705`)
-  - Velvet Bronze Obsidian de Alta Autoridade (`#090706`, `#120E0B`, `#1A1410`, `#231B15`)
-  - Mármore Alabastro / Marfim Nobre para contraste claro no Sobre (`#FAF7F2`, `#E8DECB`)
+  - Dourado Real & Ouro Champanhe Primário (`#dfb76c`, `#f4c87b`, `#fdefb4`, `#c59b48`)
+  - Realce Laranja Dourado e Champanhe Claro (`#fdf8e8`, `#fdefb4`, `#fddf9b`)
+  - Dourado Antigo e Sombra Metálica (`#a67c1e`, `#7a5410`, `#472c06`)
+  - Velvet Gold Obsidian de Alta Autoridade (`#08080a`, `#101014`, `#15151a`, `#1e1e26`)
+  - Marfim Perolado para contraste claro na seção Sobre (`#faf8f5`, `#f4f0e8`, `#e6decb`)
+  - Toque Nobre Rubi / Carmim em harmonia com o traje e beca solene (`#991b1b`, `#7f1d1d`)
 - Tipografia: Cinzel (`--font-cinzel`) para a marca monumental romana e Playfair Display / Cormorant Garamond nos títulos editoriais (perfeita harmonia com a tipografia do selo clássico), combinados com Plus Jakarta Sans para leitura confortável e límpida no corpo de texto.
 - Tom de voz: Empático, ético, atencioso aos detalhes, combativo, transparente e resolutivo.
 
 ## Conteúdo e Mídia
-- Logotipo e selo oficial em alta definição (`public/logo-seal.png`, `public/logo.png`).
-- Foto hero: Dr. Tomaz Henrique em terno azul com gravata verde e sobreposição do widget de autoridade (`public/tomaz-henrique-hero.jpg`).
-- Foto sobre: Apresentação institucional com Dr. Tomaz sorridente em sua mesa com Vade Mecum e crucifixo (`public/tomaz-henrique-apresentacao.png`).
-- Telefone / WhatsApp: (37) 99841-2455.
-- E-mail: contato@tomazhenrique.adv.br.
-- Redes Sociais: Instagram @advogado.tomaz (https://www.instagram.com/advogado.tomaz/).
-- Endereço da Sede: Rua Godofredo Gonçalves, 159, (Próximo à Clinaus) - Centro, Itaúna - MG, 35680-047, Brasil.
-- Horário de funcionamento: Segunda a Sexta das 08:30 às 18:00 (atendimento presencial com hora marcada e online).
-- Prova social: Nota máxima de 5,0 estrelas com 37 avaliações autênticas no Google Meu Negócio.
+- Logotipo e selo oficial em alta definição (`public/logo.png`, `public/logo-seal.png`).
+- Foto hero: Dra. Jaqueline Soares em look elegante vermelho transmitindo liderança, empatia e segurança jurídica (`public/jaqueline-soares-hero.png`).
+- Foto sobre: Dra. Jaqueline Soares em beca solene de formatura em Direito, refletindo compromisso inegociável com a Constituição (`public/jaqueline-soares-sobre.png`).
+- Telefone / WhatsApp: (31) 97577-2112.
+- E-mail: contato@jaquelinesoares.adv.br.
+- Redes Sociais: Instagram @adv.jaquelinesoaress (https://www.instagram.com/adv.jaquelinesoaress/).
+- Endereço da Sede: R. Timbiras, 150 - Bela Vista, Lagoa Santa - MG, 33239-314, Brasil.
+- Horário de funcionamento: Segunda a Sexta das 08:00 às 18:00 (atendimento presencial com hora marcada e online para todo o Brasil).
+- Prova social: Nota máxima de 5,0 estrelas com 19 avaliações autênticas no Google Meu Negócio.

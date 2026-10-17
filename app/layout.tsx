@@ -36,34 +36,37 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#090706",
+  themeColor: "#08080a",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.tomazhenrique.adv.br"),
+  metadataBase: new URL("https://www.jaquelinesoares.adv.br"),
   title:
-    "Tomaz Henrique — Advogado Especializado | Trabalhista & Previdenciário em Itaúna - MG",
+    "Jaqueline Soares — Advogada | Escritório de Advocacia em Lagoa Santa - MG",
   description:
-    "Advocacia especializada em Direito do Trabalho e Direito Previdenciário (INSS) com o Dr. Tomaz Henrique. Atendimento atencioso, combate técnico incisivo e foco em resultados em Itaúna e região. Nota máxima 5,0 ★ no Google.",
+    "Advocacia ética, combativa e humanizada com a Dra. Jaqueline Soares em Lagoa Santa e Vetor Norte - MG. Atendimento especializado em Direito de Família, Cível, Consumidor, Trabalhista e Previdenciário (INSS). Nota máxima 5,0 ★ no Google.",
   keywords: [
-    "Tomaz Henrique Advogado",
-    "Tomaz Henrique Advogado Especializado",
-    "Advogado em Itaúna",
-    "Advogado Trabalhista em Itaúna",
-    "Advogado Previdenciário Itaúna",
-    "Escritório de Advocacia Itaúna MG",
-    "Dr Tomaz Henrique",
-    "Aposentadoria INSS Itaúna",
-    "Auxílio Doença INSS Itaúna",
-    "BPC LOAS Itaúna",
-    "Cálculo Trabalhista e Rescisão",
-    "Horas Extras e Direitos do Trabalhador",
-    "Pensão por Morte Itaúna",
-    "Advocacia Itaúna Minas Gerais",
+    "Jaqueline Soares Advogada",
+    "Jaqueline Soares Advocacia",
+    "Advogada em Lagoa Santa",
+    "Advogada em Lagoa Santa MG",
+    "Escritório de Advocacia Lagoa Santa",
+    "Dra Jaqueline Soares",
+    "Advogada Vetor Norte MG",
+    "Advogada Direito de Família Lagoa Santa",
+    "Divórcio e Pensão Lagoa Santa",
+    "Inventário e Partilha Lagoa Santa",
+    "Advogada Trabalhista Lagoa Santa",
+    "Advogada Previdenciário INSS Lagoa Santa",
+    "Aposentadoria INSS Lagoa Santa",
+    "BPC LOAS Lagoa Santa",
+    "Direito do Consumidor Lagoa Santa",
+    "Contratos e Indenizações Lagoa Santa",
+    "Advocacia Lagoa Santa Minas Gerais",
   ],
-  authors: [{ name: "Dr. Tomaz Henrique" }],
-  creator: "Tomaz Henrique — Escritório de Advocacia",
-  publisher: "Tomaz Henrique — Escritório de Advocacia",
+  authors: [{ name: "Dra. Jaqueline Soares" }],
+  creator: "Jaqueline Soares — Escritório de Advocacia",
+  publisher: "Jaqueline Soares — Escritório de Advocacia",
   formatDetection: {
     telephone: true,
     address: true,
@@ -80,18 +83,18 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.tomazhenrique.adv.br",
+    url: "https://www.jaquelinesoares.adv.br",
     title:
-      "Tomaz Henrique — Advogado Especializado | Trabalhista & Previdenciário em Itaúna - MG",
+      "Jaqueline Soares — Advogada | Escritório de Advocacia em Lagoa Santa - MG",
     description:
-      "Atendimento jurídico de excelência, humanizado e focado em resultados reais. Referência em Direito do Trabalho e Previdenciário em Itaúna e região. Nota 5,0 ★ no Google.",
-    siteName: "Tomaz Henrique — Escritório de Advocacia",
+      "Atendimento jurídico de excelência, humanizado e focado em resultados reais. Referência em Lagoa Santa e Vetor Norte. Nota 5,0 ★ no Google.",
+    siteName: "Jaqueline Soares — Escritório de Advocacia",
     images: [
       {
-        url: "/logo-seal.png",
-        width: 660,
-        height: 652,
-        alt: "Tomaz Henrique — Escritório de Advocacia",
+        url: "/logo.png",
+        width: 1024,
+        height: 512,
+        alt: "Jaqueline Soares — Escritório de Advocacia",
       },
     ],
   },
@@ -105,43 +108,45 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Tomaz Henrique — Escritório de Advocacia",
-    alternateName: "Tomaz Henrique Advogado Especializado",
+    name: "Jaqueline Soares — Escritório de Advocacia",
+    alternateName: "Dra. Jaqueline Soares Advogada",
     founder: [
       {
         "@type": "Person",
-        name: "Dr. Tomaz Henrique",
-        jobTitle: "Advogado Especialista em Direito Trabalhista e Previdenciário",
+        name: "Dra. Jaqueline Soares",
+        jobTitle: "Advogada Fundadora e Consultora Jurídica",
       },
     ],
-    telephone: "+55-37-99841-2455",
-    url: "https://www.tomazhenrique.adv.br",
-    image: "https://www.tomazhenrique.adv.br/logo-seal.png",
+    telephone: "+55-31-97577-2112",
+    url: "https://www.jaquelinesoares.adv.br",
+    image: "https://www.jaquelinesoares.adv.br/logo.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress:
-        "Rua Godofredo Gonçalves, 159, Centro (Próximo à Clinaus)",
-      addressLocality: "Itaúna",
+      streetAddress: "R. Timbiras, 150 - Bela Vista",
+      addressLocality: "Lagoa Santa",
       addressRegion: "MG",
-      postalCode: "35680-047",
+      postalCode: "33239-314",
       addressCountry: "BR",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: -20.0754,
-      longitude: -44.5764,
+      latitude: -19.6305,
+      longitude: -43.9015,
     },
     priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "37",
+      reviewCount: "19",
     },
     areaServed: [
-      "Itaúna",
-      "Pará de Minas",
-      "Divinópolis",
-      "Mateus Leme",
+      "Lagoa Santa",
+      "Vetor Norte",
+      "Confins",
+      "Pedro Leopoldo",
+      "Vespasiano",
+      "Santa Luzia",
+      "Belo Horizonte",
       "Minas Gerais",
       "Brasil",
     ],
@@ -155,13 +160,13 @@ export default function RootLayout({
           "Thursday",
           "Friday",
         ],
-        opens: "08:30",
+        opens: "08:00",
         closes: "18:00",
       },
     ],
     sameAs: [
-      "https://www.instagram.com/advogado.tomaz/",
-      "https://wa.me/5537998412455",
+      "https://www.instagram.com/adv.jaquelinesoaress/",
+      "https://wa.me/5531975772112",
     ],
   };
 
@@ -179,7 +184,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen overflow-x-clip bg-[#090706] font-sans text-stone-100 antialiased selection:bg-[#c97f48] selection:text-[#090706]">
+      <body className="min-h-screen overflow-x-clip bg-[#08080a] font-sans text-stone-100 antialiased selection:bg-[#dfb76c] selection:text-[#08080a]">
         {children}
       </body>
     </html>

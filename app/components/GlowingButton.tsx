@@ -11,11 +11,13 @@ interface GlowingButtonProps {
   size?: "sm" | "md" | "lg";
   variant?:
     | "gold"
+    | "gold-dark"
     | "rosegold"
     | "champagne"
     | "bronze"
     | "dark"
     | "outline"
+    | "ruby"
     | "white";
 }
 
@@ -34,26 +36,30 @@ export default function GlowingButton({
     lg: "px-7 py-4 text-xs tracking-[0.14em]",
   }[size];
 
-  // Refined metallic bronze, warm copper and deep obsidian styling for Tomaz Henrique Advocacia
+  // Refined metallic royal gold and obsidian styling for Jaqueline Soares Advocacia
   const variantClasses = {
     gold:
-      "border border-[#fae0c8]/40 bg-gradient-to-r from-[#8f4d22] via-[#c97f48] to-[#8f4d22] text-white font-bold shadow-md shadow-[#090706]/50 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-bronze",
+      "border border-[#fdefb4]/60 bg-gradient-to-r from-[#c59b48] via-[#f4c87b] to-[#c59b48] text-[#140e04] font-bold shadow-md shadow-[#08080a]/60 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold",
+    "gold-dark":
+      "border border-[#dfb76c]/40 bg-gradient-to-r from-[#7a5410] via-[#a67c1e] to-[#7a5410] text-white font-bold shadow-md hover:-translate-y-0.5 hover:brightness-110 hover:shadow-gold",
     rosegold:
-      "border border-[#fae0c8]/40 bg-gradient-to-r from-[#a86131] via-[#d48c52] to-[#a86131] text-white font-bold shadow-md shadow-[#090706]/50 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-bronze",
+      "border border-[#fddf9b]/40 bg-gradient-to-r from-[#a67c1e] via-[#dfb76c] to-[#a67c1e] text-white font-bold shadow-md shadow-[#08080a]/50 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-gold",
     champagne:
-      "border border-[#e5a26c]/60 bg-gradient-to-r from-[#fdf6ee] via-[#fae0c8] to-[#fdf6ee] text-[#241308] font-bold shadow-sm hover:-translate-y-0.5 hover:shadow-bronze hover:brightness-105",
+      "border border-[#fdefb4]/60 bg-gradient-to-r from-[#fdf8e8] via-[#fdefb4] to-[#fdf8e8] text-[#1e1507] font-bold shadow-sm hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold",
     bronze:
-      "border border-[#c97f48]/50 bg-gradient-to-r from-[#54280c] via-[#8f4d22] to-[#54280c] text-white font-bold shadow-md shadow-[#090706]/50 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-bronze",
+      "border border-[#a67c1e]/50 bg-gradient-to-r from-[#472c06] via-[#7a5410] to-[#472c06] text-white font-bold shadow-md shadow-[#08080a]/50 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-gold",
     dark:
-      "border border-[#c97f48]/35 bg-[#120e0b] text-[#fae0c8] shadow-sm shadow-[#090706]/50 hover:-translate-y-0.5 hover:border-[#e5a26c] hover:bg-[#1f1610] hover:text-white hover:shadow-bronze",
+      "border border-[#dfb76c]/35 bg-[#141419] text-[#fdefb4] shadow-sm shadow-[#08080a]/50 hover:-translate-y-0.5 hover:border-[#f4c87b] hover:bg-[#1c1c24] hover:text-white hover:shadow-gold",
     outline:
-      "border border-[#c97f48]/60 bg-transparent text-[#e5a26c] hover:-translate-y-0.5 hover:border-[#fae0c8] hover:bg-[#c97f48]/15 hover:text-white",
+      "border border-[#dfb76c]/60 bg-transparent text-[#dfb76c] hover:-translate-y-0.5 hover:border-[#fdefb4] hover:bg-[#dfb76c]/15 hover:text-white",
+    ruby:
+      "border border-[#ef4444]/40 bg-gradient-to-r from-[#7f1d1d] via-[#991b1b] to-[#7f1d1d] text-white font-bold shadow-md hover:-translate-y-0.5 hover:brightness-110",
     white:
-      "border border-[#c97f48]/40 bg-white text-[#1a110a] shadow-sm hover:-translate-y-0.5 hover:bg-[#fdf6ee] hover:text-[#090706] hover:shadow-md",
+      "border border-[#dfb76c]/40 bg-white text-[#140e04] shadow-sm hover:-translate-y-0.5 hover:bg-[#fdf8e8] hover:text-[#08080a] hover:shadow-md",
   }[variant];
 
   const classes =
-    "inline-flex items-center justify-center gap-2 rounded-lg font-bold uppercase transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#c97f48] select-none text-center cursor-pointer " +
+    "inline-flex items-center justify-center gap-2 rounded-lg font-bold uppercase transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#dfb76c] select-none text-center cursor-pointer " +
     sizeClasses +
     " " +
     variantClasses +

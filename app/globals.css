@@ -2,53 +2,57 @@
 
 :root {
   color-scheme: dark;
-  --brand-bronze-light: #fdf6ee;
-  --brand-bronze-highlight: #fae0c8;
-  --brand-bronze-accent: #e5a26c;
-  --brand-bronze: #c97f48;
-  --brand-bronze-dark: #a86131;
-  --brand-bronze-deep: #80441c;
-  --brand-bronze-shadow: #54280c;
-  --brand-obsidian: #090706;
-  --brand-charcoal: #120e0b;
-  --brand-surface: #1a1410;
-  --brand-surface-elevated: #231b15;
-  --brand-ink: #fcfbfa;
-  --brand-ink-soft: #dfd6cb;
-  --brand-pearl: #090706;
-  --brand-paper: #120e0b;
+  --brand-gold-light: #fdf8e8;
+  --brand-gold-highlight: #fdefb4;
+  --brand-gold-shimmer: #fddf9b;
+  --brand-gold-accent: #f4c87b;
+  --brand-gold: #dfb76c;
+  --brand-gold-rich: #cd984c;
+  --brand-gold-dark: #a67c1e;
+  --brand-gold-deep: #7a5410;
+  --brand-gold-shadow: #472c06;
+  --brand-obsidian: #08080a;
+  --brand-charcoal: #101014;
+  --brand-surface: #15151a;
+  --brand-surface-elevated: #1e1e26;
+  --brand-ink: #fbfaf7;
+  --brand-ink-soft: #dcd6cb;
+  --brand-pearl: #faf8f5;
+  --brand-paper: #f4f0e8;
 }
 
 @theme inline {
   --font-serif: var(--font-serif), var(--font-display), "Playfair Display", "Cormorant Garamond", serif;
   --font-cinzel: var(--font-cinzel), "Cinzel", "Trajan Pro", serif;
   --font-sans: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
-  --color-ink: #fcfbfa;
-  --color-ink-soft: #dfd6cb;
-  --color-pearl: #090706;
-  --color-brand-50: #0e0a08;
-  --color-brand-100: #17110c;
-  --color-brand-200: #211812;
-  --color-brand-300: #2d2119;
-  --color-brand-400: #c97f48;
-  --color-brand-500: #a86131;
-  --color-brand-600: #8f4d22;
-  --color-brand-700: #743c18;
-  --color-brand-800: #54280c;
-  --color-brand-900: #361705;
-  --color-brand-950: #090706;
-  --color-gold-100: #fdf6ee;
-  --color-gold-200: #fae0c8;
-  --color-gold-300: #f4cba4;
-  --color-gold-400: #e5a26c;
-  --color-gold-500: #c97f48;
-  --color-gold-600: #a86131;
-  --color-gold-700: #80441c;
-  --shadow-card: 0 18px 48px rgba(0, 0, 0, 0.76);
-  --shadow-gold: 0 10px 30px rgba(201, 127, 72, 0.28);
-  --shadow-bronze: 0 10px 30px rgba(201, 127, 72, 0.32);
-  --shadow-obsidian: 0 16px 45px rgba(0, 0, 0, 0.88);
-  --shadow-glow: 0 0 35px rgba(229, 162, 108, 0.28);
+  --color-ink: #fbfaf7;
+  --color-ink-soft: #dcd6cb;
+  --color-pearl: #08080a;
+  --color-brand-50: #0c0c0f;
+  --color-brand-100: #141419;
+  --color-brand-200: #1c1c24;
+  --color-brand-300: #262632;
+  --color-brand-400: #dfb76c;
+  --color-brand-500: #c59b48;
+  --color-brand-600: #a67c1e;
+  --color-brand-700: #7a5410;
+  --color-brand-800: #472c06;
+  --color-brand-900: #231502;
+  --color-brand-950: #08080a;
+  --color-gold-100: #fdf8e8;
+  --color-gold-200: #fdefb4;
+  --color-gold-300: #fddf9b;
+  --color-gold-400: #f4c87b;
+  --color-gold-500: #dfb76c;
+  --color-gold-600: #c59b48;
+  --color-gold-700: #a67c1e;
+  --color-gold-800: #7a5410;
+  --color-gold-900: #472c06;
+  --shadow-card: 0 18px 48px rgba(0, 0, 0, 0.78);
+  --shadow-gold: 0 10px 30px rgba(223, 183, 108, 0.32);
+  --shadow-bronze: 0 10px 30px rgba(223, 183, 108, 0.32);
+  --shadow-obsidian: 0 16px 45px rgba(0, 0, 0, 0.92);
+  --shadow-glow: 0 0 35px rgba(244, 200, 123, 0.35);
 }
 
 html {
@@ -57,15 +61,15 @@ html {
 }
 
 body {
-  background: #090706;
-  color: #fcfbfa;
+  background: #08080a;
+  color: #fbfaf7;
   font-family: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
-  caret-color: #c97f48;
+  caret-color: #dfb76c;
 }
 
 ::selection {
-  background: #c97f48;
-  color: #090706;
+  background: #dfb76c;
+  color: #08080a;
 }
 
 .font-cinzel {
@@ -85,11 +89,11 @@ body {
 }
 
 .eyebrow {
-  color: #d48c52;
+  color: #dfb76c;
 }
 
 .eyebrow-light {
-  color: #8f4d22;
+  color: #a67c1e;
 }
 
 .eyebrow::before,
@@ -104,7 +108,7 @@ body {
 .nav-link {
   position: relative;
   padding-block: 0.5rem;
-  color: #dfd6cb;
+  color: #dcd6cb;
   font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -118,7 +122,7 @@ body {
   bottom: 0;
   left: 0;
   height: 1px;
-  background: #c97f48;
+  background: #dfb76c;
   content: "";
   transform: scaleX(0);
   transform-origin: left;
@@ -146,17 +150,17 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #090706;
+  background: #08080a;
 }
 
 ::-webkit-scrollbar-thumb {
-  border: 2px solid #090706;
+  border: 2px solid #08080a;
   border-radius: 999px;
-  background: #54280c;
+  background: #472c06;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #c97f48;
+  background: #dfb76c;
 }
 
 @media (prefers-reduced-motion: reduce) {
