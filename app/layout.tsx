@@ -36,38 +36,36 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#080b11",
+  themeColor: "#0c0a08",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.brunomarques.adv.br"),
+  metadataBase: new URL("https://www.juliaandrade.adv.br"),
   title:
-    "Bruno Marques Advocacia | Escritório de Advocacia em Carmo do Paranaíba - MG",
+    "Júlia Andrade — Advocacia e Consultoria | Advogada Trabalhista em Três Pontas - MG",
   description:
-    "Advocacia ética, combativa e resolutiva com o Dr. Bruno Marques em Carmo do Paranaíba e região. Atendimento especializado em Direito Cível, Família e Sucessões, Consumidor, Trabalhista, Previdenciário (INSS) e Contratos. Nota máxima 5,0 ★ no Google.",
+    "Advocacia Trabalhista humanizada, ética e combativa com a Dra. Júlia Andrade em Três Pontas e região. Especialista em Rescisão Indireta, Horas Extras, Verbas Rescisórias, Insalubridade, Periculosidade e Acidentes de Trabalho. Nota máxima 5,0 ★ no Google com 74 avaliações.",
   keywords: [
-    "Bruno Marques Advocacia",
-    "Bruno Marques Advogado",
-    "Dr Bruno Marques",
-    "Advogado em Carmo do Paranaíba",
-    "Advogado em Carmo do Paranaíba MG",
-    "Escritório de Advocacia Carmo do Paranaíba",
-    "Advogado Carmo do Paranaíba Minas Gerais",
-    "Advogado Alto Paranaíba MG",
-    "Advogado Direito de Família Carmo do Paranaíba",
-    "Divórcio e Inventário Carmo do Paranaíba",
-    "Advogado Trabalhista Carmo do Paranaíba",
-    "Advogado Previdenciário INSS Carmo do Paranaíba",
-    "Aposentadoria INSS Carmo do Paranaíba",
-    "BPC LOAS Carmo do Paranaíba",
-    "Direito do Consumidor Carmo do Paranaíba",
-    "Ações Contra Bancos Carmo do Paranaíba",
-    "Contratos e Indenizações Carmo do Paranaíba",
-    "Advocacia Carmo do Paranaíba Minas Gerais",
+    "Júlia Andrade Advocacia",
+    "Júlia Andrade Advogada Trabalhista",
+    "Dra Júlia Andrade",
+    "Advogada em Três Pontas",
+    "Advogada em Três Pontas MG",
+    "Advogada Trabalhista Três Pontas",
+    "Escritório de Advocacia Três Pontas",
+    "Advogado Trabalhista Três Pontas Minas Gerais",
+    "Advogado Sul de Minas MG",
+    "Rescisão Indireta Três Pontas",
+    "Horas Extras Advogada Três Pontas",
+    "Acidente de Trabalho Indenização Três Pontas",
+    "Insalubridade e Periculosidade Três Pontas",
+    "Reconhecimento de Vínculo Três Pontas",
+    "Demissão Injusta Direitos Trabalhistas",
+    "Advocacia Trabalhista Humanizada",
   ],
-  authors: [{ name: "Dr. Bruno Marques" }],
-  creator: "Bruno Marques Advocacia",
-  publisher: "Bruno Marques Advocacia",
+  authors: [{ name: "Dra. Júlia Andrade" }],
+  creator: "Júlia Andrade — Advocacia e Consultoria",
+  publisher: "Júlia Andrade — Advocacia e Consultoria",
   formatDetection: {
     telephone: true,
     address: true,
@@ -84,18 +82,18 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.brunomarques.adv.br",
+    url: "https://www.juliaandrade.adv.br",
     title:
-      "Bruno Marques Advocacia | Escritório de Advocacia em Carmo do Paranaíba - MG",
+      "Júlia Andrade — Advocacia e Consultoria | Advogada Trabalhista em Três Pontas - MG",
     description:
-      "Atendimento jurídico de excelência, resolutivo e focado em resultados reais. Referência em Carmo do Paranaíba e região. Nota máxima 5,0 ★ no Google.",
-    siteName: "Bruno Marques Advocacia",
+      "⚖️ Ajudo trabalhadores a terem seus direitos reconhecidos e preservados. Atendimento humanizado, transparente e focado em resultados. Nota máxima 5,0 ★ no Google com 74 avaliações.",
+    siteName: "Júlia Andrade — Advocacia e Consultoria",
     images: [
       {
         url: "/logo.png",
         width: 1024,
         height: 341,
-        alt: "Bruno Marques Advocacia",
+        alt: "Júlia Andrade — Advocacia e Consultoria",
       },
     ],
   },
@@ -109,44 +107,44 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Bruno Marques Advocacia",
-    alternateName: "Dr. Bruno Marques Advogado",
+    name: "Júlia Andrade — Advocacia e Consultoria",
+    alternateName: "Dra. Júlia Andrade Advogada Trabalhista",
     founder: [
       {
         "@type": "Person",
-        name: "Dr. Bruno Marques",
-        jobTitle: "Advogado Titular e Consultor Jurídico",
+        name: "Dra. Júlia Andrade",
+        jobTitle: "Advogada Trabalhista e Consultora Jurídica",
       },
     ],
-    telephone: "+55-34-99716-3580",
-    url: "https://www.brunomarques.adv.br",
-    image: "https://www.brunomarques.adv.br/logo.png",
+    telephone: "+55-35-99816-0724",
+    url: "https://www.juliaandrade.adv.br",
+    image: "https://www.juliaandrade.adv.br/logo.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Rua Franklin Mendonça, 341",
-      addressLocality: "Carmo do Paranaíba",
+      streetAddress: "R. São Pedro, 45 - Centro",
+      addressLocality: "Três Pontas",
       addressRegion: "MG",
-      postalCode: "38840-056",
+      postalCode: "37185-038",
       addressCountry: "BR",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: -19.0019,
-      longitude: -46.3142,
+      latitude: -21.3697,
+      longitude: -45.5097,
     },
     priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "10",
+      reviewCount: "74",
     },
     areaServed: [
-      "Carmo do Paranaíba",
-      "Arapuá",
-      "Rio Paranaíba",
-      "Patos de Minas",
-      "São Gotardo",
-      "Tiros",
+      "Três Pontas",
+      "Varginha",
+      "Santana da Vargem",
+      "Boa Esperança",
+      "Campos Gerais",
+      "Nepomuceno",
       "Minas Gerais",
       "Brasil",
     ],
@@ -161,12 +159,12 @@ export default function RootLayout({
           "Friday",
         ],
         opens: "08:00",
-        closes: "18:00",
+        closes: "22:30",
       },
     ],
     sameAs: [
-      "https://www.instagram.com/brunomarques.advv/",
-      "https://wa.me/5534997163580",
+      "https://www.instagram.com/juliaandradeadvogada/",
+      "https://wa.me/5535998160724",
     ],
   };
 
@@ -184,7 +182,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen overflow-x-clip bg-[#080b11] font-sans text-stone-100 antialiased selection:bg-[#c59b48] selection:text-[#080b11]">
+      <body className="min-h-screen overflow-x-clip bg-[#0c0a08] font-sans text-stone-100 antialiased selection:bg-[#c89345] selection:text-[#0c0a08]">
         {children}
       </body>
     </html>
