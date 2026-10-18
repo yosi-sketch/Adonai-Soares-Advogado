@@ -26,28 +26,28 @@ import {
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
 
-const WHATSAPP_NUMBER = "5531975772112";
-const PHONE_DISPLAY = "(31) 97577-2112";
-const EMAIL_CONTACT = "contato@jaquelinesoares.adv.br";
-const INSTAGRAM_URL = "https://www.instagram.com/adv.jaquelinesoaress/";
-const INSTAGRAM_HANDLE = "@adv.jaquelinesoaress";
+const WHATSAPP_NUMBER = "5534997163580";
+const PHONE_DISPLAY = "(34) 99716-3580";
+const EMAIL_CONTACT = "contato@brunomarques.adv.br";
+const INSTAGRAM_URL = "https://www.instagram.com/brunomarques.advv/";
+const INSTAGRAM_HANDLE = "@brunomarques.advv";
 
 const ADDRESS_TEXT =
-  "R. Timbiras, 150 - Bela Vista, Lagoa Santa - MG, 33239-314, Brasil";
+  "Rua Franklin Mendonça, 341 - Carmo do Paranaíba, MG, 38840-056, Brasil";
 const GOOGLE_MAPS_URL =
-  "https://www.google.com/maps/search/?api=1&query=Jaqueline+Soares+Advogada+Rua+Timbiras+150+Lagoa+Santa+MG";
+  "https://www.google.com/search?q=Bruno+Marques+Advocacia%0ACarmo+do+Parana%C3%ADba+%C2%B7+MG";
 
-const LOGO_SEAL_SRC = "/logo-seal.png";
+const LOGO_SEAL_SRC = "/logo-symbol.png";
 const LOGO_FULL_SRC = "/logo.png";
-const FOTO_HERO_SRC = "/jaqueline-soares-hero.png";
-const FOTO_SOBRE_SRC = "/jaqueline-soares-sobre.png";
+const FOTO_HERO_SRC = "/bruno-marques-sobre.png";
+const FOTO_SOBRE_SRC = "/bruno-marques-hero.png";
 
 function getWhatsAppUrl(
   message?: string,
   number: string = WHATSAPP_NUMBER
 ) {
   const defaultText =
-    "Olá, Dra. Jaqueline Soares! Gostaria de consultar sobre meus direitos e agendar um atendimento no escritório.";
+    "Olá, Dr. Bruno Marques! Gostaria de consultar sobre meus direitos e agendar um atendimento no escritório.";
   return `https://wa.me/${number}?text=${encodeURIComponent(
     message || defaultText
   )}`;
@@ -157,225 +157,176 @@ interface PracticeArea {
 
 const practiceAreas: PracticeArea[] = [
   {
-    id: "direito-de-familia-sucessoes-lagoa-santa",
+    id: "direito-civel-conflitos-complexos",
+    title: "Direito Cível & Resolução Estratégica de Conflitos",
+    icon: Scale,
+    tag: "Indenizações · Casos Complexos · Cobranças · Disputas Cíveis",
+    summary:
+      "Defesa contundente do seu patrimônio e direitos civis, com estratégias acertadas para reverter demandas desafiadoras e garantir justa reparação.",
+    details:
+      "O Dr. Bruno Marques atua de maneira incisiva e altamente estratégica em litígios cíveis. Seja na recuperação de créditos, defesas patrimoniais ou ações indenizatórias por danos morais e materiais, construímos uma fundamentação jurídica robusta para garantir o êxito que o cliente busca, com acompanhamento próximo em cada fase processual.",
+    topics: [
+      "Ações indenizatórias por Danos Morais, Danos Materiais e Danos Estéticos",
+      "Condução estratégica e reversão de demandas complexas ou tidas como casos desafiadores",
+      "Cobrança judicial e extrajudicial de títulos de crédito, contratos e haveres",
+      "Ações possessórias, usucapião, reintegração de posse e litígios imobiliários",
+      "Defesa patrimonial contra penhoras indevidas e embargos à execução",
+      "Mediação de conflitos, negociação estratégica e acordos com segurança jurídica",
+    ],
+    whatsAppText:
+      "Olá, Dr. Bruno Marques! Gostaria de consultar sobre uma ação na área Cível / Indenizações.",
+  },
+  {
+    id: "direito-de-familia-sucessoes-carmo",
     title: "Direito de Família & Sucessões",
     icon: Users,
     tag: "Divórcio · Guarda · Alimentos · Inventário & Partilha",
     summary:
-      "Acolhimento sensível e proteção jurídica integral para resguardar seus filhos, seu patrimônio e a harmonia familiar em momentos delicados.",
+      "Condução ética, humana e segura para resguardar seus filhos, seu patrimônio e trazer tranquilidade em momentos familiares decisivos.",
     details:
-      "A Dra. Jaqueline Soares conduz causas de família com empatia, discrição e firmeza técnica. Atuamos em divórcios consensuais e litigiosos, fixação e revisão de pensão alimentícia, guarda compartilhada, partilha criteriosa de patrimônio, inventários rápidos em cartório e judiciais, sempre buscando soluções equilibradas e seguras.",
+      "Atuação com escuta atenta, discrição e firmeza técnica em causas de família e sucessões. Atuamos em divórcios consensuais em cartório e judiciais, pensão alimentícia, guarda e convivência, partilha de bens e inventários ágeis, priorizando sempre a segurança jurídica e a dignidade das partes.",
     topics: [
       "Divórcio Consensual em Cartório (rápido e desburocratizado) e Divórcio Litigioso",
       "Fixação, Revisional e Execução de Pensão Alimentícia com cobrança ágil",
-      "Guarda Compartilhada, Regime de Convivência e Alienação Parental",
+      "Guarda Compartilhada, Regulamentação de Convivência e Proteção dos Filhos",
       "Inventário Extrajudicial em Cartório e Inventário Judicial com partilha justa de bens",
-      "Reconhecimento e Dissolução de União Estável com meação e proteção de direitos",
+      "Reconhecimento e Dissolução de União Estável com apuração de meação",
       "Planejamento Sucessório, Doações em Vida e Testamentos patrimoniais",
     ],
     whatsAppText:
-      "Olá, Dra. Jaqueline Soares! Gostaria de consultar sobre uma questão de Direito de Família / Inventário.",
-  },
-  {
-    id: "direito-civel-indenizacoes-lagoa-santa",
-    title: "Direito Cível & Responsabilidade Civil",
-    icon: Scale,
-    tag: "Indenizações · Danos Morais · Cobranças · Disputas Cíveis",
-    summary:
-      "Defesa contundente dos seus interesses patrimoniais e morais, com foco na reparação integral de danos e resolução rápida de litígios.",
-    details:
-      "Atuação minuciosa e estratégica em ações de cobrança judicial e extrajudicial, execução de títulos, reparações por perdas e danos, indenizações decorrentes de ilícitos contratuais ou extracontratuais, ações de despejo, rescisões e regularização de imóveis perante cartórios e órgãos públicos.",
-    topics: [
-      "Ações indenizatórias por Danos Morais, Materiais e Danos Estéticos",
-      "Cobrança extrajudicial e judicial de títulos, notas promissórias e créditos devidos",
-      "Ações possessórias, reintegração de posse, usucapião e litígios imobiliários",
-      "Ações de despejo, rescisões de contratos de aluguel e cobrança de aluguéis",
-      "Embargos à Execução e defesa patrimonial contra penhoras ilegais",
-      "Mediação de conflitos e acordos extrajudiciais seguros",
-    ],
-    whatsAppText:
-      "Olá, Dra. Jaqueline Soares! Gostaria de uma assessoria jurídica na área Cível / Indenizações.",
+      "Olá, Dr. Bruno Marques! Gostaria de orientação sobre uma questão de Direito de Família / Inventário.",
   },
   {
     id: "direito-do-consumidor-defesa-bancaria",
     title: "Direito do Consumidor & Defesa Bancária",
     icon: ShieldCheck,
-    tag: "SPC/Serasa · Golpes Bancários · Empréstimos · Planos de Saúde",
+    tag: "SPC/Serasa · Golpes Bancários · Juros Abusivos · Empréstimos",
     summary:
-      "Defesa firme contra arbitrariedades financeiras, negativações indevidas, fraudes em empréstimos e abusos praticados por grandes empresas.",
+      "Combate incisivo contra abusos de instituições financeiras, negativações indevidas, fraudes em empréstimos e cobranças ilegais.",
     details:
-      "Combatemos com agilidade fraudes bancárias (golpe do Pix, consignados não contratados), negativações ilegais no SPC e Serasa com pedido de liminar e indenização por danos morais, cancelamento de planos de saúde abusivos e exigência de tratamentos médicos essenciais negados.",
+      "Atuação célere para proteger cidadãos e produtores contra arbitrariedades bancárias, fraudes eletrônicas (golpes do Pix, consignados não contratados), negativações ilegais no SPC e Serasa com pedido de liminar e indenização por danos morais, além de revisão judicial de cláusulas financeiras abusivas.",
     topics: [
-      "Liminar urgente para retirada do nome do SPC/Serasa e indenização por dano moral",
-      "Ações contra fraudes em empréstimos consignados, cartões de crédito e fraudes Pix",
-      "Ações contra planos de saúde por negativa indevida de cirurgias, remédios e exames",
-      "Revisão de contratos com juros abusivos, tarifas ilegais e vendas casadas",
-      "Indenizações por atraso ou cancelamento de voos e extravio de bagagens",
-      "Devolução em dobro de quantias cobradas indevidamente de consumidores",
+      "Liminar urgente para exclusão imediata do nome do SPC/Serasa e indenização moral",
+      "Ações judiciais contra fraudes em empréstimos consignados, cartões e golpes via Pix",
+      "Ações revisionais de financiamentos e contratos com juros extorsivos e tarifas ilegais",
+      "Restituição em dobro de quantias cobradas indevidamente por bancos e empresas",
+      "Defesa contra cobranças vexatórias, vendas casadas e abusos contratuais",
+      "Indenizações por cancelamento/atraso de voos e falhas graves na prestação de serviços",
     ],
     whatsAppText:
-      "Olá, Dra. Jaqueline Soares! Gostaria de consultar sobre problemas com consumidor, banco ou negativação indevida.",
+      "Olá, Dr. Bruno Marques! Preciso de assessoria jurídica contra abusos de banco ou problemas com consumidor.",
   },
   {
-    id: "direito-do-trabalho-lagoa-santa",
-    title: "Direito Trabalhista & Defesa do Trabalhador",
+    id: "direito-trabalhista-carmo-paranaiba",
+    title: "Direito Trabalhista & Defesa de Direitos",
     icon: Briefcase,
     tag: "Rescisão · Horas Extras · Insalubridade · Acidente de Trabalho",
     summary:
-      "Atuação combativa para assegurar o pagamento integral de todas as verbas rescisórias, adicionais de risco e direitos sonegados pelo empregador.",
+      "Atuação combativa para assegurar o recebimento integral de todas as verbas rescisórias, adicionais de risco e direitos sonegados.",
     details:
-      "Análise profunda de contratos, holerites e cartões de ponto para recuperar direitos violados. Atuamos com rigor no cálculo de horas extras, adicionais de insalubridade e periculosidade, rescisão indireta quando o empregador descumpre obrigações, e indenizações por assédio moral ou acidente no trabalho.",
+      "Análise técnica e rigorosa de contratos, holerites e cartões de ponto para recuperar direitos violados. Atuamos com dedicação em rescisões indiretas por descumprimento do empregador, cálculo exato de horas extras, adicionais de insalubridade e periculosidade, e indenizações decorrentes de acidentes de trabalho.",
     topics: [
       "Cobrança integral de verbas rescisórias, aviso prévio e multas da CLT (arts. 467 e 477)",
       "Rescisão Indireta por atraso salarial, falta de recolhimento de FGTS ou assédio moral",
-      "Cálculo e cobrança de Horas Extras, intervalo intrajornada suprimido e adicional noturno",
-      "Adicionais de Insalubridade e Periculosidade para funções expostas a riscos",
-      "Reconhecimento de vínculo de emprego sem carteira assinada e liberação de FGTS",
-      "Indenização por Acidente de Trabalho, doença profissional e garantia de estabilidade",
+      "Cálculo e cobrança de Horas Extras, adicional noturno e intervalos suprimidos",
+      "Adicionais de Insalubridade e Periculosidade para funções expostas a agentes nocivos",
+      "Reconhecimento de vínculo empregatício sem registro em carteira e liberação de FGTS",
+      "Indenização por Acidente de Trabalho, doença ocupacional e garantia de estabilidade",
     ],
     whatsAppText:
-      "Olá, Dra. Jaqueline Soares! Gostaria de consultar sobre meus direitos trabalhistas com seu escritório.",
+      "Olá, Dr. Bruno Marques! Gostaria de uma avaliação sobre os meus direitos trabalhistas.",
   },
   {
-    id: "direito-previdenciario-inss-lagoa-santa",
+    id: "direito-previdenciario-inss-carmo",
     title: "Direito Previdenciário (INSS) & BPC/LOAS",
     icon: Landmark,
     tag: "Aposentadorias · Auxílio-Doença · BPC LOAS · Planejamento",
     summary:
-      "Reversão de negativas do INSS, concessão de aposentadorias mais vantajosas e amparo a pessoas com deficiência e idosos.",
+      "Concessão de aposentadorias mais vantajosas, reversão de indeferimentos do INSS e amparo a pessoas com deficiência e idosos.",
     details:
-      "Planejamento previdenciário minucioso para conquistar o melhor benefício sem atrasos. Ajuizamos ações para restabelecer auxílio-doença cortado indevidamente, conversão em aposentadoria por invalidez, concessão de BPC/LOAS de 1 salário mínimo e cobrança de retroativos acumulados.",
+      "Planejamento previdenciário minucioso e atuação judicial firme contra negativas indevidas do INSS. Ajuizamos ações para concessão e restabelecimento de auxílio-doença cortado, conversão em aposentadoria por invalidez, benefício de prestação continuada (BPC/LOAS) e recuperação de retroativos acumulados.",
     topics: [
-      "Aposentadoria por Idade Urbana/Rural e aplicação da Regra de Transição mais vantajosa",
-      "Planejamento Previdenciário completo com retificação e acertos no CNIS",
-      "Ação contra negativa de Benefício por Incapacidade Temporária (Auxílio-Doença)",
+      "Aposentadoria por Idade Urbana e Rural com aplicação da regra mais vantajosa",
+      "Aposentadoria Especial para trabalhadores expostos a agentes nocivos ou periculosos",
+      "Ação contra negativa de benefício por incapacidade temporária (Auxílio-Doença)",
       "BPC/LOAS para idosos (65+) e pessoas com deficiência em situação de vulnerabilidade",
-      "Pensão por Morte para viúvos(as) e dependentes com retroativos desde o óbito",
-      "Cobrança de parcelas atrasadas e correção monetária desde a data do primeiro pedido",
+      "Pensão por Morte para viúvos(as) e dependentes com retroativos desde o falecimento",
+      "Planejamento Previdenciário completo com acerto e retificação de vínculos no CNIS",
     ],
     whatsAppText:
-      "Olá, Dra. Jaqueline Soares! Gostaria de auxílio para requerer aposentadoria ou benefício no INSS.",
+      "Olá, Dr. Bruno Marques! Gostaria de auxílio para requerer aposentadoria ou benefício no INSS.",
   },
   {
-    id: "consultoria-contratos-extrajudicial",
-    title: "Elaboração de Contratos & Assessoria Preventiva",
+    id: "consultoria-contratos-prevencao",
+    title: "Elaboração de Contratos & Advocacia Preventiva",
     icon: FileText,
-    tag: "Contratos · Blindagem Jurídica · Notificações · Pareceres",
+    tag: "Contratos · Agronegócio · Blindagem Jurídica · Pareceres",
     summary:
-      "Segurança jurídica e tranquilidade em seus negócios através de contratos bem estruturados, pareceres claros e negociações preventivas.",
+      "Segurança jurídica sólida e blindagem patrimonial através de contratos bem estruturados, pareceres claros e negociações preventivas.",
     details:
-      "Redação personalizada e revisão técnica de contratos de compra e venda imobiliária, locação residencial e empresarial, prestação de serviços e distratos. Notificações extrajudiciais formais para constituir devedores em mora e evitar ações judiciais onerosas e prolongadas.",
+      "Redação personalizada e revisão técnica de contratos civis, imobiliários, rurais (arrendamentos e parcerias agrícolas) e empresariais. Notificações extrajudiciais com fundamentação probatória e assessoria consultiva para prevenir passivos e litígios onerosos.",
     topics: [
-      "Elaboração e revisão minuciosa de Contratos de Compra e Venda de Imóveis",
+      "Elaboração e revisão minuciosa de Contratos de Compra e Venda de Imóveis e Propriedades Rurais",
+      "Contratos de Arrendamento Rural, Parceria Agrícola e Prestação de Serviços",
       "Contratos de Locação residencial e comercial com cláusulas protetivas seguras",
-      "Contratos de Prestação de Serviços para profissionais autônomos e empresas",
-      "Notificações Extrajudiciais com fundamentação legal e valor probatório",
-      "Análise de riscos contratuais e prevenção de litígios judiciais",
-      "Renegociação de débitos e elaboração de termos de confissão e quitação",
+      "Notificações Extrajudiciais formais para constituir devedores em mora com valor probatório",
+      "Análise preventiva de riscos contratuais e blindagem do patrimônio familiar e empresarial",
+      "Renegociação de passivos e elaboração de termos de confissão de dívida e quitação",
     ],
     whatsAppText:
-      "Olá, Dra. Jaqueline Soares! Gostaria de assessoria na elaboração ou revisão de contratos.",
+      "Olá, Dr. Bruno Marques! Gostaria de assessoria na elaboração ou revisão de contratos.",
   },
 ];
 
 const clientReviews = [
   {
-    name: "Eric Batista",
-    reviewsCount: "Avaliação no Google",
-    badge: "Ética Constitucional & Confiança",
-    content:
-      "Ótima Advogada, séria competente e extremamente responsável… Pode confiar pois ela é sim uma advogada que respeita a constituição e sempre dará o melhor para ter êxito nos seus processos… 5 estrelas é pouco perto do que ela merece… Confio de olhos vendados!",
-  },
-  {
-    name: "Luciana Carolina",
+    name: "Gabriel Ribeiro",
     reviewsCount: "4 avaliações no Google",
-    badge: "Segurança & Paciência",
+    badge: "Atendimento Atencioso & Seriedade",
     content:
-      "Excelente profissional! Uma advogada extremamente competente, dedicada e responsável. Sempre muito atenciosa, esclarece todas as dúvidas com muita paciência e transmite muita segurança durante todo o atendimento. É nítido o quanto ela ama o que faz.",
+      "Excelente profissional! Atendimento atencioso, comprometido e realizado com muita seriedade. Demonstra conhecimento técnico e dedicação na condução das demandas. Recomendo pelos serviços prestados.",
   },
   {
-    name: "Maria Eduarda Henrique",
+    name: "Gabriela Matos",
+    reviewsCount: "5 avaliações · 1 foto no Google",
+    badge: "Segurança, Cuidado & Clareza",
+    content:
+      "Um profissional excelente! Atendimento sempre muito atencioso, respeitoso e claro em todas as orientações. É nítido o comprometimento e o cuidado, transmite segurança e tranquilidade durante todo o processo. Além de acessível, demonstra verdadeira preocupação em ajudar da melhor maneira possível.",
+  },
+  {
+    name: "Black Rock Shooter",
     reviewsCount: "2 avaliações no Google",
-    badge: "Acolhimento & Clareza",
+    badge: "Vitória em Caso Desafiador",
     content:
-      "A Dra. Jaqueline oferece um atendimento excepcional. Muito atenciosa, cuidadosa e prestativa, transmite segurança e acolhimento em cada consulta. Explica tudo com clareza, demonstra grande profissionalismo e realmente se preocupa com o bem-estar dos clientes. Recomendo de olhos fechados!",
+      "graças a ele venci um processo que eu achava que era caso perdido",
   },
   {
-    name: "Daniela Luiza",
-    reviewsCount: "9 avaliações · 3 fotos",
-    badge: "Agilidade & Inteligência",
+    name: "Antonio Augusto Moreira Silva",
+    reviewsCount: "11 avaliações · 2 fotos no Google",
+    badge: "Solução Acertada & Acompanhamento",
     content:
-      "Ótima advogada! Agilidade, atenção, muito inteligente, um amor de pessoa! Agradeço a Deus por ter colocado ela na minha vida 🙌🏽",
+      "Excelente profissional, solução jurídica muito acertada, e o melhor, não abandona o cliente e o posiciona durante todo o processo.",
   },
   {
-    name: "Naysa Abreu",
-    reviewsCount: "13 avaliações · 5 fotos",
-    badge: "Referência no Vetor Norte",
+    name: "Giovanna Morais",
+    reviewsCount: "1 avaliação no Google",
+    badge: "Melhor Atendimento & Competência",
     content:
-      "A melhor do vetor norte!",
+      "O melhor atendimento e competência! 🙏🏻👏🏻",
   },
   {
-    name: "Catiulcia Falconi",
-    reviewsCount: "4 avaliações no Google",
-    badge: "Apoio nos Momentos Difíceis",
-    content:
-      "Uma grande profissional, pessoa extremamente dedicada e nos passa segurança nos momentos mais difíceis.",
-  },
-  {
-    name: "Cristiane Durso",
-    reviewsCount: "6 avaliações no Google",
-    badge: "Ética & Proatividade",
-    content:
-      "Excelente profissional, muito ética, educada, dedicada, atenciosa, proativa, super recomendo.",
-  },
-  {
-    name: "Paula Matildes",
-    reviewsCount: "Avaliação no Google",
-    badge: "Eficiência & Dedicação",
-    content:
-      "A Dra Jaqueline tem me mostrado muita eficiência no seu trabalho, excelente advogada! Ela é muito competente, atenciosa e dedicada. Recomendo pelo profissionalismo e pelo ótimo atendimento.",
-  },
-  {
-    name: "Nay Abreu",
-    reviewsCount: "Local Guide · 117 avaliações",
+    name: "Gabriel Véras",
+    reviewsCount: "Local Guide · 3 avaliações · 3 fotos",
     badge: "Local Guide Verificado",
     content:
-      "Muito atenciosa e competente.",
+      "Excelente profissional, recomendo.",
   },
   {
-    name: "Maisa Nunes",
-    reviewsCount: "9 avaliações · 4 fotos",
-    badge: "Excelência & Responsabilidade",
+    name: "Daniel Andrade dos Reis",
+    reviewsCount: "2 avaliações no Google",
+    badge: "Honestidade & Proatividade",
     content:
-      "Muita competência. Atendimento de muita excelência e responsabilidade.",
-  },
-  {
-    name: "Laura Luiza",
-    reviewsCount: "3 avaliações no Google",
-    badge: "A Melhor Encontrada",
-    content:
-      "A melhor que eu já encontrei! Obrigada por tudo, dra!!",
-  },
-  {
-    name: "Aliny Mtek",
-    reviewsCount: "Avaliação no Google",
-    badge: "Comprometimento Sério",
-    content:
-      "Super indico, profissional séria e comprometida.",
-  },
-  {
-    name: "Laís Stefany Paixão Soares",
-    reviewsCount: "Avaliação no Google",
-    badge: "Educação & Respeito",
-    content:
-      "Ótima!!! Educação e respeito sempre presente, e por mim é o que mais vale.",
-  },
-  {
-    name: "Fabianohvf Henrique",
-    reviewsCount: "2 avaliações · 18 fotos",
-    badge: "Profissional Excelente",
-    content:
-      "Excelente profissional 👏",
+      "Profissional excepcional, sempre que precisei, me orientou com honestidade e proatividade, demonstrando grande conhecimento sobre o que se comprometeu a fazer.",
   },
 ];
 
@@ -396,7 +347,7 @@ function Heading({
       <h2
         className={
           light
-            ? "mt-4 font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-[#140e04] sm:text-4xl lg:text-[3.25rem]"
+            ? "mt-4 font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-[#0f1420] sm:text-4xl lg:text-[3.25rem]"
             : "mt-4 font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-white sm:text-4xl lg:text-[3.25rem]"
         }
       >
@@ -406,8 +357,8 @@ function Heading({
         <p
           className={
             light
-              ? "mt-4 text-[15px] leading-7 text-[#4a3b2c]"
-              : "mt-4 text-[15px] leading-7 text-[#dcd6cb]"
+              ? "mt-4 text-[15px] leading-7 text-[#334155]"
+              : "mt-4 text-[15px] leading-7 text-[#cbd5e1]"
           }
         >
           {description}
@@ -436,31 +387,31 @@ export default function Home() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <main className="overflow-hidden bg-[#08080a] text-[#fbfaf7] selection:bg-[#dfb76c] selection:text-[#08080a]">
-        {/* Navigation Bar - Refined Royal Gold & Obsidian Canvas */}
-        <header className="sticky top-0 z-40 border-b border-[#dfb76c]/20 bg-[#08080a]/95 backdrop-blur-xl">
+      <main className="overflow-hidden bg-[#080b11] text-[#f8f9fa] selection:bg-[#c59b48] selection:text-[#080b11]">
+        {/* Navigation Bar - Refined Imperial Antique Bronze & Midnight Slate Navy */}
+        <header className="sticky top-0 z-40 border-b border-[#c59b48]/20 bg-[#080b11]/95 backdrop-blur-xl">
           <div className="mx-auto flex h-[96px] max-w-7xl items-center justify-between gap-6 px-5 sm:h-[108px] sm:px-8 lg:px-12">
             <a
               href="#inicio"
-              aria-label="Jaqueline Soares — Escritório de Advocacia"
+              aria-label="Bruno Marques Advocacia — Escritório de Advocacia"
               onClick={closeMenu}
               className="flex items-center gap-3.5 transition-opacity hover:opacity-90"
             >
-              <div className="relative size-[60px] shrink-0 overflow-hidden rounded-full border-2 border-[#dfb76c]/60 bg-[#0c0c10] shadow-md sm:size-[72px]">
+              <div className="relative size-[60px] shrink-0 overflow-hidden rounded-full border-2 border-[#c59b48]/60 bg-[#0d121c] shadow-md sm:size-[72px]">
                 <Image
                   src={LOGO_SEAL_SRC}
-                  alt="Selo Oficial Jaqueline Soares Advocacia"
+                  alt="Selo Oficial Bruno Marques Advocacia"
                   fill
                   priority
                   sizes="72px"
-                  className="object-contain p-1"
+                  className="object-contain p-1.5"
                 />
               </div>
               <div className="flex flex-col">
                 <span className="font-cinzel text-lg font-bold tracking-wider text-white sm:text-xl lg:text-2xl">
-                  JAQUELINE SOARES
+                  BRUNO MARQUES
                 </span>
-                <span className="text-[10px] font-semibold uppercase tracking-[0.24em] text-[#dfb76c] sm:text-xs">
+                <span className="text-[10px] font-semibold uppercase tracking-[0.24em] text-[#c59b48] sm:text-xs">
                   Advocacia & Consultoria
                 </span>
               </div>
@@ -474,7 +425,7 @@ export default function Home() {
                 Início
               </a>
               <a className="nav-link" href="#sobre">
-                Dra. Jaqueline Soares
+                Dr. Bruno Marques
               </a>
               <a className="nav-link" href="#atuacao">
                 Áreas de Atuação
@@ -495,16 +446,16 @@ export default function Home() {
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Instagram da Dra. Jaqueline Soares"
-                className="grid size-10 place-items-center rounded-lg border border-[#dfb76c]/30 bg-[#121216] text-[#fdefb4] transition-all hover:border-[#f4c87b] hover:bg-[#1c1c24] hover:text-white"
+                aria-label="Instagram do Dr. Bruno Marques"
+                className="grid size-10 place-items-center rounded-lg border border-[#c59b48]/30 bg-[#121825] text-[#faeed2] transition-all hover:border-[#f3dfa7] hover:bg-[#182030] hover:text-white"
                 title={`Instagram ${INSTAGRAM_HANDLE}`}
               >
                 <InstagramIcon size={16} />
               </a>
               <a
                 href={`tel:+${WHATSAPP_NUMBER}`}
-                aria-label="Ligar para Jaqueline Soares Advogada"
-                className="grid size-10 place-items-center rounded-lg border border-[#dfb76c]/30 bg-[#121216] text-[#fdefb4] transition-all hover:border-[#f4c87b] hover:bg-[#1c1c24] hover:text-white"
+                aria-label="Ligar para Bruno Marques Advocacia"
+                className="grid size-10 place-items-center rounded-lg border border-[#c59b48]/30 bg-[#121825] text-[#faeed2] transition-all hover:border-[#f3dfa7] hover:bg-[#182030] hover:text-white"
                 title={`Ligar: ${PHONE_DISPLAY}`}
               >
                 <Phone size={16} />
@@ -513,15 +464,15 @@ export default function Home() {
                 href={getWhatsAppUrl()}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="WhatsApp Dra. Jaqueline Soares"
-                className="grid size-10 place-items-center rounded-lg border border-[#dfb76c]/30 bg-[#121216] text-[#fdefb4] transition-all hover:border-[#f4c87b] hover:bg-[#1c1c24] hover:text-white"
+                aria-label="WhatsApp Dr. Bruno Marques"
+                className="grid size-10 place-items-center rounded-lg border border-[#c59b48]/30 bg-[#121825] text-[#faeed2] transition-all hover:border-[#f3dfa7] hover:bg-[#182030] hover:text-white"
                 title="Atendimento no WhatsApp"
               >
                 <WhatsAppIcon size={18} />
               </a>
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá, Dra. Jaqueline Soares! Gostaria de consultar sobre meus direitos e agendar uma consulta."
+                  "Olá, Dr. Bruno Marques! Gostaria de consultar sobre meus direitos e agendar um atendimento."
                 )}
                 target="_blank"
                 size="sm"
@@ -537,7 +488,7 @@ export default function Home() {
               aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
               aria-expanded={menuOpen}
               aria-controls="mobile-navigation"
-              className="grid size-11 place-items-center rounded-lg border border-[#dfb76c]/30 bg-[#121216] text-[#fdefb4] lg:hidden"
+              className="grid size-11 place-items-center rounded-lg border border-[#c59b48]/30 bg-[#121825] text-[#faeed2] lg:hidden"
               onClick={() => setMenuOpen((open) => !open)}
             >
               {menuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -553,12 +504,12 @@ export default function Home() {
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.22 }}
-                className="overflow-hidden border-t border-[#dfb76c]/20 bg-[#08080a] px-6 lg:hidden"
+                className="overflow-hidden border-t border-[#c59b48]/20 bg-[#080b11] px-6 lg:hidden"
               >
                 <div className="mx-auto flex max-w-7xl flex-col gap-1 py-4">
                   {[
                     ["Início", "#inicio"],
-                    ["Dra. Jaqueline Soares", "#sobre"],
+                    ["Dr. Bruno Marques", "#sobre"],
                     ["Áreas de Atuação", "#atuacao"],
                     ["Por Que Escolher", "#diferenciais"],
                     ["Avaliações no Google (5,0 ★)", "#avaliacoes"],
@@ -568,16 +519,16 @@ export default function Home() {
                       key={label}
                       href={href}
                       onClick={closeMenu}
-                      className="py-3 text-sm font-medium text-stone-200 hover:text-[#dfb76c]"
+                      className="py-3 text-sm font-medium text-stone-200 hover:text-[#c59b48]"
                     >
                       {label}
                     </a>
                   ))}
                   <div className="mt-3 flex flex-col gap-2">
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#c59b48] via-[#f4c87b] to-[#c59b48] px-5 py-3.5 text-xs font-bold uppercase tracking-[0.13em] text-[#140e04] shadow-md transition-all hover:brightness-105"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#b38836] via-[#dfb76c] to-[#b38836] px-5 py-3.5 text-xs font-bold uppercase tracking-[0.13em] text-[#090c12] shadow-md transition-all hover:brightness-105"
                       href={getWhatsAppUrl(
-                        "Olá, Dra. Jaqueline Soares! Gostaria de consultar sobre o meu caso."
+                        "Olá, Dr. Bruno Marques! Gostaria de consultar sobre o meu caso."
                       )}
                       target="_blank"
                       rel="noreferrer"
@@ -586,7 +537,7 @@ export default function Home() {
                       <WhatsAppIcon size={16} /> WhatsApp: {PHONE_DISPLAY}
                     </a>
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#dfb76c]/30 bg-[#121216] px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-[#fdefb4] transition-all hover:border-[#f4c87b]"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#c59b48]/30 bg-[#121825] px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-[#faeed2] transition-all hover:border-[#f3dfa7]"
                       href={INSTAGRAM_URL}
                       target="_blank"
                       rel="noreferrer"
@@ -601,14 +552,14 @@ export default function Home() {
           </AnimatePresence>
         </header>
 
-        {/* Hero Section - High Prestige Gold & Obsidian Tone */}
+        {/* Hero Section - Executive Antique Bronze & Midnight Slate Navy */}
         <section
           id="inicio"
-          className="relative isolate scroll-mt-24 border-b border-[#dfb76c]/20 bg-gradient-to-b from-[#08080a] via-[#101014] to-[#15151a]"
+          className="relative isolate scroll-mt-24 border-b border-[#c59b48]/20 bg-gradient-to-b from-[#080b11] via-[#0d121c] to-[#121825]"
         >
-          {/* Subtle metallic royal gold ambient glow */}
-          <div className="pointer-events-none absolute -right-32 top-8 -z-10 size-[36rem] rounded-full bg-[#dfb76c]/10 blur-3xl" />
-          <div className="pointer-events-none absolute -left-20 bottom-10 -z-10 size-[28rem] rounded-full bg-[#991b1b]/10 blur-3xl" />
+          {/* Subtle masculine metallic bronze & deep slate ambient glow */}
+          <div className="pointer-events-none absolute -right-32 top-8 -z-10 size-[36rem] rounded-full bg-[#c59b48]/10 blur-3xl" />
+          <div className="pointer-events-none absolute -left-20 bottom-10 -z-10 size-[28rem] rounded-full bg-[#182030]/40 blur-3xl" />
 
           <div className="mx-auto grid min-h-[660px] max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 sm:py-20 lg:min-h-[720px] lg:grid-cols-[1.1fr_0.9fr] lg:gap-12 lg:px-12 lg:py-20">
             <motion.div
@@ -619,31 +570,31 @@ export default function Home() {
             >
               <motion.div
                 variants={reveal}
-                className="mb-6 inline-flex items-center gap-2.5 rounded-lg border border-[#dfb76c]/35 bg-[#141419] px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-[#fdefb4] shadow-sm"
+                className="mb-6 inline-flex items-center gap-2.5 rounded-lg border border-[#c59b48]/35 bg-[#0d121c] px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-[#faeed2] shadow-sm"
               >
-                <span className="size-2 shrink-0 rounded-full bg-[#dfb76c]" />
-                <span>DRA. JAQUELINE SOARES · LAGOA SANTA & VETOR NORTE - MG</span>
+                <span className="size-2 shrink-0 rounded-full bg-[#c59b48]" />
+                <span>DR. BRUNO MARQUES · CARMO DO PARANAÍBA & REGIÃO - MG</span>
               </motion.div>
 
               <motion.h1
                 variants={reveal}
                 className="max-w-[760px] font-serif text-[2.65rem] leading-[1.08] tracking-[-0.02em] text-white sm:text-5xl lg:text-[3.85rem]"
               >
-                Advocacia Estratégica, Ética e Humanizada:{" "}
-                <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#fdf8e8] via-[#fdefb4] to-[#dfb76c]">
-                  Seus Direitos com Rigor Técnico, Agilidade e Empatia.
+                Advocacia Estratégica, Resolutiva e de Confiança:{" "}
+                <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#fdfaf3] via-[#faeed2] to-[#c59b48]">
+                  Seus Direitos com Rigor Técnico, Agilidade e Honestidade.
                 </span>
               </motion.h1>
 
               <motion.p
                 variants={reveal}
-                className="mt-7 max-w-xl text-[15px] leading-7 text-[#dcd6cb] sm:text-base sm:leading-8"
+                className="mt-7 max-w-xl text-[15px] leading-7 text-[#cbd5e1] sm:text-base sm:leading-8"
               >
-                Liderado pela{" "}
+                Liderado pelo{" "}
                 <strong className="font-semibold text-white">
-                  Dra. Jaqueline Soares
+                  Dr. Bruno Marques
                 </strong>
-                , nosso escritório é referência em Lagoa Santa e no Vetor Norte pela dedicação intransigente aos direitos de cada cliente. Unimos acolhimento caloroso, respeito à Constituição e rigor técnico incisivo para proporcionar a você segurança e resultados concretos.
+                , nosso escritório é referência em Carmo do Paranaíba e Minas Gerais pela condução séria, combativa e personalizada de cada demanda. Conquistamos a confiança dos clientes revertendo causas desafiadoras com soluções jurídicas acertadas, acompanhamento próximo e atendimento verdadeiramente acessível e transparente.
               </motion.p>
 
               <motion.div
@@ -652,18 +603,18 @@ export default function Home() {
               >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Jaqueline Soares! Gostaria de consultar sobre meus direitos e agendar um atendimento."
+                    "Olá, Dr. Bruno Marques! Gostaria de consultar sobre meus direitos e agendar um atendimento."
                   )}
                   target="_blank"
                   size="lg"
                   variant="gold"
                   className="rounded-lg shadow-md"
                 >
-                  <WhatsAppIcon size={16} /> Falar no WhatsApp com a Dra. Jaqueline
+                  <WhatsAppIcon size={16} /> Falar no WhatsApp com o Dr. Bruno
                 </GlowingButton>
                 <a
                   href="#atuacao"
-                  className="group inline-flex items-center gap-2 rounded-lg border border-[#dfb76c]/30 bg-[#141419] px-5 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#fdefb4] transition-all hover:border-[#f4c87b] hover:bg-[#1c1c24] hover:text-white"
+                  className="group inline-flex items-center gap-2 rounded-lg border border-[#c59b48]/30 bg-[#0d121c] px-5 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#faeed2] transition-all hover:border-[#f3dfa7] hover:bg-[#182030] hover:text-white"
                 >
                   Áreas de Atuação{" "}
                   <ArrowRight
@@ -675,22 +626,22 @@ export default function Home() {
 
               <motion.div
                 variants={reveal}
-                className="mt-12 flex flex-wrap items-center gap-x-7 gap-y-4 border-t border-[#dfb76c]/20 pt-6 text-xs text-[#dcd6cb]"
+                className="mt-12 flex flex-wrap items-center gap-x-7 gap-y-4 border-t border-[#c59b48]/20 pt-6 text-xs text-[#cbd5e1]"
               >
                 <span className="inline-flex items-center gap-2 font-medium">
-                  <Star size={15} className="fill-[#dfb76c] text-[#dfb76c]" />{" "}
-                  5,0 estrelas no Google (19 avaliações 100% autênticas)
+                  <Star size={15} className="fill-[#c59b48] text-[#c59b48]" />{" "}
+                  5,0 estrelas no Google (10 avaliações 100% autênticas)
                 </span>
                 <span className="inline-flex items-center gap-2 font-medium">
-                  <ShieldCheck size={15} className="text-[#dfb76c]" /> Sede no Bairro Bela Vista · Lagoa Santa - MG
+                  <ShieldCheck size={15} className="text-[#c59b48]" /> Sede na Rua Franklin Mendonça, 341 · Carmo do Paranaíba - MG
                 </span>
                 <span className="inline-flex items-center gap-2 font-medium">
-                  <HeartHandshake size={15} className="text-[#dfb76c]" /> Atendimento Direto com a Advogada
+                  <HeartHandshake size={15} className="text-[#c59b48]" /> Atendimento Direto com o Advogado
                 </span>
               </motion.div>
             </motion.div>
 
-            {/* Hero Visual Presentation - Dra. Jaqueline Soares */}
+            {/* Hero Visual Presentation - Dr. Bruno Marques Executive Presence */}
             <motion.div
               initial={{ opacity: 0, scale: 0.97, y: 18 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -701,49 +652,49 @@ export default function Home() {
               }}
               className="relative mx-auto w-full max-w-[490px] lg:ml-auto lg:mr-2"
             >
-              <div className="relative aspect-[4/4.9] overflow-hidden rounded-2xl border border-[#dfb76c]/35 bg-[#121216] shadow-2xl ring-1 ring-[#dfb76c]/20">
+              <div className="relative aspect-[4/4.9] overflow-hidden rounded-2xl border border-[#c59b48]/35 bg-[#0d121c] shadow-2xl ring-1 ring-[#c59b48]/20">
                 <Image
                   src={FOTO_HERO_SRC}
-                  alt="Dra. Jaqueline Soares — Advogada em Lagoa Santa MG"
+                  alt="Dr. Bruno Marques — Advogado em Carmo do Paranaíba MG"
                   fill
                   priority
                   sizes="(max-width: 640px) 90vw, (max-width: 1024px) 70vw, 45vw"
                   className="object-cover object-top"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#08080a] via-[#08080a]/85 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#080b11] via-[#080b11]/85 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-3 text-white sm:bottom-8 sm:left-8 sm:right-8">
                   <div>
                     <p className="font-serif text-2xl font-normal tracking-wide text-white">
-                      Dra. Jaqueline Soares
+                      Dr. Bruno Marques
                     </p>
-                    <p className="mt-1 text-[10px] uppercase tracking-[0.2em] text-[#dfb76c]">
-                      Jaqueline Soares Advocacia · Lagoa Santa - MG
+                    <p className="mt-1 text-[10px] uppercase tracking-[0.2em] text-[#c59b48]">
+                      Bruno Marques Advocacia · Carmo do Paranaíba - MG
                     </p>
                   </div>
-                  <span className="grid size-11 shrink-0 place-items-center rounded-lg border border-[#dfb76c]/40 bg-[#08080a]/85 text-[#fdefb4] backdrop-blur-sm">
+                  <span className="grid size-11 shrink-0 place-items-center rounded-lg border border-[#c59b48]/40 bg-[#080b11]/85 text-[#faeed2] backdrop-blur-sm">
                     <Scale size={18} />
                   </span>
                 </div>
               </div>
 
               {/* Floating authority badge */}
-              <div className="absolute -left-3 top-6 z-10 rounded-lg border border-[#dfb76c]/40 bg-[#121216]/95 px-4 py-2 text-[10px] font-bold tracking-[0.14em] text-[#fdefb4] shadow-card backdrop-blur-md sm:-left-5">
-                LAGOA SANTA & VETOR NORTE · MINAS GERAIS
+              <div className="absolute -left-3 top-6 z-10 rounded-lg border border-[#c59b48]/40 bg-[#0d121c]/95 px-4 py-2 text-[10px] font-bold tracking-[0.14em] text-[#faeed2] shadow-card backdrop-blur-md sm:-left-5">
+                CARMO DO PARANAÍBA & REGIÃO · MINAS GERAIS
               </div>
 
               {/* Floating Google rating badge */}
-              <div className="absolute -bottom-5 -right-3 z-10 rounded-xl border border-[#dfb76c]/35 bg-[#121216]/95 p-3.5 shadow-card backdrop-blur-md sm:-right-5">
+              <div className="absolute -bottom-5 -right-3 z-10 rounded-xl border border-[#c59b48]/35 bg-[#0d121c]/95 p-3.5 shadow-card backdrop-blur-md sm:-right-5">
                 <div className="flex items-center gap-2">
                   <GoogleIcon size={16} />
                   <div className="flex items-center gap-1">
-                    <Star size={13} className="fill-[#dfb76c] text-[#dfb76c]" />
+                    <Star size={13} className="fill-[#c59b48] text-[#c59b48]" />
                     <span className="font-serif text-base font-bold text-white">
                       5,0 / 5,0
                     </span>
                   </div>
                 </div>
-                <p className="mt-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#dcd6cb]">
-                  19 Avaliações no Google
+                <p className="mt-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#cbd5e1]">
+                  10 Avaliações no Google
                 </p>
               </div>
             </motion.div>
@@ -753,39 +704,39 @@ export default function Home() {
         {/* Highlights Banner - Authority Metrics */}
         <section
           aria-label="Credenciais e Destaques"
-          className="border-b border-[#dfb76c]/20 bg-[#0c0c10]"
+          className="border-b border-[#c59b48]/20 bg-[#0a0e16]"
         >
           <div className="mx-auto grid max-w-7xl gap-7 px-5 py-8 sm:grid-cols-4 sm:gap-4 sm:px-8 lg:px-12">
             {[
               [
                 "5,0 ★",
-                "nota máxima impecável no Google com 19 avaliações autênticas",
+                "nota máxima impecável no Google com 10 avaliações autênticas",
               ],
               [
-                "Atendimento Humanizado",
-                "escuta atenta, empatia e segurança nos momentos mais decisivos",
+                "Não Abandona o Cliente",
+                "posicionamento contínuo e clareza durante todo o processo",
               ],
               [
-                "Lagoa Santa & Região",
-                "sede estruturada na R. Timbiras, 150 - Bela Vista (Vetor Norte)",
+                "Carmo do Paranaíba - MG",
+                "sede estruturada na Rua Franklin Mendonça, 341",
               ],
               [
-                "Ética & Rigor",
-                "compromisso inegociável com a Constituição e êxito processual",
+                "Soluções Acertadas",
+                "conhecimento técnico e combatividade em causas desafiadoras",
               ],
             ].map(([value, label], index) => (
               <div
                 key={label}
                 className={
                   index > 0
-                    ? "flex items-center gap-4 sm:justify-center sm:border-l sm:border-[#dfb76c]/20"
+                    ? "flex items-center gap-4 sm:justify-center sm:border-l sm:border-[#c59b48]/20"
                     : "flex items-center gap-4 sm:justify-center"
                 }
               >
-                <span className="font-serif text-2xl font-semibold text-[#dfb76c] sm:text-3xl">
+                <span className="font-serif text-2xl font-semibold text-[#c59b48] sm:text-3xl">
                   {value}
                 </span>
-                <span className="max-w-[165px] text-[11px] leading-5 text-[#dcd6cb]">
+                <span className="max-w-[165px] text-[11px] leading-5 text-[#cbd5e1]">
                   {label}
                 </span>
               </div>
@@ -793,13 +744,13 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Sobre a Dra. Jaqueline Soares - Editorial Warm Alabaster Canvas */}
+        {/* Sobre o Dr. Bruno Marques - Editorial Warm Ivory Stone Canvas */}
         <section
           id="sobre"
-          className="scroll-mt-24 border-y border-[#dfb76c]/30 bg-[#faf8f5] py-20 text-[#140e04] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-y border-[#c59b48]/30 bg-[#f7f6f3] py-20 text-[#0f1420] sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20 lg:px-12">
-            {/* Dra. Jaqueline presentation portrait */}
+            {/* Dr. Bruno Marques presentation portrait */}
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -807,37 +758,37 @@ export default function Home() {
               variants={reveal}
               className="relative mx-auto w-full max-w-[480px]"
             >
-              <div className="relative aspect-[3/3.8] overflow-hidden rounded-2xl border-2 border-[#472c06] bg-[#121216] shadow-2xl">
+              <div className="relative aspect-[3/3.8] overflow-hidden rounded-2xl border-2 border-[#382506] bg-[#0d121c] shadow-2xl">
                 <Image
                   src={FOTO_SOBRE_SRC}
-                  alt="Dra. Jaqueline Soares — Solenidade Jurídica e Formatura em Direito"
+                  alt="Dr. Bruno Marques — Advogado Titular"
                   fill
                   sizes="(max-width: 1024px) 90vw, 45vw"
                   className="object-cover object-top"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#08080a]/90 via-[#08080a]/30 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#080b11]/90 via-[#080b11]/30 to-transparent" />
               </div>
 
-              {/* Authority badge card - Deep Obsidian Gold Contrast on Light Surface */}
-              <div className="absolute -bottom-6 right-3 max-w-[340px] rounded-xl border border-[#dfb76c]/40 bg-[#121216] px-5 py-4 shadow-xl sm:-right-6 sm:px-6">
-                <div className="flex items-center gap-2 text-[#dfb76c]">
+              {/* Authority badge card - Deep Obsidian Bronze Contrast on Light Surface */}
+              <div className="absolute -bottom-6 right-3 max-w-[340px] rounded-xl border border-[#c59b48]/40 bg-[#0d121c] px-5 py-4 shadow-xl sm:-right-6 sm:px-6">
+                <div className="flex items-center gap-2 text-[#c59b48]">
                   <Award size={16} />
-                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#dfb76c]">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#c59b48]">
                     Advocacia Especializada & Consultoria
                   </p>
                 </div>
                 <p className="mt-1 font-serif text-lg leading-snug text-white">
-                  Dra. Jaqueline Soares
+                  Dr. Bruno Marques
                 </p>
-                <p className="mt-0.5 text-[11px] font-medium text-[#dfb76c]">
-                  Jaqueline Soares Advocacia · Lagoa Santa - MG
+                <p className="mt-0.5 text-[11px] font-medium text-[#c59b48]">
+                  Bruno Marques Advocacia · Carmo do Paranaíba - MG
                 </p>
-                <p className="mt-1 text-[11px] leading-4 text-[#dcd6cb]">
-                  R. Timbiras, 150 - Bela Vista (Lagoa Santa)
+                <p className="mt-1 text-[11px] leading-4 text-[#cbd5e1]">
+                  Rua Franklin Mendonça, 341 - Carmo do Paranaíba
                 </p>
               </div>
 
-              <span className="absolute -left-4 -top-4 -z-10 size-24 border-l-2 border-t-2 border-[#a67c1e]/40 sm:-left-7 sm:-top-7 sm:size-32" />
+              <span className="absolute -left-4 -top-4 -z-10 size-24 border-l-2 border-t-2 border-[#8c6622]/40 sm:-left-7 sm:-top-7 sm:size-32" />
             </motion.div>
 
             {/* Story & Biography - Editorial Warm Light Typography */}
@@ -849,72 +800,72 @@ export default function Home() {
             >
               <motion.div
                 variants={reveal}
-                className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#a67c1e]/30 bg-white/80 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#a67c1e] shadow-xs"
+                className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#8c6622]/30 bg-white/80 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#8c6622] shadow-xs"
               >
-                <span className="size-2 shrink-0 rounded-full bg-[#a67c1e]" />
-                <span>CONHEÇA A DRA. JAQUELINE SOARES</span>
+                <span className="size-2 shrink-0 rounded-full bg-[#8c6622]" />
+                <span>CONHEÇA O DR. BRUNO MARQUES</span>
               </motion.div>
 
               <motion.h2
                 variants={reveal}
-                className="font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-[#140e04] sm:text-4xl lg:text-[3.25rem]"
+                className="font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-[#0f1420] sm:text-4xl lg:text-[3.25rem]"
               >
-                Mais que uma procuradora da causa: uma{" "}
-                <span className="italic text-[#a67c1e]">
-                  defensora dedicada, atenciosa e firme na busca pelo seu direito.
+                Mais que um advogado: um defensor{" "}
+                <span className="italic text-[#8c6622]">
+                  dedicado, atencioso, que não abandona o cliente e busca soluções assertivas.
                 </span>
               </motion.h2>
 
               <motion.p
                 variants={reveal}
-                className="mt-6 max-w-xl text-[15px] leading-7 text-[#4a3b2c]"
+                className="mt-6 max-w-xl text-[15px] leading-7 text-[#334155]"
               >
                 Com escritório sediado em{" "}
-                <strong className="font-bold text-[#140e04]">
-                  Lagoa Santa - MG
+                <strong className="font-bold text-[#0f1420]">
+                  Carmo do Paranaíba - MG
                 </strong>
-                , a Dra. Jaqueline Soares consolidou uma advocacia de prestígio no Vetor Norte mineiro pela seriedade, ética incondicional e extremo respeito à Constituição e aos cidadãos.
+                , o Dr. Bruno Marques consolidou uma advocacia de prestígio e alta resolutividade pelo compromisso inegociável com a ética, seriedade técnica e transparência em cada orientação prestada.
               </motion.p>
 
               <motion.p
                 variants={reveal}
-                className="mt-4 max-w-xl text-[15px] leading-7 text-[#4a3b2c]"
+                className="mt-4 max-w-xl text-[15px] leading-7 text-[#334155]"
               >
-                Seu atendimento se destaca pelo acolhimento genuíno e pela clareza pedagógica. Aqui você não encontra termos jurídicos distantes ou burocracia desnecessária: você conversa diretamente com a advogada, com respostas ágeis, orientação transparente e uma estratégia técnica desenhada sob medida para a sua tranquilidade.
+                O diferencial do seu atendimento está na dedicação e no acompanhamento próximo: aqui o cliente nunca fica sem resposta ou desamparado durante o processo. Seja em disputas civis complexas tidas como causas desafiadoras, demandas de família ou direitos trabalhistas e previdenciários, cada caso é conduzido com honestidade, proatividade e vigor técnico.
               </motion.p>
 
               {/* Authentic Client Quote Card */}
               <motion.div
                 variants={reveal}
-                className="mt-6 rounded-xl border border-[#e6decb] bg-white/95 p-5 shadow-sm"
+                className="mt-6 rounded-xl border border-[#e2ded6] bg-white/95 p-5 shadow-sm"
               >
-                <blockquote className="font-serif text-sm italic leading-relaxed text-[#26190b]">
-                  &ldquo;Ótima Advogada, séria competente e extremamente responsável… Pode confiar pois ela é sim uma advogada que respeita a constituição e sempre dará o melhor para ter êxito nos seus processos… Confio de olhos vendados!&rdquo;
+                <blockquote className="font-serif text-sm italic leading-relaxed text-[#0f172a]">
+                  &ldquo;Excelente profissional, solução jurídica muito acertada, e o melhor, não abandona o cliente e o posiciona durante todo o processo.&rdquo;
                 </blockquote>
-                <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-[#a67c1e]">
-                  — Eric Batista · Avaliação Verificada no Google (5,0 ★)
+                <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-[#8c6622]">
+                  — Antonio Augusto Moreira Silva · Avaliação Verificada no Google (5,0 ★)
                 </p>
               </motion.div>
 
               <motion.div
                 variants={reveal}
-                className="mt-6 grid grid-cols-1 gap-2.5 text-xs font-semibold text-[#26190b] sm:grid-cols-2"
+                className="mt-6 grid grid-cols-1 gap-2.5 text-xs font-semibold text-[#0f172a] sm:grid-cols-2"
               >
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#a67c1e]" />
-                  <span>Sede no Bairro Bela Vista em Lagoa Santa - MG</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#8c6622]" />
+                  <span>Sede na Rua Franklin Mendonça, 341 - Carmo do Paranaíba</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#a67c1e]" />
-                  <span>Referência jurídica no Vetor Norte de Belo Horizonte</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#8c6622]" />
+                  <span>Posicionamento contínuo e transparência sobre o processo</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#a67c1e]" />
-                  <span>Paciência para esclarecer todas as dúvidas do cliente</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#8c6622]" />
+                  <span>Honestidade e proatividade em todas as orientações</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#a67c1e]" />
-                  <span>Nota máxima 5,0 ★ no Google com 19 avaliações reais</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#8c6622]" />
+                  <span>Nota máxima 5,0 ★ no Google com 10 avaliações reais</span>
                 </div>
               </motion.div>
 
@@ -924,18 +875,18 @@ export default function Home() {
               >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Jaqueline Soares! Gostaria de agendar uma consulta sobre o meu caso."
+                    "Olá, Dr. Bruno Marques! Gostaria de agendar uma consulta sobre o meu caso."
                   )}
                   target="_blank"
                   size="md"
                   variant="dark"
                   className="rounded-lg shadow-md"
                 >
-                  <WhatsAppIcon size={16} /> Falar com a Dra. Jaqueline
+                  <WhatsAppIcon size={16} /> Falar com o Dr. Bruno
                 </GlowingButton>
                 <a
                   href={`tel:+${WHATSAPP_NUMBER}`}
-                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#140e04] transition-colors hover:text-[#a67c1e]"
+                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#0f1420] transition-colors hover:text-[#8c6622]"
                 >
                   <Phone size={15} /> {PHONE_DISPLAY}
                 </a>
@@ -944,10 +895,10 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Áreas de Atuação Jaqueline Soares Advocacia */}
+        {/* Áreas de Atuação Bruno Marques Advocacia */}
         <section
           id="atuacao"
-          className="scroll-mt-24 border-t border-[#dfb76c]/20 bg-[#0c0c10] py-20 sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#c59b48]/20 bg-[#0a0e16] py-20 sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <motion.div
@@ -959,14 +910,14 @@ export default function Home() {
             >
               <Heading
                 eyebrow="SERVIÇOS JURÍDICOS & PILARES DE ATUAÇÃO"
-                description="Defesa especializada, estratégica e personalizada para resguardar seus direitos em demandas familiares, cíveis, do consumidor, trabalhistas e previdenciárias."
+                description="Defesa especializada, estratégica e personalizada para resguardar seus direitos em demandas cíveis, contratuais, familiares, consumidor, trabalhistas e previdenciárias."
               >
                 Atuação jurídica sólida em{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fdf8e8] via-[#fdefb4] to-[#dfb76c]">
-                  Lagoa Santa, Vetor Norte e Minas Gerais.
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fdfaf3] via-[#faeed2] to-[#c59b48]">
+                  Carmo do Paranaíba, Alto Paranaíba e Minas Gerais.
                 </span>
               </Heading>
-              <p className="max-w-[270px] pb-1 text-xs leading-6 text-[#dcd6cb]">
+              <p className="max-w-[270px] pb-1 text-xs leading-6 text-[#cbd5e1]">
                 Selecione uma especialidade abaixo para conferir as demandas
                 atendidas e iniciar sua consulta diretamente pelo WhatsApp.
               </p>
@@ -985,25 +936,25 @@ export default function Home() {
                   <motion.article
                     key={area.id}
                     variants={reveal}
-                    className="group flex min-h-[350px] flex-col rounded-xl border border-[#dfb76c]/20 bg-[#121216] p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#dfb76c]/50 hover:bg-[#1a1a22] hover:shadow-obsidian sm:p-8"
+                    className="group flex min-h-[350px] flex-col rounded-xl border border-[#c59b48]/20 bg-[#0d121c] p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#c59b48]/50 hover:bg-[#121825] hover:shadow-obsidian sm:p-8"
                   >
                     <div className="flex items-start justify-between">
-                      <span className="grid size-12 place-items-center rounded-lg border border-[#dfb76c]/25 bg-[#1c1c24] text-[#dfb76c] shadow-sm transition-colors group-hover:border-[#fdefb4] group-hover:bg-[#262632] group-hover:text-white">
+                      <span className="grid size-12 place-items-center rounded-lg border border-[#c59b48]/25 bg-[#182030] text-[#c59b48] shadow-sm transition-colors group-hover:border-[#faeed2] group-hover:bg-[#202c46] group-hover:text-white">
                         <Icon size={22} strokeWidth={1.5} />
                       </span>
-                      <span className="font-serif text-2xl text-[#dfb76c]/40">
+                      <span className="font-serif text-2xl text-[#c59b48]/40">
                         0{index + 1}
                       </span>
                     </div>
 
                     <div className="mt-6">
-                      <span className="inline-block rounded-md border border-[#dfb76c]/25 bg-[#1c1c24] px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-[#fdefb4] shadow-sm">
+                      <span className="inline-block rounded-md border border-[#c59b48]/25 bg-[#182030] px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-[#faeed2] shadow-sm">
                         {area.tag}
                       </span>
                       <h3 className="mt-3 font-serif text-[1.45rem] leading-tight text-white">
                         {area.title}
                       </h3>
-                      <p className="mt-3 text-[13px] leading-6 text-[#dcd6cb]">
+                      <p className="mt-3 text-[13px] leading-6 text-[#cbd5e1]">
                         {area.summary}
                       </p>
                     </div>
@@ -1026,26 +977,26 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Por Que Escolher Jaqueline Soares Advocacia - Diferenciais (Dobra Branca) */}
+        {/* Por Que Escolher Bruno Marques Advocacia - Diferenciais (Dobra Clara com Pedra Quente) */}
         <section
           id="diferenciais"
-          className="scroll-mt-24 border-t border-[#dfb76c]/30 bg-[#faf8f5] py-20 text-[#140e04] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#c59b48]/30 bg-[#f7f6f3] py-20 text-[#0f1420] sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
               <Heading
                 light
                 eyebrow="NOSSOS PILARES DE EXCELÊNCIA"
-                description="Unimos acolhimento sincero, atenção aos mínimos detalhes e uma postura jurídica firme para transformar direitos em conquistas reais."
+                description="Unimos dedicação intransigente, capacidade técnica comprovada e postura ética inegociável para transformar direitos em conquistas reais."
               >
-                Por que confiar seu caso à{" "}
-                <span className="italic text-[#a67c1e]">
-                  Dra. Jaqueline Soares?
+                Por que confiar seu caso ao{" "}
+                <span className="italic text-[#8c6622]">
+                  Dr. Bruno Marques?
                 </span>
               </Heading>
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá, Dra. Jaqueline Soares! Gostaria de consultar sobre a minha situação jurídica."
+                  "Olá, Dr. Bruno Marques! Gostaria de consultar sobre a minha situação jurídica."
                 )}
                 target="_blank"
                 size="md"
@@ -1057,52 +1008,52 @@ export default function Home() {
             </div>
 
             <div className="mt-12 grid gap-8 lg:grid-cols-2">
-              {/* Card 1: Atenção aos Mínimos Detalhes & Acolhimento */}
+              {/* Card 1: Acompanhamento Contínuo & O Cliente Não Fica Desamparado */}
               <motion.article
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65 }}
-                className="group flex flex-col justify-between rounded-xl border border-[#e6decb] bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#dfb76c] hover:shadow-md sm:p-9"
+                className="group flex flex-col justify-between rounded-xl border border-[#e2ded6] bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#c59b48] hover:shadow-md sm:p-9"
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#dfb76c]/30 bg-[#f4f0e8] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#8a5d12]">
-                      <HeartHandshake size={14} /> Atendimento Humanizado
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#c59b48]/30 bg-[#ece8df] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#634512]">
+                      <HeartHandshake size={14} /> Acompanhamento Contínuo
                     </span>
-                    <span className="text-xs font-semibold text-[#a67c1e]">
-                      Acolhimento Real
+                    <span className="text-xs font-semibold text-[#8c6622]">
+                      Presença & Respeito
                     </span>
                   </div>
-                  <h3 className="mt-4 font-serif text-2xl leading-tight text-[#140e04] sm:text-[1.75rem]">
-                    Paciência em Esclarecer Dúvidas & Empatia Incondicional
+                  <h3 className="mt-4 font-serif text-2xl leading-tight text-[#0f1420] sm:text-[1.75rem]">
+                    O Cliente Nunca Fica Sem Resposta ou Desamparado
                   </h3>
-                  <p className="mt-3 text-[14px] leading-relaxed text-[#4a3b2c]">
-                    Sabemos que momentos de conflito familiar, rescisão de trabalho ou abusos de consumo causam desgaste emocional. No escritório Jaqueline Soares, cada cliente é recebido com paciência, escuta ativa e explicações didáticas, compreendendo todas as fases do processo.
+                  <p className="mt-3 text-[14px] leading-relaxed text-[#334155]">
+                    Sabemos que processos judiciais geram ansiedade e incerteza. No escritório Bruno Marques Advocacia, você conversa diretamente com o advogado, recebe atualizações claras sobre cada etapa e compreende exatamente o que está acontecendo com a sua causa.
                   </p>
-                  <ul className="mt-5 space-y-2 text-xs font-medium text-[#26190b]">
+                  <ul className="mt-5 space-y-2 text-xs font-medium text-[#0f172a]">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#a67c1e]" />
-                      <span>Contato direto pelo WhatsApp com a Dra. Jaqueline Soares</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#8c6622]" />
+                      <span>Contato direto pelo WhatsApp com o Dr. Bruno Marques</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#a67c1e]" />
-                      <span>Esclarecimento detalhado e calmo de cada etapa jurídica</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#8c6622]" />
+                      <span>Posicionamento constante e didático sobre o andamento dos autos</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#a67c1e]" />
-                      <span>Atendimento acolhedor, transparente e com total confidencialidade</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#8c6622]" />
+                      <span>Atendimento seguro, transparente e com sigilo profissional absoluto</span>
                     </li>
                   </ul>
                 </div>
-                <div className="mt-7 border-t border-[#e6decb] pt-4">
+                <div className="mt-7 border-t border-[#e2ded6] pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dra. Jaqueline Soares! Gostaria de conversar diretamente com você sobre minha situação."
+                      "Olá, Dr. Bruno Marques! Gostaria de conversar diretamente com você sobre minha situação."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#dfb76c]/40 bg-[#fbf9f6] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#140e04] transition-all hover:border-[#a67c1e] hover:bg-[#140e04] hover:text-[#fdefb4]"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#c59b48]/40 bg-[#faf8f4] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#0f1420] transition-all hover:border-[#8c6622] hover:bg-[#0f1420] hover:text-[#faeed2]"
                   >
                     <span className="inline-flex items-center gap-2">
                       <WhatsAppIcon size={15} /> Conversar Diretamente no WhatsApp
@@ -1112,52 +1063,52 @@ export default function Home() {
                 </div>
               </motion.article>
 
-              {/* Card 2: Combatividade Técnica e Rigor Processual */}
+              {/* Card 2: Combatividade Técnica e Vitórias em Causas Desafiadoras */}
               <motion.article
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65, delay: 0.1 }}
-                className="group flex flex-col justify-between rounded-xl border border-[#e6decb] bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#dfb76c] hover:shadow-md sm:p-9"
+                className="group flex flex-col justify-between rounded-xl border border-[#e2ded6] bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#c59b48] hover:shadow-md sm:p-9"
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#dfb76c]/30 bg-[#f4f0e8] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#8a5d12]">
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#c59b48]/30 bg-[#ece8df] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#634512]">
                       <Scale size={14} /> Rigor Técnico Incisivo
                     </span>
-                    <span className="text-xs font-semibold text-[#a67c1e]">
-                      Resultados Comprovados
+                    <span className="text-xs font-semibold text-[#8c6622]">
+                      Soluções Acertadas
                     </span>
                   </div>
-                  <h3 className="mt-4 font-serif text-2xl leading-tight text-[#140e04] sm:text-[1.75rem]">
+                  <h3 className="mt-4 font-serif text-2xl leading-tight text-[#0f1420] sm:text-[1.75rem]">
                     Combatividade Jurídica & Foco no Êxito Processual
                   </h3>
-                  <p className="mt-3 text-[14px] leading-relaxed text-[#4a3b2c]">
-                    Não aceitamos negativas abusivas ou injustiças. Construímos um conjunto probatório minucioso e fundamentado na jurisprudência mais recente para lutar por cada centavo e direito devido a você, com agilidade e compromisso inabalável.
+                  <p className="mt-3 text-[14px] leading-relaxed text-[#334155]">
+                    Comprovado por clientes que venceram processos antes tidos como desafiadores ou casos perdidos. Analisamos minuciosamente o conjunto probatório e aplicamos a jurisprudência mais sólida para lutar incansavelmente por cada direito devido a você.
                   </p>
-                  <ul className="mt-5 space-y-2 text-xs font-medium text-[#26190b]">
+                  <ul className="mt-5 space-y-2 text-xs font-medium text-[#0f172a]">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#a67c1e]" />
-                      <span>Análise aprofundada de documentos, certidões e histórico probatório</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#8c6622]" />
+                      <span>Análise técnica aprofundada de documentos, provas e precedentes</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#a67c1e]" />
-                      <span>Atuação célere na Justiça Estadual, Federal e do Trabalho</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#8c6622]" />
+                      <span>Atuação firme perante a Justiça Estadual, Federal e do Trabalho</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#a67c1e]" />
-                      <span>Acompanhamento rigoroso de prazos e recursos estratégicos</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#8c6622]" />
+                      <span>Cumprimento rigoroso de prazos e recursos estratégicos cabíveis</span>
                     </li>
                   </ul>
                 </div>
-                <div className="mt-7 border-t border-[#e6decb] pt-4">
+                <div className="mt-7 border-t border-[#e2ded6] pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dra. Jaqueline Soares! Preciso de ajuda jurídica para analisar meu caso."
+                      "Olá, Dr. Bruno Marques! Preciso de ajuda jurídica para analisar meu caso."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#dfb76c]/40 bg-[#fbf9f6] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#140e04] transition-all hover:border-[#a67c1e] hover:bg-[#140e04] hover:text-[#fdefb4]"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#c59b48]/40 bg-[#faf8f4] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#0f1420] transition-all hover:border-[#8c6622] hover:bg-[#0f1420] hover:text-[#faeed2]"
                   >
                     <span className="inline-flex items-center gap-2">
                       <WhatsAppIcon size={15} /> Analisar Meu Caso no WhatsApp
@@ -1170,28 +1121,28 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Nosso Compromisso com Você (Dobra Branca - Continuação) */}
-        <section className="relative overflow-hidden border-t border-[#dfb76c]/20 bg-[#faf8f5] py-20 text-[#140e04] sm:py-24 lg:py-28">
-          <div className="pointer-events-none absolute -left-28 top-1/4 size-96 rounded-full bg-[#dfb76c]/5 blur-3xl" />
-          <div className="pointer-events-none absolute -right-28 bottom-1/4 size-96 rounded-full bg-[#dfb76c]/5 blur-3xl" />
+        {/* Nosso Compromisso com Você (Dobra Clara - Continuação) */}
+        <section className="relative overflow-hidden border-t border-[#c59b48]/20 bg-[#f7f6f3] py-20 text-[#0f1420] sm:py-24 lg:py-28">
+          <div className="pointer-events-none absolute -left-28 top-1/4 size-96 rounded-full bg-[#c59b48]/5 blur-3xl" />
+          <div className="pointer-events-none absolute -right-28 bottom-1/4 size-96 rounded-full bg-[#c59b48]/5 blur-3xl" />
 
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.88fr_1.12fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
                 light
                 eyebrow="NOSSO COMPROMISSO COM VOCÊ"
-                description="A nota máxima de 5,0 ★ no Google com 19 avaliações autênticas reflete a lealdade inegociável em defender cada cliente com seriedade, respeito e agilidade."
+                description="A nota máxima de 5,0 ★ no Google com 10 avaliações autênticas reflete a seriedade, transparência e respeito com que cada causa é defendida."
               >
                 Cuidamos do seu caso com{" "}
-                <span className="italic text-[#a67c1e]">
-                  ética, transparência e combatividade total.
+                <span className="italic text-[#8c6622]">
+                  honestidade, proatividade e acompanhamento real.
                 </span>
               </Heading>
 
-              <blockquote className="mt-8 rounded-xl border border-[#e6decb] bg-white p-6 font-serif text-base italic leading-7 text-[#26190b] shadow-sm">
-                &ldquo;Uma grande profissional, pessoa extremamente dedicada e nos passa segurança nos momentos mais difíceis.&rdquo;
-                <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-[#a67c1e]">
-                  — Catiulcia Falconi · Avaliação Verificada no Google Meu Negócio (5,0 ★)
+              <blockquote className="mt-8 rounded-xl border border-[#e2ded6] bg-white p-6 font-serif text-base italic leading-7 text-[#0f172a] shadow-sm">
+                &ldquo;Um profissional excelente! Atendimento sempre muito atencioso, respeitoso e claro em todas as orientações. É nítido o comprometimento e o cuidado, transmite segurança e tranquilidade durante todo o processo.&rdquo;
+                <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-[#8c6622]">
+                  — Gabriela Matos · Avaliação Verificada no Google Meu Negócio (5,0 ★)
                 </footer>
               </blockquote>
             </div>
@@ -1201,23 +1152,23 @@ export default function Home() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={stagger}
-              className="divide-y divide-[#e6decb]"
+              className="divide-y divide-[#e2ded6]"
             >
               {[
                 [
                   "01",
-                  "Acolhimento Humanizado & Escuta Atenta",
-                  "Você é ouvido com total respeito e sensibilidade. Analisamos cada detalhe da sua situação para definir a melhor rota jurídica sem julgamentos.",
+                  "Honestidade & Diagnóstico Jurídico Realista",
+                  "Você recebe uma avaliação sincera e proativa sobre as reais possibilidades do seu caso, sem falsas promessas, com clareza e solidez técnica.",
                 ],
                 [
                   "02",
-                  "Transparência Total & Comunicação Clara",
-                  "Você nunca fica sem respostas. Mantemos você informado de cada passo do seu processo em linguagem simples, objetiva e transparente.",
+                  "Posicionamento Constante do Cliente",
+                  "Você nunca fica sem saber o andamento dos seus direitos. Mantemos você informado sobre cada protocolo, decisão e próxima etapa processual.",
                 ],
                 [
                   "03",
-                  "Combatividade Incisiva & Agilidade",
-                  "Lutamos incansavelmente pelo melhor resultado possível, exigindo o cumprimento estrito da lei e a reparação justa dos seus direitos.",
+                  "Combatividade e Soluções Acertadas",
+                  "Lutamos incansavelmente pelos melhores resultados possíveis, revertendo desafios e exigindo o cumprimento estrito da lei em favor do cliente.",
                 ],
               ].map(([number, title, description]) => (
                 <motion.div
@@ -1225,12 +1176,12 @@ export default function Home() {
                   variants={reveal}
                   className="grid gap-3 py-6 first:pt-0 sm:grid-cols-[70px_1fr] sm:gap-6 sm:py-7"
                 >
-                  <span className="font-serif text-2xl font-semibold text-[#a67c1e]">
+                  <span className="font-serif text-2xl font-semibold text-[#8c6622]">
                     {number}
                   </span>
                   <div>
-                    <h3 className="font-serif text-2xl text-[#140e04]">{title}</h3>
-                    <p className="mt-2 max-w-lg text-[13px] leading-6 text-[#4a3b2c]">
+                    <h3 className="font-serif text-2xl text-[#0f1420]">{title}</h3>
+                    <p className="mt-2 max-w-lg text-[13px] leading-6 text-[#334155]">
                       {description}
                     </p>
                   </div>
@@ -1240,54 +1191,54 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Avaliações no Google (Depoimentos Reais - Dobra Branca com Fundo Marfim Suave) */}
+        {/* Avaliações no Google (Depoimentos Reais) */}
         <section
           id="avaliacoes"
-          className="scroll-mt-24 border-t border-[#dfb76c]/30 bg-[#f7f4ee] py-20 text-[#140e04] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#c59b48]/30 bg-[#f1efe9] py-20 text-[#0f1420] sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
               <Heading
                 light
                 eyebrow="PROVA SOCIAL VERIFICADA · GOOGLE MEU NEGÓCIO"
-                description="Confira avaliações reais e espontâneas de clientes que confiaram suas causas e momentos decisivos à Dra. Jaqueline Soares."
+                description="Confira avaliações reais e espontâneas de clientes que confiaram suas causas ao Dr. Bruno Marques em Carmo do Paranaíba e Minas Gerais."
               >
-                Avaliada com nota máxima 5,0 ★ pela{" "}
-                <span className="italic text-[#a67c1e]">
-                  competência, segurança e atendimento acolhedor.
+                Avaliado com nota máxima 5,0 ★ pela{" "}
+                <span className="italic text-[#8c6622]">
+                  competência, segurança, dedicação e acompanhamento contínuo.
                 </span>
               </Heading>
 
               {/* Verified Google Badge Card */}
-              <div className="flex flex-col gap-3 rounded-xl border border-[#e6decb] bg-white p-5 shadow-sm sm:flex-row sm:items-center md:min-w-[340px]">
-                <div className="flex size-14 shrink-0 items-center justify-center rounded-lg border border-[#dfb76c]/30 bg-[#f4f0e8] shadow-xs">
+              <div className="flex flex-col gap-3 rounded-xl border border-[#e2ded6] bg-white p-5 shadow-sm sm:flex-row sm:items-center md:min-w-[340px]">
+                <div className="flex size-14 shrink-0 items-center justify-center rounded-lg border border-[#c59b48]/30 bg-[#ece8df] shadow-xs">
                   <GoogleIcon size={30} />
                 </div>
                 <div>
                   <div className="flex items-center gap-2">
-                    <span className="font-serif text-3xl font-bold leading-none text-[#140e04]">
+                    <span className="font-serif text-3xl font-bold leading-none text-[#0f1420]">
                       5,0
                     </span>
-                    <div className="flex gap-0.5 text-[#dfb76c]">
+                    <div className="flex gap-0.5 text-[#c59b48]">
                       {Array.from({ length: 5 }, (_, i) => (
                         <Star
                           key={i}
                           size={14}
-                          className="fill-[#dfb76c] text-[#dfb76c]"
+                          className="fill-[#c59b48] text-[#c59b48]"
                         />
                       ))}
                     </div>
                   </div>
-                  <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-[#4a3b2c]">
-                    Jaqueline Soares — Advogada
+                  <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-[#334155]">
+                    Bruno Marques Advocacia
                   </p>
                   <a
                     href={GOOGLE_MAPS_URL}
                     target="_blank"
                     rel="noreferrer"
-                    className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-[#8a5d12] transition-colors hover:text-[#140e04]"
+                    className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-[#634512] transition-colors hover:text-[#0f1420]"
                   >
-                    19 avaliações no Google <ArrowUpRight size={13} />
+                    10 avaliações no Google <ArrowUpRight size={13} />
                   </a>
                 </div>
               </div>
@@ -1298,44 +1249,44 @@ export default function Home() {
               {clientReviews.map((review) => (
                 <article
                   key={review.name}
-                  className="group relative flex flex-col justify-between rounded-xl border border-[#e6decb] bg-white p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#dfb76c] hover:shadow-md sm:p-8"
+                  className="group relative flex flex-col justify-between rounded-xl border border-[#e2ded6] bg-white p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#c59b48] hover:shadow-md sm:p-8"
                 >
                   <div>
                     {/* Header: Stars + Badge + Google icon */}
                     <div className="flex items-center justify-between gap-2">
-                      <div className="flex gap-1 text-[#dfb76c]">
+                      <div className="flex gap-1 text-[#c59b48]">
                         {Array.from({ length: 5 }, (_, i) => (
                           <Star
                             key={i}
                             size={14}
-                            className="fill-[#dfb76c] text-[#dfb76c]"
+                            className="fill-[#c59b48] text-[#c59b48]"
                           />
                         ))}
                       </div>
-                      <div className="flex items-center gap-1.5 text-[11px] font-medium text-[#4a3b2c]">
+                      <div className="flex items-center gap-1.5 text-[11px] font-medium text-[#334155]">
                         <GoogleIcon size={13} />
-                        <span className="rounded-md border border-[#dfb76c]/30 bg-[#f4f0e8] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#8a5d12] shadow-xs">
+                        <span className="rounded-md border border-[#c59b48]/30 bg-[#ece8df] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#634512] shadow-xs">
                           {review.badge}
                         </span>
                       </div>
                     </div>
 
                     {/* Authentic review content */}
-                    <p className="mt-5 text-[14px] italic leading-relaxed text-[#26190b]">
+                    <p className="mt-5 text-[14px] italic leading-relaxed text-[#0f172a]">
                       &ldquo;{review.content}&rdquo;
                     </p>
                   </div>
 
                   {/* Reviewer info */}
-                  <div className="mt-6 flex items-center gap-3 border-t border-[#e6decb] pt-4">
-                    <div className="grid size-10 shrink-0 place-items-center rounded-lg border border-[#dfb76c]/30 bg-[#f4f0e8] font-serif text-sm font-semibold text-[#8a5d12] shadow-xs">
+                  <div className="mt-6 flex items-center gap-3 border-t border-[#e2ded6] pt-4">
+                    <div className="grid size-10 shrink-0 place-items-center rounded-lg border border-[#c59b48]/30 bg-[#ece8df] font-serif text-sm font-semibold text-[#634512] shadow-xs">
                       {review.name.charAt(0)}
                     </div>
                     <div className="min-w-0 flex-1">
-                      <p className="truncate font-serif text-base font-semibold text-[#140e04]">
+                      <p className="truncate font-serif text-base font-semibold text-[#0f1420]">
                         {review.name}
                       </p>
-                      <p className="text-[10px] uppercase tracking-wider text-[#7d7063]">
+                      <p className="text-[10px] uppercase tracking-wider text-[#64748b]">
                         {review.reviewsCount}
                       </p>
                     </div>
@@ -1345,21 +1296,21 @@ export default function Home() {
             </div>
 
             {/* Bottom Actions and Trust Tags */}
-            <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-[#e6decb] pt-8 sm:flex-row">
+            <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-[#e2ded6] pt-8 sm:flex-row">
               <div className="flex flex-wrap items-center gap-2">
                 {[
-                  "Advogada em Lagoa Santa - MG",
-                  "Vetor Norte de Belo Horizonte",
+                  "Advogado em Carmo do Paranaíba - MG",
+                  "Atendimento em Todo o Alto Paranaíba",
+                  "Direito Cível & Indenizações",
                   "Direito de Família & Sucessões",
-                  "Direito do Consumidor & Cível",
                   "Trabalhista & INSS Previdenciário",
-                  "Nota 5,0 ★ no Google (19 avaliações)",
+                  "Nota 5,0 ★ no Google (10 avaliações)",
                 ].map((tag) => (
                   <span
                     key={tag}
-                    className="inline-flex items-center gap-1.5 rounded-lg border border-[#e6decb] bg-white px-3.5 py-1.5 text-[11px] font-medium text-[#26190b] shadow-xs"
+                    className="inline-flex items-center gap-1.5 rounded-lg border border-[#e2ded6] bg-white px-3.5 py-1.5 text-[11px] font-medium text-[#0f172a] shadow-xs"
                   >
-                    <CheckCircle2 size={13} className="text-[#a67c1e]" />
+                    <CheckCircle2 size={13} className="text-[#8c6622]" />
                     {tag}
                   </span>
                 ))}
@@ -1369,7 +1320,7 @@ export default function Home() {
                 href={GOOGLE_MAPS_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="group inline-flex shrink-0 items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#8a5d12] transition-colors hover:text-[#140e04]"
+                className="group inline-flex shrink-0 items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#634512] transition-colors hover:text-[#0f1420]"
               >
                 Ver todas as avaliações no Google{" "}
                 <ArrowUpRight
@@ -1381,20 +1332,20 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Contato & Localização da Sede em Lagoa Santa (Dobra Branca) */}
+        {/* Contato & Localização da Sede em Carmo do Paranaíba */}
         <section
           id="contato"
-          className="scroll-mt-24 border-t border-[#dfb76c]/30 bg-[#faf8f5] py-20 text-[#140e04] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#c59b48]/30 bg-[#f7f6f3] py-20 text-[#0f1420] sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
                 light
-                eyebrow="CONTATO & ATENDIMENTO EM LAGOA SANTA"
-                description="Inicie seu atendimento diretamente pelo WhatsApp ou agende uma reunião presencial em nossa sede no Bairro Bela Vista. Prestamos assistência ágil para clientes de Lagoa Santa, Vetor Norte e todo o Brasil."
+                eyebrow="CONTATO & ATENDIMENTO EM CARMO DO PARANAÍBA"
+                description="Inicie seu atendimento diretamente pelo WhatsApp ou agende uma reunião presencial em nossa sede. Prestamos assistência jurídica ágil para clientes de Carmo do Paranaíba, região e todo o Brasil via consultoria online."
               >
                 Estamos prontos para{" "}
-                <span className="italic text-[#a67c1e]">
+                <span className="italic text-[#8c6622]">
                   escutar e defender você.
                 </span>
               </Heading>
@@ -1402,7 +1353,7 @@ export default function Home() {
               <div className="mt-9 flex flex-col items-start gap-4">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Jaqueline Soares! Gostaria de agendar um horário para atendimento."
+                    "Olá, Dr. Bruno Marques! Gostaria de agendar um horário para atendimento."
                   )}
                   target="_blank"
                   size="lg"
@@ -1411,58 +1362,58 @@ export default function Home() {
                 >
                   <WhatsAppIcon size={17} /> Iniciar Conversa no WhatsApp
                 </GlowingButton>
-                <p className="text-[11px] leading-5 text-[#4a3b2c]">
+                <p className="text-[11px] leading-5 text-[#334155]">
                   Telefone e WhatsApp do escritório:{" "}
-                  <strong className="text-[#140e04]">{PHONE_DISPLAY}</strong>
+                  <strong className="text-[#0f1420]">{PHONE_DISPLAY}</strong>
                 </p>
               </div>
 
-              <div className="mt-10 space-y-4 text-xs text-[#4a3b2c]">
+              <div className="mt-10 space-y-4 text-xs text-[#334155]">
                 <div className="flex items-start gap-3">
                   <Clock
                     size={16}
-                    className="mt-0.5 shrink-0 text-[#a67c1e]"
+                    className="mt-0.5 shrink-0 text-[#8c6622]"
                   />
                   <div>
-                    <p className="font-semibold text-[#140e04]">
+                    <p className="font-semibold text-[#0f1420]">
                       Horário de Funcionamento
                     </p>
-                    <p className="mt-0.5 text-[#26190b]">
+                    <p className="mt-0.5 text-[#0f172a]">
                       Segunda a Sexta-feira das 08:00 às 18:00
                     </p>
-                    <p className="text-[11px] text-[#7d7063]">
-                      Atendimento presencial com hora marcada em Lagoa Santa e consultoria jurídica online em todo o Brasil
+                    <p className="text-[11px] text-[#64748b]">
+                      Atendimento presencial com hora marcada em Carmo do Paranaíba e consultoria jurídica online em todo o Brasil
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3 pt-1">
-                  <Phone size={16} className="shrink-0 text-[#a67c1e]" />
+                  <Phone size={16} className="shrink-0 text-[#8c6622]" />
                   <a
                     href={`tel:+${WHATSAPP_NUMBER}`}
-                    className="font-medium text-[#140e04] transition-colors hover:text-[#a67c1e]"
+                    className="font-medium text-[#0f1420] transition-colors hover:text-[#8c6622]"
                   >
                     {PHONE_DISPLAY} (Ligações e WhatsApp)
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <InstagramIcon size={16} className="shrink-0 text-[#a67c1e]" />
+                  <InstagramIcon size={16} className="shrink-0 text-[#8c6622]" />
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noreferrer"
-                    className="transition-colors hover:text-[#a67c1e] text-[#26190b]"
+                    className="transition-colors hover:text-[#8c6622] text-[#0f172a]"
                   >
                     {INSTAGRAM_HANDLE} (Instagram Oficial)
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <Mail size={16} className="shrink-0 text-[#a67c1e]" />
+                  <Mail size={16} className="shrink-0 text-[#8c6622]" />
                   <a
                     href={`mailto:${EMAIL_CONTACT}`}
-                    className="transition-colors hover:text-[#a67c1e] text-[#26190b]"
+                    className="transition-colors hover:text-[#8c6622] text-[#0f172a]"
                   >
                     {EMAIL_CONTACT}
                   </a>
@@ -1471,83 +1422,83 @@ export default function Home() {
                 <div className="flex items-start gap-3">
                   <MapPin
                     size={16}
-                    className="mt-0.5 shrink-0 text-[#a67c1e]"
+                    className="mt-0.5 shrink-0 text-[#8c6622]"
                   />
-                  <span className="text-[#26190b]">{ADDRESS_TEXT}</span>
+                  <span className="text-[#0f172a]">{ADDRESS_TEXT}</span>
                 </div>
               </div>
             </div>
 
             {/* Office & Schedule Card */}
-            <div className="relative overflow-hidden rounded-xl border border-[#e6decb] bg-white p-7 shadow-md sm:p-10">
-              <div className="absolute right-0 top-0 h-1.5 w-32 bg-gradient-to-r from-[#c59b48] to-[#fdefb4]" />
+            <div className="relative overflow-hidden rounded-xl border border-[#e2ded6] bg-white p-7 shadow-md sm:p-10">
+              <div className="absolute right-0 top-0 h-1.5 w-32 bg-gradient-to-r from-[#b38836] to-[#faeed2]" />
 
               <div className="flex items-center gap-4">
-                <div className="relative size-[64px] shrink-0 overflow-hidden rounded-full border-2 border-[#dfb76c]/60 bg-[#08080a] shadow-md sm:size-[76px]">
+                <div className="relative size-[64px] shrink-0 overflow-hidden rounded-full border-2 border-[#c59b48]/60 bg-[#080b11] shadow-md sm:size-[76px]">
                   <Image
                     src={LOGO_SEAL_SRC}
-                    alt="Selo Jaqueline Soares Advocacia"
+                    alt="Selo Bruno Marques Advocacia"
                     fill
                     sizes="76px"
-                    className="object-contain p-1"
+                    className="object-contain p-1.5"
                   />
                 </div>
                 <div>
-                  <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#a67c1e]">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#8c6622]">
                     Sede do Escritório
                   </p>
-                  <p className="mt-0.5 font-cinzel text-xl font-bold text-[#140e04] sm:text-2xl">
-                    Jaqueline Soares Advocacia
+                  <p className="mt-0.5 font-cinzel text-xl font-bold text-[#0f1420] sm:text-2xl">
+                    Bruno Marques Advocacia
                   </p>
                 </div>
               </div>
 
-              <address className="mt-7 max-w-md text-[14px] not-italic leading-7 text-[#4a3b2c]">
-                <strong className="font-semibold text-[#140e04]">
-                  Dra. Jaqueline Soares
+              <address className="mt-7 max-w-md text-[14px] not-italic leading-7 text-[#334155]">
+                <strong className="font-semibold text-[#0f1420]">
+                  Dr. Bruno Marques
                 </strong>
                 <br />
-                Advogada e Consultora Jurídica
+                Advogado Titular e Consultor Jurídico
                 <br />
                 {ADDRESS_TEXT}
               </address>
 
               {/* Weekly schedule table */}
-              <div className="mt-6 rounded-lg border border-[#e6decb] bg-[#fbf9f6] p-4 text-xs">
-                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#a67c1e]">
+              <div className="mt-6 rounded-lg border border-[#e2ded6] bg-[#faf8f4] p-4 text-xs">
+                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#8c6622]">
                   Atendimento & Horários
                 </p>
-                <div className="grid grid-cols-2 gap-y-1.5 text-[#4a3b2c]">
+                <div className="grid grid-cols-2 gap-y-1.5 text-[#334155]">
                   <span>Segunda a Sexta</span>
-                  <span className="text-right font-semibold text-[#140e04]">
+                  <span className="text-right font-semibold text-[#0f1420]">
                     08:00 às 18:00
                   </span>
                   <span>Atendimento Presencial</span>
-                  <span className="text-right font-medium text-[#8a5d12]">
-                    Lagoa Santa - MG
+                  <span className="text-right font-medium text-[#634512]">
+                    Carmo do Paranaíba - MG
                   </span>
-                  <span>Bairro</span>
-                  <span className="text-right text-[#26190b]">Bela Vista</span>
+                  <span>Localização</span>
+                  <span className="text-right text-[#0f172a]">Rua Franklin Mendonça, 341</span>
                   <span>Atendimento Online</span>
-                  <span className="text-right text-[#26190b]">Todo o Brasil</span>
+                  <span className="text-right text-[#0f172a]">Todo o Brasil</span>
                 </div>
               </div>
 
-              <div className="my-7 h-px bg-[#e6decb]" />
+              <div className="my-7 h-px bg-[#e2ded6]" />
 
               <div className="flex flex-wrap items-center justify-between gap-4">
-                <p className="text-xs text-[#7d7063]">
-                  Atendimento humanizado com hora marcada em Lagoa Santa
+                <p className="text-xs text-[#64748b]">
+                  Atendimento seguro com hora marcada em Carmo do Paranaíba
                 </p>
                 <a
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Jaqueline Soares! Gostaria de agendar um atendimento no escritório."
+                    "Olá, Dr. Bruno Marques! Gostaria de agendar um atendimento no escritório."
                   )}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg border border-[#dfb76c]/40 bg-[#f4f0e8] px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-[#140e04] transition-colors hover:border-[#a67c1e] hover:bg-[#140e04] hover:text-[#fdefb4]"
+                  className="inline-flex items-center gap-2 rounded-lg border border-[#c59b48]/40 bg-[#ece8df] px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-[#0f1420] transition-colors hover:border-[#8c6622] hover:bg-[#0f1420] hover:text-[#faeed2]"
                 >
-                  <WhatsAppIcon size={14} /> Falar com a Advogada <ArrowUpRight size={14} />
+                  <WhatsAppIcon size={14} /> Falar com o Advogado <ArrowUpRight size={14} />
                 </a>
               </div>
             </div>
@@ -1555,23 +1506,23 @@ export default function Home() {
         </section>
 
         {/* Pre-Footer CTA Strip */}
-        <section className="border-t border-[#dfb76c]/20 bg-gradient-to-r from-[#08080a] via-[#15151a] to-[#08080a] px-5 py-14 text-white shadow-inner sm:px-8 sm:py-16 lg:px-12">
+        <section className="border-t border-[#c59b48]/20 bg-gradient-to-r from-[#080b11] via-[#121825] to-[#080b11] px-5 py-14 text-white shadow-inner sm:px-8 sm:py-16 lg:px-12">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-7 sm:flex-row sm:items-center">
             <div>
-              <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#dfb76c]">
-                <Sparkles size={13} /> JAQUELINE SOARES ADVOCACIA · LAGOA SANTA & VETOR NORTE - MG
+              <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#c59b48]">
+                <Sparkles size={13} /> BRUNO MARQUES ADVOCACIA · CARMO DO PARANAÍBA & REGIÃO - MG
               </p>
               <h2 className="mt-3 max-w-2xl font-serif text-3xl leading-tight text-white sm:text-4xl">
-                Precisa de orientação jurídica ética, segura e humanizada?
+                Precisa de orientação jurídica ética, combativa e de confiança?
               </h2>
             </div>
             <a
               href={getWhatsAppUrl(
-                "Olá, Dra. Jaqueline Soares! Gostaria de consultar sobre meus direitos com seu escritório."
+                "Olá, Dr. Bruno Marques! Gostaria de consultar sobre meus direitos com seu escritório."
               )}
               target="_blank"
               rel="noreferrer"
-              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-lg bg-gradient-to-r from-[#c59b48] via-[#f4c87b] to-[#c59b48] px-7 py-4 text-[11px] font-bold uppercase tracking-[0.14em] text-[#140e04] shadow-md transition-all hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold"
+              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-lg bg-gradient-to-r from-[#b38836] via-[#dfb76c] to-[#b38836] px-7 py-4 text-[11px] font-bold uppercase tracking-[0.14em] text-[#090c12] shadow-md transition-all hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold"
             >
               <WhatsAppIcon size={17} /> Falar no WhatsApp{" "}
               <ArrowUpRight size={15} />
@@ -1580,50 +1531,50 @@ export default function Home() {
         </section>
 
         {/* Footer */}
-        <footer className="border-t border-[#dfb76c]/20 bg-[#060608] px-5 py-14 text-white sm:px-8 lg:px-12">
+        <footer className="border-t border-[#c59b48]/20 bg-[#05070c] px-5 py-14 text-white sm:px-8 lg:px-12">
           <div className="mx-auto grid max-w-7xl gap-10 sm:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1fr]">
             <div>
               <a
                 href="#inicio"
-                aria-label="Jaqueline Soares — Escritório de Advocacia"
+                aria-label="Bruno Marques Advocacia — Escritório de Advocacia"
                 className="inline-flex items-center gap-3.5 transition-transform hover:scale-[1.02]"
               >
-                <div className="relative size-[72px] shrink-0 overflow-hidden rounded-full border-2 border-[#dfb76c]/50 bg-[#08080a] shadow-md sm:size-[80px]">
+                <div className="relative size-[72px] shrink-0 overflow-hidden rounded-full border-2 border-[#c59b48]/50 bg-[#080b11] shadow-md sm:size-[80px]">
                   <Image
                     src={LOGO_SEAL_SRC}
-                    alt="Jaqueline Soares — Escritório de Advocacia"
+                    alt="Bruno Marques Advocacia"
                     fill
                     sizes="80px"
-                    className="object-contain p-1"
+                    className="object-contain p-1.5"
                   />
                 </div>
                 <div className="flex flex-col">
                   <span className="font-cinzel text-xl font-bold tracking-wider text-white sm:text-2xl">
-                    JAQUELINE SOARES
+                    BRUNO MARQUES
                   </span>
-                  <span className="text-xs font-semibold uppercase tracking-[0.24em] text-[#dfb76c]">
+                  <span className="text-xs font-semibold uppercase tracking-[0.24em] text-[#c59b48]">
                     Advocacia & Consultoria
                   </span>
                 </div>
               </a>
-              <p className="mt-4 max-w-xs text-xs leading-6 text-[#dcd6cb]">
-                ⚖️ Advocacia humanizada, estratégica e comprometida com a Constituição. Atuação de excelência em Direito de Família, Sucessões, Cível, Consumidor, Trabalhista e Previdenciário em Lagoa Santa e Vetor Norte.
+              <p className="mt-4 max-w-xs text-xs leading-6 text-[#cbd5e1]">
+                ⚖️ Advocacia resolutiva, estratégica e ética. Atuação com excelência técnica em Direito Cível, Família, Consumidor, Trabalhista, Previdenciário e Contratos em Carmo do Paranaíba e Minas Gerais.
               </p>
-              <p className="mt-3 text-[11px] font-semibold text-[#dfb76c]">
-                Dra. Jaqueline Soares · Advogada
+              <p className="mt-3 text-[11px] font-semibold text-[#c59b48]">
+                Dr. Bruno Marques · Advogado
               </p>
             </div>
 
             <div>
-              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#dfb76c]">
+              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#c59b48]">
                 Navegação
               </h2>
-              <div className="mt-4 flex flex-col items-start gap-3 text-xs text-[#dcd6cb]">
+              <div className="mt-4 flex flex-col items-start gap-3 text-xs text-[#cbd5e1]">
                 <a className="footer-link" href="#inicio">
                   Início
                 </a>
                 <a className="footer-link" href="#sobre">
-                  Dra. Jaqueline Soares
+                  Dr. Bruno Marques
                 </a>
                 <a className="footer-link" href="#atuacao">
                   Áreas de Atuação
@@ -1641,17 +1592,17 @@ export default function Home() {
             </div>
 
             <div>
-              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#dfb76c]">
+              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#c59b48]">
                 Contato & Atendimento
               </h2>
-              <div className="mt-4 flex flex-col items-start gap-2.5 text-xs text-[#dcd6cb]">
+              <div className="mt-4 flex flex-col items-start gap-2.5 text-xs text-[#cbd5e1]">
                 <a
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Jaqueline Soares! Gostaria de solicitar um atendimento com o escritório."
+                    "Olá, Dr. Bruno Marques! Gostaria de solicitar um atendimento com o escritório."
                   )}
                   target="_blank"
                   rel="noreferrer"
-                  className="footer-link inline-flex items-center gap-2 font-medium text-[#fdefb4]"
+                  className="footer-link inline-flex items-center gap-2 font-medium text-[#faeed2]"
                 >
                   <WhatsAppIcon size={15} /> WhatsApp: {PHONE_DISPLAY}
                 </a>
@@ -1679,16 +1630,16 @@ export default function Home() {
                   <MapPin size={15} className="mt-0.5 shrink-0" />
                   <span>{ADDRESS_TEXT}</span>
                 </div>
-                <p className="inline-flex items-center gap-2 pt-1 text-[11px] text-[#dfb76c]">
+                <p className="inline-flex items-center gap-2 pt-1 text-[11px] text-[#c59b48]">
                   <Clock size={14} className="shrink-0" /> Seg a Sex: 08:00 às 18:00
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-[#dfb76c]/20 pt-6 text-[10px] text-stone-400 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-[#c59b48]/20 pt-6 text-[10px] text-stone-400 sm:flex-row sm:items-center sm:justify-between">
             <p>
-              © {new Date().getFullYear()} JAQUELINE SOARES ADVOCACIA · DRA. JAQUELINE SOARES. Todos os direitos reservados.
+              © {new Date().getFullYear()} BRUNO MARQUES ADVOCACIA · DR. BRUNO MARQUES. Todos os direitos reservados.
             </p>
             <p>
               Conteúdo informativo, em estrita conformidade com o Código de Ética e Disciplina da OAB.
@@ -1703,16 +1654,16 @@ export default function Home() {
         >
           <a
             href={getWhatsAppUrl(
-              "Olá, Dra. Jaqueline Soares! Gostaria de consultar sobre meus direitos com seu escritório."
+              "Olá, Dr. Bruno Marques! Gostaria de consultar sobre meus direitos com seu escritório."
             )}
             target="_blank"
             rel="noreferrer"
-            aria-label="Falar agora pelo WhatsApp com a Dra. Jaqueline Soares"
+            aria-label="Falar agora pelo WhatsApp com o Dr. Bruno Marques"
             className="group relative flex size-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-[#25D366]/40"
           >
             <WhatsAppIcon size={28} />
-            <span className="pointer-events-none absolute right-16 hidden whitespace-nowrap rounded-lg bg-[#121216] border border-[#dfb76c]/30 px-3.5 py-1.5 text-xs font-semibold text-white shadow-lg transition-opacity group-hover:block">
-              Falar com a Dra. Jaqueline
+            <span className="pointer-events-none absolute right-16 hidden whitespace-nowrap rounded-lg bg-[#0d121c] border border-[#c59b48]/30 px-3.5 py-1.5 text-xs font-semibold text-white shadow-lg transition-opacity group-hover:block">
+              Falar com o Dr. Bruno Marques
             </span>
           </a>
         </aside>
@@ -1736,13 +1687,13 @@ export default function Home() {
                 exit={{ opacity: 0, y: 16, scale: 0.99 }}
                 transition={{ duration: 0.24 }}
                 onClick={(event) => event.stopPropagation()}
-                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-xl border border-[#dfb76c]/35 bg-[#121216] p-7 shadow-2xl sm:max-w-xl sm:rounded-xl sm:p-10"
+                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-xl border border-[#c59b48]/35 bg-[#0d121c] p-7 shadow-2xl sm:max-w-xl sm:rounded-xl sm:p-10"
               >
                 <button
                   type="button"
                   aria-label="Fechar detalhes da especialidade"
                   onClick={() => setActiveArea(null)}
-                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-[#dfb76c]/30 bg-[#1c1c24] text-[#fdefb4] transition-colors hover:border-[#f4c87b] hover:text-white"
+                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-[#c59b48]/30 bg-[#182030] text-[#faeed2] transition-colors hover:border-[#f3dfa7] hover:text-white"
                 >
                   <X size={18} />
                 </button>
@@ -1756,12 +1707,12 @@ export default function Home() {
                   {activeArea.title}
                 </h2>
 
-                <p className="mt-5 text-sm leading-7 text-[#dcd6cb]">
+                <p className="mt-5 text-sm leading-7 text-[#cbd5e1]">
                   {activeArea.details}
                 </p>
 
-                <div className="mt-6 border-t border-[#dfb76c]/20 pt-5">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#dfb76c]">
+                <div className="mt-6 border-t border-[#c59b48]/20 pt-5">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#c59b48]">
                     Principais demandas atendidas pelo escritório:
                   </p>
                   <ul className="mt-4 space-y-3">
@@ -1770,7 +1721,7 @@ export default function Home() {
                         key={topic}
                         className="flex items-center gap-3 text-sm text-stone-200"
                       >
-                        <span className="size-2 shrink-0 rounded-full bg-[#dfb76c]" />
+                        <span className="size-2 shrink-0 rounded-full bg-[#c59b48]" />
                         <span>{topic}</span>
                       </li>
                     ))}

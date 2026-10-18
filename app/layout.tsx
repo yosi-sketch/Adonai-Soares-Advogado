@@ -36,37 +36,38 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#08080a",
+  themeColor: "#080b11",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.jaquelinesoares.adv.br"),
+  metadataBase: new URL("https://www.brunomarques.adv.br"),
   title:
-    "Jaqueline Soares — Advogada | Escritório de Advocacia em Lagoa Santa - MG",
+    "Bruno Marques Advocacia | Escritório de Advocacia em Carmo do Paranaíba - MG",
   description:
-    "Advocacia ética, combativa e humanizada com a Dra. Jaqueline Soares em Lagoa Santa e Vetor Norte - MG. Atendimento especializado em Direito de Família, Cível, Consumidor, Trabalhista e Previdenciário (INSS). Nota máxima 5,0 ★ no Google.",
+    "Advocacia ética, combativa e resolutiva com o Dr. Bruno Marques em Carmo do Paranaíba e região. Atendimento especializado em Direito Cível, Família e Sucessões, Consumidor, Trabalhista, Previdenciário (INSS) e Contratos. Nota máxima 5,0 ★ no Google.",
   keywords: [
-    "Jaqueline Soares Advogada",
-    "Jaqueline Soares Advocacia",
-    "Advogada em Lagoa Santa",
-    "Advogada em Lagoa Santa MG",
-    "Escritório de Advocacia Lagoa Santa",
-    "Dra Jaqueline Soares",
-    "Advogada Vetor Norte MG",
-    "Advogada Direito de Família Lagoa Santa",
-    "Divórcio e Pensão Lagoa Santa",
-    "Inventário e Partilha Lagoa Santa",
-    "Advogada Trabalhista Lagoa Santa",
-    "Advogada Previdenciário INSS Lagoa Santa",
-    "Aposentadoria INSS Lagoa Santa",
-    "BPC LOAS Lagoa Santa",
-    "Direito do Consumidor Lagoa Santa",
-    "Contratos e Indenizações Lagoa Santa",
-    "Advocacia Lagoa Santa Minas Gerais",
+    "Bruno Marques Advocacia",
+    "Bruno Marques Advogado",
+    "Dr Bruno Marques",
+    "Advogado em Carmo do Paranaíba",
+    "Advogado em Carmo do Paranaíba MG",
+    "Escritório de Advocacia Carmo do Paranaíba",
+    "Advogado Carmo do Paranaíba Minas Gerais",
+    "Advogado Alto Paranaíba MG",
+    "Advogado Direito de Família Carmo do Paranaíba",
+    "Divórcio e Inventário Carmo do Paranaíba",
+    "Advogado Trabalhista Carmo do Paranaíba",
+    "Advogado Previdenciário INSS Carmo do Paranaíba",
+    "Aposentadoria INSS Carmo do Paranaíba",
+    "BPC LOAS Carmo do Paranaíba",
+    "Direito do Consumidor Carmo do Paranaíba",
+    "Ações Contra Bancos Carmo do Paranaíba",
+    "Contratos e Indenizações Carmo do Paranaíba",
+    "Advocacia Carmo do Paranaíba Minas Gerais",
   ],
-  authors: [{ name: "Dra. Jaqueline Soares" }],
-  creator: "Jaqueline Soares — Escritório de Advocacia",
-  publisher: "Jaqueline Soares — Escritório de Advocacia",
+  authors: [{ name: "Dr. Bruno Marques" }],
+  creator: "Bruno Marques Advocacia",
+  publisher: "Bruno Marques Advocacia",
   formatDetection: {
     telephone: true,
     address: true,
@@ -83,18 +84,18 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.jaquelinesoares.adv.br",
+    url: "https://www.brunomarques.adv.br",
     title:
-      "Jaqueline Soares — Advogada | Escritório de Advocacia em Lagoa Santa - MG",
+      "Bruno Marques Advocacia | Escritório de Advocacia em Carmo do Paranaíba - MG",
     description:
-      "Atendimento jurídico de excelência, humanizado e focado em resultados reais. Referência em Lagoa Santa e Vetor Norte. Nota 5,0 ★ no Google.",
-    siteName: "Jaqueline Soares — Escritório de Advocacia",
+      "Atendimento jurídico de excelência, resolutivo e focado em resultados reais. Referência em Carmo do Paranaíba e região. Nota máxima 5,0 ★ no Google.",
+    siteName: "Bruno Marques Advocacia",
     images: [
       {
         url: "/logo.png",
         width: 1024,
-        height: 512,
-        alt: "Jaqueline Soares — Escritório de Advocacia",
+        height: 341,
+        alt: "Bruno Marques Advocacia",
       },
     ],
   },
@@ -108,45 +109,44 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Jaqueline Soares — Escritório de Advocacia",
-    alternateName: "Dra. Jaqueline Soares Advogada",
+    name: "Bruno Marques Advocacia",
+    alternateName: "Dr. Bruno Marques Advogado",
     founder: [
       {
         "@type": "Person",
-        name: "Dra. Jaqueline Soares",
-        jobTitle: "Advogada Fundadora e Consultora Jurídica",
+        name: "Dr. Bruno Marques",
+        jobTitle: "Advogado Titular e Consultor Jurídico",
       },
     ],
-    telephone: "+55-31-97577-2112",
-    url: "https://www.jaquelinesoares.adv.br",
-    image: "https://www.jaquelinesoares.adv.br/logo.png",
+    telephone: "+55-34-99716-3580",
+    url: "https://www.brunomarques.adv.br",
+    image: "https://www.brunomarques.adv.br/logo.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "R. Timbiras, 150 - Bela Vista",
-      addressLocality: "Lagoa Santa",
+      streetAddress: "Rua Franklin Mendonça, 341",
+      addressLocality: "Carmo do Paranaíba",
       addressRegion: "MG",
-      postalCode: "33239-314",
+      postalCode: "38840-056",
       addressCountry: "BR",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: -19.6305,
-      longitude: -43.9015,
+      latitude: -19.0019,
+      longitude: -46.3142,
     },
     priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "19",
+      reviewCount: "10",
     },
     areaServed: [
-      "Lagoa Santa",
-      "Vetor Norte",
-      "Confins",
-      "Pedro Leopoldo",
-      "Vespasiano",
-      "Santa Luzia",
-      "Belo Horizonte",
+      "Carmo do Paranaíba",
+      "Arapuá",
+      "Rio Paranaíba",
+      "Patos de Minas",
+      "São Gotardo",
+      "Tiros",
       "Minas Gerais",
       "Brasil",
     ],
@@ -165,8 +165,8 @@ export default function RootLayout({
       },
     ],
     sameAs: [
-      "https://www.instagram.com/adv.jaquelinesoaress/",
-      "https://wa.me/5531975772112",
+      "https://www.instagram.com/brunomarques.advv/",
+      "https://wa.me/5534997163580",
     ],
   };
 
@@ -184,7 +184,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen overflow-x-clip bg-[#08080a] font-sans text-stone-100 antialiased selection:bg-[#dfb76c] selection:text-[#08080a]">
+      <body className="min-h-screen overflow-x-clip bg-[#080b11] font-sans text-stone-100 antialiased selection:bg-[#c59b48] selection:text-[#080b11]">
         {children}
       </body>
     </html>

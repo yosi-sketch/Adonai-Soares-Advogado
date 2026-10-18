@@ -36,30 +36,30 @@ export default function GlowingButton({
     lg: "px-7 py-4 text-xs tracking-[0.14em]",
   }[size];
 
-  // Refined metallic royal gold and obsidian styling for Jaqueline Soares Advocacia
+  // Refined metallic antique bronze gold and midnight slate styling for Bruno Marques Advocacia
   const variantClasses = {
     gold:
-      "border border-[#fdefb4]/60 bg-gradient-to-r from-[#c59b48] via-[#f4c87b] to-[#c59b48] text-[#140e04] font-bold shadow-md shadow-[#08080a]/60 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold",
-    "gold-dark":
-      "border border-[#dfb76c]/40 bg-gradient-to-r from-[#7a5410] via-[#a67c1e] to-[#7a5410] text-white font-bold shadow-md hover:-translate-y-0.5 hover:brightness-110 hover:shadow-gold",
+      "border border-[#faeed2]/60 bg-gradient-to-r from-[#b38836] via-[#dfb76c] to-[#b38836] text-[#090c12] font-bold shadow-md shadow-[#080b11]/60 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold",
     rosegold:
-      "border border-[#fddf9b]/40 bg-gradient-to-r from-[#a67c1e] via-[#dfb76c] to-[#a67c1e] text-white font-bold shadow-md shadow-[#08080a]/50 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-gold",
+      "border border-[#faeed2]/60 bg-gradient-to-r from-[#b38836] via-[#dfb76c] to-[#b38836] text-[#090c12] font-bold shadow-md shadow-[#080b11]/60 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold",
+    "gold-dark":
+      "border border-[#c59b48]/40 bg-gradient-to-r from-[#634512] via-[#8c6622] to-[#634512] text-white font-bold shadow-md hover:-translate-y-0.5 hover:brightness-110 hover:shadow-gold",
     champagne:
-      "border border-[#fdefb4]/60 bg-gradient-to-r from-[#fdf8e8] via-[#fdefb4] to-[#fdf8e8] text-[#1e1507] font-bold shadow-sm hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold",
+      "border border-[#faeed2]/60 bg-gradient-to-r from-[#fdfaf3] via-[#faeed2] to-[#fdfaf3] text-[#1c1608] font-bold shadow-sm hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold",
     bronze:
-      "border border-[#a67c1e]/50 bg-gradient-to-r from-[#472c06] via-[#7a5410] to-[#472c06] text-white font-bold shadow-md shadow-[#08080a]/50 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-gold",
+      "border border-[#8c6622]/50 bg-gradient-to-r from-[#382506] via-[#634512] to-[#382506] text-white font-bold shadow-md shadow-[#080b11]/50 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-gold",
     dark:
-      "border border-[#dfb76c]/35 bg-[#141419] text-[#fdefb4] shadow-sm shadow-[#08080a]/50 hover:-translate-y-0.5 hover:border-[#f4c87b] hover:bg-[#1c1c24] hover:text-white hover:shadow-gold",
+      "border border-[#c59b48]/35 bg-[#121825] text-[#faeed2] shadow-sm shadow-[#080b11]/50 hover:-translate-y-0.5 hover:border-[#f3dfa7] hover:bg-[#182030] hover:text-white hover:shadow-gold",
     outline:
-      "border border-[#dfb76c]/60 bg-transparent text-[#dfb76c] hover:-translate-y-0.5 hover:border-[#fdefb4] hover:bg-[#dfb76c]/15 hover:text-white",
+      "border border-[#c59b48]/60 bg-transparent text-[#dfb76c] hover:-translate-y-0.5 hover:border-[#faeed2] hover:bg-[#c59b48]/15 hover:text-white",
     ruby:
       "border border-[#ef4444]/40 bg-gradient-to-r from-[#7f1d1d] via-[#991b1b] to-[#7f1d1d] text-white font-bold shadow-md hover:-translate-y-0.5 hover:brightness-110",
     white:
-      "border border-[#dfb76c]/40 bg-white text-[#140e04] shadow-sm hover:-translate-y-0.5 hover:bg-[#fdf8e8] hover:text-[#08080a] hover:shadow-md",
+      "border border-[#c59b48]/40 bg-white text-[#090c12] shadow-sm hover:-translate-y-0.5 hover:bg-[#fdfaf3] hover:text-[#080b11] hover:shadow-md",
   }[variant];
 
   const classes =
-    "inline-flex items-center justify-center gap-2 rounded-lg font-bold uppercase transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#dfb76c] select-none text-center cursor-pointer " +
+    "inline-flex items-center justify-center gap-2 rounded-lg font-bold uppercase transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#c59b48] select-none text-center cursor-pointer " +
     sizeClasses +
     " " +
     variantClasses +

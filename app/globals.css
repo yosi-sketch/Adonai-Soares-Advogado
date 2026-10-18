@@ -2,57 +2,65 @@
 
 :root {
   color-scheme: dark;
-  --brand-gold-light: #fdf8e8;
-  --brand-gold-highlight: #fdefb4;
-  --brand-gold-shimmer: #fddf9b;
-  --brand-gold-accent: #f4c87b;
-  --brand-gold: #dfb76c;
-  --brand-gold-rich: #cd984c;
-  --brand-gold-dark: #a67c1e;
-  --brand-gold-deep: #7a5410;
-  --brand-gold-shadow: #472c06;
-  --brand-obsidian: #08080a;
-  --brand-charcoal: #101014;
-  --brand-surface: #15151a;
-  --brand-surface-elevated: #1e1e26;
-  --brand-ink: #fbfaf7;
-  --brand-ink-soft: #dcd6cb;
-  --brand-pearl: #faf8f5;
-  --brand-paper: #f4f0e8;
+  --brand-gold-light: #fdfaf3;
+  --brand-gold-highlight: #faeed2;
+  --brand-gold-shimmer: #f3dfa7;
+  --brand-gold-accent: #e2c482;
+  --brand-gold: #c59b48;
+  --brand-gold-rich: #b38836;
+  --brand-gold-dark: #8c6622;
+  --brand-gold-deep: #634512;
+  --brand-gold-shadow: #382506;
+  --brand-obsidian: #080b11;
+  --brand-charcoal: #0d121c;
+  --brand-surface: #121825;
+  --brand-surface-elevated: #182030;
+  --brand-ink: #f8f9fa;
+  --brand-ink-soft: #cbd5e1;
+  --brand-pearl: #f7f6f3;
+  --brand-paper: #f1efe9;
 }
 
 @theme inline {
   --font-serif: var(--font-serif), var(--font-display), "Playfair Display", "Cormorant Garamond", serif;
   --font-cinzel: var(--font-cinzel), "Cinzel", "Trajan Pro", serif;
   --font-sans: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
-  --color-ink: #fbfaf7;
-  --color-ink-soft: #dcd6cb;
-  --color-pearl: #08080a;
-  --color-brand-50: #0c0c0f;
-  --color-brand-100: #141419;
-  --color-brand-200: #1c1c24;
-  --color-brand-300: #262632;
-  --color-brand-400: #dfb76c;
+  --color-ink: #f8f9fa;
+  --color-ink-soft: #cbd5e1;
+  --color-pearl: #080b11;
+  --color-brand-50: #0a0e16;
+  --color-brand-100: #0d121c;
+  --color-brand-200: #121825;
+  --color-brand-300: #182030;
+  --color-brand-400: #e2c482;
   --color-brand-500: #c59b48;
-  --color-brand-600: #a67c1e;
-  --color-brand-700: #7a5410;
-  --color-brand-800: #472c06;
-  --color-brand-900: #231502;
-  --color-brand-950: #08080a;
-  --color-gold-100: #fdf8e8;
-  --color-gold-200: #fdefb4;
-  --color-gold-300: #fddf9b;
-  --color-gold-400: #f4c87b;
-  --color-gold-500: #dfb76c;
-  --color-gold-600: #c59b48;
-  --color-gold-700: #a67c1e;
-  --color-gold-800: #7a5410;
-  --color-gold-900: #472c06;
+  --color-brand-600: #b38836;
+  --color-brand-700: #8c6622;
+  --color-brand-800: #634512;
+  --color-brand-900: #382506;
+  --color-brand-950: #080b11;
+  --color-gold-100: #fdfaf3;
+  --color-gold-200: #faeed2;
+  --color-gold-300: #f3dfa7;
+  --color-gold-400: #e2c482;
+  --color-gold-500: #c59b48;
+  --color-gold-600: #b38836;
+  --color-gold-700: #8c6622;
+  --color-gold-800: #634512;
+  --color-gold-900: #382506;
+  --color-bronze-100: #fdfaf3;
+  --color-bronze-200: #faeed2;
+  --color-bronze-300: #e2c482;
+  --color-bronze-400: #c59b48;
+  --color-bronze-500: #b38836;
+  --color-bronze-600: #8c6622;
+  --color-bronze-700: #634512;
+  --color-bronze-800: #382506;
   --shadow-card: 0 18px 48px rgba(0, 0, 0, 0.78);
-  --shadow-gold: 0 10px 30px rgba(223, 183, 108, 0.32);
-  --shadow-bronze: 0 10px 30px rgba(223, 183, 108, 0.32);
+  --shadow-gold: 0 10px 30px rgba(197, 155, 72, 0.28);
+  --shadow-bronze: 0 10px 30px rgba(179, 136, 54, 0.28);
   --shadow-obsidian: 0 16px 45px rgba(0, 0, 0, 0.92);
-  --shadow-glow: 0 0 35px rgba(244, 200, 123, 0.35);
+  --shadow-glow: 0 0 35px rgba(226, 196, 130, 0.30);
 }
 
 html {
@@ -61,15 +69,15 @@ html {
 }
 
 body {
-  background: #08080a;
-  color: #fbfaf7;
+  background: #080b11;
+  color: #f8f9fa;
   font-family: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
-  caret-color: #dfb76c;
+  caret-color: #c59b48;
 }
 
 ::selection {
-  background: #dfb76c;
-  color: #08080a;
+  background: #c59b48;
+  color: #080b11;
 }
 
 .font-cinzel {
@@ -89,11 +97,11 @@ body {
 }
 
 .eyebrow {
-  color: #dfb76c;
+  color: #c59b48;
 }
 
 .eyebrow-light {
-  color: #a67c1e;
+  color: #8c6622;
 }
 
 .eyebrow::before,
@@ -108,7 +116,7 @@ body {
 .nav-link {
   position: relative;
   padding-block: 0.5rem;
-  color: #dcd6cb;
+  color: #cbd5e1;
   font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -122,7 +130,7 @@ body {
   bottom: 0;
   left: 0;
   height: 1px;
-  background: #dfb76c;
+  background: #c59b48;
   content: "";
   transform: scaleX(0);
   transform-origin: left;
@@ -150,17 +158,17 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #08080a;
+  background: #080b11;
 }
 
 ::-webkit-scrollbar-thumb {
-  border: 2px solid #08080a;
+  border: 2px solid #080b11;
   border-radius: 999px;
-  background: #472c06;
+  background: #382506;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #dfb76c;
+  background: #c59b48;
 }
 
 @media (prefers-reduced-motion: reduce) {
