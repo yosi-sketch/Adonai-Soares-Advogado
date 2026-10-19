@@ -36,30 +36,30 @@ export default function GlowingButton({
     lg: "px-7 py-4 text-xs tracking-[0.14em]",
   }[size];
 
-  // Refined metallic bronze gold and warm obsidian styling for Júlia Andrade Advocacia
+  // Refined metallic champagne gold and warm obsidian styling for Clícia Bento Advocacia
   const variantClasses = {
     gold:
-      "border border-[#f5e7c8]/60 bg-gradient-to-r from-[#b27d35] via-[#d4a359] to-[#b27d35] text-[#120e0b] font-bold shadow-md shadow-[#0c0a08]/60 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold",
+      "border border-[#fce2a2]/70 bg-gradient-to-r from-[#a4732a] via-[#e0b370] to-[#b08144] text-[#120e0b] font-bold shadow-md shadow-[#0c0a08]/60 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold",
     rosegold:
-      "border border-[#f5e7c8]/60 bg-gradient-to-r from-[#b27d35] via-[#d4a359] to-[#b27d35] text-[#120e0b] font-bold shadow-md shadow-[#0c0a08]/60 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold",
+      "border border-[#fce2a2]/70 bg-gradient-to-r from-[#a4732a] via-[#e0b370] to-[#b08144] text-[#120e0b] font-bold shadow-md shadow-[#0c0a08]/60 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold",
     "gold-dark":
-      "border border-[#c89345]/40 bg-gradient-to-r from-[#633e14] via-[#8c5d23] to-[#633e14] text-white font-bold shadow-md hover:-translate-y-0.5 hover:brightness-110 hover:shadow-gold",
+      "border border-[#c99b4f]/40 bg-gradient-to-r from-[#5c340d] via-[#834e20] to-[#5c340d] text-white font-bold shadow-md hover:-translate-y-0.5 hover:brightness-110 hover:shadow-gold",
     champagne:
-      "border border-[#f5e7c8]/60 bg-gradient-to-r from-[#fcf7ed] via-[#f5e7c8] to-[#fcf7ed] text-[#1f170c] font-bold shadow-sm hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold",
+      "border border-[#fce2a2]/70 bg-gradient-to-r from-[#fcf7ed] via-[#fce2a2] to-[#fcf7ed] text-[#1f170c] font-bold shadow-sm hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold",
     bronze:
-      "border border-[#8c5d23]/50 bg-gradient-to-r from-[#3d240a] via-[#633e14] to-[#3d240a] text-white font-bold shadow-md shadow-[#0c0a08]/50 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-gold",
+      "border border-[#834e20]/50 bg-gradient-to-r from-[#331b05] via-[#5c340d] to-[#331b05] text-white font-bold shadow-md shadow-[#0c0a08]/50 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-gold",
     dark:
-      "border border-[#c89345]/35 bg-[#191410] text-[#f5e7c8] shadow-sm shadow-[#0c0a08]/50 hover:-translate-y-0.5 hover:border-[#ebd3a2] hover:bg-[#221c16] hover:text-white hover:shadow-gold",
+      "border border-[#c99b4f]/35 bg-[#191410] text-[#fce2a2] shadow-sm shadow-[#0c0a08]/50 hover:-translate-y-0.5 hover:border-[#fce2a2] hover:bg-[#221c16] hover:text-white hover:shadow-gold",
     outline:
-      "border border-[#c89345]/60 bg-transparent text-[#d4a359] hover:-translate-y-0.5 hover:border-[#f5e7c8] hover:bg-[#c89345]/15 hover:text-white",
+      "border border-[#c99b4f]/60 bg-transparent text-[#e0b370] hover:-translate-y-0.5 hover:border-[#fce2a2] hover:bg-[#c99b4f]/15 hover:text-white",
     ruby:
       "border border-[#ef4444]/40 bg-gradient-to-r from-[#7f1d1d] via-[#991b1b] to-[#7f1d1d] text-white font-bold shadow-md hover:-translate-y-0.5 hover:brightness-110",
     white:
-      "border border-[#c89345]/40 bg-white text-[#120e0b] shadow-sm hover:-translate-y-0.5 hover:bg-[#fcf7ed] hover:text-[#0c0a08] hover:shadow-md",
+      "border border-[#c99b4f]/40 bg-white text-[#120e0b] shadow-sm hover:-translate-y-0.5 hover:bg-[#fcf7ed] hover:text-[#0c0a08] hover:shadow-md",
   }[variant];
 
   const classes =
-    "inline-flex items-center justify-center gap-2 rounded-lg font-bold uppercase transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#c89345] select-none text-center cursor-pointer " +
+    "inline-flex items-center justify-center gap-2 rounded-lg font-bold uppercase transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#c99b4f] select-none text-center cursor-pointer " +
     sizeClasses +
     " " +
     variantClasses +

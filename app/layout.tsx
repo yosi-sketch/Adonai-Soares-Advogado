@@ -40,32 +40,36 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.juliaandrade.adv.br"),
+  metadataBase: new URL("https://www.cliciabento.adv.br"),
   title:
-    "Júlia Andrade — Advocacia e Consultoria | Advogada Trabalhista em Três Pontas - MG",
+    "Clícia Bento | Advogada em Ervália — Advocacia e Consultoria Jurídica",
   description:
-    "Advocacia Trabalhista humanizada, ética e combativa com a Dra. Júlia Andrade em Três Pontas e região. Especialista em Rescisão Indireta, Horas Extras, Verbas Rescisórias, Insalubridade, Periculosidade e Acidentes de Trabalho. Nota máxima 5,0 ★ no Google com 74 avaliações.",
+    "⚖️ Advocacia e Consultoria Jurídica com a Dra. Clícia Bento (OAB/MG 246.137). Nota máxima 5,0 ★ com 41 avaliações no Google. 📍 Rua Sagrado Coração de Jesus, nº 20, Centro, Ervália - MG e atendimento on-line em todo o Brasil.",
   keywords: [
-    "Júlia Andrade Advocacia",
-    "Júlia Andrade Advogada Trabalhista",
-    "Dra Júlia Andrade",
-    "Advogada em Três Pontas",
-    "Advogada em Três Pontas MG",
-    "Advogada Trabalhista Três Pontas",
-    "Escritório de Advocacia Três Pontas",
-    "Advogado Trabalhista Três Pontas Minas Gerais",
-    "Advogado Sul de Minas MG",
-    "Rescisão Indireta Três Pontas",
-    "Horas Extras Advogada Três Pontas",
-    "Acidente de Trabalho Indenização Três Pontas",
-    "Insalubridade e Periculosidade Três Pontas",
-    "Reconhecimento de Vínculo Três Pontas",
-    "Demissão Injusta Direitos Trabalhistas",
-    "Advocacia Trabalhista Humanizada",
+    "Clícia Bento Advocacia",
+    "Clícia Bento Advogada",
+    "Dra Clícia Bento",
+    "Advogada em Ervália",
+    "Advogada em Ervália MG",
+    "Advogada Viçosa MG",
+    "Advogada Ubá MG",
+    "Advogada Muriaé MG",
+    "Advogada Zona da Mata MG",
+    "Escritório de Advocacia Ervália",
+    "Advogado Ervália Minas Gerais",
+    "OAB MG 246137",
+    "Direito do Trabalho Ervália",
+    "Rescisão Indireta Ervália",
+    "Aposentadoria e INSS Ervália",
+    "Divórcio e Pensão Alimentícia Ervália",
+    "Inventário e Sucessões Ervália",
+    "Defesa do Consumidor e Danos Morais",
+    "Advocacia Humanizada e Resolutiva",
+    "Advogada Online Brasil",
   ],
-  authors: [{ name: "Dra. Júlia Andrade" }],
-  creator: "Júlia Andrade — Advocacia e Consultoria",
-  publisher: "Júlia Andrade — Advocacia e Consultoria",
+  authors: [{ name: "Dra. Clícia Bento" }],
+  creator: "Clícia Bento Advocacia",
+  publisher: "Clícia Bento Advocacia",
   formatDetection: {
     telephone: true,
     address: true,
@@ -82,18 +86,18 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.juliaandrade.adv.br",
+    url: "https://www.cliciabento.adv.br",
     title:
-      "Júlia Andrade — Advocacia e Consultoria | Advogada Trabalhista em Três Pontas - MG",
+      "Clícia Bento Advocacia | Dra. Clícia Bento — Advocacia e Consultoria Jurídica",
     description:
-      "⚖️ Ajudo trabalhadores a terem seus direitos reconhecidos e preservados. Atendimento humanizado, transparente e focado em resultados. Nota máxima 5,0 ★ no Google com 74 avaliações.",
-    siteName: "Júlia Andrade — Advocacia e Consultoria",
+      "⚖️ Advocacia estratégica, humanizada e combativa. Seus direitos protegidos com rigor técnico e acolhimento. Sede em Ervália - MG e atendimento digital em todo o Brasil.",
+    siteName: "Clícia Bento Advocacia",
     images: [
       {
         url: "/logo.png",
         width: 1024,
-        height: 341,
-        alt: "Júlia Andrade — Advocacia e Consultoria",
+        height: 512,
+        alt: "Clícia Bento Advocacia",
       },
     ],
   },
@@ -107,44 +111,45 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Júlia Andrade — Advocacia e Consultoria",
-    alternateName: "Dra. Júlia Andrade Advogada Trabalhista",
+    name: "Clícia Bento Advocacia",
+    alternateName: "Dra. Clícia Bento Advogada",
     founder: [
       {
         "@type": "Person",
-        name: "Dra. Júlia Andrade",
-        jobTitle: "Advogada Trabalhista e Consultora Jurídica",
+        name: "Dra. Clícia Bento",
+        jobTitle: "Advogada e Consultora Jurídica",
+        identifier: "OAB/MG 246.137",
       },
     ],
-    telephone: "+55-35-99816-0724",
-    url: "https://www.juliaandrade.adv.br",
-    image: "https://www.juliaandrade.adv.br/logo.png",
+    telephone: "+55-32-98483-8287",
+    url: "https://www.cliciabento.adv.br",
+    image: "https://www.cliciabento.adv.br/logo.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "R. São Pedro, 45 - Centro",
-      addressLocality: "Três Pontas",
+      streetAddress: "Rua Sagrado Coração de Jesus, 20 - Centro",
+      addressLocality: "Ervália",
       addressRegion: "MG",
-      postalCode: "37185-038",
+      postalCode: "36555-000",
       addressCountry: "BR",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: -21.3697,
-      longitude: -45.5097,
+      latitude: -20.8406,
+      longitude: -42.8139,
     },
     priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "74",
+      reviewCount: "41",
     },
     areaServed: [
-      "Três Pontas",
-      "Varginha",
-      "Santana da Vargem",
-      "Boa Esperança",
-      "Campos Gerais",
-      "Nepomuceno",
+      "Ervália",
+      "Viçosa",
+      "Ubá",
+      "Muriaé",
+      "Juiz de Fora",
+      "Zona da Mata",
       "Minas Gerais",
       "Brasil",
     ],
@@ -159,12 +164,12 @@ export default function RootLayout({
           "Friday",
         ],
         opens: "08:00",
-        closes: "22:30",
+        closes: "18:00",
       },
     ],
     sameAs: [
-      "https://www.instagram.com/juliaandradeadvogada/",
-      "https://wa.me/5535998160724",
+      "https://www.instagram.com/cliciabento.adv/",
+      "https://wa.me/5532984838287",
     ],
   };
 
@@ -182,7 +187,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen overflow-x-clip bg-[#0c0a08] font-sans text-stone-100 antialiased selection:bg-[#c89345] selection:text-[#0c0a08]">
+      <body className="min-h-screen overflow-x-clip bg-[#0c0a08] font-sans text-stone-100 antialiased selection:bg-[#c99b4f] selection:text-[#0c0a08]">
         {children}
       </body>
     </html>

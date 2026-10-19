@@ -1,16 +1,16 @@
-# JÚLIA ANDRADE — ADVOCACIA E CONSULTORIA
-## Advocacia Trabalhista Humanizada e Estratégica · Dra. Júlia Andrade · Três Pontas - MG
+# CLÍCIA BENTO — ADVOCACIA E CONSULTORIA
+## Advocacia Humanizada, Estratégica e Resolutiva · Dra. Clícia Bento · Ervália - MG
 
-Site institucional e landing page de alto padrão da **Dra. Júlia Andrade**, titular do escritório Júlia Andrade — Advocacia e Consultoria em Três Pontas - MG, com atuação humanizada, combativa e de excelência na defesa dos direitos dos trabalhadores em Rescisão Indireta, Verbas Rescisórias, Horas Extras, Insalubridade, Periculosidade, Acidentes de Trabalho, Doenças Ocupacionais e Pejotização.
+Site institucional e landing page de altíssimo padrão da **Dra. Clícia Bento** (OAB/MG 246.137), titular do escritório Clícia Bento Advocacia em Ervália - MG, com atuação humanizada, combativa e de excelência em Direito do Trabalho, Direito Previdenciário (benefícios e INSS), Direito de Família e Sucessões (divórcios, pensão, guarda e inventários), Direito Civil (indenizações, contratos e possessórias) e Defesa do Consumidor.
 
 ## Destaques
-- **Identidade Visual Escultural em Bronze Dourado Nobre & Obsidian Quente:** Paleta sofisticada extraída diretamente do novo logotipo oficial, harmonizando o bronze ouro nobre (`#c89345`, `#d4a359`, `#e4b875`, `#b27d35`), realces champagne marfim (`#fcf7ed`, `#f5e7c8`, `#ebd3a2`), fundo velvet obsidian quente (`#0c0a08`, `#120e0b`, `#191410`) e contraste editorial em linho seda nobre (`#faf8f5`, `#f3eee6`).
-- **Tipografia Escultural Clássica e Linear Moderna:** Cormorant Garamond, Playfair Display e Cinzel nos títulos e marca, em perfeita harmonia com o logotipo oficial e a Deusa Themis, combinados com Plus Jakarta Sans para máxima legibilidade e clareza no corpo de texto e subtítulos.
-- **Prova Social de Alto Impacto:** Avaliação máxima perfeita de 5,0 estrelas com 74 avaliações reais e verificadas no Google Meu Negócio.
-- **Contato Ágil e Humanizado:** WhatsApp (35) 99816-0724 com mensagens contextualizadas por especialidade e botão flutuante para contato imediato.
-- **Sede em Três Pontas - MG:** R. São Pedro, 45 - Centro, com atendimento presencial e assessoria jurídica online para todo o Brasil.
-- **Instagram Oficial:** [@juliaandradeadvogada](https://www.instagram.com/juliaandradeadvogada/) (132 posts · mais de 2.200 seguidores).
-- **Horário de Atendimento:** Segunda a Sexta-feira das 08:00 às 20:00 (plantão com agendamento até 22:30).
+- **Identidade Visual Escultural em Ouro Imperial & Obsidian Quente:** Paleta sofisticada extraída diretamente do novo logotipo oficial com monograma "CB", harmonizando o dourado primário metálico (`#c99b4f`, `#a4732a`, `#e0b370`), realces champagne marfim (`#fcf7ed`, `#fce2a2`, `#f6d289`), fundo velvet obsidian quente (`#0c0a08`, `#120e0b`, `#191410`) e contraste editorial em linho seda nobre (`#faf8f5`, `#f4efe6`).
+- **Tipografia Escultural Clássica e Linear Moderna:** Playfair Display, Cinzel e Cormorant Garamond nos títulos e marca, em perfeita harmonia com o monograma chanfrado 3D, combinados com Plus Jakarta Sans para máxima legibilidade e clareza no corpo de texto.
+- **Contato Ágil e Humanizado:** WhatsApp (32) 98483-8287 com mensagens contextualizadas por especialidade e botão flutuante para contato imediato.
+- **Sede em Ervália - MG:** Rua Sagrado Coração de Jesus, 20 - Centro, com atendimento presencial e assessoria jurídica online para todo o Brasil (Zona da Mata Mineira e território nacional).
+- **Prova Social de Alto Impacto:** Avaliação máxima perfeita de 5,0 estrelas com 41 avaliações reais e verificadas no Google Meu Negócio.
+- **Instagram Oficial:** [@cliciabento.adv](https://www.instagram.com/cliciabento.adv/) (54 publicações · 3.627 seguidores · 2.903 seguindo).
+- **Horário de Atendimento:** Segunda a Sexta-feira das 08:00 às 18:00 (atendimento presencial e on-line).
 
 ## Tecnologias
 - Next.js 16 (App Router)
