@@ -9,9 +9,10 @@ import {
   Award,
   CheckCircle2,
   Clock,
-  FileText,
+  FileCheck2,
+  Flame,
+  Gavel,
   HeartHandshake,
-  Landmark,
   Mail,
   MapPin,
   Menu,
@@ -21,33 +22,34 @@ import {
   ShieldCheck,
   Sparkles,
   Star,
+  Users2,
   X,
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
 
 const WHATSAPP_NUMBER = "5531999810534";
 const PHONE_DISPLAY = "(31) 99981-0534";
-const EMAIL_CONTACT = "gabriellaspimentaadv@gmail.com";
-const INSTAGRAM_URL = "https://www.instagram.com/gabriellaspimentaadv/";
-const INSTAGRAM_HANDLE = "@gabriellaspimentaadv";
-const OAB_REGISTRATION = "OAB/MG 221.270";
-const CNPJ_NUMBER = "63.196.916/0001-89";
+const EMAIL_CONTACT = "contato@suellemrodrigues.adv.br";
+const INSTAGRAM_URL = "https://www.instagram.com/suellemrodriguesadv/";
+const INSTAGRAM_HANDLE = "@suellemrodriguesadv";
+const OAB_REGISTRATION = "OAB/MG 174.904";
 
-const ADDRESS_TEXT = "R. Zizinha Camelo - Centro, Mariana - MG, 35420-000";
+const ADDRESS_TEXT = "R. José Albino, 535 - Sl 1 - Centro, São Sebastião do Paraíso - MG, 37950-060";
 const GOOGLE_MAPS_URL =
-  "https://www.google.com/maps/search/?api=1&query=Gabriella+Pimenta+Advocacia+e+Consultoria+Jur%C3%ADdica+Mariana+MG";
+  "https://www.google.com/maps/search/?api=1&query=Suellem+Rodrigues+Advogada+Rua+Jose+Albino+535+Sao+Sebastiao+do+Paraiso+MG";
 
 const LOGO_SEAL_SRC = "/logo-symbol.png";
 const LOGO_FULL_SRC = "/logo.png";
-const FOTO_HERO_SRC = "/gabriella-standing.png";
-const FOTO_SOBRE_SRC = "/gabriella-desk.png";
+const FOTO_HERO_SRC = "/suellem-hero-hd.png";
+const FOTO_SOBRE_SRC = "/suellem-portrait-hd.png";
+const FOTO_INFOGRAFICO_SRC = "/suellem-infographic.jpg";
 
 function getWhatsAppUrl(
   message?: string,
   number: string = WHATSAPP_NUMBER
 ) {
   const defaultText =
-    "Olá, Dra. Gabriella Pimenta! Gostaria de consultar sobre meu caso e agendar um atendimento no escritório.";
+    "Olá, Dra. Suellem Rodrigues! Gostaria de consultar sobre um caso criminal / execução penal e agendar um atendimento.";
   return `https://wa.me/${number}?text=${encodeURIComponent(
     message || defaultText
   )}`;
@@ -157,169 +159,211 @@ interface PracticeArea {
 
 const practiceAreas: PracticeArea[] = [
   {
-    id: "direito-trabalho-rescisao-direitos",
-    title: "Direito do Trabalho & Rescisão Contratual",
+    id: "execucoes-penais-progressao-regime",
+    title: "Execuções Penais & Progressão de Regime",
+    icon: Gavel,
+    tag: "Especialidade Principal · SEEU · Regime Aberto & Semiaberto · LEP",
+    summary:
+      "Atuação cirúrgica para garantir que cada dia de pena cumprido seja computado, antecipando progressões de regime e garantindo a aplicação estrita da lei.",
+    details:
+      "A execução penal exige vigilância técnica permanente. A Dra. Suellem Rodrigues atua na análise e retificação de cálculos de liquidação de penas no SEEU, requerendo a progressão de regime (fechado para semiaberto e semiaberto para aberto), livramento condicional, detração penal e verificação de faltas graves que impeçam indevidamente o benefício, resguardando a dignidade e os direitos do apenado.",
+    topics: [
+      "Progressão de Regime Prisional (fechado, semiaberto e aberto) com cálculo preciso das frações",
+      "Auditoria minuciosa de atestados de pena e retificação de erros de cálculo no sistema SEEU",
+      "Livramento Condicional célere assim que preenchidos os requisitos objetivos e subjetivos",
+      "Defesa técnica em Procedimentos Administrativos Disciplinares (PAD) por supostas faltas graves",
+      "Reabilitação criminal e baixa de antecedentes após o cumprimento integral da pena",
+      "Agravos em Execução perante o Tribunal de Justiça contra decisões desfavoráveis do juízo da VEP",
+    ],
+    whatsAppText:
+      "Olá, Dra. Suellem Rodrigues! Gostaria de consultar sobre a situação de um apenado e cálculo de progressão de regime.",
+  },
+  {
+    id: "remicao-pena-indulto-comutacao",
+    title: "Remição de Pena, Indulto & Comutação",
+    icon: FileCheck2,
+    tag: "Trabalho · Estudo · Leitura · Decretos Presidenciais · Redução da Pena",
+    summary:
+      "Redução legal do tempo de prisão através da comprovação de trabalho, estudo e leitura, além de pedidos fundamentados de indulto e comutação.",
+    details:
+      "Cada dia trabalhado ou estudado dentro da unidade prisional é um passo a menos para a liberdade. A Dra. Suellem Rodrigues realiza o levantamento de todos os atestados carcerários de trabalho, certificados de estudo e relatórios de leitura para homologar remições de pena, além de pleitear a extinção ou redução substancial da reprimenda por meio dos decretos de indulto e comutação natalinos.",
+    topics: [
+      "Homologação judicial de remição de pena por dias trabalhados dentro e fora do estabelecimento prisional",
+      "Remição por aprovação no ENCCEJA, ENEM, cursos técnicos e certificações educacionais",
+      "Remição por leitura conforme diretrizes e resoluções do Conselho Nacional de Justiça (CNJ)",
+      "Pedidos de Indulto Humanitário e Extintivo de Pena fundamentados em Decretos Presidenciais",
+      "Comutação de pena para abatimento proporcional do montante condenatório remanescente",
+      "Unificação de penas de múltiplos processos e soma de guias para redefinição das frações",
+    ],
+    whatsAppText:
+      "Olá, Dra. Suellem Rodrigues! Gostaria de verificar a possibilidade de remição de pena ou pedido de indulto.",
+  },
+  {
+    id: "audiencia-custodia-liberdade-flagrante",
+    title: "Plantão Prisional & Audiência de Custódia",
     icon: ShieldAlert,
-    tag: "Rescisão Indireta · Verbas Rescisórias · Horas Extras · Acidentes",
+    tag: "Plantão 24 Horas · Prisão em Flagrante · Liberdade Provisória · Relaxamento",
     summary:
-      "Defesa combativa e acolhedora dos direitos do trabalhador contra abusos patronais, atrasos salariais, jornadas excessivas e faltas graves.",
+      "Atuação combativa imediata nas primeiras 24 horas da prisão para demonstrar a desnecessidade da prisão cautelar e resguardar a integridade do custodiado.",
     details:
-      "A Dra. Gabriella Pimenta atua de forma firme e acolhedora na defesa dos direitos trabalhistas. Na rescisão indireta (art. 483 da CLT), quando a empresa comete falta grave, atrasa salários, sonega FGTS ou pratica assédio moral, atuamos judicialmente para que você saia com dignidade, recebendo aviso prévio indenizado, multa de 40%, liberação total do FGTS e seguro-desemprego, além de apuração rigorosa de horas extras e indenizações devidas.",
+      "As primeiras horas após uma prisão em flagrante são cruciais para o destino do investigado. A Dra. Suellem Rodrigues atua com presença imediata em delegacias e na Audiência de Custódia perante o juiz, demonstrando a ilegalidade da prisão, ausência dos requisitos da custódia preventiva (art. 312 do CPP) e requerendo liberdade provisória com aplicação de medidas cautelares alternativas.",
     topics: [
-      "Rescisão Indireta do Contrato de Trabalho (demissão por justa causa contra o empregador)",
-      "Auditoria integral de verbas rescisórias e aplicação das multas dos arts. 467 e 477 da CLT",
-      "Cobrança de horas extras, intervalos intrajornada suprimidos e adicionais noturnos",
-      "Indenizações por acidentes de trabalho, doenças ocupacionais e estabilidade provisória",
-      "Adicionais de Insalubridade e Periculosidade devidos pela natureza da atividade",
-      "Reconhecimento de vínculo empregatício formal para contratos sem carteira assinada ou pejotização indevida",
+      "Atendimento presencial urgente em delegacias de polícia civil e federal no momento do flagrante",
+      "Defesa técnica combativa na Audiência de Custódia nas primeiras 24 horas após o encarceramento",
+      "Pedidos de Liberdade Provisória sem fiança ou com arbitramento de medidas cautelares diversas",
+      "Relaxamento de prisão por ilegalidade processual, excesso de prazo ou violação de garantias fundamentais",
+      "Revogação de Prisão Preventiva e Prisão Temporária com apresentação de endereço fixo e ocupação lícita",
+      "Combate imediato a abusos de autoridade e garantia de exame de corpo de delito idôneo",
     ],
     whatsAppText:
-      "Olá, Dra. Gabriella Pimenta! Gostaria de uma orientação jurídica sobre meus direitos trabalhistas e rescisão.",
+      "Olá, Dra. Suellem Rodrigues! Ocorreu uma prisão em flagrante e preciso de assistência jurídica urgente para a audiência de custódia.",
   },
   {
-    id: "direito-previdenciario-inss-beneficios",
-    title: "Direito Previdenciário & Benefícios do INSS",
-    icon: Landmark,
-    tag: "Aposentadorias · BPC/LOAS · Auxílio-Doença · Pensão por Morte · Planejamento",
-    summary:
-      "Planejamento previdenciário minucioso e atuação estratégica para desbloquear e garantir o melhor benefício previdenciário no INSS.",
-    details:
-      "Conquistar o melhor benefício exige perícia técnica na apuração de todo o histórico contributivo (CNIS, vínculos, carteiras de trabalho e laudos). A Dra. Gabriella Pimenta realiza o Planejamento Previdenciário individualizado para encontrar a regra de transição mais vantajosa, além de ingressar com recursos administrativos e ações judiciais rápidas contra negativas injustas do INSS, garantindo o recebimento de todos os atrasados acumulados.",
-    topics: [
-      "Planejamento Previdenciário personalizado para maximizar o valor da sua aposentadoria",
-      "Aposentadoria por Idade Urbana e Rural, Tempo de Contribuição e Aposentadoria Especial",
-      "Benefício de Prestação Continuada (BPC/LOAS) para idosos (+65) e pessoas com deficiência",
-      "Auxílio por Incapacidade Temporária (Auxílio-Doença) e Aposentadoria por Incapacidade Permanente",
-      "Pensão por Morte e Auxílio-Reclusão para dependentes legais",
-      "Revisões de benefícios previdenciários e cobrança integral de valores retroativos acumulados",
-    ],
-    whatsAppText:
-      "Olá, Dra. Gabriella Pimenta! Gostaria de consultar sobre benefício do INSS ou planejamento previdenciário.",
-  },
-  {
-    id: "direito-familia-sucessoes-inventarios",
-    title: "Direito de Família & Sucessões",
-    icon: HeartHandshake,
-    tag: "Divórcio · Pensão Alimentícia · Guarda · Inventários · Partilha de Bens",
-    summary:
-      "Atendimento sensível, acolhedor e discreto para pacificar relações familiares, proteger os filhos e salvaguardar o patrimônio.",
-    details:
-      "Questões que envolvem família e patrimônio demandam empatia e cuidado emocional sem abrir mão da segurança jurídica. A Dra. Gabriella Pimenta atua em divórcios consensuais ágeis em cartório e contenciosos judiciais, fixação e revisão equilibrada de pensão alimentícia, guarda compartilhada humanizada, reconhecimento e dissolução de união estável, além de inventários judiciais e extrajudiciais para partilha justa de heranças.",
-    topics: [
-      "Divórcio consensual em cartório (rápido e econômico) e divórcio litigioso na Justiça",
-      "Fixação, execução e revisão de Pensão Alimentícia com proteção aos dependentes",
-      "Regulamentação de Guarda Compartilhada e Regime de Convivência Familiar centrado no bem-estar",
-      "Inventário Judicial e Extrajudicial em Cartório para partilha célere e segura de bens",
-      "Reconhecimento e dissolução de União Estável com partilha de patrimônio adquirido",
-      "Planejamento sucessório familiar, testamentos e doações para preservação do patrimônio",
-    ],
-    whatsAppText:
-      "Olá, Dra. Gabriella Pimenta! Gostaria de orientações sobre divórcio, pensão, guarda ou inventário.",
-  },
-  {
-    id: "direito-civil-indenizacoes-contratos",
-    title: "Direito Civil & Contratos Estratégicos",
+    id: "habeas-corpus-recursos-superiores",
+    title: "Habeas Corpus & Recursos nos Tribunais Superiores",
     icon: Scale,
-    tag: "Indenizações · Danos Morais · Ações Possessórias · Cobranças · Regularização",
+    tag: "TJMG · TRF · STJ · STF · Medidas Urgentes Contra Constrangimento Ilegal",
     summary:
-      "Proteção jurídica integral para salvaguardar seus bens, recuperar créditos devidos e formalizar instrumentos contratuais sólidos.",
+      "Ações constitucionais de urgência e recursos estratégicos para combater prisões ilegais, excesso de prazo e decisões arbitrárias em instâncias superiores.",
     details:
-      "No campo civil, a Dra. Gabriella Pimenta atua tanto na contenção preventiva de conflitos quanto na defesa combativa dos interesses de seus clientes em juízo. Atuamos em cobranças e execuções para recuperação de valores, ações indenizatórias por prejuízos materiais e danos morais, ações possessórias e usucapião para regularização de imóveis em Mariana e região, e redação de contratos personalizados com blindagem jurídica.",
+      "Quando uma ordem de prisão contraria a Constituição ou a jurisprudência consolidada, a via do Habeas Corpus é o instrumento mais poderoso para a liberdade. Atuamos com redação jurídica de alto impacto e pedidos de liminar perante o Tribunal de Justiça de Minas Gerais (TJMG), Tribunais Regionais Federais (TRFs), Superior Tribunal de Justiça (STJ) e Supremo Tribunal Federal (STF).",
     topics: [
-      "Ações indenizatórias por Danos Morais, Materiais e Lucros Cessantes",
-      "Cobrança judicial e extrajudicial de dívidas, títulos de crédito e notas promissórias",
-      "Ações Possessórias, Reintegração de Posse e Usucapião Urbano e Rural em Mariana e região",
-      "Elaboração, análise preventiva e revisão de contratos civis, comerciais e imobiliários",
-      "Notificações extrajudiciais estratégicas para resolução célere e pacífica de controvérsias",
-      "Responsabilidade civil contratual e extracontratual com foco na máxima reparação",
+      "Impetração célere de Habeas Corpus com pedido liminar em casos de constrangimento ilegal flagrante",
+      "Habeas Corpus por excesso de prazo injustificado na formação da culpa ou no julgamento de recursos",
+      "Sustentação oral presencial e por videoconferência perante as Turmas e Câmaras Criminais",
+      "Recurso Ordinário em Habeas Corpus (RHC) perante o STJ e STF contra indeferimentos de liminares",
+      "Recurso em Sentido Estrito (RESE) e Agravo em Execução Penal com foco na jurisprudência dominante",
+      "Despacho presencial de memoriais diretamente com desembargadores e ministros relatores",
     ],
     whatsAppText:
-      "Olá, Dra. Gabriella Pimenta! Gostaria de consultar sobre uma questão cível, cobrança, indenização ou contrato.",
+      "Olá, Dra. Suellem Rodrigues! Preciso de avaliação para impetração de Habeas Corpus ou recurso em tribunal superior.",
   },
   {
-    id: "direito-consumidor-abusos-bancarios",
-    title: "Direito do Consumidor & Defesa Contra Abusos",
+    id: "prisao-domiciliar-transferencia-presidio",
+    title: "Prisão Domiciliar & Transferência de Presídio",
+    icon: HeartHandshake,
+    tag: "Aproximação Familiar · Saúde & Dignidade · Mães de Menores · Tratamento Médico",
+    summary:
+      "Medidas humanitárias para transferência do apenado para comarca próxima da família e conversão de prisão fechada em domiciliar por razões humanitárias.",
+    details:
+      "O cumprimento de pena não pode aniquilar os vínculos familiares nem privar o apenado de cuidados médicos essenciais. A Dra. Suellem Rodrigues pleiteia a transferência prisional para estabelecimentos próximos da residência da família (art. 86 da LEP) e atua na conversão da pena em prisão domiciliar humanitária para apenados com doenças graves, idosos ou mães de crianças menores de 12 anos.",
+    topics: [
+      "Transferência prisional e aproximação familiar garantindo o direito à convivência com parentes",
+      "Prisão Domiciliar Humanitária com suporte em laudos médicos para apenados com debilidade física grave",
+      "Conversão de prisão preventiva e regime fechado em domiciliar para gestantes e mães de filhos até 12 anos",
+      "Permissões de saída para tratamento médico externo e visitas a familiares gravemente enfermos",
+      "Regularização de visitas, cadastramento de companheiros(as) e combate a transferências punitivas arbitrárias",
+      "Fiscalização do cumprimento de condições dignas e alimentação adequada na unidade prisional",
+    ],
+    whatsAppText:
+      "Olá, Dra. Suellem Rodrigues! Gostaria de consultar sobre pedido de transferência de presídio ou prisão domiciliar.",
+  },
+  {
+    id: "defesa-criminal-tribunal-juri",
+    title: "Defesa Penal Integral, Júri & Revisão Criminal",
     icon: ShieldCheck,
-    tag: "Negativação Indevida · Fraudes Bancárias · Empréstimos Consignados · Juros Abusivos",
+    tag: "Inquérito Policial · Audiências de Instrução · Tribunal do Júri · Revisão Criminal",
     summary:
-      "Restituição da sua tranquilidade financeira e reparação justa contra fraudes, golpes bancários e práticas abusivas de grandes empresas.",
+      "Acompanhamento técnico desde a fase de inquérito policial até o plenário do Júri e ações rescisórias criminais para anular condenações injustas.",
     details:
-      "Cobranças abusivas, negativações indevidas no SPC/Serasa e fraudes de empréstimos consignados não autorizados causam sérios transtornos. A Dra. Gabriella Pimenta atua com pedidos liminares de urgência para retirar o nome do cliente dos órgãos de proteção ao crédito, cancelar cobranças ilegais, exigir restituição de quantias descontadas indevidamente em dobro e obter indenizações por danos morais contra instituições financeiras negligentes.",
+      "A defesa penal exige estudo aprofundado das provas, perspicácia na inquirição de testemunhas e oratória firme. Dra. Suellem Rodrigues defende seus clientes em todas as fases do processo-crime, elaborando teses absolutórias robustas, atuando perante os jurados no Tribunal do Júri e ingressando com Revisão Criminal após a condenação quando surgem novas provas ou nulidades evidentes.",
     topics: [
-      "Limpeza imediata do nome via pedido liminar judicial por negativação indevida no SPC/Serasa",
-      "Cancelamento de empréstimos consignados fraudulentos com repetição de indébito em dobro",
-      "Ações contra fraudes e golpes do PIX decorrentes de falhas de segurança bancária",
-      "Revisão de contratos de financiamento com tarifas ilegais e juros abusivos",
-      "Defesa contra vícios ocultos em produtos e falhas graves na prestação de serviços",
-      "Cancelamento de voos, atrasos excessivos, extravio definitivo de bagagem e indenizações aéreas",
+      "Acompanhamento de depoimentos e oitivas perante delegacias de polícia e Ministério Público",
+      "Defesa preliminar, resposta à acusação e requerimento fundamentado de diligências investigativas",
+      "Atuação combativa em audiências de instrução e julgamento com inquirição técnica de testemunhas",
+      "Atuação destacada em Plenário do Tribunal do Júri em crimes dolosos contra a vida",
+      "Alegações finais escritas com teses de desclassificação, excludentes de ilicitude e dosimetria favorável",
+      "Ação de Revisão Criminal para desconstituir sentenças transitadas em julgado decorrentes de erro judicial",
     ],
     whatsAppText:
-      "Olá, Dra. Gabriella Pimenta! Tive problemas com cobrança indevida, banco ou negativação e preciso de auxílio.",
-  },
-  {
-    id: "consultoria-juridica-preventiva-estrategica",
-    title: "Consultoria Preventiva & Soluções Extrajudiciais",
-    icon: FileText,
-    tag: "Assessoria Preventiva · Negociação Extrajudicial · Pareceres · Segurança Jurídica",
-    summary:
-      "Aconselhamento técnico antecipado para pessoas físicas, autônomos e empreendedores, evitando litígios e garantindo decisões seguras.",
-    details:
-      "A atuação preventiva é o caminho mais inteligente para proteger seu patrimônio e evitar desgastes emocionais. A Dra. Gabriella Pimenta presta consultoria continuada para famílias e empreendedores da Região dos Inconfidentes, analisando contratos antes da assinatura, conduzindo mediações extrajudiciais com força executiva e emitindo pareceres jurídicos claros e descomplicados para orientar negócios com total tranquilidade.",
-    topics: [
-      "Análise minuciosa de riscos jurídicos antes da assinatura de contratos de compra e venda",
-      "Mediação e composição amigável de controvérsias com eficácia de título executivo extrajudicial",
-      "Assessoria jurídica continuada para profissionais liberais, autônomos e pequenas empresas",
-      "Orientação preventiva para resguardo patrimonial e planejamento de acordos familiares",
-      "Pareceres jurídicos fundamentados para tomada de decisões estratégicas sem surpresas",
-      "Prevenção ativa de passivos trabalhistas e cíveis com soluções sob medida",
-    ],
-    whatsAppText:
-      "Olá, Dra. Gabriella Pimenta! Gostaria de agendar uma consultoria jurídica preventiva para o meu caso.",
+      "Olá, Dra. Suellem Rodrigues! Gostaria de orientação para uma defesa em processo criminal ou Tribunal do Júri.",
   },
 ];
 
 const clientReviews = [
   {
-    name: "Mariana Alves",
-    reviewsCount: "Avaliação Verificada no Google",
-    badge: "Atendimento Humanizado & Acolhimento",
+    name: "Mayara Christina Nunes",
+    reviewsCount: "7 avaliações no Google",
+    badge: "Advogada Criminalista · Segurança & Confiança",
     content:
-      "Excelente advogada! Atendimento humanizado, profissional competente e muito atenciosa. A Dra. Gabriella explicou cada detalhe do meu processo com uma clareza e paciência que nunca vi antes. Me senti acolhida e segura em cada passo. Recomendo de olhos fechados!",
+      "Profissional excelente e extremamente atenciosa. Demonstrou grande conhecimento como advogada criminalista, esclarecendo todas as dúvidas de forma clara e objetiva. Além disso, transmite muita segurança e confiança, características fundamentais nessa área. Recomendo seu trabalho sem hesitação!",
   },
   {
-    name: "Lucas Morais",
-    reviewsCount: "Avaliação Verificada no Google",
-    badge: "Agilidade, Rigor & Transparência",
+    name: "Fernanda Menezes",
+    reviewsCount: "5 avaliações no Google",
+    badge: "Competência & Experiência na Execução",
     content:
-      "A Dra. Gabriella Pimenta é uma profissional impecável. Muito inteligente, ética e dedicada à causa do cliente. Conseguiu conduzir minha demanda com agilidade e total transparência, sempre tirando dúvidas prontamente. Nota máxima merecida!",
+      "Excelente profissional. Uma advogada competente e ética. Possui vasto conhecimento e experiência na área criminal e da execução. Indico seu trabalho sem nenhuma dúvida. 👏🏻👏🏻👏🏻",
   },
   {
-    name: "Camila Ferreira",
-    reviewsCount: "Avaliação Verificada no Google",
-    badge: "Clareza Sem Juridiquês & Suporte",
+    name: "Patrick Souza",
+    reviewsCount: "9 avaliações no Google",
+    badge: "Domínio Absoluto da Execução Penal",
     content:
-      "Profissional extremamente capacitada e acolhedora. Tirou todas as minhas dúvidas sem termos difíceis e me deu suporte total do início ao fim. O escritório em Mariana é acolhedor e transmite muita paz. Uma defensora de verdade!",
+      "Uma excelente advogada, domina a execução penal.",
   },
   {
-    name: "Rodrigo Barbosa",
-    reviewsCount: "Avaliação Verificada no Google",
-    badge: "Confiança, Serenidade & Técnica",
+    name: "Hamilton Tamosaitis",
+    reviewsCount: "Local Guide · 162 avaliações · 62 fotos",
+    badge: "Local Guide Google · Objetividade & Resultados",
     content:
-      "Atendimento realmente diferenciado! A Dra. Gabriella se preocupa de verdade com a história de quem a procura e busca a melhor solução jurídica possível. Transmite muita serenidade, conhecimento e segurança. Muito grato pelo trabalho!",
+      "A melhor advogada criminalista que conheci, sabe como alcançar objetivos com poucas palavras!!",
   },
   {
-    name: "Juliana Martins",
-    reviewsCount: "Avaliação Verificada no Google",
-    badge: "Acolhimento & Respeito Integral",
+    name: "Raísa Santos Gonçalves",
+    reviewsCount: "3 avaliações · 2 fotos no Google",
+    badge: "Empatia, Ética & Determinação",
     content:
-      "Melhor experiência jurídica que já tive. Acolheu o meu caso com muito respeito e sensibilidade, mantendo-me informada sobre cada andamento da ação. Profissional humana, ética e admirável. Super recomendo a Dra. Gabriella Pimenta!",
+      "Uma advogada incrível, altamente competente, ética e dedicada, que busca sempre a melhor solução com empatia e determinação.",
   },
   {
-    name: "Felipe Guimarães",
-    reviewsCount: "Avaliação Verificada no Google",
-    badge: "Ética, Pontualidade & Competência",
+    name: "Izabela Santos",
+    reviewsCount: "4 avaliações no Google",
+    badge: "A Melhor Advogada · Gratidão",
     content:
-      "Profissionalismo, ética e dedicação definem o trabalho da Dra. Gabriella. Atendimento pontual, atencioso e resolutivo. É uma grande referência na advocacia em Mariana e em Minas Gerais.",
+      "Excelente profissional! Não tenho palavras para agradecer por tudo que já me ajudou! Recomendo de olhos fechados! A melhor advogada!",
+  },
+  {
+    name: "Angelica Martins",
+    reviewsCount: "Local Guide · 18 avaliações · 50 fotos",
+    badge: "Local Guide Google · Conhecimento Exemplar",
+    content:
+      "Profissional exemplar! Comprometida e com muito conhecimento na sua área de atuação. Indico com tranquilidade e segurança.",
+  },
+  {
+    name: "Instituto Bom Samaritano",
+    reviewsCount: "2 avaliações no Google",
+    badge: "Agilidade, Verdade & Compromisso",
+    content:
+      "Excelente profissional, ágil, verdadeira, e comprometida com o trabalho, recomendo!!!",
+  },
+  {
+    name: "Lislie Desiree",
+    reviewsCount: "2 avaliações · 2 fotos no Google",
+    badge: "Honestidade, Competência & Humanidade",
+    content:
+      "Excelente advogada! Honesta, competente e humana.",
+  },
+  {
+    name: "Andreia Leão",
+    reviewsCount: "5 avaliações · 2 fotos no Google",
+    badge: "Atualizada, Experiente & Dedicada",
+    content:
+      "Profissional atualizada, experiente, dedicada. Super indico, ressalto também seu domínio em vários campos do Direito.",
+  },
+  {
+    name: "Glauceli André",
+    reviewsCount: "3 avaliações no Google",
+    badge: "Confiança Total · A Melhor",
+    content:
+      "Excelente profissional, sem dúvidas, pode confiar, a melhor!!!!!",
+  },
+  {
+    name: "fabio arruda Nunes",
+    reviewsCount: "7 avaliações no Google",
+    badge: "Responsabilidade & Solução do Problema",
+    content:
+      "Profissional responsável e comprometida na solução do problema.",
   },
 ];
 
@@ -327,7 +371,7 @@ function Heading({
   eyebrow,
   children,
   description,
-  light = false,
+  light = true,
 }: {
   eyebrow: string;
   children: React.ReactNode;
@@ -340,20 +384,14 @@ function Heading({
       <h2
         className={
           light
-            ? "mt-4 font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-[#14100c] sm:text-4xl lg:text-[3.25rem]"
-            : "mt-4 font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-white sm:text-4xl lg:text-[3.25rem]"
+            ? "mt-4 font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-[#14110e] sm:text-4xl lg:text-[3.25rem]"
+            : "mt-4 font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-[#14110e] sm:text-4xl lg:text-[3.25rem]"
         }
       >
         {children}
       </h2>
       {description && (
-        <p
-          className={
-            light
-              ? "mt-4 text-[15px] leading-7 text-[#4e4338]"
-              : "mt-4 text-[15px] leading-7 text-[#d8cfc0]"
-          }
-        >
+        <p className="mt-4 text-[15px] leading-7 text-[#4c433a]">
           {description}
         </p>
       )}
@@ -380,20 +418,20 @@ export default function Home() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <main className="overflow-hidden bg-[#0b0907] text-[#fbf9f5] selection:bg-[#b88a3e] selection:text-[#0b0907]">
-        {/* Navigation Bar - Sculpted Antique Gold & Rich Obsidian */}
-        <header className="sticky top-0 z-40 border-b border-[#b88a3e]/20 bg-[#0b0907]/95 backdrop-blur-xl">
+      <main className="overflow-hidden bg-[#fbf9f5] text-[#14110e] selection:bg-[#f7e5a9] selection:text-[#14110e]">
+        {/* Navigation Bar - Elegant Light Mode with Gold Highlights */}
+        <header className="sticky top-0 z-40 border-b border-[#e8dfd2] bg-white/95 backdrop-blur-xl shadow-xs">
           <div className="mx-auto flex h-[96px] max-w-7xl items-center justify-between gap-6 px-5 sm:h-[108px] sm:px-8 lg:px-12">
             <a
               href="#inicio"
-              aria-label="Gabriella Pimenta Advocacia"
+              aria-label="Suellem Rodrigues Advocacia"
               onClick={closeMenu}
               className="flex items-center gap-3.5 transition-opacity hover:opacity-90"
             >
-              <div className="relative size-[60px] shrink-0 overflow-hidden rounded-full border-2 border-[#b88a3e]/60 bg-[#120e0a] shadow-md sm:size-[72px]">
+              <div className="relative size-[60px] shrink-0 overflow-hidden rounded-full border-2 border-[#deb753]/60 bg-[#120f0d] shadow-sm sm:size-[72px]">
                 <Image
                   src={LOGO_SEAL_SRC}
-                  alt="Selo Oficial Gabriella Pimenta Advocacia"
+                  alt="Selo Monograma Oficial Suellem Rodrigues Advocacia"
                   fill
                   priority
                   sizes="72px"
@@ -401,11 +439,11 @@ export default function Home() {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="font-serif text-lg font-bold tracking-wider text-white sm:text-xl lg:text-2xl">
-                  GABRIELLA PIMENTA
+                <span className="font-serif text-lg font-bold tracking-wider text-[#14110e] sm:text-xl lg:text-2xl">
+                  SUELLEM RODRIGUES
                 </span>
-                <span className="text-[10px] font-semibold uppercase tracking-[0.24em] text-[#d4a853] sm:text-xs">
-                  Advocacia & Consultoria
+                <span className="text-[10px] font-semibold uppercase tracking-[0.24em] text-[#8e6318] sm:text-xs">
+                  Advocacia · {OAB_REGISTRATION}
                 </span>
               </div>
             </a>
@@ -418,10 +456,10 @@ export default function Home() {
                 Início
               </a>
               <a className="nav-link" href="#sobre">
-                Dra. Gabriella Pimenta
+                Dra. Suellem Rodrigues
               </a>
               <a className="nav-link" href="#atuacao">
-                Especialidades
+                Execuções Penais
               </a>
               <a className="nav-link" href="#diferenciais">
                 Por Que Escolher
@@ -430,25 +468,35 @@ export default function Home() {
                 Depoimentos
               </a>
               <a className="nav-link" href="#contato">
-                Contato & Sede
+                Plantão & Sede
               </a>
             </nav>
 
             <div className="hidden items-center gap-3 lg:flex">
               <a
+                href={GOOGLE_MAPS_URL}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Avaliações da Dra. Suellem Rodrigues no Google"
+                className="grid size-10 place-items-center rounded-lg border border-[#e8dfd2] bg-[#faf7f2] text-[#4c433a] transition-all hover:border-[#deb753] hover:bg-white hover:text-[#14110e] shadow-xs"
+                title="5,0 ★ no Google (20 avaliações)"
+              >
+                <GoogleIcon size={16} />
+              </a>
+              <a
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Instagram da Dra. Gabriella Pimenta"
-                className="grid size-10 place-items-center rounded-lg border border-[#b88a3e]/30 bg-[#18130e] text-[#f7eed8] transition-all hover:border-[#f7eed8] hover:bg-[#221b14] hover:text-white"
+                aria-label="Instagram da Dra. Suellem Rodrigues"
+                className="grid size-10 place-items-center rounded-lg border border-[#e8dfd2] bg-[#faf7f2] text-[#4c433a] transition-all hover:border-[#deb753] hover:bg-white hover:text-[#14110e] shadow-xs"
                 title={`Instagram ${INSTAGRAM_HANDLE}`}
               >
                 <InstagramIcon size={16} />
               </a>
               <a
                 href={`tel:+${WHATSAPP_NUMBER}`}
-                aria-label="Ligar para Gabriella Pimenta Advocacia"
-                className="grid size-10 place-items-center rounded-lg border border-[#b88a3e]/30 bg-[#18130e] text-[#f7eed8] transition-all hover:border-[#f7eed8] hover:bg-[#221b14] hover:text-white"
+                aria-label="Ligar para Suellem Rodrigues Advocacia"
+                className="grid size-10 place-items-center rounded-lg border border-[#e8dfd2] bg-[#faf7f2] text-[#4c433a] transition-all hover:border-[#deb753] hover:bg-white hover:text-[#14110e] shadow-xs"
                 title={`Ligar: ${PHONE_DISPLAY}`}
               >
                 <Phone size={16} />
@@ -457,22 +505,22 @@ export default function Home() {
                 href={getWhatsAppUrl()}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="WhatsApp Dra. Gabriella Pimenta"
-                className="grid size-10 place-items-center rounded-lg border border-[#b88a3e]/30 bg-[#18130e] text-[#f7eed8] transition-all hover:border-[#f7eed8] hover:bg-[#221b14] hover:text-white"
+                aria-label="WhatsApp Dra. Suellem Rodrigues"
+                className="grid size-10 place-items-center rounded-lg border border-[#e8dfd2] bg-[#faf7f2] text-[#4c433a] transition-all hover:border-[#deb753] hover:bg-white hover:text-[#14110e] shadow-xs"
                 title="Atendimento no WhatsApp"
               >
                 <WhatsAppIcon size={18} />
               </a>
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá, Dra. Gabriella Pimenta! Gostaria de consultar sobre meu caso e agendar um atendimento."
+                  "Olá, Dra. Suellem Rodrigues! Gostaria de agendar uma consulta sobre caso criminal ou execução penal."
                 )}
                 target="_blank"
                 size="sm"
                 variant="gold"
                 className="rounded-lg shadow-sm"
               >
-                Consultar Caso <ArrowUpRight size={14} />
+                Plantão / Consulta <ArrowUpRight size={14} />
               </GlowingButton>
             </div>
 
@@ -481,7 +529,7 @@ export default function Home() {
               aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
               aria-expanded={menuOpen}
               aria-controls="mobile-navigation"
-              className="grid size-11 place-items-center rounded-lg border border-[#b88a3e]/30 bg-[#18130e] text-[#f7eed8] lg:hidden"
+              className="grid size-11 place-items-center rounded-lg border border-[#e8dfd2] bg-[#faf7f2] text-[#14110e] lg:hidden shadow-xs"
               onClick={() => setMenuOpen((open) => !open)}
             >
               {menuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -497,46 +545,46 @@ export default function Home() {
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.22 }}
-                className="overflow-hidden border-t border-[#b88a3e]/20 bg-[#0b0907] px-6 lg:hidden"
+                className="overflow-hidden border-t border-[#e8dfd2] bg-white px-6 text-[#14110e] lg:hidden"
               >
                 <div className="mx-auto flex max-w-7xl flex-col gap-1 py-4">
                   {[
                     ["Início", "#inicio"],
-                    ["Dra. Gabriella Pimenta", "#sobre"],
-                    ["Especialidades Jurídicas", "#atuacao"],
+                    ["Dra. Suellem Rodrigues", "#sobre"],
+                    ["Execuções Penais & Prisões", "#atuacao"],
                     ["Por Que Escolher", "#diferenciais"],
-                    ["Depoimentos & Casos", "#avaliacoes"],
-                    ["Contato & Sede", "#contato"],
+                    ["Depoimentos (5,0 ★)", "#avaliacoes"],
+                    ["Plantão Criminal & Sede", "#contato"],
                   ].map(([label, href]) => (
                     <a
                       key={label}
                       href={href}
                       onClick={closeMenu}
-                      className="py-3 text-sm font-medium text-stone-200 hover:text-[#d4a853]"
+                      className="py-3 text-sm font-medium text-[#4c433a] hover:text-[#8e6318]"
                     >
                       {label}
                     </a>
                   ))}
                   <div className="mt-3 flex flex-col gap-2">
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#966826] via-[#d4a853] to-[#b88a3e] px-5 py-3.5 text-xs font-bold uppercase tracking-[0.13em] text-[#0b0907] shadow-md transition-all hover:brightness-105"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#8e6318] via-[#c59a3f] to-[#8e6318] px-5 py-3.5 text-xs font-bold uppercase tracking-[0.13em] text-white shadow-md transition-all hover:brightness-105"
                       href={getWhatsAppUrl(
-                        "Olá, Dra. Gabriella Pimenta! Gostaria de consultar sobre meu caso jurídico."
+                        "Olá, Dra. Suellem Rodrigues! Gostaria de consultar sobre um caso criminal ou execução penal."
                       )}
                       target="_blank"
                       rel="noreferrer"
                       onClick={closeMenu}
                     >
-                      <WhatsAppIcon size={16} /> WhatsApp: {PHONE_DISPLAY}
+                      <WhatsAppIcon size={16} /> WhatsApp Direto: {PHONE_DISPLAY}
                     </a>
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#b88a3e]/30 bg-[#18130e] px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-[#f7eed8] transition-all hover:border-[#f7eed8]"
-                      href={INSTAGRAM_URL}
+                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#e8dfd2] bg-[#faf7f2] px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-[#14110e] transition-all hover:border-[#deb753]"
+                      href={GOOGLE_MAPS_URL}
                       target="_blank"
                       rel="noreferrer"
                       onClick={closeMenu}
                     >
-                      <InstagramIcon size={15} /> Instagram: {INSTAGRAM_HANDLE}
+                      <GoogleIcon size={15} /> 5,0 ★ no Google (20 avaliações)
                     </a>
                   </div>
                 </div>
@@ -545,14 +593,14 @@ export default function Home() {
           </AnimatePresence>
         </header>
 
-        {/* Hero Section - Sculpted Gold & Warm Obsidian */}
+        {/* Hero Section - Crisp Light Editorial Canvas with Warm Amber Accents */}
         <section
           id="inicio"
-          className="relative isolate scroll-mt-24 border-b border-[#b88a3e]/20 bg-gradient-to-b from-[#0b0907] via-[#120e0a] to-[#18130e]"
+          className="relative isolate scroll-mt-24 border-b border-[#e8dfd2] bg-gradient-to-b from-white via-[#fbf9f5] to-[#f4efe6]"
         >
-          {/* Subtle warm gold & deep velvet ambient glow */}
-          <div className="pointer-events-none absolute -right-32 top-8 -z-10 size-[36rem] rounded-full bg-[#b88a3e]/12 blur-3xl" />
-          <div className="pointer-events-none absolute -left-20 bottom-10 -z-10 size-[28rem] rounded-full bg-[#221b14]/50 blur-3xl" />
+          {/* Subtle warm gold ambient aura */}
+          <div className="pointer-events-none absolute -right-32 top-8 -z-10 size-[36rem] rounded-full bg-[#deb753]/12 blur-3xl" />
+          <div className="pointer-events-none absolute -left-20 bottom-10 -z-10 size-[28rem] rounded-full bg-[#c59a3f]/10 blur-3xl" />
 
           <div className="mx-auto grid min-h-[660px] max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 sm:py-20 lg:min-h-[720px] lg:grid-cols-[1.1fr_0.9fr] lg:gap-12 lg:px-12 lg:py-20">
             <motion.div
@@ -563,31 +611,31 @@ export default function Home() {
             >
               <motion.div
                 variants={reveal}
-                className="mb-6 inline-flex items-center gap-2.5 rounded-lg border border-[#b88a3e]/35 bg-[#120e0a] px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-[#f7eed8] shadow-sm"
+                className="mb-6 inline-flex items-center gap-2.5 rounded-lg border border-[#deb753]/40 bg-white px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-[#8e6318] shadow-xs"
               >
-                <span className="size-2 shrink-0 rounded-full bg-[#d4a853]" />
-                <span>GABRIELLA PIMENTA | ADVOGADA EM MARIANA · {OAB_REGISTRATION}</span>
+                <span className="size-2 shrink-0 rounded-full bg-[#8e6318]" />
+                <span>SUELLEM RODRIGUES | ADVOGADA CRIMINALISTA · {OAB_REGISTRATION}</span>
               </motion.div>
 
               <motion.h1
                 variants={reveal}
-                className="max-w-[760px] font-serif text-[2.65rem] leading-[1.08] tracking-[-0.02em] text-white sm:text-5xl lg:text-[3.85rem]"
+                className="max-w-[760px] font-serif text-[2.65rem] leading-[1.08] tracking-[-0.02em] text-[#14110e] sm:text-5xl lg:text-[3.85rem]"
               >
-                Acolhendo Histórias, Defendendo Direitos:{" "}
-                <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#fbf6ee] via-[#f7eed8] to-[#d4a853]">
-                  Construindo Soluções Jurídicas Estratégicas e Seguras.
+                Defesa Intransigente da Sua Liberdade:{" "}
+                <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#8e6318] via-[#c59a3f] to-[#5a3c08]">
+                  Atuação Estratégica e Combativa em Execuções Penais e Direito Criminal.
                 </span>
               </motion.h1>
 
               <motion.p
                 variants={reveal}
-                className="mt-7 max-w-xl text-[15px] leading-7 text-[#d8cfc0] sm:text-base sm:leading-8"
+                className="mt-7 max-w-xl text-[15px] leading-7 text-[#4c433a] sm:text-base sm:leading-8"
               >
                 Liderado pela{" "}
-                <strong className="font-semibold text-white">
-                  Dra. Gabriella Soares Pimenta ({OAB_REGISTRATION})
+                <strong className="font-semibold text-[#14110e]">
+                  Dra. Suellem Rodrigues ({OAB_REGISTRATION})
                 </strong>
-                , nosso escritório alia acolhimento empático a uma atuação técnica combativa e resolutiva. Defendemos seus direitos nas áreas Trabalhista, Previdenciária, Família e Cível, com sede física em Mariana - MG e atendimento on-line seguro em todo o território nacional.
+                , especialista em Execuções Penais e pós-graduada em Advocacia Criminal com sede em São Sebastião do Paraíso - MG. Atuamos com determinação inegociável na defesa dos direitos de apenados e investigados, agilizando progressões de regime, livramento condicional, remição de pena e combatendo ilegalidades em Minas Gerais e no SEEU em todo o Brasil.
               </motion.p>
 
               <motion.div
@@ -596,20 +644,20 @@ export default function Home() {
               >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Gabriella Pimenta! Gostaria de consultar sobre meu caso e agendar um atendimento."
+                    "Olá, Dra. Suellem Rodrigues! Gostaria de consultar sobre o caso de um apenado / situação penal urgente."
                   )}
                   target="_blank"
                   size="lg"
                   variant="gold"
                   className="rounded-lg shadow-md"
                 >
-                  <WhatsAppIcon size={16} /> Falar no WhatsApp com a Dra. Gabriella
+                  <WhatsAppIcon size={16} /> Falar no WhatsApp com a Dra. Suellem
                 </GlowingButton>
                 <a
                   href="#atuacao"
-                  className="group inline-flex items-center gap-2 rounded-lg border border-[#b88a3e]/30 bg-[#120e0a] px-5 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#f7eed8] transition-all hover:border-[#f7eed8] hover:bg-[#221b14] hover:text-white"
+                  className="group inline-flex items-center gap-2 rounded-lg border border-[#e8dfd2] bg-white px-5 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#14110e] shadow-xs transition-all hover:border-[#deb753] hover:bg-[#faf7f2]"
                 >
-                  Especialidades Jurídicas{" "}
+                  Especialidades Penais{" "}
                   <ArrowRight
                     size={14}
                     className="transition-transform group-hover:translate-x-1"
@@ -619,34 +667,34 @@ export default function Home() {
 
               <motion.div
                 variants={reveal}
-                className="mt-12 flex flex-wrap items-center gap-x-7 gap-y-4 border-t border-[#b88a3e]/20 pt-6 text-xs text-[#d8cfc0]"
+                className="mt-12 flex flex-wrap items-center gap-x-7 gap-y-4 border-t border-[#e8dfd2] pt-6 text-xs text-[#5c5042]"
               >
                 <a
                   href={GOOGLE_MAPS_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 font-medium text-white transition-colors hover:text-[#f7eed8]"
+                  className="inline-flex items-center gap-2 font-medium text-[#14110e] transition-colors hover:text-[#8e6318]"
                 >
-                  <Star size={15} className="fill-[#d4a853] text-[#d4a853]" /> 5,0 estrelas no Google (29 avaliações autênticas)
+                  <Star size={15} className="fill-[#deb753] text-[#deb753]" /> 5,0 estrelas no Google (20 avaliações autênticas)
                 </a>
                 <span className="inline-flex items-center gap-2 font-medium">
-                  <Award size={15} className="text-[#d4a853]" /> {OAB_REGISTRATION}
+                  <Award size={15} className="text-[#8e6318]" /> {OAB_REGISTRATION}
                 </span>
                 <span className="inline-flex items-center gap-2 font-medium">
-                  <MapPin size={15} className="text-[#d4a853]" /> R. Zizinha Camelo · Mariana - MG
+                  <MapPin size={15} className="text-[#8e6318]" /> R. José Albino, 535 · Paraíso - MG
                 </span>
                 <a
                   href={INSTAGRAM_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 font-medium text-[#f7eed8] transition-colors hover:text-white"
+                  className="inline-flex items-center gap-2 font-medium text-[#14110e] transition-colors hover:text-[#8e6318]"
                 >
-                  <InstagramIcon size={15} className="text-[#d4a853]" /> 2.460+ seguidores ({INSTAGRAM_HANDLE})
+                  <InstagramIcon size={15} className="text-[#8e6318]" /> {INSTAGRAM_HANDLE}
                 </a>
               </motion.div>
             </motion.div>
 
-            {/* Hero Visual Presentation - Dra. Gabriella Pimenta */}
+            {/* Hero Visual Presentation - Dra. Suellem Rodrigues */}
             <motion.div
               initial={{ opacity: 0, scale: 0.97, y: 18 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -657,34 +705,34 @@ export default function Home() {
               }}
               className="relative mx-auto w-full max-w-[490px] lg:ml-auto lg:mr-2"
             >
-              <div className="relative aspect-[4/4.9] overflow-hidden rounded-2xl border border-[#b88a3e]/35 bg-[#120e0a] shadow-2xl ring-1 ring-[#b88a3e]/20">
+              <div className="relative aspect-[4/4.9] overflow-hidden rounded-2xl border-2 border-[#e8dfd2] bg-white shadow-xl ring-1 ring-[#deb753]/20">
                 <Image
                   src={FOTO_HERO_SRC}
-                  alt="Dra. Gabriella Pimenta — Advogada em Mariana e Consultora Jurídica"
+                  alt="Dra. Suellem Rodrigues — Advogada Criminalista e Especialista em Execuções Penais"
                   fill
                   priority
-                  sizes="(max-width: 640px) 90vw, (max-width: 1024px) 70vw, 45vw"
+                  unoptimized
                   className="object-cover object-top"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#0b0907] via-[#0b0907]/85 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#14110e] via-[#14110e]/75 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-3 text-white sm:bottom-8 sm:left-8 sm:right-8">
                   <div>
                     <p className="font-serif text-2xl font-normal tracking-wide text-white">
-                      Dra. Gabriella Pimenta
+                      Dra. Suellem Rodrigues
                     </p>
-                    <p className="mt-1 text-[10px] uppercase tracking-[0.2em] text-[#d4a853]">
-                      Advogada em Mariana · {OAB_REGISTRATION}
+                    <p className="mt-1 text-[10px] uppercase tracking-[0.2em] text-[#deb753]">
+                      Advocacia Criminal · {OAB_REGISTRATION}
                     </p>
                   </div>
-                  <span className="grid size-11 shrink-0 place-items-center rounded-lg border border-[#b88a3e]/40 bg-[#0b0907]/85 text-[#f7eed8] backdrop-blur-sm">
+                  <span className="grid size-11 shrink-0 place-items-center rounded-lg border border-[#deb753]/40 bg-[#14110e]/85 text-[#f7e5a9] backdrop-blur-sm">
                     <Scale size={18} />
                   </span>
                 </div>
               </div>
 
               {/* Floating authority badge */}
-              <div className="absolute -left-3 top-6 z-10 rounded-lg border border-[#b88a3e]/40 bg-[#120e0a]/95 px-4 py-2 text-[10px] font-bold tracking-[0.14em] text-[#f7eed8] shadow-card backdrop-blur-md sm:-left-5">
-                MARIANA - MG · ATENDIMENTO ON-LINE EM TODO O BRASIL
+              <div className="absolute -left-3 top-6 z-10 rounded-lg border border-[#deb753]/40 bg-white/95 px-4 py-2 text-[10px] font-bold tracking-[0.14em] text-[#8e6318] shadow-md backdrop-blur-md sm:-left-5">
+                SÃO SEBASTIÃO DO PARAÍSO - MG · ATENDIMENTO ON-LINE SEEU BRASIL
               </div>
 
               {/* Floating Google 5.0 Star Rating */}
@@ -692,66 +740,66 @@ export default function Home() {
                 href={GOOGLE_MAPS_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="group absolute -bottom-5 -right-3 z-10 rounded-xl border border-[#b88a3e]/35 bg-[#120e0a]/95 p-3.5 shadow-card backdrop-blur-md transition-all hover:border-[#f7eed8] hover:bg-[#18130e] sm:-right-5"
+                className="group absolute -bottom-5 -right-3 z-10 rounded-xl border border-[#deb753]/40 bg-white/95 p-3.5 shadow-md backdrop-blur-md transition-all hover:border-[#8e6318] hover:bg-white sm:-right-5"
               >
                 <div className="flex items-center gap-2">
                   <GoogleIcon size={17} />
                   <div className="flex items-center gap-1.5">
-                    <div className="flex gap-0.5 text-[#d4a853]">
-                      <Star size={13} className="fill-[#d4a853] text-[#d4a853]" />
+                    <div className="flex gap-0.5 text-[#deb753]">
+                      <Star size={13} className="fill-[#deb753] text-[#deb753]" />
                     </div>
-                    <span className="font-serif text-base font-bold text-white">
+                    <span className="font-serif text-base font-bold text-[#14110e]">
                       5,0
                     </span>
-                    <span className="text-[10px] uppercase tracking-wider text-[#d4a853]">
+                    <span className="text-[10px] uppercase tracking-wider text-[#8e6318]">
                       / 5,0
                     </span>
                   </div>
                 </div>
-                <p className="mt-1 text-[9px] font-semibold uppercase tracking-wider text-[#d8cfc0]">
-                  29 Avaliações no Google
+                <p className="mt-1 text-[9px] font-semibold uppercase tracking-wider text-[#5c5042]">
+                  20 Avaliações no Google
                 </p>
               </a>
             </motion.div>
           </div>
         </section>
 
-        {/* Highlights Banner - Authority Metrics */}
+        {/* Highlights Banner - Authority Metrics in Clean White */}
         <section
           aria-label="Credenciais e Destaques"
-          className="border-b border-[#b88a3e]/20 bg-[#120e0a]"
+          className="border-b border-[#e8dfd2] bg-white"
         >
           <div className="mx-auto grid max-w-7xl gap-7 px-5 py-8 sm:grid-cols-4 sm:gap-4 sm:px-8 lg:px-12">
             {[
               [
                 "5,0 ★ no Google",
-                "nota máxima com 29 avaliações autênticas destacando acolhimento e clareza",
+                "nota máxima com 20 avaliações autênticas destacando competência e agilidade",
               ],
               [
-                "2.460+ Seguidores",
-                "comunidade no Instagram (@gabriellaspimentaadv) com 144 publicações",
+                "Execuções Penais",
+                "domínio da LEP, recálculo no SEEU e antecipação legal de progressões",
               ],
               [
-                "Atendimento Humanizado",
-                "escuta ativa, empatia, ética e clareza sem juridiquês",
+                "Paraíso - MG",
+                "sede na R. José Albino, 535 - Sl 1 e atendimento digital em todo o Brasil",
               ],
               [
-                "Mariana - MG",
-                "sede na R. Zizinha Camelo e atendimento on-line em todo o Brasil",
+                "Plantão Criminal",
+                "atendimento prioritário para flagrantes e audiências de custódia",
               ],
             ].map(([value, label], index) => (
               <div
                 key={label}
                 className={
                   index > 0
-                    ? "flex items-center gap-4 sm:justify-center sm:border-l sm:border-[#b88a3e]/20"
+                    ? "flex items-center gap-4 sm:justify-center sm:border-l sm:border-[#e8dfd2]"
                     : "flex items-center gap-4 sm:justify-center"
                 }
               >
-                <span className="font-serif text-xl font-semibold text-[#d4a853] sm:text-2xl">
+                <span className="font-serif text-xl font-semibold text-[#8e6318] sm:text-2xl">
                   {value}
                 </span>
-                <span className="max-w-[165px] text-[11px] leading-5 text-[#d8cfc0]">
+                <span className="max-w-[165px] text-[11px] leading-5 text-[#5c5042]">
                   {label}
                 </span>
               </div>
@@ -759,13 +807,13 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Sobre a Dra. Gabriella Pimenta - Editorial Warm Travertine Linen Canvas */}
+        {/* Sobre a Dra. Suellem Rodrigues - Editorial Warm Travertine Linen Canvas */}
         <section
           id="sobre"
-          className="scroll-mt-24 border-y border-[#b88a3e]/30 bg-[#faf7f2] py-20 text-[#14100c] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-y border-[#e8dfd2] bg-[#faf7f2] py-20 text-[#14110e] sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20 lg:px-12">
-            {/* Dra. Gabriella Pimenta presentation portrait */}
+            {/* Dra. Suellem Rodrigues presentation portrait */}
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -773,37 +821,37 @@ export default function Home() {
               variants={reveal}
               className="relative mx-auto w-full max-w-[480px]"
             >
-              <div className="relative aspect-[3/4.2] overflow-hidden rounded-2xl border-2 border-[#241403] bg-[#120e0a] shadow-2xl">
+              <div className="relative aspect-[3/4.2] overflow-hidden rounded-2xl border-2 border-[#e8dfd2] bg-white shadow-2xl">
                 <Image
                   src={FOTO_SOBRE_SRC}
-                  alt="Dra. Gabriella Pimenta — Advogada Titular em Mariana"
+                  alt="Dra. Suellem Rodrigues — Advogada Criminalista e Especialista em Execução Penal"
                   fill
-                  sizes="(max-width: 1024px) 90vw, 45vw"
+                  unoptimized
                   className="object-cover object-top"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#0b0907]/90 via-[#0b0907]/30 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#14110e]/90 via-[#14110e]/30 to-transparent" />
               </div>
 
-              {/* Authority badge card - Deep Obsidian Contrast on Light Surface */}
-              <div className="absolute -bottom-6 right-3 max-w-[340px] rounded-xl border border-[#b88a3e]/40 bg-[#120e0a] px-5 py-4 shadow-xl sm:-right-6 sm:px-6">
-                <div className="flex items-center gap-2 text-[#d4a853]">
-                  <Award size={16} />
-                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#d4a853]">
-                    Advocacia Humanizada & Estratégica
+              {/* Authority badge card */}
+              <div className="absolute -bottom-6 right-3 max-w-[340px] rounded-xl border border-[#deb753]/40 bg-white px-5 py-4 shadow-xl sm:-right-6 sm:px-6">
+                <div className="flex items-center gap-2 text-[#8e6318]">
+                  <Flame size={16} />
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#8e6318]">
+                    Combatividade · Dedicação · Técnica
                   </p>
                 </div>
-                <p className="mt-1 font-serif text-lg leading-snug text-white">
-                  Dra. Gabriella Pimenta
+                <p className="mt-1 font-serif text-lg leading-snug text-[#14110e]">
+                  Dra. Suellem Rodrigues
                 </p>
-                <p className="mt-0.5 text-[11px] font-medium text-[#d4a853]">
-                  {OAB_REGISTRATION} · Gabriella Pimenta Advocacia
+                <p className="mt-0.5 text-[11px] font-medium text-[#8e6318]">
+                  {OAB_REGISTRATION} · Especialista em Execuções Penais
                 </p>
-                <p className="mt-1 text-[11px] leading-4 text-[#d8cfc0]">
-                  Rua Zizinha Camelo - Centro, Mariana - MG
+                <p className="mt-1 text-[11px] leading-4 text-[#5c5042]">
+                  R. José Albino, 535 - Centro · São Sebastião do Paraíso - MG
                 </p>
               </div>
 
-              <span className="absolute -left-4 -top-4 -z-10 size-24 border-l-2 border-t-2 border-[#634316]/40 sm:-left-7 sm:-top-7 sm:size-32" />
+              <span className="absolute -left-4 -top-4 -z-10 size-24 border-l-2 border-t-2 border-[#deb753]/40 sm:-left-7 sm:-top-7 sm:size-32" />
             </motion.div>
 
             {/* Story & Biography - Editorial Warm Light Typography */}
@@ -815,76 +863,105 @@ export default function Home() {
             >
               <motion.div
                 variants={reveal}
-                className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#634316]/30 bg-white/80 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#634316] shadow-xs"
+                className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#deb753]/40 bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#8e6318] shadow-xs"
               >
-                <span className="size-2 shrink-0 rounded-full bg-[#634316]" />
-                <span>CONHEÇA A DRA. GABRIELLA PIMENTA</span>
+                <span className="size-2 shrink-0 rounded-full bg-[#8e6318]" />
+                <span>QUEM É A DRA. SUELLEM RODRIGUES</span>
               </motion.div>
 
               <motion.h2
                 variants={reveal}
-                className="font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-[#14100c] sm:text-4xl lg:text-[3.25rem]"
+                className="font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-[#14110e] sm:text-4xl lg:text-[3.25rem]"
               >
-                Mais que uma assessoria jurídica: uma defensora{" "}
-                <span className="italic text-[#8c5e1e]">
-                  comprometida em acolher a sua história e construir a melhor solução.
+                Uma defensora incansável:{" "}
+                <span className="italic text-[#8e6318]">
+                  determinada em assegurar a ampla defesa e a dignidade na execução penal.
                 </span>
               </motion.h2>
 
               <motion.p
                 variants={reveal}
-                className="mt-6 max-w-xl text-[15px] leading-7 text-[#4e4338]"
+                className="mt-6 max-w-xl text-[15px] leading-7 text-[#4c433a]"
               >
-                Com sede no Centro histórico de{" "}
-                <strong className="font-bold text-[#14100c]">
-                  Mariana - MG
+                Com escritório sediado em{" "}
+                <strong className="font-bold text-[#14110e]">
+                  São Sebastião do Paraíso - MG
                 </strong>{" "}
-                e capacidade de atendimento online em todo o território nacional, a Dra. Gabriella Soares Pimenta (OAB/MG 221.270) construiu uma advocacia humanizada orientada pela empatia, ética inegociável e rigor técnico na defesa intransigente dos direitos de quem a procura.
+                e capacidade de atuação eletrônica em todo o território nacional, a Dra. Suellem Rodrigues (OAB/MG 174.904) possui 33 anos, formação sólida em Direito e{" "}
+                <strong className="font-bold text-[#14110e]">
+                  Pós-graduação em Advocacia Criminal
+                </strong>
+                , sendo amplamente reconhecida pelo domínio técnico da{" "}
+                <strong className="font-bold text-[#14110e]">
+                  Lei de Execução Penal (LEP)
+                </strong>
+                .
               </motion.p>
 
               <motion.p
                 variants={reveal}
-                className="mt-4 max-w-xl text-[15px] leading-7 text-[#4e4338]"
+                className="mt-4 max-w-xl text-[15px] leading-7 text-[#4c433a]"
               >
-                Nosso lema reflete a nossa alma profissional:{" "}
-                <strong className="font-semibold text-[#14100c]">
-                  Acolhendo histórias, defendendo direitos, construindo soluções jurídicas
-                </strong>
-                . Entendemos que por trás de cada processo judicial existem vidas, famílias e expectativas reais. Você recebe atenção direta, esclarecimentos transparentes sem qualquer juridiquês e acompanhamento seguro em todas as etapas do seu caso.
+                Ariana nata e extremamente determinada, ela compreende que por trás de cada guia de execução ou processo criminal existe uma pessoa sob a custódia do Estado e uma família aflita em busca de respostas transparentes. Não promete resultados impossíveis, mas luta com rigor processual para que nenhum direito seja violado e nenhum dia a mais de pena seja cumprido indevidamente.
               </motion.p>
 
-              {/* Client Quote Card */}
+              {/* Client Quote Card from real reviews */}
               <motion.div
                 variants={reveal}
-                className="mt-6 rounded-xl border border-[#e8dfd2] bg-white/95 p-5 shadow-sm"
+                className="mt-6 rounded-xl border border-[#e8dfd2] bg-white p-5 shadow-xs"
               >
-                <blockquote className="font-serif text-sm italic leading-relaxed text-[#14100c]">
-                  &ldquo;Excelente advogada! Atendimento humanizado, profissional competente e muito atenciosa. A Dra. Gabriella explicou cada detalhe do meu processo com uma clareza e paciência raras. Me senti acolhida e segura em cada passo. Recomendo de olhos fechados!&rdquo;
+                <blockquote className="font-serif text-sm italic leading-relaxed text-[#14110e]">
+                  &ldquo;Profissional excelente e extremamente atenciosa. Demonstrou grande conhecimento como advogada criminalista, esclarecendo todas as dúvidas de forma clara e objetiva. Além disso, transmite muita segurança e confiança, características fundamentais nessa área. Recomendo seu trabalho sem hesitação!&rdquo;
                 </blockquote>
-                <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-[#634316]">
-                  — Mariana Alves · Avaliação Verificada no Google Meu Negócio (5,0 ★)
+                <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-[#8e6318]">
+                  — Mayara Christina Nunes · Avaliação Verificada no Google Meu Negócio (5,0 ★)
                 </p>
+              </motion.div>
+
+              {/* Personality & Profile Cards from the creative */}
+              <motion.div
+                variants={reveal}
+                className="mt-6 grid grid-cols-2 gap-3 text-xs sm:grid-cols-3"
+              >
+                <div className="rounded-lg border border-[#e8dfd2] bg-white p-3 shadow-xs">
+                  <p className="font-bold text-[#14110e]">33 Anos</p>
+                  <p className="mt-0.5 text-[11px] text-[#6b5d50]">
+                    Pós-Graduada em Advocacia Criminal
+                  </p>
+                </div>
+                <div className="rounded-lg border border-[#e8dfd2] bg-white p-3 shadow-xs">
+                  <p className="font-bold text-[#14110e]">Especialista</p>
+                  <p className="mt-0.5 text-[11px] text-[#6b5d50]">
+                    Domínio da Execução Penal & SEEU
+                  </p>
+                </div>
+                <div className="rounded-lg border border-[#e8dfd2] bg-white p-3 shadow-xs col-span-2 sm:col-span-1">
+                  <p className="font-bold text-[#14110e]">Extremamente Determinada</p>
+                  <p className="mt-0.5 text-[11px] text-[#6b5d50]">
+                    Combatividade na defesa da liberdade
+                  </p>
+                </div>
               </motion.div>
 
               <motion.div
                 variants={reveal}
-                className="mt-6 grid grid-cols-1 gap-2.5 text-xs font-semibold text-[#14100c] sm:grid-cols-2"
+                className="mt-6 grid grid-cols-1 gap-2.5 text-xs font-semibold text-[#14110e] sm:grid-cols-2"
               >
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#634316]" />
-                  <span>Sede na Rua Zizinha Camelo - Mariana - MG</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#8e6318]" />
+                  <span>Sede na R. José Albino, 535 - Sl 1 - Paraíso - MG</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#634316]" />
-                  <span>Nota máxima 5,0 ★ no Google com 29 avaliações</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#8e6318]" />
+                  <span>Nota máxima 5,0 ★ no Google com 20 avaliações</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#634316]" />
-                  <span>Atendimento direto com a advogada, sem intermediários</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#8e6318]" />
+                  <span>Comunicação direta com familiares via WhatsApp</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#634316]" />
-                  <span>Atendimento presencial e on-line em todo o Brasil</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#8e6318]" />
+                  <span>Atuação presencial em Minas Gerais e no SEEU Brasil</span>
                 </div>
               </motion.div>
 
@@ -894,18 +971,18 @@ export default function Home() {
               >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Gabriella Pimenta! Gostaria de agendar uma consulta sobre o meu caso."
+                    "Olá, Dra. Suellem Rodrigues! Gostaria de agendar uma consulta sobre caso criminal ou execução penal."
                   )}
                   target="_blank"
                   size="md"
-                  variant="dark"
+                  variant="gold"
                   className="rounded-lg shadow-md"
                 >
-                  <WhatsAppIcon size={16} /> Falar com a Dra. Gabriella
+                  <WhatsAppIcon size={16} /> Falar com a Dra. Suellem
                 </GlowingButton>
                 <a
                   href={`tel:+${WHATSAPP_NUMBER}`}
-                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#14100c] transition-colors hover:text-[#634316]"
+                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#14110e] transition-colors hover:text-[#8e6318]"
                 >
                   <Phone size={15} /> {PHONE_DISPLAY}
                 </a>
@@ -914,10 +991,10 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Pilares de Atuação / Especialidades Jurídicas */}
+        {/* Pilares de Atuação / Especialidades Penais & Execuções */}
         <section
           id="atuacao"
-          className="scroll-mt-24 border-t border-[#b88a3e]/20 bg-[#120e0a] py-20 sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#e8dfd2] bg-[#f8f5ee] py-20 sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <motion.div
@@ -928,17 +1005,18 @@ export default function Home() {
               className="flex flex-col justify-between gap-6 md:flex-row md:items-end"
             >
               <Heading
-                eyebrow="PILARES DE ATUAÇÃO & ESPECIALIDADES JURÍDICAS"
-                description="Soluções jurídicas estratégicas, personalizadas e humanizadas para resguardar seus direitos em questões Trabalhistas, Previdenciárias, Família e Cíveis."
+                light
+                eyebrow="PILARES DE ATUAÇÃO CRIMINAL & EXECUÇÃO PENAL"
+                description="Defesa técnica minuciosa em todas as fases da persecução penal, com ênfase especial na garantia dos direitos dos apenados perante as Varas de Execuções Penais (VEP)."
               >
-                Assessoria jurídica completa em{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fbf6ee] via-[#f7eed8] to-[#d4a853]">
-                  Mariana, Inconfidentes e em todo o Brasil.
+                Atuação combativa e especializada em{" "}
+                <span className="italic text-[#8e6318]">
+                  São Sebastião do Paraíso, Minas Gerais e em todo o Brasil.
                 </span>
               </Heading>
-              <p className="max-w-[270px] pb-1 text-xs leading-6 text-[#d8cfc0]">
-                Selecione uma especialidade abaixo para conferir as demandas
-                atendidas e iniciar sua consulta diretamente pelo WhatsApp.
+              <p className="max-w-[270px] pb-1 text-xs leading-6 text-[#5c5042]">
+                Clique em uma especialidade abaixo para conferir as demandas
+                atendidas e iniciar uma consulta diretamente pelo WhatsApp.
               </p>
             </motion.div>
 
@@ -955,25 +1033,25 @@ export default function Home() {
                   <motion.article
                     key={area.id}
                     variants={reveal}
-                    className="group flex min-h-[350px] flex-col rounded-xl border border-[#b88a3e]/20 bg-[#18130e] p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#b88a3e]/50 hover:bg-[#221b14] hover:shadow-obsidian sm:p-8"
+                    className="group flex min-h-[350px] flex-col rounded-xl border border-[#e8dfd2] bg-white p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#deb753] hover:shadow-lg sm:p-8"
                   >
                     <div className="flex items-start justify-between">
-                      <span className="grid size-12 place-items-center rounded-lg border border-[#b88a3e]/25 bg-[#2c2219] text-[#d4a853] shadow-sm transition-colors group-hover:border-[#f7eed8] group-hover:bg-[#442a0b] group-hover:text-white">
+                      <span className="grid size-12 place-items-center rounded-lg border border-[#deb753]/30 bg-[#faf7f2] text-[#8e6318] shadow-xs transition-colors group-hover:bg-[#8e6318] group-hover:text-white">
                         <Icon size={22} strokeWidth={1.5} />
                       </span>
-                      <span className="font-serif text-2xl text-[#b88a3e]/40">
+                      <span className="font-serif text-2xl text-[#deb753]/60">
                         0{index + 1}
                       </span>
                     </div>
 
                     <div className="mt-6">
-                      <span className="inline-block rounded-md border border-[#b88a3e]/25 bg-[#221b14] px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-[#f7eed8] shadow-sm">
+                      <span className="inline-block rounded-md border border-[#deb753]/30 bg-[#f4efe6] px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-[#5a3c08] shadow-xs">
                         {area.tag}
                       </span>
-                      <h3 className="mt-3 font-serif text-[1.45rem] leading-tight text-white">
+                      <h3 className="mt-3 font-serif text-[1.45rem] leading-tight text-[#14110e]">
                         {area.title}
                       </h3>
-                      <p className="mt-3 text-[13px] leading-6 text-[#d8cfc0]">
+                      <p className="mt-3 text-[13px] leading-6 text-[#5c5042]">
                         {area.summary}
                       </p>
                     </div>
@@ -981,9 +1059,9 @@ export default function Home() {
                     <button
                       type="button"
                       onClick={() => setActiveArea(area)}
-                      className="group/link mt-auto inline-flex w-fit items-center gap-2 pt-6 text-[10px] font-bold uppercase tracking-[0.16em] text-[#d4a853] hover:text-white"
+                      className="group/link mt-auto inline-flex w-fit items-center gap-2 pt-6 text-[10px] font-bold uppercase tracking-[0.16em] text-[#8e6318] hover:text-[#14110e]"
                     >
-                      Ver detalhes e demandas{" "}
+                      Ver detalhes e pedidos{" "}
                       <ArrowRight
                         size={14}
                         className="transition-transform group/link:translate-x-1"
@@ -996,30 +1074,30 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Por Que Escolher a Dra. Gabriella Pimenta - Diferenciais (Dobra Clara com Linho Nobre) */}
+        {/* Por Que Escolher a Dra. Suellem Rodrigues - Diferenciais */}
         <section
           id="diferenciais"
-          className="scroll-mt-24 border-t border-[#b88a3e]/30 bg-[#faf7f2] py-20 text-[#14100c] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#e8dfd2] bg-[#faf7f2] py-20 text-[#14110e] sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
               <Heading
                 light
-                eyebrow="NOSSOS PILARES DE EXCELÊNCIA"
-                description="Unimos acolhimento humanizado, técnica jurídica incisiva e combatividade para garantir que você tenha seus direitos resguardados com total segurança."
+                eyebrow="NOSSOS PILARES DE ATUAÇÃO COMBATIVA"
+                description="A liberdade é o bem mais valioso de uma pessoa. Quando ela é cerceada, cada dia conta e cada falha processual pode custar meses ou anos a mais de prisão."
               >
-                Por que confiar sua causa à{" "}
-                <span className="italic text-[#8c5e1e]">
-                  Dra. Gabriella Pimenta?
+                Por que confiar seu caso à{" "}
+                <span className="italic text-[#8e6318]">
+                  Dra. Suellem Rodrigues?
                 </span>
               </Heading>
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá, Dra. Gabriella Pimenta! Gostaria de consultar sobre a minha situação jurídica."
+                  "Olá, Dra. Suellem Rodrigues! Gostaria de consultar sobre a situação jurídica de um apenado."
                 )}
                 target="_blank"
                 size="md"
-                variant="dark"
+                variant="gold"
                 className="rounded-lg shadow-sm"
               >
                 <WhatsAppIcon size={16} /> Falar no WhatsApp
@@ -1027,110 +1105,110 @@ export default function Home() {
             </div>
 
             <div className="mt-12 grid gap-8 lg:grid-cols-2">
-              {/* Card 1: Atendimento Humanizado & Acolhimento */}
+              {/* Card 1: Rigor no SEEU & Execução Penal */}
               <motion.article
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65 }}
-                className="group flex flex-col justify-between rounded-xl border border-[#e8dfd2] bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#b88a3e] hover:shadow-md sm:p-9"
+                className="group flex flex-col justify-between rounded-xl border border-[#e8dfd2] bg-white p-7 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#deb753] hover:shadow-md sm:p-9"
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#b88a3e]/30 bg-[#f2ece1] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#442a0b]">
-                      <HeartHandshake size={14} /> Atendimento Humanizado
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#deb753]/30 bg-[#f4efe6] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#322003]">
+                      <Gavel size={14} /> Especialista em Execução Penal
                     </span>
-                    <span className="text-xs font-semibold text-[#8c5e1e]">
-                      Empatia & Respeito
+                    <span className="text-xs font-semibold text-[#8e6318]">
+                      SEEU & Cálculos da LEP
                     </span>
                   </div>
-                  <h3 className="mt-4 font-serif text-2xl leading-tight text-[#14100c] sm:text-[1.75rem]">
-                    Você Nunca Fica Sem Resposta ou Desamparado
+                  <h3 className="mt-4 font-serif text-2xl leading-tight text-[#14110e] sm:text-[1.75rem]">
+                    Auditoria Rigorosa do Atestado de Pena & Eliminação de Erros
                   </h3>
-                  <p className="mt-3 text-[14px] leading-relaxed text-[#4e4338]">
-                    Sabemos que problemas jurídicos trazem ansiedade e afetam a vida pessoal e familiar. No escritório Gabriella Pimenta Advocacia, você conversa diretamente com a advogada, recebe esclarecimentos sem termos incompreensíveis e compreende cada fase com tranquilidade.
+                  <p className="mt-3 text-[14px] leading-relaxed text-[#4c433a]">
+                    Muitos apenados cumprem pena além do tempo devido simplesmente porque ninguém auditou a guia de execução. Analisamos cada fração, data-base, remições não computadas e unificações para buscar a progressão de regime no dia exato previsto em lei.
                   </p>
-                  <ul className="mt-5 space-y-2 text-xs font-medium text-[#14100c]">
+                  <ul className="mt-5 space-y-2 text-xs font-medium text-[#14110e]">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#634316]" />
-                      <span>Contato direto pelo WhatsApp com a Dra. Gabriella Pimenta</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#8e6318]" />
+                      <span>Cálculo exato das frações (16%, 20%, 25%, 30%, 40%, 50%, 60%, 70%)</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#634316]" />
-                      <span>Posicionamento constante e didático sobre o andamento dos autos</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#8e6318]" />
+                      <span>Inclusão de todas as remições por estudo, trabalho e leitura</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#634316]" />
-                      <span>Atendimento seguro, transparente e com sigilo profissional absoluto</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#8e6318]" />
+                      <span>Peticionamento ágil e insistente perante o juiz da VEP</span>
                     </li>
                   </ul>
                 </div>
                 <div className="mt-7 border-t border-[#e8dfd2] pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dra. Gabriella Pimenta! Gostaria de conversar diretamente com você sobre minha situação."
+                      "Olá, Dra. Suellem Rodrigues! Gostaria que você fizesse uma auditoria no cálculo de pena do meu familiar."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#b88a3e]/40 bg-[#faf7f2] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#14100c] transition-all hover:border-[#634316] hover:bg-[#14100c] hover:text-[#f7eed8]"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#deb753]/40 bg-[#faf7f2] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#14110e] transition-all hover:border-[#8e6318] hover:bg-[#14110e] hover:text-[#f7e5a9]"
                   >
                     <span className="inline-flex items-center gap-2">
-                      <WhatsAppIcon size={15} /> Conversar Diretamente no WhatsApp
+                      <WhatsAppIcon size={15} /> Solicitar Auditoria de Pena no WhatsApp
                     </span>
                     <ArrowUpRight size={15} />
                   </a>
                 </div>
               </motion.article>
 
-              {/* Card 2: Rigor Técnico e Eficiência */}
+              {/* Card 2: Acolhimento e Verdade com a Família */}
               <motion.article
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65, delay: 0.1 }}
-                className="group flex flex-col justify-between rounded-xl border border-[#e8dfd2] bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#b88a3e] hover:shadow-md sm:p-9"
+                className="group flex flex-col justify-between rounded-xl border border-[#e8dfd2] bg-white p-7 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#deb753] hover:shadow-md sm:p-9"
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#b88a3e]/30 bg-[#f2ece1] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#442a0b]">
-                      <Scale size={14} /> Rigor Técnico Incisivo
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#deb753]/30 bg-[#f4efe6] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#322003]">
+                      <Users2 size={14} /> Atendimento Humanizado & Direto
                     </span>
-                    <span className="text-xs font-semibold text-[#8c5e1e]">
-                      Soluções Sob Medida
+                    <span className="text-xs font-semibold text-[#8e6318]">
+                      Sem Falsas Promessas
                     </span>
                   </div>
-                  <h3 className="mt-4 font-serif text-2xl leading-tight text-[#14100c] sm:text-[1.75rem]">
-                    Combatividade Jurídica & Foco no Resultado Real
+                  <h3 className="mt-4 font-serif text-2xl leading-tight text-[#14110e] sm:text-[1.75rem]">
+                    Você e Sua Família Nunca Ficam no Escuro Sem Resposta
                   </h3>
-                  <p className="mt-3 text-[14px] leading-relaxed text-[#4e4338]">
-                    Cada cliente é único. Analisamos minuciosamente documentos, histórico e jurisprudências dos tribunais (TJMG, TRF6, TST, STJ) para desenhar estratégias jurídicas robustas, seja na Justiça do Trabalho, na esfera Previdenciária, de Família ou Cível.
+                  <p className="mt-3 text-[14px] leading-relaxed text-[#4c433a]">
+                    Sabemos a dor e o desgaste emocional que uma prisão causa aos parentes. Com a Dra. Suellem Rodrigues, você fala diretamente com a advogada pelo WhatsApp, recebe atualizações claras sobre o andamento e tem a segurança de uma atuação séria, sem promessas vazias.
                   </p>
-                  <ul className="mt-5 space-y-2 text-xs font-medium text-[#14100c]">
+                  <ul className="mt-5 space-y-2 text-xs font-medium text-[#14110e]">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#634316]" />
-                      <span>Análise técnica aprofundada de provas, documentos e laudos</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#8e6318]" />
+                      <span>Contato direto pelo WhatsApp, sem barreiras ou robôs</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#634316]" />
-                      <span>Atuação diligente e combativa em audiências, perícias e recursos</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#8e6318]" />
+                      <span>Explicação clara sobre prazos reais e expectativas concretas</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#634316]" />
-                      <span>Foco constante em soluções céleres e sem acordos prejudiciais</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#8e6318]" />
+                      <span>Respeito absoluto à dor da família e à dignidade do apenado</span>
                     </li>
                   </ul>
                 </div>
                 <div className="mt-7 border-t border-[#e8dfd2] pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dra. Gabriella Pimenta! Preciso de ajuda para analisar meu caso jurídico."
+                      "Olá, Dra. Suellem Rodrigues! Gostaria de conversar diretamente sobre a situação do meu familiar."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#b88a3e]/40 bg-[#faf7f2] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#14100c] transition-all hover:border-[#634316] hover:bg-[#14100c] hover:text-[#f7eed8]"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#deb753]/40 bg-[#faf7f2] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#14110e] transition-all hover:border-[#8e6318] hover:bg-[#14110e] hover:text-[#f7e5a9]"
                   >
                     <span className="inline-flex items-center gap-2">
-                      <WhatsAppIcon size={15} /> Analisar Meu Caso no WhatsApp
+                      <WhatsAppIcon size={15} /> Conversar Diretamente com a Dra. Suellem
                     </span>
                     <ArrowUpRight size={15} />
                   </a>
@@ -1140,28 +1218,28 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Nosso Compromisso com Você */}
-        <section className="relative overflow-hidden border-t border-[#b88a3e]/20 bg-[#faf7f2] py-20 text-[#14100c] sm:py-24 lg:py-28">
-          <div className="pointer-events-none absolute -left-28 top-1/4 size-96 rounded-full bg-[#b88a3e]/5 blur-3xl" />
-          <div className="pointer-events-none absolute -right-28 bottom-1/4 size-96 rounded-full bg-[#b88a3e]/5 blur-3xl" />
+        {/* Nosso Método de Trabalho em 3 Passos */}
+        <section className="relative overflow-hidden border-t border-[#e8dfd2] bg-[#faf7f2] py-20 text-[#14110e] sm:py-24 lg:py-28">
+          <div className="pointer-events-none absolute -left-28 top-1/4 size-96 rounded-full bg-[#deb753]/10 blur-3xl" />
+          <div className="pointer-events-none absolute -right-28 bottom-1/4 size-96 rounded-full bg-[#deb753]/10 blur-3xl" />
 
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.88fr_1.12fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
                 light
-                eyebrow="NOSSO COMPROMISSO COM O CLIENTE"
-                description="Ética, respeito, dedicação técnica e acolhimento são os valores que guiam cada orientação e cada processo conduzido pela Dra. Gabriella Pimenta."
+                eyebrow="COMO ATUAMOS NA SUA DEFESA"
+                description="Um método combativo, técnico e transparente para garantir que cada benefício previsto na Lei de Execução Penal seja efetivado o mais rápido possível."
               >
-                Cuidamos do seu caso com{" "}
-                <span className="italic text-[#8c5e1e]">
-                  honestidade, acolhimento e dedicação integral.
+                Três etapas claras para{" "}
+                <span className="italic text-[#8e6318]">
+                  antecipar direitos e lutar pela liberdade.
                 </span>
               </Heading>
 
-              <blockquote className="mt-8 rounded-xl border border-[#e8dfd2] bg-white p-6 font-serif text-base italic leading-7 text-[#14100c] shadow-sm">
-                &ldquo;A Dra. Gabriella é daquelas advogadas que realmente ouvem o cliente com atenção e respeito. Dá muita segurança falar com ela porque ela explica com franqueza a realidade de cada situação.&rdquo;
-                <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-[#634316]">
-                  — Cliente em Mariana - MG · Avaliação no Google Meu Negócio
+              <blockquote className="mt-8 rounded-xl border border-[#e8dfd2] bg-white p-6 font-serif text-base italic leading-7 text-[#14110e] shadow-xs">
+                &ldquo;Na execução penal, quem espera pelo ritmo da burocracia perde meses preciosos de liberdade. Nosso papel é agir com combatividade e técnica para colocar o apenado de volta ao convívio de sua família o quanto antes.&rdquo;
+                <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-[#8e6318]">
+                  — Dra. Suellem Rodrigues · OAB/MG 174.904
                 </footer>
               </blockquote>
             </div>
@@ -1176,18 +1254,18 @@ export default function Home() {
               {[
                 [
                   "01",
-                  "Honestidade & Diagnóstico Jurídico Realista",
-                  "Você recebe uma análise sincera e transparente sobre as reais possibilidades da sua ação, sem falsas promessas, com fundamentação na lei e na jurisprudência.",
+                  "Auditoria & Diagnóstico Processual Imediato",
+                  "Acessamos os autos no SEEU ou no PJe, auditamos a guia de recolhimento, conferimos a data-base, apuramos remições não computadas e verificamos a data exata em que o benefício deveria ter sido concedido.",
                 ],
                 [
                   "02",
-                  "Posicionamento Constante do Cliente",
-                  "Você nunca fica sem saber o andamento dos seus direitos. Mantemos você informado sobre cada despacho, decisão, audiência e próxima etapa processual.",
+                  "Peticionamento Técnico & Documentação Completa",
+                  "Instruímos o pedido com todos os documentos necessários (atestados de conduta carcerária, comprovantes de trabalho/estudo, laudos e endereços), fundamentando na doutrina e súmulas dos tribunais superiores.",
                 ],
                 [
                   "03",
-                  "Combatividade e Busca Pela Máxima Reparação",
-                  "Lutamos incansavelmente pelos melhores resultados possíveis, revertendo injustiças e exigindo o cumprimento estrito da lei em benefício do cliente.",
+                  "Despacho Direto com Juízes & Feedback aos Familiares",
+                  "Não deixamos a petição parada. Despachamos prioritariamente para acelerar a manifestação do Ministério Público e a decisão do juiz da VEP, mantendo a família ciente de cada passo.",
                 ],
               ].map(([number, title, description]) => (
                 <motion.div
@@ -1195,12 +1273,12 @@ export default function Home() {
                   variants={reveal}
                   className="grid gap-3 py-6 first:pt-0 sm:grid-cols-[70px_1fr] sm:gap-6 sm:py-7"
                 >
-                  <span className="font-serif text-2xl font-semibold text-[#634316]">
+                  <span className="font-serif text-2xl font-semibold text-[#8e6318]">
                     {number}
                   </span>
                   <div>
-                    <h3 className="font-serif text-2xl text-[#14100c]">{title}</h3>
-                    <p className="mt-2 max-w-lg text-[13px] leading-6 text-[#4e4338]">
+                    <h3 className="font-serif text-2xl text-[#14110e]">{title}</h3>
+                    <p className="mt-2 max-w-lg text-[13px] leading-6 text-[#4c433a]">
                       {description}
                     </p>
                   </div>
@@ -1210,96 +1288,96 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Avaliações / Depoimentos Reais */}
+        {/* Avaliações / Depoimentos Reais Verificados no Google */}
         <section
           id="avaliacoes"
-          className="scroll-mt-24 border-t border-[#b88a3e]/30 bg-[#f2ece1] py-20 text-[#14100c] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#deb753]/30 bg-[#f4efe6] py-20 text-[#14110e] sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
               <Heading
                 light
                 eyebrow="PROVA SOCIAL VERIFICADA · GOOGLE MEU NEGÓCIO"
-                description="Confira avaliações reais e espontâneas de clientes que confiaram suas causas à Dra. Gabriella Pimenta na sede em Mariana - MG e através do atendimento on-line em todo o Brasil."
+                description="Confira avaliações reais e espontâneas de clientes e parceiros sobre o trabalho da Dra. Suellem Rodrigues na sede em São Sebastião do Paraíso - MG e através do atendimento on-line em todo o Brasil."
               >
                 Avaliada com nota máxima 5,0 ★ com{" "}
-                <span className="italic text-[#8c5e1e]">
-                  29 avaliações no Google pelo atendimento acolhedor, dedicação e ética.
+                <span className="italic text-[#8e6318]">
+                  20 avaliações no Google pela competência na execução penal, ética e agilidade.
                 </span>
               </Heading>
 
               {/* Verified Google Badge Card */}
-              <div className="flex flex-col gap-3 rounded-xl border border-[#e8dfd2] bg-white p-5 shadow-sm sm:flex-row sm:items-center md:min-w-[340px]">
-                <div className="flex size-14 shrink-0 items-center justify-center rounded-lg border border-[#b88a3e]/30 bg-[#faf7f2] shadow-xs">
+              <div className="flex flex-col gap-3 rounded-xl border border-[#e8dfd2] bg-white p-5 shadow-xs sm:flex-row sm:items-center md:min-w-[340px]">
+                <div className="flex size-14 shrink-0 items-center justify-center rounded-lg border border-[#deb753]/30 bg-[#faf7f2] shadow-xs">
                   <GoogleIcon size={30} />
                 </div>
                 <div>
                   <div className="flex items-center gap-2">
-                    <span className="font-serif text-3xl font-bold leading-none text-[#14100c]">
+                    <span className="font-serif text-3xl font-bold leading-none text-[#14110e]">
                       5,0
                     </span>
-                    <div className="flex gap-0.5 text-[#d4a853]">
+                    <div className="flex gap-0.5 text-[#deb753]">
                       {Array.from({ length: 5 }, (_, i) => (
                         <Star
                           key={i}
                           size={14}
-                          className="fill-[#d4a853] text-[#d4a853]"
+                          className="fill-[#deb753] text-[#deb753]"
                         />
                       ))}
                     </div>
                   </div>
-                  <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-[#4e4338]">
-                    Gabriella Pimenta Advocacia
+                  <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-[#4c433a]">
+                    Suellem Rodrigues | Advogada
                   </p>
                   <a
                     href={GOOGLE_MAPS_URL}
                     target="_blank"
                     rel="noreferrer"
-                    className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-[#442a0b] transition-colors hover:text-[#14100c]"
+                    className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-[#8e6318] transition-colors hover:text-[#14110e]"
                   >
-                    29 avaliações no Google <ArrowUpRight size={13} />
+                    20 avaliações no Google <ArrowUpRight size={13} />
                   </a>
                 </div>
               </div>
             </div>
 
-            {/* Client Reviews Grid */}
+            {/* Client Reviews Grid (Real Google Reviews) */}
             <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {clientReviews.map((review) => (
                 <article
                   key={review.name}
-                  className="group relative flex flex-col justify-between rounded-xl border border-[#e8dfd2] bg-white p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#b88a3e] hover:shadow-md sm:p-8"
+                  className="group relative flex flex-col justify-between rounded-xl border border-[#e8dfd2] bg-white p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#deb753] hover:shadow-md sm:p-8"
                 >
                   <div>
                     {/* Header: Stars + Badge */}
                     <div className="flex items-center justify-between gap-2">
-                      <div className="flex gap-1 text-[#d4a853]">
+                      <div className="flex gap-1 text-[#deb753]">
                         {Array.from({ length: 5 }, (_, i) => (
                           <Star
                             key={i}
                             size={14}
-                            className="fill-[#d4a853] text-[#d4a853]"
+                            className="fill-[#deb753] text-[#deb753]"
                           />
                         ))}
                       </div>
-                      <span className="rounded-md border border-[#b88a3e]/30 bg-[#faf7f2] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#442a0b] shadow-xs">
+                      <span className="rounded-md border border-[#deb753]/30 bg-[#faf7f2] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#8e6318] shadow-xs">
                         {review.badge}
                       </span>
                     </div>
 
                     {/* Review content */}
-                    <p className="mt-5 text-[14px] italic leading-relaxed text-[#14100c]">
+                    <p className="mt-5 text-[14px] italic leading-relaxed text-[#14110e]">
                       &ldquo;{review.content}&rdquo;
                     </p>
                   </div>
 
                   {/* Reviewer info */}
                   <div className="mt-6 flex items-center gap-3 border-t border-[#e8dfd2] pt-4">
-                    <div className="grid size-10 shrink-0 place-items-center rounded-lg border border-[#b88a3e]/30 bg-[#faf7f2] font-serif text-sm font-semibold text-[#442a0b] shadow-xs">
+                    <div className="grid size-10 shrink-0 place-items-center rounded-lg border border-[#deb753]/30 bg-[#faf7f2] font-serif text-sm font-semibold text-[#8e6318] shadow-xs">
                       {review.name.charAt(0)}
                     </div>
                     <div className="min-w-0 flex-1">
-                      <p className="truncate font-serif text-base font-semibold text-[#14100c]">
+                      <p className="truncate font-serif text-base font-semibold text-[#14110e]">
                         {review.name}
                       </p>
                       <p className="text-[10px] uppercase tracking-wider text-[#786b5e]">
@@ -1315,33 +1393,32 @@ export default function Home() {
             <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-[#e8dfd2] pt-8 sm:flex-row">
               <div className="flex flex-wrap items-center gap-2">
                 {[
-                  "Advogada em Mariana - MG",
-                  "Atendimento em Todo o Brasil",
-                  "Nota 5,0 ★ no Google (29 avaliações)",
-                  "Direito do Trabalho & Rescisão",
-                  "Previdenciário & Benefícios INSS",
-                  "Direito de Família & Sucessões",
-                  "Direito Civil & Defesa do Consumidor",
+                  "Advogada em São Sebastião do Paraíso - MG",
+                  "Atuação no SEEU em Todo o Brasil",
+                  "Nota 5,0 ★ no Google (20 avaliações)",
+                  "Execução Penal & Progressão de Regime",
+                  "Remição por Trabalho, Leitura e Estudo",
+                  "Plantão de Audiência de Custódia 24h",
+                  "Habeas Corpus TJMG, STJ e STF",
+                  "Tribunal do Júri & Revisão Criminal",
                 ].map((tag) => (
                   <span
                     key={tag}
-                    className="inline-flex items-center gap-1.5 rounded-lg border border-[#e8dfd2] bg-white px-3.5 py-1.5 text-[11px] font-medium text-[#14100c] shadow-xs"
+                    className="inline-flex items-center gap-1.5 rounded-lg border border-[#e8dfd2] bg-white px-3.5 py-1.5 text-[11px] font-medium text-[#14110e] shadow-xs"
                   >
-                    <CheckCircle2 size={13} className="text-[#634316]" />
+                    <CheckCircle2 size={13} className="text-[#8e6318]" />
                     {tag}
                   </span>
                 ))}
               </div>
 
               <a
-                href={getWhatsAppUrl(
-                  "Olá, Dra. Gabriella Pimenta! Gostaria de agendar um atendimento para avaliar o meu caso."
-                )}
+                href={GOOGLE_MAPS_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="group inline-flex shrink-0 items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#442a0b] transition-colors hover:text-[#14100c]"
+                className="group inline-flex shrink-0 items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#8e6318] transition-colors hover:text-[#14110e]"
               >
-                Falar com a Dra. Gabriella{" "}
+                Ver Todas as Avaliações no Google{" "}
                 <ArrowUpRight
                   size={15}
                   className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
@@ -1351,28 +1428,28 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Contato & Localização da Sede em Mariana - MG */}
+        {/* Contato & Localização da Sede em São Sebastião do Paraíso - MG */}
         <section
           id="contato"
-          className="scroll-mt-24 border-t border-[#b88a3e]/30 bg-[#faf7f2] py-20 text-[#14100c] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#deb753]/30 bg-[#faf7f2] py-20 text-[#14110e] sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
                 light
-                eyebrow="CONTATO & ATENDIMENTO EM MARIANA"
-                description="Inicie seu atendimento diretamente pelo WhatsApp ou agende uma reunião presencial em nossa sede. Prestamos assistência jurídica ágil para moradores de Mariana, Ouro Preto, Itabirito, Região dos Inconfidentes e todo o Brasil via consultoria online humanizada."
+                eyebrow="CONTATO & ATENDIMENTO EM SÃO SEBASTIÃO DO PARAÍSO"
+                description="Inicie seu atendimento imediatamente pelo WhatsApp para relatar seu caso ou agende uma reunião presencial em nossa sede. Atuamos com celeridade nas Varas de Execuções Penais, presídios, delegacias e tribunais de Minas Gerais e em todo o Brasil através do SEEU nacional."
               >
                 Estamos prontos para{" "}
-                <span className="italic text-[#8c5e1e]">
-                  escutar e defender você.
+                <span className="italic text-[#8e6318]">
+                  escutar sua situação e defender sua liberdade.
                 </span>
               </Heading>
 
               <div className="mt-9 flex flex-col items-start gap-4">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Gabriella Pimenta! Gostaria de agendar um horário para atendimento sobre o meu caso."
+                    "Olá, Dra. Suellem Rodrigues! Gostaria de agendar um atendimento para análise urgente de execução penal / caso criminal."
                   )}
                   target="_blank"
                   size="lg"
@@ -1381,58 +1458,58 @@ export default function Home() {
                 >
                   <WhatsAppIcon size={17} /> Iniciar Conversa no WhatsApp
                 </GlowingButton>
-                <p className="text-[11px] leading-5 text-[#4e4338]">
-                  Telefone e WhatsApp do escritório:{" "}
-                  <strong className="text-[#14100c]">{PHONE_DISPLAY}</strong>
+                <p className="text-[11px] leading-5 text-[#4c433a]">
+                  Telefone e WhatsApp direto:{" "}
+                  <strong className="text-[#14110e]">{PHONE_DISPLAY}</strong>
                 </p>
               </div>
 
-              <div className="mt-10 space-y-4 text-xs text-[#4e4338]">
+              <div className="mt-10 space-y-4 text-xs text-[#4c433a]">
                 <div className="flex items-start gap-3">
                   <Clock
                     size={16}
-                    className="mt-0.5 shrink-0 text-[#634316]"
+                    className="mt-0.5 shrink-0 text-[#8e6318]"
                   />
                   <div>
-                    <p className="font-semibold text-[#14100c]">
-                      Horário de Funcionamento
+                    <p className="font-semibold text-[#14110e]">
+                      Horário de Funcionamento & Plantão
                     </p>
-                    <p className="mt-0.5 text-[#14100c]">
-                      Segunda a Sexta-feira das 09:00 às 18:00
+                    <p className="mt-0.5 text-[#14110e]">
+                      Segunda a Sexta-feira das 08:00 às 19:00
                     </p>
                     <p className="text-[11px] text-[#786b5e]">
-                      Atendimento presencial com hora marcada no Centro de Mariana e consultoria online em todo o Brasil
+                      Atendimento presencial no Centro de São Sebastião do Paraíso e plantão 24h para prisões em flagrante e custódia
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3 pt-1">
-                  <Phone size={16} className="shrink-0 text-[#634316]" />
+                  <Phone size={16} className="shrink-0 text-[#8e6318]" />
                   <a
                     href={`tel:+${WHATSAPP_NUMBER}`}
-                    className="font-medium text-[#14100c] transition-colors hover:text-[#634316]"
+                    className="font-medium text-[#14110e] transition-colors hover:text-[#8e6318]"
                   >
                     {PHONE_DISPLAY} (Ligações e WhatsApp)
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <InstagramIcon size={16} className="shrink-0 text-[#634316]" />
+                  <InstagramIcon size={16} className="shrink-0 text-[#8e6318]" />
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noreferrer"
-                    className="transition-colors hover:text-[#634316] text-[#14100c]"
+                    className="transition-colors hover:text-[#8e6318] text-[#14110e]"
                   >
                     {INSTAGRAM_HANDLE} (Instagram Oficial)
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <Mail size={16} className="shrink-0 text-[#634316]" />
+                  <Mail size={16} className="shrink-0 text-[#8e6318]" />
                   <a
                     href={`mailto:${EMAIL_CONTACT}`}
-                    className="transition-colors hover:text-[#634316] text-[#14100c]"
+                    className="transition-colors hover:text-[#8e6318] text-[#14110e]"
                   >
                     {EMAIL_CONTACT}
                   </a>
@@ -1441,67 +1518,82 @@ export default function Home() {
                 <div className="flex items-start gap-3">
                   <MapPin
                     size={16}
-                    className="mt-0.5 shrink-0 text-[#634316]"
+                    className="mt-0.5 shrink-0 text-[#8e6318]"
                   />
-                  <span className="text-[#14100c]">{ADDRESS_TEXT}</span>
+                  <div>
+                    <span className="text-[#14110e]">{ADDRESS_TEXT}</span>
+                    <br />
+                    <a
+                      href={GOOGLE_MAPS_URL}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-1 inline-flex items-center gap-1 font-semibold text-[#8e6318] hover:underline"
+                    >
+                      Ver no Google Maps <ArrowUpRight size={12} />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Office & Schedule Card */}
-            <div className="relative overflow-hidden rounded-xl border border-[#e8dfd2] bg-white p-7 shadow-md sm:p-10">
-              <div className="absolute right-0 top-0 h-1.5 w-32 bg-gradient-to-r from-[#966826] to-[#f7eed8]" />
+            {/* Office & Profile Card */}
+            <div className="relative overflow-hidden rounded-xl border border-[#e8dfd2] bg-white p-7 shadow-sm sm:p-10">
+              <div className="absolute right-0 top-0 h-1.5 w-32 bg-gradient-to-r from-[#8e6318] to-[#deb753]" />
 
               <div className="flex items-center gap-4">
-                <div className="relative size-[64px] shrink-0 overflow-hidden rounded-full border-2 border-[#b88a3e]/60 bg-[#120e0a] shadow-md sm:size-[76px]">
+                <div className="relative size-[64px] shrink-0 overflow-hidden rounded-full border-2 border-[#deb753]/60 bg-[#120f0d] shadow-sm sm:size-[76px]">
                   <Image
                     src={LOGO_SEAL_SRC}
-                    alt="Selo Gabriella Pimenta Advocacia"
+                    alt="Selo Suellem Rodrigues Advocacia"
                     fill
                     sizes="76px"
                     className="object-contain p-1.5"
                   />
                 </div>
                 <div>
-                  <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#634316]">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#8e6318]">
                     Sede do Escritório
                   </p>
-                  <p className="mt-0.5 font-serif text-xl font-bold text-[#14100c] sm:text-2xl">
-                    Gabriella Pimenta Advocacia
+                  <p className="mt-0.5 font-serif text-xl font-bold text-[#14110e] sm:text-2xl">
+                    Suellem Rodrigues | Advogada
                   </p>
                 </div>
               </div>
 
-              <address className="mt-7 max-w-md text-[14px] not-italic leading-7 text-[#4e4338]">
-                <strong className="font-semibold text-[#14100c]">
-                  Dra. Gabriella Soares Pimenta
+              <address className="mt-7 max-w-md text-[14px] not-italic leading-7 text-[#4c433a]">
+                <strong className="font-semibold text-[#14110e]">
+                  Dra. Suellem Rodrigues
                 </strong>
                 <br />
-                Advogada e Consultora Jurídica · {OAB_REGISTRATION}
+                Advogada Criminalista · {OAB_REGISTRATION}
                 <br />
-                CNPJ: {CNPJ_NUMBER}
+                Especialista em Execuções Penais
+                <br />
+                Pós-Graduada em Advocacia Criminal
                 <br />
                 {ADDRESS_TEXT}
               </address>
 
               {/* Weekly schedule table */}
               <div className="mt-6 rounded-lg border border-[#e8dfd2] bg-[#faf7f2] p-4 text-xs">
-                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#634316]">
+                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#8e6318]">
                   Atendimento & Horários
                 </p>
-                <div className="grid grid-cols-2 gap-y-1.5 text-[#4e4338]">
+                <div className="grid grid-cols-2 gap-y-1.5 text-[#4c433a]">
                   <span>Segunda a Sexta</span>
-                  <span className="text-right font-semibold text-[#14100c]">
-                    09:00 às 18:00
+                  <span className="text-right font-semibold text-[#14110e]">
+                    08:00 às 19:00
                   </span>
                   <span>Atendimento Presencial</span>
-                  <span className="text-right font-medium text-[#442a0b]">
-                    Mariana - MG (Centro)
+                  <span className="text-right font-medium text-[#8e6318]">
+                    São Sebastião do Paraíso - MG
                   </span>
                   <span>Endereço</span>
-                  <span className="text-right text-[#14100c]">Rua Zizinha Camelo</span>
+                  <span className="text-right text-[#14110e]">R. José Albino, 535 - Sl 1</span>
+                  <span>Plantão Flagrantes</span>
+                  <span className="text-right font-semibold text-[#8e6318]">24 Horas</span>
                   <span>Atendimento Online</span>
-                  <span className="text-right text-[#14100c]">Todo o Brasil</span>
+                  <span className="text-right text-[#14110e]">SEEU Brasil</span>
                 </div>
               </div>
 
@@ -1509,41 +1601,41 @@ export default function Home() {
 
               <div className="flex flex-wrap items-center justify-between gap-4">
                 <p className="text-xs text-[#786b5e]">
-                  Atendimento acolhedor e sigiloso com hora marcada em Mariana
+                  Atendimento ágil, acolhedor e com total sigilo profissional
                 </p>
                 <a
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Gabriella Pimenta! Gostaria de agendar um atendimento no escritório."
+                    "Olá, Dra. Suellem Rodrigues! Gostaria de agendar um atendimento no escritório."
                   )}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg border border-[#b88a3e]/40 bg-[#f2ece1] px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-[#14100c] transition-colors hover:border-[#634316] hover:bg-[#14100c] hover:text-[#f7eed8]"
+                  className="inline-flex items-center gap-2 rounded-lg border border-[#deb753]/40 bg-[#f4efe6] px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-[#14110e] transition-colors hover:border-[#8e6318] hover:bg-[#14110e] hover:text-[#f7e5a9]"
                 >
-                  <WhatsAppIcon size={14} /> Falar com a Advogada <ArrowUpRight size={14} />
+                  <WhatsAppIcon size={14} /> Falar com a Especialista <ArrowUpRight size={14} />
                 </a>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Pre-Footer CTA Strip */}
-        <section className="border-t border-[#b88a3e]/20 bg-gradient-to-r from-[#0b0907] via-[#18130e] to-[#0b0907] px-5 py-14 text-white shadow-inner sm:px-8 sm:py-16 lg:px-12">
+        {/* Pre-Footer CTA Strip - Warm Light Gold & Silk Canvas */}
+        <section className="border-t border-[#deb753]/30 bg-gradient-to-r from-[#f4efe6] via-[#faf7f2] to-[#f4efe6] px-5 py-14 text-[#14110e] shadow-xs sm:px-8 sm:py-16 lg:px-12">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-7 sm:flex-row sm:items-center">
             <div>
-              <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#d4a853]">
-                <Sparkles size={13} /> GABRIELLA PIMENTA ADVOCACIA · MARIANA & REGIÃO DOS INCONFIDENTES - MG
+              <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#8e6318]">
+                <Sparkles size={13} /> SUELLEM RODRIGUES ADVOCACIA · SÃO SEBASTIÃO DO PARAÍSO & MINAS GERAIS · {OAB_REGISTRATION}
               </p>
-              <h2 className="mt-3 max-w-2xl font-serif text-3xl leading-tight text-white sm:text-4xl">
-                Precisa de orientação jurídica acolhedora, combativa e de confiança?
+              <h2 className="mt-3 max-w-2xl font-serif text-3xl leading-tight text-[#14110e] sm:text-4xl">
+                Precisa de uma defesa criminal combativa e experiente para defender a sua liberdade?
               </h2>
             </div>
             <a
               href={getWhatsAppUrl(
-                "Olá, Dra. Gabriella Pimenta! Gostaria de consultar sobre meus direitos com seu escritório."
+                "Olá, Dra. Suellem Rodrigues! Gostaria de uma avaliação para o caso de um apenado / situação penal urgente."
               )}
               target="_blank"
               rel="noreferrer"
-              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-lg bg-gradient-to-r from-[#966826] via-[#d4a853] to-[#b88a3e] px-7 py-4 text-[11px] font-bold uppercase tracking-[0.14em] text-[#0b0907] shadow-md transition-all hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold"
+              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-lg bg-gradient-to-r from-[#8e6318] via-[#c59a3f] to-[#8e6318] px-7 py-4 text-[11px] font-bold uppercase tracking-[0.14em] text-white shadow-md transition-all hover:-translate-y-0.5 hover:brightness-105 hover:shadow-lg"
             >
               <WhatsAppIcon size={17} /> Falar no WhatsApp{" "}
               <ArrowUpRight size={15} />
@@ -1551,79 +1643,79 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Footer */}
-        <footer className="border-t border-[#b88a3e]/20 bg-[#070605] px-5 py-14 text-white sm:px-8 lg:px-12">
+        {/* Footer - Elegant Light Mode */}
+        <footer className="border-t border-[#e8dfd2] bg-[#f4efe6] px-5 py-14 text-[#14110e] sm:px-8 lg:px-12">
           <div className="mx-auto grid max-w-7xl gap-10 sm:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1fr]">
             <div>
               <a
                 href="#inicio"
-                aria-label="Gabriella Pimenta Advocacia"
+                aria-label="Suellem Rodrigues Advocacia"
                 className="inline-flex items-center gap-3.5 transition-transform hover:scale-[1.02]"
               >
-                <div className="relative size-[72px] shrink-0 overflow-hidden rounded-full border-2 border-[#b88a3e]/50 bg-[#120e0a] shadow-md sm:size-[80px]">
+                <div className="relative size-[72px] shrink-0 overflow-hidden rounded-full border-2 border-[#deb753]/50 bg-[#120f0d] shadow-sm sm:size-[80px]">
                   <Image
                     src={LOGO_SEAL_SRC}
-                    alt="Gabriella Pimenta Advocacia"
+                    alt="Suellem Rodrigues Advocacia"
                     fill
                     sizes="80px"
                     className="object-contain p-1.5"
                   />
                 </div>
                 <div className="flex flex-col">
-                  <span className="font-serif text-xl font-bold tracking-wider text-white sm:text-2xl">
-                    GABRIELLA PIMENTA
+                  <span className="font-serif text-xl font-bold tracking-wider text-[#14110e] sm:text-2xl">
+                    SUELLEM RODRIGUES
                   </span>
-                  <span className="text-xs font-semibold uppercase tracking-[0.24em] text-[#d4a853]">
-                    Advocacia & Consultoria
+                  <span className="text-xs font-semibold uppercase tracking-[0.24em] text-[#8e6318]">
+                    Advocacia Criminal · {OAB_REGISTRATION}
                   </span>
                 </div>
               </a>
-              <p className="mt-4 max-w-xs text-xs leading-6 text-[#d8cfc0]">
-                ⚖️ Acolhendo histórias, defendendo direitos, construindo soluções jurídicas. Atendimento acolhedor, transparente e combativo em Mariana, Região dos Inconfidentes e em todo o Brasil.
+              <p className="mt-4 max-w-xs text-xs leading-6 text-[#5c5042]">
+                ⚖️ Defesa combativa, estratégica e intransigente na garantia dos direitos fundamentais. Especialista em Execuções Penais, Progressão de Regime, Livramento Condicional e Habeas Corpus em Minas Gerais e em todo o Brasil.
               </p>
-              <p className="mt-3 text-[11px] font-semibold text-[#d4a853]">
-                Dra. Gabriella Soares Pimenta · {OAB_REGISTRATION}
+              <p className="mt-3 text-[11px] font-semibold text-[#8e6318]">
+                Dra. Suellem Rodrigues · {OAB_REGISTRATION}
               </p>
             </div>
 
             <div>
-              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#d4a853]">
+              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8e6318]">
                 Navegação
               </h2>
-              <div className="mt-4 flex flex-col items-start gap-3 text-xs text-[#d8cfc0]">
+              <div className="mt-4 flex flex-col items-start gap-3 text-xs text-[#5c5042]">
                 <a className="footer-link" href="#inicio">
                   Início
                 </a>
                 <a className="footer-link" href="#sobre">
-                  Dra. Gabriella Pimenta
+                  Dra. Suellem Rodrigues
                 </a>
                 <a className="footer-link" href="#atuacao">
-                  Especialidades Jurídicas
+                  Execuções Penais & Prisões
                 </a>
                 <a className="footer-link" href="#diferenciais">
                   Por Que Escolher
                 </a>
                 <a className="footer-link" href="#avaliacoes">
-                  Depoimentos de Clientes
+                  Depoimentos de Clientes (5,0 ★)
                 </a>
                 <a className="footer-link" href="#contato">
-                  Contato & Sede
+                  Plantão & Sede
                 </a>
               </div>
             </div>
 
             <div>
-              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#d4a853]">
+              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8e6318]">
                 Contato & Atendimento
               </h2>
-              <div className="mt-4 flex flex-col items-start gap-2.5 text-xs text-[#d8cfc0]">
+              <div className="mt-4 flex flex-col items-start gap-2.5 text-xs text-[#5c5042]">
                 <a
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Gabriella Pimenta! Gostaria de solicitar um atendimento com o escritório."
+                    "Olá, Dra. Suellem Rodrigues! Gostaria de falar com o escritório."
                   )}
                   target="_blank"
                   rel="noreferrer"
-                  className="footer-link inline-flex items-center gap-2 font-medium text-[#f7eed8]"
+                  className="footer-link inline-flex items-center gap-2 font-medium text-[#14110e]"
                 >
                   <WhatsAppIcon size={15} /> WhatsApp: {PHONE_DISPLAY}
                 </a>
@@ -1647,20 +1739,25 @@ export default function Home() {
                 >
                   <Mail size={15} className="shrink-0" /> {EMAIL_CONTACT}
                 </a>
-                <div className="footer-link inline-flex items-start gap-2">
+                <a
+                  href={GOOGLE_MAPS_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="footer-link inline-flex items-start gap-2"
+                >
                   <MapPin size={15} className="mt-0.5 shrink-0" />
                   <span>{ADDRESS_TEXT}</span>
-                </div>
-                <p className="inline-flex items-center gap-2 pt-1 text-[11px] text-[#d4a853]">
-                  <Clock size={14} className="shrink-0" /> Seg a Sex: 09:00 às 18:00
+                </a>
+                <p className="inline-flex items-center gap-2 pt-1 text-[11px] text-[#8e6318]">
+                  <Clock size={14} className="shrink-0" /> Seg a Sex: 08:00 às 19:00 (Plantão 24h)
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-[#b88a3e]/20 pt-6 text-[10px] text-stone-400 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-[#e8dfd2] pt-6 text-[10px] text-stone-500 sm:flex-row sm:items-center sm:justify-between">
             <p>
-              © {new Date().getFullYear()} GABRIELLA PIMENTA ADVOCACIA. Todos os direitos reservados. CNPJ: {CNPJ_NUMBER}.
+              © {new Date().getFullYear()} SUELLEM RODRIGUES ADVOCACIA. Todos os direitos reservados.
             </p>
             <p>
               Conteúdo informativo, em estrita conformidade com o Código de Ética e Disciplina da OAB ({OAB_REGISTRATION}).
@@ -1675,16 +1772,16 @@ export default function Home() {
         >
           <a
             href={getWhatsAppUrl(
-              "Olá, Dra. Gabriella Pimenta! Gostaria de consultar sobre meus direitos com seu escritório."
+              "Olá, Dra. Suellem Rodrigues! Gostaria de consultar sobre um caso criminal / execução penal com seu escritório."
             )}
             target="_blank"
             rel="noreferrer"
-            aria-label="Falar agora pelo WhatsApp com a Dra. Gabriella Pimenta"
+            aria-label="Falar agora pelo WhatsApp com a Dra. Suellem Rodrigues"
             className="group relative flex size-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-[#25D366]/40"
           >
             <WhatsAppIcon size={28} />
-            <span className="pointer-events-none absolute right-16 hidden whitespace-nowrap rounded-lg bg-[#120e0a] border border-[#b88a3e]/30 px-3.5 py-1.5 text-xs font-semibold text-white shadow-lg transition-opacity group-hover:block">
-              Falar com a Dra. Gabriella Pimenta
+            <span className="pointer-events-none absolute right-16 hidden whitespace-nowrap rounded-lg bg-[#14110e] border border-[#deb753]/30 px-3.5 py-1.5 text-xs font-semibold text-white shadow-lg transition-opacity group-hover:block">
+              Falar com a Dra. Suellem Rodrigues
             </span>
           </a>
         </aside>
@@ -1693,7 +1790,7 @@ export default function Home() {
         <AnimatePresence>
           {activeArea && (
             <motion.div
-              className="fixed inset-0 z-50 flex items-end justify-center bg-black/85 p-0 backdrop-blur-md sm:items-center sm:p-6"
+              className="fixed inset-0 z-50 flex items-end justify-center bg-black/60 p-0 backdrop-blur-sm sm:items-center sm:p-6"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -1708,41 +1805,41 @@ export default function Home() {
                 exit={{ opacity: 0, y: 16, scale: 0.99 }}
                 transition={{ duration: 0.24 }}
                 onClick={(event) => event.stopPropagation()}
-                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-xl border border-[#b88a3e]/35 bg-[#120e0a] p-7 shadow-2xl sm:max-w-xl sm:rounded-xl sm:p-10"
+                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-xl border border-[#e8dfd2] bg-white p-7 shadow-2xl sm:max-w-xl sm:rounded-xl sm:p-10 text-[#14110e]"
               >
                 <button
                   type="button"
                   aria-label="Fechar detalhes da especialidade"
                   onClick={() => setActiveArea(null)}
-                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-[#b88a3e]/30 bg-[#221b14] text-[#f7eed8] transition-colors hover:border-[#f7eed8] hover:text-white"
+                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-[#e8dfd2] bg-[#faf7f2] text-[#14110e] transition-colors hover:border-[#deb753] hover:text-[#8e6318]"
                 >
                   <X size={18} />
                 </button>
 
-                <p className="eyebrow">ESPECIALIDADE JURÍDICA</p>
+                <p className="eyebrow-light">ESPECIALIDADE PENAL</p>
 
                 <h2
                   id="area-dialog-title"
-                  className="mt-4 max-w-sm pr-10 font-serif text-3xl leading-tight text-white sm:text-4xl"
+                  className="mt-4 max-w-sm pr-10 font-serif text-3xl leading-tight text-[#14110e] sm:text-4xl"
                 >
                   {activeArea.title}
                 </h2>
 
-                <p className="mt-5 text-sm leading-7 text-[#d8cfc0]">
+                <p className="mt-5 text-sm leading-7 text-[#4c433a]">
                   {activeArea.details}
                 </p>
 
-                <div className="mt-6 border-t border-[#b88a3e]/20 pt-5">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#d4a853]">
-                    Demandas atendidas pelo escritório:
+                <div className="mt-6 border-t border-[#e8dfd2] pt-5">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#8e6318]">
+                    Demandas e Pedidos Atendidos pelo Escritório:
                   </p>
                   <ul className="mt-4 space-y-3">
                     {activeArea.topics.map((topic) => (
                       <li
                         key={topic}
-                        className="flex items-center gap-3 text-sm text-stone-200"
+                        className="flex items-center gap-3 text-sm text-[#2b241c]"
                       >
-                        <span className="size-2 shrink-0 rounded-full bg-[#d4a853]" />
+                        <span className="size-2 shrink-0 rounded-full bg-[#8e6318]" />
                         <span>{topic}</span>
                       </li>
                     ))}
@@ -1762,7 +1859,7 @@ export default function Home() {
                   <button
                     type="button"
                     onClick={() => setActiveArea(null)}
-                    className="px-5 py-3 text-xs font-semibold text-stone-400 transition-colors hover:text-white"
+                    className="px-5 py-3 text-xs font-semibold text-stone-500 transition-colors hover:text-[#14110e]"
                   >
                     Fechar
                   </button>

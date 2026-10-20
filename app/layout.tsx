@@ -36,40 +36,38 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#0b0907",
+  themeColor: "#fbf9f5",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.gabriellapimenta.adv.br"),
+  metadataBase: new URL("https://www.suellemrodrigues.adv.br"),
   title:
-    "Gabriella Pimenta | Advocacia e Consultoria Jurídica em Mariana - MG",
+    "Suellem Rodrigues | Advogada Criminalista & Execuções Penais em São Sebastião do Paraíso - MG · OAB/MG 174.904",
   description:
-    "⚖️ Gabriella Pimenta Advocacia e Consultoria Jurídica (Dra. Gabriella Soares Pimenta, OAB/MG 221.270). Acolhendo histórias, defendendo direitos, construindo soluções jurídicas. Nota máxima 5,0 ★ com 29 avaliações no Google. 📍 R. Zizinha Camelo, Centro, Mariana - MG e atendimento on-line em todo o Brasil.",
+    "⚖️ Suellem Rodrigues | Advogada (Dra. Suellem Rodrigues, OAB/MG 174.904). Especialista em Execuções Penais e Defesa Criminal. Avaliação máxima de 5,0 ★ com 20 avaliações no Google. 📍 R. José Albino, 535 - Sl 1 - Centro, São Sebastião do Paraíso - MG e atuação no SEEU em todo o Brasil.",
   keywords: [
-    "Gabriella Pimenta Advocacia",
-    "Gabriella Pimenta Advogada",
-    "Dra Gabriella Pimenta",
-    "Gabriella Soares Pimenta",
-    "Advogada em Mariana",
-    "Advogada em Mariana MG",
-    "Advogada Ouro Preto MG",
-    "Advogada Itabirito MG",
-    "Advogada Região dos Inconfidentes",
-    "Escritório de Advocacia Mariana",
-    "Advogado Mariana Minas Gerais",
-    "OAB MG 221270",
-    "Direito do Trabalho Mariana",
-    "Rescisão Indireta Mariana",
-    "Aposentadoria e INSS Mariana",
-    "Divórcio e Pensão Alimentícia Mariana",
-    "Inventário e Sucessões Mariana",
-    "Defesa do Consumidor e Danos Morais",
-    "Advocacia Humanizada e Resolutiva",
-    "Advogada Online Brasil",
+    "Suellem Rodrigues Advogada",
+    "Suellem Rodrigues Advocacia",
+    "Advogada Criminalista São Sebastião do Paraíso",
+    "Advogada em São Sebastião do Paraíso MG",
+    "Especialista em Execuções Penais",
+    "Execução Penal Minas Gerais",
+    "Progressão de Regime Prisional",
+    "Livramento Condicional",
+    "Remição de Pena",
+    "Cálculo de Pena SEEU",
+    "Habeas Corpus TJMG STJ STF",
+    "Audiência de Custódia São Sebastião do Paraíso",
+    "Prisão Domiciliar",
+    "Indulto e Comutação",
+    "Transferência de Presídio",
+    "OAB MG 174904",
+    "Advocacia Criminal Sul de Minas",
+    "Advogada Criminalista Online Brasil",
   ],
-  authors: [{ name: "Dra. Gabriella Soares Pimenta" }],
-  creator: "Gabriella Pimenta Advocacia e Consultoria",
-  publisher: "Gabriella Pimenta Advocacia e Consultoria",
+  authors: [{ name: "Dra. Suellem Rodrigues" }],
+  creator: "Suellem Rodrigues Advocacia",
+  publisher: "Suellem Rodrigues Advocacia",
   formatDetection: {
     telephone: true,
     address: true,
@@ -77,7 +75,7 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon.png", type: "image/png", sizes: "464x464" },
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
     ],
     shortcut: "/favicon.ico",
     apple: [{ url: "/apple-icon.png", sizes: "180x180" }],
@@ -85,18 +83,18 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.gabriellapimenta.adv.br",
+    url: "https://www.suellemrodrigues.adv.br",
     title:
-      "Gabriella Pimenta Advocacia | Dra. Gabriella Soares Pimenta — Mariana - MG",
+      "Suellem Rodrigues | Advogada · São Sebastião do Paraíso - MG",
     description:
-      "⚖️ Acolhendo histórias, defendendo direitos, construindo soluções jurídicas. Atendimento presencial em Mariana - MG e digital em todo o Brasil.",
-    siteName: "Gabriella Pimenta Advocacia e Consultoria",
+      "⚖️ Defesa técnica incisiva e humanizada da liberdade. Especialista em Execuções Penais, Progressão de Regime, Livramento Condicional e Audiência de Custódia. Avaliada com 5,0 ★ no Google.",
+    siteName: "Suellem Rodrigues Advocacia",
     images: [
       {
         url: "/logo.png",
         width: 1024,
-        height: 682,
-        alt: "Gabriella Pimenta Advocacia e Consultoria",
+        height: 512,
+        alt: "Suellem Rodrigues Advocacia | OAB/MG 174.904",
       },
     ],
   },
@@ -110,47 +108,45 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Gabriella Pimenta Advocacia e Consultoria Jurídica",
-    alternateName: "Dra. Gabriella Pimenta Advogada",
-    legalName: "Gabriella Pimenta Sociedade Individual de Advocacia",
-    taxID: "63.196.916/0001-89",
+    name: "Suellem Rodrigues | Advogada",
+    alternateName: "Dra. Suellem Rodrigues — Especialista em Execuções Penais",
+    legalName: "Suellem Rodrigues Advocacia",
     founder: [
       {
         "@type": "Person",
-        name: "Dra. Gabriella Soares Pimenta",
-        jobTitle: "Advogada e Consultora Jurídica",
-        identifier: "OAB/MG 221.270",
+        name: "Dra. Suellem Rodrigues",
+        jobTitle: "Advogada Criminalista e Especialista em Execuções Penais",
+        identifier: "OAB/MG 174.904",
       },
     ],
     telephone: "+55-31-99981-0534",
-    email: "gabriellaspimentaadv@gmail.com",
-    url: "https://www.gabriellapimenta.adv.br",
-    image: "https://www.gabriellapimenta.adv.br/logo.png",
+    email: "contato@suellemrodrigues.adv.br",
+    url: "https://www.suellemrodrigues.adv.br",
+    image: "https://www.suellemrodrigues.adv.br/logo.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Rua Zizinha Camelo - Centro",
-      addressLocality: "Mariana",
+      streetAddress: "R. José Albino, 535 - Sl 1 - Centro",
+      addressLocality: "São Sebastião do Paraíso",
       addressRegion: "MG",
-      postalCode: "35420-000",
+      postalCode: "37950-060",
       addressCountry: "BR",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: -20.3778,
-      longitude: -43.4164,
+      latitude: -20.9167,
+      longitude: -46.9833,
     },
     priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "29",
+      reviewCount: "20",
     },
     areaServed: [
-      "Mariana",
-      "Ouro Preto",
-      "Itabirito",
-      "Região dos Inconfidentes",
-      "Belo Horizonte",
+      "São Sebastião do Paraíso",
+      "Passos",
+      "Guaxupé",
+      "Sul de Minas",
       "Minas Gerais",
       "Brasil",
     ],
@@ -164,12 +160,19 @@ export default function RootLayout({
           "Thursday",
           "Friday",
         ],
-        opens: "09:00",
-        closes: "18:00",
+        opens: "08:00",
+        closes: "19:00",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Saturday", "Sunday"],
+        opens: "00:00",
+        closes: "23:59",
+        description: "Plantão criminal para urgências, prisões e audiências de custódia",
       },
     ],
     sameAs: [
-      "https://www.instagram.com/gabriellaspimentaadv/",
+      "https://www.instagram.com/suellemrodriguesadv/",
       "https://wa.me/5531999810534",
     ],
   };
@@ -188,7 +191,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen overflow-x-clip bg-[#0b0907] font-sans text-stone-100 antialiased selection:bg-[#b88a3e] selection:text-[#0b0907]">
+      <body className="min-h-screen overflow-x-clip bg-[#fbf9f5] font-sans text-[#14110e] antialiased selection:bg-[#f7e5a9] selection:text-[#14110e]">
         {children}
       </body>
     </html>

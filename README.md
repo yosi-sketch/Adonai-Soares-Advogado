@@ -1,16 +1,16 @@
-# GABRIELLA PIMENTA — ADVOCACIA E CONSULTORIA JURÍDICA
-## Acolhendo Histórias, Defendendo Direitos, Construindo Soluções Jurídicas · Dra. Gabriella Soares Pimenta · Mariana - MG
+# SUELLEM RODRIGUES — ADVOCACIA & CONSULTORIA JURÍDICA
+## Especialista em Execuções Penais & Advocacia Criminal · Dra. Suellem Rodrigues · São Sebastião do Paraíso - MG · OAB/MG 174.904
 
-Site institucional e landing page de altíssimo padrão da **Dra. Gabriella Soares Pimenta** (OAB/MG 221.270), titular do escritório Gabriella Pimenta Advocacia e Consultoria Jurídica em Mariana - MG, com atuação humanizada, combativa e de excelência em Direito do Trabalho, Direito Previdenciário (benefícios e INSS), Direito de Família e Sucessões (divórcios, pensão, guarda e inventários), Direito Civil (indenizações, contratos e regularização imobiliária) e Defesa do Consumidor.
+Site institucional e landing page de altíssimo padrão da **Dra. Suellem Rodrigues** (OAB/MG 174.904), titular do escritório Suellem Rodrigues Advocacia em São Sebastião do Paraíso - MG, pós-graduada em Advocacia Criminal e especialista em Execuções Penais, com atuação combativa, incisiva e humanizada em Execuções Penais (progressão de regime, livramento condicional, remição de pena, cálculos no SEEU e indulto), plantão prisional e audiências de custódia, habeas corpus nos tribunais superiores (TJMG, TRF, STJ e STF), Tribunal do Júri e revisão criminal no Sul de Minas, em todo o estado de Minas Gerais e no Brasil.
 
 ## Destaques
-- **Identidade Visual Escultural em Ouro Bronze & Obsidian Quente:** Paleta sofisticada extraída diretamente do novo logotipo oficial com a balança da justiça e o monograma "GP", harmonizando o dourado primário metálico (`#b88a3e`, `#d4a853`, `#966826`), realces champagne marfim (`#fbf6ee`, `#f7eed8`, `#e5c27f`), fundo velvet obsidian quente (`#0b0907`, `#120e0a`, `#18130e`) e contraste editorial em travertino seda nobre (`#faf7f2`, `#f2ece1`).
-- **Tipografia Escultural Clássica e Linear Moderna:** Playfair Display, Cinzel e Cormorant Garamond nos títulos e marca, em perfeita harmonia com o relevo chanfrado 3D, combinados com Plus Jakarta Sans para máxima legibilidade e clareza no corpo de texto.
-- **Contato Ágil e Humanizado:** WhatsApp (31) 99981-0534 com mensagens contextualizadas por especialidade e botão flutuante para contato imediato.
-- **Sede em Mariana - MG:** Rua Zizinha Camelo - Centro, com atendimento presencial e assessoria jurídica online para todo o Brasil (Região dos Inconfidentes, Minas Gerais e território nacional).
-- **Prova Social de Alto Impacto:** Avaliação máxima perfeita de 5,0 estrelas com 29 avaliações reais e verificadas no Google Meu Negócio.
-- **Instagram Oficial:** [@gabriellaspimentaadv](https://www.instagram.com/gabriellaspimentaadv/) (144 publicações · 2.460+ seguidores).
-- **Horário de Atendimento:** Segunda a Sexta-feira das 09:00 às 18:00 (atendimento presencial e on-line).
+- **Identidade Visual em Modo Claro Editorial (Prestige Light Mode):** Paleta nobre extraída diretamente do logotipo oficial com monograma "SR" entrelaçado em relevo 3D chanfrado, harmonizando o ouro metálico vibrante (`#c59a3f`, `#deb753`, `#8e6318`), realces champagne marfim (`#fff4d4`, `#f7e5a9`), fundo editorial em linho seda nobre e travertino claro (`#ffffff`, `#fbf9f5`, `#faf7f2`, `#f4efe6`) e tipografia nítida de alta legibilidade em espresso profundo (`#14110e`, `#4c433a`).
+- **Tipografia Escultural Clássica e Linear Moderna:** Playfair Display, Cinzel e Cormorant Garamond nos títulos e marca, em perfeita harmonia com o relevo chanfrado do monograma "SR", combinados com Plus Jakarta Sans para leitura clara e objetiva no corpo de texto.
+- **Contato Ágil e Plantão Prisional:** WhatsApp (31) 99981-0534 com mensagens contextualizadas por especialidade penal e botão flutuante para atendimento imediato.
+- **Sede em São Sebastião do Paraíso - MG:** R. José Albino, 535 - Sl 1 - Centro, com atendimento presencial e suporte on-line para todo o Brasil via SEEU / PJe.
+- **Prova Social Verificada no Google:** Nota máxima perfeita de 5,0 ★ com 20 avaliações autênticas no Google Meu Negócio destacando competência, domínio da execução penal e ética.
+- **Instagram Oficial:** [@suellemrodriguesadv](https://www.instagram.com/suellemrodriguesadv/).
+- **Horário de Atendimento:** Segunda a Sexta-feira das 08:00 às 19:00 com plantão 24h para prisões e audiências de custódia.
 
 ## Tecnologias
 - Next.js 16 (App Router)
