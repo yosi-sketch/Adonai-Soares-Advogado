@@ -36,49 +36,48 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#0c0a08",
+  themeColor: "#0b0907",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.cliciabento.adv.br"),
+  metadataBase: new URL("https://www.gabriellapimenta.adv.br"),
   title:
-    "Clícia Bento | Advogada em Ervália — Advocacia e Consultoria Jurídica",
+    "Gabriella Pimenta | Advocacia e Consultoria Jurídica em Mariana - MG",
   description:
-    "⚖️ Advocacia e Consultoria Jurídica com a Dra. Clícia Bento (OAB/MG 246.137). Nota máxima 5,0 ★ com 41 avaliações no Google. 📍 Rua Sagrado Coração de Jesus, nº 20, Centro, Ervália - MG e atendimento on-line em todo o Brasil.",
+    "⚖️ Gabriella Pimenta Advocacia e Consultoria Jurídica (Dra. Gabriella Soares Pimenta, OAB/MG 221.270). Acolhendo histórias, defendendo direitos, construindo soluções jurídicas. Nota máxima 5,0 ★ com 29 avaliações no Google. 📍 R. Zizinha Camelo, Centro, Mariana - MG e atendimento on-line em todo o Brasil.",
   keywords: [
-    "Clícia Bento Advocacia",
-    "Clícia Bento Advogada",
-    "Dra Clícia Bento",
-    "Advogada em Ervália",
-    "Advogada em Ervália MG",
-    "Advogada Viçosa MG",
-    "Advogada Ubá MG",
-    "Advogada Muriaé MG",
-    "Advogada Zona da Mata MG",
-    "Escritório de Advocacia Ervália",
-    "Advogado Ervália Minas Gerais",
-    "OAB MG 246137",
-    "Direito do Trabalho Ervália",
-    "Rescisão Indireta Ervália",
-    "Aposentadoria e INSS Ervália",
-    "Divórcio e Pensão Alimentícia Ervália",
-    "Inventário e Sucessões Ervália",
+    "Gabriella Pimenta Advocacia",
+    "Gabriella Pimenta Advogada",
+    "Dra Gabriella Pimenta",
+    "Gabriella Soares Pimenta",
+    "Advogada em Mariana",
+    "Advogada em Mariana MG",
+    "Advogada Ouro Preto MG",
+    "Advogada Itabirito MG",
+    "Advogada Região dos Inconfidentes",
+    "Escritório de Advocacia Mariana",
+    "Advogado Mariana Minas Gerais",
+    "OAB MG 221270",
+    "Direito do Trabalho Mariana",
+    "Rescisão Indireta Mariana",
+    "Aposentadoria e INSS Mariana",
+    "Divórcio e Pensão Alimentícia Mariana",
+    "Inventário e Sucessões Mariana",
     "Defesa do Consumidor e Danos Morais",
     "Advocacia Humanizada e Resolutiva",
     "Advogada Online Brasil",
   ],
-  authors: [{ name: "Dra. Clícia Bento" }],
-  creator: "Clícia Bento Advocacia",
-  publisher: "Clícia Bento Advocacia",
+  authors: [{ name: "Dra. Gabriella Soares Pimenta" }],
+  creator: "Gabriella Pimenta Advocacia e Consultoria",
+  publisher: "Gabriella Pimenta Advocacia e Consultoria",
   formatDetection: {
     telephone: true,
     address: true,
   },
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "32x32" },
-      { url: "/icon-32x32.png", type: "image/png", sizes: "32x32" },
-      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "464x464" },
     ],
     shortcut: "/favicon.ico",
     apple: [{ url: "/apple-icon.png", sizes: "180x180" }],
@@ -86,18 +85,18 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.cliciabento.adv.br",
+    url: "https://www.gabriellapimenta.adv.br",
     title:
-      "Clícia Bento Advocacia | Dra. Clícia Bento — Advocacia e Consultoria Jurídica",
+      "Gabriella Pimenta Advocacia | Dra. Gabriella Soares Pimenta — Mariana - MG",
     description:
-      "⚖️ Advocacia estratégica, humanizada e combativa. Seus direitos protegidos com rigor técnico e acolhimento. Sede em Ervália - MG e atendimento digital em todo o Brasil.",
-    siteName: "Clícia Bento Advocacia",
+      "⚖️ Acolhendo histórias, defendendo direitos, construindo soluções jurídicas. Atendimento presencial em Mariana - MG e digital em todo o Brasil.",
+    siteName: "Gabriella Pimenta Advocacia e Consultoria",
     images: [
       {
         url: "/logo.png",
         width: 1024,
-        height: 512,
-        alt: "Clícia Bento Advocacia",
+        height: 682,
+        alt: "Gabriella Pimenta Advocacia e Consultoria",
       },
     ],
   },
@@ -111,45 +110,47 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Clícia Bento Advocacia",
-    alternateName: "Dra. Clícia Bento Advogada",
+    name: "Gabriella Pimenta Advocacia e Consultoria Jurídica",
+    alternateName: "Dra. Gabriella Pimenta Advogada",
+    legalName: "Gabriella Pimenta Sociedade Individual de Advocacia",
+    taxID: "63.196.916/0001-89",
     founder: [
       {
         "@type": "Person",
-        name: "Dra. Clícia Bento",
+        name: "Dra. Gabriella Soares Pimenta",
         jobTitle: "Advogada e Consultora Jurídica",
-        identifier: "OAB/MG 246.137",
+        identifier: "OAB/MG 221.270",
       },
     ],
-    telephone: "+55-32-98483-8287",
-    url: "https://www.cliciabento.adv.br",
-    image: "https://www.cliciabento.adv.br/logo.png",
+    telephone: "+55-31-99981-0534",
+    email: "gabriellaspimentaadv@gmail.com",
+    url: "https://www.gabriellapimenta.adv.br",
+    image: "https://www.gabriellapimenta.adv.br/logo.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Rua Sagrado Coração de Jesus, 20 - Centro",
-      addressLocality: "Ervália",
+      streetAddress: "Rua Zizinha Camelo - Centro",
+      addressLocality: "Mariana",
       addressRegion: "MG",
-      postalCode: "36555-000",
+      postalCode: "35420-000",
       addressCountry: "BR",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: -20.8406,
-      longitude: -42.8139,
+      latitude: -20.3778,
+      longitude: -43.4164,
     },
     priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "41",
+      reviewCount: "29",
     },
     areaServed: [
-      "Ervália",
-      "Viçosa",
-      "Ubá",
-      "Muriaé",
-      "Juiz de Fora",
-      "Zona da Mata",
+      "Mariana",
+      "Ouro Preto",
+      "Itabirito",
+      "Região dos Inconfidentes",
+      "Belo Horizonte",
       "Minas Gerais",
       "Brasil",
     ],
@@ -163,13 +164,13 @@ export default function RootLayout({
           "Thursday",
           "Friday",
         ],
-        opens: "08:00",
+        opens: "09:00",
         closes: "18:00",
       },
     ],
     sameAs: [
-      "https://www.instagram.com/cliciabento.adv/",
-      "https://wa.me/5532984838287",
+      "https://www.instagram.com/gabriellaspimentaadv/",
+      "https://wa.me/5531999810534",
     ],
   };
 
@@ -180,14 +181,14 @@ export default function RootLayout({
     >
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/icon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/icon.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen overflow-x-clip bg-[#0c0a08] font-sans text-stone-100 antialiased selection:bg-[#c99b4f] selection:text-[#0c0a08]">
+      <body className="min-h-screen overflow-x-clip bg-[#0b0907] font-sans text-stone-100 antialiased selection:bg-[#b88a3e] selection:text-[#0b0907]">
         {children}
       </body>
     </html>
