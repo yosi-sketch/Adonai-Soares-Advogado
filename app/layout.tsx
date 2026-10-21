@@ -36,41 +36,38 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#faf8f5",
+  themeColor: "#faf8f6",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.deboragurgel.adv.br"),
+  metadataBase: new URL("https://www.kowalskiadvocacia.com.br"),
   title:
-    "Dra. Débora Gurgel | Advocacia e Consultoria Jurídica · Itabirito - MG",
+    "Kowalski Advocacia | Previdenciário · Trabalhista · Cível · Unaí - MG",
   description:
-    "⚖️ Dra. Débora Gurgel — Advocacia e Consultoria Jurídica em Itabirito - MG. 18 anos de experiência em Direito Possessório, Regularização de Imóveis, Inventários e Partilha de Bens, Planejamento Previdenciário e Benefícios do INSS. Avaliação máxima 5,0 ★ com 13 avaliações no Google. 📍 Av. Queiroz Júnior, 211 - 2º andar, loja 6 - Centro, Itabirito - MG.",
+    "⚖️ Kowalski Advocacia — Advocacia especializada em Direito Previdenciário (Aposentadorias, BPC/LOAS e Benefícios do INSS), Direito Trabalhista e Direito Cível. Avaliação 4,7 ★ com 13 avaliações no Google. 📍 R. Canabrava, 192A - Centro, Unaí - MG. Atendimento em Unaí, Arinos e em todo o Brasil.",
   keywords: [
-    "Débora Gurgel Advogada",
-    "Dra Débora Gurgel",
-    "Débora Gurgel Advocacia e Consultoria Jurídica",
-    "Advogada em Itabirito MG",
-    "Advogada Itabirito",
-    "Advocacia Itabirito MG",
-    "Direito Possessório Itabirito",
-    "Usucapião em Itabirito",
-    "Usucapião Extrajudicial Cartório",
-    "Reintegração de Posse Itabirito",
-    "Regularização de Imóveis Itabirito",
-    "Inventário Judicial Itabirito",
-    "Inventário Extrajudicial Cartório Itabirito",
-    "Partilha de Bens Herança",
-    "Advogada Previdenciária Itabirito",
-    "Planejamento Previdenciário Itabirito MG",
-    "Aposentadoria INSS Itabirito",
-    "Concessão de Benefícios INSS",
-    "BPC LOAS Itabirito",
-    "Consultoria Jurídica Itabirito",
-    "Advogada Cível Minas Gerais",
+    "Kowalski Advocacia",
+    "Advogado em Unaí MG",
+    "Advogado Unaí",
+    "Advocacia Unaí MG",
+    "Kowalski Advocacia Unaí",
+    "Advocacia Arinos MG",
+    "Advogado Arinos",
+    "Direito Previdenciário Unaí",
+    "Aposentadoria INSS Unaí",
+    "BPC LOAS Unaí MG",
+    "Advogado Trabalhista Unaí",
+    "Direitos Trabalhistas Unaí",
+    "Rescisão Indireta Horas Extras Unaí",
+    "Acidente de Trabalho Indenização",
+    "Advogado Cível Unaí MG",
+    "Inventário e Partilha Unaí",
+    "Contratos e Indenizações Unaí",
+    "Kowalski Advocacia Minas Gerais",
   ],
-  authors: [{ name: "Dra. Débora Gurgel" }],
-  creator: "Débora Gurgel — Advocacia e Consultoria Jurídica",
-  publisher: "Débora Gurgel — Advocacia e Consultoria Jurídica",
+  authors: [{ name: "Kowalski Advocacia" }],
+  creator: "Kowalski Advocacia",
+  publisher: "Kowalski Advocacia",
   formatDetection: {
     telephone: true,
     address: true,
@@ -78,7 +75,7 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon.png", type: "image/png", sizes: "615x615" },
+      { url: "/icon.png", type: "image/png", sizes: "192x192" },
     ],
     shortcut: "/favicon.ico",
     apple: [{ url: "/apple-icon.png", sizes: "180x180" }],
@@ -86,18 +83,18 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.deboragurgel.adv.br",
+    url: "https://www.kowalskiadvocacia.com.br",
     title:
-      "Dra. Débora Gurgel | Advocacia e Consultoria Jurídica · Itabirito - MG",
+      "Kowalski Advocacia | Previdenciário · Trabalhista · Cível · Unaí - MG",
     description:
-      "⚖️ Quase duas décadas de excelência, ética e resolutividade em Itabirito - MG. Atuação em Direito Possessório, Inventários, Planejamento Previdenciário e Benefícios do INSS. Avaliação máxima 5,0 ★ no Google.",
-    siteName: "Débora Gurgel Advocacia e Consultoria Jurídica",
+      "⚖️ Advocacia combativa, ética e resolutiva em Direito Previdenciário, Trabalhista e Cível. Avaliação 4,7 ★ no Google. R. Canabrava, 192A - Centro, Unaí - MG.",
+    siteName: "Kowalski Advocacia",
     images: [
       {
         url: "/logo.png",
         width: 1024,
-        height: 512,
-        alt: "Débora Gurgel — Advocacia e Consultoria Jurídica",
+        height: 682,
+        alt: "Kowalski Advocacia",
       },
     ],
   },
@@ -111,47 +108,36 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Débora Gurgel — Advocacia e Consultoria Jurídica",
-    alternateName: "Dra. Débora Gurgel",
-    legalName: "Débora Gurgel Advocacia e Consultoria Jurídica",
-    founder: [
-      {
-        "@type": "Person",
-        name: "Dra. Débora Gurgel",
-        jobTitle: "Advogada Cível, Direito Possessório, Inventários e Direito Previdenciário",
-      },
-    ],
-    telephone: "+55-31-98888-5570",
-    email: "contato@deboragurgel.adv.br",
-    url: "https://www.deboragurgel.adv.br",
-    image: "https://www.deboragurgel.adv.br/logo.png",
+    name: "Kowalski Advocacia",
+    alternateName: "Advocacia Kowalski",
+    legalName: "Kowalski Advocacia",
+    telephone: "+55-38-99961-6355",
+    email: "contato@kowalskiadvocacia.com.br",
+    url: "https://www.kowalskiadvocacia.com.br",
+    image: "https://www.kowalskiadvocacia.com.br/logo.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Av. Queiroz Júnior, 211 - 2º andar, loja 6 - Centro",
-      addressLocality: "Itabirito",
+      streetAddress: "R. Canabrava, 192A - Centro",
+      addressLocality: "Unaí",
       addressRegion: "MG",
-      postalCode: "35450-069",
+      postalCode: "38610-031",
       addressCountry: "BR",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: -20.2522,
-      longitude: -43.8058,
+      latitude: -16.3575,
+      longitude: -46.9038,
     },
     priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "5.0",
+      ratingValue: "4.7",
       reviewCount: "13",
     },
     areaServed: [
-      "Itabirito",
-      "Ouro Preto",
-      "Mariana",
-      "Belo Horizonte",
-      "Nova Lima",
-      "Congonhas",
-      "Região Central de Minas Gerais",
+      "Unaí",
+      "Arinos",
+      "Noroeste de Minas Gerais",
       "Minas Gerais",
       "Brasil",
     ],
@@ -165,13 +151,13 @@ export default function RootLayout({
           "Thursday",
           "Friday",
         ],
-        opens: "09:00",
+        opens: "08:00",
         closes: "18:00",
       },
     ],
     sameAs: [
-      "https://www.instagram.com/deboragurgel.adv/",
-      "https://wa.me/5531988885570",
+      "https://www.instagram.com/advocacia.kowalski/",
+      "https://wa.me/5538999616355",
     ],
   };
 
@@ -189,7 +175,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen overflow-x-clip bg-[#faf8f5] font-sans text-[#0d121c] antialiased selection:bg-[#fdefca] selection:text-[#0d121c]">
+      <body className="min-h-screen overflow-x-clip bg-[#faf8f6] font-sans text-[#16080a] antialiased selection:bg-[#fce8e9] selection:text-[#380509]">
         {children}
       </body>
     </html>

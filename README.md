@@ -1,6 +1,6 @@
-# Débora Gurgel — Advocacia e Consultoria Jurídica
+# Kowalski Advocacia
 
-Landing page institucional e de alta conversão para a **Dra. Débora Gurgel**, advogada com 18 anos de experiência em Itabirito - MG, atuante em Advocacia Cível (Direito Possessório, Inventários e Partilha de Bens) e Advocacia Previdenciária (Planejamento Previdenciário e Benefícios do INSS).
+Landing page institucional e de alta conversão para o escritório **Kowalski Advocacia**, referência em advocacia especializada nas áreas Previdenciária, Trabalhista e Cível, com sede no Centro de Unaí - MG, unidade em Arinos e atendimento digital em todo o Brasil.
 
 ## Tecnologias
 
@@ -10,26 +10,28 @@ Landing page institucional e de alta conversão para a **Dra. Débora Gurgel**, 
 - **Framer Motion 13**
 - **Lucide React**
 
-## Identidade Visual e Tipografia
+## Identidade Visual e Tipografia (Baseada no Novo Logotipo)
 
 - **Paleta de Cores (Extraída diretamente do Logo):**
-  - Ouro Champanhe Metálico: `#CBA273`
-  - Realces de Brilho Champagne: `#FDEFCA`, `#EECE9E`
-  - Bronze & Âmbar Profundo: `#A46D2F`, `#7D5120`, `#5D3618`
-  - Superfícies Claras Alabastro: `#FFFFFF`, `#FAF8F5`, `#F4EFE6`
-  - Tipografia e Contraste: `#0D121C`, `#4A433D`
+  - Vinho Rubi Nobre Primário: `#700A12`, `#871017`
+  - Granate Profundo & Vinho Noturno: `#4A070C`, `#380509`, `#260306`
+  - Realces de Carmesim e Rubi: `#A3141B`, `#BD1C24`
+  - Dourado Champanhe & Bronze Metálico: `#CFA05E`, `#B6813B`, `#7E5420`, `#F3D8A8`
+  - Superfícies Claras Alabastro & Linho Seda: `#FFFFFF`, `#FAF8F6`, `#F5EFEA`, `#EEE5DC`
+  - Tipografia e Contraste Escuro: `#16080A`, `#4F3D40`, `#756064`
 - **Tipografia:**
-  - `Cinzel` (Monograma e Marca Monumental)
-  - `Playfair Display` & `Cormorant Garamond` (Títulos Editoriais)
-  - `Plus Jakarta Sans` (Corpo e Navegação)
+  - `Cinzel` (Monograma e Marca Monumental Romana)
+  - `Playfair Display` & `Cormorant Garamond` (Títulos Editoriais e Destaques)
+  - `Plus Jakarta Sans` (Corpo de Texto, Interfaces e Navegação)
 
 ## Informações de Contato
 
-- **Telefone / WhatsApp:** (31) 98888-5570
-- **E-mail:** contato@deboragurgel.adv.br
-- **Sede:** Av. Queiroz Júnior, 211 - 2º andar, loja 6 - Centro, Itabirito - MG, 35450-069
-- **Instagram:** [@deboragurgel.adv](https://www.instagram.com/deboragurgel.adv/)
-- **Avaliações no Google:** 5,0 ★ (13 avaliações autênticas)
+- **Telefone / WhatsApp:** (38) 99961-6355
+- **E-mail:** contato@kowalskiadvocacia.com.br
+- **Sede:** R. Canabrava, 192A - Centro, Unaí - MG, 38610-031
+- **Instagram:** [@advocacia.kowalski](https://www.instagram.com/advocacia.kowalski/)
+- **Avaliações no Google:** 4,7 ★ (13 avaliações autênticas)
+- **Horário de Funcionamento:** Segunda a Sexta a partir das 08:00 (08:00 às 18:00)
 
 ## Como Executar
 
