@@ -1,20 +1,45 @@
-# MICHAELY PEREIRA SILVA — ADVOGADA
-## Direito do Consumidor · Família · Inventário Judicial e Extrajudicial · Pós-Graduada: Bancário • Trabalho · João Pinheiro - MG
+# Débora Gurgel — Advocacia e Consultoria Jurídica
 
-Site institucional e landing page de altíssimo padrão da **Dra. Michaely Pereira Silva**, advogada com atuação em João Pinheiro - MG, pós-graduada em Direito Bancário e Direito do Trabalho, com foco especializado em Direito do Consumidor, Direito de Família e Inventários (Judiciais e Extrajudiciais em Cartório), com acolhimento humano, clareza didática e excelência técnica para João Pinheiro, Noroeste de Minas Gerais e clientes em todo o Brasil.
-
-## Destaques
-- **Identidade Visual Baseada no Logotipo Oficial:** Paleta nobre extraída diretamente do novo monograma escultural "MS" entrelaçado com espada da justiça e balança em ouro polido 3D, harmonizando o ouro metálico vibrante (`#c59a3f`, `#deb753`, `#8e6318`), realces champagne marfim (`#fff4d4`, `#f7e5a9`), fundo editorial em linho seda nobre e travertino claro (`#ffffff`, `#faf8f5`, `#f4efe6`) e tipografia nítida de alta legibilidade em espresso profundo (`#14110e`, `#4c433a`).
-- **Tipografia Escultural Monumental e Moderna:** Cinzel, Playfair Display e Cormorant Garamond nos títulos e na marca, em perfeita harmonia com o relevo chanfrado do logotipo, combinados com Plus Jakarta Sans para leitura clara e fluida no corpo de texto.
-- **Contato Ágil no WhatsApp:** WhatsApp (38) 98835-5914 com mensagens contextualizadas por especialidade (consumidor, divórcio/família, inventário, bancário e trabalhista) e botão flutuante para contato imediato.
-- **Sede em João Pinheiro - MG:** R. Astolfo Moreira, 305 A - Centro, João Pinheiro - MG, 38770-000, com atendimento presencial e suporte on-line para todo o Brasil.
-- **Prova Social Verificada no Google:** Nota máxima de 5,0 ★ com 17 avaliações autênticas no Google Meu Negócio destacando competência, empatia, clareza didática e dedicação.
-- **Instagram Oficial:** [@michaelysilva_adv](https://www.instagram.com/michaelysilva_adv/).
-- **Horário de Atendimento:** Segunda a Sexta-feira das 09:00 às 18:00.
+Landing page institucional e de alta conversão para a **Dra. Débora Gurgel**, advogada com 18 anos de experiência em Itabirito - MG, atuante em Advocacia Cível (Direito Possessório, Inventários e Partilha de Bens) e Advocacia Previdenciária (Planejamento Previdenciário e Benefícios do INSS).
 
 ## Tecnologias
-- Next.js 16 (App Router)
-- React 19
-- Tailwind CSS v4
-- Framer Motion
-- Lucide React
+
+- **Next.js 16** (App Router)
+- **React 19**
+- **Tailwind CSS v4** (com tokens customizados e suporte inline)
+- **Framer Motion 13**
+- **Lucide React**
+
+## Identidade Visual e Tipografia
+
+- **Paleta de Cores (Extraída diretamente do Logo):**
+  - Ouro Champanhe Metálico: `#CBA273`
+  - Realces de Brilho Champagne: `#FDEFCA`, `#EECE9E`
+  - Bronze & Âmbar Profundo: `#A46D2F`, `#7D5120`, `#5D3618`
+  - Superfícies Claras Alabastro: `#FFFFFF`, `#FAF8F5`, `#F4EFE6`
+  - Tipografia e Contraste: `#0D121C`, `#4A433D`
+- **Tipografia:**
+  - `Cinzel` (Monograma e Marca Monumental)
+  - `Playfair Display` & `Cormorant Garamond` (Títulos Editoriais)
+  - `Plus Jakarta Sans` (Corpo e Navegação)
+
+## Informações de Contato
+
+- **Telefone / WhatsApp:** (31) 98888-5570
+- **E-mail:** contato@deboragurgel.adv.br
+- **Sede:** Av. Queiroz Júnior, 211 - 2º andar, loja 6 - Centro, Itabirito - MG, 35450-069
+- **Instagram:** [@deboragurgel.adv](https://www.instagram.com/deboragurgel.adv/)
+- **Avaliações no Google:** 5,0 ★ (13 avaliações autênticas)
+
+## Como Executar
+
+```bash
+# Instalar dependências
+npm install
+
+# Iniciar servidor de desenvolvimento
+npm run dev
+
+# Gerar build de produção
+npm run build
+```

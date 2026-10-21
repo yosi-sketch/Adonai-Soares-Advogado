@@ -36,30 +36,30 @@ export default function GlowingButton({
     lg: "px-7 py-4 text-xs tracking-[0.14em]",
   }[size];
 
-  // Refined metallic polished gold and prestige light styling for Michaely Silva Advogada
+  // Refined metallic polished gold and prestige styling for Débora Gurgel — Advocacia e Consultoria Jurídica
   const variantClasses = {
     gold:
-      "border border-[#c59a3f]/70 bg-gradient-to-r from-[#8e6318] via-[#c59a3f] to-[#8e6318] text-white font-bold shadow-md shadow-[#8e6318]/25 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold",
+      "border border-[#cba273]/80 bg-gradient-to-r from-[#a46d2f] via-[#cba273] to-[#a46d2f] text-white font-bold shadow-md shadow-[#a46d2f]/25 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold",
     rosegold:
-      "border border-[#c59a3f]/70 bg-gradient-to-r from-[#8e6318] via-[#c59a3f] to-[#8e6318] text-white font-bold shadow-md shadow-[#8e6318]/25 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold",
+      "border border-[#cba273]/80 bg-gradient-to-r from-[#a46d2f] via-[#cba273] to-[#a46d2f] text-white font-bold shadow-md shadow-[#a46d2f]/25 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold",
     "gold-dark":
-      "border border-[#deb753]/40 bg-gradient-to-r from-[#322003] via-[#5a3c08] to-[#322003] text-white font-bold shadow-md hover:-translate-y-0.5 hover:brightness-110",
+      "border border-[#eece9e]/40 bg-gradient-to-r from-[#0b111e] via-[#162035] to-[#0b111e] text-[#fdefca] font-bold shadow-md hover:-translate-y-0.5 hover:brightness-110",
     champagne:
-      "border border-[#deb753]/50 bg-[#f4efe6] text-[#14110e] font-bold shadow-xs hover:-translate-y-0.5 hover:bg-[#ede5d8]",
+      "border border-[#cba273]/50 bg-[#faf8f5] text-[#0d121c] font-bold shadow-xs hover:-translate-y-0.5 hover:bg-[#f4efe6]",
     bronze:
-      "border border-[#5a3c08]/50 bg-[#322003] text-white font-bold shadow-md hover:-translate-y-0.5 hover:brightness-110",
+      "border border-[#7d5120]/50 bg-[#5d3618] text-white font-bold shadow-md hover:-translate-y-0.5 hover:brightness-110",
     dark:
-      "border border-[#deb753]/40 bg-[#14110e] text-[#f7e5a9] shadow-sm hover:-translate-y-0.5 hover:bg-[#221c17] hover:text-white",
+      "border border-[#cba273]/40 bg-[#0b111e] text-[#fdefca] shadow-sm hover:-translate-y-0.5 hover:bg-[#162035] hover:text-white",
     outline:
-      "border border-[#8e6318]/50 bg-white text-[#8e6318] hover:-translate-y-0.5 hover:border-[#8e6318] hover:bg-[#f4efe6] hover:text-[#14110e]",
+      "border border-[#a46d2f]/60 bg-white text-[#7d5120] hover:-translate-y-0.5 hover:border-[#a46d2f] hover:bg-[#faf8f5] hover:text-[#0d121c]",
     ruby:
       "border border-[#ef4444]/40 bg-gradient-to-r from-[#7f1d1d] via-[#991b1b] to-[#7f1d1d] text-white font-bold shadow-md hover:-translate-y-0.5 hover:brightness-110",
     white:
-      "border border-[#e8dfd2] bg-white text-[#14110e] shadow-sm hover:-translate-y-0.5 hover:border-[#deb753] hover:shadow-md",
+      "border border-[#e8dfd2] bg-white text-[#0d121c] shadow-sm hover:-translate-y-0.5 hover:border-[#cba273] hover:shadow-md",
   }[variant];
 
   const classes =
-    "inline-flex items-center justify-center gap-2 rounded-lg font-bold uppercase transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#deb753] select-none text-center cursor-pointer " +
+    "inline-flex items-center justify-center gap-2 rounded-lg font-bold uppercase transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#cba273] select-none text-center cursor-pointer " +
     sizeClasses +
     " " +
     variantClasses +

@@ -9,9 +9,10 @@ import {
   Award,
   CheckCircle2,
   Clock,
-  Coins,
+  Compass,
   FileCheck2,
   HeartHandshake,
+  Home as HomeIcon,
   Landmark,
   Mail,
   MapPin,
@@ -19,7 +20,6 @@ import {
   Phone,
   Scale,
   ShieldCheck,
-  ShoppingBag,
   Sparkles,
   Star,
   Users2,
@@ -27,27 +27,29 @@ import {
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
 
-const WHATSAPP_NUMBER = "553888355914";
-const PHONE_DISPLAY = "(38) 98835-5914";
-const EMAIL_CONTACT = "contato@michaelysilva.adv.br";
-const INSTAGRAM_URL = "https://www.instagram.com/michaelysilva_adv/";
-const INSTAGRAM_HANDLE = "@michaelysilva_adv";
+const WHATSAPP_NUMBER = "5531988885570";
+const PHONE_DISPLAY = "(31) 98888-5570";
+const EMAIL_CONTACT = "contato@deboragurgel.adv.br";
+const INSTAGRAM_URL = "https://www.instagram.com/deboragurgel.adv/";
+const INSTAGRAM_HANDLE = "@deboragurgel.adv";
 
-const ADDRESS_TEXT = "R. Astolfo Moreira, 305 A - Centro, João Pinheiro - MG, 38770-000";
+const ADDRESS_TEXT =
+  "Av. Queiroz Júnior, 211 - 2º andar, loja 6 - Centro, Itabirito - MG, 35450-069";
 const GOOGLE_SEARCH_URL =
-  "https://www.google.com/search?q=Michaely+Pereira+Silva+%E2%80%94+Advogada+Jo%C3%A3o+Pinheiro+%C2%B7+MG";
+  "https://www.google.com/search?q=D%C3%A9bora+Gurgel+%E2%80%94+Advogada+Itabirito+%C2%B7+MG";
 
 const LOGO_SEAL_SRC = "/logo-symbol.png";
 const LOGO_FULL_SRC = "/logo.png";
-const FOTO_HERO_SRC = "/michaely-portrait.png";
-const FOTO_INFOGRAFICO_SRC = "/michaely-infographic.png";
+const LOGO_HORIZONTAL_SRC = "/logo-horizontal.png";
+const LOGO_VERTICAL_SRC = "/logo-vertical.png";
+const FOTO_HERO_SRC = "/debora-gurgel.jpg";
 
 function getWhatsAppUrl(
   message?: string,
   number: string = WHATSAPP_NUMBER
 ) {
   const defaultText =
-    "Olá, Dra. Michaely Silva! Gostaria de agendar uma consulta jurídica e tirar dúvidas sobre o meu caso.";
+    "Olá, Dra. Débora! Gostaria de agendar uma consulta jurídica e tirar dúvidas sobre o meu caso.";
   return `https://wa.me/${number}?text=${encodeURIComponent(
     message || defaultText
   )}`;
@@ -157,169 +159,199 @@ interface PracticeArea {
 
 const practiceAreas: PracticeArea[] = [
   {
-    id: "direito-do-consumidor",
-    title: "Direito do Consumidor & Defesa de Direitos",
-    icon: ShoppingBag,
-    tag: "Negativação Indevida · Danos Morais · Cobranças Abusivas · Falhas na Entrega",
+    id: "direito-possessorio-regularizacao",
+    title: "Direito Possessório & Regularização de Imóveis",
+    icon: HomeIcon,
+    tag: "Usucapião · Reintegração de Posse · Titulação · Conflitos Fundiários",
     summary:
-      "Defesa incisiva contra práticas abusivas de empresas, bancos e operadoras, buscando a exclusão de negativações ilegais no SPC/Serasa e indenizações devidas.",
+      "Proteção intransigente da sua posse e regularização definitiva da escritura de imóveis urbanos e rurais, assegurando valorização e tranquilidade jurídica para sua família.",
     details:
-      "O consumidor não pode ser penalizado por falhas e abusos do mercado. A Dra. Michaely Silva atua com agilidade para obter ordens liminares de exclusão do nome dos órgãos de proteção ao crédito, restituição em dobro de quantias cobradas indevidamente e compensação financeira por danos morais decorrentes de cobranças vexatórias, cancelamentos de serviços e golpes digitais.",
+      "A moradia e a propriedade da terra são conquistas sagradas que representam o esforço de uma vida. Com quase duas décadas de atuação direta em Minas Gerais, a Dra. Débora Gurgel atua com sólida experiência prática na condução de ações de Usucapião (tanto extrajudicial em cartório quanto judicial), ações possessórias de reintegração e manutenção contra invasões ou turbações, retificação de áreas e titulação definitiva de imóveis sem escritura.",
     topics: [
-      "Exclusão liminar urgente do nome no SPC, Serasa e Boa Vista por negativação indevida",
-      "Ações indenizatórias por danos morais por cobrança vexatória ou serviço não prestado",
-      "Restituição em dobro de valores cobrados indevidamente (art. 42 do Código de Defesa do Consumidor)",
-      "Cancelamento de compras fraudulentas, golpes no PIX e clonagem de cartões de crédito",
-      "Ações contra companhias aéreas por atraso, cancelamento de voos e extravio de bagagens",
-      "Combate a cláusulas contratuais abusivas, vendas casadas e recusa de garantia legal",
+      "Usucapião Extrajudicial em Cartório de Imóveis (procedimento célere, econômico e sem processo judicial)",
+      "Usucapião Judicial para imóveis urbanos, rurais, especiais e familiares",
+      "Ação de Reintegração e Manutenção de Posse e Interdito Proibitório com pedido liminar urgente",
+      "Regularização documental de imóveis de herança e contratos de gaveta sem escritura",
+      "Ações demarcatórias, divisão de terras e solução amigável de conflitos de confrontações",
+      "Defesa contínua de posse mansa e pacífica com assessoria jurídica minuciosa até o registro formal",
     ],
     whatsAppText:
-      "Olá, Dra. Michaely! Gostaria de uma avaliação para um problema de Direito do Consumidor (cobrança indevida, negativação ou dano moral).",
+      "Olá, Dra. Débora! Gostaria de uma avaliação para regularizar ou defender a posse do meu imóvel (usucapião ou reintegração de posse).",
   },
   {
-    id: "direito-de-familia",
-    title: "Direito de Família, Divórcio & Guarda",
-    icon: HeartHandshake,
-    tag: "Divórcio · Guarda & Convivência · Pensão Alimentícia · Partilha de Bens",
-    summary:
-      "Condução sensível, técnica e segura dos conflitos familiares, protegendo o patrimônio dos cônjuges e garantindo o bem-estar e o futuro dos filhos.",
-    details:
-      "As questões de família exigem um equilíbrio delicado entre firmeza jurídica e profundo respeito humano. Dra. Michaely Pereira Silva acompanha divórcios consensuais e litigiosos, fixação e revisão de pensão alimentícia, regimes de convivência e guarda, atuando para prevenir traumas desnecessários e assegurar uma partilha justa de bens.",
-    topics: [
-      "Divórcio consensual ágil em cartório (extrajudicial) e divórcio judicial contencioso",
-      "Ação de alimentos: fixação, execução de pensão em atraso, revisão de valor e exoneração",
-      "Regulamentação e modificação de guarda (compartilhada e unilateral) e plano de convivência",
-      "Partilha equilibrada de bens, imóveis, veículos e investimentos do casal",
-      "Reconhecimento e dissolução de união estável com resguardo patrimonial",
-      "Investigação e reconhecimento de paternidade com retificação de registro civil",
-    ],
-    whatsAppText:
-      "Olá, Dra. Michaely! Gostaria de consultar sobre uma questão de Direito de Família (divórcio, pensão alimentícia ou guarda).",
-  },
-  {
-    id: "inventario-judicial-extrajudicial",
-    title: "Inventário Judicial & Extrajudicial em Cartório",
+    id: "inventario-partilha-sucessoes",
+    title: "Inventário, Partilha de Bens & Sucessões",
     icon: FileCheck2,
-    tag: "Partilha de Herança · Cartório Rápido · Planejamento Sucessório · ITCD MG",
+    tag: "Cartório Ágil · Inventário Judicial · Planejamento Sucessório · ITCD MG",
     summary:
-      "Regularização e partilha célere de heranças, reduzindo custos tributários e burocracias para que a família receba seu patrimônio em paz.",
+      "Condução célere, segura e conciliadora da transmissão de bens da família, desatando entraves cartorários e preservando a harmonia entre os herdeiros.",
     details:
-      "A perda de um ente querido já é um momento doloroso e não deve ser agravada por burocracias infindáveis. Havendo consenso entre herdeiros capazes, realizamos o inventário extrajudicial em cartório de forma rápida e segura. Para os casos de herdeiros menores ou discordâncias, atuamos no inventário judicial com firmeza na defesa da justa cota-parte.",
+      "A perda de um familiar é um momento doloroso que não deve ser agravado por conflitos ou demoras burocráticas infindáveis. Havendo consenso entre herdeiros capazes, viabilizamos o inventário extrajudicial em cartório de forma célere e com expressiva economia tributária de ITCD em Minas Gerais. Nos casos de desacordo ou havendo herdeiros menores, conduzimos o inventário judicial com firmeza na defesa da justa cota-parte e no diálogo familiar.",
     topics: [
-      "Inventário Extrajudicial em Cartório: procedimento célere e econômico para herdeiros em consenso",
+      "Inventário Extrajudicial em Cartório: partilha rápida, econômica e segura para herdeiros em consenso",
       "Inventário Judicial célere para patrimônios complexos ou quando há herdeiros menores/incapazes",
-      "Levantamento de alvarás judiciais para liberação de saldos bancários, FGTS e PIS/PASEP",
-      "Planejamento sucessório prévio e apuração do imposto sobre herança (ITCD - Minas Gerais)",
-      "Cessão de direitos hereditários e regularização documental de imóveis herdados",
-      "Mediação entre herdeiros para resolução amigável e pacífica da partilha",
+      "Planejamento Sucessório Familiar, doações em vida com reserva de usufruto e testamentos",
+      "Cálculo otimizado e desembaraço ágil de ITCD (Imposto sobre Herança) junto à Fazenda de Minas Gerais",
+      "Levantamento célere de alvarás judiciais para liberação de saldos bancários, FGTS e benefícios",
+      "Mediação pacífica entre herdeiros para preservação do patrimônio e da harmonia familiar",
     ],
     whatsAppText:
-      "Olá, Dra. Michaely! Gostaria de orientação para dar entrada em um inventário judicial ou extrajudicial.",
+      "Olá, Dra. Débora! Gostaria de orientação para dar entrada em um inventário (extrajudicial em cartório ou judicial) e partilha de bens.",
   },
   {
-    id: "direito-bancario",
-    title: "Direito Bancário & Combate a Juros Abusivos",
-    icon: Coins,
-    tag: "Pós-Graduada · Empréstimo Não Solicitado · Superendividamento · Fraudes Bancárias",
-    summary:
-      "Combate a abusos de instituições financeiras, juros extorsivos, descontos indevidos de consignados em aposentadorias e renegociação de dívidas.",
-    details:
-      "Com especialização de pós-graduação em Direito Bancário, Dra. Michaely defende consumidores e aposentados lesados por empréstimos consignados não autorizados, taxas de juros acima da média do Banco Central e fraudes bancárias, atuando na repetição do indébito e na renegociação sob a Lei do Superendividamento.",
-    topics: [
-      "Cancelamento de empréstimos consignados fraudulentos em benefícios do INSS e indenização",
-      "Ações revisionais de financiamentos de veículos e contratos de crédito com juros abusivos",
-      "Defesa contra fraudes por engenharia social, transferências via PIX e boletos falsos",
-      "Renegociação estruturada e unificação de passivos com base na Lei do Superendividamento",
-      "Desbloqueio de contas bancárias e salários indevidamente retidos por dívidas",
-      "Defesa técnica em execuções de títulos extrajudiciais e ações de busca e apreensão",
-    ],
-    whatsAppText:
-      "Olá, Dra. Michaely! Gostaria de consultar sobre problemas com banco (empréstimo consignado não solicitado ou juros abusivos).",
-  },
-  {
-    id: "direito-do-trabalho",
-    title: "Direito do Trabalho & Rescisões Contratuais",
+    id: "planejamento-previdenciario",
+    title: "Planejamento Previdenciário Estratégico",
     icon: Landmark,
-    tag: "Pós-Graduada · Verbas Rescisórias · Horas Extras · Rescisão Indireta · Acidentes",
+    tag: "Análise CNIS · Regras de Transição · Projeção de Valor · Aposentadoria Máxima",
     summary:
-      "Proteção técnica dos direitos dos trabalhadores e orientação preventiva, garantindo o recebimento integral de todas as verbas conquistadas pelo trabalho.",
+      "Estudo aprofundado do seu histórico de contribuições para garantir que você se aposente na regra mais vantajosa e com o maior valor mensal possível pelo INSS.",
     details:
-      "Pós-graduada em Direito do Trabalho, a Dra. Michaely Silva analisa detalhadamente cartões de ponto, holerites e termos de rescisão para identificar supressão de direitos, horas extras não quitadas, insalubridade e hipóteses de rescisão indireta em decorrência de descumprimento das obrigações pelo empregador.",
+      "Aposentar-se sem planejamento prévio é um dos maiores erros financeiros, pois a escolha de uma regra desvantajosa reduz seu benefício para o resto da vida. A Dra. Débora Gurgel realiza uma auditoria completa no seu extrato CNIS, identificando períodos não computados pelo INSS, corrigindo indicadores de pendência e calculando matematicamente a data exata e o valor da melhor aposentadoria.",
     topics: [
-      "Cálculo e cobrança de verbas rescisórias integrais (aviso prévio, FGTS + 40%, 13º e férias)",
-      "Ação de Rescisão Indireta do contrato de trabalho (demissão por justa causa do empregador)",
-      "Reconhecimento de vínculo empregatício sem registro em carteira e anotações retroativas",
-      "Cobrança de horas extras, intervalos intrajornada, adicional noturno e descanso semanal remunerado",
-      "Reivindicação de adicionais de insalubridade e periculosidade devidos",
-      "Indenização por assédio moral no ambiente de trabalho e acidentes laborais",
+      "Auditoria minuciosa do Extrato Previdenciário (CNIS) e regularização de pendências cadastrais",
+      "Simulação comparativa entre todas as regras de transição pós-Reforma da Previdência (EC 103/19)",
+      "Projeção financeira do valor estimado da aposentadoria em cada modalidade e cenário futuro",
+      "Reconhecimento de períodos rurais de economia familiar, regime militar e serviço público",
+      "Conversão e comprovação de períodos especiais trabalhados sob insalubridade ou periculosidade",
+      "Parecer conclusivo com cronograma ideal de recolhimentos para obter o teto mais vantajoso",
     ],
     whatsAppText:
-      "Olá, Dra. Michaely! Gostaria de orientações sobre direitos trabalhistas, rescisão de contrato e horas extras.",
+      "Olá, Dra. Débora! Gostaria de agendar um Planejamento Previdenciário para analisar o melhor momento e valor da minha aposentadoria.",
   },
   {
-    id: "orientacao-juridica-consultoria",
-    title: "Orientação Jurídica & Consultoria Preventiva",
+    id: "concessao-beneficios-inss",
+    title: "Concessão & Restabelecimento de Benefícios do INSS",
     icon: ShieldCheck,
-    tag: "Análise Contratual · Resolução Amigável · Notificações · Clareza sem Juridiquês",
+    tag: "Aposentadorias · BPC/LOAS · Auxílio-Doença · Invalidez · Pagamento de Retroativos",
     summary:
-      "Consultoria jurídica acessível e estratégica para evitar prejuízos futuros, revisar contratos civis e solucionar conflitos antes que virem processos demorados.",
+      "Atuação combatente no INSS e na Justiça Federal para reverter negativas injustas e conquistar o benefício que garante a sua tranquilidade e subsistência.",
     details:
-      "Uma orientação jurídica preventiva evita anos de disputas judiciais e prejuízos financeiros vultosos. A Dra. Michaely Pereira Silva oferece pareceres claros, elaboração e análise minuciosa de contratos civis e imobiliários, além de mediação para que você tome decisões sempre com segurança e respaldo legal.",
+      "Receber uma resposta negativa do INSS gera profunda angústia. Com 18 anos de vivência jurídica, a Dra. Débora Gurgel atua com rigor na instrução de laudos médicos, perícias e recursos, tanto na via administrativa quanto em ações judiciais perante a Justiça Federal, garantindo a concessão de aposentadorias, benefícios por incapacidade e BPC/LOAS com o pagamento integral de todos os valores retroativos.",
     topics: [
-      "Elaboração e revisão segura de contratos de compra e venda de imóveis e locações",
-      "Envio de notificações extrajudiciais com validade jurídica formal para resolução amigável",
-      "Consultoria jurídica personalizada com respostas diretas e descomplicadas para suas dúvidas",
-      "Análise prévia de riscos em transações patrimoniais e acordos comerciais",
-      "Mediação entre partes para obtenção de acordos extrajudiciais rápidos e seguros",
-      "Acompanhamento em assinaturas de escrituras, contratos e registros públicos",
+      "Aposentadoria por Idade Urbana e Rural com aproveitamento integral do tempo de serviço",
+      "Aposentadoria por Tempo de Contribuição e Aposentadoria Especial para atividades insalubres",
+      "Benefício de Prestação Continuada (BPC/LOAS) para idosos a partir de 65 anos e pessoas com deficiência",
+      "Auxílio por Incapacidade Temporária (auxílio-doença) e Aposentadoria por Incapacidade Permanente",
+      "Pensão por Morte urbana e rural e restabelecimento de benefícios cancelados indevidamente",
+      "Ação judicial com recebimento de todas as parcelas retroativas desde a data do primeiro requerimento",
     ],
     whatsAppText:
-      "Olá, Dra. Michaely! Gostaria de agendar uma consulta para orientação jurídica preventiva e análise do meu caso.",
+      "Olá, Dra. Débora! Preciso de ajuda jurídica para conseguir ou restabelecer um benefício do INSS (aposentadoria, auxílio-doença ou BPC/LOAS).",
+  },
+  {
+    id: "direito-civel-contratual",
+    title: "Advocacia Cível & Direito Contratual",
+    icon: Scale,
+    tag: "Contratos Imobiliários · Cobranças & Execuções · Indenizações · Obrigações Civis",
+    summary:
+      "Segurança jurídica na compra e venda de bens, recuperação ágil de créditos e defesa intransigente em litígios e obrigações cíveis.",
+    details:
+      "Relações patrimoniais e contratuais exigem redação minuciosa e acompanhamento experiente para não se tornarem disputas traumáticas e onerosas. Na esfera cível, atuamos na elaboração e revisão segura de contratos de compra e venda imobiliária, contratos de locação comercial e residencial, cobranças de títulos executivos e ações indenizatórias por descumprimento de obrigações.",
+    topics: [
+      "Elaboração e revisão criteriosa de contratos de compra e venda de imóveis, permuta e cessão de direitos",
+      "Contratos de locação com cláusulas protetivas, garantias sólidas e notificações extrajudiciais",
+      "Ações de cobrança e execuções de títulos de crédito (cheques, notas promissórias e confissões de dívida)",
+      "Ações indenizatórias por perdas, danos materiais e descumprimento de cláusulas contratuais",
+      "Notificações extrajudiciais com validade jurídica formal para constituição em mora e rescisão amigável",
+      "Ações de despejo por falta de pagamento e defesa patrimonial em execuções de dívidas",
+    ],
+    whatsAppText:
+      "Olá, Dra. Débora! Gostaria de consultar sobre uma questão de Direito Cível ou análise de contrato imobiliário/comercial.",
+  },
+  {
+    id: "consultoria-estrategica-preventiva",
+    title: "Consultoria Jurídica Estratégica & Preventiva",
+    icon: HeartHandshake,
+    tag: "Pareceres Técnicos · Mediação Extrajudicial · Segurança Patrimonial · Ética",
+    summary:
+      "Assessoria preventiva que antecipa riscos, resolve impasses antes do processo judicial e proporciona total tranquilidade para as decisões da sua vida.",
+    details:
+      "A melhor solução jurídica é aquela que evita o processo demorado e oneroso. Com 18 anos de prática jurídica consolidada em Itabirito e Minas Gerais, a Dra. Débora Gurgel oferece uma escuta acolhedora e pareceres diretos, mediando acordos extrajudiciais de forma ética e resolutiva para que sua família tome decisões com respaldo irrefutável.",
+    topics: [
+      "Análise preventiva de riscos e certidões em aquisições de imóveis urbanos e rurais",
+      "Mediação extrajudicial e redação de acordos formais com plena eficácia legal executiva",
+      "Orientação preventiva e estruturação de segurança patrimonial para famílias",
+      "Acompanhamento pessoal e assessoria técnica em assinaturas de escrituras em cartórios",
+      "Consultoria jurídica com respostas claras, descomplicadas e sem juridiquês para suas dúvidas",
+      "Pareceres técnicos prévios para decisões sucessórias, imobiliárias e previdenciárias",
+    ],
+    whatsAppText:
+      "Olá, Dra. Débora! Gostaria de agendar uma consulta para orientação jurídica preventiva e análise estratégica do meu caso.",
   },
 ];
 
 const clientReviews = [
   {
-    name: "Soane Ferreira",
-    reviewsCount: "1 avaliação no Google",
-    badge: "Empatia, Conhecimento & Clareza",
-    content:
-      "Atendimento excelente, a Dra demonstra muito conhecimento é empática, soube esclarecer minhas dúvidas de forma fácil pra eu entender. Adorei o atendimento super recomendo.",
-  },
-  {
-    name: "Kauã Gomes",
-    reviewsCount: "1 avaliação no Google",
-    badge: "Dedicação & Indicação Constante",
-    content:
-      "Excelente profissional e muito dedicada, indico sempre.",
-  },
-  {
-    name: "Rodrigo Ferreira",
-    reviewsCount: "3 avaliações · 6 fotos no Google",
-    badge: "A Melhor de João Pinheiro",
-    content:
-      "Excelente profissional!!! Recomendo, a melhor de joao pinheiro.",
-  },
-  {
-    name: "Luciene Pereira",
+    name: "Tatiane Franca",
+    timeAgo: "11 meses atrás",
     reviewsCount: "2 avaliações no Google",
-    badge: "Ética, Compromisso & Excelência",
+    badge: "Competência & Resultado Garantido",
     content:
-      "Advoga com excelência! Profissional com ética e comprometimento. Sucesso!",
+      "Dra. Débora é muito competente, comprometida e o resultado é garantido. Do começo ao fim do processo que iniciei com ela, esteve presente e com informações precisas. Gratidão.",
   },
   {
-    name: "Casamagrao Magrao",
+    name: "Lauro Mendanha",
+    timeAgo: "2 anos atrás",
     reviewsCount: "1 avaliação no Google",
-    badge: "Ótima Profissional",
+    badge: "Atendimento Excepcional no Inventário",
     content:
-      "Ótima profissional.",
+      "Avalio o atendimento da Dra. Débora como excepcional. Sua atuação no desdobramento do processo de inventário foi exemplar, com todas as orientações e informações fornecidas de maneira rápida e clara. Desde o início até a finalização do processo.",
   },
   {
-    name: "Fátima Pereira Alves",
-    reviewsCount: "1 avaliação no Google",
-    badge: "Atendimento Excelente",
+    name: "Maria Luiza Faria",
+    timeAgo: "2 anos atrás",
+    reviewsCount: "4 avaliações · 11 fotos",
+    badge: "Causa Ganha & Super Recomendo",
     content:
-      "Excelente o atendimento.",
+      "Excelente profissional. As vzs q eu, amigos(as) precisamos do seu serviço: Foi causa ganha. Gratidão Drª Débora 'super recomendo'.",
+  },
+  {
+    name: "Pollyana Castro Ferreira",
+    timeAgo: "3 anos atrás",
+    reviewsCount: "1 avaliação no Google",
+    badge: "Competente & Super Solícita",
+    content:
+      "Débora é uma profissional excelente, extremamente competente e super solícita quanto às minhas dúvidas. Não tenho palavras para agradecê-la pelo profissionalismo.",
+  },
+  {
+    name: "Paulo Henrique Gouvêa Santos",
+    timeAgo: "3 anos atrás",
+    reviewsCount: "3 avaliações no Google",
+    badge: "Supera as Expectativas",
+    content:
+      "Excelente trabalho. Profissional super dedicada, comprometida, esforçada e engajada. Sempre supera minhas expectativas. Estou muito grato ao seu trabalho. Super recomendo.",
+  },
+  {
+    name: "Ana Celia",
+    timeAgo: "um ano atrás",
+    reviewsCount: "1 avaliação no Google",
+    badge: "Dedicada nos Mínimos Detalhes",
+    content:
+      "Débora uma excelente profissional, dedicada nos mínimos detalhes e apoio. Eu super recomendo.",
+  },
+  {
+    name: "Thelma Diroki",
+    timeAgo: "2 anos atrás",
+    reviewsCount: "4 avaliações no Google",
+    badge: "Merece Toda Credibilidade",
+    content:
+      "Sim, a Débora merece toda credibilidade, é uma excelente profissional!",
+  },
+  {
+    name: "Gláucia Gurgel",
+    timeAgo: "6 anos atrás",
+    reviewsCount: "1 avaliação no Google",
+    badge: "Ética & Resolutividade",
+    content:
+      "Profissional excelente, tem sua atuação pautada na ética e resolutividade.",
+  },
+  {
+    name: "Marina Soares & Patrícia Antunes",
+    timeAgo: "Avaliação Verificada",
+    reviewsCount: "Avaliações no Google",
+    badge: "Qualidade & Profissionalismo",
+    content:
+      "Aspectos positivos: Qualidade, Profissionalismo, ética e dedicação impecável em cada causa. Excelente profissional que inspira confiança e entrega resultados.",
   },
 ];
 
@@ -337,11 +369,11 @@ function Heading({
   return (
     <div>
       <p className={light ? "eyebrow-light" : "eyebrow"}>{eyebrow}</p>
-      <h2 className="mt-4 font-serif text-3xl leading-[1.14] tracking-[-0.02em] text-[#14110e] sm:text-4xl lg:text-[3.15rem]">
+      <h2 className="mt-4 font-serif text-3xl leading-[1.14] tracking-[-0.02em] text-[#0d121c] sm:text-4xl lg:text-[3.15rem]">
         {children}
       </h2>
       {description && (
-        <p className="mt-4 text-[15px] leading-7 text-[#4c433a]">
+        <p className="mt-4 text-[15px] leading-7 text-[#4a433d]">
           {description}
         </p>
       )}
@@ -368,51 +400,43 @@ export default function Home() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <main className="overflow-hidden bg-[#faf8f5] text-[#14110e] selection:bg-[#f7e5a9] selection:text-[#14110e]">
-        {/* Navigation Bar - Refined Light Luxury with Polished Gold Accents */}
+      <main className="overflow-hidden bg-[#faf8f5] text-[#0d121c] selection:bg-[#fdefca] selection:text-[#0d121c]">
+        {/* Navigation Bar - Refined Light Luxury with Polished Champagne Gold Accents */}
         <header className="sticky top-0 z-40 border-b border-[#e8dfd2] bg-white/95 backdrop-blur-xl shadow-xs">
           <div className="mx-auto flex h-[96px] max-w-7xl items-center justify-between gap-6 px-5 sm:h-[108px] sm:px-8 lg:px-12">
             <a
               href="#inicio"
-              aria-label="Michaely Silva Advogada"
+              aria-label="Débora Gurgel Advocacia e Consultoria Jurídica"
               onClick={closeMenu}
-              className="flex items-center gap-3.5 transition-opacity hover:opacity-90"
+              className="flex shrink-0 items-center transition-opacity hover:opacity-90"
             >
-              <div className="relative size-[60px] shrink-0 overflow-hidden rounded-full border-2 border-[#deb753]/60 bg-[#120f0d] shadow-sm sm:size-[72px]">
+              <div className="relative h-12 w-52 sm:h-14 sm:w-64 lg:h-16 lg:w-72 xl:h-[70px] xl:w-80">
                 <Image
-                  src={LOGO_SEAL_SRC}
-                  alt="Selo Monograma Oficial Michaely Silva Advogada"
+                  src={LOGO_HORIZONTAL_SRC}
+                  alt="Débora Gurgel — Advocacia e Consultoria Jurídica"
                   fill
                   priority
-                  sizes="72px"
-                  className="object-contain p-1"
+                  sizes="(max-width: 640px) 210px, (max-width: 1024px) 256px, 320px"
+                  className="object-contain object-left"
                 />
-              </div>
-              <div className="flex flex-col">
-                <span className="font-cinzel text-lg font-bold tracking-wider text-[#14110e] sm:text-xl lg:text-2xl">
-                  MICHAELY SILVA
-                </span>
-                <span className="text-[10px] font-semibold uppercase tracking-[0.24em] text-[#8e6318] sm:text-xs">
-                  Advogada · João Pinheiro - MG
-                </span>
               </div>
             </a>
 
             <nav
               aria-label="Navegação principal"
-              className="hidden items-center gap-7 lg:flex"
+              className="hidden items-center gap-5 xl:gap-7 lg:flex"
             >
               <a className="nav-link" href="#inicio">
                 Início
               </a>
               <a className="nav-link" href="#sobre">
-                Dra. Michaely
+                Dra. Débora
               </a>
               <a className="nav-link" href="#atuacao">
                 Áreas de Atuação
               </a>
               <a className="nav-link" href="#diferenciais">
-                Por Que Escolher
+                18 Anos de Experiência
               </a>
               <a className="nav-link" href="#avaliacoes">
                 Avaliações (5,0 ★)
@@ -427,9 +451,9 @@ export default function Home() {
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Avaliações da Dra. Michaely Silva no Google"
-                className="grid size-10 place-items-center rounded-lg border border-[#e8dfd2] bg-[#faf7f2] text-[#4c433a] transition-all hover:border-[#deb753] hover:bg-white hover:text-[#14110e] shadow-xs"
-                title="5,0 ★ no Google (17 avaliações)"
+                aria-label="Avaliações da Dra. Débora Gurgel no Google"
+                className="grid size-10 place-items-center rounded-lg border border-[#e8dfd2] bg-[#faf8f5] text-[#4a433d] transition-all hover:border-[#cba273] hover:bg-white hover:text-[#0d121c] shadow-xs"
+                title="5,0 ★ no Google (13 avaliações)"
               >
                 <GoogleIcon size={16} />
               </a>
@@ -437,16 +461,16 @@ export default function Home() {
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Instagram da Dra. Michaely Silva"
-                className="grid size-10 place-items-center rounded-lg border border-[#e8dfd2] bg-[#faf7f2] text-[#4c433a] transition-all hover:border-[#deb753] hover:bg-white hover:text-[#14110e] shadow-xs"
+                aria-label="Instagram da Dra. Débora Gurgel"
+                className="grid size-10 place-items-center rounded-lg border border-[#e8dfd2] bg-[#faf8f5] text-[#4a433d] transition-all hover:border-[#cba273] hover:bg-white hover:text-[#0d121c] shadow-xs"
                 title={`Instagram ${INSTAGRAM_HANDLE}`}
               >
                 <InstagramIcon size={16} />
               </a>
               <a
                 href={`tel:+${WHATSAPP_NUMBER}`}
-                aria-label="Ligar para Michaely Silva Advogada"
-                className="grid size-10 place-items-center rounded-lg border border-[#e8dfd2] bg-[#faf7f2] text-[#4c433a] transition-all hover:border-[#deb753] hover:bg-white hover:text-[#14110e] shadow-xs"
+                aria-label="Ligar para Débora Gurgel Advogada"
+                className="grid size-10 place-items-center rounded-lg border border-[#e8dfd2] bg-[#faf8f5] text-[#4a433d] transition-all hover:border-[#cba273] hover:bg-white hover:text-[#0d121c] shadow-xs"
                 title={`Ligar: ${PHONE_DISPLAY}`}
               >
                 <Phone size={16} />
@@ -455,15 +479,15 @@ export default function Home() {
                 href={getWhatsAppUrl()}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="WhatsApp Dra. Michaely Silva"
-                className="grid size-10 place-items-center rounded-lg border border-[#e8dfd2] bg-[#faf7f2] text-[#4c433a] transition-all hover:border-[#deb753] hover:bg-white hover:text-[#14110e] shadow-xs"
+                aria-label="WhatsApp Dra. Débora Gurgel"
+                className="grid size-10 place-items-center rounded-lg border border-[#e8dfd2] bg-[#faf8f5] text-[#4a433d] transition-all hover:border-[#cba273] hover:bg-white hover:text-[#0d121c] shadow-xs"
                 title="Atendimento no WhatsApp"
               >
                 <WhatsAppIcon size={18} />
               </a>
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá, Dra. Michaely! Gostaria de agendar uma consulta e receber orientação jurídica para o meu caso."
+                  "Olá, Dra. Débora! Gostaria de agendar uma consulta e receber orientação jurídica para o meu caso."
                 )}
                 target="_blank"
                 size="sm"
@@ -479,7 +503,7 @@ export default function Home() {
               aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
               aria-expanded={menuOpen}
               aria-controls="mobile-navigation"
-              className="grid size-11 place-items-center rounded-lg border border-[#e8dfd2] bg-[#faf7f2] text-[#14110e] lg:hidden shadow-xs"
+              className="grid size-11 place-items-center rounded-lg border border-[#e8dfd2] bg-[#faf8f5] text-[#0d121c] lg:hidden shadow-xs"
               onClick={() => setMenuOpen((open) => !open)}
             >
               {menuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -495,14 +519,14 @@ export default function Home() {
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.22 }}
-                className="overflow-hidden border-t border-[#e8dfd2] bg-white px-6 text-[#14110e] lg:hidden"
+                className="overflow-hidden border-t border-[#e8dfd2] bg-white px-6 text-[#0d121c] lg:hidden"
               >
                 <div className="mx-auto flex max-w-7xl flex-col gap-1 py-4">
                   {[
                     ["Início", "#inicio"],
-                    ["Dra. Michaely Silva", "#sobre"],
+                    ["Dra. Débora Gurgel", "#sobre"],
                     ["Áreas de Atuação", "#atuacao"],
-                    ["Por Que Escolher", "#diferenciais"],
+                    ["18 Anos de Experiência", "#diferenciais"],
                     ["Avaliações (5,0 ★)", "#avaliacoes"],
                     ["Contato & Sede", "#contato"],
                   ].map(([label, href]) => (
@@ -510,16 +534,16 @@ export default function Home() {
                       key={label}
                       href={href}
                       onClick={closeMenu}
-                      className="py-3 text-sm font-medium text-[#4c433a] hover:text-[#8e6318]"
+                      className="py-3 text-sm font-medium text-[#4a433d] hover:text-[#a46d2f]"
                     >
                       {label}
                     </a>
                   ))}
                   <div className="mt-3 flex flex-col gap-2">
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#8e6318] via-[#c59a3f] to-[#8e6318] px-5 py-3.5 text-xs font-bold uppercase tracking-[0.13em] text-white shadow-md transition-all hover:brightness-105"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#a46d2f] via-[#cba273] to-[#a46d2f] px-5 py-3.5 text-xs font-bold uppercase tracking-[0.13em] text-white shadow-md transition-all hover:brightness-105"
                       href={getWhatsAppUrl(
-                        "Olá, Dra. Michaely! Gostaria de falar sobre o meu caso e receber orientação jurídica."
+                        "Olá, Dra. Débora! Gostaria de falar sobre o meu caso e receber orientação jurídica."
                       )}
                       target="_blank"
                       rel="noreferrer"
@@ -528,13 +552,13 @@ export default function Home() {
                       <WhatsAppIcon size={16} /> WhatsApp: {PHONE_DISPLAY}
                     </a>
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#e8dfd2] bg-[#faf7f2] px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-[#14110e] transition-all hover:border-[#deb753]"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#e8dfd2] bg-[#faf8f5] px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-[#0d121c] transition-all hover:border-[#cba273]"
                       href={GOOGLE_SEARCH_URL}
                       target="_blank"
                       rel="noreferrer"
                       onClick={closeMenu}
                     >
-                      <GoogleIcon size={15} /> 5,0 ★ no Google (17 avaliações)
+                      <GoogleIcon size={15} /> 5,0 ★ no Google (13 avaliações)
                     </a>
                   </div>
                 </div>
@@ -543,14 +567,14 @@ export default function Home() {
           </AnimatePresence>
         </header>
 
-        {/* Hero Section - Warm Ivory & Travertine Canvas with Polished Gold Lighting */}
+        {/* Hero Section - Warm Ivory & Champagne Gold Elegance */}
         <section
           id="inicio"
           className="relative isolate scroll-mt-24 border-b border-[#e8dfd2] bg-gradient-to-b from-white via-[#faf8f5] to-[#f4efe6]"
         >
-          {/* Subtle warm gold ambient aura */}
-          <div className="pointer-events-none absolute -right-32 top-8 -z-10 size-[36rem] rounded-full bg-[#deb753]/12 blur-3xl" />
-          <div className="pointer-events-none absolute -left-20 bottom-10 -z-10 size-[28rem] rounded-full bg-[#c59a3f]/10 blur-3xl" />
+          {/* Subtle warm champagne gold ambient aura */}
+          <div className="pointer-events-none absolute -right-32 top-8 -z-10 size-[36rem] rounded-full bg-[#cba273]/12 blur-3xl" />
+          <div className="pointer-events-none absolute -left-20 bottom-10 -z-10 size-[28rem] rounded-full bg-[#eece9e]/15 blur-3xl" />
 
           <div className="mx-auto grid min-h-[660px] max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 sm:py-20 lg:min-h-[720px] lg:grid-cols-[1.1fr_0.9fr] lg:gap-12 lg:px-12 lg:py-20">
             <motion.div
@@ -561,35 +585,35 @@ export default function Home() {
             >
               <motion.div
                 variants={reveal}
-                className="mb-6 inline-flex items-center gap-2.5 rounded-lg border border-[#deb753]/40 bg-white px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-[#8e6318] shadow-xs"
+                className="mb-6 inline-flex items-center gap-2.5 rounded-lg border border-[#cba273]/50 bg-white px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-[#7d5120] shadow-xs"
               >
-                <span className="size-2 shrink-0 rounded-full bg-[#8e6318]" />
-                <span>MICHAELY SILVA | ADVOGADA · JOÃO PINHEIRO - MG</span>
+                <span className="size-2 shrink-0 rounded-full bg-[#a46d2f]" />
+                <span>18 ANOS DE EXPERIÊNCIA · ITABIRITO - MG</span>
               </motion.div>
 
               <motion.h1
                 variants={reveal}
-                className="max-w-[760px] font-serif text-[2.5rem] leading-[1.1] tracking-[-0.02em] text-[#14110e] sm:text-5xl lg:text-[3.75rem]"
+                className="max-w-[760px] font-serif text-[2.5rem] leading-[1.1] tracking-[-0.02em] text-[#0d121c] sm:text-5xl lg:text-[3.75rem]"
               >
-                Defesa Firme dos Seus Direitos e Cuidado Real com a Sua Família:{" "}
-                <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#8e6318] via-[#c59a3f] to-[#5a3c08]">
-                  Atuação Jurídica Estratégica, Humanizada e Resolutiva.
+                Defesa Firme do Seu Patrimônio e Segurança Para o Seu Futuro:{" "}
+                <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#7d5120] via-[#cba273] to-[#5d3618]">
+                  Atuação Jurídica Estratégica, Ética e Resolutiva.
                 </span>
               </motion.h1>
 
               <motion.p
                 variants={reveal}
-                className="mt-7 max-w-xl text-[15px] leading-7 text-[#4c433a] sm:text-base sm:leading-8"
+                className="mt-7 max-w-xl text-[15px] leading-7 text-[#4a433d] sm:text-base sm:leading-8"
               >
-                Liderado pela{" "}
-                <strong className="font-semibold text-[#14110e]">
-                  Dra. Michaely Pereira Silva
+                Sob a liderança da{" "}
+                <strong className="font-semibold text-[#0d121c]">
+                  Dra. Débora Gurgel
                 </strong>
-                , advogada civil em João Pinheiro - MG com pós-graduação em Direito Bancário e Direito do Trabalho. Foco especializado em{" "}
-                <strong className="font-semibold text-[#14110e]">
-                  Direito do Consumidor, Direito de Família e Inventários (Judiciais e Extrajudiciais)
+                , com 18 anos de sólida trajetória jurídica em Itabirito e Minas Gerais. Atendimento altamente especializado e humanizado em{" "}
+                <strong className="font-semibold text-[#0d121c]">
+                  Direito Possessório e Regularização de Imóveis, Inventários e Partilha de Bens, Planejamento Previdenciário e Benefícios do INSS
                 </strong>
-                , oferecendo orientação jurídica transparente, acolhimento empático e soluções ágeis para você e sua família.
+                , conduzindo cada caso com proximidade, clareza e dedicação pessoal.
               </motion.p>
 
               <motion.div
@@ -598,18 +622,18 @@ export default function Home() {
               >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Michaely! Gostaria de agendar uma consulta sobre Direito de Família / Consumidor / Inventário."
+                    "Olá, Dra. Débora! Gostaria de agendar uma consulta sobre Direito Possessório / Inventário / Previdenciário."
                   )}
                   target="_blank"
                   size="lg"
                   variant="gold"
                   className="rounded-lg shadow-md"
                 >
-                  <WhatsAppIcon size={16} /> Falar no WhatsApp com a Dra. Michaely
+                  <WhatsAppIcon size={16} /> Falar no WhatsApp com a Dra. Débora
                 </GlowingButton>
                 <a
                   href="#atuacao"
-                  className="group inline-flex items-center gap-2 rounded-lg border border-[#e8dfd2] bg-white px-5 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#14110e] shadow-xs transition-all hover:border-[#deb753] hover:bg-[#faf7f2]"
+                  className="group inline-flex items-center gap-2 rounded-lg border border-[#e8dfd2] bg-white px-5 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#0d121c] shadow-xs transition-all hover:border-[#cba273] hover:bg-[#faf8f5]"
                 >
                   Conhecer Especialidades{" "}
                   <ArrowRight
@@ -627,28 +651,28 @@ export default function Home() {
                   href={GOOGLE_SEARCH_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 font-medium text-[#14110e] transition-colors hover:text-[#8e6318]"
+                  className="inline-flex items-center gap-2 font-medium text-[#0d121c] transition-colors hover:text-[#a46d2f]"
                 >
-                  <Star size={15} className="fill-[#deb753] text-[#deb753]" /> 5,0 estrelas no Google (17 avaliações autênticas)
+                  <Star size={15} className="fill-[#cba273] text-[#cba273]" /> 5,0 estrelas no Google (13 avaliações autênticas)
                 </a>
-                <span className="inline-flex items-center gap-2 font-medium">
-                  <Award size={15} className="text-[#8e6318]" /> Aprovada no 9º Período
+                <span className="inline-flex items-center gap-2 font-medium text-[#0d121c]">
+                  <Award size={15} className="text-[#a46d2f]" /> 18 Anos de Advocacia
                 </span>
-                <span className="inline-flex items-center gap-2 font-medium">
-                  <MapPin size={15} className="text-[#8e6318]" /> R. Astolfo Moreira, 305 A · Centro
+                <span className="inline-flex items-center gap-2 font-medium text-[#0d121c]">
+                  <MapPin size={15} className="text-[#a46d2f]" /> Av. Queiroz Júnior, 211 · Centro
                 </span>
                 <a
                   href={INSTAGRAM_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 font-medium text-[#14110e] transition-colors hover:text-[#8e6318]"
+                  className="inline-flex items-center gap-2 font-medium text-[#0d121c] transition-colors hover:text-[#a46d2f]"
                 >
-                  <InstagramIcon size={15} className="text-[#8e6318]" /> {INSTAGRAM_HANDLE}
+                  <InstagramIcon size={15} className="text-[#a46d2f]" /> {INSTAGRAM_HANDLE}
                 </a>
               </motion.div>
             </motion.div>
 
-            {/* Hero Visual Presentation - Dra. Michaely Silva Portrait */}
+            {/* Hero Visual Presentation - Dra. Débora Gurgel Portrait */}
             <motion.div
               initial={{ opacity: 0, scale: 0.97, y: 18 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -659,34 +683,34 @@ export default function Home() {
               }}
               className="relative mx-auto w-full max-w-[490px] lg:ml-auto lg:mr-2"
             >
-              <div className="relative aspect-[4/4.9] overflow-hidden rounded-2xl border-2 border-[#e8dfd2] bg-white shadow-xl ring-1 ring-[#deb753]/20">
+              <div className="relative aspect-[4/4.9] overflow-hidden rounded-2xl border-2 border-[#e8dfd2] bg-white shadow-xl ring-1 ring-[#cba273]/30">
                 <Image
                   src={FOTO_HERO_SRC}
-                  alt="Dra. Michaely Pereira Silva — Advogada em João Pinheiro - MG"
+                  alt="Dra. Débora Gurgel — Advogada em Itabirito - MG"
                   fill
                   priority
                   unoptimized
                   className="object-cover object-top"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#14110e] via-[#14110e]/75 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#0b111e] via-[#0b111e]/75 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-3 text-white sm:bottom-8 sm:left-8 sm:right-8">
                   <div>
                     <p className="font-serif text-2xl font-normal tracking-wide text-white">
-                      Dra. Michaely Pereira Silva
+                      Dra. Débora Gurgel
                     </p>
-                    <p className="mt-1 text-[10px] uppercase tracking-[0.2em] text-[#deb753]">
-                      Consumidor · Família · Inventários
+                    <p className="mt-1 text-[10px] uppercase tracking-[0.2em] text-[#eece9e]">
+                      Possessório · Inventários · Previdenciário
                     </p>
                   </div>
-                  <span className="grid size-11 shrink-0 place-items-center rounded-lg border border-[#deb753]/40 bg-[#14110e]/85 text-[#f7e5a9] backdrop-blur-sm">
+                  <span className="grid size-11 shrink-0 place-items-center rounded-lg border border-[#cba273]/40 bg-[#0b111e]/85 text-[#fdefca] backdrop-blur-sm">
                     <Scale size={18} />
                   </span>
                 </div>
               </div>
 
               {/* Floating authority badge */}
-              <div className="absolute -left-3 top-6 z-10 rounded-lg border border-[#deb753]/40 bg-white/95 px-4 py-2 text-[10px] font-bold tracking-[0.14em] text-[#8e6318] shadow-md backdrop-blur-md sm:-left-5">
-                JOÃO PINHEIRO - MG · ATENDIMENTO ON-LINE EM TODO O BRASIL
+              <div className="absolute -left-3 top-6 z-10 rounded-lg border border-[#cba273]/40 bg-white/95 px-4 py-2 text-[10px] font-bold tracking-[0.14em] text-[#7d5120] shadow-md backdrop-blur-md sm:-left-5">
+                ITABIRITO - MG · ATENDIMENTO ON-LINE EM TODO O BRASIL
               </div>
 
               {/* Floating Google 5.0 Star Rating */}
@@ -694,24 +718,24 @@ export default function Home() {
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="group absolute -bottom-5 -right-3 z-10 rounded-xl border border-[#deb753]/40 bg-white/95 p-3.5 shadow-md backdrop-blur-md transition-all hover:border-[#8e6318] hover:bg-white sm:-right-5"
+                className="group absolute -bottom-5 -right-3 z-10 rounded-xl border border-[#cba273]/40 bg-white/95 p-3.5 shadow-md backdrop-blur-md transition-all hover:border-[#a46d2f] hover:bg-white sm:-right-5"
               >
                 <div className="flex items-center gap-2">
                   <GoogleIcon size={17} />
                   <div className="flex items-center gap-1.5">
-                    <div className="flex gap-0.5 text-[#deb753]">
-                      <Star size={13} className="fill-[#deb753] text-[#deb753]" />
+                    <div className="flex gap-0.5 text-[#cba273]">
+                      <Star size={13} className="fill-[#cba273] text-[#cba273]" />
                     </div>
-                    <span className="font-serif text-base font-bold text-[#14110e]">
+                    <span className="font-serif text-base font-bold text-[#0d121c]">
                       5,0
                     </span>
-                    <span className="text-[10px] uppercase tracking-wider text-[#8e6318]">
+                    <span className="text-[10px] uppercase tracking-wider text-[#a46d2f]">
                       / 5,0
                     </span>
                   </div>
                 </div>
                 <p className="mt-1 text-[9px] font-semibold uppercase tracking-wider text-[#5c5042]">
-                  17 Avaliações no Google
+                  13 Avaliações no Google
                 </p>
               </a>
             </motion.div>
@@ -726,20 +750,20 @@ export default function Home() {
           <div className="mx-auto grid max-w-7xl gap-7 px-5 py-8 sm:grid-cols-4 sm:gap-4 sm:px-8 lg:px-12">
             {[
               [
+                "18 Anos de Atuação",
+                "quase duas décadas de advocacia pautada na ética, técnica e resolutividade",
+              ],
+              [
                 "5,0 ★ no Google",
-                "nota máxima com 17 avaliações autênticas destacando empatia e clareza didática",
+                "nota máxima com 13 avaliações comprovando presença e informações precisas",
               ],
               [
-                "Família & Inventários",
-                "soluções céleres para divórcio, pensão, guarda e partilha de herança em cartório",
+                "Possessório & Inventários",
+                "regularização de imóveis, usucapião e partilha de herança célere em cartório",
               ],
               [
-                "Consumidor & Bancário",
-                "combate a negativas indevidas, golpes digitais e abusos do sistema financeiro",
-              ],
-              [
-                "João Pinheiro - MG",
-                "sede no Centro da cidade e atendimento digital disponível para todo o Brasil",
+                "Sede em Itabirito - MG",
+                "escritório no Centro de Itabirito e atendimento digital em todo o Brasil",
               ],
             ].map(([value, label], index) => (
               <div
@@ -750,7 +774,7 @@ export default function Home() {
                     : "flex items-center gap-4 sm:justify-center"
                 }
               >
-                <span className="font-serif text-xl font-semibold text-[#8e6318] sm:text-2xl">
+                <span className="font-serif text-xl font-semibold text-[#a46d2f] sm:text-2xl">
                   {value}
                 </span>
                 <span className="max-w-[165px] text-[11px] leading-5 text-[#5c5042]">
@@ -761,13 +785,13 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Sobre a Dra. Michaely Silva - Editorial Canvas */}
+        {/* Sobre a Dra. Débora Gurgel - Editorial Canvas */}
         <section
           id="sobre"
-          className="scroll-mt-24 border-y border-[#e8dfd2] bg-[#faf7f2] py-20 text-[#14110e] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-y border-[#e8dfd2] bg-[#faf8f5] py-20 text-[#0d121c] sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20 lg:px-12">
-            {/* Visual presentation - Infográfico "Quem sou eu" */}
+            {/* Visual presentation - Dra. Débora Gurgel portrait with refined frame */}
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -775,36 +799,45 @@ export default function Home() {
               variants={reveal}
               className="relative mx-auto w-full max-w-[480px]"
             >
-              <div className="relative aspect-[9/14] overflow-hidden rounded-2xl border-2 border-[#e8dfd2] bg-white shadow-2xl">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border-2 border-[#e8dfd2] bg-white shadow-2xl ring-1 ring-[#cba273]/30">
                 <Image
-                  src={FOTO_INFOGRAFICO_SRC}
-                  alt="Apresentação Quem Sou Eu — Dra. Michaely Pereira Silva"
+                  src={FOTO_HERO_SRC}
+                  alt="Dra. Débora Gurgel — Advocacia e Consultoria Jurídica"
                   fill
                   unoptimized
-                  className="object-contain bg-white"
+                  className="object-cover object-top"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0b111e]/80 via-transparent to-transparent" />
+                <div className="absolute bottom-6 left-6 right-6 text-white">
+                  <p className="font-cinzel text-xl font-bold tracking-wider text-[#fdefca]">
+                    DÉBORA GURGEL
+                  </p>
+                  <p className="mt-1 text-xs font-medium uppercase tracking-[0.18em] text-stone-200">
+                    Advocacia e Consultoria Jurídica
+                  </p>
+                </div>
               </div>
 
               {/* Authority badge card */}
-              <div className="absolute -bottom-6 right-3 max-w-[340px] rounded-xl border border-[#deb753]/40 bg-white px-5 py-4 shadow-xl sm:-right-6 sm:px-6">
-                <div className="flex items-center gap-2 text-[#8e6318]">
+              <div className="absolute -bottom-6 right-3 max-w-[340px] rounded-xl border border-[#cba273]/40 bg-white px-5 py-4 shadow-xl sm:-right-6 sm:px-6">
+                <div className="flex items-center gap-2 text-[#a46d2f]">
                   <Sparkles size={16} />
-                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#8e6318]">
-                    Dedicação · Ética · Acolhimento
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#7d5120]">
+                    18 Anos de Experiência Jurídica
                   </p>
                 </div>
-                <p className="mt-1 font-serif text-lg leading-snug text-[#14110e]">
-                  Dra. Michaely Pereira Silva
+                <p className="mt-1 font-serif text-lg leading-snug text-[#0d121c]">
+                  Dra. Débora Gurgel
                 </p>
-                <p className="mt-0.5 text-[11px] font-medium text-[#8e6318]">
-                  Pós-Graduada: Bancário • Trabalho
+                <p className="mt-0.5 text-[11px] font-medium text-[#a46d2f]">
+                  Advocacia Cível & Previdenciária
                 </p>
                 <p className="mt-1 text-[11px] leading-4 text-[#5c5042]">
-                  R. Astolfo Moreira, 305 A - Centro · João Pinheiro - MG
+                  Av. Queiroz Júnior, 211 - 2º andar, loja 6 · Centro, Itabirito - MG
                 </p>
               </div>
 
-              <span className="absolute -left-4 -top-4 -z-10 size-24 border-l-2 border-t-2 border-[#deb753]/40 sm:-left-7 sm:-top-7 sm:size-32" />
+              <span className="absolute -left-4 -top-4 -z-10 size-24 border-l-2 border-t-2 border-[#cba273]/40 sm:-left-7 sm:-top-7 sm:size-32" />
             </motion.div>
 
             {/* Story & Biography */}
@@ -816,46 +849,46 @@ export default function Home() {
             >
               <motion.div
                 variants={reveal}
-                className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#deb753]/40 bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#8e6318] shadow-xs"
+                className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#cba273]/40 bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#7d5120] shadow-xs"
               >
-                <span className="size-2 shrink-0 rounded-full bg-[#8e6318]" />
-                <span>QUEM É A DRA. MICHAELY PEREIRA SILVA</span>
+                <span className="size-2 shrink-0 rounded-full bg-[#a46d2f]" />
+                <span>QUEM É A DRA. DÉBORA GURGEL</span>
               </motion.div>
 
               <motion.h2
                 variants={reveal}
-                className="font-serif text-3xl leading-[1.14] tracking-[-0.02em] text-[#14110e] sm:text-4xl lg:text-[3.25rem]"
+                className="font-serif text-3xl leading-[1.14] tracking-[-0.02em] text-[#0d121c] sm:text-4xl lg:text-[3.25rem]"
               >
-                Uma advocacia que escuta, acolhe e resolve:{" "}
-                <span className="italic text-[#8e6318]">
-                  clareza que traz segurança e técnica firme para proteger seus direitos.
+                Uma advocacia que une quase duas décadas de técnica:{" "}
+                <span className="italic text-[#a46d2f]">
+                  presença contínua, informações precisas e compromisso real com seus direitos.
                 </span>
               </motion.h2>
 
               <motion.p
                 variants={reveal}
-                className="mt-6 max-w-xl text-[15px] leading-7 text-[#4c433a]"
+                className="mt-6 max-w-xl text-[15px] leading-7 text-[#4a433d]"
               >
                 Com sede no Centro de{" "}
-                <strong className="font-bold text-[#14110e]">
-                  João Pinheiro - MG
+                <strong className="font-bold text-[#0d121c]">
+                  Itabirito - MG
                 </strong>{" "}
-                e atendimento on-line em todo o território nacional, a Dra. Michaely Pereira Silva representa uma advocacia dinâmica, moderna e verdadeiramente humana. Com 25 anos e aprovação na OAB conquistada com destaque precoce ainda durante o{" "}
-                <strong className="font-bold text-[#14110e]">
-                  9º período da faculdade
-                </strong>
-                , ela alia dedicação incansável e sólida base acadêmica.
+                e atuação presencial em toda a Região Central de Minas Gerais e digital para clientes em todo o Brasil, a{" "}
+                <strong className="font-bold text-[#0d121c]">
+                  Dra. Débora Gurgel
+                </strong>{" "}
+                acumula mais de 18 anos de experiência pautada na ética inabalável, resolutividade e dedicação pessoal a cada caso.
               </motion.p>
 
               <motion.p
                 variants={reveal}
-                className="mt-4 max-w-xl text-[15px] leading-7 text-[#4c433a]"
+                className="mt-4 max-w-xl text-[15px] leading-7 text-[#4a433d]"
               >
-                Com pós-graduação nas áreas de{" "}
-                <strong className="font-bold text-[#14110e]">
-                  Direito Bancário e Direito do Trabalho
+                Especialista em{" "}
+                <strong className="font-bold text-[#0d121c]">
+                  Advocacia Cível (com ênfase expressiva em Direito Possessório, Usucapião e Inventários) e Advocacia Previdenciária (Planejamento Previdenciário e Concessão de Benefícios do INSS)
                 </strong>
-                , seu trabalho é amplamente reconhecido pela clareza didática. Em vez de termos incompreensíveis, ela explica cada alternativa de forma simples e acolhedora, garantindo que você compreenda seus direitos e participe com confiança de cada decisão sobre seu patrimônio e sua família.
+                , seu diferencial é o acompanhamento transparente: o cliente nunca fica sem resposta, tendo acesso a informações claras e precisas do início até o desfecho vitorioso do processo.
               </motion.p>
 
               {/* Client Quote Card from real reviews */}
@@ -863,57 +896,57 @@ export default function Home() {
                 variants={reveal}
                 className="mt-6 rounded-xl border border-[#e8dfd2] bg-white p-5 shadow-xs"
               >
-                <blockquote className="font-serif text-sm italic leading-relaxed text-[#14110e]">
-                  &ldquo;Atendimento excelente, a Dra demonstra muito conhecimento é empática, soube esclarecer minhas dúvidas de forma fácil pra eu entender. Adorei o atendimento super recomendo.&rdquo;
+                <blockquote className="font-serif text-sm italic leading-relaxed text-[#0d121c]">
+                  &ldquo;Dra. Débora é muito competente, comprometida e o resultado é garantido. Do começo ao fim do processo que iniciei com ela, esteve presente e com informações precisas. Gratidão.&rdquo;
                 </blockquote>
-                <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-[#8e6318]">
-                  — Soane Ferreira · Avaliação Verificada no Google Meu Negócio (5,0 ★)
+                <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-[#a46d2f]">
+                  — Tatiane Franca · Avaliação Verificada no Google Meu Negócio (5,0 ★)
                 </p>
               </motion.div>
 
-              {/* Personality & Profile Cards from the creative */}
+              {/* Personality & Profile Cards */}
               <motion.div
                 variants={reveal}
                 className="mt-6 grid grid-cols-2 gap-3 text-xs sm:grid-cols-3"
               >
                 <div className="rounded-lg border border-[#e8dfd2] bg-white p-3 shadow-xs">
-                  <p className="font-bold text-[#14110e]">25 Anos</p>
+                  <p className="font-bold text-[#0d121c]">18 Anos de Experiência</p>
                   <p className="mt-0.5 text-[11px] text-[#6b5d50]">
-                    Dinamismo, agilidade & dedicação integral
+                    Solidez, maturidade técnica & autoridade
                   </p>
                 </div>
                 <div className="rounded-lg border border-[#e8dfd2] bg-white p-3 shadow-xs">
-                  <p className="font-bold text-[#14110e]">Aprovada no 9º Período</p>
+                  <p className="font-bold text-[#0d121c]">Presença Contínua</p>
                   <p className="mt-0.5 text-[11px] text-[#6b5d50]">
-                    Destaque acadêmico & rigor técnico precoce
+                    Informações precisas do início ao fim
                   </p>
                 </div>
                 <div className="rounded-lg border border-[#e8dfd2] bg-white p-3 shadow-xs col-span-2 sm:col-span-1">
-                  <p className="font-bold text-[#14110e]">Pós-Graduada</p>
+                  <p className="font-bold text-[#0d121c]">Atuação Integrada</p>
                   <p className="mt-0.5 text-[11px] text-[#6b5d50]">
-                    Direito Bancário • Direito do Trabalho
+                    Cível, Possessório & Previdenciário
                   </p>
                 </div>
               </motion.div>
 
               <motion.div
                 variants={reveal}
-                className="mt-6 grid grid-cols-1 gap-2.5 text-xs font-semibold text-[#14110e] sm:grid-cols-2"
+                className="mt-6 grid grid-cols-1 gap-2.5 text-xs font-semibold text-[#0d121c] sm:grid-cols-2"
               >
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#8e6318]" />
-                  <span>Sede na R. Astolfo Moreira, 305 A - Centro · João Pinheiro</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#a46d2f]" />
+                  <span>Sede na Av. Queiroz Júnior, 211 - Centro · Itabirito</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#8e6318]" />
-                  <span>Nota máxima 5,0 ★ no Google com 17 avaliações</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#a46d2f]" />
+                  <span>Nota máxima 5,0 ★ no Google com 13 avaliações</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#8e6318]" />
-                  <span>Contato direto pelo WhatsApp, sem robôs ou intermediários</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#a46d2f]" />
+                  <span>Contato direto pelo WhatsApp, com atenção pessoal</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#8e6318]" />
+                  <CheckCircle2 size={15} className="shrink-0 text-[#a46d2f]" />
                   <span>Atendimento presencial em Minas Gerais e digital para o Brasil</span>
                 </div>
               </motion.div>
@@ -924,18 +957,18 @@ export default function Home() {
               >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Michaely! Gostaria de agendar uma consulta para conversar diretamente sobre meu caso."
+                    "Olá, Dra. Débora! Gostaria de agendar uma consulta para conversar diretamente sobre meu caso."
                   )}
                   target="_blank"
                   size="md"
                   variant="gold"
                   className="rounded-lg shadow-md"
                 >
-                  <WhatsAppIcon size={16} /> Falar com a Dra. Michaely
+                  <WhatsAppIcon size={16} /> Falar com a Dra. Débora
                 </GlowingButton>
                 <a
                   href={`tel:+${WHATSAPP_NUMBER}`}
-                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#14110e] transition-colors hover:text-[#8e6318]"
+                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#0d121c] transition-colors hover:text-[#a46d2f]"
                 >
                   <Phone size={15} /> {PHONE_DISPLAY}
                 </a>
@@ -960,11 +993,11 @@ export default function Home() {
               <Heading
                 light
                 eyebrow="ÁREAS DE ATUAÇÃO & ESPECIALIDADES"
-                description="Atuação jurídica minuciosa, preventiva e contenciosa nas principais áreas do Direito, com foco em resolver demandas com celeridade e segurança."
+                description="Atuação jurídica altamente estratégica, preventiva e contenciosa, focada em resolver litígios possessórios, partilhas de herança e aposentadorias com celeridade e segurança."
               >
-                Soluções jurídicas estratégicas em{" "}
-                <span className="italic text-[#8e6318]">
-                  João Pinheiro, Noroeste de Minas e em todo o Brasil.
+                Soluções jurídicas experientes em{" "}
+                <span className="italic text-[#a46d2f]">
+                  Itabirito, Região Central de Minas Gerais e em todo o Brasil.
                 </span>
               </Heading>
               <p className="max-w-[270px] pb-1 text-xs leading-6 text-[#5c5042]">
@@ -985,22 +1018,22 @@ export default function Home() {
                   <motion.article
                     key={area.id}
                     variants={reveal}
-                    className="group flex min-h-[350px] flex-col rounded-xl border border-[#e8dfd2] bg-white p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#deb753] hover:shadow-lg sm:p-8"
+                    className="group flex min-h-[350px] flex-col rounded-xl border border-[#e8dfd2] bg-white p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#cba273] hover:shadow-lg sm:p-8"
                   >
                     <div className="flex items-start justify-between">
-                      <span className="grid size-12 place-items-center rounded-lg border border-[#deb753]/30 bg-[#faf7f2] text-[#8e6318] shadow-xs transition-colors group-hover:bg-[#8e6318] group-hover:text-white">
+                      <span className="grid size-12 place-items-center rounded-lg border border-[#cba273]/30 bg-[#faf8f5] text-[#a46d2f] shadow-xs transition-colors group-hover:bg-[#a46d2f] group-hover:text-white">
                         <Icon size={22} strokeWidth={1.5} />
                       </span>
-                      <span className="font-serif text-2xl text-[#deb753]/60">
+                      <span className="font-serif text-2xl text-[#cba273]/60">
                         0{index + 1}
                       </span>
                     </div>
 
                     <div className="mt-6">
-                      <span className="inline-block rounded-md border border-[#deb753]/30 bg-[#f4efe6] px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-[#5a3c08] shadow-xs">
+                      <span className="inline-block rounded-md border border-[#cba273]/30 bg-[#f4efe6] px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-[#5d3618] shadow-xs">
                         {area.tag}
                       </span>
-                      <h3 className="mt-3 font-serif text-[1.45rem] leading-tight text-[#14110e]">
+                      <h3 className="mt-3 font-serif text-[1.45rem] leading-tight text-[#0d121c]">
                         {area.title}
                       </h3>
                       <p className="mt-3 text-[13px] leading-6 text-[#5c5042]">
@@ -1011,7 +1044,7 @@ export default function Home() {
                     <button
                       type="button"
                       onClick={() => setActiveArea(area)}
-                      className="group/link mt-auto inline-flex w-fit items-center gap-2 pt-6 text-[10px] font-bold uppercase tracking-[0.16em] text-[#8e6318] hover:text-[#14110e]"
+                      className="group/link mt-auto inline-flex w-fit items-center gap-2 pt-6 text-[10px] font-bold uppercase tracking-[0.16em] text-[#a46d2f] hover:text-[#0d121c]"
                     >
                       Ver detalhes e pedidos{" "}
                       <ArrowRight
@@ -1026,26 +1059,26 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Por Que Escolher a Dra. Michaely Silva - Diferenciais */}
+        {/* Por Que Escolher a Dra. Débora Gurgel - Diferenciais */}
         <section
           id="diferenciais"
-          className="scroll-mt-24 border-t border-[#e8dfd2] bg-[#faf7f2] py-20 text-[#14110e] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#e8dfd2] bg-[#faf8f5] py-20 text-[#0d121c] sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
               <Heading
                 light
-                eyebrow="NOSSOS PILARES DE EXCELÊNCIA"
-                description="Seu patrimônio, sua família e seus direitos são preciosos demais para ficarem em mãos desatentas ou presos em burocracias sem resposta."
+                eyebrow="18 ANOS DE EXCELÊNCIA & RESULTADOS"
+                description="Seu patrimônio, sua aposentadoria e sua família exigem a experiência consolidada de quase duas décadas de atuação jurídica com ética e transparência."
               >
                 Por que confiar seu caso à{" "}
-                <span className="italic text-[#8e6318]">
-                  Dra. Michaely Pereira Silva?
+                <span className="italic text-[#a46d2f]">
+                  Dra. Débora Gurgel?
                 </span>
               </Heading>
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá, Dra. Michaely! Gostaria de uma avaliação para a minha situação jurídica."
+                  "Olá, Dra. Débora! Gostaria de uma avaliação para a minha situação jurídica."
                 )}
                 target="_blank"
                 size="md"
@@ -1057,110 +1090,110 @@ export default function Home() {
             </div>
 
             <div className="mt-12 grid gap-8 lg:grid-cols-2">
-              {/* Card 1: Comunicação Clara e Empática */}
+              {/* Card 1: Presença Constante & Informações Precisas */}
               <motion.article
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65 }}
-                className="group flex flex-col justify-between rounded-xl border border-[#e8dfd2] bg-white p-7 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#deb753] hover:shadow-md sm:p-9"
+                className="group flex flex-col justify-between rounded-xl border border-[#e8dfd2] bg-white p-7 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#cba273] hover:shadow-md sm:p-9"
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#deb753]/30 bg-[#f4efe6] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#322003]">
-                      <HeartHandshake size={14} /> Atendimento Humanizado & Empático
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#cba273]/30 bg-[#f4efe6] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#3b220d]">
+                      <HeartHandshake size={14} /> Atendimento Humanizado & Próximo
                     </span>
-                    <span className="text-xs font-semibold text-[#8e6318]">
-                      Sem Juridiquês
+                    <span className="text-xs font-semibold text-[#a46d2f]">
+                      Informações Precisas
                     </span>
                   </div>
-                  <h3 className="mt-4 font-serif text-2xl leading-tight text-[#14110e] sm:text-[1.75rem]">
-                    Você Entende Cada Passo do Seu Processo com Tranquilidade
+                  <h3 className="mt-4 font-serif text-2xl leading-tight text-[#0d121c] sm:text-[1.75rem]">
+                    Você Acompanha Cada Etapa com Clareza e Sem Incertezas
                   </h3>
-                  <p className="mt-3 text-[14px] leading-relaxed text-[#4c433a]">
-                    Muitas pessoas chegam ao advogado com medo da complexidade das leis. Aqui, a Dra. Michaely explica cada detalhe com paciência e didática, garantindo que você tenha plena ciência dos seus direitos e saiba exatamente o que está acontecendo.
+                  <p className="mt-3 text-[14px] leading-relaxed text-[#4a433d]">
+                    Muitos clientes relatam angústia ao contratar advogados que somem e não prestam esclarecimentos. Aqui, a Dra. Débora Gurgel mantém uma rotina de presença e retorno constante, explicando cada andamento em linguagem clara e precisa.
                   </p>
-                  <ul className="mt-5 space-y-2 text-xs font-medium text-[#14110e]">
+                  <ul className="mt-5 space-y-2 text-xs font-medium text-[#0d121c]">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#8e6318]" />
-                      <span>Explicação clara e acessível em linguagem que qualquer pessoa compreende</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#a46d2f]" />
+                      <span>Comunicação direta pelo WhatsApp, sem intermediários ou robôs</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#8e6318]" />
-                      <span>Empatia com as dores e ansiedades em momentos delicados da vida</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#a46d2f]" />
+                      <span>Atualizações periódicas sobre prazos, audiências e andamentos cartorários</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#8e6318]" />
-                      <span>Transparência total sobre chances, riscos reais e prazos prováveis</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#a46d2f]" />
+                      <span>Transparência total sobre as chances reais, riscos e custos do processo</span>
                     </li>
                   </ul>
                 </div>
                 <div className="mt-7 border-t border-[#e8dfd2] pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dra. Michaely! Gostaria de tirar dúvidas sobre o meu caso em uma conversa sem burocracia."
+                      "Olá, Dra. Débora! Gostaria de tirar dúvidas sobre o meu caso em uma conversa sem burocracia."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#deb753]/40 bg-[#faf7f2] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#14110e] transition-all hover:border-[#8e6318] hover:bg-[#14110e] hover:text-[#f7e5a9]"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#cba273]/40 bg-[#faf8f5] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#0d121c] transition-all hover:border-[#a46d2f] hover:bg-[#0b111e] hover:text-[#fdefca]"
                   >
                     <span className="inline-flex items-center gap-2">
-                      <WhatsAppIcon size={15} /> Conversar no WhatsApp com a Dra. Michaely
+                      <WhatsAppIcon size={15} /> Conversar no WhatsApp com a Dra. Débora
                     </span>
                     <ArrowUpRight size={15} />
                   </a>
                 </div>
               </motion.article>
 
-              {/* Card 2: Agilidade e Soluções Extrajudiciais */}
+              {/* Card 2: 18 Anos de Experiência & Soluções Ágeis em Cartório */}
               <motion.article
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65, delay: 0.1 }}
-                className="group flex flex-col justify-between rounded-xl border border-[#e8dfd2] bg-white p-7 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#deb753] hover:shadow-md sm:p-9"
+                className="group flex flex-col justify-between rounded-xl border border-[#e8dfd2] bg-white p-7 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#cba273] hover:shadow-md sm:p-9"
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#deb753]/30 bg-[#f4efe6] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#322003]">
-                      <Users2 size={14} /> Foco em Resultados & Celeridade
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#cba273]/30 bg-[#f4efe6] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#3b220d]">
+                      <Compass size={14} /> Quase Duas Décadas de Prática
                     </span>
-                    <span className="text-xs font-semibold text-[#8e6318]">
-                      Cartório & Acordos Rápidos
+                    <span className="text-xs font-semibold text-[#a46d2f]">
+                      Cartório & Soluções Céleres
                     </span>
                   </div>
-                  <h3 className="mt-4 font-serif text-2xl leading-tight text-[#14110e] sm:text-[1.75rem]">
-                    Prioridade em Soluções Rápidas em Cartório Sem Demora Judicial
+                  <h3 className="mt-4 font-serif text-2xl leading-tight text-[#0d121c] sm:text-[1.75rem]">
+                    Prioridade em Vias Extrajudiciais Sem o Desgaste de Anos na Justiça
                   </h3>
-                  <p className="mt-3 text-[14px] leading-relaxed text-[#4c433a]">
-                    Sabemos que tempo é dinheiro e desgaste emocional. Sempre que os requisitos legais estão presentes, priorizamos inventários, divórcios e dissoluções de união estável em cartório, resolvendo partilhas em semanas com economia e paz.
+                  <p className="mt-3 text-[14px] leading-relaxed text-[#4a433d]">
+                    Com 18 anos de vivência nos tribunais e cartórios de Minas Gerais, a Dra. Débora prioriza soluções em cartório (usucapião extrajudicial, inventários consensuais e acordos amigáveis), poupando tempo precioso e custos tributários aos clientes.
                   </p>
-                  <ul className="mt-5 space-y-2 text-xs font-medium text-[#14110e]">
+                  <ul className="mt-5 space-y-2 text-xs font-medium text-[#0d121c]">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#8e6318]" />
-                      <span>Inventários extrajudiciais céleres sem arrastar processos por anos</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#a46d2f]" />
+                      <span>Inventários e partilhas extrajudiciais concluídos com rapidez em cartório</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#8e6318]" />
-                      <span>Acompanhamento direto pelo WhatsApp com retornos ágeis</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#a46d2f]" />
+                      <span>Regularização fundiária e usucapião administrativa para titulação definitiva</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#8e6318]" />
-                      <span>Planejamento financeiro e tributário para reduzir custos com ITCD e taxas</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#a46d2f]" />
+                      <span>Planejamento previdenciário para obter o teto máximo da aposentadoria</span>
                     </li>
                   </ul>
                 </div>
                 <div className="mt-7 border-t border-[#e8dfd2] pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dra. Michaely! Gostaria de consultar sobre a possibilidade de um inventário ou divórcio rápido em cartório."
+                      "Olá, Dra. Débora! Gostaria de consultar sobre a possibilidade de um inventário ou usucapião rápido em cartório."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#deb753]/40 bg-[#faf7f2] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#14110e] transition-all hover:border-[#8e6318] hover:bg-[#14110e] hover:text-[#f7e5a9]"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#cba273]/40 bg-[#faf8f5] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#0d121c] transition-all hover:border-[#a46d2f] hover:bg-[#0b111e] hover:text-[#fdefca]"
                   >
                     <span className="inline-flex items-center gap-2">
-                      <WhatsAppIcon size={15} /> Consultar Solução em Cartório no WhatsApp
+                      <WhatsAppIcon size={15} /> Consultar Solução Extrajudicial no WhatsApp
                     </span>
                     <ArrowUpRight size={15} />
                   </a>
@@ -1171,27 +1204,27 @@ export default function Home() {
         </section>
 
         {/* Método de Trabalho em 3 Passos */}
-        <section className="relative overflow-hidden border-t border-[#e8dfd2] bg-[#faf7f2] py-20 text-[#14110e] sm:py-24 lg:py-28">
-          <div className="pointer-events-none absolute -left-28 top-1/4 size-96 rounded-full bg-[#deb753]/10 blur-3xl" />
-          <div className="pointer-events-none absolute -right-28 bottom-1/4 size-96 rounded-full bg-[#deb753]/10 blur-3xl" />
+        <section className="relative overflow-hidden border-t border-[#e8dfd2] bg-[#faf8f5] py-20 text-[#0d121c] sm:py-24 lg:py-28">
+          <div className="pointer-events-none absolute -left-28 top-1/4 size-96 rounded-full bg-[#cba273]/10 blur-3xl" />
+          <div className="pointer-events-none absolute -right-28 bottom-1/4 size-96 rounded-full bg-[#eece9e]/12 blur-3xl" />
 
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.88fr_1.12fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
                 light
                 eyebrow="COMO ATUAMOS NO SEU CASO"
-                description="Um método transparente, técnico e humanizado para analisar sua situação e aplicar a solução jurídica mais rápida e segura."
+                description="Um método transparente, ético e resolutivo para analisar sua situação e aplicar a solução jurídica mais rápida e segura."
               >
                 Três etapas claras para{" "}
-                <span className="italic text-[#8e6318]">
-                  proteger seu patrimônio e defender seus direitos.
+                <span className="italic text-[#a46d2f]">
+                  proteger seu patrimônio, sua família e seus direitos.
                 </span>
               </Heading>
 
-              <blockquote className="mt-8 rounded-xl border border-[#e8dfd2] bg-white p-6 font-serif text-base italic leading-7 text-[#14110e] shadow-xs">
-                &ldquo;Cada caso envolve vidas, famílias e expectativas reais. Meu compromisso é garantir que você se sinta acolhido e seguro, sabendo que sua causa está sendo cuidada com o máximo rigor técnico e atenção pessoal.&rdquo;
-                <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-[#8e6318]">
-                  — Dra. Michaely Pereira Silva · Advogada
+              <blockquote className="mt-8 rounded-xl border border-[#e8dfd2] bg-white p-6 font-serif text-base italic leading-7 text-[#0d121c] shadow-xs">
+                &ldquo;Cada causa envolve a história, a moradia e o futuro de pessoas reais. Meu compromisso é garantir que você tenha clareza absoluta e tranquilidade, sabendo que seus interesses estão sendo conduzidos com quase duas décadas de rigor técnico e atenção pessoal.&rdquo;
+                <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-[#a46d2f]">
+                  — Dra. Débora Gurgel · Advogada
                 </footer>
               </blockquote>
             </div>
@@ -1206,18 +1239,18 @@ export default function Home() {
               {[
                 [
                   "01",
-                  "Escuta Atenta & Diagnóstico Documental",
-                  "Conversa inicial presencial no escritório em João Pinheiro ou via WhatsApp para compreender a fundo seu relato, recolher os documentos necessários e avaliar detalhadamente os fatos.",
+                  "Escuta Acolhedora & Diagnóstico Minucioso",
+                  "Atendimento presencial no escritório em Itabirito ou via WhatsApp para compreender em detalhes seu relato, examinar documentos de posse, certidões ou extrato CNIS do INSS.",
                 ],
                 [
                   "02",
-                  "Definição da Estratégia Mais Rápida e Econômica",
-                  "Análise minuciosa para verificar se a causa pode ser resolvida de maneira extrajudicial (acordo ou cartório) com menor custo e tempo, ou se é indispensável uma ação judicial com pedido liminar.",
+                  "Definição da Rota Jurídica Mais Rápida e Rentável",
+                  "Análise estratégica para verificar a possibilidade de resolução extrajudicial (cartório ou acordo) com economia de tempo e custos, ou a propositura de ação judicial com pedido liminar.",
                 ],
                 [
                   "03",
-                  "Acompanhamento Firme & Feedback Constante",
-                  "Protocolo técnico com forte fundamentação jurisprudencial, diligência constante perante os juízos e cartórios e retorno contínuo para mantê-lo sempre informado sobre cada andamento.",
+                  "Atuação Incisiva, Presença Contínua & Retorno Rápido",
+                  "Protocolo técnico com fundamentação jurídica sólida, acompanhamento diligente perante juizados, varas e cartórios de registro de imóveis, com informações constantes até o resultado.",
                 ],
               ].map(([number, title, description]) => (
                 <motion.div
@@ -1225,12 +1258,12 @@ export default function Home() {
                   variants={reveal}
                   className="grid gap-3 py-6 first:pt-0 sm:grid-cols-[70px_1fr] sm:gap-6 sm:py-7"
                 >
-                  <span className="font-serif text-2xl font-semibold text-[#8e6318]">
+                  <span className="font-serif text-2xl font-semibold text-[#a46d2f]">
                     {number}
                   </span>
                   <div>
-                    <h3 className="font-serif text-2xl text-[#14110e]">{title}</h3>
-                    <p className="mt-2 max-w-lg text-[13px] leading-6 text-[#4c433a]">
+                    <h3 className="font-serif text-2xl text-[#0d121c]">{title}</h3>
+                    <p className="mt-2 max-w-lg text-[13px] leading-6 text-[#4a433d]">
                       {description}
                     </p>
                   </div>
@@ -1243,51 +1276,51 @@ export default function Home() {
         {/* Avaliações / Depoimentos Reais no Google Meu Negócio */}
         <section
           id="avaliacoes"
-          className="scroll-mt-24 border-t border-[#deb753]/30 bg-[#f4efe6] py-20 text-[#14110e] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#cba273]/30 bg-[#f4efe6] py-20 text-[#0d121c] sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
               <Heading
                 light
                 eyebrow="PROVA SOCIAL VERIFICADA · GOOGLE MEU NEGÓCIO"
-                description="Veja avaliações autênticas e espontâneas deixadas por clientes no Google sobre o atendimento e a dedicação da Dra. Michaely Pereira Silva em João Pinheiro - MG."
+                description="Veja avaliações autênticas e espontâneas de clientes no Google sobre o comprometimento, a presença e os resultados da Dra. Débora Gurgel em Itabirito - MG."
               >
                 Avaliada com nota máxima 5,0 ★ com{" "}
-                <span className="italic text-[#8e6318]">
-                  17 avaliações no Google pela dedicação, empatia e excelência profissional.
+                <span className="italic text-[#a46d2f]">
+                  13 avaliações no Google pela competência, ética e resolução de casos.
                 </span>
               </Heading>
 
               {/* Verified Google Badge Card */}
               <div className="flex flex-col gap-3 rounded-xl border border-[#e8dfd2] bg-white p-5 shadow-xs sm:flex-row sm:items-center md:min-w-[340px]">
-                <div className="flex size-14 shrink-0 items-center justify-center rounded-lg border border-[#deb753]/30 bg-[#faf7f2] shadow-xs">
+                <div className="flex size-14 shrink-0 items-center justify-center rounded-lg border border-[#cba273]/30 bg-[#faf8f5] shadow-xs">
                   <GoogleIcon size={30} />
                 </div>
                 <div>
                   <div className="flex items-center gap-2">
-                    <span className="font-serif text-3xl font-bold leading-none text-[#14110e]">
+                    <span className="font-serif text-3xl font-bold leading-none text-[#0d121c]">
                       5,0
                     </span>
-                    <div className="flex gap-0.5 text-[#deb753]">
+                    <div className="flex gap-0.5 text-[#cba273]">
                       {Array.from({ length: 5 }, (_, i) => (
                         <Star
                           key={i}
                           size={14}
-                          className="fill-[#deb753] text-[#deb753]"
+                          className="fill-[#cba273] text-[#cba273]"
                         />
                       ))}
                     </div>
                   </div>
-                  <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-[#4c433a]">
-                    Michaely Pereira Silva — Advogada
+                  <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-[#4a433d]">
+                    Débora Gurgel Advogada
                   </p>
                   <a
                     href={GOOGLE_SEARCH_URL}
                     target="_blank"
                     rel="noreferrer"
-                    className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-[#8e6318] transition-colors hover:text-[#14110e]"
+                    className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-[#a46d2f] transition-colors hover:text-[#0d121c]"
                   >
-                    17 avaliações no Google <ArrowUpRight size={13} />
+                    13 avaliações no Google <ArrowUpRight size={13} />
                   </a>
                 </div>
               </div>
@@ -1298,42 +1331,42 @@ export default function Home() {
               {clientReviews.map((review) => (
                 <article
                   key={review.name}
-                  className="group relative flex flex-col justify-between rounded-xl border border-[#e8dfd2] bg-white p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#deb753] hover:shadow-md sm:p-8"
+                  className="group relative flex flex-col justify-between rounded-xl border border-[#e8dfd2] bg-white p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#cba273] hover:shadow-md sm:p-8"
                 >
                   <div>
                     {/* Header: Stars + Badge */}
                     <div className="flex items-center justify-between gap-2">
-                      <div className="flex gap-1 text-[#deb753]">
+                      <div className="flex gap-1 text-[#cba273]">
                         {Array.from({ length: 5 }, (_, i) => (
                           <Star
                             key={i}
                             size={14}
-                            className="fill-[#deb753] text-[#deb753]"
+                            className="fill-[#cba273] text-[#cba273]"
                           />
                         ))}
                       </div>
-                      <span className="rounded-md border border-[#deb753]/30 bg-[#faf7f2] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#8e6318] shadow-xs">
+                      <span className="rounded-md border border-[#cba273]/30 bg-[#faf8f5] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#7d5120] shadow-xs">
                         {review.badge}
                       </span>
                     </div>
 
                     {/* Review content */}
-                    <p className="mt-5 text-[14px] italic leading-relaxed text-[#14110e]">
+                    <p className="mt-5 text-[14px] italic leading-relaxed text-[#0d121c]">
                       &ldquo;{review.content}&rdquo;
                     </p>
                   </div>
 
                   {/* Reviewer info */}
                   <div className="mt-6 flex items-center gap-3 border-t border-[#e8dfd2] pt-4">
-                    <div className="grid size-10 shrink-0 place-items-center rounded-lg border border-[#deb753]/30 bg-[#faf7f2] font-serif text-sm font-semibold text-[#8e6318] shadow-xs">
+                    <div className="grid size-10 shrink-0 place-items-center rounded-lg border border-[#cba273]/30 bg-[#faf8f5] font-serif text-sm font-semibold text-[#a46d2f] shadow-xs">
                       {review.name.charAt(0)}
                     </div>
                     <div className="min-w-0 flex-1">
-                      <p className="truncate font-serif text-base font-semibold text-[#14110e]">
+                      <p className="truncate font-serif text-base font-semibold text-[#0d121c]">
                         {review.name}
                       </p>
                       <p className="text-[10px] uppercase tracking-wider text-[#786b5e]">
-                        {review.reviewsCount}
+                        {review.reviewsCount} {review.timeAgo && `· ${review.timeAgo}`}
                       </p>
                     </div>
                   </div>
@@ -1345,20 +1378,20 @@ export default function Home() {
             <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-[#e8dfd2] pt-8 sm:flex-row">
               <div className="flex flex-wrap items-center gap-2">
                 {[
-                  "Advogada em João Pinheiro - MG",
+                  "Advogada em Itabirito - MG",
+                  "18 Anos de Experiência Jurídica",
+                  "Nota 5,0 ★ no Google (13 avaliações)",
+                  "Direito Possessório & Usucapião",
+                  "Inventário Extrajudicial em Cartório",
+                  "Planejamento Previdenciário Estratégico",
+                  "Benefícios do INSS & Restabelecimento",
                   "Atendimento Digital para Todo o Brasil",
-                  "Nota 5,0 ★ no Google (17 avaliações)",
-                  "Direito do Consumidor & SPC/Serasa",
-                  "Divórcio, Guarda & Pensão Alimentícia",
-                  "Inventário Judicial & Extrajudicial em Cartório",
-                  "Pós-Graduação: Bancário • Trabalho",
-                  "Aprovada no 9º Período com Excelência",
                 ].map((tag) => (
                   <span
                     key={tag}
-                    className="inline-flex items-center gap-1.5 rounded-lg border border-[#e8dfd2] bg-white px-3.5 py-1.5 text-[11px] font-medium text-[#14110e] shadow-xs"
+                    className="inline-flex items-center gap-1.5 rounded-lg border border-[#e8dfd2] bg-white px-3.5 py-1.5 text-[11px] font-medium text-[#0d121c] shadow-xs"
                   >
-                    <CheckCircle2 size={13} className="text-[#8e6318]" />
+                    <CheckCircle2 size={13} className="text-[#a46d2f]" />
                     {tag}
                   </span>
                 ))}
@@ -1368,7 +1401,7 @@ export default function Home() {
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="group inline-flex shrink-0 items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#8e6318] transition-colors hover:text-[#14110e]"
+                className="group inline-flex shrink-0 items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#a46d2f] transition-colors hover:text-[#0d121c]"
               >
                 Ver Todas as Avaliações no Google{" "}
                 <ArrowUpRight
@@ -1380,20 +1413,20 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Contato & Localização da Sede em João Pinheiro - MG */}
+        {/* Contato & Localização da Sede em Itabirito - MG */}
         <section
           id="contato"
-          className="scroll-mt-24 border-t border-[#deb753]/30 bg-[#faf7f2] py-20 text-[#14110e] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#cba273]/30 bg-[#faf8f5] py-20 text-[#0d121c] sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
                 light
-                eyebrow="CONTATO & ATENDIMENTO EM JOÃO PINHEIRO"
-                description="Agende uma consulta presencial no escritório no Centro de João Pinheiro ou inicie seu atendimento imediatamente pelo WhatsApp para relatar seu caso com sigilo e rapidez."
+                eyebrow="CONTATO & ATENDIMENTO EM ITABIRITO"
+                description="Agende uma consulta presencial em nosso escritório no Centro de Itabirito ou inicie seu atendimento imediatamente pelo WhatsApp para analisar seu caso com discrição, ética e agilidade."
               >
                 Estamos prontos para{" "}
-                <span className="italic text-[#8e6318]">
+                <span className="italic text-[#a46d2f]">
                   escutar sua situação e proteger seus direitos.
                 </span>
               </Heading>
@@ -1401,7 +1434,7 @@ export default function Home() {
               <div className="mt-9 flex flex-col items-start gap-4">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Michaely! Gostaria de agendar um atendimento para análise jurídica do meu caso."
+                    "Olá, Dra. Débora! Gostaria de agendar um atendimento para análise jurídica do meu caso."
                   )}
                   target="_blank"
                   size="lg"
@@ -1410,58 +1443,58 @@ export default function Home() {
                 >
                   <WhatsAppIcon size={17} /> Iniciar Conversa no WhatsApp
                 </GlowingButton>
-                <p className="text-[11px] leading-5 text-[#4c433a]">
+                <p className="text-[11px] leading-5 text-[#4a433d]">
                   Telefone e WhatsApp direto:{" "}
-                  <strong className="text-[#14110e]">{PHONE_DISPLAY}</strong>
+                  <strong className="text-[#0d121c]">{PHONE_DISPLAY}</strong>
                 </p>
               </div>
 
-              <div className="mt-10 space-y-4 text-xs text-[#4c433a]">
+              <div className="mt-10 space-y-4 text-xs text-[#4a433d]">
                 <div className="flex items-start gap-3">
                   <Clock
                     size={16}
-                    className="mt-0.5 shrink-0 text-[#8e6318]"
+                    className="mt-0.5 shrink-0 text-[#a46d2f]"
                   />
                   <div>
-                    <p className="font-semibold text-[#14110e]">
+                    <p className="font-semibold text-[#0d121c]">
                       Horário de Funcionamento
                     </p>
-                    <p className="mt-0.5 text-[#14110e]">
+                    <p className="mt-0.5 text-[#0d121c]">
                       Segunda a Sexta-feira das 09:00 às 18:00
                     </p>
                     <p className="text-[11px] text-[#786b5e]">
-                      Atendimento presencial no Centro de João Pinheiro - MG e atendimento digital para clientes em todo o Brasil
+                      Atendimento presencial no Centro de Itabirito - MG e atendimento digital para clientes em todo o Brasil
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3 pt-1">
-                  <Phone size={16} className="shrink-0 text-[#8e6318]" />
+                  <Phone size={16} className="shrink-0 text-[#a46d2f]" />
                   <a
                     href={`tel:+${WHATSAPP_NUMBER}`}
-                    className="font-medium text-[#14110e] transition-colors hover:text-[#8e6318]"
+                    className="font-medium text-[#0d121c] transition-colors hover:text-[#a46d2f]"
                   >
                     {PHONE_DISPLAY} (Ligações e WhatsApp)
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <InstagramIcon size={16} className="shrink-0 text-[#8e6318]" />
+                  <InstagramIcon size={16} className="shrink-0 text-[#a46d2f]" />
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noreferrer"
-                    className="transition-colors hover:text-[#8e6318] text-[#14110e]"
+                    className="transition-colors hover:text-[#a46d2f] text-[#0d121c]"
                   >
                     {INSTAGRAM_HANDLE} (Instagram Oficial)
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <Mail size={16} className="shrink-0 text-[#8e6318]" />
+                  <Mail size={16} className="shrink-0 text-[#a46d2f]" />
                   <a
                     href={`mailto:${EMAIL_CONTACT}`}
-                    className="transition-colors hover:text-[#8e6318] text-[#14110e]"
+                    className="transition-colors hover:text-[#a46d2f] text-[#0d121c]"
                   >
                     {EMAIL_CONTACT}
                   </a>
@@ -1470,16 +1503,16 @@ export default function Home() {
                 <div className="flex items-start gap-3">
                   <MapPin
                     size={16}
-                    className="mt-0.5 shrink-0 text-[#8e6318]"
+                    className="mt-0.5 shrink-0 text-[#a46d2f]"
                   />
                   <div>
-                    <span className="text-[#14110e]">{ADDRESS_TEXT}</span>
+                    <span className="text-[#0d121c]">{ADDRESS_TEXT}</span>
                     <br />
                     <a
                       href={GOOGLE_SEARCH_URL}
                       target="_blank"
                       rel="noreferrer"
-                      className="mt-1 inline-flex items-center gap-1 font-semibold text-[#8e6318] hover:underline"
+                      className="mt-1 inline-flex items-center gap-1 font-semibold text-[#a46d2f] hover:underline"
                     >
                       Ver no Google Maps <ArrowUpRight size={12} />
                     </a>
@@ -1490,65 +1523,55 @@ export default function Home() {
 
             {/* Office & Profile Card */}
             <div className="relative overflow-hidden rounded-xl border border-[#e8dfd2] bg-white p-7 shadow-sm sm:p-10">
-              <div className="absolute right-0 top-0 h-1.5 w-32 bg-gradient-to-r from-[#8e6318] to-[#deb753]" />
+              <div className="absolute right-0 top-0 h-1.5 w-32 bg-gradient-to-r from-[#a46d2f] to-[#cba273]" />
 
-              <div className="flex items-center gap-4">
-                <div className="relative size-[64px] shrink-0 overflow-hidden rounded-full border-2 border-[#deb753]/60 bg-[#120f0d] shadow-sm sm:size-[76px]">
+              <div className="flex flex-col gap-2">
+                <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#a46d2f]">
+                  Sede do Escritório
+                </p>
+                <div className="relative h-14 w-60 sm:h-16 sm:w-72">
                   <Image
-                    src={LOGO_SEAL_SRC}
-                    alt="Selo Michaely Silva Advogada"
+                    src={LOGO_HORIZONTAL_SRC}
+                    alt="Débora Gurgel — Advocacia e Consultoria Jurídica"
                     fill
-                    sizes="76px"
-                    className="object-contain p-1"
+                    sizes="288px"
+                    className="object-contain object-left"
                   />
-                </div>
-                <div>
-                  <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#8e6318]">
-                    Sede do Escritório
-                  </p>
-                  <p className="mt-0.5 font-cinzel text-xl font-bold text-[#14110e] sm:text-2xl">
-                    MICHAELY SILVA
-                  </p>
-                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#8e6318]">
-                    Advogada
-                  </p>
                 </div>
               </div>
 
-              <address className="mt-7 max-w-md text-[14px] not-italic leading-7 text-[#4c433a]">
-                <strong className="font-semibold text-[#14110e]">
-                  Dra. Michaely Pereira Silva
+              <address className="mt-7 max-w-md text-[14px] not-italic leading-7 text-[#4a433d]">
+                <strong className="font-semibold text-[#0d121c]">
+                  Dra. Débora Gurgel
                 </strong>
                 <br />
-                Advogada Civil em João Pinheiro - MG
+                Advocacia Cível (Direito Possessório, Inventários) e Previdenciária
                 <br />
-                Direito do Consumidor · Família · Inventários
-                <br />
-                Pós-Graduação: Direito Bancário • Direito do Trabalho
+                18 Anos de Experiência e Atuação Resolutiva
                 <br />
                 {ADDRESS_TEXT}
               </address>
 
               {/* Weekly schedule table */}
-              <div className="mt-6 rounded-lg border border-[#e8dfd2] bg-[#faf7f2] p-4 text-xs">
-                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#8e6318]">
+              <div className="mt-6 rounded-lg border border-[#e8dfd2] bg-[#faf8f5] p-4 text-xs">
+                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#a46d2f]">
                   Atendimento & Horários
                 </p>
-                <div className="grid grid-cols-2 gap-y-1.5 text-[#4c433a]">
+                <div className="grid grid-cols-2 gap-y-1.5 text-[#4a433d]">
                   <span>Segunda a Sexta</span>
-                  <span className="text-right font-semibold text-[#14110e]">
+                  <span className="text-right font-semibold text-[#0d121c]">
                     09:00 às 18:00
                   </span>
                   <span>Atendimento Presencial</span>
-                  <span className="text-right font-medium text-[#8e6318]">
-                    João Pinheiro - MG
+                  <span className="text-right font-medium text-[#a46d2f]">
+                    Centro · Itabirito - MG
                   </span>
                   <span>Endereço</span>
-                  <span className="text-right text-[#14110e]">R. Astolfo Moreira, 305 A</span>
+                  <span className="text-right text-[#0d121c]">Av. Queiroz Júnior, 211 - Lj 6</span>
                   <span>Avaliações Google</span>
-                  <span className="text-right font-semibold text-[#8e6318]">5,0 ★ (17 avaliações)</span>
+                  <span className="text-right font-semibold text-[#a46d2f]">5,0 ★ (13 avaliações)</span>
                   <span>Atendimento Digital</span>
-                  <span className="text-right text-[#14110e]">Todo o Brasil</span>
+                  <span className="text-right text-[#0d121c]">Todo o Brasil</span>
                 </div>
               </div>
 
@@ -1556,15 +1579,15 @@ export default function Home() {
 
               <div className="flex flex-wrap items-center justify-between gap-4">
                 <p className="text-xs text-[#786b5e]">
-                  Atendimento humanizado, ético e com total sigilo profissional
+                  Atendimento humanizado, ético e com absoluto sigilo profissional
                 </p>
                 <a
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Michaely! Gostaria de agendar um atendimento no escritório."
+                    "Olá, Dra. Débora! Gostaria de agendar um atendimento no escritório."
                   )}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg border border-[#deb753]/40 bg-[#f4efe6] px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-[#14110e] transition-colors hover:border-[#8e6318] hover:bg-[#14110e] hover:text-[#f7e5a9]"
+                  className="inline-flex items-center gap-2 rounded-lg border border-[#cba273]/40 bg-[#f4efe6] px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-[#0d121c] transition-colors hover:border-[#a46d2f] hover:bg-[#0b111e] hover:text-[#fdefca]"
                 >
                   <WhatsAppIcon size={14} /> Falar no WhatsApp <ArrowUpRight size={14} />
                 </a>
@@ -1574,23 +1597,23 @@ export default function Home() {
         </section>
 
         {/* Pre-Footer CTA Strip */}
-        <section className="border-t border-[#deb753]/30 bg-gradient-to-r from-[#f4efe6] via-[#faf7f2] to-[#f4efe6] px-5 py-14 text-[#14110e] shadow-xs sm:px-8 sm:py-16 lg:px-12">
+        <section className="border-t border-[#cba273]/30 bg-gradient-to-r from-[#f4efe6] via-[#faf8f5] to-[#f4efe6] px-5 py-14 text-[#0d121c] shadow-xs sm:px-8 sm:py-16 lg:px-12">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-7 sm:flex-row sm:items-center">
             <div>
-              <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#8e6318]">
-                <Sparkles size={13} /> MICHAELY SILVA ADVOGADA · JOÃO PINHEIRO & MINAS GERAIS
+              <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#a46d2f]">
+                <Sparkles size={13} /> DÉBORA GURGEL ADVOCACIA · 18 ANOS DE TRADIÇÃO & RESULTADOS
               </p>
-              <h2 className="mt-3 max-w-2xl font-serif text-3xl leading-tight text-[#14110e] sm:text-4xl">
-                Precisa de uma advogada que realmente ouve você e defende seus interesses com firmeza e clareza?
+              <h2 className="mt-3 max-w-2xl font-serif text-3xl leading-tight text-[#0d121c] sm:text-4xl">
+                Precisa de uma advogada com quase duas décadas de experiência que esteja presente e defenda seus interesses do início ao fim?
               </h2>
             </div>
             <a
               href={getWhatsAppUrl(
-                "Olá, Dra. Michaely! Gostaria de uma avaliação para a minha situação jurídica."
+                "Olá, Dra. Débora! Gostaria de uma avaliação para a minha situação jurídica."
               )}
               target="_blank"
               rel="noreferrer"
-              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-lg bg-gradient-to-r from-[#8e6318] via-[#c59a3f] to-[#8e6318] px-7 py-4 text-[11px] font-bold uppercase tracking-[0.14em] text-white shadow-md transition-all hover:-translate-y-0.5 hover:brightness-105 hover:shadow-lg"
+              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-lg bg-gradient-to-r from-[#a46d2f] via-[#cba273] to-[#a46d2f] px-7 py-4 text-[11px] font-bold uppercase tracking-[0.14em] text-white shadow-md transition-all hover:-translate-y-0.5 hover:brightness-105 hover:shadow-lg"
             >
               <WhatsAppIcon size={17} /> Falar no WhatsApp{" "}
               <ArrowUpRight size={15} />
@@ -1599,34 +1622,34 @@ export default function Home() {
         </section>
 
         {/* Footer - Elegant Light Luxury */}
-        <footer className="border-t border-[#e8dfd2] bg-[#f4efe6] px-5 py-14 text-[#14110e] sm:px-8 lg:px-12">
+        <footer className="border-t border-[#e8dfd2] bg-[#f4efe6] px-5 py-14 text-[#0d121c] sm:px-8 lg:px-12">
           <div className="mx-auto grid max-w-7xl gap-10 sm:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1fr]">
             <div>
               <a
                 href="#inicio"
-                aria-label="Michaely Silva Advogada"
+                aria-label="Débora Gurgel Advocacia e Consultoria Jurídica"
                 className="inline-block transition-transform hover:scale-[1.01]"
               >
-                <div className="relative h-14 w-52 sm:h-16 sm:w-60">
+                <div className="relative h-16 w-60 sm:h-20 sm:w-72">
                   <Image
-                    src={LOGO_FULL_SRC}
-                    alt="Michaely Silva Advogada"
+                    src={LOGO_HORIZONTAL_SRC}
+                    alt="Débora Gurgel Advocacia e Consultoria Jurídica"
                     fill
-                    sizes="240px"
+                    sizes="288px"
                     className="object-contain object-left"
                   />
                 </div>
               </a>
               <p className="mt-4 max-w-xs text-xs leading-6 text-[#5c5042]">
-                ⚖️ Advocacia de excelência com atendimento humanizado, ética e rigor técnico. Atuação focada em Direito do Consumidor, Direito de Família, Inventários, Direito Bancário e do Trabalho em João Pinheiro - MG e em todo o Brasil.
+                ⚖️ 18 anos de excelência jurídica, ética e resolutividade. Atuação consolidada em Direito Possessório, Regularização de Imóveis, Inventários e Partilha de Bens, Planejamento Previdenciário e Benefícios do INSS em Itabirito - MG e em todo o Brasil.
               </p>
-              <p className="mt-3 text-[11px] font-semibold text-[#8e6318]">
-                Dra. Michaely Pereira Silva · Advogada
+              <p className="mt-3 text-[11px] font-semibold text-[#a46d2f]">
+                Dra. Débora Gurgel · Advogada
               </p>
             </div>
 
             <div>
-              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8e6318]">
+              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#a46d2f]">
                 Navegação
               </h2>
               <div className="mt-4 flex flex-col items-start gap-3 text-xs text-[#5c5042]">
@@ -1634,13 +1657,13 @@ export default function Home() {
                   Início
                 </a>
                 <a className="footer-link" href="#sobre">
-                  Dra. Michaely Silva
+                  Dra. Débora Gurgel
                 </a>
                 <a className="footer-link" href="#atuacao">
                   Áreas de Atuação
                 </a>
                 <a className="footer-link" href="#diferenciais">
-                  Por Que Escolher
+                  18 Anos de Experiência
                 </a>
                 <a className="footer-link" href="#avaliacoes">
                   Avaliações de Clientes (5,0 ★)
@@ -1652,17 +1675,17 @@ export default function Home() {
             </div>
 
             <div>
-              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8e6318]">
+              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#a46d2f]">
                 Contato & Atendimento
               </h2>
               <div className="mt-4 flex flex-col items-start gap-2.5 text-xs text-[#5c5042]">
                 <a
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Michaely! Gostaria de falar com o escritório."
+                    "Olá, Dra. Débora! Gostaria de falar com o escritório."
                   )}
                   target="_blank"
                   rel="noreferrer"
-                  className="footer-link inline-flex items-center gap-2 font-medium text-[#14110e]"
+                  className="footer-link inline-flex items-center gap-2 font-medium text-[#0d121c]"
                 >
                   <WhatsAppIcon size={15} /> WhatsApp: {PHONE_DISPLAY}
                 </a>
@@ -1695,7 +1718,7 @@ export default function Home() {
                   <MapPin size={15} className="mt-0.5 shrink-0" />
                   <span>{ADDRESS_TEXT}</span>
                 </a>
-                <p className="inline-flex items-center gap-2 pt-1 text-[11px] text-[#8e6318]">
+                <p className="inline-flex items-center gap-2 pt-1 text-[11px] text-[#a46d2f]">
                   <Clock size={14} className="shrink-0" /> Seg a Sex: 09:00 às 18:00
                 </p>
               </div>
@@ -1704,7 +1727,7 @@ export default function Home() {
 
           <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-[#e8dfd2] pt-6 text-[10px] text-stone-500 sm:flex-row sm:items-center sm:justify-between">
             <p>
-              © {new Date().getFullYear()} MICHAELY PEREIRA SILVA ADVOCACIA. Todos os direitos reservados.
+              © {new Date().getFullYear()} DÉBORA GURGEL ADVOCACIA E CONSULTORIA JURÍDICA. Todos os direitos reservados.
             </p>
             <p>
               Conteúdo informativo, em estrita conformidade com o Código de Ética e Disciplina da OAB.
@@ -1719,16 +1742,16 @@ export default function Home() {
         >
           <a
             href={getWhatsAppUrl(
-              "Olá, Dra. Michaely! Gostaria de consultar sobre meu caso e tirar dúvidas pelo WhatsApp."
+              "Olá, Dra. Débora! Gostaria de consultar sobre meu caso e tirar dúvidas pelo WhatsApp."
             )}
             target="_blank"
             rel="noreferrer"
-            aria-label="Falar agora pelo WhatsApp com a Dra. Michaely Silva"
+            aria-label="Falar agora pelo WhatsApp com a Dra. Débora Gurgel"
             className="group relative flex size-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-[#25D366]/40"
           >
             <WhatsAppIcon size={28} />
-            <span className="pointer-events-none absolute right-16 hidden whitespace-nowrap rounded-lg bg-[#14110e] border border-[#deb753]/30 px-3.5 py-1.5 text-xs font-semibold text-white shadow-lg transition-opacity group-hover:block">
-              Falar com a Dra. Michaely Silva
+            <span className="pointer-events-none absolute right-16 hidden whitespace-nowrap rounded-lg bg-[#0b111e] border border-[#cba273]/30 px-3.5 py-1.5 text-xs font-semibold text-white shadow-lg transition-opacity group-hover:block">
+              Falar com a Dra. Débora Gurgel
             </span>
           </a>
         </aside>
@@ -1752,13 +1775,13 @@ export default function Home() {
                 exit={{ opacity: 0, y: 16, scale: 0.99 }}
                 transition={{ duration: 0.24 }}
                 onClick={(event) => event.stopPropagation()}
-                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-xl border border-[#e8dfd2] bg-white p-7 shadow-2xl sm:max-w-xl sm:rounded-xl sm:p-10 text-[#14110e]"
+                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-xl border border-[#e8dfd2] bg-white p-7 shadow-2xl sm:max-w-xl sm:rounded-xl sm:p-10 text-[#0d121c]"
               >
                 <button
                   type="button"
                   aria-label="Fechar detalhes da especialidade"
                   onClick={() => setActiveArea(null)}
-                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-[#e8dfd2] bg-[#faf7f2] text-[#14110e] transition-colors hover:border-[#deb753] hover:text-[#8e6318]"
+                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-[#e8dfd2] bg-[#faf8f5] text-[#0d121c] transition-colors hover:border-[#cba273] hover:text-[#a46d2f]"
                 >
                   <X size={18} />
                 </button>
@@ -1767,17 +1790,17 @@ export default function Home() {
 
                 <h2
                   id="area-dialog-title"
-                  className="mt-4 max-w-sm pr-10 font-serif text-3xl leading-tight text-[#14110e] sm:text-4xl"
+                  className="mt-4 max-w-sm pr-10 font-serif text-3xl leading-tight text-[#0d121c] sm:text-4xl"
                 >
                   {activeArea.title}
                 </h2>
 
-                <p className="mt-5 text-sm leading-7 text-[#4c433a]">
+                <p className="mt-5 text-sm leading-7 text-[#4a433d]">
                   {activeArea.details}
                 </p>
 
                 <div className="mt-6 border-t border-[#e8dfd2] pt-5">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#8e6318]">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#a46d2f]">
                     Demandas e Pedidos Atendidos pelo Escritório:
                   </p>
                   <ul className="mt-4 space-y-3">
@@ -1786,7 +1809,7 @@ export default function Home() {
                         key={topic}
                         className="flex items-center gap-3 text-sm text-[#2b241c]"
                       >
-                        <span className="size-2 shrink-0 rounded-full bg-[#8e6318]" />
+                        <span className="size-2 shrink-0 rounded-full bg-[#a46d2f]" />
                         <span>{topic}</span>
                       </li>
                     ))}
@@ -1806,7 +1829,7 @@ export default function Home() {
                   <button
                     type="button"
                     onClick={() => setActiveArea(null)}
-                    className="px-5 py-3 text-xs font-semibold text-stone-500 transition-colors hover:text-[#14110e]"
+                    className="px-5 py-3 text-xs font-semibold text-stone-500 transition-colors hover:text-[#0d121c]"
                   >
                     Fechar
                   </button>

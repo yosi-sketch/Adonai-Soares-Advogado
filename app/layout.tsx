@@ -40,31 +40,37 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.michaelysilva.adv.br"),
+  metadataBase: new URL("https://www.deboragurgel.adv.br"),
   title:
-    "Michaely Silva | Advogada em João Pinheiro - MG · Direito do Consumidor, Família & Inventário",
+    "Dra. Débora Gurgel | Advocacia e Consultoria Jurídica · Itabirito - MG",
   description:
-    "⚖️ Michaely Pereira Silva — Advogada em João Pinheiro - MG. Atendimento especializado em Direito do Consumidor, Direito de Família, Inventário Judicial e Extrajudicial, Direito Bancário e do Trabalho. Nota máxima de 5,0 ★ com 17 avaliações no Google. 📍 R. Astolfo Moreira, 305 A - Centro, João Pinheiro - MG.",
+    "⚖️ Dra. Débora Gurgel — Advocacia e Consultoria Jurídica em Itabirito - MG. 18 anos de experiência em Direito Possessório, Regularização de Imóveis, Inventários e Partilha de Bens, Planejamento Previdenciário e Benefícios do INSS. Avaliação máxima 5,0 ★ com 13 avaliações no Google. 📍 Av. Queiroz Júnior, 211 - 2º andar, loja 6 - Centro, Itabirito - MG.",
   keywords: [
-    "Michaely Pereira Silva Advogada",
-    "Michaely Silva Advogada",
-    "Advogada em João Pinheiro MG",
-    "Advogada João Pinheiro",
-    "Advocacia João Pinheiro MG",
-    "Direito do Consumidor João Pinheiro",
-    "Direito de Família João Pinheiro",
-    "Inventário Judicial João Pinheiro",
-    "Inventário Extrajudicial em Cartório",
-    "Divórcio e Pensão Alimentícia João Pinheiro",
-    "Advogada Direito Bancário",
-    "Revisão Contratos Bancários e Juros",
-    "Advogada Trabalhista João Pinheiro",
-    "Orientação Jurídica João Pinheiro MG",
-    "Advogada Civil Minas Gerais",
+    "Débora Gurgel Advogada",
+    "Dra Débora Gurgel",
+    "Débora Gurgel Advocacia e Consultoria Jurídica",
+    "Advogada em Itabirito MG",
+    "Advogada Itabirito",
+    "Advocacia Itabirito MG",
+    "Direito Possessório Itabirito",
+    "Usucapião em Itabirito",
+    "Usucapião Extrajudicial Cartório",
+    "Reintegração de Posse Itabirito",
+    "Regularização de Imóveis Itabirito",
+    "Inventário Judicial Itabirito",
+    "Inventário Extrajudicial Cartório Itabirito",
+    "Partilha de Bens Herança",
+    "Advogada Previdenciária Itabirito",
+    "Planejamento Previdenciário Itabirito MG",
+    "Aposentadoria INSS Itabirito",
+    "Concessão de Benefícios INSS",
+    "BPC LOAS Itabirito",
+    "Consultoria Jurídica Itabirito",
+    "Advogada Cível Minas Gerais",
   ],
-  authors: [{ name: "Dra. Michaely Pereira Silva" }],
-  creator: "Michaely Silva Advocacia",
-  publisher: "Michaely Silva Advocacia",
+  authors: [{ name: "Dra. Débora Gurgel" }],
+  creator: "Débora Gurgel — Advocacia e Consultoria Jurídica",
+  publisher: "Débora Gurgel — Advocacia e Consultoria Jurídica",
   formatDetection: {
     telephone: true,
     address: true,
@@ -72,7 +78,7 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+      { url: "/icon.png", type: "image/png", sizes: "615x615" },
     ],
     shortcut: "/favicon.ico",
     apple: [{ url: "/apple-icon.png", sizes: "180x180" }],
@@ -80,18 +86,18 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.michaelysilva.adv.br",
+    url: "https://www.deboragurgel.adv.br",
     title:
-      "Michaely Silva | Advogada · João Pinheiro - MG",
+      "Dra. Débora Gurgel | Advocacia e Consultoria Jurídica · Itabirito - MG",
     description:
-      "⚖️ Advocacia de excelência, ética e acolhimento humano em João Pinheiro - MG. Foco em Direito do Consumidor, Família, Inventários, Direito Bancário e do Trabalho. Avaliação máxima de 5,0 ★ no Google.",
-    siteName: "Michaely Silva Advocacia",
+      "⚖️ Quase duas décadas de excelência, ética e resolutividade em Itabirito - MG. Atuação em Direito Possessório, Inventários, Planejamento Previdenciário e Benefícios do INSS. Avaliação máxima 5,0 ★ no Google.",
+    siteName: "Débora Gurgel Advocacia e Consultoria Jurídica",
     images: [
       {
         url: "/logo.png",
         width: 1024,
         height: 512,
-        alt: "Michaely Silva | Advogada — João Pinheiro - MG",
+        alt: "Débora Gurgel — Advocacia e Consultoria Jurídica",
       },
     ],
   },
@@ -105,46 +111,47 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Michaely Silva | Advogada",
-    alternateName: "Dra. Michaely Pereira Silva — Advogada",
-    legalName: "Michaely Pereira Silva Advocacia",
+    name: "Débora Gurgel — Advocacia e Consultoria Jurídica",
+    alternateName: "Dra. Débora Gurgel",
+    legalName: "Débora Gurgel Advocacia e Consultoria Jurídica",
     founder: [
       {
         "@type": "Person",
-        name: "Dra. Michaely Pereira Silva",
-        jobTitle: "Advogada Civil, Família, Consumidor, Inventários e Consultoria Jurídica",
+        name: "Dra. Débora Gurgel",
+        jobTitle: "Advogada Cível, Direito Possessório, Inventários e Direito Previdenciário",
       },
     ],
-    telephone: "+55-38-98835-5914",
-    email: "contato@michaelysilva.adv.br",
-    url: "https://www.michaelysilva.adv.br",
-    image: "https://www.michaelysilva.adv.br/logo.png",
+    telephone: "+55-31-98888-5570",
+    email: "contato@deboragurgel.adv.br",
+    url: "https://www.deboragurgel.adv.br",
+    image: "https://www.deboragurgel.adv.br/logo.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "R. Astolfo Moreira, 305 A - Centro",
-      addressLocality: "João Pinheiro",
+      streetAddress: "Av. Queiroz Júnior, 211 - 2º andar, loja 6 - Centro",
+      addressLocality: "Itabirito",
       addressRegion: "MG",
-      postalCode: "38770-000",
+      postalCode: "35450-069",
       addressCountry: "BR",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: -17.7444,
-      longitude: -46.1739,
+      latitude: -20.2522,
+      longitude: -43.8058,
     },
     priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "17",
+      reviewCount: "13",
     },
     areaServed: [
-      "João Pinheiro",
-      "Paracatu",
-      "Brasilândia de Minas",
-      "Lagoa Grande",
-      "Vazante",
-      "Noroeste de Minas",
+      "Itabirito",
+      "Ouro Preto",
+      "Mariana",
+      "Belo Horizonte",
+      "Nova Lima",
+      "Congonhas",
+      "Região Central de Minas Gerais",
       "Minas Gerais",
       "Brasil",
     ],
@@ -163,8 +170,8 @@ export default function RootLayout({
       },
     ],
     sameAs: [
-      "https://www.instagram.com/michaelysilva_adv/",
-      "https://wa.me/553888355914",
+      "https://www.instagram.com/deboragurgel.adv/",
+      "https://wa.me/5531988885570",
     ],
   };
 
@@ -182,7 +189,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen overflow-x-clip bg-[#faf8f5] font-sans text-[#14110e] antialiased selection:bg-[#f7e5a9] selection:text-[#14110e]">
+      <body className="min-h-screen overflow-x-clip bg-[#faf8f5] font-sans text-[#0d121c] antialiased selection:bg-[#fdefca] selection:text-[#0d121c]">
         {children}
       </body>
     </html>
