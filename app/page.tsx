@@ -9,17 +9,17 @@ import {
   Award,
   CheckCircle2,
   Clock,
+  Coins,
   FileCheck2,
-  Flame,
-  Gavel,
   HeartHandshake,
+  Landmark,
   Mail,
   MapPin,
   Menu,
   Phone,
   Scale,
-  ShieldAlert,
   ShieldCheck,
+  ShoppingBag,
   Sparkles,
   Star,
   Users2,
@@ -27,29 +27,27 @@ import {
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
 
-const WHATSAPP_NUMBER = "5531999810534";
-const PHONE_DISPLAY = "(31) 99981-0534";
-const EMAIL_CONTACT = "contato@suellemrodrigues.adv.br";
-const INSTAGRAM_URL = "https://www.instagram.com/suellemrodriguesadv/";
-const INSTAGRAM_HANDLE = "@suellemrodriguesadv";
-const OAB_REGISTRATION = "OAB/MG 174.904";
+const WHATSAPP_NUMBER = "553888355914";
+const PHONE_DISPLAY = "(38) 98835-5914";
+const EMAIL_CONTACT = "contato@michaelysilva.adv.br";
+const INSTAGRAM_URL = "https://www.instagram.com/michaelysilva_adv/";
+const INSTAGRAM_HANDLE = "@michaelysilva_adv";
 
-const ADDRESS_TEXT = "R. José Albino, 535 - Sl 1 - Centro, São Sebastião do Paraíso - MG, 37950-060";
-const GOOGLE_MAPS_URL =
-  "https://www.google.com/maps/search/?api=1&query=Suellem+Rodrigues+Advogada+Rua+Jose+Albino+535+Sao+Sebastiao+do+Paraiso+MG";
+const ADDRESS_TEXT = "R. Astolfo Moreira, 305 A - Centro, João Pinheiro - MG, 38770-000";
+const GOOGLE_SEARCH_URL =
+  "https://www.google.com/search?q=Michaely+Pereira+Silva+%E2%80%94+Advogada+Jo%C3%A3o+Pinheiro+%C2%B7+MG";
 
 const LOGO_SEAL_SRC = "/logo-symbol.png";
 const LOGO_FULL_SRC = "/logo.png";
-const FOTO_HERO_SRC = "/suellem-hero-hd.png";
-const FOTO_SOBRE_SRC = "/suellem-portrait-hd.png";
-const FOTO_INFOGRAFICO_SRC = "/suellem-infographic.jpg";
+const FOTO_HERO_SRC = "/michaely-portrait.png";
+const FOTO_INFOGRAFICO_SRC = "/michaely-infographic.png";
 
 function getWhatsAppUrl(
   message?: string,
   number: string = WHATSAPP_NUMBER
 ) {
   const defaultText =
-    "Olá, Dra. Suellem Rodrigues! Gostaria de consultar sobre um caso criminal / execução penal e agendar um atendimento.";
+    "Olá, Dra. Michaely Silva! Gostaria de agendar uma consulta jurídica e tirar dúvidas sobre o meu caso.";
   return `https://wa.me/${number}?text=${encodeURIComponent(
     message || defaultText
   )}`;
@@ -159,211 +157,169 @@ interface PracticeArea {
 
 const practiceAreas: PracticeArea[] = [
   {
-    id: "execucoes-penais-progressao-regime",
-    title: "Execuções Penais & Progressão de Regime",
-    icon: Gavel,
-    tag: "Especialidade Principal · SEEU · Regime Aberto & Semiaberto · LEP",
+    id: "direito-do-consumidor",
+    title: "Direito do Consumidor & Defesa de Direitos",
+    icon: ShoppingBag,
+    tag: "Negativação Indevida · Danos Morais · Cobranças Abusivas · Falhas na Entrega",
     summary:
-      "Atuação cirúrgica para garantir que cada dia de pena cumprido seja computado, antecipando progressões de regime e garantindo a aplicação estrita da lei.",
+      "Defesa incisiva contra práticas abusivas de empresas, bancos e operadoras, buscando a exclusão de negativações ilegais no SPC/Serasa e indenizações devidas.",
     details:
-      "A execução penal exige vigilância técnica permanente. A Dra. Suellem Rodrigues atua na análise e retificação de cálculos de liquidação de penas no SEEU, requerendo a progressão de regime (fechado para semiaberto e semiaberto para aberto), livramento condicional, detração penal e verificação de faltas graves que impeçam indevidamente o benefício, resguardando a dignidade e os direitos do apenado.",
+      "O consumidor não pode ser penalizado por falhas e abusos do mercado. A Dra. Michaely Silva atua com agilidade para obter ordens liminares de exclusão do nome dos órgãos de proteção ao crédito, restituição em dobro de quantias cobradas indevidamente e compensação financeira por danos morais decorrentes de cobranças vexatórias, cancelamentos de serviços e golpes digitais.",
     topics: [
-      "Progressão de Regime Prisional (fechado, semiaberto e aberto) com cálculo preciso das frações",
-      "Auditoria minuciosa de atestados de pena e retificação de erros de cálculo no sistema SEEU",
-      "Livramento Condicional célere assim que preenchidos os requisitos objetivos e subjetivos",
-      "Defesa técnica em Procedimentos Administrativos Disciplinares (PAD) por supostas faltas graves",
-      "Reabilitação criminal e baixa de antecedentes após o cumprimento integral da pena",
-      "Agravos em Execução perante o Tribunal de Justiça contra decisões desfavoráveis do juízo da VEP",
+      "Exclusão liminar urgente do nome no SPC, Serasa e Boa Vista por negativação indevida",
+      "Ações indenizatórias por danos morais por cobrança vexatória ou serviço não prestado",
+      "Restituição em dobro de valores cobrados indevidamente (art. 42 do Código de Defesa do Consumidor)",
+      "Cancelamento de compras fraudulentas, golpes no PIX e clonagem de cartões de crédito",
+      "Ações contra companhias aéreas por atraso, cancelamento de voos e extravio de bagagens",
+      "Combate a cláusulas contratuais abusivas, vendas casadas e recusa de garantia legal",
     ],
     whatsAppText:
-      "Olá, Dra. Suellem Rodrigues! Gostaria de consultar sobre a situação de um apenado e cálculo de progressão de regime.",
+      "Olá, Dra. Michaely! Gostaria de uma avaliação para um problema de Direito do Consumidor (cobrança indevida, negativação ou dano moral).",
   },
   {
-    id: "remicao-pena-indulto-comutacao",
-    title: "Remição de Pena, Indulto & Comutação",
-    icon: FileCheck2,
-    tag: "Trabalho · Estudo · Leitura · Decretos Presidenciais · Redução da Pena",
-    summary:
-      "Redução legal do tempo de prisão através da comprovação de trabalho, estudo e leitura, além de pedidos fundamentados de indulto e comutação.",
-    details:
-      "Cada dia trabalhado ou estudado dentro da unidade prisional é um passo a menos para a liberdade. A Dra. Suellem Rodrigues realiza o levantamento de todos os atestados carcerários de trabalho, certificados de estudo e relatórios de leitura para homologar remições de pena, além de pleitear a extinção ou redução substancial da reprimenda por meio dos decretos de indulto e comutação natalinos.",
-    topics: [
-      "Homologação judicial de remição de pena por dias trabalhados dentro e fora do estabelecimento prisional",
-      "Remição por aprovação no ENCCEJA, ENEM, cursos técnicos e certificações educacionais",
-      "Remição por leitura conforme diretrizes e resoluções do Conselho Nacional de Justiça (CNJ)",
-      "Pedidos de Indulto Humanitário e Extintivo de Pena fundamentados em Decretos Presidenciais",
-      "Comutação de pena para abatimento proporcional do montante condenatório remanescente",
-      "Unificação de penas de múltiplos processos e soma de guias para redefinição das frações",
-    ],
-    whatsAppText:
-      "Olá, Dra. Suellem Rodrigues! Gostaria de verificar a possibilidade de remição de pena ou pedido de indulto.",
-  },
-  {
-    id: "audiencia-custodia-liberdade-flagrante",
-    title: "Plantão Prisional & Audiência de Custódia",
-    icon: ShieldAlert,
-    tag: "Plantão 24 Horas · Prisão em Flagrante · Liberdade Provisória · Relaxamento",
-    summary:
-      "Atuação combativa imediata nas primeiras 24 horas da prisão para demonstrar a desnecessidade da prisão cautelar e resguardar a integridade do custodiado.",
-    details:
-      "As primeiras horas após uma prisão em flagrante são cruciais para o destino do investigado. A Dra. Suellem Rodrigues atua com presença imediata em delegacias e na Audiência de Custódia perante o juiz, demonstrando a ilegalidade da prisão, ausência dos requisitos da custódia preventiva (art. 312 do CPP) e requerendo liberdade provisória com aplicação de medidas cautelares alternativas.",
-    topics: [
-      "Atendimento presencial urgente em delegacias de polícia civil e federal no momento do flagrante",
-      "Defesa técnica combativa na Audiência de Custódia nas primeiras 24 horas após o encarceramento",
-      "Pedidos de Liberdade Provisória sem fiança ou com arbitramento de medidas cautelares diversas",
-      "Relaxamento de prisão por ilegalidade processual, excesso de prazo ou violação de garantias fundamentais",
-      "Revogação de Prisão Preventiva e Prisão Temporária com apresentação de endereço fixo e ocupação lícita",
-      "Combate imediato a abusos de autoridade e garantia de exame de corpo de delito idôneo",
-    ],
-    whatsAppText:
-      "Olá, Dra. Suellem Rodrigues! Ocorreu uma prisão em flagrante e preciso de assistência jurídica urgente para a audiência de custódia.",
-  },
-  {
-    id: "habeas-corpus-recursos-superiores",
-    title: "Habeas Corpus & Recursos nos Tribunais Superiores",
-    icon: Scale,
-    tag: "TJMG · TRF · STJ · STF · Medidas Urgentes Contra Constrangimento Ilegal",
-    summary:
-      "Ações constitucionais de urgência e recursos estratégicos para combater prisões ilegais, excesso de prazo e decisões arbitrárias em instâncias superiores.",
-    details:
-      "Quando uma ordem de prisão contraria a Constituição ou a jurisprudência consolidada, a via do Habeas Corpus é o instrumento mais poderoso para a liberdade. Atuamos com redação jurídica de alto impacto e pedidos de liminar perante o Tribunal de Justiça de Minas Gerais (TJMG), Tribunais Regionais Federais (TRFs), Superior Tribunal de Justiça (STJ) e Supremo Tribunal Federal (STF).",
-    topics: [
-      "Impetração célere de Habeas Corpus com pedido liminar em casos de constrangimento ilegal flagrante",
-      "Habeas Corpus por excesso de prazo injustificado na formação da culpa ou no julgamento de recursos",
-      "Sustentação oral presencial e por videoconferência perante as Turmas e Câmaras Criminais",
-      "Recurso Ordinário em Habeas Corpus (RHC) perante o STJ e STF contra indeferimentos de liminares",
-      "Recurso em Sentido Estrito (RESE) e Agravo em Execução Penal com foco na jurisprudência dominante",
-      "Despacho presencial de memoriais diretamente com desembargadores e ministros relatores",
-    ],
-    whatsAppText:
-      "Olá, Dra. Suellem Rodrigues! Preciso de avaliação para impetração de Habeas Corpus ou recurso em tribunal superior.",
-  },
-  {
-    id: "prisao-domiciliar-transferencia-presidio",
-    title: "Prisão Domiciliar & Transferência de Presídio",
+    id: "direito-de-familia",
+    title: "Direito de Família, Divórcio & Guarda",
     icon: HeartHandshake,
-    tag: "Aproximação Familiar · Saúde & Dignidade · Mães de Menores · Tratamento Médico",
+    tag: "Divórcio · Guarda & Convivência · Pensão Alimentícia · Partilha de Bens",
     summary:
-      "Medidas humanitárias para transferência do apenado para comarca próxima da família e conversão de prisão fechada em domiciliar por razões humanitárias.",
+      "Condução sensível, técnica e segura dos conflitos familiares, protegendo o patrimônio dos cônjuges e garantindo o bem-estar e o futuro dos filhos.",
     details:
-      "O cumprimento de pena não pode aniquilar os vínculos familiares nem privar o apenado de cuidados médicos essenciais. A Dra. Suellem Rodrigues pleiteia a transferência prisional para estabelecimentos próximos da residência da família (art. 86 da LEP) e atua na conversão da pena em prisão domiciliar humanitária para apenados com doenças graves, idosos ou mães de crianças menores de 12 anos.",
+      "As questões de família exigem um equilíbrio delicado entre firmeza jurídica e profundo respeito humano. Dra. Michaely Pereira Silva acompanha divórcios consensuais e litigiosos, fixação e revisão de pensão alimentícia, regimes de convivência e guarda, atuando para prevenir traumas desnecessários e assegurar uma partilha justa de bens.",
     topics: [
-      "Transferência prisional e aproximação familiar garantindo o direito à convivência com parentes",
-      "Prisão Domiciliar Humanitária com suporte em laudos médicos para apenados com debilidade física grave",
-      "Conversão de prisão preventiva e regime fechado em domiciliar para gestantes e mães de filhos até 12 anos",
-      "Permissões de saída para tratamento médico externo e visitas a familiares gravemente enfermos",
-      "Regularização de visitas, cadastramento de companheiros(as) e combate a transferências punitivas arbitrárias",
-      "Fiscalização do cumprimento de condições dignas e alimentação adequada na unidade prisional",
+      "Divórcio consensual ágil em cartório (extrajudicial) e divórcio judicial contencioso",
+      "Ação de alimentos: fixação, execução de pensão em atraso, revisão de valor e exoneração",
+      "Regulamentação e modificação de guarda (compartilhada e unilateral) e plano de convivência",
+      "Partilha equilibrada de bens, imóveis, veículos e investimentos do casal",
+      "Reconhecimento e dissolução de união estável com resguardo patrimonial",
+      "Investigação e reconhecimento de paternidade com retificação de registro civil",
     ],
     whatsAppText:
-      "Olá, Dra. Suellem Rodrigues! Gostaria de consultar sobre pedido de transferência de presídio ou prisão domiciliar.",
+      "Olá, Dra. Michaely! Gostaria de consultar sobre uma questão de Direito de Família (divórcio, pensão alimentícia ou guarda).",
   },
   {
-    id: "defesa-criminal-tribunal-juri",
-    title: "Defesa Penal Integral, Júri & Revisão Criminal",
-    icon: ShieldCheck,
-    tag: "Inquérito Policial · Audiências de Instrução · Tribunal do Júri · Revisão Criminal",
+    id: "inventario-judicial-extrajudicial",
+    title: "Inventário Judicial & Extrajudicial em Cartório",
+    icon: FileCheck2,
+    tag: "Partilha de Herança · Cartório Rápido · Planejamento Sucessório · ITCD MG",
     summary:
-      "Acompanhamento técnico desde a fase de inquérito policial até o plenário do Júri e ações rescisórias criminais para anular condenações injustas.",
+      "Regularização e partilha célere de heranças, reduzindo custos tributários e burocracias para que a família receba seu patrimônio em paz.",
     details:
-      "A defesa penal exige estudo aprofundado das provas, perspicácia na inquirição de testemunhas e oratória firme. Dra. Suellem Rodrigues defende seus clientes em todas as fases do processo-crime, elaborando teses absolutórias robustas, atuando perante os jurados no Tribunal do Júri e ingressando com Revisão Criminal após a condenação quando surgem novas provas ou nulidades evidentes.",
+      "A perda de um ente querido já é um momento doloroso e não deve ser agravada por burocracias infindáveis. Havendo consenso entre herdeiros capazes, realizamos o inventário extrajudicial em cartório de forma rápida e segura. Para os casos de herdeiros menores ou discordâncias, atuamos no inventário judicial com firmeza na defesa da justa cota-parte.",
     topics: [
-      "Acompanhamento de depoimentos e oitivas perante delegacias de polícia e Ministério Público",
-      "Defesa preliminar, resposta à acusação e requerimento fundamentado de diligências investigativas",
-      "Atuação combativa em audiências de instrução e julgamento com inquirição técnica de testemunhas",
-      "Atuação destacada em Plenário do Tribunal do Júri em crimes dolosos contra a vida",
-      "Alegações finais escritas com teses de desclassificação, excludentes de ilicitude e dosimetria favorável",
-      "Ação de Revisão Criminal para desconstituir sentenças transitadas em julgado decorrentes de erro judicial",
+      "Inventário Extrajudicial em Cartório: procedimento célere e econômico para herdeiros em consenso",
+      "Inventário Judicial célere para patrimônios complexos ou quando há herdeiros menores/incapazes",
+      "Levantamento de alvarás judiciais para liberação de saldos bancários, FGTS e PIS/PASEP",
+      "Planejamento sucessório prévio e apuração do imposto sobre herança (ITCD - Minas Gerais)",
+      "Cessão de direitos hereditários e regularização documental de imóveis herdados",
+      "Mediação entre herdeiros para resolução amigável e pacífica da partilha",
     ],
     whatsAppText:
-      "Olá, Dra. Suellem Rodrigues! Gostaria de orientação para uma defesa em processo criminal ou Tribunal do Júri.",
+      "Olá, Dra. Michaely! Gostaria de orientação para dar entrada em um inventário judicial ou extrajudicial.",
+  },
+  {
+    id: "direito-bancario",
+    title: "Direito Bancário & Combate a Juros Abusivos",
+    icon: Coins,
+    tag: "Pós-Graduada · Empréstimo Não Solicitado · Superendividamento · Fraudes Bancárias",
+    summary:
+      "Combate a abusos de instituições financeiras, juros extorsivos, descontos indevidos de consignados em aposentadorias e renegociação de dívidas.",
+    details:
+      "Com especialização de pós-graduação em Direito Bancário, Dra. Michaely defende consumidores e aposentados lesados por empréstimos consignados não autorizados, taxas de juros acima da média do Banco Central e fraudes bancárias, atuando na repetição do indébito e na renegociação sob a Lei do Superendividamento.",
+    topics: [
+      "Cancelamento de empréstimos consignados fraudulentos em benefícios do INSS e indenização",
+      "Ações revisionais de financiamentos de veículos e contratos de crédito com juros abusivos",
+      "Defesa contra fraudes por engenharia social, transferências via PIX e boletos falsos",
+      "Renegociação estruturada e unificação de passivos com base na Lei do Superendividamento",
+      "Desbloqueio de contas bancárias e salários indevidamente retidos por dívidas",
+      "Defesa técnica em execuções de títulos extrajudiciais e ações de busca e apreensão",
+    ],
+    whatsAppText:
+      "Olá, Dra. Michaely! Gostaria de consultar sobre problemas com banco (empréstimo consignado não solicitado ou juros abusivos).",
+  },
+  {
+    id: "direito-do-trabalho",
+    title: "Direito do Trabalho & Rescisões Contratuais",
+    icon: Landmark,
+    tag: "Pós-Graduada · Verbas Rescisórias · Horas Extras · Rescisão Indireta · Acidentes",
+    summary:
+      "Proteção técnica dos direitos dos trabalhadores e orientação preventiva, garantindo o recebimento integral de todas as verbas conquistadas pelo trabalho.",
+    details:
+      "Pós-graduada em Direito do Trabalho, a Dra. Michaely Silva analisa detalhadamente cartões de ponto, holerites e termos de rescisão para identificar supressão de direitos, horas extras não quitadas, insalubridade e hipóteses de rescisão indireta em decorrência de descumprimento das obrigações pelo empregador.",
+    topics: [
+      "Cálculo e cobrança de verbas rescisórias integrais (aviso prévio, FGTS + 40%, 13º e férias)",
+      "Ação de Rescisão Indireta do contrato de trabalho (demissão por justa causa do empregador)",
+      "Reconhecimento de vínculo empregatício sem registro em carteira e anotações retroativas",
+      "Cobrança de horas extras, intervalos intrajornada, adicional noturno e descanso semanal remunerado",
+      "Reivindicação de adicionais de insalubridade e periculosidade devidos",
+      "Indenização por assédio moral no ambiente de trabalho e acidentes laborais",
+    ],
+    whatsAppText:
+      "Olá, Dra. Michaely! Gostaria de orientações sobre direitos trabalhistas, rescisão de contrato e horas extras.",
+  },
+  {
+    id: "orientacao-juridica-consultoria",
+    title: "Orientação Jurídica & Consultoria Preventiva",
+    icon: ShieldCheck,
+    tag: "Análise Contratual · Resolução Amigável · Notificações · Clareza sem Juridiquês",
+    summary:
+      "Consultoria jurídica acessível e estratégica para evitar prejuízos futuros, revisar contratos civis e solucionar conflitos antes que virem processos demorados.",
+    details:
+      "Uma orientação jurídica preventiva evita anos de disputas judiciais e prejuízos financeiros vultosos. A Dra. Michaely Pereira Silva oferece pareceres claros, elaboração e análise minuciosa de contratos civis e imobiliários, além de mediação para que você tome decisões sempre com segurança e respaldo legal.",
+    topics: [
+      "Elaboração e revisão segura de contratos de compra e venda de imóveis e locações",
+      "Envio de notificações extrajudiciais com validade jurídica formal para resolução amigável",
+      "Consultoria jurídica personalizada com respostas diretas e descomplicadas para suas dúvidas",
+      "Análise prévia de riscos em transações patrimoniais e acordos comerciais",
+      "Mediação entre partes para obtenção de acordos extrajudiciais rápidos e seguros",
+      "Acompanhamento em assinaturas de escrituras, contratos e registros públicos",
+    ],
+    whatsAppText:
+      "Olá, Dra. Michaely! Gostaria de agendar uma consulta para orientação jurídica preventiva e análise do meu caso.",
   },
 ];
 
 const clientReviews = [
   {
-    name: "Mayara Christina Nunes",
-    reviewsCount: "7 avaliações no Google",
-    badge: "Advogada Criminalista · Segurança & Confiança",
+    name: "Soane Ferreira",
+    reviewsCount: "1 avaliação no Google",
+    badge: "Empatia, Conhecimento & Clareza",
     content:
-      "Profissional excelente e extremamente atenciosa. Demonstrou grande conhecimento como advogada criminalista, esclarecendo todas as dúvidas de forma clara e objetiva. Além disso, transmite muita segurança e confiança, características fundamentais nessa área. Recomendo seu trabalho sem hesitação!",
+      "Atendimento excelente, a Dra demonstra muito conhecimento é empática, soube esclarecer minhas dúvidas de forma fácil pra eu entender. Adorei o atendimento super recomendo.",
   },
   {
-    name: "Fernanda Menezes",
-    reviewsCount: "5 avaliações no Google",
-    badge: "Competência & Experiência na Execução",
+    name: "Kauã Gomes",
+    reviewsCount: "1 avaliação no Google",
+    badge: "Dedicação & Indicação Constante",
     content:
-      "Excelente profissional. Uma advogada competente e ética. Possui vasto conhecimento e experiência na área criminal e da execução. Indico seu trabalho sem nenhuma dúvida. 👏🏻👏🏻👏🏻",
+      "Excelente profissional e muito dedicada, indico sempre.",
   },
   {
-    name: "Patrick Souza",
-    reviewsCount: "9 avaliações no Google",
-    badge: "Domínio Absoluto da Execução Penal",
+    name: "Rodrigo Ferreira",
+    reviewsCount: "3 avaliações · 6 fotos no Google",
+    badge: "A Melhor de João Pinheiro",
     content:
-      "Uma excelente advogada, domina a execução penal.",
+      "Excelente profissional!!! Recomendo, a melhor de joao pinheiro.",
   },
   {
-    name: "Hamilton Tamosaitis",
-    reviewsCount: "Local Guide · 162 avaliações · 62 fotos",
-    badge: "Local Guide Google · Objetividade & Resultados",
-    content:
-      "A melhor advogada criminalista que conheci, sabe como alcançar objetivos com poucas palavras!!",
-  },
-  {
-    name: "Raísa Santos Gonçalves",
-    reviewsCount: "3 avaliações · 2 fotos no Google",
-    badge: "Empatia, Ética & Determinação",
-    content:
-      "Uma advogada incrível, altamente competente, ética e dedicada, que busca sempre a melhor solução com empatia e determinação.",
-  },
-  {
-    name: "Izabela Santos",
-    reviewsCount: "4 avaliações no Google",
-    badge: "A Melhor Advogada · Gratidão",
-    content:
-      "Excelente profissional! Não tenho palavras para agradecer por tudo que já me ajudou! Recomendo de olhos fechados! A melhor advogada!",
-  },
-  {
-    name: "Angelica Martins",
-    reviewsCount: "Local Guide · 18 avaliações · 50 fotos",
-    badge: "Local Guide Google · Conhecimento Exemplar",
-    content:
-      "Profissional exemplar! Comprometida e com muito conhecimento na sua área de atuação. Indico com tranquilidade e segurança.",
-  },
-  {
-    name: "Instituto Bom Samaritano",
+    name: "Luciene Pereira",
     reviewsCount: "2 avaliações no Google",
-    badge: "Agilidade, Verdade & Compromisso",
+    badge: "Ética, Compromisso & Excelência",
     content:
-      "Excelente profissional, ágil, verdadeira, e comprometida com o trabalho, recomendo!!!",
+      "Advoga com excelência! Profissional com ética e comprometimento. Sucesso!",
   },
   {
-    name: "Lislie Desiree",
-    reviewsCount: "2 avaliações · 2 fotos no Google",
-    badge: "Honestidade, Competência & Humanidade",
+    name: "Casamagrao Magrao",
+    reviewsCount: "1 avaliação no Google",
+    badge: "Ótima Profissional",
     content:
-      "Excelente advogada! Honesta, competente e humana.",
+      "Ótima profissional.",
   },
   {
-    name: "Andreia Leão",
-    reviewsCount: "5 avaliações · 2 fotos no Google",
-    badge: "Atualizada, Experiente & Dedicada",
+    name: "Fátima Pereira Alves",
+    reviewsCount: "1 avaliação no Google",
+    badge: "Atendimento Excelente",
     content:
-      "Profissional atualizada, experiente, dedicada. Super indico, ressalto também seu domínio em vários campos do Direito.",
-  },
-  {
-    name: "Glauceli André",
-    reviewsCount: "3 avaliações no Google",
-    badge: "Confiança Total · A Melhor",
-    content:
-      "Excelente profissional, sem dúvidas, pode confiar, a melhor!!!!!",
-  },
-  {
-    name: "fabio arruda Nunes",
-    reviewsCount: "7 avaliações no Google",
-    badge: "Responsabilidade & Solução do Problema",
-    content:
-      "Profissional responsável e comprometida na solução do problema.",
+      "Excelente o atendimento.",
   },
 ];
 
@@ -381,13 +337,7 @@ function Heading({
   return (
     <div>
       <p className={light ? "eyebrow-light" : "eyebrow"}>{eyebrow}</p>
-      <h2
-        className={
-          light
-            ? "mt-4 font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-[#14110e] sm:text-4xl lg:text-[3.25rem]"
-            : "mt-4 font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-[#14110e] sm:text-4xl lg:text-[3.25rem]"
-        }
-      >
+      <h2 className="mt-4 font-serif text-3xl leading-[1.14] tracking-[-0.02em] text-[#14110e] sm:text-4xl lg:text-[3.15rem]">
         {children}
       </h2>
       {description && (
@@ -418,32 +368,32 @@ export default function Home() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <main className="overflow-hidden bg-[#fbf9f5] text-[#14110e] selection:bg-[#f7e5a9] selection:text-[#14110e]">
-        {/* Navigation Bar - Elegant Light Mode with Gold Highlights */}
+      <main className="overflow-hidden bg-[#faf8f5] text-[#14110e] selection:bg-[#f7e5a9] selection:text-[#14110e]">
+        {/* Navigation Bar - Refined Light Luxury with Polished Gold Accents */}
         <header className="sticky top-0 z-40 border-b border-[#e8dfd2] bg-white/95 backdrop-blur-xl shadow-xs">
           <div className="mx-auto flex h-[96px] max-w-7xl items-center justify-between gap-6 px-5 sm:h-[108px] sm:px-8 lg:px-12">
             <a
               href="#inicio"
-              aria-label="Suellem Rodrigues Advocacia"
+              aria-label="Michaely Silva Advogada"
               onClick={closeMenu}
               className="flex items-center gap-3.5 transition-opacity hover:opacity-90"
             >
               <div className="relative size-[60px] shrink-0 overflow-hidden rounded-full border-2 border-[#deb753]/60 bg-[#120f0d] shadow-sm sm:size-[72px]">
                 <Image
                   src={LOGO_SEAL_SRC}
-                  alt="Selo Monograma Oficial Suellem Rodrigues Advocacia"
+                  alt="Selo Monograma Oficial Michaely Silva Advogada"
                   fill
                   priority
                   sizes="72px"
-                  className="object-contain p-1.5"
+                  className="object-contain p-1"
                 />
               </div>
               <div className="flex flex-col">
-                <span className="font-serif text-lg font-bold tracking-wider text-[#14110e] sm:text-xl lg:text-2xl">
-                  SUELLEM RODRIGUES
+                <span className="font-cinzel text-lg font-bold tracking-wider text-[#14110e] sm:text-xl lg:text-2xl">
+                  MICHAELY SILVA
                 </span>
                 <span className="text-[10px] font-semibold uppercase tracking-[0.24em] text-[#8e6318] sm:text-xs">
-                  Advocacia · {OAB_REGISTRATION}
+                  Advogada · João Pinheiro - MG
                 </span>
               </div>
             </a>
@@ -456,30 +406,30 @@ export default function Home() {
                 Início
               </a>
               <a className="nav-link" href="#sobre">
-                Dra. Suellem Rodrigues
+                Dra. Michaely
               </a>
               <a className="nav-link" href="#atuacao">
-                Execuções Penais
+                Áreas de Atuação
               </a>
               <a className="nav-link" href="#diferenciais">
                 Por Que Escolher
               </a>
               <a className="nav-link" href="#avaliacoes">
-                Depoimentos
+                Avaliações (5,0 ★)
               </a>
               <a className="nav-link" href="#contato">
-                Plantão & Sede
+                Contato & Sede
               </a>
             </nav>
 
             <div className="hidden items-center gap-3 lg:flex">
               <a
-                href={GOOGLE_MAPS_URL}
+                href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Avaliações da Dra. Suellem Rodrigues no Google"
+                aria-label="Avaliações da Dra. Michaely Silva no Google"
                 className="grid size-10 place-items-center rounded-lg border border-[#e8dfd2] bg-[#faf7f2] text-[#4c433a] transition-all hover:border-[#deb753] hover:bg-white hover:text-[#14110e] shadow-xs"
-                title="5,0 ★ no Google (20 avaliações)"
+                title="5,0 ★ no Google (17 avaliações)"
               >
                 <GoogleIcon size={16} />
               </a>
@@ -487,7 +437,7 @@ export default function Home() {
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Instagram da Dra. Suellem Rodrigues"
+                aria-label="Instagram da Dra. Michaely Silva"
                 className="grid size-10 place-items-center rounded-lg border border-[#e8dfd2] bg-[#faf7f2] text-[#4c433a] transition-all hover:border-[#deb753] hover:bg-white hover:text-[#14110e] shadow-xs"
                 title={`Instagram ${INSTAGRAM_HANDLE}`}
               >
@@ -495,7 +445,7 @@ export default function Home() {
               </a>
               <a
                 href={`tel:+${WHATSAPP_NUMBER}`}
-                aria-label="Ligar para Suellem Rodrigues Advocacia"
+                aria-label="Ligar para Michaely Silva Advogada"
                 className="grid size-10 place-items-center rounded-lg border border-[#e8dfd2] bg-[#faf7f2] text-[#4c433a] transition-all hover:border-[#deb753] hover:bg-white hover:text-[#14110e] shadow-xs"
                 title={`Ligar: ${PHONE_DISPLAY}`}
               >
@@ -505,7 +455,7 @@ export default function Home() {
                 href={getWhatsAppUrl()}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="WhatsApp Dra. Suellem Rodrigues"
+                aria-label="WhatsApp Dra. Michaely Silva"
                 className="grid size-10 place-items-center rounded-lg border border-[#e8dfd2] bg-[#faf7f2] text-[#4c433a] transition-all hover:border-[#deb753] hover:bg-white hover:text-[#14110e] shadow-xs"
                 title="Atendimento no WhatsApp"
               >
@@ -513,14 +463,14 @@ export default function Home() {
               </a>
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá, Dra. Suellem Rodrigues! Gostaria de agendar uma consulta sobre caso criminal ou execução penal."
+                  "Olá, Dra. Michaely! Gostaria de agendar uma consulta e receber orientação jurídica para o meu caso."
                 )}
                 target="_blank"
                 size="sm"
                 variant="gold"
                 className="rounded-lg shadow-sm"
               >
-                Plantão / Consulta <ArrowUpRight size={14} />
+                Agendar Consulta <ArrowUpRight size={14} />
               </GlowingButton>
             </div>
 
@@ -550,11 +500,11 @@ export default function Home() {
                 <div className="mx-auto flex max-w-7xl flex-col gap-1 py-4">
                   {[
                     ["Início", "#inicio"],
-                    ["Dra. Suellem Rodrigues", "#sobre"],
-                    ["Execuções Penais & Prisões", "#atuacao"],
+                    ["Dra. Michaely Silva", "#sobre"],
+                    ["Áreas de Atuação", "#atuacao"],
                     ["Por Que Escolher", "#diferenciais"],
-                    ["Depoimentos (5,0 ★)", "#avaliacoes"],
-                    ["Plantão Criminal & Sede", "#contato"],
+                    ["Avaliações (5,0 ★)", "#avaliacoes"],
+                    ["Contato & Sede", "#contato"],
                   ].map(([label, href]) => (
                     <a
                       key={label}
@@ -569,22 +519,22 @@ export default function Home() {
                     <a
                       className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#8e6318] via-[#c59a3f] to-[#8e6318] px-5 py-3.5 text-xs font-bold uppercase tracking-[0.13em] text-white shadow-md transition-all hover:brightness-105"
                       href={getWhatsAppUrl(
-                        "Olá, Dra. Suellem Rodrigues! Gostaria de consultar sobre um caso criminal ou execução penal."
+                        "Olá, Dra. Michaely! Gostaria de falar sobre o meu caso e receber orientação jurídica."
                       )}
                       target="_blank"
                       rel="noreferrer"
                       onClick={closeMenu}
                     >
-                      <WhatsAppIcon size={16} /> WhatsApp Direto: {PHONE_DISPLAY}
+                      <WhatsAppIcon size={16} /> WhatsApp: {PHONE_DISPLAY}
                     </a>
                     <a
                       className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#e8dfd2] bg-[#faf7f2] px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-[#14110e] transition-all hover:border-[#deb753]"
-                      href={GOOGLE_MAPS_URL}
+                      href={GOOGLE_SEARCH_URL}
                       target="_blank"
                       rel="noreferrer"
                       onClick={closeMenu}
                     >
-                      <GoogleIcon size={15} /> 5,0 ★ no Google (20 avaliações)
+                      <GoogleIcon size={15} /> 5,0 ★ no Google (17 avaliações)
                     </a>
                   </div>
                 </div>
@@ -593,10 +543,10 @@ export default function Home() {
           </AnimatePresence>
         </header>
 
-        {/* Hero Section - Crisp Light Editorial Canvas with Warm Amber Accents */}
+        {/* Hero Section - Warm Ivory & Travertine Canvas with Polished Gold Lighting */}
         <section
           id="inicio"
-          className="relative isolate scroll-mt-24 border-b border-[#e8dfd2] bg-gradient-to-b from-white via-[#fbf9f5] to-[#f4efe6]"
+          className="relative isolate scroll-mt-24 border-b border-[#e8dfd2] bg-gradient-to-b from-white via-[#faf8f5] to-[#f4efe6]"
         >
           {/* Subtle warm gold ambient aura */}
           <div className="pointer-events-none absolute -right-32 top-8 -z-10 size-[36rem] rounded-full bg-[#deb753]/12 blur-3xl" />
@@ -614,16 +564,16 @@ export default function Home() {
                 className="mb-6 inline-flex items-center gap-2.5 rounded-lg border border-[#deb753]/40 bg-white px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-[#8e6318] shadow-xs"
               >
                 <span className="size-2 shrink-0 rounded-full bg-[#8e6318]" />
-                <span>SUELLEM RODRIGUES | ADVOGADA CRIMINALISTA · {OAB_REGISTRATION}</span>
+                <span>MICHAELY SILVA | ADVOGADA · JOÃO PINHEIRO - MG</span>
               </motion.div>
 
               <motion.h1
                 variants={reveal}
-                className="max-w-[760px] font-serif text-[2.65rem] leading-[1.08] tracking-[-0.02em] text-[#14110e] sm:text-5xl lg:text-[3.85rem]"
+                className="max-w-[760px] font-serif text-[2.5rem] leading-[1.1] tracking-[-0.02em] text-[#14110e] sm:text-5xl lg:text-[3.75rem]"
               >
-                Defesa Intransigente da Sua Liberdade:{" "}
+                Defesa Firme dos Seus Direitos e Cuidado Real com a Sua Família:{" "}
                 <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#8e6318] via-[#c59a3f] to-[#5a3c08]">
-                  Atuação Estratégica e Combativa em Execuções Penais e Direito Criminal.
+                  Atuação Jurídica Estratégica, Humanizada e Resolutiva.
                 </span>
               </motion.h1>
 
@@ -633,9 +583,13 @@ export default function Home() {
               >
                 Liderado pela{" "}
                 <strong className="font-semibold text-[#14110e]">
-                  Dra. Suellem Rodrigues ({OAB_REGISTRATION})
+                  Dra. Michaely Pereira Silva
                 </strong>
-                , especialista em Execuções Penais e pós-graduada em Advocacia Criminal com sede em São Sebastião do Paraíso - MG. Atuamos com determinação inegociável na defesa dos direitos de apenados e investigados, agilizando progressões de regime, livramento condicional, remição de pena e combatendo ilegalidades em Minas Gerais e no SEEU em todo o Brasil.
+                , advogada civil em João Pinheiro - MG com pós-graduação em Direito Bancário e Direito do Trabalho. Foco especializado em{" "}
+                <strong className="font-semibold text-[#14110e]">
+                  Direito do Consumidor, Direito de Família e Inventários (Judiciais e Extrajudiciais)
+                </strong>
+                , oferecendo orientação jurídica transparente, acolhimento empático e soluções ágeis para você e sua família.
               </motion.p>
 
               <motion.div
@@ -644,20 +598,20 @@ export default function Home() {
               >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Suellem Rodrigues! Gostaria de consultar sobre o caso de um apenado / situação penal urgente."
+                    "Olá, Dra. Michaely! Gostaria de agendar uma consulta sobre Direito de Família / Consumidor / Inventário."
                   )}
                   target="_blank"
                   size="lg"
                   variant="gold"
                   className="rounded-lg shadow-md"
                 >
-                  <WhatsAppIcon size={16} /> Falar no WhatsApp com a Dra. Suellem
+                  <WhatsAppIcon size={16} /> Falar no WhatsApp com a Dra. Michaely
                 </GlowingButton>
                 <a
                   href="#atuacao"
                   className="group inline-flex items-center gap-2 rounded-lg border border-[#e8dfd2] bg-white px-5 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#14110e] shadow-xs transition-all hover:border-[#deb753] hover:bg-[#faf7f2]"
                 >
-                  Especialidades Penais{" "}
+                  Conhecer Especialidades{" "}
                   <ArrowRight
                     size={14}
                     className="transition-transform group-hover:translate-x-1"
@@ -670,18 +624,18 @@ export default function Home() {
                 className="mt-12 flex flex-wrap items-center gap-x-7 gap-y-4 border-t border-[#e8dfd2] pt-6 text-xs text-[#5c5042]"
               >
                 <a
-                  href={GOOGLE_MAPS_URL}
+                  href={GOOGLE_SEARCH_URL}
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 font-medium text-[#14110e] transition-colors hover:text-[#8e6318]"
                 >
-                  <Star size={15} className="fill-[#deb753] text-[#deb753]" /> 5,0 estrelas no Google (20 avaliações autênticas)
+                  <Star size={15} className="fill-[#deb753] text-[#deb753]" /> 5,0 estrelas no Google (17 avaliações autênticas)
                 </a>
                 <span className="inline-flex items-center gap-2 font-medium">
-                  <Award size={15} className="text-[#8e6318]" /> {OAB_REGISTRATION}
+                  <Award size={15} className="text-[#8e6318]" /> Aprovada no 9º Período
                 </span>
                 <span className="inline-flex items-center gap-2 font-medium">
-                  <MapPin size={15} className="text-[#8e6318]" /> R. José Albino, 535 · Paraíso - MG
+                  <MapPin size={15} className="text-[#8e6318]" /> R. Astolfo Moreira, 305 A · Centro
                 </span>
                 <a
                   href={INSTAGRAM_URL}
@@ -694,7 +648,7 @@ export default function Home() {
               </motion.div>
             </motion.div>
 
-            {/* Hero Visual Presentation - Dra. Suellem Rodrigues */}
+            {/* Hero Visual Presentation - Dra. Michaely Silva Portrait */}
             <motion.div
               initial={{ opacity: 0, scale: 0.97, y: 18 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -708,7 +662,7 @@ export default function Home() {
               <div className="relative aspect-[4/4.9] overflow-hidden rounded-2xl border-2 border-[#e8dfd2] bg-white shadow-xl ring-1 ring-[#deb753]/20">
                 <Image
                   src={FOTO_HERO_SRC}
-                  alt="Dra. Suellem Rodrigues — Advogada Criminalista e Especialista em Execuções Penais"
+                  alt="Dra. Michaely Pereira Silva — Advogada em João Pinheiro - MG"
                   fill
                   priority
                   unoptimized
@@ -718,10 +672,10 @@ export default function Home() {
                 <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-3 text-white sm:bottom-8 sm:left-8 sm:right-8">
                   <div>
                     <p className="font-serif text-2xl font-normal tracking-wide text-white">
-                      Dra. Suellem Rodrigues
+                      Dra. Michaely Pereira Silva
                     </p>
                     <p className="mt-1 text-[10px] uppercase tracking-[0.2em] text-[#deb753]">
-                      Advocacia Criminal · {OAB_REGISTRATION}
+                      Consumidor · Família · Inventários
                     </p>
                   </div>
                   <span className="grid size-11 shrink-0 place-items-center rounded-lg border border-[#deb753]/40 bg-[#14110e]/85 text-[#f7e5a9] backdrop-blur-sm">
@@ -732,12 +686,12 @@ export default function Home() {
 
               {/* Floating authority badge */}
               <div className="absolute -left-3 top-6 z-10 rounded-lg border border-[#deb753]/40 bg-white/95 px-4 py-2 text-[10px] font-bold tracking-[0.14em] text-[#8e6318] shadow-md backdrop-blur-md sm:-left-5">
-                SÃO SEBASTIÃO DO PARAÍSO - MG · ATENDIMENTO ON-LINE SEEU BRASIL
+                JOÃO PINHEIRO - MG · ATENDIMENTO ON-LINE EM TODO O BRASIL
               </div>
 
               {/* Floating Google 5.0 Star Rating */}
               <a
-                href={GOOGLE_MAPS_URL}
+                href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noreferrer"
                 className="group absolute -bottom-5 -right-3 z-10 rounded-xl border border-[#deb753]/40 bg-white/95 p-3.5 shadow-md backdrop-blur-md transition-all hover:border-[#8e6318] hover:bg-white sm:-right-5"
@@ -757,14 +711,14 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="mt-1 text-[9px] font-semibold uppercase tracking-wider text-[#5c5042]">
-                  20 Avaliações no Google
+                  17 Avaliações no Google
                 </p>
               </a>
             </motion.div>
           </div>
         </section>
 
-        {/* Highlights Banner - Authority Metrics in Clean White */}
+        {/* Highlights Banner - Authority Metrics */}
         <section
           aria-label="Credenciais e Destaques"
           className="border-b border-[#e8dfd2] bg-white"
@@ -773,19 +727,19 @@ export default function Home() {
             {[
               [
                 "5,0 ★ no Google",
-                "nota máxima com 20 avaliações autênticas destacando competência e agilidade",
+                "nota máxima com 17 avaliações autênticas destacando empatia e clareza didática",
               ],
               [
-                "Execuções Penais",
-                "domínio da LEP, recálculo no SEEU e antecipação legal de progressões",
+                "Família & Inventários",
+                "soluções céleres para divórcio, pensão, guarda e partilha de herança em cartório",
               ],
               [
-                "Paraíso - MG",
-                "sede na R. José Albino, 535 - Sl 1 e atendimento digital em todo o Brasil",
+                "Consumidor & Bancário",
+                "combate a negativas indevidas, golpes digitais e abusos do sistema financeiro",
               ],
               [
-                "Plantão Criminal",
-                "atendimento prioritário para flagrantes e audiências de custódia",
+                "João Pinheiro - MG",
+                "sede no Centro da cidade e atendimento digital disponível para todo o Brasil",
               ],
             ].map(([value, label], index) => (
               <div
@@ -807,13 +761,13 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Sobre a Dra. Suellem Rodrigues - Editorial Warm Travertine Linen Canvas */}
+        {/* Sobre a Dra. Michaely Silva - Editorial Canvas */}
         <section
           id="sobre"
           className="scroll-mt-24 border-y border-[#e8dfd2] bg-[#faf7f2] py-20 text-[#14110e] sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20 lg:px-12">
-            {/* Dra. Suellem Rodrigues presentation portrait */}
+            {/* Visual presentation - Infográfico "Quem sou eu" */}
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -821,40 +775,39 @@ export default function Home() {
               variants={reveal}
               className="relative mx-auto w-full max-w-[480px]"
             >
-              <div className="relative aspect-[3/4.2] overflow-hidden rounded-2xl border-2 border-[#e8dfd2] bg-white shadow-2xl">
+              <div className="relative aspect-[9/14] overflow-hidden rounded-2xl border-2 border-[#e8dfd2] bg-white shadow-2xl">
                 <Image
-                  src={FOTO_SOBRE_SRC}
-                  alt="Dra. Suellem Rodrigues — Advogada Criminalista e Especialista em Execução Penal"
+                  src={FOTO_INFOGRAFICO_SRC}
+                  alt="Apresentação Quem Sou Eu — Dra. Michaely Pereira Silva"
                   fill
                   unoptimized
-                  className="object-cover object-top"
+                  className="object-contain bg-white"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#14110e]/90 via-[#14110e]/30 to-transparent" />
               </div>
 
               {/* Authority badge card */}
               <div className="absolute -bottom-6 right-3 max-w-[340px] rounded-xl border border-[#deb753]/40 bg-white px-5 py-4 shadow-xl sm:-right-6 sm:px-6">
                 <div className="flex items-center gap-2 text-[#8e6318]">
-                  <Flame size={16} />
+                  <Sparkles size={16} />
                   <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#8e6318]">
-                    Combatividade · Dedicação · Técnica
+                    Dedicação · Ética · Acolhimento
                   </p>
                 </div>
                 <p className="mt-1 font-serif text-lg leading-snug text-[#14110e]">
-                  Dra. Suellem Rodrigues
+                  Dra. Michaely Pereira Silva
                 </p>
                 <p className="mt-0.5 text-[11px] font-medium text-[#8e6318]">
-                  {OAB_REGISTRATION} · Especialista em Execuções Penais
+                  Pós-Graduada: Bancário • Trabalho
                 </p>
                 <p className="mt-1 text-[11px] leading-4 text-[#5c5042]">
-                  R. José Albino, 535 - Centro · São Sebastião do Paraíso - MG
+                  R. Astolfo Moreira, 305 A - Centro · João Pinheiro - MG
                 </p>
               </div>
 
               <span className="absolute -left-4 -top-4 -z-10 size-24 border-l-2 border-t-2 border-[#deb753]/40 sm:-left-7 sm:-top-7 sm:size-32" />
             </motion.div>
 
-            {/* Story & Biography - Editorial Warm Light Typography */}
+            {/* Story & Biography */}
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -866,16 +819,16 @@ export default function Home() {
                 className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#deb753]/40 bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#8e6318] shadow-xs"
               >
                 <span className="size-2 shrink-0 rounded-full bg-[#8e6318]" />
-                <span>QUEM É A DRA. SUELLEM RODRIGUES</span>
+                <span>QUEM É A DRA. MICHAELY PEREIRA SILVA</span>
               </motion.div>
 
               <motion.h2
                 variants={reveal}
-                className="font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-[#14110e] sm:text-4xl lg:text-[3.25rem]"
+                className="font-serif text-3xl leading-[1.14] tracking-[-0.02em] text-[#14110e] sm:text-4xl lg:text-[3.25rem]"
               >
-                Uma defensora incansável:{" "}
+                Uma advocacia que escuta, acolhe e resolve:{" "}
                 <span className="italic text-[#8e6318]">
-                  determinada em assegurar a ampla defesa e a dignidade na execução penal.
+                  clareza que traz segurança e técnica firme para proteger seus direitos.
                 </span>
               </motion.h2>
 
@@ -883,26 +836,26 @@ export default function Home() {
                 variants={reveal}
                 className="mt-6 max-w-xl text-[15px] leading-7 text-[#4c433a]"
               >
-                Com escritório sediado em{" "}
+                Com sede no Centro de{" "}
                 <strong className="font-bold text-[#14110e]">
-                  São Sebastião do Paraíso - MG
+                  João Pinheiro - MG
                 </strong>{" "}
-                e capacidade de atuação eletrônica em todo o território nacional, a Dra. Suellem Rodrigues (OAB/MG 174.904) possui 33 anos, formação sólida em Direito e{" "}
+                e atendimento on-line em todo o território nacional, a Dra. Michaely Pereira Silva representa uma advocacia dinâmica, moderna e verdadeiramente humana. Com 25 anos e aprovação na OAB conquistada com destaque precoce ainda durante o{" "}
                 <strong className="font-bold text-[#14110e]">
-                  Pós-graduação em Advocacia Criminal
+                  9º período da faculdade
                 </strong>
-                , sendo amplamente reconhecida pelo domínio técnico da{" "}
-                <strong className="font-bold text-[#14110e]">
-                  Lei de Execução Penal (LEP)
-                </strong>
-                .
+                , ela alia dedicação incansável e sólida base acadêmica.
               </motion.p>
 
               <motion.p
                 variants={reveal}
                 className="mt-4 max-w-xl text-[15px] leading-7 text-[#4c433a]"
               >
-                Ariana nata e extremamente determinada, ela compreende que por trás de cada guia de execução ou processo criminal existe uma pessoa sob a custódia do Estado e uma família aflita em busca de respostas transparentes. Não promete resultados impossíveis, mas luta com rigor processual para que nenhum direito seja violado e nenhum dia a mais de pena seja cumprido indevidamente.
+                Com pós-graduação nas áreas de{" "}
+                <strong className="font-bold text-[#14110e]">
+                  Direito Bancário e Direito do Trabalho
+                </strong>
+                , seu trabalho é amplamente reconhecido pela clareza didática. Em vez de termos incompreensíveis, ela explica cada alternativa de forma simples e acolhedora, garantindo que você compreenda seus direitos e participe com confiança de cada decisão sobre seu patrimônio e sua família.
               </motion.p>
 
               {/* Client Quote Card from real reviews */}
@@ -911,10 +864,10 @@ export default function Home() {
                 className="mt-6 rounded-xl border border-[#e8dfd2] bg-white p-5 shadow-xs"
               >
                 <blockquote className="font-serif text-sm italic leading-relaxed text-[#14110e]">
-                  &ldquo;Profissional excelente e extremamente atenciosa. Demonstrou grande conhecimento como advogada criminalista, esclarecendo todas as dúvidas de forma clara e objetiva. Além disso, transmite muita segurança e confiança, características fundamentais nessa área. Recomendo seu trabalho sem hesitação!&rdquo;
+                  &ldquo;Atendimento excelente, a Dra demonstra muito conhecimento é empática, soube esclarecer minhas dúvidas de forma fácil pra eu entender. Adorei o atendimento super recomendo.&rdquo;
                 </blockquote>
                 <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-[#8e6318]">
-                  — Mayara Christina Nunes · Avaliação Verificada no Google Meu Negócio (5,0 ★)
+                  — Soane Ferreira · Avaliação Verificada no Google Meu Negócio (5,0 ★)
                 </p>
               </motion.div>
 
@@ -924,21 +877,21 @@ export default function Home() {
                 className="mt-6 grid grid-cols-2 gap-3 text-xs sm:grid-cols-3"
               >
                 <div className="rounded-lg border border-[#e8dfd2] bg-white p-3 shadow-xs">
-                  <p className="font-bold text-[#14110e]">33 Anos</p>
+                  <p className="font-bold text-[#14110e]">25 Anos</p>
                   <p className="mt-0.5 text-[11px] text-[#6b5d50]">
-                    Pós-Graduada em Advocacia Criminal
+                    Dinamismo, agilidade & dedicação integral
                   </p>
                 </div>
                 <div className="rounded-lg border border-[#e8dfd2] bg-white p-3 shadow-xs">
-                  <p className="font-bold text-[#14110e]">Especialista</p>
+                  <p className="font-bold text-[#14110e]">Aprovada no 9º Período</p>
                   <p className="mt-0.5 text-[11px] text-[#6b5d50]">
-                    Domínio da Execução Penal & SEEU
+                    Destaque acadêmico & rigor técnico precoce
                   </p>
                 </div>
                 <div className="rounded-lg border border-[#e8dfd2] bg-white p-3 shadow-xs col-span-2 sm:col-span-1">
-                  <p className="font-bold text-[#14110e]">Extremamente Determinada</p>
+                  <p className="font-bold text-[#14110e]">Pós-Graduada</p>
                   <p className="mt-0.5 text-[11px] text-[#6b5d50]">
-                    Combatividade na defesa da liberdade
+                    Direito Bancário • Direito do Trabalho
                   </p>
                 </div>
               </motion.div>
@@ -949,19 +902,19 @@ export default function Home() {
               >
                 <div className="flex items-center gap-2">
                   <CheckCircle2 size={15} className="shrink-0 text-[#8e6318]" />
-                  <span>Sede na R. José Albino, 535 - Sl 1 - Paraíso - MG</span>
+                  <span>Sede na R. Astolfo Moreira, 305 A - Centro · João Pinheiro</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 size={15} className="shrink-0 text-[#8e6318]" />
-                  <span>Nota máxima 5,0 ★ no Google com 20 avaliações</span>
+                  <span>Nota máxima 5,0 ★ no Google com 17 avaliações</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 size={15} className="shrink-0 text-[#8e6318]" />
-                  <span>Comunicação direta com familiares via WhatsApp</span>
+                  <span>Contato direto pelo WhatsApp, sem robôs ou intermediários</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 size={15} className="shrink-0 text-[#8e6318]" />
-                  <span>Atuação presencial em Minas Gerais e no SEEU Brasil</span>
+                  <span>Atendimento presencial em Minas Gerais e digital para o Brasil</span>
                 </div>
               </motion.div>
 
@@ -971,14 +924,14 @@ export default function Home() {
               >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Suellem Rodrigues! Gostaria de agendar uma consulta sobre caso criminal ou execução penal."
+                    "Olá, Dra. Michaely! Gostaria de agendar uma consulta para conversar diretamente sobre meu caso."
                   )}
                   target="_blank"
                   size="md"
                   variant="gold"
                   className="rounded-lg shadow-md"
                 >
-                  <WhatsAppIcon size={16} /> Falar com a Dra. Suellem
+                  <WhatsAppIcon size={16} /> Falar com a Dra. Michaely
                 </GlowingButton>
                 <a
                   href={`tel:+${WHATSAPP_NUMBER}`}
@@ -991,7 +944,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Pilares de Atuação / Especialidades Penais & Execuções */}
+        {/* Pilares de Atuação / Especialidades */}
         <section
           id="atuacao"
           className="scroll-mt-24 border-t border-[#e8dfd2] bg-[#f8f5ee] py-20 sm:py-28 lg:py-32"
@@ -1006,17 +959,16 @@ export default function Home() {
             >
               <Heading
                 light
-                eyebrow="PILARES DE ATUAÇÃO CRIMINAL & EXECUÇÃO PENAL"
-                description="Defesa técnica minuciosa em todas as fases da persecução penal, com ênfase especial na garantia dos direitos dos apenados perante as Varas de Execuções Penais (VEP)."
+                eyebrow="ÁREAS DE ATUAÇÃO & ESPECIALIDADES"
+                description="Atuação jurídica minuciosa, preventiva e contenciosa nas principais áreas do Direito, com foco em resolver demandas com celeridade e segurança."
               >
-                Atuação combativa e especializada em{" "}
+                Soluções jurídicas estratégicas em{" "}
                 <span className="italic text-[#8e6318]">
-                  São Sebastião do Paraíso, Minas Gerais e em todo o Brasil.
+                  João Pinheiro, Noroeste de Minas e em todo o Brasil.
                 </span>
               </Heading>
               <p className="max-w-[270px] pb-1 text-xs leading-6 text-[#5c5042]">
-                Clique em uma especialidade abaixo para conferir as demandas
-                atendidas e iniciar uma consulta diretamente pelo WhatsApp.
+                Clique em uma especialidade abaixo para conferir as demandas atendidas e iniciar uma conversa direta pelo WhatsApp.
               </p>
             </motion.div>
 
@@ -1074,7 +1026,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Por Que Escolher a Dra. Suellem Rodrigues - Diferenciais */}
+        {/* Por Que Escolher a Dra. Michaely Silva - Diferenciais */}
         <section
           id="diferenciais"
           className="scroll-mt-24 border-t border-[#e8dfd2] bg-[#faf7f2] py-20 text-[#14110e] sm:py-28 lg:py-32"
@@ -1083,17 +1035,17 @@ export default function Home() {
             <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
               <Heading
                 light
-                eyebrow="NOSSOS PILARES DE ATUAÇÃO COMBATIVA"
-                description="A liberdade é o bem mais valioso de uma pessoa. Quando ela é cerceada, cada dia conta e cada falha processual pode custar meses ou anos a mais de prisão."
+                eyebrow="NOSSOS PILARES DE EXCELÊNCIA"
+                description="Seu patrimônio, sua família e seus direitos são preciosos demais para ficarem em mãos desatentas ou presos em burocracias sem resposta."
               >
                 Por que confiar seu caso à{" "}
                 <span className="italic text-[#8e6318]">
-                  Dra. Suellem Rodrigues?
+                  Dra. Michaely Pereira Silva?
                 </span>
               </Heading>
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá, Dra. Suellem Rodrigues! Gostaria de consultar sobre a situação jurídica de um apenado."
+                  "Olá, Dra. Michaely! Gostaria de uma avaliação para a minha situação jurídica."
                 )}
                 target="_blank"
                 size="md"
@@ -1105,7 +1057,7 @@ export default function Home() {
             </div>
 
             <div className="mt-12 grid gap-8 lg:grid-cols-2">
-              {/* Card 1: Rigor no SEEU & Execução Penal */}
+              {/* Card 1: Comunicação Clara e Empática */}
               <motion.article
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1116,51 +1068,51 @@ export default function Home() {
                 <div>
                   <div className="flex items-center justify-between">
                     <span className="inline-flex items-center gap-1.5 rounded-md border border-[#deb753]/30 bg-[#f4efe6] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#322003]">
-                      <Gavel size={14} /> Especialista em Execução Penal
+                      <HeartHandshake size={14} /> Atendimento Humanizado & Empático
                     </span>
                     <span className="text-xs font-semibold text-[#8e6318]">
-                      SEEU & Cálculos da LEP
+                      Sem Juridiquês
                     </span>
                   </div>
                   <h3 className="mt-4 font-serif text-2xl leading-tight text-[#14110e] sm:text-[1.75rem]">
-                    Auditoria Rigorosa do Atestado de Pena & Eliminação de Erros
+                    Você Entende Cada Passo do Seu Processo com Tranquilidade
                   </h3>
                   <p className="mt-3 text-[14px] leading-relaxed text-[#4c433a]">
-                    Muitos apenados cumprem pena além do tempo devido simplesmente porque ninguém auditou a guia de execução. Analisamos cada fração, data-base, remições não computadas e unificações para buscar a progressão de regime no dia exato previsto em lei.
+                    Muitas pessoas chegam ao advogado com medo da complexidade das leis. Aqui, a Dra. Michaely explica cada detalhe com paciência e didática, garantindo que você tenha plena ciência dos seus direitos e saiba exatamente o que está acontecendo.
                   </p>
                   <ul className="mt-5 space-y-2 text-xs font-medium text-[#14110e]">
                     <li className="flex items-center gap-2">
                       <CheckCircle2 size={15} className="shrink-0 text-[#8e6318]" />
-                      <span>Cálculo exato das frações (16%, 20%, 25%, 30%, 40%, 50%, 60%, 70%)</span>
+                      <span>Explicação clara e acessível em linguagem que qualquer pessoa compreende</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle2 size={15} className="shrink-0 text-[#8e6318]" />
-                      <span>Inclusão de todas as remições por estudo, trabalho e leitura</span>
+                      <span>Empatia com as dores e ansiedades em momentos delicados da vida</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle2 size={15} className="shrink-0 text-[#8e6318]" />
-                      <span>Peticionamento ágil e insistente perante o juiz da VEP</span>
+                      <span>Transparência total sobre chances, riscos reais e prazos prováveis</span>
                     </li>
                   </ul>
                 </div>
                 <div className="mt-7 border-t border-[#e8dfd2] pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dra. Suellem Rodrigues! Gostaria que você fizesse uma auditoria no cálculo de pena do meu familiar."
+                      "Olá, Dra. Michaely! Gostaria de tirar dúvidas sobre o meu caso em uma conversa sem burocracia."
                     )}
                     target="_blank"
                     rel="noreferrer"
                     className="inline-flex w-full items-center justify-between rounded-lg border border-[#deb753]/40 bg-[#faf7f2] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#14110e] transition-all hover:border-[#8e6318] hover:bg-[#14110e] hover:text-[#f7e5a9]"
                   >
                     <span className="inline-flex items-center gap-2">
-                      <WhatsAppIcon size={15} /> Solicitar Auditoria de Pena no WhatsApp
+                      <WhatsAppIcon size={15} /> Conversar no WhatsApp com a Dra. Michaely
                     </span>
                     <ArrowUpRight size={15} />
                   </a>
                 </div>
               </motion.article>
 
-              {/* Card 2: Acolhimento e Verdade com a Família */}
+              {/* Card 2: Agilidade e Soluções Extrajudiciais */}
               <motion.article
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1171,44 +1123,44 @@ export default function Home() {
                 <div>
                   <div className="flex items-center justify-between">
                     <span className="inline-flex items-center gap-1.5 rounded-md border border-[#deb753]/30 bg-[#f4efe6] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#322003]">
-                      <Users2 size={14} /> Atendimento Humanizado & Direto
+                      <Users2 size={14} /> Foco em Resultados & Celeridade
                     </span>
                     <span className="text-xs font-semibold text-[#8e6318]">
-                      Sem Falsas Promessas
+                      Cartório & Acordos Rápidos
                     </span>
                   </div>
                   <h3 className="mt-4 font-serif text-2xl leading-tight text-[#14110e] sm:text-[1.75rem]">
-                    Você e Sua Família Nunca Ficam no Escuro Sem Resposta
+                    Prioridade em Soluções Rápidas em Cartório Sem Demora Judicial
                   </h3>
                   <p className="mt-3 text-[14px] leading-relaxed text-[#4c433a]">
-                    Sabemos a dor e o desgaste emocional que uma prisão causa aos parentes. Com a Dra. Suellem Rodrigues, você fala diretamente com a advogada pelo WhatsApp, recebe atualizações claras sobre o andamento e tem a segurança de uma atuação séria, sem promessas vazias.
+                    Sabemos que tempo é dinheiro e desgaste emocional. Sempre que os requisitos legais estão presentes, priorizamos inventários, divórcios e dissoluções de união estável em cartório, resolvendo partilhas em semanas com economia e paz.
                   </p>
                   <ul className="mt-5 space-y-2 text-xs font-medium text-[#14110e]">
                     <li className="flex items-center gap-2">
                       <CheckCircle2 size={15} className="shrink-0 text-[#8e6318]" />
-                      <span>Contato direto pelo WhatsApp, sem barreiras ou robôs</span>
+                      <span>Inventários extrajudiciais céleres sem arrastar processos por anos</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle2 size={15} className="shrink-0 text-[#8e6318]" />
-                      <span>Explicação clara sobre prazos reais e expectativas concretas</span>
+                      <span>Acompanhamento direto pelo WhatsApp com retornos ágeis</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle2 size={15} className="shrink-0 text-[#8e6318]" />
-                      <span>Respeito absoluto à dor da família e à dignidade do apenado</span>
+                      <span>Planejamento financeiro e tributário para reduzir custos com ITCD e taxas</span>
                     </li>
                   </ul>
                 </div>
                 <div className="mt-7 border-t border-[#e8dfd2] pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dra. Suellem Rodrigues! Gostaria de conversar diretamente sobre a situação do meu familiar."
+                      "Olá, Dra. Michaely! Gostaria de consultar sobre a possibilidade de um inventário ou divórcio rápido em cartório."
                     )}
                     target="_blank"
                     rel="noreferrer"
                     className="inline-flex w-full items-center justify-between rounded-lg border border-[#deb753]/40 bg-[#faf7f2] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#14110e] transition-all hover:border-[#8e6318] hover:bg-[#14110e] hover:text-[#f7e5a9]"
                   >
                     <span className="inline-flex items-center gap-2">
-                      <WhatsAppIcon size={15} /> Conversar Diretamente com a Dra. Suellem
+                      <WhatsAppIcon size={15} /> Consultar Solução em Cartório no WhatsApp
                     </span>
                     <ArrowUpRight size={15} />
                   </a>
@@ -1218,7 +1170,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Nosso Método de Trabalho em 3 Passos */}
+        {/* Método de Trabalho em 3 Passos */}
         <section className="relative overflow-hidden border-t border-[#e8dfd2] bg-[#faf7f2] py-20 text-[#14110e] sm:py-24 lg:py-28">
           <div className="pointer-events-none absolute -left-28 top-1/4 size-96 rounded-full bg-[#deb753]/10 blur-3xl" />
           <div className="pointer-events-none absolute -right-28 bottom-1/4 size-96 rounded-full bg-[#deb753]/10 blur-3xl" />
@@ -1227,19 +1179,19 @@ export default function Home() {
             <div>
               <Heading
                 light
-                eyebrow="COMO ATUAMOS NA SUA DEFESA"
-                description="Um método combativo, técnico e transparente para garantir que cada benefício previsto na Lei de Execução Penal seja efetivado o mais rápido possível."
+                eyebrow="COMO ATUAMOS NO SEU CASO"
+                description="Um método transparente, técnico e humanizado para analisar sua situação e aplicar a solução jurídica mais rápida e segura."
               >
                 Três etapas claras para{" "}
                 <span className="italic text-[#8e6318]">
-                  antecipar direitos e lutar pela liberdade.
+                  proteger seu patrimônio e defender seus direitos.
                 </span>
               </Heading>
 
               <blockquote className="mt-8 rounded-xl border border-[#e8dfd2] bg-white p-6 font-serif text-base italic leading-7 text-[#14110e] shadow-xs">
-                &ldquo;Na execução penal, quem espera pelo ritmo da burocracia perde meses preciosos de liberdade. Nosso papel é agir com combatividade e técnica para colocar o apenado de volta ao convívio de sua família o quanto antes.&rdquo;
+                &ldquo;Cada caso envolve vidas, famílias e expectativas reais. Meu compromisso é garantir que você se sinta acolhido e seguro, sabendo que sua causa está sendo cuidada com o máximo rigor técnico e atenção pessoal.&rdquo;
                 <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-[#8e6318]">
-                  — Dra. Suellem Rodrigues · OAB/MG 174.904
+                  — Dra. Michaely Pereira Silva · Advogada
                 </footer>
               </blockquote>
             </div>
@@ -1254,18 +1206,18 @@ export default function Home() {
               {[
                 [
                   "01",
-                  "Auditoria & Diagnóstico Processual Imediato",
-                  "Acessamos os autos no SEEU ou no PJe, auditamos a guia de recolhimento, conferimos a data-base, apuramos remições não computadas e verificamos a data exata em que o benefício deveria ter sido concedido.",
+                  "Escuta Atenta & Diagnóstico Documental",
+                  "Conversa inicial presencial no escritório em João Pinheiro ou via WhatsApp para compreender a fundo seu relato, recolher os documentos necessários e avaliar detalhadamente os fatos.",
                 ],
                 [
                   "02",
-                  "Peticionamento Técnico & Documentação Completa",
-                  "Instruímos o pedido com todos os documentos necessários (atestados de conduta carcerária, comprovantes de trabalho/estudo, laudos e endereços), fundamentando na doutrina e súmulas dos tribunais superiores.",
+                  "Definição da Estratégia Mais Rápida e Econômica",
+                  "Análise minuciosa para verificar se a causa pode ser resolvida de maneira extrajudicial (acordo ou cartório) com menor custo e tempo, ou se é indispensável uma ação judicial com pedido liminar.",
                 ],
                 [
                   "03",
-                  "Despacho Direto com Juízes & Feedback aos Familiares",
-                  "Não deixamos a petição parada. Despachamos prioritariamente para acelerar a manifestação do Ministério Público e a decisão do juiz da VEP, mantendo a família ciente de cada passo.",
+                  "Acompanhamento Firme & Feedback Constante",
+                  "Protocolo técnico com forte fundamentação jurisprudencial, diligência constante perante os juízos e cartórios e retorno contínuo para mantê-lo sempre informado sobre cada andamento.",
                 ],
               ].map(([number, title, description]) => (
                 <motion.div
@@ -1288,7 +1240,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Avaliações / Depoimentos Reais Verificados no Google */}
+        {/* Avaliações / Depoimentos Reais no Google Meu Negócio */}
         <section
           id="avaliacoes"
           className="scroll-mt-24 border-t border-[#deb753]/30 bg-[#f4efe6] py-20 text-[#14110e] sm:py-28 lg:py-32"
@@ -1298,11 +1250,11 @@ export default function Home() {
               <Heading
                 light
                 eyebrow="PROVA SOCIAL VERIFICADA · GOOGLE MEU NEGÓCIO"
-                description="Confira avaliações reais e espontâneas de clientes e parceiros sobre o trabalho da Dra. Suellem Rodrigues na sede em São Sebastião do Paraíso - MG e através do atendimento on-line em todo o Brasil."
+                description="Veja avaliações autênticas e espontâneas deixadas por clientes no Google sobre o atendimento e a dedicação da Dra. Michaely Pereira Silva em João Pinheiro - MG."
               >
                 Avaliada com nota máxima 5,0 ★ com{" "}
                 <span className="italic text-[#8e6318]">
-                  20 avaliações no Google pela competência na execução penal, ética e agilidade.
+                  17 avaliações no Google pela dedicação, empatia e excelência profissional.
                 </span>
               </Heading>
 
@@ -1327,21 +1279,21 @@ export default function Home() {
                     </div>
                   </div>
                   <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-[#4c433a]">
-                    Suellem Rodrigues | Advogada
+                    Michaely Pereira Silva — Advogada
                   </p>
                   <a
-                    href={GOOGLE_MAPS_URL}
+                    href={GOOGLE_SEARCH_URL}
                     target="_blank"
                     rel="noreferrer"
                     className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-[#8e6318] transition-colors hover:text-[#14110e]"
                   >
-                    20 avaliações no Google <ArrowUpRight size={13} />
+                    17 avaliações no Google <ArrowUpRight size={13} />
                   </a>
                 </div>
               </div>
             </div>
 
-            {/* Client Reviews Grid (Real Google Reviews) */}
+            {/* Client Reviews Grid */}
             <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {clientReviews.map((review) => (
                 <article
@@ -1393,14 +1345,14 @@ export default function Home() {
             <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-[#e8dfd2] pt-8 sm:flex-row">
               <div className="flex flex-wrap items-center gap-2">
                 {[
-                  "Advogada em São Sebastião do Paraíso - MG",
-                  "Atuação no SEEU em Todo o Brasil",
-                  "Nota 5,0 ★ no Google (20 avaliações)",
-                  "Execução Penal & Progressão de Regime",
-                  "Remição por Trabalho, Leitura e Estudo",
-                  "Plantão de Audiência de Custódia 24h",
-                  "Habeas Corpus TJMG, STJ e STF",
-                  "Tribunal do Júri & Revisão Criminal",
+                  "Advogada em João Pinheiro - MG",
+                  "Atendimento Digital para Todo o Brasil",
+                  "Nota 5,0 ★ no Google (17 avaliações)",
+                  "Direito do Consumidor & SPC/Serasa",
+                  "Divórcio, Guarda & Pensão Alimentícia",
+                  "Inventário Judicial & Extrajudicial em Cartório",
+                  "Pós-Graduação: Bancário • Trabalho",
+                  "Aprovada no 9º Período com Excelência",
                 ].map((tag) => (
                   <span
                     key={tag}
@@ -1413,7 +1365,7 @@ export default function Home() {
               </div>
 
               <a
-                href={GOOGLE_MAPS_URL}
+                href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noreferrer"
                 className="group inline-flex shrink-0 items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#8e6318] transition-colors hover:text-[#14110e]"
@@ -1428,7 +1380,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Contato & Localização da Sede em São Sebastião do Paraíso - MG */}
+        {/* Contato & Localização da Sede em João Pinheiro - MG */}
         <section
           id="contato"
           className="scroll-mt-24 border-t border-[#deb753]/30 bg-[#faf7f2] py-20 text-[#14110e] sm:py-28 lg:py-32"
@@ -1437,19 +1389,19 @@ export default function Home() {
             <div>
               <Heading
                 light
-                eyebrow="CONTATO & ATENDIMENTO EM SÃO SEBASTIÃO DO PARAÍSO"
-                description="Inicie seu atendimento imediatamente pelo WhatsApp para relatar seu caso ou agende uma reunião presencial em nossa sede. Atuamos com celeridade nas Varas de Execuções Penais, presídios, delegacias e tribunais de Minas Gerais e em todo o Brasil através do SEEU nacional."
+                eyebrow="CONTATO & ATENDIMENTO EM JOÃO PINHEIRO"
+                description="Agende uma consulta presencial no escritório no Centro de João Pinheiro ou inicie seu atendimento imediatamente pelo WhatsApp para relatar seu caso com sigilo e rapidez."
               >
                 Estamos prontos para{" "}
                 <span className="italic text-[#8e6318]">
-                  escutar sua situação e defender sua liberdade.
+                  escutar sua situação e proteger seus direitos.
                 </span>
               </Heading>
 
               <div className="mt-9 flex flex-col items-start gap-4">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Suellem Rodrigues! Gostaria de agendar um atendimento para análise urgente de execução penal / caso criminal."
+                    "Olá, Dra. Michaely! Gostaria de agendar um atendimento para análise jurídica do meu caso."
                   )}
                   target="_blank"
                   size="lg"
@@ -1472,13 +1424,13 @@ export default function Home() {
                   />
                   <div>
                     <p className="font-semibold text-[#14110e]">
-                      Horário de Funcionamento & Plantão
+                      Horário de Funcionamento
                     </p>
                     <p className="mt-0.5 text-[#14110e]">
-                      Segunda a Sexta-feira das 08:00 às 19:00
+                      Segunda a Sexta-feira das 09:00 às 18:00
                     </p>
                     <p className="text-[11px] text-[#786b5e]">
-                      Atendimento presencial no Centro de São Sebastião do Paraíso e plantão 24h para prisões em flagrante e custódia
+                      Atendimento presencial no Centro de João Pinheiro - MG e atendimento digital para clientes em todo o Brasil
                     </p>
                   </div>
                 </div>
@@ -1524,7 +1476,7 @@ export default function Home() {
                     <span className="text-[#14110e]">{ADDRESS_TEXT}</span>
                     <br />
                     <a
-                      href={GOOGLE_MAPS_URL}
+                      href={GOOGLE_SEARCH_URL}
                       target="_blank"
                       rel="noreferrer"
                       className="mt-1 inline-flex items-center gap-1 font-semibold text-[#8e6318] hover:underline"
@@ -1544,32 +1496,35 @@ export default function Home() {
                 <div className="relative size-[64px] shrink-0 overflow-hidden rounded-full border-2 border-[#deb753]/60 bg-[#120f0d] shadow-sm sm:size-[76px]">
                   <Image
                     src={LOGO_SEAL_SRC}
-                    alt="Selo Suellem Rodrigues Advocacia"
+                    alt="Selo Michaely Silva Advogada"
                     fill
                     sizes="76px"
-                    className="object-contain p-1.5"
+                    className="object-contain p-1"
                   />
                 </div>
                 <div>
                   <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#8e6318]">
                     Sede do Escritório
                   </p>
-                  <p className="mt-0.5 font-serif text-xl font-bold text-[#14110e] sm:text-2xl">
-                    Suellem Rodrigues | Advogada
+                  <p className="mt-0.5 font-cinzel text-xl font-bold text-[#14110e] sm:text-2xl">
+                    MICHAELY SILVA
+                  </p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#8e6318]">
+                    Advogada
                   </p>
                 </div>
               </div>
 
               <address className="mt-7 max-w-md text-[14px] not-italic leading-7 text-[#4c433a]">
                 <strong className="font-semibold text-[#14110e]">
-                  Dra. Suellem Rodrigues
+                  Dra. Michaely Pereira Silva
                 </strong>
                 <br />
-                Advogada Criminalista · {OAB_REGISTRATION}
+                Advogada Civil em João Pinheiro - MG
                 <br />
-                Especialista em Execuções Penais
+                Direito do Consumidor · Família · Inventários
                 <br />
-                Pós-Graduada em Advocacia Criminal
+                Pós-Graduação: Direito Bancário • Direito do Trabalho
                 <br />
                 {ADDRESS_TEXT}
               </address>
@@ -1582,18 +1537,18 @@ export default function Home() {
                 <div className="grid grid-cols-2 gap-y-1.5 text-[#4c433a]">
                   <span>Segunda a Sexta</span>
                   <span className="text-right font-semibold text-[#14110e]">
-                    08:00 às 19:00
+                    09:00 às 18:00
                   </span>
                   <span>Atendimento Presencial</span>
                   <span className="text-right font-medium text-[#8e6318]">
-                    São Sebastião do Paraíso - MG
+                    João Pinheiro - MG
                   </span>
                   <span>Endereço</span>
-                  <span className="text-right text-[#14110e]">R. José Albino, 535 - Sl 1</span>
-                  <span>Plantão Flagrantes</span>
-                  <span className="text-right font-semibold text-[#8e6318]">24 Horas</span>
-                  <span>Atendimento Online</span>
-                  <span className="text-right text-[#14110e]">SEEU Brasil</span>
+                  <span className="text-right text-[#14110e]">R. Astolfo Moreira, 305 A</span>
+                  <span>Avaliações Google</span>
+                  <span className="text-right font-semibold text-[#8e6318]">5,0 ★ (17 avaliações)</span>
+                  <span>Atendimento Digital</span>
+                  <span className="text-right text-[#14110e]">Todo o Brasil</span>
                 </div>
               </div>
 
@@ -1601,37 +1556,37 @@ export default function Home() {
 
               <div className="flex flex-wrap items-center justify-between gap-4">
                 <p className="text-xs text-[#786b5e]">
-                  Atendimento ágil, acolhedor e com total sigilo profissional
+                  Atendimento humanizado, ético e com total sigilo profissional
                 </p>
                 <a
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Suellem Rodrigues! Gostaria de agendar um atendimento no escritório."
+                    "Olá, Dra. Michaely! Gostaria de agendar um atendimento no escritório."
                   )}
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 rounded-lg border border-[#deb753]/40 bg-[#f4efe6] px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-[#14110e] transition-colors hover:border-[#8e6318] hover:bg-[#14110e] hover:text-[#f7e5a9]"
                 >
-                  <WhatsAppIcon size={14} /> Falar com a Especialista <ArrowUpRight size={14} />
+                  <WhatsAppIcon size={14} /> Falar no WhatsApp <ArrowUpRight size={14} />
                 </a>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Pre-Footer CTA Strip - Warm Light Gold & Silk Canvas */}
+        {/* Pre-Footer CTA Strip */}
         <section className="border-t border-[#deb753]/30 bg-gradient-to-r from-[#f4efe6] via-[#faf7f2] to-[#f4efe6] px-5 py-14 text-[#14110e] shadow-xs sm:px-8 sm:py-16 lg:px-12">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-7 sm:flex-row sm:items-center">
             <div>
               <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#8e6318]">
-                <Sparkles size={13} /> SUELLEM RODRIGUES ADVOCACIA · SÃO SEBASTIÃO DO PARAÍSO & MINAS GERAIS · {OAB_REGISTRATION}
+                <Sparkles size={13} /> MICHAELY SILVA ADVOGADA · JOÃO PINHEIRO & MINAS GERAIS
               </p>
               <h2 className="mt-3 max-w-2xl font-serif text-3xl leading-tight text-[#14110e] sm:text-4xl">
-                Precisa de uma defesa criminal combativa e experiente para defender a sua liberdade?
+                Precisa de uma advogada que realmente ouve você e defende seus interesses com firmeza e clareza?
               </h2>
             </div>
             <a
               href={getWhatsAppUrl(
-                "Olá, Dra. Suellem Rodrigues! Gostaria de uma avaliação para o caso de um apenado / situação penal urgente."
+                "Olá, Dra. Michaely! Gostaria de uma avaliação para a minha situação jurídica."
               )}
               target="_blank"
               rel="noreferrer"
@@ -1643,38 +1598,30 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Footer - Elegant Light Mode */}
+        {/* Footer - Elegant Light Luxury */}
         <footer className="border-t border-[#e8dfd2] bg-[#f4efe6] px-5 py-14 text-[#14110e] sm:px-8 lg:px-12">
           <div className="mx-auto grid max-w-7xl gap-10 sm:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1fr]">
             <div>
               <a
                 href="#inicio"
-                aria-label="Suellem Rodrigues Advocacia"
-                className="inline-flex items-center gap-3.5 transition-transform hover:scale-[1.02]"
+                aria-label="Michaely Silva Advogada"
+                className="inline-block transition-transform hover:scale-[1.01]"
               >
-                <div className="relative size-[72px] shrink-0 overflow-hidden rounded-full border-2 border-[#deb753]/50 bg-[#120f0d] shadow-sm sm:size-[80px]">
+                <div className="relative h-14 w-52 sm:h-16 sm:w-60">
                   <Image
-                    src={LOGO_SEAL_SRC}
-                    alt="Suellem Rodrigues Advocacia"
+                    src={LOGO_FULL_SRC}
+                    alt="Michaely Silva Advogada"
                     fill
-                    sizes="80px"
-                    className="object-contain p-1.5"
+                    sizes="240px"
+                    className="object-contain object-left"
                   />
-                </div>
-                <div className="flex flex-col">
-                  <span className="font-serif text-xl font-bold tracking-wider text-[#14110e] sm:text-2xl">
-                    SUELLEM RODRIGUES
-                  </span>
-                  <span className="text-xs font-semibold uppercase tracking-[0.24em] text-[#8e6318]">
-                    Advocacia Criminal · {OAB_REGISTRATION}
-                  </span>
                 </div>
               </a>
               <p className="mt-4 max-w-xs text-xs leading-6 text-[#5c5042]">
-                ⚖️ Defesa combativa, estratégica e intransigente na garantia dos direitos fundamentais. Especialista em Execuções Penais, Progressão de Regime, Livramento Condicional e Habeas Corpus em Minas Gerais e em todo o Brasil.
+                ⚖️ Advocacia de excelência com atendimento humanizado, ética e rigor técnico. Atuação focada em Direito do Consumidor, Direito de Família, Inventários, Direito Bancário e do Trabalho em João Pinheiro - MG e em todo o Brasil.
               </p>
               <p className="mt-3 text-[11px] font-semibold text-[#8e6318]">
-                Dra. Suellem Rodrigues · {OAB_REGISTRATION}
+                Dra. Michaely Pereira Silva · Advogada
               </p>
             </div>
 
@@ -1687,19 +1634,19 @@ export default function Home() {
                   Início
                 </a>
                 <a className="footer-link" href="#sobre">
-                  Dra. Suellem Rodrigues
+                  Dra. Michaely Silva
                 </a>
                 <a className="footer-link" href="#atuacao">
-                  Execuções Penais & Prisões
+                  Áreas de Atuação
                 </a>
                 <a className="footer-link" href="#diferenciais">
                   Por Que Escolher
                 </a>
                 <a className="footer-link" href="#avaliacoes">
-                  Depoimentos de Clientes (5,0 ★)
+                  Avaliações de Clientes (5,0 ★)
                 </a>
                 <a className="footer-link" href="#contato">
-                  Plantão & Sede
+                  Contato & Sede
                 </a>
               </div>
             </div>
@@ -1711,7 +1658,7 @@ export default function Home() {
               <div className="mt-4 flex flex-col items-start gap-2.5 text-xs text-[#5c5042]">
                 <a
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Suellem Rodrigues! Gostaria de falar com o escritório."
+                    "Olá, Dra. Michaely! Gostaria de falar com o escritório."
                   )}
                   target="_blank"
                   rel="noreferrer"
@@ -1740,7 +1687,7 @@ export default function Home() {
                   <Mail size={15} className="shrink-0" /> {EMAIL_CONTACT}
                 </a>
                 <a
-                  href={GOOGLE_MAPS_URL}
+                  href={GOOGLE_SEARCH_URL}
                   target="_blank"
                   rel="noreferrer"
                   className="footer-link inline-flex items-start gap-2"
@@ -1749,7 +1696,7 @@ export default function Home() {
                   <span>{ADDRESS_TEXT}</span>
                 </a>
                 <p className="inline-flex items-center gap-2 pt-1 text-[11px] text-[#8e6318]">
-                  <Clock size={14} className="shrink-0" /> Seg a Sex: 08:00 às 19:00 (Plantão 24h)
+                  <Clock size={14} className="shrink-0" /> Seg a Sex: 09:00 às 18:00
                 </p>
               </div>
             </div>
@@ -1757,10 +1704,10 @@ export default function Home() {
 
           <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-[#e8dfd2] pt-6 text-[10px] text-stone-500 sm:flex-row sm:items-center sm:justify-between">
             <p>
-              © {new Date().getFullYear()} SUELLEM RODRIGUES ADVOCACIA. Todos os direitos reservados.
+              © {new Date().getFullYear()} MICHAELY PEREIRA SILVA ADVOCACIA. Todos os direitos reservados.
             </p>
             <p>
-              Conteúdo informativo, em estrita conformidade com o Código de Ética e Disciplina da OAB ({OAB_REGISTRATION}).
+              Conteúdo informativo, em estrita conformidade com o Código de Ética e Disciplina da OAB.
             </p>
           </div>
         </footer>
@@ -1772,16 +1719,16 @@ export default function Home() {
         >
           <a
             href={getWhatsAppUrl(
-              "Olá, Dra. Suellem Rodrigues! Gostaria de consultar sobre um caso criminal / execução penal com seu escritório."
+              "Olá, Dra. Michaely! Gostaria de consultar sobre meu caso e tirar dúvidas pelo WhatsApp."
             )}
             target="_blank"
             rel="noreferrer"
-            aria-label="Falar agora pelo WhatsApp com a Dra. Suellem Rodrigues"
+            aria-label="Falar agora pelo WhatsApp com a Dra. Michaely Silva"
             className="group relative flex size-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-[#25D366]/40"
           >
             <WhatsAppIcon size={28} />
             <span className="pointer-events-none absolute right-16 hidden whitespace-nowrap rounded-lg bg-[#14110e] border border-[#deb753]/30 px-3.5 py-1.5 text-xs font-semibold text-white shadow-lg transition-opacity group-hover:block">
-              Falar com a Dra. Suellem Rodrigues
+              Falar com a Dra. Michaely Silva
             </span>
           </a>
         </aside>
@@ -1816,7 +1763,7 @@ export default function Home() {
                   <X size={18} />
                 </button>
 
-                <p className="eyebrow-light">ESPECIALIDADE PENAL</p>
+                <p className="eyebrow-light">ÁREA DE ATUAÇÃO</p>
 
                 <h2
                   id="area-dialog-title"

@@ -36,7 +36,7 @@ export default function GlowingButton({
     lg: "px-7 py-4 text-xs tracking-[0.14em]",
   }[size];
 
-  // Refined metallic polished gold and prestige light styling for Suellem Rodrigues Advocacia
+  // Refined metallic polished gold and prestige light styling for Michaely Silva Advogada
   const variantClasses = {
     gold:
       "border border-[#c59a3f]/70 bg-gradient-to-r from-[#8e6318] via-[#c59a3f] to-[#8e6318] text-white font-bold shadow-md shadow-[#8e6318]/25 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold",
