@@ -36,38 +36,34 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#faf8f6",
+  themeColor: "#f8fafc",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.kowalskiadvocacia.com.br"),
+  metadataBase: new URL("https://www.airesebueno.adv.br"),
   title:
-    "Kowalski Advocacia | Previdenciário · Trabalhista · Cível · Unaí - MG",
+    "Aires & Bueno Sociedade de Advogados | Advocacia Especializada · Nova Era - MG",
   description:
-    "⚖️ Kowalski Advocacia — Advocacia especializada em Direito Previdenciário (Aposentadorias, BPC/LOAS e Benefícios do INSS), Direito Trabalhista e Direito Cível. Avaliação 4,7 ★ com 13 avaliações no Google. 📍 R. Canabrava, 192A - Centro, Unaí - MG. Atendimento em Unaí, Arinos e em todo o Brasil.",
+    "⚖️ Aires & Bueno Sociedade de Advogados — Advocacia especializada com defesa estratégica e humanizada. Atendimento presencial no Centro de Nova Era - MG e online para todo o Brasil. Avaliação 5,0 ★ com 11 avaliações no Google. 📍 R. João Pinheiro, N° 120 - Salas 401/402 - Centro, Nova Era - MG.",
   keywords: [
-    "Kowalski Advocacia",
-    "Advogado em Unaí MG",
-    "Advogado Unaí",
-    "Advocacia Unaí MG",
-    "Kowalski Advocacia Unaí",
-    "Advocacia Arinos MG",
-    "Advogado Arinos",
-    "Direito Previdenciário Unaí",
-    "Aposentadoria INSS Unaí",
-    "BPC LOAS Unaí MG",
-    "Advogado Trabalhista Unaí",
-    "Direitos Trabalhistas Unaí",
-    "Rescisão Indireta Horas Extras Unaí",
-    "Acidente de Trabalho Indenização",
-    "Advogado Cível Unaí MG",
-    "Inventário e Partilha Unaí",
-    "Contratos e Indenizações Unaí",
-    "Kowalski Advocacia Minas Gerais",
+    "Aires & Bueno Sociedade de Advogados",
+    "Aires e Bueno Advogados",
+    "Advogado Nova Era MG",
+    "Advocacia Nova Era MG",
+    "Isadora Aires Advogada",
+    "Thales Bueno Advogado",
+    "Advogado Vale do Aço",
+    "Direito Previdenciário Nova Era",
+    "Aposentadoria INSS Nova Era",
+    "Advogado Trabalhista Nova Era",
+    "Direito do Trabalho Nova Era",
+    "Advogado Cível Nova Era MG",
+    "Inventário e Sucessões Nova Era",
+    "Aires e Bueno Nova Era Minas Gerais",
   ],
-  authors: [{ name: "Kowalski Advocacia" }],
-  creator: "Kowalski Advocacia",
-  publisher: "Kowalski Advocacia",
+  authors: [{ name: "Aires & Bueno Sociedade de Advogados" }],
+  creator: "Aires & Bueno Sociedade de Advogados",
+  publisher: "Aires & Bueno Sociedade de Advogados",
   formatDetection: {
     telephone: true,
     address: true,
@@ -83,18 +79,18 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.kowalskiadvocacia.com.br",
+    url: "https://www.airesebueno.adv.br",
     title:
-      "Kowalski Advocacia | Previdenciário · Trabalhista · Cível · Unaí - MG",
+      "Aires & Bueno Sociedade de Advogados | Advocacia Especializada · Nova Era - MG",
     description:
-      "⚖️ Advocacia combativa, ética e resolutiva em Direito Previdenciário, Trabalhista e Cível. Avaliação 4,7 ★ no Google. R. Canabrava, 192A - Centro, Unaí - MG.",
-    siteName: "Kowalski Advocacia",
+      "⚖️ Advocacia especializada com defesa estratégica e humanizada. Avaliação máxima 5,0 ★ no Google. R. João Pinheiro, 120 - Salas 401 e 402 - Centro, Nova Era - MG.",
+    siteName: "Aires & Bueno Sociedade de Advogados",
     images: [
       {
         url: "/logo.png",
         width: 1024,
-        height: 682,
-        alt: "Kowalski Advocacia",
+        height: 409,
+        alt: "Aires & Bueno Sociedade de Advogados",
       },
     ],
   },
@@ -108,36 +104,37 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Kowalski Advocacia",
-    alternateName: "Advocacia Kowalski",
-    legalName: "Kowalski Advocacia",
-    telephone: "+55-38-99961-6355",
-    email: "contato@kowalskiadvocacia.com.br",
-    url: "https://www.kowalskiadvocacia.com.br",
-    image: "https://www.kowalskiadvocacia.com.br/logo.png",
+    name: "Aires & Bueno Sociedade de Advogados",
+    alternateName: "Aires e Bueno Sociedade de Advogados",
+    legalName: "Aires e Bueno Sociedade de Advogados",
+    telephone: "+55-31-3961-2840",
+    email: "contato@airesebueno.adv.br",
+    url: "https://www.airesebueno.adv.br",
+    image: "https://www.airesebueno.adv.br/logo.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "R. Canabrava, 192A - Centro",
-      addressLocality: "Unaí",
+      streetAddress: "R. João Pinheiro, N° 120 - Salas 401 - 402 - Centro",
+      addressLocality: "Nova Era",
       addressRegion: "MG",
-      postalCode: "38610-031",
+      postalCode: "35920-000",
       addressCountry: "BR",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: -16.3575,
-      longitude: -46.9038,
+      latitude: -19.7578,
+      longitude: -43.0367,
     },
     priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "4.7",
-      reviewCount: "13",
+      ratingValue: "5.0",
+      reviewCount: "11",
     },
     areaServed: [
-      "Unaí",
-      "Arinos",
-      "Noroeste de Minas Gerais",
+      "Nova Era",
+      "João Monlevade",
+      "Itabira",
+      "Vale do Aço",
       "Minas Gerais",
       "Brasil",
     ],
@@ -151,13 +148,13 @@ export default function RootLayout({
           "Thursday",
           "Friday",
         ],
-        opens: "08:00",
+        opens: "09:00",
         closes: "18:00",
       },
     ],
     sameAs: [
-      "https://www.instagram.com/advocacia.kowalski/",
-      "https://wa.me/5538999616355",
+      "https://www.instagram.com/airesebueno/",
+      "https://wa.me/553139612840",
     ],
   };
 
@@ -175,7 +172,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen overflow-x-clip bg-[#faf8f6] font-sans text-[#16080a] antialiased selection:bg-[#fce8e9] selection:text-[#380509]">
+      <body className="min-h-screen overflow-x-clip bg-[#f8fafc] font-sans text-[#0e1720] antialiased selection:bg-[#d8e5f0] selection:text-[#0e1b27]">
         {children}
       </body>
     </html>

@@ -1,6 +1,6 @@
-# Kowalski Advocacia
+# Aires & Bueno Sociedade de Advogados
 
-Landing page institucional e de alta conversão para o escritório **Kowalski Advocacia**, referência em advocacia especializada nas áreas Previdenciária, Trabalhista e Cível, com sede no Centro de Unaí - MG, unidade em Arinos e atendimento digital em todo o Brasil.
+Landing page institucional e de alta autoridade para o escritório **Aires & Bueno Sociedade de Advogados**, especializado em defesa estratégica e humanizada nas áreas Previdenciária, Trabalhista e Cível, com sede no Centro de Nova Era - MG e atendimento digital em todo o Brasil.
 
 ## Tecnologias
 
@@ -12,26 +12,26 @@ Landing page institucional e de alta conversão para o escritório **Kowalski Ad
 
 ## Identidade Visual e Tipografia (Baseada no Novo Logotipo)
 
-- **Paleta de Cores (Extraída diretamente do Logo):**
-  - Vinho Rubi Nobre Primário: `#700A12`, `#871017`
-  - Granate Profundo & Vinho Noturno: `#4A070C`, `#380509`, `#260306`
-  - Realces de Carmesim e Rubi: `#A3141B`, `#BD1C24`
-  - Dourado Champanhe & Bronze Metálico: `#CFA05E`, `#B6813B`, `#7E5420`, `#F3D8A8`
-  - Superfícies Claras Alabastro & Linho Seda: `#FFFFFF`, `#FAF8F6`, `#F5EFEA`, `#EEE5DC`
-  - Tipografia e Contraste Escuro: `#16080A`, `#4F3D40`, `#756064`
+- **Paleta de Cores (Extraída diretamente do Logo e da Fotografia Oficial):**
+  - Azul Ardósia Metálico / Petróleo Noturno: `#10202E`, `#162B3D`, `#1A354C`
+  - Aço Mineral & Destaques de Contraste: `#214362`, `#2B5A82`, `#3B77A7`, `#6195C2`
+  - Acentos em Ouro Nobre & Champagne Alfaiataria: `#B88E44`, `#CFA75E`, `#F3E5C8`, `#FBF7F0`
+  - Superfícies Claras Alabastro & Porcelana: `#FFFFFF`, `#F8FAFC`, `#F1F5F9`, `#D4E0EB`
+  - Tipografia e Contraste Escuro: `#0E1720`, `#33475B`, `#526477`, `#62778D`
 - **Tipografia:**
-  - `Cinzel` (Monograma e Marca Monumental Romana)
+  - `Cinzel` (Monograma e Títulos de Destaque)
   - `Playfair Display` & `Cormorant Garamond` (Títulos Editoriais e Destaques)
-  - `Plus Jakarta Sans` (Corpo de Texto, Interfaces e Navegação)
+  - `Plus Jakarta Sans` (Corpo de Texto, Interfaces, Subtítulo "Sociedade de Advogados" e Navegação)
 
 ## Informações de Contato
 
-- **Telefone / WhatsApp:** (38) 99961-6355
-- **E-mail:** contato@kowalskiadvocacia.com.br
-- **Sede:** R. Canabrava, 192A - Centro, Unaí - MG, 38610-031
-- **Instagram:** [@advocacia.kowalski](https://www.instagram.com/advocacia.kowalski/)
-- **Avaliações no Google:** 4,7 ★ (13 avaliações autênticas)
-- **Horário de Funcionamento:** Segunda a Sexta a partir das 08:00 (08:00 às 18:00)
+- **Telefone / WhatsApp:** (31) 3961-2840
+- **E-mail:** contato@airesebueno.adv.br
+- **Sede:** R. João Pinheiro, N° 120 - Salas 401 - 402 - Centro, Nova Era - MG, 35920-000
+- **Instagram:** [@airesebueno](https://www.instagram.com/airesebueno/)
+- **Sócios:** Dra. Isadora Aires ([@isadora.aires](https://www.instagram.com/isadora.aires/)) e Dr. Thales Bueno ([@bthales](https://www.instagram.com/bthales/))
+- **Avaliações no Google:** 5,0 ★ (11 avaliações autênticas — 100% 5 estrelas)
+- **Horário de Funcionamento:** Segunda a Sexta a partir das 09:00 (09:00 às 18:00)
 
 ## Como Executar
 
