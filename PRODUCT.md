@@ -1,37 +1,37 @@
-# AIRES & BUENO SOCIEDADE DE ADVOGADOS
-## Advocacia Especializada: Defesa Estratégica e Humanizada · Nova Era - MG · Vale do Aço · Atendimento Nacional
+# DRA. MANUELA GONÇALVES — ADVOGADA
+## Advocacia Especializada: Defesa Estratégica, Ética e Humanizada · Capinópolis - MG · Triângulo Mineiro · Atendimento Nacional
 
 ## Plataforma
 Site institucional e landing page responsiva de altíssimo padrão desenvolvida em Next.js 16 (App Router) e Tailwind CSS v4, projetada para transmitir máxima autoridade jurídica, credibilidade comprovada por avaliações no Google (5,0 ★ unânime), sofisticação e excelência técnica, com navegação fluida, modais interativos para detalhamento das especialidades e integração direta com WhatsApp.
 
 ## Público
-Trabalhadores e segurados buscando aposentadorias, BPC/LOAS ou auxílios do INSS; trabalhadores necessitando de garantia e cobrança de verbas rescisórias, horas extras, indenizações por acidentes de trabalho e reversão de justa causa; cidadãos e empresas necessitando de soluções cíveis (contratos, indenizações, cobranças, inventários e direito de família); pessoas físicas e jurídicas em Nova Era, Vale do Aço, Minas Gerais e em todo o território nacional através de atendimento digital.
+Trabalhadores e segurados buscando aposentadorias (rurais e urbanas), BPC/LOAS, pensão por morte, auxílios por incapacidade ou planejamento previdenciário no INSS; famílias necessitando de inventários em cartório extrajudiciais rápidos, partilha amigável de bens, divórcio, pensão alimentícia e guarda; trabalhadores necessitando de garantia e cobrança de verbas rescisórias, horas extras, adicionais de insalubridade e indenizações; cidadãos e empresas buscando reparações cíveis, cobranças e revisão contratual em Capinópolis, Triângulo Mineiro, Minas Gerais e em todo o território nacional através de atendimento digital.
 
 ## Objetivo
-Apresentar a advocacia de excelência do escritório Aires & Bueno Sociedade de Advogados, destacando a defesa estratégica e humanizada, ética, solidez técnica e o acolhimento da equipe, viabilizando o contato direto e ágil via WhatsApp (31) 3961-2840, agendamento de consultas na sede na R. João Pinheiro, N° 120 - Salas 401 e 402 - Centro, Nova Era - MG e atendimento digital em todo o país.
+Apresentar a advocacia de excelência da Dra. Manuela Gonçalves (OAB/MG 167.889), destacando sua atuação estudiosa, ética e empática, mantendo os clientes sempre informados sobre o processo, viabilizando o contato direto e ágil via WhatsApp (34) 99190-1962, agendamento de consultas na sede na Rua 104, nº 1268 - Sala 3 - Bairro Brasília, Capinópolis - MG e atendimento digital em todo o país.
 
 ## Identidade Visual (Extraída Diretamente do Novo Logotipo)
-- **Marca:** Aires & Bueno Sociedade de Advogados.
-- **Sócios Fundadores:** Dra. Isadora de Oliveira Martins Aires & Dr. Thales Carvalho Delfim Bueno.
-- **Logotipo:** Monograma escultural geométrico entrelaçado "AB" com linha de base estruturante, tipografia moderna em caixa alta chanfrada "AIRES & BUENO" e subscrição fluida "Sociedade de Advogados" em acabamento metálico de aço ardósia, azul petróleo e reflexos prateados (`public/logo.png`, `public/logo-symbol.png`).
-- **Tema Visual:** Modern Prestige Light Luxury (Modo Claro Editorial Sofisticado com toques em Azul Petróleo/Marinho Ardósia e Acentos em Ouro Champanhe/Alfaiataria), transmitindo alta credibilidade jurídica, elegância e acolhimento humano.
+- **Marca:** Dra. Manuela Gonçalves — Advogada.
+- **Advogada Titular:** Dra. Manuela Gonçalves (OAB/MG 167.889).
+- **Logotipo:** Monograma escultural "MG" entrelaçado com balança da justiça em esmalte Verde Floresta Imperial e acabamento bisotê em Dourado Metálico 3D, tipografia nobre em caixa alta serifada "M GONÇALVES" e subscrição "ADVOGADA" com ornatos geométricos em diamante (`public/logo.png`, `public/logo-mg.png`, `public/logo-symbol.png`).
+- **Tema Visual:** Imperial Forest & Gold Light Luxury (Modo Claro Editorial Sofisticado com Verde Floresta Imperial Nobre e Acentos em Ouro Champagne Metálico), transmitindo alta solidez jurídica, elegância clássica e acolhimento humano.
 - **Paleta de Cores Extraída Diretamente do Logo e da Fotografia Oficial:**
-  - Azul Ardósia Metálico / Petróleo Noturno (`#10202e`, `#162b3d`, `#1a354c`)
-  - Aço Mineral & Destaques de Contraste (`#214362`, `#2b5a82`, `#3b77a7`, `#6195c2`)
-  - Acentos em Ouro Nobre & Champagne Alfaiataria (`#b88e44`, `#cfa75e`, `#f3e5c8`, `#fbf7f0`)
-  - Superfícies Claras & Linho Alabastro (`#f8fafc`, `#ffffff`, `#f1f5f9`, `#d4e0eb`)
-  - Texto & Contraste Escuro (`#0e1720`, `#33475b`, `#526477`, `#62778d`)
-- **Tipografia:** Cinzel (`--font-cinzel`) e Playfair Display (`--font-serif`) para a identidade clássica e imponente dos títulos e da marca, Cormorant Garamond (`--font-display`) para toques editoriais, combinados com Plus Jakarta Sans (`--font-body`) para legibilidade impecável no corpo de texto e no alinhamento com a subscrição "Sociedade de Advogados".
-- **Tom de Voz:** Estratégico, humanizado, ético, transparente e resolutivo ("Serviço de qualidade e profissionais qualificados! Top", "Excelência, profissionais qualificados", "Profissionais excelentes").
+  - Verde Floresta Imperial / Esmeralda Profundo (`#0a140f`, `#0f1d16`, `#162b21`, `#1b3529`, `#234735`)
+  - Acentos em Ouro Nobre Metálico & Dourado Champagne (`#c5a059`, `#d8b672`, `#e7cb92`, `#f5ecd9`, `#8c6725`)
+  - Superfícies Claras Alabastro & Linho Claro Quente (`#ffffff`, `#faf8f5`, `#f4f0e6`, `#e3ded5`)
+  - Texto & Grafite Tinta Floresta (`#0d1611`, `#2c3d33`, `#586b61`)
+- **Tipografia:** Cinzel (`--font-cinzel`) e Playfair Display (`--font-serif`) para a identidade clássica e imponente dos títulos e da marca, Cormorant Garamond (`--font-display`) para toques editoriais, combinados com Plus Jakarta Sans (`--font-body`) para legibilidade impecável no corpo de texto e interfaces.
+- **Tom de Voz:** Estudioso, atencioso, empático, ético, transparente e resolutivo ("Advogada atenciosa e empática no atendimento, atualizada e muito competente. Nos mantém informados sobre o processo...").
 
 ## Conteúdo e Mídia
-- Logotipo oficial transparente (`public/logo.png`, `public/logo-horizontal.png`).
-- Símbolo do Monograma AB (`public/logo-symbol.png`, `app/icon.png`, `app/apple-icon.png`, `app/favicon.ico`).
-- Fotografia da Sócia Fundadora (`public/hero.jpg`, `public/dra-isadora.jpg`, `public/escritorio.png`).
-- Telefone / WhatsApp: (31) 3961-2840 (wa.me/553139612840).
-- E-mail: contato@airesebueno.adv.br.
-- Redes Sociais: Instagram @airesebueno (https://www.instagram.com/airesebueno/), @isadora.aires, @bthales.
-- Endereço da Sede: R. João Pinheiro, N° 120 - Salas 401 - 402 - Centro, Nova Era - MG, 35920-000, Brasil.
-- Atuação: Nova Era, Vale do Aço, Minas Gerais e atendimento digital em todo o Brasil.
+- Logotipo oficial transparente (`public/logo.png`, `public/logo-mg.png`).
+- Símbolo do Monograma MG com balança (`public/logo-symbol.png`, `app/icon.png`, `app/apple-icon.png`, `app/favicon.ico`).
+- Fotografia da Dra. Manuela Gonçalves (`public/hero.jpg`, `public/dra-manuela.jpg`).
+- Fotografia da Fachada do Escritório em Capinópolis (`public/fachada.png`, `public/escritorio.png`).
+- Telefone / WhatsApp: (34) 99190-1962 (wa.me/5534991901962).
+- E-mail: adv.manuelagoncalves@gmail.com.
+- Redes Sociais: Instagram @adv.manuelagoncalves (https://www.instagram.com/adv.manuelagoncalves/).
+- Endereço da Sede: Rua 104, 1268 - sala 3 - Bairro Brasília, Capinópolis - MG, 38360-000, Brasil.
+- Atuação: Capinópolis, Triângulo Mineiro, Minas Gerais e atendimento digital em todo o Brasil.
 - Horário de Funcionamento: Segunda a Sexta a partir das 09:00 (09:00 às 18:00).
-- Prova Social: 5,0 ★ com 11 avaliações autênticas no Google Meu Negócio.
+- Prova Social: 5,0 ★ com 10 avaliações autênticas no Google Meu Negócio.

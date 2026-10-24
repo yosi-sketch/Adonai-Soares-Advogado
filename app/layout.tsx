@@ -36,34 +36,33 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#f8fafc",
+  themeColor: "#faf8f5",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.airesebueno.adv.br"),
+  metadataBase: new URL("https://www.manuelagoncalvesadv.com.br"),
   title:
-    "Aires & Bueno Sociedade de Advogados | Advocacia Especializada · Nova Era - MG",
+    "Dra. Manuela Gonçalves — Advogada | Advocacia Especializada · Capinópolis - MG",
   description:
-    "⚖️ Aires & Bueno Sociedade de Advogados — Advocacia especializada com defesa estratégica e humanizada. Atendimento presencial no Centro de Nova Era - MG e online para todo o Brasil. Avaliação 5,0 ★ com 11 avaliações no Google. 📍 R. João Pinheiro, N° 120 - Salas 401/402 - Centro, Nova Era - MG.",
+    "⚖️ Dra. Manuela Gonçalves — Advocacia Especializada (OAB/MG 167.889). Atendimento humanizado, ético e estratégico em Direito Previdenciário (INSS), Família & Sucessões (Inventários), Trabalhista e Cível. Atendimento presencial no Bairro Brasília, Capinópolis - MG e online para todo o Brasil. Avaliação 5,0 ★ no Google.",
   keywords: [
-    "Aires & Bueno Sociedade de Advogados",
-    "Aires e Bueno Advogados",
-    "Advogado Nova Era MG",
-    "Advocacia Nova Era MG",
-    "Isadora Aires Advogada",
-    "Thales Bueno Advogado",
-    "Advogado Vale do Aço",
-    "Direito Previdenciário Nova Era",
-    "Aposentadoria INSS Nova Era",
-    "Advogado Trabalhista Nova Era",
-    "Direito do Trabalho Nova Era",
-    "Advogado Cível Nova Era MG",
-    "Inventário e Sucessões Nova Era",
-    "Aires e Bueno Nova Era Minas Gerais",
+    "Manuela Gonçalves Advogada",
+    "Dra Manuela Gonçalves",
+    "Advogada Capinópolis",
+    "Advogado em Capinópolis MG",
+    "Advocacia Capinópolis MG",
+    "OAB MG 167889",
+    "Direito Previdenciário Capinópolis",
+    "Aposentadoria INSS Capinópolis",
+    "Inventário em Cartório Capinópolis",
+    "Direito de Família Capinópolis",
+    "Advogada Trabalhista Capinópolis",
+    "Advogado Triângulo Mineiro",
+    "Manuela Gonçalves Capinópolis Minas Gerais",
   ],
-  authors: [{ name: "Aires & Bueno Sociedade de Advogados" }],
-  creator: "Aires & Bueno Sociedade de Advogados",
-  publisher: "Aires & Bueno Sociedade de Advogados",
+  authors: [{ name: "Dra. Manuela Gonçalves — Advogada" }],
+  creator: "Dra. Manuela Gonçalves — Advogada",
+  publisher: "Dra. Manuela Gonçalves — Advogada",
   formatDetection: {
     telephone: true,
     address: true,
@@ -71,6 +70,7 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
       { url: "/icon.png", type: "image/png", sizes: "192x192" },
     ],
     shortcut: "/favicon.ico",
@@ -79,18 +79,18 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.airesebueno.adv.br",
+    url: "https://www.manuelagoncalvesadv.com.br",
     title:
-      "Aires & Bueno Sociedade de Advogados | Advocacia Especializada · Nova Era - MG",
+      "Dra. Manuela Gonçalves — Advogada | Advocacia Especializada · Capinópolis - MG",
     description:
-      "⚖️ Advocacia especializada com defesa estratégica e humanizada. Avaliação máxima 5,0 ★ no Google. R. João Pinheiro, 120 - Salas 401 e 402 - Centro, Nova Era - MG.",
-    siteName: "Aires & Bueno Sociedade de Advogados",
+      "⚖️ Advocacia especializada com defesa estratégica e humanizada. Avaliação máxima 5,0 ★ no Google. Rua 104, 1268 - sala 3 - Bairro Brasília, Capinópolis - MG.",
+    siteName: "Manuela Gonçalves — Advogada",
     images: [
       {
         url: "/logo.png",
         width: 1024,
-        height: 409,
-        alt: "Aires & Bueno Sociedade de Advogados",
+        height: 341,
+        alt: "Manuela Gonçalves — Advogada",
       },
     ],
   },
@@ -104,37 +104,39 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Aires & Bueno Sociedade de Advogados",
-    alternateName: "Aires e Bueno Sociedade de Advogados",
-    legalName: "Aires e Bueno Sociedade de Advogados",
-    telephone: "+55-31-3961-2840",
-    email: "contato@airesebueno.adv.br",
-    url: "https://www.airesebueno.adv.br",
-    image: "https://www.airesebueno.adv.br/logo.png",
+    name: "Manuela Gonçalves — Advogada",
+    alternateName: "Dra. Manuela Gonçalves Advogada",
+    legalName: "Manuela Gonçalves — Advogada",
+    telephone: "+55-34-99190-1962",
+    email: "adv.manuelagoncalves@gmail.com",
+    url: "https://www.manuelagoncalvesadv.com.br",
+    image: "https://www.manuelagoncalvesadv.com.br/logo-manuela.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "R. João Pinheiro, N° 120 - Salas 401 - 402 - Centro",
-      addressLocality: "Nova Era",
+      streetAddress: "Rua 104, 1268 - sala 3 - Bairro Brasília",
+      addressLocality: "Capinópolis",
       addressRegion: "MG",
-      postalCode: "35920-000",
+      postalCode: "38360-000",
       addressCountry: "BR",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: -19.7578,
-      longitude: -43.0367,
+      latitude: -18.6819,
+      longitude: -49.5697,
     },
     priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "11",
+      reviewCount: "10",
     },
     areaServed: [
-      "Nova Era",
-      "João Monlevade",
-      "Itabira",
-      "Vale do Aço",
+      "Capinópolis",
+      "Ituiutaba",
+      "Canápolis",
+      "Ipiaçu",
+      "Cachoeira Dourada",
+      "Triângulo Mineiro",
       "Minas Gerais",
       "Brasil",
     ],
@@ -153,8 +155,8 @@ export default function RootLayout({
       },
     ],
     sameAs: [
-      "https://www.instagram.com/airesebueno/",
-      "https://wa.me/553139612840",
+      "https://www.instagram.com/adv.manuelagoncalves/",
+      "https://wa.me/5534991901962",
     ],
   };
 
@@ -165,14 +167,15 @@ export default function RootLayout({
     >
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen overflow-x-clip bg-[#f8fafc] font-sans text-[#0e1720] antialiased selection:bg-[#d8e5f0] selection:text-[#0e1b27]">
+      <body className="min-h-screen overflow-x-clip bg-[#faf8f5] font-sans text-[#0d1611] antialiased selection:bg-[#dbebe2] selection:text-[#0a140f]">
         {children}
       </body>
     </html>
