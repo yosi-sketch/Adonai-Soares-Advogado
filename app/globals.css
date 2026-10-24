@@ -2,30 +2,31 @@
 
 :root {
   color-scheme: light;
-  --brand-emerald-light: #f2f8f5;
-  --brand-emerald-highlight: #dbebe2;
-  --brand-emerald-shimmer: #8fbca5;
-  --brand-emerald-accent: #2d5a44;
-  --brand-emerald: #1b3529;
-  --brand-emerald-rich: #162b21;
-  --brand-emerald-dark: #102018;
-  --brand-emerald-deep: #0a140f;
-  --brand-emerald-shadow: #050a07;
+  --brand-noir-light: #f5f6f8;
+  --brand-noir-highlight: #e4e7eb;
+  --brand-noir-shimmer: #8e95a2;
+  --brand-noir-accent: #2d3441;
+  --brand-noir: #181c23;
+  --brand-noir-rich: #13161c;
+  --brand-noir-dark: #0e1116;
+  --brand-noir-deep: #080a0d;
+  --brand-noir-shadow: #050608;
 
-  --brand-gold-light: #fdfbf6;
-  --brand-gold-highlight: #f5ecd9;
-  --brand-gold-accent: #d8b672;
+  --brand-gold-light: #fdfcf9;
+  --brand-gold-highlight: #f8f3e8;
+  --brand-gold-accent: #d89c48;
   --brand-gold: #c5a059;
   --brand-gold-dark: #8c6725;
+  --brand-gold-deep: #54380c;
 
   --brand-surface: #ffffff;
   --brand-surface-elevated: #faf8f5;
-  --brand-paper: #f4f0e6;
-  --brand-border: #e3ded5;
+  --brand-paper: #f4efea;
+  --brand-border: #e5dfd7;
   
-  --brand-ink: #0d1611;
-  --brand-ink-soft: #2c3d33;
-  --brand-ink-muted: #586b61;
+  --brand-ink: #12151b;
+  --brand-ink-soft: #2a2f3a;
+  --brand-ink-muted: #5a6272;
 }
 
 @theme inline {
@@ -33,67 +34,69 @@
   --font-cinzel: var(--font-cinzel), "Cinzel", "Trajan Pro", serif;
   --font-sans: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
   
-  --color-ink: #0d1611;
-  --color-ink-soft: #2c3d33;
-  --color-ink-muted: #586b61;
+  --color-ink: #12151b;
+  --color-ink-soft: #2a2f3a;
+  --color-ink-muted: #5a6272;
   --color-pearl: #ffffff;
 
-  --color-emerald-50: #f2f8f5;
-  --color-emerald-100: #e2ede6;
-  --color-emerald-200: #c4ded0;
-  --color-emerald-300: #93bfa9;
-  --color-emerald-400: #5d987a;
-  --color-emerald-500: #3b765a;
-  --color-emerald-600: #2d5a44;
-  --color-emerald-700: #234735;
-  --color-emerald-800: #1b3529;
-  --color-emerald-900: #162b21;
-  --color-emerald-950: #0a140f;
-
-  --color-gold-100: #fdfbf6;
+  --color-gold-50: #fdfcf9;
+  --color-gold-100: #fbf6ec;
   --color-gold-200: #f5ecd9;
   --color-gold-300: #e7cb92;
   --color-gold-400: #d8b672;
   --color-gold-500: #c5a059;
-  --color-gold-600: #a77826;
+  --color-gold-600: #a68037;
   --color-gold-700: #8c6725;
-  --color-gold-800: #5c3e0c;
+  --color-gold-800: #5c4416;
   --color-gold-900: #3b2807;
 
-  --color-brand-50: #faf8f5;
-  --color-brand-100: #f4f0e6;
-  --color-brand-200: #ece5d6;
-  --color-brand-300: #e3ded5;
-  --color-brand-400: #cfc6b6;
-  --color-brand-500: #2d5a44;
-  --color-brand-600: #234735;
-  --color-brand-700: #1b3529;
-  --color-brand-800: #162b21;
-  --color-brand-900: #102018;
-  --color-brand-950: #0d1611;
+  --color-noir-50: #f6f7f9;
+  --color-noir-100: #ebedf2;
+  --color-noir-200: #d8dce4;
+  --color-noir-300: #b3bcc9;
+  --color-noir-400: #818ea1;
+  --color-noir-500: #4b5768;
+  --color-noir-600: #363f4d;
+  --color-noir-700: #242b35;
+  --color-noir-800: #181c23;
+  --color-noir-900: #13161c;
+  --color-noir-950: #0e1116;
 
-  --shadow-card: 0 10px 30px rgba(13, 22, 17, 0.05);
-  --shadow-emerald: 0 10px 30px rgba(22, 43, 33, 0.22);
-  --shadow-gold: 0 10px 30px rgba(197, 160, 89, 0.24);
-  --shadow-obsidian: 0 16px 45px rgba(13, 22, 17, 0.12);
-  --shadow-glow: 0 0 35px rgba(35, 71, 53, 0.25);
+  /* Aliases for brand compatibility */
+  --color-brand-50: #faf8f5;
+  --color-brand-100: #f4efea;
+  --color-brand-200: #eae3d9;
+  --color-brand-300: #e5dfd7;
+  --color-brand-400: #d2c8bc;
+  --color-brand-500: #c5a059;
+  --color-brand-600: #8c6725;
+  --color-brand-700: #242b35;
+  --color-brand-800: #181c23;
+  --color-brand-900: #13161c;
+  --color-brand-950: #0e1116;
+
+  --shadow-card: 0 10px 30px rgba(18, 21, 27, 0.05);
+  --shadow-gold: 0 10px 30px rgba(197, 160, 89, 0.28);
+  --shadow-noir: 0 12px 35px rgba(14, 17, 22, 0.22);
+  --shadow-obsidian: 0 16px 45px rgba(14, 17, 22, 0.16);
+  --shadow-glow: 0 0 35px rgba(197, 160, 89, 0.25);
 }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 5.5rem;
+  scroll-padding-top: 8rem;
 }
 
 body {
   background: #faf8f5;
-  color: #0d1611;
+  color: #12151b;
   font-family: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
-  caret-color: #162b21;
+  caret-color: #c5a059;
 }
 
 ::selection {
-  background: #dbebe2;
-  color: #0a140f;
+  background: #f5ecd9;
+  color: #0e1116;
 }
 
 .font-cinzel {
@@ -113,11 +116,11 @@ body {
 }
 
 .eyebrow {
-  color: #162b21;
+  color: #13161c;
 }
 
 .eyebrow-light {
-  color: #234735;
+  color: #8c6725;
 }
 
 .eyebrow-gold {
@@ -137,7 +140,7 @@ body {
 .nav-link {
   position: relative;
   padding-block: 0.5rem;
-  color: #2c3d33;
+  color: #2a2f3a;
   font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -151,7 +154,7 @@ body {
   bottom: 0;
   left: 0;
   height: 2px;
-  background: #162b21;
+  background: #c5a059;
   content: "";
   transform: scaleX(0);
   transform-origin: left;
@@ -159,7 +162,7 @@ body {
 }
 
 .nav-link:hover {
-  color: #0d1611;
+  color: #0e1116;
 }
 
 .nav-link:hover::after {
@@ -171,7 +174,7 @@ body {
 }
 
 .footer-link:hover {
-  color: #162b21;
+  color: #c5a059;
 }
 
 ::-webkit-scrollbar {
@@ -179,17 +182,17 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f4f0e6;
+  background: #f4efea;
 }
 
 ::-webkit-scrollbar-thumb {
-  border: 2px solid #f4f0e6;
+  border: 2px solid #f4efea;
   border-radius: 999px;
-  background: #c4ded0;
+  background: #d8c8b0;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #162b21;
+  background: #c5a059;
 }
 
 @media (prefers-reduced-motion: reduce) {

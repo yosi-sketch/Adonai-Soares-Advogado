@@ -40,29 +40,28 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.manuelagoncalvesadv.com.br"),
+  metadataBase: new URL("https://www.janainacarvalhoadv.com.br"),
   title:
-    "Dra. Manuela Gonçalves — Advogada | Advocacia Especializada · Capinópolis - MG",
+    "Dra. Janaína Carvalho — Advogada | Especialista em Direito de Família · Dores do Indaiá - MG",
   description:
-    "⚖️ Dra. Manuela Gonçalves — Advocacia Especializada (OAB/MG 167.889). Atendimento humanizado, ético e estratégico em Direito Previdenciário (INSS), Família & Sucessões (Inventários), Trabalhista e Cível. Atendimento presencial no Bairro Brasília, Capinópolis - MG e online para todo o Brasil. Avaliação 5,0 ★ no Google.",
+    "⚖️ Dra. Janaína Carvalho — Advogada Especialista em Direito de Família & Sucessões. Atendimento humanizado, ético e estratégico em Divórcio, Guarda, Pensão Alimentícia, Partilha de Bens e Inventários. Sede na Praça Pref. Mário Carneiro, nº 50 - 2º andar - Centro, Dores do Indaiá - MG e online para todo o Brasil. Avaliação 5,0 ★ no Google (61 avaliações).",
   keywords: [
-    "Manuela Gonçalves Advogada",
-    "Dra Manuela Gonçalves",
-    "Advogada Capinópolis",
-    "Advogado em Capinópolis MG",
-    "Advocacia Capinópolis MG",
-    "OAB MG 167889",
-    "Direito Previdenciário Capinópolis",
-    "Aposentadoria INSS Capinópolis",
-    "Inventário em Cartório Capinópolis",
-    "Direito de Família Capinópolis",
-    "Advogada Trabalhista Capinópolis",
-    "Advogado Triângulo Mineiro",
-    "Manuela Gonçalves Capinópolis Minas Gerais",
+    "Janaína Carvalho Advogada",
+    "Dra Janaína Carvalho",
+    "Advogada Dores do Indaiá",
+    "Advogada Direito de Família Dores do Indaiá",
+    "Advogado em Dores do Indaiá MG",
+    "Direito de Família Dores do Indaiá",
+    "Divórcio Dores do Indaiá",
+    "Pensão Alimentícia Dores do Indaiá",
+    "Guarda dos Filhos Dores do Indaiá",
+    "Inventário em Cartório Dores do Indaiá",
+    "Partilha de Bens Minas Gerais",
+    "Janaína Carvalho Advogada Minas Gerais",
   ],
-  authors: [{ name: "Dra. Manuela Gonçalves — Advogada" }],
-  creator: "Dra. Manuela Gonçalves — Advogada",
-  publisher: "Dra. Manuela Gonçalves — Advogada",
+  authors: [{ name: "Dra. Janaína Carvalho — Advogada" }],
+  creator: "Dra. Janaína Carvalho — Advogada",
+  publisher: "Dra. Janaína Carvalho — Advogada",
   formatDetection: {
     telephone: true,
     address: true,
@@ -79,18 +78,18 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.manuelagoncalvesadv.com.br",
+    url: "https://www.janainacarvalhoadv.com.br",
     title:
-      "Dra. Manuela Gonçalves — Advogada | Advocacia Especializada · Capinópolis - MG",
+      "Dra. Janaína Carvalho — Advogada | Especialista em Direito de Família · Dores do Indaiá - MG",
     description:
-      "⚖️ Advocacia especializada com defesa estratégica e humanizada. Avaliação máxima 5,0 ★ no Google. Rua 104, 1268 - sala 3 - Bairro Brasília, Capinópolis - MG.",
-    siteName: "Manuela Gonçalves — Advogada",
+      "⚖️ Advocacia especializada em Direito de Família e Sucessões com defesa estratégica e humanizada. Avaliação máxima 5,0 ★ no Google (61 avaliações). Praça Pref. Mário Carneiro, nº 50 - 2º andar - sala 01 - Centro, Dores do Indaiá - MG.",
+    siteName: "Dra. Janaína Carvalho — Advogada",
     images: [
       {
         url: "/logo.png",
         width: 1024,
         height: 341,
-        alt: "Manuela Gonçalves — Advogada",
+        alt: "Dra. Janaína Carvalho — Advogada",
       },
     ],
   },
@@ -104,39 +103,42 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Manuela Gonçalves — Advogada",
-    alternateName: "Dra. Manuela Gonçalves Advogada",
-    legalName: "Manuela Gonçalves — Advogada",
-    telephone: "+55-34-99190-1962",
-    email: "adv.manuelagoncalves@gmail.com",
-    url: "https://www.manuelagoncalvesadv.com.br",
-    image: "https://www.manuelagoncalvesadv.com.br/logo-manuela.png",
+    name: "Dra. Janaína Carvalho — Advogada",
+    alternateName: "Janaína Carvalho Advogada Especialista em Direito de Família",
+    legalName: "Dra. Janaína Carvalho — Advogada",
+    telephone: "+55-37-99986-8988",
+    email: "contato@janainacarvalhoadv.com.br",
+    url: "https://www.janainacarvalhoadv.com.br",
+    image: "https://www.janainacarvalhoadv.com.br/logo.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Rua 104, 1268 - sala 3 - Bairro Brasília",
-      addressLocality: "Capinópolis",
+      streetAddress: "Praça Pref. Mário Carneiro, nº 50 - 2º andar - sala 01 - Centro",
+      addressLocality: "Dores do Indaiá",
       addressRegion: "MG",
-      postalCode: "38360-000",
+      postalCode: "35610-000",
       addressCountry: "BR",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: -18.6819,
-      longitude: -49.5697,
+      latitude: -19.4611,
+      longitude: -45.6022,
     },
     priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "10",
+      reviewCount: "61",
     },
     areaServed: [
-      "Capinópolis",
-      "Ituiutaba",
-      "Canápolis",
-      "Ipiaçu",
-      "Cachoeira Dourada",
-      "Triângulo Mineiro",
+      "Dores do Indaiá",
+      "Bom Despacho",
+      "Abaeté",
+      "Quartel Geral",
+      "Luz",
+      "Martinho Campos",
+      "Serra da Saudade",
+      "Divinópolis",
+      "Belo Horizonte",
       "Minas Gerais",
       "Brasil",
     ],
@@ -150,13 +152,13 @@ export default function RootLayout({
           "Thursday",
           "Friday",
         ],
-        opens: "09:00",
+        opens: "08:30",
         closes: "18:00",
       },
     ],
     sameAs: [
-      "https://www.instagram.com/adv.manuelagoncalves/",
-      "https://wa.me/5534991901962",
+      "https://www.instagram.com/janainacarvalho_advogada/",
+      "https://wa.me/5537999868988",
     ],
   };
 
@@ -175,7 +177,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen overflow-x-clip bg-[#faf8f5] font-sans text-[#0d1611] antialiased selection:bg-[#dbebe2] selection:text-[#0a140f]">
+      <body className="min-h-screen overflow-x-clip bg-[#faf8f5] font-sans text-[#12151b] antialiased selection:bg-[#f5ecd9] selection:text-[#0e1116]">
         {children}
       </body>
     </html>
