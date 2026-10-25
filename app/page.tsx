@@ -16,7 +16,6 @@ import {
   Menu,
   Phone,
   Scale,
-  ShieldCheck,
   Sparkles,
   Star,
   Users,
