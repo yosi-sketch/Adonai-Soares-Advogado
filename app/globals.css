@@ -1,39 +1,43 @@
 @import "tailwindcss";
 
 :root {
-  color-scheme: light;
+  color-scheme: dark;
   
-  /* Deep Espresso Noir & Warm Obsidian (from logo contrast & dark accents) */
-  --brand-noir-light: #f8f6f3;
-  --brand-noir-highlight: #ebe6df;
-  --brand-noir-shimmer: #9c9184;
-  --brand-noir-accent: #3b2e23;
-  --brand-noir: #251d16;
-  --brand-noir-rich: #19130f;
-  --brand-noir-dark: #110d0a;
-  --brand-noir-deep: #0a0705;
+  /* Deep Luxury Obsidian Noir Canvas */
+  --brand-noir-deep: #050507;
+  --brand-noir-canvas: #08090c;
+  --brand-noir-surface: #0e1016;
+  --brand-noir-elevated: #141720;
+  --brand-noir-card: #12151e;
+  --brand-noir-card-hover: #181c28;
+  --brand-border-subtle: rgba(255, 255, 255, 0.08);
+  --brand-border-gold: rgba(197, 155, 39, 0.25);
+  --brand-border-gold-bright: rgba(212, 175, 55, 0.55);
 
-  /* Metallic Champagne Rose Gold & Burnished Bronze (extracted directly from Patrícia Freyer 3D Logo) */
-  --brand-gold-specular: #fdecd2;
-  --brand-gold-light: #f7d8af;
-  --brand-gold-luminous: #eabf89;
-  --brand-gold-highlight: #fcf4eb;
-  --brand-gold-accent: #d29e62;
-  --brand-gold: #be8a50;
-  --brand-gold-dark: #9e6d37;
-  --brand-gold-bronze: #7a4f21;
-  --brand-gold-deep: #523112;
+  /* Metallic Gold Palette (Extracted directly from Rodrigo Corrêa 3D Logo) */
+  --brand-gold-specular: #fbf8ee;
+  --brand-gold-light: #f6eed5;
+  --brand-gold-luminous: #eddbad;
+  --brand-gold-highlight: #e1c47a;
+  --brand-gold-accent: #d4af37;
+  --brand-gold: #c59b27;
+  --brand-gold-dark: #a37b1e;
+  --brand-gold-bronze: #7d5b16;
+  --brand-gold-deep: #543b0e;
 
-  /* Editorial Surfaces */
-  --brand-surface: #ffffff;
-  --brand-surface-elevated: #faf7f2;
-  --brand-paper: #f4eee5;
-  --brand-border: #e6dcce;
-  
+  /* Platinum Chrome & Silver Facets */
+  --brand-plat-pure: #ffffff;
+  --brand-plat-highlight: #f8f9fa;
+  --brand-plat-light: #e2e8f0;
+  --brand-plat-steel: #cbd5e1;
+  --brand-plat-muted: #94a3b8;
+  --brand-plat-dark: #64748b;
+
   /* Text & Inks */
-  --brand-ink: #140f0c;
-  --brand-ink-soft: #2c221b;
-  --brand-ink-muted: #5e5246;
+  --brand-text-primary: #f8f9fa;
+  --brand-text-secondary: #cbd5e1;
+  --brand-text-muted: #94a3b8;
+  --brand-text-gold: #d4af37;
 }
 
 @theme inline {
@@ -41,72 +45,67 @@
   --font-cinzel: var(--font-cinzel), "Cinzel", "Trajan Pro", serif;
   --font-sans: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
   
-  --color-ink: #140f0c;
-  --color-ink-soft: #2c221b;
-  --color-ink-muted: #5e5246;
-  --color-pearl: #ffffff;
+  --color-canvas: #08090c;
+  --color-surface: #0e1016;
+  --color-elevated: #141720;
+  --color-card: #12151e;
 
-  /* Metallic Patrícia Freyer Gold */
-  --color-gold-50: #fdfbf8;
-  --color-gold-100: #fcf4eb;
-  --color-gold-200: #f7e6d2;
-  --color-gold-300: #eecfae;
-  --color-gold-400: #dfae76;
-  --color-gold-500: #be8a50;
-  --color-gold-600: #9e6d37;
-  --color-gold-700: #7a4f21;
-  --color-gold-800: #523112;
-  --color-gold-900: #361f0a;
+  /* Metallic Gold */
+  --color-gold-50: #fbf8ee;
+  --color-gold-100: #f6eed5;
+  --color-gold-200: #eddbad;
+  --color-gold-300: #e1c47a;
+  --color-gold-400: #d4af37;
+  --color-gold-500: #c59b27;
+  --color-gold-600: #a37b1e;
+  --color-gold-700: #7d5b16;
+  --color-gold-800: #543b0e;
+  --color-gold-900: #332207;
 
-  /* Warm Espresso Noir */
-  --color-noir-50: #f8f6f3;
-  --color-noir-100: #ebe6df;
-  --color-noir-200: #d8cfc3;
-  --color-noir-300: #b3a493;
-  --color-noir-400: #827261;
-  --color-noir-500: #514436;
-  --color-noir-600: #382d22;
-  --color-noir-700: #271f17;
-  --color-noir-800: #1b1510;
-  --color-noir-900: #120e0a;
-  --color-noir-950: #090705;
+  /* Platinum Silver */
+  --color-plat-50: #ffffff;
+  --color-plat-100: #f8f9fa;
+  --color-plat-200: #f1f5f9;
+  --color-plat-300: #e2e8f0;
+  --color-plat-400: #cbd5e1;
+  --color-plat-500: #94a3b8;
+  --color-plat-600: #64748b;
+  --color-plat-700: #475569;
+  --color-plat-800: #334155;
+  --color-plat-900: #1e293b;
 
-  /* Compatibility & Brand Aliases */
-  --color-brand-50: #fdfbf8;
-  --color-brand-100: #fcf4eb;
-  --color-brand-200: #f7e6d2;
-  --color-brand-300: #e6dcce;
-  --color-brand-400: #dfae76;
-  --color-brand-500: #be8a50;
-  --color-brand-600: #9e6d37;
-  --color-brand-700: #7a4f21;
-  --color-brand-800: #251d16;
-  --color-brand-900: #19130f;
-  --color-brand-950: #110d0a;
+  /* Luxury Obsidian Noir */
+  --color-noir-50: #1a1e28;
+  --color-noir-100: #141720;
+  --color-noir-200: #11131a;
+  --color-noir-300: #0e1016;
+  --color-noir-400: #0b0c10;
+  --color-noir-500: #08090c;
+  --color-noir-900: #050507;
 
-  --shadow-card: 0 10px 30px rgba(20, 15, 12, 0.05);
-  --shadow-gold: 0 10px 30px rgba(190, 138, 80, 0.28);
-  --shadow-gold-lg: 0 16px 40px rgba(190, 138, 80, 0.35);
-  --shadow-noir: 0 12px 35px rgba(17, 13, 10, 0.26);
-  --shadow-obsidian: 0 16px 45px rgba(17, 13, 10, 0.18);
-  --shadow-glow: 0 0 35px rgba(210, 158, 98, 0.35);
+  --shadow-card: 0 10px 35px -5px rgba(0, 0, 0, 0.6);
+  --shadow-gold: 0 10px 30px -8px rgba(197, 155, 39, 0.35);
+  --shadow-gold-lg: 0 18px 45px -10px rgba(212, 175, 55, 0.45);
+  --shadow-glow: 0 0 40px rgba(212, 175, 55, 0.22);
+  --shadow-gold-xl: 0 20px 50px -10px rgba(212, 175, 55, 0.55);
 }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 8rem;
+  scroll-padding-top: 7.5rem;
+  background-color: #08090c;
 }
 
 body {
-  background: #faf7f2;
-  color: #140f0c;
+  background: #08090c;
+  color: #f8f9fa;
   font-family: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
-  caret-color: #be8a50;
+  caret-color: #d4af37;
 }
 
 ::selection {
-  background: #f7e6d2;
-  color: #110d0a;
+  background: #c59b27;
+  color: #08090c;
 }
 
 .font-cinzel {
@@ -114,7 +113,8 @@ body {
 }
 
 .eyebrow,
-.eyebrow-light {
+.eyebrow-light,
+.eyebrow-gold {
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -126,15 +126,15 @@ body {
 }
 
 .eyebrow {
-  color: #19130f;
+  color: #cbd5e1;
 }
 
 .eyebrow-light {
-  color: #7a4f21;
+  color: #e1c47a;
 }
 
 .eyebrow-gold {
-  color: #be8a50;
+  color: #d4af37;
 }
 
 .eyebrow::before,
@@ -150,12 +150,12 @@ body {
 .nav-link {
   position: relative;
   padding-block: 0.5rem;
-  color: #2c221b;
-  font-size: 0.68rem;
+  color: #cbd5e1;
+  font-size: 0.72rem;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  transition: color 180ms ease;
+  transition: color 200ms ease;
 }
 
 .nav-link::after {
@@ -164,15 +164,15 @@ body {
   bottom: 0;
   left: 0;
   height: 2px;
-  background: #be8a50;
+  background: linear-gradient(90deg, #c59b27, #d4af37);
   content: "";
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 180ms ease;
+  transition: transform 200ms ease;
 }
 
 .nav-link:hover {
-  color: #110d0a;
+  color: #ffffff;
 }
 
 .nav-link:hover::after {
@@ -184,25 +184,26 @@ body {
 }
 
 .footer-link:hover {
-  color: #be8a50;
+  color: #d4af37;
 }
 
+/* Custom Metallic Scrollbar */
 ::-webkit-scrollbar {
   width: 9px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f4eee5;
+  background: #08090c;
 }
 
 ::-webkit-scrollbar-thumb {
-  border: 2px solid #f4eee5;
+  border: 2px solid #08090c;
   border-radius: 999px;
-  background: #dfae76;
+  background: #7d5b16;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #be8a50;
+  background: #c59b27;
 }
 
 @media (prefers-reduced-motion: reduce) {
