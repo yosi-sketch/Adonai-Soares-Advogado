@@ -19,38 +19,40 @@ import {
   ShieldCheck,
   Sparkles,
   Star,
-  Wheat,
+  Users,
+  Briefcase,
+  Home as HomeIcon,
+  ShoppingBag,
   X,
-  Stethoscope,
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
 
-const WHATSAPP_NUMBER = "553399832397";
-const PHONE_DISPLAY = "(33) 99983-2397";
-const EMAIL_CONTACT = "contato@palomafernandesadv.com.br";
-const INSTAGRAM_URL = "https://www.instagram.com/adv.palomafernandes";
-const INSTAGRAM_HANDLE = "@adv.palomafernandes";
-const LAWYER_NAME = "Dra. Paloma Fernandes";
-const LAWYER_TITLE = "Advogada Previdenciária | Especialista em INSS";
+const WHATSAPP_NUMBER = "5538991242534";
+const PHONE_DISPLAY = "(38) 99124-2534";
+const EMAIL_CONTACT = "contato@carlagisele.adv.br";
+const INSTAGRAM_URL = "https://www.instagram.com/carla_giseele/";
+const INSTAGRAM_HANDLE = "@carla_giseele";
+const LAWYER_NAME = "Dra. Carla Gisele";
+const LAWYER_TITLE = "Advogada | Graduada pela Universidade Federal de Minas Gerais (UFMG)";
 
 const ADDRESS_TEXT =
-  "Av. Gov. Milton Campos, 2973 - Sl 204 - Centro, Guanhães - MG, 39740-000";
+  "R. Padre Martin Kirscht - Espinosa, MG, 39510-000";
 const GOOGLE_MAPS_URL =
-  "https://www.google.com/maps/search/?api=1&query=Paloma+Fernandes+Advocacia+Previdenci%C3%A1ria+INSS+Av+Gov+Milton+Campos+2973+Guanh%C3%A3es+MG";
+  "https://www.google.com/maps/search/?api=1&query=Carla+Gisele+Advogada+R+Padre+Martin+Kirscht+Espinosa+MG";
 const GOOGLE_SEARCH_URL =
-  "https://www.google.com/search?q=Paloma+Fernandes+%E2%80%94+Advocacia+Previdenci%C3%A1ria%0AGuanh%C3%A3es+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
+  "https://www.google.com/search?q=Carla+Gisele+%E2%80%94+Advogada%0AEspinosa+%C2%B7+MG%0A&sourceid=chrome&ie=UTF-8#";
 
 const LOGO_SRC = "/logo.png";
 const LOGO_SYMBOL_SRC = "/logo-symbol.png";
-const FOTO_HERO_SRC = "/dra-paloma.jpg";
-const FOTO_SOBRE_SRC = "/dra-paloma.jpg";
+const FOTO_HERO_SRC = "/carla-gisele-hero.jpg";
+const FOTO_SOBRE_SRC = "/carla-gisele-about.jpg";
 
 function getWhatsAppUrl(
   message?: string,
   number: string = WHATSAPP_NUMBER
 ) {
   const defaultText =
-    "Olá, Dra. Paloma! Gostaria de agendar um atendimento para tirar dúvidas sobre meu benefício ou aposentadoria no INSS.";
+    "Olá, Dra. Carla Gisele! Gostaria de agendar uma consulta para orientação jurídica sobre o meu caso.";
   return `https://wa.me/${number}?text=${encodeURIComponent(
     message || defaultText
   )}`;
@@ -160,199 +162,211 @@ interface PracticeArea {
 
 const practiceAreas: PracticeArea[] = [
   {
-    id: "planejamento-previdenciario",
-    title: "Planejamento Previdenciário Estratégico",
+    id: "direito-de-familia-sucessoes",
+    title: "Direito de Família & Sucessões",
+    icon: Users,
+    tag: "Inventários · Divórcios · Partilha de Bens · Guarda · Pensão Alimentícia",
+    summary:
+      "Soluções jurídicas seguras e humanizadas para momentos decisivos da sua família, com foco em agilidade, preservação patrimonial e mediação eficaz de conflitos.",
+    details:
+      "Demandas familiares e sucessórias exigem sensibilidade humana combinada a uma sólida estratégia jurídica. A Dra. Carla Gisele atua na condução de inventários judiciais e extrajudiciais (em cartório), divórcios consensuais ou litigiosos, regulamentação de guarda, visitas e pensão alimentícia, além de planejamento sucessório preventivo para proteger o patrimônio e a harmonia familiar.",
+    topics: [
+      "Inventário Extrajudicial célere em cartório e Inventário Judicial complexo",
+      "Divórcio Consensual e Litigioso com partilha estratégica de bens",
+      "Ações de Fixação, Revisão e Execução de Pensão Alimentícia",
+      "Guarda Compartilhada, Regulamentação de Convivência e Regime de Visitas",
+      "Reconhecimento e Dissolução de União Estável com partilha de patrimônio",
+      "Planejamento Sucessório, Doações em Vida e Testamentos",
+    ],
+    whatsAppText:
+      "Olá, Dra. Carla Gisele! Gostaria de agendar uma consulta sobre Direito de Família ou Inventário.",
+  },
+  {
+    id: "direito-previdenciario-inss",
+    title: "Direito Previdenciário & Benefícios INSS",
     icon: FileCheck2,
-    tag: "Auditoria CNIS · Regras de Transição · Cálculo de RMI · Melhor Momento",
+    tag: "Aposentadorias · Planejamento Previdenciário · BPC/LOAS · Auxílio por Incapacidade",
     summary:
-      "Auditoria minuciosa de todo o seu histórico de contribuições para você saber o dia exato de se aposentar com o maior valor mensal possível, evitando perdas financeiras irreversíveis.",
+      "Concessão célere e revisão estratégica da sua aposentadoria ou benefício no INSS, revertendo negativas e assegurando o máximo valor financeiro legalmente devido.",
     details:
-      "A Reforma da Previdência (EC 103/2019) criou múltiplas regras de transição complexas (pedágio de 50%, pedágio de 100%, pontos e idade mínima progressiva). Requerer seu benefício na hora errada ou com pendências cadastrais no INSS pode custar milhares de reais todos os meses. A Dra. Paloma Fernandes realiza uma auditoria aprofundada do seu extrato CNIS, simula todos os cenários legais, define o descarte inteligente de contribuições desfavoráveis e entrega um roteiro claro para você conquistar a melhor renda.",
+      "Diante da complexidade das regras da Previdência e das constantes negativas do INSS, a Dra. Carla Gisele realiza auditoria profunda no extrato CNIS, simula regras de transição vantajosas e ingressa com ações judiciais combativas para restabelecer benefícios por incapacidade negados, concessão de aposentadorias (idade, tempo, rural e especial) e BPC/LOAS.",
     topics: [
-      "Auditoria detalhada do extrato CNIS e identificação de indicadores de pendência (PEXT, PREC-MENOR, etc.)",
-      "Simulação comparativa entre todas as regras de transição da Reforma da Previdência",
-      "Cálculo exato de Renda Mensal Inicial (RMI) e projeção de retorno financeiro",
-      "Descarte estratégico de salários prejudiciais para alavancar a média de aposentadoria",
-      "Orientação precisa sobre o valor e o prazo ideal de futuras contribuições",
-      "Resgate e validação de períodos trabalhados sem recolhimento regular pelo empregador",
+      "Planejamento Previdenciário Estratégico com cálculo da Renda Mensal Inicial (RMI)",
+      "Aposentadoria por Idade Urbana e Rural com cômputo integral de tempo trabalhado",
+      "Aposentadoria Especial com conversão de tempo insalubre e análise de PPP/LTCAT",
+      "Reversão Judicial de Indeferimento de Auxílio por Incapacidade Temporária e Invalidez",
+      "Concessão de BPC/LOAS para Idosos (65+) e Pessoas com Deficiência",
+      "Pensão por Morte, Auxílio-Reclusão e Revisões de Benefícios com cálculo de atrasados",
     ],
     whatsAppText:
-      "Olá, Dra. Paloma! Gostaria de agendar um Planejamento Previdenciário para analisar meu caso e saber o melhor momento de me aposentar.",
+      "Olá, Dra. Carla Gisele! Gostaria de uma avaliação para minha aposentadoria ou benefício no INSS.",
   },
   {
-    id: "aposentadorias-urbanas-especial",
-    title: "Aposentadorias Urbanas & Especial",
+    id: "direito-civil-contratos-indenizacoes",
+    title: "Direito Civil, Contratos & Indenizações",
     icon: Scale,
-    tag: "Idade Urbana · Tempo de Contribuição · Especial PPP/LTCAT · Defesa Integral",
+    tag: "Contratos Blindados · Cobranças · Danos Morais e Materiais · Responsabilidade Civil",
     summary:
-      "Concessão célere e estratégica da sua aposentadoria urbana ou especial, incluindo todos os períodos trabalhados, conversão de insalubridade e correção de falhas do INSS.",
+      "Proteção jurídica patrimonial, resolução estratégica de disputas e atuação combativa em ações indenizatórias para reparação integral de prejuízos materiais e morais.",
     details:
-      "O INSS frequentemente indefere pedidos ou concede valores inferiores por desconsiderar períodos com insalubridade, tempo de serviço militar, vínculos sem baixa na carteira ou recolhimentos extemporâneos. A Dra. Paloma Fernandes analisa cada detalhe documental, reúne a documentação técnica necessária (PPP, LTCAT, holerites, carteiras profissionais) e atua com combatividade administrativa e judicial para garantir cada centavo a que você tem direito.",
+      "Relações contratuais e disputas civis necessitam de acompanhamento técnico rigoroso para prevenir prejuízos ou buscar ressarcimento célere. A Dra. Carla Gisele elabora contratos seguros, atua na cobrança e execução de títulos judiciais e extrajudiciais, e promove ações de indenização por acidentes, descumprimentos contratuais e violação de direitos.",
     topics: [
-      "Aposentadoria por Idade Urbana com validação integral do período de carência",
-      "Aposentadoria por Tempo de Contribuição pelas regras de transição vigentes",
-      "Aposentadoria Especial para profissionais expostos a ruído, calor, agentes químicos e biológicos",
-      "Conversão de tempo especial em comum com multiplicador vantajoso",
-      "Aposentadoria da Pessoa com Deficiência (Lei Complementar nº 142/2013) com critérios reduzidos",
-      "Regularização de empresas baixadas, extintas ou que não efetuaram repasse das contribuições",
+      "Elaboração, análise e blindagem jurídica de contratos civis e comerciais",
+      "Ações Indenizatórias por Danos Morais, Materiais e Lucros Cessantes",
+      "Cobrança Judicial e Extrajudicial de dívidas, cheques, notas promissórias e contratos",
+      "Rescisão contratual com restituição de valores e aplicação de cláusulas penais",
+      "Notificações extrajudiciais estratégicas para solução rápida sem litígio",
+      "Defesa civil contundente em processos judiciais de execução e cobrança",
     ],
     whatsAppText:
-      "Olá, Dra. Paloma! Gostaria de uma avaliação para dar entrada na minha aposentadoria urbana ou especial no INSS.",
+      "Olá, Dra. Carla Gisele! Gostaria de consultar sobre uma demanda de Direito Civil, contrato ou indenização.",
   },
   {
-    id: "aposentadoria-rural-trabalhador-campo",
-    title: "Aposentadoria Rural & Segurado Especial",
-    icon: Wheat,
-    tag: "Agricultura Familiar · Lavoura · Boia-Fria · Produtor Rural · Guanhães & Região",
+    id: "direito-imobiliario-regularizacao",
+    title: "Direito Imobiliário & Regularização de Imóveis",
+    icon: HomeIcon,
+    tag: "Usucapião · Regularização Fundiária · Contratos de Compra e Venda · Posse",
     summary:
-      "Reconhecimento integral do tempo de trabalho na lavoura e agricultura familiar, garantindo a redução de idade para aposentadoria (55 anos mulher e 60 anos homem).",
+      "Regularização registral completa de imóveis urbanos e rurais em Espinosa e região, garantindo segurança jurídica absoluta e valorização do seu patrimônio imobiliário.",
     details:
-      "Quem dedicou a vida à terra e à lavoura enfrenta grandes exigências burocráticas no INSS. A Dra. Paloma Fernandes possui ampla vivência na realidade dos trabalhadores do campo em Guanhães e em todo o interior mineiro, organizando um robusto conjunto de provas materiais (notas de produtor, contratos de comodato/arrendamento, certidões públicas históricas e autodeclaração rural) para vencer indeferimentos e garantir sua aposentadoria com dignidade.",
+      "Imóveis sem escritura ou com pendências registrais geram insegurança e desvalorização patrimonial. A Dra. Carla Gisele atua na regularização fundiária de propriedades urbanas e rurais, ações de usucapião judicial e extrajudicial, elaboração de contratos seguros de compra, venda e locação, e resolução de conflitos possessórios.",
     topics: [
-      "Aposentadoria por Idade Rural com redução de 5 anos (55 anos mulher e 60 anos homem)",
-      "Aposentadoria Híbrida / Mista: soma do tempo rural com o tempo de trabalho urbano",
-      "Elaboração correta da Autodeclaração do Segurado Especial perante o INSS",
-      "Resgate e validação de provas materiais contemporâneas de agricultura familiar",
-      "Concessão de salário-maternidade rural e auxílio por incapacidade rural",
-      "Ação judicial para reversão de indeferimentos causados por recusa injusta de documentos rurais",
+      "Ações de Usucapião Extrajudicial (em cartório) e Usucapião Judicial",
+      "Regularização de escrituras, registros imobiliários e averbações de imóveis",
+      "Assessoria jurídica completa para compra e venda segura de imóveis urbanos e rurais",
+      "Ações Possessórias: Reintegração de posse, manutenção de posse e interdito proibitório",
+      "Elaboração e análise de Contratos de Locação comercial e residencial",
+      "Despejos, cobrança de aluguéis e renovatórias de locação comercial",
     ],
     whatsAppText:
-      "Olá, Dra. Paloma! Gostaria de auxílio para comprovar meu tempo de trabalho na roça/campo e solicitar minha aposentadoria rural.",
+      "Olá, Dra. Carla Gisele! Preciso de orientações sobre usucapião ou regularização de imóvel.",
   },
   {
-    id: "beneficios-incapacidade-pericia",
-    title: "Benefícios por Incapacidade & Perícia Médica",
-    icon: Stethoscope,
-    tag: "Auxílio por Incapacidade Temporária · Aposentadoria por Invalidez · Auxílio-Acidente",
+    id: "direito-do-trabalho-defesa",
+    title: "Direito do Trabalho & Defesa dos Direitos",
+    icon: Briefcase,
+    tag: "Verbas Rescisórias · Rescisão Indireta · Horas Extras · Vínculo Empregatício",
     summary:
-      "Defesa incisiva para trabalhadores incapacitados por doença física, mental ou acidente, revertendo negativas de perícia do INSS administrativamente e na Justiça.",
+      "Defesa firme e intransigente dos direitos e garantias do trabalhador, assegurando o recebimento justo de todas as verbas rescisórias e indenizações devidas.",
     details:
-      "Estar doente ou incapacitado já é um fardo pesado; receber um indeferimento injusto na perícia médica do INSS agrava ainda mais o momento. A Dra. Paloma Fernandes prepara uma blindagem documental médica rigorosa (laudos detalhados, exames complementares e relatórios de especialistas), ingressa com recursos ou Ação Judicial com pedido de tutela de urgência e perícia médica judicial especializada para restabelecer ou conceder o seu benefício com rapidez.",
+      "O trabalhador que dedicou sua força produtiva tem direito ao recebimento exato de tudo o que a lei prevê. A Dra. Carla Gisele atua no cálculo minucioso de haveres trabalhistas, rescisão indireta em casos de descumprimento pelo empregador, cobrança de horas extras não pagas, equiparação salarial, indenizações por acidente de trabalho e reconhecimento de vínculo.",
     topics: [
-      "Auxílio por Incapacidade Temporária (antigo Auxílio-Doença) para tratamento de saúde",
-      "Aposentadoria por Incapacidade Permanente (antiga Aposentadoria por Invalidez)",
-      "Adicional de 25% na aposentadoria por invalidez para quem necessita de acompanhamento constante",
-      "Auxílio-Acidente: indenização mensal de 50% para quem ficou com sequelas permanentes após alta",
-      "Preparação técnica e documental para perícias presenciais ou perícia documental (Atestmed)",
-      "Ação Judicial com pedido liminar para liberação imediata dos pagamentos e atrasados",
+      "Cobrança integral de Verbas Rescisórias não pagas no prazo legal",
+      "Rescisão Indireta do Contrato de Trabalho por falta grave patronal",
+      "Cálculo e cobrança de Horas Extras, intervalos não usufruídos e adicional noturno",
+      "Reconhecimento de vínculo de emprego na Carteira de Trabalho (CTPS)",
+      "Indenizações por Acidente de Trabalho, doenças ocupacionais e estabilidade provisória",
+      "Adicionais de Insalubridade e Periculosidade devidos e não quitados",
     ],
     whatsAppText:
-      "Olá, Dra. Paloma! Tive meu benefício por incapacidade ou auxílio-doença negado pelo INSS e preciso de ajuda urgente.",
+      "Olá, Dra. Carla Gisele! Gostaria de consultar sobre meus direitos trabalhistas e verbas rescisórias.",
   },
   {
-    id: "bpc-loas-assistencial",
-    title: "BPC / LOAS (Idosos & Pessoas com Deficiência)",
-    icon: HeartHandshake,
-    tag: "1 Salário Mínimo Mensal · Sem Contribuição Prévia · Idosos 65+ · PCD de Qualquer Idade",
+    id: "direito-do-consumidor-abusos",
+    title: "Direito do Consumidor & Defesa contra Abusos",
+    icon: ShoppingBag,
+    tag: "Negativação Indevida · Fraudes Bancárias · Empréstimos Não Contratados · Danos",
     summary:
-      "Concessão do benefício assistencial mensal de 1 salário mínimo para idosos acima de 65 anos e pessoas com deficiência em situação de vulnerabilidade socioeconômica.",
+      "Atuação rápida para retirada de negativações indevidas no SPC/Serasa, cancelamento de cobranças fraudulentas e obtenção de indenizações por danos morais.",
     details:
-      "O Benefício de Prestação Continuada (BPC/LOAS) é uma garantia constitucional fundamental que não exige histórico prévio de contribuição ao INSS. A Dra. Paloma Fernandes conduz todo o processo com sensibilidade e precisão: orienta a regularização no CadÚnico, demonstra documentalmente as despesas essenciais com remédios, fraldas e tratamentos que abatem a renda da família, e supera os bloqueios e exigências indevidas do INSS.",
+      "Cobranças indevidas, golpes financeiros e falhas graves na prestação de serviços causam sérios transtornos. A Dra. Carla Gisele ingressa com medidas judiciais liminares para limpar imediatamente o nome nos órgãos de proteção ao crédito, cancelar contratos bancários fraudulentos com restituição em dobro e exigir indenizações justas por danos morais.",
     topics: [
-      "BPC para Idosos a partir de 65 anos que vivem em condição de vulnerabilidade",
-      "BPC para Pessoas com Deficiência de qualquer idade com impedimentos de longo prazo",
-      "Dedução legal de gastos contínuos com saúde, remédios, alimentação especial e terapias",
-      "Orientação completa para inscrição e atualização do Cadastro Único (CadÚnico/CRAS)",
-      "Defesa contra suspensão indevida, bloqueio de pagamentos ou corte do benefício",
-      "Ação judicial contundente contra negativas baseadas em critérios rígidos de renda per capita",
+      "Retirada imediata de Inscrição Indevida no SPC, Serasa e órgãos de proteção ao crédito",
+      "Indenização por Danos Morais em decorrência de cobrança vexatória ou negativação indevida",
+      "Cancelamento de Empréstimos Consignados e Cartões de Crédito não autorizados (golpes/fraudes)",
+      "Restituição em Dobro de valores descontados indevidamente em conta ou benefício",
+      "Ações contra companhias aéreas por atraso, cancelamento de voos e extravio de bagagem",
+      "Reparação por produtos com vícios ou defeitos não solucionados pelo fornecedor",
     ],
     whatsAppText:
-      "Olá, Dra. Paloma! Gostaria de saber como solicitar o BPC/LOAS para mim ou para um familiar no INSS.",
-  },
-  {
-    id: "pensao-por-morte-revisoes",
-    title: "Pensão por Morte & Revisões de Benefícios",
-    icon: ShieldCheck,
-    tag: "Amparo a Dependentes · Revisão de Cálculo · Erros do INSS · Atrasados dos Últimos 5 Anos",
-    summary:
-      "Concessão rápida e desburocratizada de pensão por morte para proteger a família enlutada e revisão minuciosa de benefícios concedidos com erros para recebimento de atrasados.",
-    details:
-      "No momento da perda de um ente querido, a família precisa de acolhimento ágil e segurança financeira. A Dra. Paloma Fernandes habilita dependentes (cônjuge, companheiro com união estável, filhos menores ou inválidos) para concessão imediata da pensão. Além disso, realiza diagnósticos revisionais para segurados que já recebem benefícios: recalculamos se o INSS descartou vínculos, aplicou tetos errados ou gerou valores inferiores ao legalmente devido.",
-    topics: [
-      "Pensão por Morte Urbana e Rural com comprovação documental de dependência econômica",
-      "Reconhecimento post mortem de união estável para concessão de pensão ao parceiro(a)",
-      "Auxílio-Reclusão para famílias de segurados de baixa renda recolhidos à prisão",
-      "Revisão de aposentadorias para inclusão de períodos trabalhados e vínculos rurais",
-      "Cobrança integral de parcelas atrasadas retroativas à Data de Entrada do Requerimento (DER)",
-      "Restabelecimento imediato de pensões ou aposentadorias suspensas indevidamente",
-    ],
-    whatsAppText:
-      "Olá, Dra. Paloma! Preciso de orientações jurídicas sobre pensão por morte ou revisão do valor do meu benefício.",
+      "Olá, Dra. Carla Gisele! Tive um problema de consumo, negativação indevida ou fraude bancária e preciso de ajuda.",
   },
 ];
 
 const clientReviews = [
   {
-    name: "Jaciara Angelina",
-    reviewerTag: "Local Guide · 14 avaliações",
-    badge: "Humana & Estratégica",
-    rating: 5,
-    content:
-      "Excelente! Realmente defende o interesse do cliente! Humana e estratégica! É Advogada da nossa família e recomendamos de olhos fechados! Em meio a dúvidas e incertezas ter alguém competente ao seu lado faz toda a diferença! Obrigada Dra. Paloma!",
-  },
-  {
-    name: "Marcos Vinícius",
+    name: "Orlando Barros",
     reviewerTag: "2 avaliações no Google",
-    badge: "Competência & Clareza",
+    badge: "Confiança & Competência",
     rating: 5,
-    content:
-      "A Dra. Paloma é uma advogada extremamente competente, atenciosa e dedicada. Desde o primeiro contato, mostrou grande conhecimento e profissionalismo, sempre explicando tudo de forma clara e objetiva. Seu comprometimento e atenção aos detalhes fizeram toda a diferença no meu caso. Recomendo seus serviços com total confiança!",
+    content: "Profissional de extrema confiança e competência.",
   },
   {
-    name: "Wanderléia Tomás Oficial",
-    reviewerTag: "4 avaliações no Google",
-    badge: "Êxito em Todas as Causas",
-    rating: 5,
-    content:
-      "Maravilhoso atendimento, excelente advogada, muito séria no que faz, e todas as vezes que precisei dos seus serviços tivemos êxito em todos eles. Além de sério e compromissado o trabalho da advogada Paloma, ela nos passa tranquilidade, sem perder a assertividade que a causa exige, muito controle emocional! Amei todas as vezes que precisei. Obrigada Dra. Paloma por todo empenho e competência!",
-  },
-  {
-    name: "Girlane de Oliveira",
-    reviewerTag: "3 avaliações no Google",
-    badge: "Parceria de 10 Anos",
-    rating: 5,
-    content:
-      "Conheci a Dra. Paloma Fernandes em um momento muito difícil da minha vida. Ela foi mais que uma advogada, foi uma amiga que me deu suporte. Dez anos se fez agora. Vencemos batalhas difíceis. Ela toda vida ali, persistente em seu trabalho. Se eu pudesse daria nota 1000 pela dedicação e profissionalismo. A OAB tem em sua instituição uma grande advogada!",
-  },
-  {
-    name: "Gislaine Fernandes",
+    name: "geo Dias",
     reviewerTag: "2 avaliações no Google",
-    badge: "Resultado de Sucesso",
+    badge: "Competente & Responsável",
     rating: 5,
-    content:
-      "Prezada Paloma, agradeço sua paciência e atenção pessoal prestada durante todo esse meu processo. Seus esforços tiveram um impacto positivo significativo em minha vida. Sua experiência e dedicação foram fundamentais para alcançar um resultado de sucesso. Você é uma profissional de excelência! Obrigada por tudo!",
+    content: "Profissional competente e responsável!",
   },
   {
-    name: "Carmen Ildeu",
+    name: "Otávio Augusto Ribeiro Barbosa",
+    reviewerTag: "4 avaliações · 6 fotos no Google",
+    badge: "Dedicada & Eficiente",
+    rating: 5,
+    content: "Advogada dedicada, clara nas orientações e muito eficiente.",
+  },
+  {
+    name: "Anderson Júnior",
     reviewerTag: "1 avaliação no Google",
-    badge: "Empatia & Luta Junto",
+    badge: "Competência & Experiência",
     rating: 5,
-    content:
-      "É uma das melhores e ótima profissional. A Dra. Paloma não quer só o seu dinheiro, ela se envolve, tem empatia, sofre junto, luta junto. Muito obrigada por tudo! Deus abençoe sempre!",
+    content: "Profissional competente e de experiência.",
   },
   {
-    name: "Paula Fernandes",
+    name: "Thiago Ferreira",
     reviewerTag: "3 avaliações no Google",
-    badge: "Melhor Advogada da Região",
+    badge: "Preparada & Confiável",
     rating: 5,
-    content:
-      "Melhor advogada de Guanhães e região! Espaço, atendimento e trabalho impecável. Eu não conheço outro serviço melhor. Serviço de extrema qualidade e acolhimento!",
+    content: "Excelente profissional, muito preparada e confiável.",
   },
   {
-    name: "Edilene Lopes",
+    name: "Joel Neto De Sa",
+    reviewerTag: "Local Guide · 29 avaliações · 68 fotos",
+    badge: "Extrema Confiança",
+    rating: 5,
+    content: "Profissional de extrema confiança, competente e experiente.",
+  },
+  {
+    name: "Jennifer Silva",
+    reviewerTag: "3 avaliações · 1 foto no Google",
+    badge: "Assessoria de Excelência",
+    rating: 5,
+    content: "Assessoria de excelência!",
+  },
+  {
+    name: "Jô Dias",
     reviewerTag: "2 avaliações no Google",
-    badge: "Honestidade & Rapidez",
+    badge: "Extrema Qualidade",
     rating: 5,
-    content:
-      "Pessoa excelente, responsável, agiu com uma honestidade e rapidez exemplar com nosso processo. Só agradeço por toda a atenção com a minha família num momento tão delicado. Recomendo muito uma profissional muito eficiente!",
+    content: "Assessoria de extrema qualidade!!",
   },
   {
-    name: "Tiago Santos",
-    reviewerTag: "4 avaliações no Google",
-    badge: "Causa Ganha & Seriedade",
+    name: "Alexandre do Carmo Santana Xandy",
+    reviewerTag: "1 avaliação no Google",
+    badge: "Experiência & Confiança",
     rating: 5,
-    content:
-      "Excelente advogada, trabalha com seriedade, super indico causa ganha!",
+    content: "Profissional competente, experiente e de confiança.",
+  },
+  {
+    name: "Ronan Nogueira",
+    reviewerTag: "2 avaliações no Google",
+    badge: "Super Indico",
+    rating: 5,
+    content: "Super indico, ótima profissional.",
+  },
+  {
+    name: "Vitoria Pereira",
+    reviewerTag: "2 avaliações no Google",
+    badge: "Extrema Competência",
+    rating: 5,
+    content: "Profissional de extrema competência!",
+  },
+  {
+    name: "Eder Queiroz",
+    reviewerTag: "2 avaliações no Google",
+    badge: "Qualidade & Competência",
+    rating: 5,
+    content: "Profissional de competência e qualidade.",
   },
 ];
 
@@ -370,11 +384,11 @@ function Heading({
   return (
     <div>
       <p className={light ? "eyebrow-light" : "eyebrow"}>{eyebrow}</p>
-      <h2 className="mt-4 font-serif text-3xl leading-[1.14] tracking-[-0.02em] text-[#11141a] sm:text-4xl lg:text-[3.15rem]">
+      <h2 className="mt-4 font-serif text-3xl leading-[1.14] tracking-[-0.02em] text-[#141210] sm:text-4xl lg:text-[3.15rem]">
         {children}
       </h2>
       {description && (
-        <p className="mt-4 text-[15px] leading-7 text-[#282e3b]">
+        <p className="mt-4 text-[15px] leading-7 text-[#2b241d]">
           {description}
         </p>
       )}
@@ -401,24 +415,24 @@ export default function Home() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <main className="overflow-hidden bg-[#faf8f5] text-[#11141a] selection:bg-[#f0e6d8] selection:text-[#0b0d11]">
-        {/* Navigation Bar - Refined Platinum Champagne & Deep Obsidian Luxury */}
-        <header className="sticky top-0 z-40 border-b border-[#e2dad0] bg-white/95 backdrop-blur-xl shadow-xs">
+      <main className="overflow-hidden bg-[#faf8f5] text-[#141210] selection:bg-[#f3e5c8] selection:text-[#0e0c0a]">
+        {/* Navigation Bar - Refined Imperial Gold & Obsidian Noir Luxury */}
+        <header className="sticky top-0 z-40 border-b border-[#e5dccd] bg-white/95 backdrop-blur-xl shadow-xs">
           <div className="mx-auto flex h-[98px] max-w-7xl items-center justify-between gap-6 px-5 sm:h-[108px] lg:h-[114px] xl:h-[118px] sm:px-8 lg:px-12">
             <a
               href="#inicio"
-              aria-label="Dra. Paloma Fernandes — Advocacia Previdenciária INSS - Página Inicial"
+              aria-label="Carla Gisele — Advogada - Página Inicial"
               onClick={closeMenu}
               className="flex shrink-0 items-center transition-opacity hover:opacity-95"
             >
-              <div className="relative h-[62px] w-[260px] sm:h-[72px] sm:w-[320px] lg:h-[82px] lg:w-[365px] xl:h-[88px] xl:w-[395px]">
+              <div className="relative h-[64px] w-[250px] sm:h-[74px] sm:w-[310px] lg:h-[84px] lg:w-[350px] xl:h-[88px] xl:w-[375px]">
                 <Image
                   src={LOGO_SRC}
-                  alt="Dra. Paloma Fernandes — Advocacia Previdenciária INSS"
+                  alt="Carla Gisele — Advogada"
                   fill
                   priority
                   unoptimized
-                  sizes="(max-width: 640px) 260px, (max-width: 1024px) 365px, 395px"
+                  sizes="(max-width: 640px) 250px, (max-width: 1024px) 350px, 375px"
                   className="object-contain object-left"
                 />
               </div>
@@ -435,7 +449,7 @@ export default function Home() {
                 A Advogada
               </a>
               <a className="nav-link" href="#atuacao">
-                Especialidades INSS
+                Áreas de Atuação
               </a>
               <a className="nav-link" href="#diferenciais">
                 Por Que Escolher
@@ -453,9 +467,9 @@ export default function Home() {
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Avaliações da Dra. Paloma Fernandes no Google"
-                className="grid size-10 place-items-center rounded-lg border border-[#e2dad0] bg-[#faf8f5] text-[#282e3b] transition-all hover:border-[#a8927b] hover:bg-white hover:text-[#0b0d11] shadow-xs"
-                title="5,0 ★ no Google (47 avaliações)"
+                aria-label="Avaliações da Dra. Carla Gisele no Google"
+                className="grid size-10 place-items-center rounded-lg border border-[#e5dccd] bg-[#faf8f5] text-[#2b241d] transition-all hover:border-[#c58b2c] hover:bg-white hover:text-[#0e0c0a] shadow-xs"
+                title="5,0 ★ no Google (31 avaliações)"
               >
                 <GoogleIcon size={16} />
               </a>
@@ -463,16 +477,16 @@ export default function Home() {
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Instagram da Dra. Paloma Fernandes"
-                className="grid size-10 place-items-center rounded-lg border border-[#e2dad0] bg-[#faf8f5] text-[#282e3b] transition-all hover:border-[#a8927b] hover:bg-white hover:text-[#0b0d11] shadow-xs"
+                aria-label="Instagram da Dra. Carla Gisele"
+                className="grid size-10 place-items-center rounded-lg border border-[#e5dccd] bg-[#faf8f5] text-[#2b241d] transition-all hover:border-[#c58b2c] hover:bg-white hover:text-[#0e0c0a] shadow-xs"
                 title={`Instagram ${INSTAGRAM_HANDLE}`}
               >
                 <InstagramIcon size={16} />
               </a>
               <a
                 href={`tel:+${WHATSAPP_NUMBER}`}
-                aria-label="Ligar para a Dra. Paloma Fernandes"
-                className="grid size-10 place-items-center rounded-lg border border-[#e2dad0] bg-[#faf8f5] text-[#282e3b] transition-all hover:border-[#a8927b] hover:bg-white hover:text-[#0b0d11] shadow-xs"
+                aria-label="Ligar para a Dra. Carla Gisele"
+                className="grid size-10 place-items-center rounded-lg border border-[#e5dccd] bg-[#faf8f5] text-[#2b241d] transition-all hover:border-[#c58b2c] hover:bg-white hover:text-[#0e0c0a] shadow-xs"
                 title={`Ligar: ${PHONE_DISPLAY}`}
               >
                 <Phone size={16} />
@@ -481,22 +495,22 @@ export default function Home() {
                 href={getWhatsAppUrl()}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="WhatsApp Dra. Paloma Fernandes"
-                className="grid size-10 place-items-center rounded-lg border border-[#e2dad0] bg-[#faf8f5] text-[#282e3b] transition-all hover:border-[#a8927b] hover:bg-white hover:text-[#0b0d11] shadow-xs"
+                aria-label="WhatsApp Dra. Carla Gisele"
+                className="grid size-10 place-items-center rounded-lg border border-[#e5dccd] bg-[#faf8f5] text-[#2b241d] transition-all hover:border-[#c58b2c] hover:bg-white hover:text-[#0e0c0a] shadow-xs"
                 title="Atendimento no WhatsApp"
               >
                 <WhatsAppIcon size={18} />
               </a>
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá, Dra. Paloma! Gostaria de agendar uma consulta para orientação sobre meus direitos no INSS."
+                  "Olá, Dra. Carla Gisele! Gostaria de agendar uma consulta para orientação jurídica sobre meu caso."
                 )}
                 target="_blank"
                 size="sm"
                 variant="emerald"
                 className="rounded-lg shadow-sm"
               >
-                Consultar Benefício <ArrowUpRight size={14} />
+                Consulta Jurídica <ArrowUpRight size={14} />
               </GlowingButton>
             </div>
 
@@ -505,7 +519,7 @@ export default function Home() {
               aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
               aria-expanded={menuOpen}
               aria-controls="mobile-navigation"
-              className="grid size-11 place-items-center rounded-lg border border-[#e2dad0] bg-[#faf8f5] text-[#11141a] lg:hidden shadow-xs"
+              className="grid size-11 place-items-center rounded-lg border border-[#e5dccd] bg-[#faf8f5] text-[#141210] lg:hidden shadow-xs"
               onClick={() => setMenuOpen((open) => !open)}
             >
               {menuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -521,13 +535,13 @@ export default function Home() {
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.22 }}
-                className="overflow-hidden border-t border-[#e2dad0] bg-white px-6 text-[#11141a] lg:hidden"
+                className="overflow-hidden border-t border-[#e5dccd] bg-white px-6 text-[#141210] lg:hidden"
               >
                 <div className="mx-auto flex max-w-7xl flex-col gap-1 py-4">
                   {[
                     ["Início", "#inicio"],
                     ["A Advogada", "#sobre"],
-                    ["Especialidades INSS", "#atuacao"],
+                    ["Áreas de Atuação", "#atuacao"],
                     ["Por Que Escolher", "#diferenciais"],
                     ["Avaliações (5,0 ★)", "#avaliacoes"],
                     ["Contato & Sede", "#contato"],
@@ -536,16 +550,16 @@ export default function Home() {
                       key={label}
                       href={href}
                       onClick={closeMenu}
-                      className="py-3 text-sm font-medium text-[#282e3b] hover:text-[#a8927b]"
+                      className="py-3 text-sm font-medium text-[#2b241d] hover:text-[#c58b2c]"
                     >
                       {label}
                     </a>
                   ))}
                   <div className="mt-3 flex flex-col gap-2">
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#0b0d11] via-[#171b22] to-[#0b0d11] px-5 py-3.5 text-xs font-bold uppercase tracking-[0.13em] text-white shadow-md transition-all hover:brightness-105"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#0e0c0a] via-[#1a1510] to-[#0e0c0a] px-5 py-3.5 text-xs font-bold uppercase tracking-[0.13em] text-white shadow-md transition-all hover:brightness-105 border border-[#c58b2c]/60"
                       href={getWhatsAppUrl(
-                        "Olá, Dra. Paloma! Gostaria de conversar sobre minha aposentadoria ou benefício pelo WhatsApp."
+                        "Olá, Dra. Carla Gisele! Gostaria de conversar sobre meu caso pelo WhatsApp."
                       )}
                       target="_blank"
                       rel="noreferrer"
@@ -554,13 +568,13 @@ export default function Home() {
                       <WhatsAppIcon size={16} /> WhatsApp: {PHONE_DISPLAY}
                     </a>
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#e2dad0] bg-[#faf8f5] px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-[#11141a] transition-all hover:border-[#a8927b]"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#e5dccd] bg-[#faf8f5] px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-[#141210] transition-all hover:border-[#c58b2c]"
                       href={GOOGLE_SEARCH_URL}
                       target="_blank"
                       rel="noreferrer"
                       onClick={closeMenu}
                     >
-                      <GoogleIcon size={15} /> 5,0 ★ no Google (47 avaliações)
+                      <GoogleIcon size={15} /> 5,0 ★ no Google (31 avaliações)
                     </a>
                   </div>
                 </div>
@@ -569,16 +583,16 @@ export default function Home() {
           </AnimatePresence>
         </header>
 
-        {/* Hero Section - Executive Titanium Platinum, Obsidian Noir & Incandescent Warmth */}
+        {/* Hero Section - Imperial Gold, Obsidian Noir & Alabaster Canvas */}
         <section
           id="inicio"
-          className="relative isolate scroll-mt-24 border-b border-[#e2dad0] bg-gradient-to-b from-white via-[#faf8f5] to-[#f4efe8]"
+          className="relative isolate scroll-mt-24 border-b border-[#e5dccd] bg-gradient-to-b from-white via-[#faf8f5] to-[#f5efe6]"
         >
-          {/* Subtle champagne and warm ambient lighting aura */}
-          <div className="pointer-events-none absolute -right-32 top-8 -z-10 size-[36rem] rounded-full bg-[#a8927b]/12 blur-3xl" />
-          <div className="pointer-events-none absolute -left-20 bottom-10 -z-10 size-[28rem] rounded-full bg-[#d4a359]/10 blur-3xl" />
+          {/* Subtle gold and warm ambient lighting aura */}
+          <div className="pointer-events-none absolute -right-32 top-8 -z-10 size-[36rem] rounded-full bg-[#c58b2c]/12 blur-3xl" />
+          <div className="pointer-events-none absolute -left-20 bottom-10 -z-10 size-[28rem] rounded-full bg-[#fbb74e]/10 blur-3xl" />
 
-          <div className="mx-auto grid min-h-[640px] max-w-7xl items-center gap-10 px-5 py-14 sm:px-8 sm:py-16 lg:min-h-[700px] lg:grid-cols-[1.1fr_0.9fr] lg:gap-12 lg:px-12 lg:py-18 xl:min-h-[740px] xl:py-20">
+          <div className="mx-auto grid min-h-[640px] max-w-7xl items-center gap-10 px-5 py-14 sm:px-8 sm:py-16 lg:min-h-[700px] lg:grid-cols-[1.12fr_0.88fr] lg:gap-12 lg:px-12 lg:py-18 xl:min-h-[740px] xl:py-20">
             <motion.div
               initial="hidden"
               animate="visible"
@@ -587,27 +601,30 @@ export default function Home() {
             >
               <motion.div
                 variants={reveal}
-                className="mb-5 inline-flex items-center gap-2 rounded-lg border border-[#a8927b]/40 bg-white px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-[#745f4d] shadow-xs"
+                className="mb-5 inline-flex items-center gap-2 rounded-lg border border-[#c58b2c]/40 bg-white px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-[#833a03] shadow-xs"
               >
-                <span className="size-2 shrink-0 rounded-full bg-[#a8927b]" />
-                <span>ADVOCACIA PREVIDENCIÁRIA & INSS · GUANHÃES - MG</span>
+                <span className="size-2 shrink-0 rounded-full bg-[#c58b2c]" />
+                <span>GRADUADA PELA UFMG · ESPINOSA - MG & BELO HORIZONTE</span>
               </motion.div>
 
               <motion.h1
                 variants={reveal}
-                className="font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-[#11141a] sm:text-[2.6rem] sm:leading-[1.12] lg:text-[3.25rem] xl:text-[3.45rem]"
+                className="font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-[#141210] sm:text-[2.6rem] sm:leading-[1.12] lg:text-[3.25rem] xl:text-[3.45rem]"
               >
-                Sua aposentadoria e seus direitos no INSS conquistados com{" "}
-                <span className="font-serif italic text-[#745f4d]">
-                  estratégia, humanidade e o máximo valor.
+                Assessoria jurídica com{" "}
+                <span className="font-serif italic text-[#833a03]">
+                  extrema competência, clareza e dedicação à sua causa.
                 </span>
               </motion.h1>
 
               <motion.p
                 variants={reveal}
-                className="mt-5 max-w-xl text-[15px] leading-7 text-[#282e3b] sm:text-base sm:leading-8"
+                className="mt-5 max-w-xl text-[15px] leading-7 text-[#2b241d] sm:text-base sm:leading-8"
               >
-                Mais de <strong className="font-semibold text-[#11141a]">10 anos de advocacia combativa</strong> ao lado de quem trabalhou duro a vida inteira. A <strong className="font-semibold text-[#11141a]">Dra. Paloma Fernandes</strong> atua com rigor investigativo no CNIS, acolhimento empático e firmeza na concessão de <strong className="font-semibold text-[#11141a]">Aposentadorias, Benefícios por Incapacidade, BPC/LOAS e Planejamento Previdenciário</strong> em Guanhães e em todo o Brasil.
+                Graduada pela prestigiada Faculdade de Direito da{" "}
+                <strong className="font-semibold text-[#141210]">Universidade Federal de Minas Gerais (UFMG)</strong>, a{" "}
+                <strong className="font-semibold text-[#141210]">Dra. Carla Gisele</strong> alia rigor técnico acadêmico a uma advocacia combativa e acolhedora. Atuação de excelência em{" "}
+                <strong className="font-semibold text-[#141210]">Direito Civil, Família e Sucessões, Previdenciário (INSS), Trabalhista e Imobiliário</strong> com sede em Espinosa - MG, presença na capital mineira e consultoria digital em todo o Brasil.
               </motion.p>
 
               <motion.div
@@ -616,20 +633,20 @@ export default function Home() {
               >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Paloma! Gostaria de uma avaliação jurídica para o meu benefício/aposentadoria no INSS."
+                    "Olá, Dra. Carla Gisele! Gostaria de conversar sobre meu caso e tirar dúvidas pelo WhatsApp."
                   )}
                   target="_blank"
                   size="md"
                   variant="emerald"
                   className="rounded-lg shadow-md"
                 >
-                  <WhatsAppIcon size={16} /> Falar no WhatsApp com a Dra. Paloma
+                  <WhatsAppIcon size={16} /> Falar no WhatsApp com a Dra. Carla
                 </GlowingButton>
                 <a
                   href="#atuacao"
-                  className="group inline-flex items-center gap-2 rounded-lg border border-[#e2dad0] bg-white px-5 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#11141a] shadow-xs transition-all hover:border-[#a8927b] hover:bg-[#faf8f5]"
+                  className="group inline-flex items-center gap-2 rounded-lg border border-[#e5dccd] bg-white px-5 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#141210] shadow-xs transition-all hover:border-[#c58b2c] hover:bg-[#faf8f5]"
                 >
-                  Conhecer Especialidades{" "}
+                  Conhecer Áreas de Atuação{" "}
                   <ArrowRight
                     size={14}
                     className="transition-transform group-hover:translate-x-1"
@@ -639,26 +656,26 @@ export default function Home() {
 
               <motion.div
                 variants={reveal}
-                className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-[#e2dad0] pt-5 text-xs text-[#565e6e]"
+                className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-[#e5dccd] pt-5 text-xs text-[#5c5348]"
               >
                 <a
                   href={GOOGLE_SEARCH_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-1.5 font-medium text-[#11141a] transition-colors hover:text-[#745f4d]"
+                  className="inline-flex items-center gap-1.5 font-medium text-[#141210] transition-colors hover:text-[#833a03]"
                 >
-                  <Star size={14} className="fill-[#d4a359] text-[#d4a359]" /> 5,0 ★ no Google (47 avaliações)
+                  <Star size={14} className="fill-[#c58b2c] text-[#c58b2c]" /> 5,0 ★ no Google (31 avaliações)
                 </a>
-                <span className="inline-flex items-center gap-1.5 font-medium text-[#11141a]">
-                  <Award size={14} className="text-[#745f4d]" /> +10 Anos de Dedicação ao Segurado
+                <span className="inline-flex items-center gap-1.5 font-medium text-[#141210]">
+                  <Award size={14} className="text-[#833a03]" /> Formada pela UFMG
                 </span>
                 <a
                   href={GOOGLE_MAPS_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-1.5 font-medium text-[#11141a] transition-colors hover:text-[#745f4d]"
+                  className="inline-flex items-center gap-1.5 font-medium text-[#141210] transition-colors hover:text-[#833a03]"
                 >
-                  <MapPin size={14} className="text-[#745f4d]" /> Av. Gov. Milton Campos, 2973 · Centro · Guanhães
+                  <MapPin size={14} className="text-[#833a03]" /> R. Padre Martin Kirscht · Espinosa - MG
                 </a>
               </motion.div>
             </motion.div>
@@ -674,38 +691,38 @@ export default function Home() {
               }}
               className="relative mx-auto w-full max-w-[400px] sm:max-w-[430px] lg:max-w-[460px] xl:max-w-[480px] lg:ml-auto lg:mr-0"
             >
-              <div className="relative aspect-[4/4.9] overflow-hidden rounded-2xl border-2 border-[#e2dad0] bg-[#0b0d11] shadow-xl ring-1 ring-[#a8927b]/35">
+              <div className="relative aspect-[4/4.9] overflow-hidden rounded-2xl border-2 border-[#e5dccd] bg-[#0e0c0a] shadow-xl ring-1 ring-[#c58b2c]/35">
                 <Image
                   src={FOTO_HERO_SRC}
-                  alt="Dra. Paloma Fernandes — Advogada Previdenciária Especialista em INSS"
+                  alt="Dra. Carla Gisele — Advogada Graduada pela UFMG"
                   fill
                   priority
                   loading="eager"
                   unoptimized
                   className="object-cover object-top"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-[#0b0d11] via-[#0b0d11]/85 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-[#0e0c0a] via-[#0e0c0a]/85 to-transparent" />
                 <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-3 text-white sm:bottom-6 sm:left-6 sm:right-6">
                   <div>
                     <p className="font-serif text-xl sm:text-2xl font-bold tracking-wide text-white">
-                      Dra. Paloma Fernandes
+                      Dra. Carla Gisele
                     </p>
-                    <p className="mt-0.5 text-[10px] uppercase tracking-[0.18em] text-[#e5dacb]">
-                      Advogada · Especialista em Direito Previdenciário
+                    <p className="mt-0.5 text-[10px] uppercase tracking-[0.18em] text-[#f3e5c8]">
+                      Advogada · Graduada pela UFMG
                     </p>
                     <p className="mt-0.5 text-[11px] text-stone-300">
-                      Av. Gov. Milton Campos, 2973 - Sl 204 · Guanhães - MG
+                      R. Padre Martin Kirscht · Espinosa - MG & Belo Horizonte
                     </p>
                   </div>
-                  <span className="grid size-11 shrink-0 place-items-center rounded-lg border border-[#a8927b]/60 bg-[#0b0d11]/85 text-[#faf8f5] backdrop-blur-sm shadow-md">
-                    <Scale size={18} className="text-[#bea993]" />
+                  <span className="grid size-11 shrink-0 place-items-center rounded-lg border border-[#c58b2c]/60 bg-[#0e0c0a]/85 text-[#fdfbf7] backdrop-blur-sm shadow-md">
+                    <Scale size={18} className="text-[#fbb74e]" />
                   </span>
                 </div>
               </div>
 
               {/* Floating authority badge */}
-              <div className="absolute -left-3 top-4 z-10 rounded-lg border border-[#a8927b]/40 bg-white/95 px-3 py-1.5 text-[9px] sm:text-[10px] font-bold tracking-[0.14em] text-[#0b0d11] shadow-md backdrop-blur-md sm:-left-4">
-                SEDE EM GUANHÃES · ATENDIMENTO ON-LINE EM TODO O BRASIL
+              <div className="absolute -left-3 top-4 z-10 rounded-lg border border-[#c58b2c]/40 bg-white/95 px-3 py-1.5 text-[9px] sm:text-[10px] font-bold tracking-[0.14em] text-[#0e0c0a] shadow-md backdrop-blur-md sm:-left-4">
+                SEDE EM ESPINOSA · ATENDIMENTO ON-LINE EM TODO O BRASIL
               </div>
 
               {/* Floating Google 5.0 Star Rating */}
@@ -713,24 +730,24 @@ export default function Home() {
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="group absolute -bottom-4 -right-2 z-10 rounded-xl border border-[#a8927b]/60 bg-white/95 p-3 shadow-md backdrop-blur-md transition-all hover:border-[#0b0d11] hover:bg-white sm:-right-4"
+                className="group absolute -bottom-4 -right-2 z-10 rounded-xl border border-[#c58b2c]/60 bg-white/95 p-3 shadow-md backdrop-blur-md transition-all hover:border-[#0e0c0a] hover:bg-white sm:-right-4"
               >
                 <div className="flex items-center gap-2">
                   <GoogleIcon size={16} />
                   <div className="flex items-center gap-1.5">
-                    <div className="flex gap-0.5 text-[#d4a359]">
-                      <Star size={12} className="fill-[#d4a359] text-[#d4a359]" />
+                    <div className="flex gap-0.5 text-[#c58b2c]">
+                      <Star size={12} className="fill-[#c58b2c] text-[#c58b2c]" />
                     </div>
-                    <span className="font-serif text-sm font-bold text-[#11141a]">
+                    <span className="font-serif text-sm font-bold text-[#141210]">
                       5,0
                     </span>
-                    <span className="text-[9px] uppercase tracking-wider text-[#745f4d]">
+                    <span className="text-[9px] uppercase tracking-wider text-[#833a03]">
                       / 5,0
                     </span>
                   </div>
                 </div>
-                <p className="mt-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#565e6e]">
-                  47 Avaliações no Google (100% 5★)
+                <p className="mt-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#5c5348]">
+                  31 Avaliações no Google (100% 5★)
                 </p>
               </a>
             </motion.div>
@@ -740,39 +757,39 @@ export default function Home() {
         {/* Highlights Banner - Authority Metrics */}
         <section
           aria-label="Credenciais e Destaques"
-          className="border-b border-[#e2dad0] bg-white"
+          className="border-b border-[#e5dccd] bg-white"
         >
           <div className="mx-auto grid max-w-7xl gap-7 px-5 py-8 sm:grid-cols-4 sm:gap-4 sm:px-8 lg:px-12">
             {[
               [
                 "5,0 ★ no Google",
-                "nota máxima comprovada em 47 avaliações destacando humanidade e estratégia",
+                "nota máxima comprovada em 31 avaliações destacando competência e confiança",
               ],
               [
-                "+10 Anos de Luta",
-                "mais de uma década vencendo batalhas e defendendo direitos previdenciários",
+                "Graduação UFMG",
+                "formação de excelência em uma das faculdades de Direito mais prestigiadas do país",
               ],
               [
-                "100% Foco no INSS",
-                "especialização pura em aposentadorias, benefícios por incapacidade e BPC/LOAS",
+                "Extrema Confiança",
+                "atendimento transparente, orientações claras e dedicação integral a cada caso",
               ],
               [
-                "Guanhães • Brasil",
-                "sede moderna na Av. Gov. Milton Campos e assessoria jurídica digital para todo o país",
+                "Espinosa • BH • Brasil",
+                "sede na R. Padre Martin Kirscht e assessoria jurídica digital para todo o território nacional",
               ],
             ].map(([value, label], index) => (
               <div
                 key={label}
                 className={
                   index > 0
-                    ? "flex items-center gap-4 sm:justify-center sm:border-l sm:border-[#e2dad0]"
+                    ? "flex items-center gap-4 sm:justify-center sm:border-l sm:border-[#e5dccd]"
                     : "flex items-center gap-4 sm:justify-center"
                 }
               >
-                <span className="font-serif text-xl font-semibold text-[#745f4d] sm:text-2xl">
+                <span className="font-serif text-xl font-semibold text-[#833a03] sm:text-2xl">
                   {value}
                 </span>
-                <span className="max-w-[165px] text-[11px] leading-5 text-[#565e6e]">
+                <span className="max-w-[165px] text-[11px] leading-5 text-[#5c5348]">
                   {label}
                 </span>
               </div>
@@ -780,10 +797,10 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Sobre a Dra. Paloma Fernandes - Editorial Canvas */}
+        {/* Sobre a Dra. Carla Gisele - Editorial Canvas */}
         <section
           id="sobre"
-          className="scroll-mt-24 border-y border-[#e2dad0] bg-[#faf8f5] py-20 text-[#11141a] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-y border-[#e5dccd] bg-[#faf8f5] py-20 text-[#141210] sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20 lg:px-12">
             {/* Visual presentation - Lawyer & Logo Composition */}
@@ -794,22 +811,22 @@ export default function Home() {
               variants={reveal}
               className="relative mx-auto w-full max-w-[490px]"
             >
-              <div className="relative aspect-[4/4.9] overflow-hidden rounded-2xl border-2 border-[#e2dad0] bg-[#0b0d11] shadow-2xl ring-1 ring-[#a8927b]/35">
+              <div className="relative aspect-[4/4.9] overflow-hidden rounded-2xl border-2 border-[#e5dccd] bg-[#0e0c0a] shadow-2xl ring-1 ring-[#c58b2c]/35">
                 <Image
                   src={FOTO_SOBRE_SRC}
-                  alt="Dra. Paloma Fernandes — Advocacia Previdenciária"
+                  alt="Dra. Carla Gisele — Advogada"
                   fill
                   unoptimized
                   className="object-cover object-top"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0b0d11]/95 via-[#0b0d11]/35 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0e0c0a]/95 via-[#0e0c0a]/35 to-transparent" />
                 
                 {/* Central brand emblem inside photo */}
                 <div className="absolute top-6 left-6 rounded-lg border border-white/20 bg-white/95 p-2.5 backdrop-blur-md shadow-md">
                   <div className="relative h-[48px] w-[175px]">
                     <Image
                       src={LOGO_SRC}
-                      alt="Logo Dra. Paloma Fernandes"
+                      alt="Logo Carla Gisele — Advogada"
                       fill
                       unoptimized
                       sizes="175px"
@@ -819,35 +836,35 @@ export default function Home() {
                 </div>
 
                 <div className="absolute bottom-6 left-6 right-6 text-white">
-                  <p className="font-cinzel text-xl font-bold tracking-wider text-[#faf8f5]">
-                    PALOMA FERNANDES
+                  <p className="font-cinzel text-xl font-bold tracking-wider text-[#fdfbf7]">
+                    CARLA GISELE
                   </p>
-                  <p className="mt-1 text-xs font-medium uppercase tracking-[0.18em] text-[#e5dacb]">
-                    Advogada · Direito Previdenciário INSS · Guanhães - MG
+                  <p className="mt-1 text-xs font-medium uppercase tracking-[0.18em] text-[#f3e5c8]">
+                    Advogada · Graduada pela UFMG · Espinosa - MG
                   </p>
                 </div>
               </div>
 
               {/* Authority badge card */}
-              <div className="absolute -bottom-6 right-3 max-w-[340px] rounded-xl border border-[#a8927b]/60 bg-white px-5 py-4 shadow-xl sm:-right-6 sm:px-6">
-                <div className="flex items-center gap-2 text-[#745f4d]">
+              <div className="absolute -bottom-6 right-3 max-w-[340px] rounded-xl border border-[#c58b2c]/60 bg-white px-5 py-4 shadow-xl sm:-right-6 sm:px-6">
+                <div className="flex items-center gap-2 text-[#833a03]">
                   <Sparkles size={16} />
-                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#745f4d]">
-                    Mais de 10 Anos de Advocacia
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#833a03]">
+                    Graduada pela UFMG
                   </p>
                 </div>
-                <p className="mt-1 font-serif text-lg leading-snug text-[#11141a]">
-                  Dra. Paloma Fernandes
+                <p className="mt-1 font-serif text-lg leading-snug text-[#141210]">
+                  Dra. Carla Gisele
                 </p>
-                <p className="mt-0.5 text-[11px] font-medium text-[#745f4d]">
-                  Especialista em Direito Previdenciário (INSS)
+                <p className="mt-0.5 text-[11px] font-medium text-[#833a03]">
+                  Advocacia de Extrema Confiança & Competência
                 </p>
-                <p className="mt-1 text-[11px] leading-4 text-[#565e6e]">
-                  Av. Gov. Milton Campos, 2973 · Sl 204 · Centro · Guanhães - MG
+                <p className="mt-1 text-[11px] leading-4 text-[#5c5348]">
+                  R. Padre Martin Kirscht · Espinosa - MG & Belo Horizonte
                 </p>
               </div>
 
-              <span className="absolute -left-4 -top-4 -z-10 size-24 border-l-2 border-t-2 border-[#a8927b]/40 sm:-left-7 sm:-top-7 sm:size-32" />
+              <span className="absolute -left-4 -top-4 -z-10 size-24 border-l-2 border-t-2 border-[#c58b2c]/40 sm:-left-7 sm:-top-7 sm:size-32" />
             </motion.div>
 
             {/* Story & Biography */}
@@ -859,49 +876,51 @@ export default function Home() {
             >
               <motion.div
                 variants={reveal}
-                className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#a8927b]/35 bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#745f4d] shadow-xs"
+                className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#c58b2c]/35 bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#833a03] shadow-xs"
               >
-                <span className="size-2 shrink-0 rounded-full bg-[#a8927b]" />
-                <span>SOBRE A DRA. PALOMA FERNANDES</span>
+                <span className="size-2 shrink-0 rounded-full bg-[#c58b2c]" />
+                <span>SOBRE A DRA. CARLA GISELE</span>
               </motion.div>
 
               <motion.h2
                 variants={reveal}
-                className="font-serif text-3xl leading-[1.14] tracking-[-0.02em] text-[#11141a] sm:text-4xl lg:text-[3.25rem]"
+                className="font-serif text-3xl leading-[1.14] tracking-[-0.02em] text-[#141210] sm:text-4xl lg:text-[3.25rem]"
               >
-                Uma advocacia de firmeza técnica e acolhimento humano:{" "}
-                <span className="italic text-[#745f4d]">
-                  defendemos sua história de trabalho e lutamos pelo que é seu por direito.
+                Uma trajetória de rigor técnico, ética inabalável e{" "}
+                <span className="italic text-[#833a03]">
+                  dedicação genuína à defesa dos seus direitos.
                 </span>
               </motion.h2>
 
               <motion.p
                 variants={reveal}
-                className="mt-6 max-w-xl text-[15px] leading-7 text-[#282e3b]"
+                className="mt-6 max-w-xl text-[15px] leading-7 text-[#2b241d]"
               >
-                Com sede estruturada na Avenida Governador Milton Campos, nº 2973 - Sala 204, no Centro de{" "}
-                <strong className="font-bold text-[#11141a]">Guanhães - MG</strong>, e consultoria digital segura para segurados em todo o Brasil, a trajetória da{" "}
-                <strong className="font-bold text-[#11141a]">Dra. Paloma Fernandes</strong> é fundamentada em uma década de lutas árduas contra a burocracia e as negativas do INSS.
+                Com sede profissional na Rua Padre Martin Kirscht, em{" "}
+                <strong className="font-bold text-[#141210]">Espinosa - MG</strong>, e atuação estratégica em Belo Horizonte e em todo o Brasil através de consultoria jurídica digital, a trajetória da{" "}
+                <strong className="font-bold text-[#141210]">Dra. Carla Gisele</strong> é pautada na excelência técnica, na transparência absoluta e no compromisso resolutivo.
               </motion.p>
 
               <motion.p
                 variants={reveal}
-                className="mt-4 max-w-xl text-[15px] leading-7 text-[#282e3b]"
+                className="mt-4 max-w-xl text-[15px] leading-7 text-[#2b241d]"
               >
-                Reconhecida com <strong className="font-bold text-[#11141a]">avaliação máxima 5,0 ★ unânime em 47 avaliações no Google</strong>, a Dra. Paloma destaca-se por seu atendimento verdadeiramente humano, estratégico e transparente:{" "}
-                <em className="text-[#11141a]">&ldquo;Não quer só o seu dinheiro; ela se envolve, tem empatia, sofre junto e luta junto&rdquo;</em>, garantindo que nenhum trabalhador ou família fique desamparado.
+                Graduada pela prestigiada Faculdade de Direito da{" "}
+                <strong className="font-bold text-[#141210]">Universidade Federal de Minas Gerais (UFMG)</strong> e reconhecida no Google com{" "}
+                <strong className="font-bold text-[#141210]">nota máxima 5,0 ★ unânime em 31 avaliações</strong>, a Dra. Carla Gisele destaca-se por sua capacidade de descomplicar o Direito:{" "}
+                <em className="text-[#141210]">&ldquo;Advogada dedicada, clara nas orientações e muito eficiente&rdquo;</em>, proporcionando segurança e tranquilidade a cada cliente.
               </motion.p>
 
               {/* Client Quote Card from real Google Reviews */}
               <motion.div
                 variants={reveal}
-                className="mt-6 rounded-xl border border-[#e2dad0] bg-white p-5 shadow-xs"
+                className="mt-6 rounded-xl border border-[#e5dccd] bg-white p-5 shadow-xs"
               >
-                <blockquote className="font-serif text-sm italic leading-relaxed text-[#11141a]">
-                  &ldquo;Excelente! Realmente defende o interesse do cliente! Humana e estratégica! É Advogada da nossa família e recomendamos de olhos fechados! Em meio a dúvidas e incertezas ter alguém competente ao seu lado faz toda a diferença!&rdquo;
+                <blockquote className="font-serif text-sm italic leading-relaxed text-[#141210]">
+                  &ldquo;Profissional de extrema confiança, competente e experiente. Dedicada e muito clara nas orientações prestadas em cada etapa do processo.&rdquo;
                 </blockquote>
-                <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-[#745f4d]">
-                  — Jaciara Angelina · Local Guide no Google (5,0 ★)
+                <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-[#833a03]">
+                  — Síntese das Avaliações Verificadas no Google Meu Negócio (5,0 ★)
                 </p>
               </motion.div>
 
@@ -910,45 +929,45 @@ export default function Home() {
                 variants={reveal}
                 className="mt-6 grid grid-cols-2 gap-3 text-xs sm:grid-cols-3"
               >
-                <div className="rounded-lg border border-[#e2dad0] bg-white p-3 shadow-xs">
-                  <p className="font-bold text-[#11141a]">47 Avaliações 5,0 ★</p>
-                  <p className="mt-0.5 text-[11px] text-[#565e6e]">
+                <div className="rounded-lg border border-[#e5dccd] bg-white p-3 shadow-xs">
+                  <p className="font-bold text-[#141210]">31 Avaliações 5,0 ★</p>
+                  <p className="mt-0.5 text-[11px] text-[#5c5348]">
                     100% de satisfação comprovada no Google
                   </p>
                 </div>
-                <div className="rounded-lg border border-[#e2dad0] bg-white p-3 shadow-xs">
-                  <p className="font-bold text-[#11141a]">+10 Anos de Carreira</p>
-                  <p className="mt-0.5 text-[11px] text-[#565e6e]">
-                    Experiência prática em casos complexos de INSS
+                <div className="rounded-lg border border-[#e5dccd] bg-white p-3 shadow-xs">
+                  <p className="font-bold text-[#141210]">Graduação UFMG</p>
+                  <p className="mt-0.5 text-[11px] text-[#5c5348]">
+                    Universidade Federal de Minas Gerais
                   </p>
                 </div>
-                <div className="rounded-lg border border-[#e2dad0] bg-white p-3 shadow-xs col-span-2 sm:col-span-1">
-                  <p className="font-bold text-[#11141a]">Assertividade & Calma</p>
-                  <p className="mt-0.5 text-[11px] text-[#565e6e]">
-                    Controle emocional e firmeza em cada ação
+                <div className="rounded-lg border border-[#e5dccd] bg-white p-3 shadow-xs col-span-2 sm:col-span-1">
+                  <p className="font-bold text-[#141210]">Clareza & Agilidade</p>
+                  <p className="mt-0.5 text-[11px] text-[#5c5348]">
+                    Orientações sem juridiquês e atendimento ágil
                   </p>
                 </div>
               </motion.div>
 
               <motion.div
                 variants={reveal}
-                className="mt-6 grid grid-cols-1 gap-2.5 text-xs font-semibold text-[#11141a] sm:grid-cols-2"
+                className="mt-6 grid grid-cols-1 gap-2.5 text-xs font-semibold text-[#141210] sm:grid-cols-2"
               >
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#745f4d]" />
-                  <span>Sede na Av. Gov. Milton Campos, 2973 · Sl 204 · Centro · Guanhães</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#833a03]" />
+                  <span>Sede na R. Padre Martin Kirscht · Espinosa - MG</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#745f4d]" />
-                  <span>Nota máxima 5,0 ★ no Google com 47 avaliações verificadas</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#833a03]" />
+                  <span>Nota máxima 5,0 ★ no Google com 31 avaliações autênticas</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#745f4d]" />
-                  <span>Contato direto pelo WhatsApp com a Dra. Paloma</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#833a03]" />
+                  <span>Contato direto pelo WhatsApp com a Dra. Carla Gisele</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#745f4d]" />
-                  <span>Atendimento presencial em Guanhães e digital em todo o Brasil</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#833a03]" />
+                  <span>Atendimento presencial em Espinosa e digital para todo o país</span>
                 </div>
               </motion.div>
 
@@ -958,18 +977,18 @@ export default function Home() {
               >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Paloma! Gostaria de agendar uma consulta para conversar sobre minha situação no INSS."
+                    "Olá, Dra. Carla Gisele! Gostaria de agendar uma consulta para conversar sobre minha situação jurídica."
                   )}
                   target="_blank"
                   size="md"
                   variant="emerald"
                   className="rounded-lg shadow-md"
                 >
-                  <WhatsAppIcon size={16} /> Falar com a Dra. Paloma
+                  <WhatsAppIcon size={16} /> Falar com a Dra. Carla Gisele
                 </GlowingButton>
                 <a
                   href={`tel:+${WHATSAPP_NUMBER}`}
-                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#11141a] transition-colors hover:text-[#745f4d]"
+                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#141210] transition-colors hover:text-[#833a03]"
                 >
                   <Phone size={15} /> {PHONE_DISPLAY}
                 </a>
@@ -978,10 +997,10 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Pilares de Atuação / Especialidades Previdenciárias */}
+        {/* Pilares de Atuação / Áreas de Atuação */}
         <section
           id="atuacao"
-          className="scroll-mt-24 border-t border-[#e2dad0] bg-[#f4efe8] py-20 sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#e5dccd] bg-[#f5efe6] py-20 sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <motion.div
@@ -993,15 +1012,15 @@ export default function Home() {
             >
               <Heading
                 light
-                eyebrow="ÁREAS DE ATUAÇÃO PREVIDENCIÁRIA & INSS"
-                description="Assessoria jurídica especializada para garantir que você receba o benefício correto, no momento certo e com o maior valor financeiro possível perante o INSS ou na Justiça Federal."
+                eyebrow="ÁREAS DE ATUAÇÃO JURÍDICA"
+                description="Assessoria jurídica multidisciplinar de alta precisão para proteger seu patrimônio, defender seus direitos e garantir soluções eficazes perante a Justiça e órgãos administrativos."
               >
-                Especialidades jurídicas dedicadas aos seus direitos em{" "}
-                <span className="italic text-[#745f4d]">
-                  Guanhães, Minas Gerais e em todo o Brasil.
+                Especialidades jurídicas para respaldar suas decisões em{" "}
+                <span className="italic text-[#833a03]">
+                  Espinosa, Belo Horizonte e em todo o Brasil.
                 </span>
               </Heading>
-              <p className="max-w-[270px] pb-1 text-xs leading-6 text-[#565e6e]">
+              <p className="max-w-[270px] pb-1 text-xs leading-6 text-[#5c5348]">
                 Clique em uma especialidade abaixo para conferir o detalhamento completo dos serviços e solicitar uma análise no WhatsApp.
               </p>
             </motion.div>
@@ -1019,25 +1038,25 @@ export default function Home() {
                   <motion.article
                     key={area.id}
                     variants={reveal}
-                    className="group flex min-h-[350px] flex-col rounded-xl border border-[#e2dad0] bg-white p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#a8927b] hover:shadow-lg sm:p-8"
+                    className="group flex min-h-[350px] flex-col rounded-xl border border-[#e5dccd] bg-white p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#c58b2c] hover:shadow-lg sm:p-8"
                   >
                     <div className="flex items-start justify-between">
-                      <span className="grid size-12 place-items-center rounded-lg border border-[#a8927b]/35 bg-[#f3ede4] text-[#745f4d] shadow-xs transition-colors group-hover:bg-[#0b0d11] group-hover:text-[#e5dacb] group-hover:border-[#a8927b]">
+                      <span className="grid size-12 place-items-center rounded-lg border border-[#c58b2c]/35 bg-[#f9f3e5] text-[#833a03] shadow-xs transition-colors group-hover:bg-[#0e0c0a] group-hover:text-[#f3e5c8] group-hover:border-[#c58b2c]">
                         <Icon size={22} strokeWidth={1.5} />
                       </span>
-                      <span className="font-serif text-2xl text-[#a8927b]/40">
+                      <span className="font-serif text-2xl text-[#c58b2c]/40">
                         0{index + 1}
                       </span>
                     </div>
 
                     <div className="mt-6">
-                      <span className="inline-block rounded-md border border-[#a8927b]/30 bg-[#faf8f5] px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-[#745f4d] shadow-xs">
+                      <span className="inline-block rounded-md border border-[#c58b2c]/30 bg-[#faf8f5] px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-[#833a03] shadow-xs">
                         {area.tag}
                       </span>
-                      <h3 className="mt-3 font-serif text-[1.45rem] leading-tight text-[#11141a]">
+                      <h3 className="mt-3 font-serif text-[1.45rem] leading-tight text-[#141210]">
                         {area.title}
                       </h3>
-                      <p className="mt-3 text-[13px] leading-6 text-[#565e6e]">
+                      <p className="mt-3 text-[13px] leading-6 text-[#5c5348]">
                         {area.summary}
                       </p>
                     </div>
@@ -1045,7 +1064,7 @@ export default function Home() {
                     <button
                       type="button"
                       onClick={() => setActiveArea(area)}
-                      className="group/link mt-auto inline-flex w-fit items-center gap-2 pt-6 text-[10px] font-bold uppercase tracking-[0.16em] text-[#745f4d] hover:text-[#11141a]"
+                      className="group/link mt-auto inline-flex w-fit items-center gap-2 pt-6 text-[10px] font-bold uppercase tracking-[0.16em] text-[#833a03] hover:text-[#141210]"
                     >
                       Ver detalhes e pedidos{" "}
                       <ArrowRight
@@ -1060,26 +1079,26 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Por Que Escolher a Dra. Paloma Fernandes - Diferenciais */}
+        {/* Por Que Escolher a Dra. Carla Gisele - Diferenciais */}
         <section
           id="diferenciais"
-          className="scroll-mt-24 border-t border-[#e2dad0] bg-[#faf8f5] py-20 text-[#11141a] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#e5dccd] bg-[#faf8f5] py-20 text-[#141210] sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
               <Heading
                 light
-                eyebrow="EXCELÊNCIA, ESTRATÉGIA & RESULTADOS"
-                description="O sustento da sua família, os anos dedicados ao trabalho duro e a sua tranquilidade financeira merecem uma advocacia atenta a cada detalhe e verdadeiramente combativa."
+                eyebrow="EXCELÊNCIA, RIGOR TÉCNICO & RESULTADOS"
+                description="O patrimônio da sua família, seus direitos trabalhistas e seus interesses vitais exigem uma advocacia atenta a cada detalhe e verdadeiramente comprometida."
               >
-                Por que confiar seu benefício à{" "}
-                <span className="italic text-[#745f4d]">
-                  Dra. Paloma Fernandes?
+                Por que confiar sua demanda à{" "}
+                <span className="italic text-[#833a03]">
+                  Dra. Carla Gisele?
                 </span>
               </Heading>
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá, Dra. Paloma! Gostaria de uma avaliação para a minha situação no INSS."
+                  "Olá, Dra. Carla Gisele! Gostaria de consultar sobre meu caso e tirar dúvidas."
                 )}
                 target="_blank"
                 size="md"
@@ -1097,49 +1116,49 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65 }}
-                className="group flex flex-col justify-between rounded-xl border border-[#e2dad0] bg-white p-7 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#a8927b] hover:shadow-md sm:p-9"
+                className="group flex flex-col justify-between rounded-xl border border-[#e5dccd] bg-white p-7 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#c58b2c] hover:shadow-md sm:p-9"
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#a8927b]/35 bg-[#f3ede4] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#745f4d]">
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#c58b2c]/35 bg-[#f9f3e5] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#833a03]">
                       <HeartHandshake size={14} /> Atendimento Humanizado & Próximo
                     </span>
-                    <span className="text-xs font-semibold text-[#745f4d]">
+                    <span className="text-xs font-semibold text-[#833a03]">
                       Você Sempre Informado
                     </span>
                   </div>
-                  <h3 className="mt-4 font-serif text-2xl leading-tight text-[#11141a] sm:text-[1.75rem]">
+                  <h3 className="mt-4 font-serif text-2xl leading-tight text-[#141210] sm:text-[1.75rem]">
                     Comunicação Transparente e Suporte Acolhedor
                   </h3>
-                  <p className="mt-3 text-[14px] leading-relaxed text-[#282e3b]">
-                    Como atestam as 47 avaliações 5 estrelas no Google, o grande diferencial do escritório é aliar estratégia jurídica incisiva a uma escuta verdadeiramente atenta. Você não fica desamparado nem perdido em termos difíceis: cada etapa, exigência do INSS ou andamento judicial é explicado com calma e total transparência.
+                  <p className="mt-3 text-[14px] leading-relaxed text-[#2b241d]">
+                    Como atestam as 31 avaliações 5 estrelas no Google, o grande diferencial do escritório é aliar estratégia jurídica incisiva a uma escuta atenta e orientações claras. Você não fica desamparado nem perdido em termos técnicos difíceis: cada etapa é explicada com total transparência e calma.
                   </p>
-                  <ul className="mt-5 space-y-2 text-xs font-medium text-[#11141a]">
+                  <ul className="mt-5 space-y-2 text-xs font-medium text-[#141210]">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#745f4d]" />
-                      <span>Comunicação direta pelo WhatsApp com respostas rápidas e suporte atencioso</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#833a03]" />
+                      <span>Comunicação direta pelo WhatsApp com respostas ágeis e acolhedoras</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#745f4d]" />
-                      <span>Atualizações regulares sobre perícias médicas, laudos e decisões</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#833a03]" />
+                      <span>Atualizações periódicas sobre prazos, andamentos e decisões judiciais</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#745f4d]" />
-                      <span>Explicações claras sem juridiquês para você entender seus direitos</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#833a03]" />
+                      <span>Explicações claras e sem juridiquês para você compreender seus direitos</span>
                     </li>
                   </ul>
                 </div>
-                <div className="mt-7 border-t border-[#e2dad0] pt-4">
+                <div className="mt-7 border-t border-[#e5dccd] pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dra. Paloma! Gostaria de conversar para tirar dúvidas sobre meu processo do INSS."
+                      "Olá, Dra. Carla Gisele! Gostaria de conversar para tirar dúvidas sobre meu caso."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#a8927b]/40 bg-[#faf8f5] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#11141a] transition-all hover:border-[#a8927b] hover:bg-[#0b0d11] hover:text-[#faf8f5]"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#c58b2c]/40 bg-[#faf8f5] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#141210] transition-all hover:border-[#c58b2c] hover:bg-[#0e0c0a] hover:text-[#fdfbf7]"
                   >
                     <span className="inline-flex items-center gap-2">
-                      <WhatsAppIcon size={15} /> Conversar no WhatsApp com a Dra. Paloma
+                      <WhatsAppIcon size={15} /> Conversar no WhatsApp com a Dra. Carla
                     </span>
                     <ArrowUpRight size={15} />
                   </a>
@@ -1152,46 +1171,46 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65, delay: 0.1 }}
-                className="group flex flex-col justify-between rounded-xl border border-[#e2dad0] bg-white p-7 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#a8927b] hover:shadow-md sm:p-9"
+                className="group flex flex-col justify-between rounded-xl border border-[#e5dccd] bg-white p-7 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#c58b2c] hover:shadow-md sm:p-9"
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#a8927b]/40 bg-[#faf8f5] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#59493c]">
-                      <Award size={14} /> Atuação Especializada & Firme
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#c58b2c]/40 bg-[#faf8f5] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#5a2606]">
+                      <Award size={14} /> Rigor Técnico & Solidez UFMG
                     </span>
-                    <span className="text-xs font-semibold text-[#745f4d]">
-                      Soluções Sob Medida
+                    <span className="text-xs font-semibold text-[#833a03]">
+                      Soluções Estratégicas
                     </span>
                   </div>
-                  <h3 className="mt-4 font-serif text-2xl leading-tight text-[#11141a] sm:text-[1.75rem]">
+                  <h3 className="mt-4 font-serif text-2xl leading-tight text-[#141210] sm:text-[1.75rem]">
                     Estratégia Personalizada para a Realidade do Seu Caso
                   </h3>
-                  <p className="mt-3 text-[14px] leading-relaxed text-[#282e3b]">
-                    Cada segurado tem um histórico contributivo único. Não usamos soluções genéricas: auditamos cada vínculo de carteira, tempo rural e atestados médicos para montar a melhor estratégia, seja na via administrativa ou em ação judicial contundente.
+                  <p className="mt-3 text-[14px] leading-relaxed text-[#2b241d]">
+                    Cada cliente e família possui uma realidade singular. Não aplicamos fórmulas prontas: analisamos a fundo documentos, contratos e provas materiais para construir a rota jurídica mais rápida, segura e financeiramente vantajosa.
                   </p>
-                  <ul className="mt-5 space-y-2 text-xs font-medium text-[#11141a]">
+                  <ul className="mt-5 space-y-2 text-xs font-medium text-[#141210]">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#745f4d]" />
-                      <span>Auditoria minuciosa de vínculos e acerto de pendências do extrato CNIS</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#833a03]" />
+                      <span>Formação acadêmica de excelência pela Faculdade de Direito da UFMG</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#745f4d]" />
-                      <span>Reversão judicial de perícias médicas superficiais e indeferimentos injustos</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#833a03]" />
+                      <span>Atuação preventiva estratégica para evitar litígios desnecessários e custos</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#745f4d]" />
-                      <span>Cobrança rigorosa de valores em atraso retroativos desde o primeiro pedido</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#833a03]" />
+                      <span>Combatividade judicial firme para defender seu patrimônio e seus direitos</span>
                     </li>
                   </ul>
                 </div>
-                <div className="mt-7 border-t border-[#e2dad0] pt-4">
+                <div className="mt-7 border-t border-[#e5dccd] pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dra. Paloma! Gostaria de consultar sobre a melhor estratégia jurídica para o meu caso no INSS."
+                      "Olá, Dra. Carla Gisele! Gostaria de consultar sobre a melhor estratégia jurídica para o meu caso."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#a8927b]/40 bg-[#faf8f5] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#11141a] transition-all hover:border-[#a8927b] hover:bg-[#0b0d11] hover:text-[#faf8f5]"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#c58b2c]/40 bg-[#faf8f5] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#141210] transition-all hover:border-[#c58b2c] hover:bg-[#0e0c0a] hover:text-[#fdfbf7]"
                   >
                     <span className="inline-flex items-center gap-2">
                       <WhatsAppIcon size={15} /> Consultar Estratégia no WhatsApp
@@ -1205,27 +1224,27 @@ export default function Home() {
         </section>
 
         {/* Método de Trabalho em 3 Passos */}
-        <section className="relative overflow-hidden border-t border-[#e2dad0] bg-[#faf8f5] py-20 text-[#11141a] sm:py-24 lg:py-28">
-          <div className="pointer-events-none absolute -left-28 top-1/4 size-96 rounded-full bg-[#a8927b]/10 blur-3xl" />
-          <div className="pointer-events-none absolute -right-28 bottom-1/4 size-96 rounded-full bg-[#d4a359]/10 blur-3xl" />
+        <section className="relative overflow-hidden border-t border-[#e5dccd] bg-[#faf8f5] py-20 text-[#141210] sm:py-24 lg:py-28">
+          <div className="pointer-events-none absolute -left-28 top-1/4 size-96 rounded-full bg-[#c58b2c]/10 blur-3xl" />
+          <div className="pointer-events-none absolute -right-28 bottom-1/4 size-96 rounded-full bg-[#fbb74e]/10 blur-3xl" />
 
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.88fr_1.12fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
                 light
                 eyebrow="COMO ATUAMOS NO SEU CASO"
-                description="Um método transparente, ético e resolutivo para analisar sua história previdenciária e aplicar a rota mais rápida e vantajosa."
+                description="Um método transparente, ético e resolutivo para analisar sua demanda jurídica e aplicar a solução mais rápida e vantajosa."
               >
                 Três etapas claras para{" "}
-                <span className="italic text-[#745f4d]">
-                  proteger seu benefício e garantir o valor que você merece.
+                <span className="italic text-[#833a03]">
+                  proteger seus direitos e garantir a tranquilidade que você merece.
                 </span>
               </Heading>
 
-              <blockquote className="mt-8 rounded-xl border border-[#e2dad0] bg-white p-6 font-serif text-base italic leading-7 text-[#11141a] shadow-xs">
-                &ldquo;Nosso propósito é exercer uma advocacia previdenciária humana, técnica e combativa, garantindo que quem trabalhou duro a vida inteira receba sua aposentadoria com respeito, celeridade e acompanhamento permanente.&rdquo;
-                <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-[#745f4d]">
-                  — Dra. Paloma Fernandes · Advogada Previdenciária
+              <blockquote className="mt-8 rounded-xl border border-[#e5dccd] bg-white p-6 font-serif text-base italic leading-7 text-[#141210] shadow-xs">
+                &ldquo;Nosso compromisso é exercer uma advocacia de extrema confiança, técnica apurada e atendimento próximo, garantindo que você tenha clareza absoluta sobre cada passo e sinta a segurança de estar muito bem representado.&rdquo;
+                <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-[#833a03]">
+                  — Dra. Carla Gisele · Advogada (UFMG)
                 </footer>
               </blockquote>
             </div>
@@ -1235,23 +1254,23 @@ export default function Home() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={stagger}
-              className="divide-y divide-[#e2dad0]"
+              className="divide-y divide-[#e5dccd]"
             >
               {[
                 [
                   "01",
-                  "Análise Detalhada & Diagnóstico do CNIS",
-                  "Atendimento presencial na sede em Guanhães ou via WhatsApp/chamada de vídeo para examinar com minúcia carteiras de trabalho, laudos médicos, extratos do CNIS e períodos rurais.",
+                  "Escuta Atenta & Diagnóstico Documental Preciso",
+                  "Atendimento presencial na sede em Espinosa ou via WhatsApp/chamada de vídeo para examinar documentos, contratos e a realidade fática do seu caso.",
                 ],
                 [
                   "02",
-                  "Definição da Rota Estratégica Mais Vantajosa",
-                  "Planejamento detalhado para calcular o melhor momento de requerer o benefício, preparar documentos à prova de indeferimento ou acionar a Justiça Federal com pedido liminar.",
+                  "Definição da Rota Estratégica Mais Eficaz",
+                  "Planejamento personalizado com cálculo de riscos, avaliação de alternativas extrajudiciais mais ágeis e estruturação robusta para a via judicial, se necessária.",
                 ],
                 [
                   "03",
-                  "Atuação Incisiva, Presença Contínua & Retorno Rápido",
-                  "Protocolo imediato, acompanhamento constante perante o INSS e tribunais, mantendo você informado sobre cada andamento sem burocracias e sem demoras.",
+                  "Atuação Firme, Presença Contínua & Retorno Ágil",
+                  "Protocolo imediato, acompanhamento constante perante juizados, cartórios e tribunais, mantendo você atualizado sobre cada andamento sem burocracia.",
                 ],
               ].map(([number, title, description]) => (
                 <motion.div
@@ -1259,12 +1278,12 @@ export default function Home() {
                   variants={reveal}
                   className="grid gap-3 py-6 first:pt-0 sm:grid-cols-[70px_1fr] sm:gap-6 sm:py-7"
                 >
-                  <span className="font-serif text-2xl font-semibold text-[#745f4d]">
+                  <span className="font-serif text-2xl font-semibold text-[#833a03]">
                     {number}
                   </span>
                   <div>
-                    <h3 className="font-serif text-2xl text-[#11141a]">{title}</h3>
-                    <p className="mt-2 max-w-lg text-[13px] leading-6 text-[#282e3b]">
+                    <h3 className="font-serif text-2xl text-[#141210]">{title}</h3>
+                    <p className="mt-2 max-w-lg text-[13px] leading-6 text-[#2b241d]">
                       {description}
                     </p>
                   </div>
@@ -1274,54 +1293,54 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Avaliações / Depoimentos Reais no Google Meu Negócio (47 Avaliações 5,0 ★) */}
+        {/* Avaliações / Depoimentos Reais no Google Meu Negócio (31 Avaliações 5,0 ★) */}
         <section
           id="avaliacoes"
-          className="scroll-mt-24 border-t border-[#a8927b]/25 bg-[#f4efe8] py-20 text-[#11141a] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#c58b2c]/25 bg-[#f5efe6] py-20 text-[#141210] sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
               <Heading
                 light
                 eyebrow="PROVA SOCIAL VERIFICADA · GOOGLE MEU NEGÓCIO"
-                description="Veja avaliações autênticas e espontâneas de clientes no Google sobre o acolhimento, a persistência e as causas ganhas pela Dra. Paloma Fernandes em Guanhães - MG."
+                description="Veja depoimentos autênticos e espontâneos de clientes sobre a competência, a dedicação e os resultados alcançados pela Dra. Carla Gisele em Espinosa - MG."
               >
                 Avaliada com nota máxima 5,0 ★ com{" "}
-                <span className="italic text-[#745f4d]">
-                  47 avaliações no Google pela competência, ética e excelência no atendimento.
+                <span className="italic text-[#833a03]">
+                  31 avaliações no Google pela competência, extrema confiança e excelência.
                 </span>
               </Heading>
 
               {/* Verified Google Badge Card */}
-              <div className="flex flex-col gap-3 rounded-xl border border-[#e2dad0] bg-white p-5 shadow-xs sm:flex-row sm:items-center md:min-w-[340px]">
-                <div className="flex size-14 shrink-0 items-center justify-center rounded-lg border border-[#a8927b]/30 bg-[#faf8f5] shadow-xs">
+              <div className="flex flex-col gap-3 rounded-xl border border-[#e5dccd] bg-white p-5 shadow-xs sm:flex-row sm:items-center md:min-w-[340px]">
+                <div className="flex size-14 shrink-0 items-center justify-center rounded-lg border border-[#c58b2c]/30 bg-[#faf8f5] shadow-xs">
                   <GoogleIcon size={30} />
                 </div>
                 <div>
                   <div className="flex items-center gap-2">
-                    <span className="font-serif text-3xl font-bold leading-none text-[#11141a]">
+                    <span className="font-serif text-3xl font-bold leading-none text-[#141210]">
                       5,0
                     </span>
-                    <div className="flex gap-0.5 text-[#d4a359]">
+                    <div className="flex gap-0.5 text-[#c58b2c]">
                       {Array.from({ length: 5 }, (_, i) => (
                         <Star
                           key={i}
                           size={14}
-                          className="fill-[#d4a359] text-[#d4a359]"
+                          className="fill-[#c58b2c] text-[#c58b2c]"
                         />
                       ))}
                     </div>
                   </div>
-                  <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-[#282e3b]">
-                    Paloma Fernandes Advocacia Previdenciária
+                  <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-[#2b241d]">
+                    Carla Gisele — Advogada
                   </p>
                   <a
                     href={GOOGLE_SEARCH_URL}
                     target="_blank"
                     rel="noreferrer"
-                    className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-[#745f4d] transition-colors hover:text-[#11141a]"
+                    className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-[#833a03] transition-colors hover:text-[#141210]"
                   >
-                    47 avaliações no Google (100% 5★) <ArrowUpRight size={13} />
+                    31 avaliações no Google (100% 5★) <ArrowUpRight size={13} />
                   </a>
                 </div>
               </div>
@@ -1332,41 +1351,41 @@ export default function Home() {
               {clientReviews.map((review) => (
                 <article
                   key={review.name}
-                  className="group relative flex flex-col justify-between rounded-xl border border-[#e2dad0] bg-white p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#a8927b] hover:shadow-md sm:p-8"
+                  className="group relative flex flex-col justify-between rounded-xl border border-[#e5dccd] bg-white p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#c58b2c] hover:shadow-md sm:p-8"
                 >
                   <div>
                     {/* Header: Stars + Badge */}
                     <div className="flex items-center justify-between gap-2">
-                      <div className="flex gap-1 text-[#d4a359]">
+                      <div className="flex gap-1 text-[#c58b2c]">
                         {Array.from({ length: review.rating }, (_, i) => (
                           <Star
                             key={i}
                             size={14}
-                            className="fill-[#d4a359] text-[#d4a359]"
+                            className="fill-[#c58b2c] text-[#c58b2c]"
                           />
                         ))}
                       </div>
-                      <span className="rounded-md border border-[#a8927b]/30 bg-[#faf8f5] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#745f4d] shadow-xs">
+                      <span className="rounded-md border border-[#c58b2c]/30 bg-[#faf8f5] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#833a03] shadow-xs">
                         {review.badge}
                       </span>
                     </div>
 
                     {/* Review content */}
-                    <p className="mt-5 text-[14px] italic leading-relaxed text-[#11141a]">
+                    <p className="mt-5 text-[14px] italic leading-relaxed text-[#141210]">
                       &ldquo;{review.content}&rdquo;
                     </p>
                   </div>
 
                   {/* Reviewer info */}
-                  <div className="mt-6 flex items-center gap-3 border-t border-[#e2dad0] pt-4">
-                    <div className="grid size-10 shrink-0 place-items-center rounded-lg border border-[#a8927b]/35 bg-[#f3ede4] font-serif text-sm font-semibold text-[#745f4d] shadow-xs">
+                  <div className="mt-6 flex items-center gap-3 border-t border-[#e5dccd] pt-4">
+                    <div className="grid size-10 shrink-0 place-items-center rounded-lg border border-[#c58b2c]/35 bg-[#f9f3e5] font-serif text-sm font-semibold text-[#833a03] shadow-xs">
                       {review.name.charAt(0)}
                     </div>
                     <div className="min-w-0 flex-1">
-                      <p className="truncate font-serif text-base font-semibold text-[#11141a]">
+                      <p className="truncate font-serif text-base font-semibold text-[#141210]">
                         {review.name}
                       </p>
-                      <p className="text-[10px] uppercase tracking-wider text-[#565e6e]">
+                      <p className="text-[10px] uppercase tracking-wider text-[#5c5348]">
                         {review.reviewerTag}
                       </p>
                     </div>
@@ -1376,23 +1395,23 @@ export default function Home() {
             </div>
 
             {/* Bottom Actions and Trust Tags */}
-            <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-[#e2dad0] pt-8 sm:flex-row">
+            <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-[#e5dccd] pt-8 sm:flex-row">
               <div className="flex flex-wrap items-center gap-2">
                 {[
-                  "Advogada em Guanhães - MG",
-                  "Direito Previdenciário INSS",
-                  "Nota 5,0 ★ no Google (47 avaliações)",
-                  "Planejamento Previdenciário",
-                  "Aposentadoria Rural e Urbana",
-                  "Auxílio-Doença e Invalidez",
-                  "BPC / LOAS",
+                  "Advogada em Espinosa - MG",
+                  "Graduada pela UFMG",
+                  "Nota 5,0 ★ no Google (31 avaliações)",
+                  "Direito de Família & Sucessões",
+                  "Direito Previdenciário & INSS",
+                  "Direito Imobiliário & Contratos",
+                  "Direito do Trabalho & Consumidor",
                   "Atendimento Digital para Todo o Brasil",
                 ].map((tag) => (
                   <span
                     key={tag}
-                    className="inline-flex items-center gap-1.5 rounded-lg border border-[#e2dad0] bg-white px-3.5 py-1.5 text-[11px] font-medium text-[#11141a] shadow-xs"
+                    className="inline-flex items-center gap-1.5 rounded-lg border border-[#e5dccd] bg-white px-3.5 py-1.5 text-[11px] font-medium text-[#141210] shadow-xs"
                   >
-                    <CheckCircle2 size={13} className="text-[#745f4d]" />
+                    <CheckCircle2 size={13} className="text-[#833a03]" />
                     {tag}
                   </span>
                 ))}
@@ -1402,9 +1421,9 @@ export default function Home() {
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="group inline-flex shrink-0 items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#745f4d] transition-colors hover:text-[#11141a]"
+                className="group inline-flex shrink-0 items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#833a03] transition-colors hover:text-[#141210]"
               >
-                Ver Todas as 47 Avaliações no Google{" "}
+                Ver Todas as 31 Avaliações no Google{" "}
                 <ArrowUpRight
                   size={15}
                   className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
@@ -1414,28 +1433,28 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Contato & Localização da Sede em Guanhães - MG */}
+        {/* Contato & Localização da Sede em Espinosa - MG */}
         <section
           id="contato"
-          className="scroll-mt-24 border-t border-[#a8927b]/25 bg-[#faf8f5] py-20 text-[#11141a] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#c58b2c]/25 bg-[#faf8f5] py-20 text-[#141210] sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
                 light
-                eyebrow="CONTATO & ATENDIMENTO EM GUANHÃES"
-                description="Agende uma consulta presencial em nosso escritório na Av. Gov. Milton Campos ou inicie seu atendimento imediatamente pelo WhatsApp para examinar seu caso com discrição, ética e agilidade."
+                eyebrow="CONTATO & ATENDIMENTO EM ESPINOSA"
+                description="Agende uma consulta presencial em nosso escritório na R. Padre Martin Kirscht ou inicie seu atendimento imediatamente pelo WhatsApp para examinar seu caso com sigilo, agilidade e segurança."
               >
                 Estamos prontos para{" "}
-                <span className="italic text-[#745f4d]">
-                  escutar sua história e conquistar sua aposentadoria e benefícios.
+                <span className="italic text-[#833a03]">
+                  analisar sua demanda e defender seus direitos com excelência.
                 </span>
               </Heading>
 
               <div className="mt-9 flex flex-col items-start gap-4">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Paloma! Gostaria de agendar um atendimento para análise do meu benefício previdenciário no INSS."
+                    "Olá, Dra. Carla Gisele! Gostaria de agendar um atendimento para análise jurídica do meu caso."
                   )}
                   target="_blank"
                   size="lg"
@@ -1444,58 +1463,58 @@ export default function Home() {
                 >
                   <WhatsAppIcon size={17} /> Iniciar Conversa no WhatsApp
                 </GlowingButton>
-                <p className="text-[11px] leading-5 text-[#282e3b]">
+                <p className="text-[11px] leading-5 text-[#2b241d]">
                   Telefone e WhatsApp direto:{" "}
-                  <strong className="text-[#11141a]">{PHONE_DISPLAY}</strong>
+                  <strong className="text-[#141210]">{PHONE_DISPLAY}</strong>
                 </p>
               </div>
 
-              <div className="mt-10 space-y-4 text-xs text-[#282e3b]">
+              <div className="mt-10 space-y-4 text-xs text-[#2b241d]">
                 <div className="flex items-start gap-3">
                   <Clock
                     size={16}
-                    className="mt-0.5 shrink-0 text-[#745f4d]"
+                    className="mt-0.5 shrink-0 text-[#833a03]"
                   />
                   <div>
-                    <p className="font-semibold text-[#11141a]">
+                    <p className="font-semibold text-[#141210]">
                       Horário de Funcionamento
                     </p>
-                    <p className="mt-0.5 text-[#11141a]">
-                      Segunda a Sexta-feira das 08:30 às 18:00
+                    <p className="mt-0.5 text-[#141210]">
+                      Segunda a Sexta-feira a partir das 08:00
                     </p>
-                    <p className="text-[11px] text-[#565e6e]">
-                      Atendimento presencial no Centro de Guanhães - MG e consultoria online em todo o Brasil
+                    <p className="text-[11px] text-[#5c5348]">
+                      Atendimento presencial em Espinosa - MG e consultoria online em todo o Brasil
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3 pt-1">
-                  <Phone size={16} className="shrink-0 text-[#745f4d]" />
+                  <Phone size={16} className="shrink-0 text-[#833a03]" />
                   <a
                     href={`tel:+${WHATSAPP_NUMBER}`}
-                    className="font-medium text-[#11141a] transition-colors hover:text-[#745f4d]"
+                    className="font-medium text-[#141210] transition-colors hover:text-[#833a03]"
                   >
                     {PHONE_DISPLAY} (Ligações e WhatsApp)
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <InstagramIcon size={16} className="shrink-0 text-[#745f4d]" />
+                  <InstagramIcon size={16} className="shrink-0 text-[#833a03]" />
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noreferrer"
-                    className="transition-colors hover:text-[#745f4d] text-[#11141a]"
+                    className="transition-colors hover:text-[#833a03] text-[#141210]"
                   >
                     {INSTAGRAM_HANDLE} (Instagram Oficial)
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <Mail size={16} className="shrink-0 text-[#745f4d]" />
+                  <Mail size={16} className="shrink-0 text-[#833a03]" />
                   <a
                     href={`mailto:${EMAIL_CONTACT}`}
-                    className="transition-colors hover:text-[#745f4d] text-[#11141a]"
+                    className="transition-colors hover:text-[#833a03] text-[#141210]"
                   >
                     {EMAIL_CONTACT}
                   </a>
@@ -1504,16 +1523,16 @@ export default function Home() {
                 <div className="flex items-start gap-3">
                   <MapPin
                     size={16}
-                    className="mt-0.5 shrink-0 text-[#745f4d]"
+                    className="mt-0.5 shrink-0 text-[#833a03]"
                   />
                   <div>
-                    <span className="text-[#11141a]">{ADDRESS_TEXT}</span>
+                    <span className="text-[#141210]">{ADDRESS_TEXT}</span>
                     <br />
                     <a
                       href={GOOGLE_MAPS_URL}
                       target="_blank"
                       rel="noreferrer"
-                      className="mt-1 inline-flex items-center gap-1 font-semibold text-[#745f4d] hover:underline"
+                      className="mt-1 inline-flex items-center gap-1 font-semibold text-[#833a03] hover:underline"
                     >
                       Ver no Google Maps <ArrowUpRight size={12} />
                     </a>
@@ -1523,88 +1542,88 @@ export default function Home() {
             </div>
 
             {/* Office Card with executive presentation */}
-            <div className="relative overflow-hidden rounded-xl border border-[#e2dad0] bg-white p-7 shadow-sm sm:p-10">
-              <div className="absolute right-0 top-0 h-1.5 w-32 bg-gradient-to-r from-[#745f4d] via-[#a8927b] to-[#bea993]" />
+            <div className="relative overflow-hidden rounded-xl border border-[#e5dccd] bg-white p-7 shadow-sm sm:p-10">
+              <div className="absolute right-0 top-0 h-1.5 w-32 bg-gradient-to-r from-[#833a03] via-[#c58b2c] to-[#fbb74e]" />
 
               <div className="flex flex-col gap-2">
-                <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#745f4d]">
-                  Sede do Escritório em Guanhães - MG
+                <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#833a03]">
+                  Sede do Escritório em Espinosa - MG
                 </p>
-                <div className="relative h-[68px] w-[290px] sm:h-[78px] sm:w-[350px]">
+                <div className="relative h-[68px] w-[280px] sm:h-[78px] sm:w-[340px]">
                   <Image
                     src={LOGO_SRC}
-                    alt="Dra. Paloma Fernandes — Advocacia Previdenciária"
+                    alt="Carla Gisele — Advogada"
                     fill
                     unoptimized
-                    sizes="350px"
+                    sizes="340px"
                     className="object-contain object-left"
                   />
                 </div>
               </div>
 
-              {/* Office presentation card */}
-              <div className="relative mt-5 aspect-[16/10] w-full overflow-hidden rounded-lg border border-[#e2dad0] bg-[#0b0d11] shadow-xs">
+              {/* Office presentation photo */}
+              <div className="relative mt-5 aspect-[16/10] w-full overflow-hidden rounded-lg border border-[#e5dccd] bg-[#0e0c0a] shadow-xs">
                 <Image
                   src={FOTO_HERO_SRC}
-                  alt="Espaço de Atendimento da Dra. Paloma Fernandes em Guanhães - MG"
+                  alt="Espaço de Atendimento da Dra. Carla Gisele em Espinosa - MG"
                   fill
                   unoptimized
                   className="object-cover object-center"
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/55 to-transparent p-4 text-white">
                   <p className="text-xs font-semibold">Ambiente Executivo, Acolhedor e Moderno</p>
-                  <p className="text-[10px] text-stone-200">Av. Gov. Milton Campos, 2973 · Sala 204 · Centro · Guanhães - MG</p>
+                  <p className="text-[10px] text-stone-200">{ADDRESS_TEXT}</p>
                 </div>
               </div>
 
-              <address className="mt-6 max-w-md text-[14px] not-italic leading-7 text-[#282e3b]">
-                <strong className="font-semibold text-[#11141a]">
-                  Dra. Paloma Fernandes — Advocacia Previdenciária INSS
+              <address className="mt-6 max-w-md text-[14px] not-italic leading-7 text-[#2b241d]">
+                <strong className="font-semibold text-[#141210]">
+                  Carla Gisele — Advogada
                 </strong>
                 <br />
                 {LAWYER_TITLE}
                 <br />
-                Atendimento presencial em Guanhães e online para todo o Brasil
+                Atendimento presencial em Espinosa e online para todo o Brasil
                 <br />
                 {ADDRESS_TEXT}
               </address>
 
               {/* Weekly schedule table */}
-              <div className="mt-6 rounded-lg border border-[#e2dad0] bg-[#faf8f5] p-4 text-xs">
-                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#745f4d]">
+              <div className="mt-6 rounded-lg border border-[#e5dccd] bg-[#faf8f5] p-4 text-xs">
+                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#833a03]">
                   Atendimento & Horários
                 </p>
-                <div className="grid grid-cols-2 gap-y-1.5 text-[#282e3b]">
+                <div className="grid grid-cols-2 gap-y-1.5 text-[#2b241d]">
                   <span>Segunda a Sexta</span>
-                  <span className="text-right font-semibold text-[#11141a]">
-                    08:30 às 18:00
+                  <span className="text-right font-semibold text-[#141210]">
+                    Abre às 08:00
                   </span>
                   <span>Atendimento Presencial</span>
-                  <span className="text-right font-medium text-[#745f4d]">
-                    Centro · Guanhães - MG
+                  <span className="text-right font-medium text-[#833a03]">
+                    Espinosa - MG
                   </span>
                   <span>Endereço</span>
-                  <span className="text-right text-[#11141a]">Av. Gov. Milton Campos, 2973 - Sl 204</span>
+                  <span className="text-right text-[#141210]">R. Padre Martin Kirscht</span>
                   <span>Avaliações Google</span>
-                  <span className="text-right font-semibold text-[#745f4d]">5,0 ★ (47 avaliações)</span>
+                  <span className="text-right font-semibold text-[#833a03]">5,0 ★ (31 avaliações)</span>
                   <span>Atendimento Digital</span>
-                  <span className="text-right text-[#11141a]">Todo o Brasil & Exterior</span>
+                  <span className="text-right text-[#141210]">Belo Horizonte & Todo o Brasil</span>
                 </div>
               </div>
 
-              <div className="my-7 h-px bg-[#e2dad0]" />
+              <div className="my-7 h-px bg-[#e5dccd]" />
 
               <div className="flex flex-wrap items-center justify-between gap-4">
-                <p className="text-xs text-[#565e6e]">
+                <p className="text-xs text-[#5c5348]">
                   Atendimento humanizado, ético e com absoluto sigilo profissional
                 </p>
                 <a
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Paloma! Gostaria de agendar um atendimento no escritório."
+                    "Olá, Dra. Carla Gisele! Gostaria de agendar um atendimento no escritório."
                   )}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg border border-[#a8927b]/40 bg-[#f4efe8] px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-[#11141a] transition-colors hover:border-[#a8927b] hover:bg-[#0b0d11] hover:text-[#faf8f5]"
+                  className="inline-flex items-center gap-2 rounded-lg border border-[#c58b2c]/40 bg-[#f5efe6] px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-[#141210] transition-colors hover:border-[#c58b2c] hover:bg-[#0e0c0a] hover:text-[#fdfbf7]"
                 >
                   <WhatsAppIcon size={14} /> Falar no WhatsApp <ArrowUpRight size={14} />
                 </a>
@@ -1614,23 +1633,23 @@ export default function Home() {
         </section>
 
         {/* Pre-Footer CTA Strip */}
-        <section className="border-t border-[#a8927b]/25 bg-gradient-to-r from-[#f4efe8] via-[#faf8f5] to-[#f4efe8] px-5 py-14 text-[#11141a] shadow-xs sm:px-8 sm:py-16 lg:px-12">
+        <section className="border-t border-[#c58b2c]/25 bg-gradient-to-r from-[#f5efe6] via-[#faf8f5] to-[#f5efe6] px-5 py-14 text-[#141210] shadow-xs sm:px-8 sm:py-16 lg:px-12">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-7 sm:flex-row sm:items-center">
             <div>
-              <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#745f4d]">
-                <Sparkles size={13} /> DRA. PALOMA FERNANDES — ADVOCACIA PREVIDENCIÁRIA ESPECIALIZADA
+              <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#833a03]">
+                <Sparkles size={13} /> CARLA GISELE — ADVOCACIA DE EXCELÊNCIA · UFMG
               </p>
-              <h2 className="mt-3 max-w-2xl font-serif text-3xl leading-tight text-[#11141a] sm:text-4xl">
-                Precisa de uma advogada especialista, combativa e acolhedora para conquistar sua aposentadoria ou benefício no INSS?
+              <h2 className="mt-3 max-w-2xl font-serif text-3xl leading-tight text-[#141210] sm:text-4xl">
+                Precisa de uma advogada competente, experiente e de confiança para defender seus direitos?
               </h2>
             </div>
             <a
               href={getWhatsAppUrl(
-                "Olá, Dra. Paloma! Gostaria de uma avaliação jurídica para o meu benefício do INSS."
+                "Olá, Dra. Carla Gisele! Gostaria de uma avaliação jurídica para o meu caso."
               )}
               target="_blank"
               rel="noreferrer"
-              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-lg bg-gradient-to-r from-[#0b0d11] via-[#171b22] to-[#0b0d11] px-7 py-4 text-[11px] font-bold uppercase tracking-[0.14em] text-white shadow-md transition-all hover:-translate-y-0.5 hover:brightness-105 hover:shadow-lg border border-[#a8927b]/40 hover:border-[#bea993]"
+              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-lg bg-gradient-to-r from-[#0e0c0a] via-[#1a1510] to-[#0e0c0a] px-7 py-4 text-[11px] font-bold uppercase tracking-[0.14em] text-[#fdfbf7] shadow-md transition-all hover:-translate-y-0.5 hover:brightness-105 hover:shadow-lg border border-[#c58b2c]/60 hover:border-[#fbb74e]"
             >
               <WhatsAppIcon size={17} /> Falar no WhatsApp{" "}
               <ArrowUpRight size={15} />
@@ -1639,38 +1658,38 @@ export default function Home() {
         </section>
 
         {/* Footer - Elegant Light Luxury */}
-        <footer className="border-t border-[#e2dad0] bg-[#f4efe8] px-5 py-14 text-[#11141a] sm:px-8 lg:px-12">
+        <footer className="border-t border-[#e5dccd] bg-[#f5efe6] px-5 py-14 text-[#141210] sm:px-8 lg:px-12">
           <div className="mx-auto grid max-w-7xl gap-10 sm:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1fr]">
             <div>
               <a
                 href="#inicio"
-                aria-label="Dra. Paloma Fernandes — Advocacia Previdenciária"
+                aria-label="Carla Gisele — Advogada"
                 className="inline-block transition-transform hover:scale-[1.01]"
               >
-                <div className="relative h-[78px] w-[310px] sm:h-[95px] sm:w-[380px]">
+                <div className="relative h-[78px] w-[300px] sm:h-[95px] sm:w-[360px]">
                   <Image
                     src={LOGO_SRC}
-                    alt="Dra. Paloma Fernandes — Advocacia Previdenciária"
+                    alt="Carla Gisele — Advogada"
                     fill
                     unoptimized
-                    sizes="380px"
+                    sizes="360px"
                     className="object-contain object-left"
                   />
                 </div>
               </a>
-              <p className="mt-4 max-w-xs text-xs leading-6 text-[#565e6e]">
-                ⚖️ Advocacia previdenciária especializada com defesa humana e estratégica. Atuação combativa no INSS: Planejamento Previdenciário, Aposentadorias, Benefícios por Incapacidade, BPC/LOAS e Pensão por Morte em Guanhães - MG e em todo o Brasil.
+              <p className="mt-4 max-w-xs text-xs leading-6 text-[#5c5348]">
+                ⚖️ Advocacia pautada na extrema competência, ética e dedicação. Formação pela Universidade Federal de Minas Gerais (UFMG). Atuação estratégica em Direito Civil, Família e Sucessões, Previdenciário (INSS), Trabalhista e Imobiliário em Espinosa - MG, Belo Horizonte e online para todo o Brasil.
               </p>
-              <p className="mt-3 text-[11px] font-semibold text-[#745f4d]">
-                Dra. Paloma Fernandes — Advogada | OAB/MG
+              <p className="mt-3 text-[11px] font-semibold text-[#833a03]">
+                Dra. Carla Gisele — Advogada | OAB/MG
               </p>
             </div>
 
             <div>
-              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#745f4d]">
+              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#833a03]">
                 Navegação
               </h2>
-              <div className="mt-4 flex flex-col items-start gap-3 text-xs text-[#565e6e]">
+              <div className="mt-4 flex flex-col items-start gap-3 text-xs text-[#5c5348]">
                 <a className="footer-link" href="#inicio">
                   Início
                 </a>
@@ -1678,7 +1697,7 @@ export default function Home() {
                   A Advogada
                 </a>
                 <a className="footer-link" href="#atuacao">
-                  Especialidades INSS
+                  Áreas de Atuação
                 </a>
                 <a className="footer-link" href="#diferenciais">
                   Por Que Escolher
@@ -1693,17 +1712,17 @@ export default function Home() {
             </div>
 
             <div>
-              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#745f4d]">
+              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#833a03]">
                 Contato & Atendimento
               </h2>
-              <div className="mt-4 flex flex-col items-start gap-2.5 text-xs text-[#565e6e]">
+              <div className="mt-4 flex flex-col items-start gap-2.5 text-xs text-[#5c5348]">
                 <a
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Paloma! Gostaria de tirar dúvidas com o escritório."
+                    "Olá, Dra. Carla Gisele! Gostaria de tirar dúvidas com o escritório."
                   )}
                   target="_blank"
                   rel="noreferrer"
-                  className="footer-link inline-flex items-center gap-2 font-medium text-[#11141a]"
+                  className="footer-link inline-flex items-center gap-2 font-medium text-[#141210]"
                 >
                   <WhatsAppIcon size={15} /> WhatsApp: {PHONE_DISPLAY}
                 </a>
@@ -1736,16 +1755,16 @@ export default function Home() {
                   <MapPin size={15} className="mt-0.5 shrink-0" />
                   <span>{ADDRESS_TEXT}</span>
                 </a>
-                <p className="inline-flex items-center gap-2 pt-1 text-[11px] text-[#745f4d]">
-                  <Clock size={14} className="shrink-0" /> Seg a Sex: 08:30 às 18:00
+                <p className="inline-flex items-center gap-2 pt-1 text-[11px] text-[#833a03]">
+                  <Clock size={14} className="shrink-0" /> Seg a Sex: Abre às 08:00
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-[#e2dad0] pt-6 text-[10px] text-stone-500 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-[#e5dccd] pt-6 text-[10px] text-stone-500 sm:flex-row sm:items-center sm:justify-between">
             <p>
-              © {new Date().getFullYear()} DRA. PALOMA FERNANDES — ADVOCACIA PREVIDENCIÁRIA. Todos os direitos reservados.
+              © {new Date().getFullYear()} CARLA GISELE — ADVOGADA. Todos os direitos reservados.
             </p>
             <p>
               Conteúdo informativo, em estrita conformidade com o Código de Ética e Disciplina da OAB.
@@ -1760,16 +1779,16 @@ export default function Home() {
         >
           <a
             href={getWhatsAppUrl(
-              "Olá, Dra. Paloma! Gostaria de consultar sobre meu caso e tirar dúvidas pelo WhatsApp."
+              "Olá, Dra. Carla Gisele! Gostaria de consultar sobre meu caso e tirar dúvidas pelo WhatsApp."
             )}
             target="_blank"
             rel="noreferrer"
-            aria-label="Falar agora pelo WhatsApp com a Dra. Paloma Fernandes"
+            aria-label="Falar agora pelo WhatsApp com a Dra. Carla Gisele"
             className="group relative flex size-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-[#25D366]/40"
           >
             <WhatsAppIcon size={28} />
-            <span className="pointer-events-none absolute right-16 hidden whitespace-nowrap rounded-lg bg-[#0b0d11] border border-[#a8927b]/40 px-3.5 py-1.5 text-xs font-semibold text-white shadow-lg transition-opacity group-hover:block">
-              Falar com Dra. Paloma Fernandes
+            <span className="pointer-events-none absolute right-16 hidden whitespace-nowrap rounded-lg bg-[#0e0c0a] border border-[#c58b2c]/40 px-3.5 py-1.5 text-xs font-semibold text-white shadow-lg transition-opacity group-hover:block">
+              Falar com Dra. Carla Gisele
             </span>
           </a>
         </aside>
@@ -1793,30 +1812,30 @@ export default function Home() {
                 exit={{ opacity: 0, y: 16, scale: 0.99 }}
                 transition={{ duration: 0.24 }}
                 onClick={(event) => event.stopPropagation()}
-                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-xl border border-[#e2dad0] bg-white p-7 shadow-2xl sm:max-w-xl sm:rounded-xl sm:p-10 text-[#11141a]"
+                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-xl border border-[#e5dccd] bg-white p-7 shadow-2xl sm:max-w-xl sm:rounded-xl sm:p-10 text-[#141210]"
               >
                 <button
                   type="button"
                   aria-label="Fechar detalhes da especialidade"
                   onClick={() => setActiveArea(null)}
-                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-[#e2dad0] bg-[#faf8f5] text-[#11141a] transition-colors hover:border-[#a8927b] hover:text-[#745f4d]"
+                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-[#e5dccd] bg-[#faf8f5] text-[#141210] transition-colors hover:border-[#c58b2c] hover:text-[#833a03]"
                 >
                   <X size={18} />
                 </button>
 
                 <div className="flex items-center gap-3 pr-12">
-                  <div className="relative size-10 shrink-0 overflow-hidden rounded-lg border border-[#a8927b]/35 bg-[#faf8f5] p-1 shadow-xs">
+                  <div className="relative size-10 shrink-0 overflow-hidden rounded-lg border border-[#c58b2c]/35 bg-[#faf8f5] p-1 shadow-xs">
                     <Image
                       src={LOGO_SYMBOL_SRC}
-                      alt="Monograma PF Dra. Paloma Fernandes"
+                      alt="Balança Dourada Carla Gisele"
                       fill
                       sizes="40px"
                       className="object-contain"
                     />
                   </div>
                   <div>
-                    <p className="eyebrow-light">ESPECIALIDADE INSS</p>
-                    <p className="text-[10px] font-semibold tracking-wider text-[#745f4d] uppercase">
+                    <p className="eyebrow-light">ÁREA DE ATUAÇÃO</p>
+                    <p className="text-[10px] font-semibold tracking-wider text-[#833a03] uppercase">
                       {LAWYER_NAME} · {LAWYER_TITLE}
                     </p>
                   </div>
@@ -1824,17 +1843,17 @@ export default function Home() {
 
                 <h2
                   id="area-dialog-title"
-                  className="mt-4 max-w-sm pr-10 font-serif text-3xl leading-tight text-[#11141a] sm:text-4xl"
+                  className="mt-4 max-w-sm pr-10 font-serif text-3xl leading-tight text-[#141210] sm:text-4xl"
                 >
                   {activeArea.title}
                 </h2>
 
-                <p className="mt-5 text-sm leading-7 text-[#282e3b]">
+                <p className="mt-5 text-sm leading-7 text-[#2b241d]">
                   {activeArea.details}
                 </p>
 
-                <div className="mt-6 border-t border-[#e2dad0] pt-5">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#745f4d]">
+                <div className="mt-6 border-t border-[#e5dccd] pt-5">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#833a03]">
                     Demandas e Serviços Atendidos pelo Escritório:
                   </p>
                   <ul className="mt-4 space-y-3">
@@ -1843,7 +1862,7 @@ export default function Home() {
                         key={topic}
                         className="flex items-center gap-3 text-sm text-[#1e293b]"
                       >
-                        <span className="size-2 shrink-0 rounded-full bg-[#a8927b]" />
+                        <span className="size-2 shrink-0 rounded-full bg-[#c58b2c]" />
                         <span>{topic}</span>
                       </li>
                     ))}
@@ -1863,7 +1882,7 @@ export default function Home() {
                   <button
                     type="button"
                     onClick={() => setActiveArea(null)}
-                    className="px-5 py-3 text-xs font-semibold text-stone-500 transition-colors hover:text-[#11141a]"
+                    className="px-5 py-3 text-xs font-semibold text-stone-500 transition-colors hover:text-[#141210]"
                   >
                     Fechar
                   </button>

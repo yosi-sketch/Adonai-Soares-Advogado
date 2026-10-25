@@ -1,37 +1,38 @@
-# DRA. PALOMA FERNANDES — ADVOCACIA PREVIDENCIÁRIA INSS
-## Advocacia Especializada em Direito Previdenciário & Benefícios do INSS · Guanhães - MG · Atendimento Nacional
+# CARLA GISELE — ADVOGADA
+## Assessoria Jurídica de Excelência · Graduada pela UFMG · Espinosa - MG & Belo Horizonte · Atendimento Nacional
 
 ## Plataforma
-Site institucional e landing page responsiva de altíssimo padrão desenvolvida em Next.js 16 (App Router) e Tailwind CSS v4, projetada para transmitir autoridade jurídica inabalável, credibilidade comprovada por avaliações no Google (5,0 ★ unânime em 47 avaliações), sofisticação e excelência técnica, com navegação fluida, modais interativos para detalhamento das especialidades e integração direta com WhatsApp.
+Site institucional e landing page responsiva de altíssimo padrão desenvolvida em Next.js 16 (App Router) e Tailwind CSS v4, projetada para transmitir autoridade jurídica inabalável, sofisticação e credibilidade respaldada por 31 avaliações no Google com nota máxima 5,0 ★ unânime, com navegação fluida, modais interativos para detalhamento das especialidades e integração direta com WhatsApp.
 
 ## Público
-Trabalhadores urbanos e rurais, segurados do INSS, famílias, idosos e pessoas com deficiência que necessitam de assessoria jurídica especializada, combativa e acolhedora em aposentadorias (idade, tempo de contribuição, especial e rural), planejamento previdenciário, auxílio por incapacidade temporária (auxílio-doença), aposentadoria por invalidez, BPC/LOAS, pensão por morte e revisões de benefícios em Guanhães, Vale do Rio Doce, Leste de Minas Gerais e em todo o território nacional através de consultoria jurídica digital.
+Pessoas físicas, famílias, trabalhadores, empresários e segurados em Espinosa, no Norte de Minas Gerais, em Belo Horizonte e em todo o território nacional que buscam uma advocacia pautada na extrema competência, ética, dedicação, clareza nas orientações e atendimento humanizado e transparente.
 
 ## Objetivo
-Apresentar a advocacia de excelência da Dra. Paloma Fernandes — Advocacia Previdenciária INSS, destacando seus mais de 10 anos de experiência jurídica, atendimento humanizado e estratégico ("Não quer só o seu dinheiro, se envolve, tem empatia, luta junto"), mantendo os segurados sempre informados com clareza e sem juridiquês, viabilizando o contato direto via WhatsApp (33) 99983-2397, agendamento de consultas na sede na Av. Gov. Milton Campos, 2973 - Sala 204 - Centro, Guanhães - MG e atendimento digital em todo o país.
+Apresentar a advocacia combativa e estratégica da Dra. Carla Gisele, graduada pela prestigiosa Faculdade de Direito da UFMG, com ênfase na defesa dos direitos de seus clientes nas áreas de Direito Civil, Família e Sucessões, Direito Previdenciário (INSS), Trabalhista, Consumidor e Imobiliário, viabilizando o contato direto via WhatsApp (38) 99124-2534, atendimento na sede em Espinosa - MG e consultoria digital em todo o Brasil.
 
-## Identidade Visual (Extraída Diretamente do Novo Logotipo)
-- **Marca:** Paloma Fernandes — Advocacia Previdenciária INSS.
-- **Advogada Titular:** Dra. Paloma Fernandes (OAB/MG).
-- **Logotipo:** Monograma escultural com as letras entrelaçadas "PF", onde o "P" possui acabamento em Prata Platina / Titânio Champagne metálico com brilho sutil e o "F" em Carvão Ônix Preto Alto Brilho com bisotê, tipografia clássica neoclássica em caixa alta "PALOMA FERNANDES" e subscrição "ADVOGADA" ladeada por filetes horizontais (`public/logo.png`, `public/logo-symbol.png`).
-- **Tema Visual:** Executive Titanium & Obsidian Light Luxury (Modo Claro Editorial com Superfícies Mármore Alabastro, Ônix Profundo, Titânio Champagne Metálico e Toques de Ouro Âmbar Incandescente inspirados na iluminação do escritório oficial), transmitindo solidez jurídica, sofisticação e acolhimento humano.
-- **Paleta de Cores Extraída Diretamente do Logo e da Fotografia Oficial:**
-  - Titânio Champagne & Prata Platina (`#a8927b`, `#bea993`, `#cbbba8`, `#8f7863`, `#745f4d`)
-  - Carvão Ônix Nobre / Obsidian Jet Black (`#0b0d11`, `#111419`, `#171b22`, `#222833`)
-  - Superfícies Claras Alabastro & Mármore Quente (`#ffffff`, `#faf8f5`, `#f4efe8`, `#e2dad0`)
-  - Ouro Âmbar Quente Incandescente (`#d4a359`, `#be8a3a`, `#9e6e28`, `#fdfbf7`)
-  - Texto & Inks de Alto Contraste (`#11141a`, `#282e3b`, `#565e6e`)
-- **Tipografia:** Cinzel (`--font-cinzel`) e Playfair Display (`--font-serif`) para a identidade clássica e imponente dos títulos e da marca, Cormorant Garamond (`--font-display`) para toques editoriais, combinados com Plus Jakarta Sans (`--font-body`) para legibilidade impecável no corpo de texto e interfaces.
-- **Tom de Voz:** Humano, estratégico, empático, combativo, firme, resolutivo e acolhedor ("Excelente! Realmente defende o interesse do cliente! Humana e estratégica!").
+## Identidade Visual (Extraída Diretamente do Logotipo Oficial)
+- **Marca:** Carla Gisele — Advogada.
+- **Advogada Titular:** Dra. Carla Gisele (OAB/MG), graduada pela UFMG.
+- **Logotipo:** Balança da Justiça escultural tridimensional em ouro metálico imperial lapidado com alto brilho e relevo, combinada à tipografia clássica serifada em caixa alta "CARLA GISELE" (`public/logo.png`, `public/logo-symbol.png`).
+- **Tema Visual:** Imperial Gold & Obsidian Noir Light Luxury (Modo Claro Editorial com Superfícies Mármore Alabastro, Ônix Profundo, Dourado Imperial Metálico e Toques de Âmbar e Bronze Quente), transmitindo solidez jurídica, sofisticação e excelência técnica.
+- **Paleta de Cores Extraída Diretamente do Logotipo:**
+  - Ouro Imperial & Dourado Lustral (`#c58b2c`, `#d49b35`, `#eaa43a`, `#f6e8a8`)
+  - Bronze Profundo & Sombra Dourada (`#833a03`, `#5a2606`, `#381704`)
+  - Carvão Ônix / Obsidian Noir Nobre (`#0e0c0a`, `#161310`, `#221c16`)
+  - Superfícies Claras Alabastro & Mármore Quente (`#ffffff`, `#faf8f5`, `#f5efe6`, `#e5dccd`)
+  - Texto & Inks de Alto Contraste (`#141210`, `#2c2621`, `#5e564e`)
+- **Tipografia:** Cinzel (`--font-cinzel`) e Playfair Display (`--font-serif`) para a imponência e elegância clássica dos títulos e monograma, Cormorant Garamond (`--font-display`) para toques editoriais e Plus Jakarta Sans (`--font-body`) para legibilidade impecável no corpo de texto e interfaces.
+- **Tom de Voz:** Seguro, altamente competente, claro, acolhedor, transparente, combativo e resolutivo ("Profissional de extrema confiança, competente e experiente").
 
 ## Conteúdo e Mídia
-- Logotipo oficial transparente (`public/logo.png`).
-- Monograma PF escultural (`public/logo-symbol.png`, `app/icon.png`, `app/apple-icon.png`, `public/favicon-32x32.png`).
-- Fotografia oficial da Dra. Paloma Fernandes em seu escritório (`public/hero.jpg`, `public/dra-paloma.jpg`).
-- Telefone / WhatsApp: (33) 99983-2397 (wa.me/553399832397).
-- E-mail: contato@palomafernandesadv.com.br.
-- Redes Sociais: Instagram @adv.palomafernandes (https://www.instagram.com/adv.palomafernandes).
-- Endereço da Sede: Av. Gov. Milton Campos, 2973 - Sl 204 - Centro, Guanhães - MG, 39740-000, Brasil.
-- Atuação: Guanhães, Virginópolis, Sabinópolis, Peçanha, Vale do Rio Doce, Minas Gerais e atendimento digital em todo o Brasil.
-- Horário de Funcionamento: Segunda a Sexta das 08:30 às 18:00.
-- Prova Social: 5,0 ★ com 47 avaliações autênticas no Google Meu Negócio.
+- Logotipo oficial com balança dourada e tipografia real (`public/logo.png`).
+- Balança da Justiça em ouro 3D (`public/logo-symbol.png`, `app/icon.png`, `app/apple-icon.png`, `public/favicon-32x32.png`, `public/favicon.ico`).
+- Fotografia oficial da Dra. Carla Gisele em traje executivo branco com balança ao fundo (`public/hero.jpg`, `public/carla-gisele-hero.jpg`).
+- Fotografia oficial da Dra. Carla Gisele acolhedora em tons terrosos (`public/sobre.jpg`, `public/carla-gisele-about.jpg`).
+- Telefone / WhatsApp: (38) 99124-2534 (wa.me/5538991242534).
+- E-mail: contato@carlagisele.adv.br.
+- Redes Sociais: Instagram @carla_giseele (https://www.instagram.com/carla_giseele/).
+- Endereço da Sede: R. Padre Martin Kirscht - Espinosa, MG, 39510-000, Brasil.
+- Atuação: Espinosa, Belo Horizonte, Norte de Minas Gerais e atendimento digital em todo o território nacional.
+- Horário de Funcionamento: Segunda a Sexta a partir das 08:00.
+- Prova Social: 5,0 ★ unânime com 31 avaliações verificadas no Google Meu Negócio.

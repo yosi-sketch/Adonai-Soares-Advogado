@@ -40,58 +40,55 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.palomafernandesadv.com.br"),
-  title:
-    "Dra. Paloma Fernandes — Advocacia Previdenciária INSS · Guanhães - MG",
+  metadataBase: new URL("https://www.carlagisele.adv.br"),
+  title: "Carla Gisele — Advogada · Espinosa - MG & Belo Horizonte",
   description:
-    "⚖️ Dra. Paloma Fernandes — Advocacia Previdenciária especializada em INSS, Aposentadorias, Benefícios por Incapacidade, Planejamento Previdenciário e BPC/LOAS. Atendimento humanizado, combativo e estratégico. Sede na Av. Gov. Milton Campos, 2973 - Sl 204 - Centro, Guanhães - MG e online para todo o Brasil. Avaliação 5,0 ★ no Google (47 avaliações).",
+    "⚖️ Dra. Carla Gisele — Advogada graduada pela Universidade Federal de Minas Gerais (UFMG). Atuação jurídica com extrema confiança, competência e ética em Espinosa, Belo Horizonte e atendimento online em todo o Brasil. Nota máxima 5,0 ★ no Google (31 avaliações).",
   keywords: [
-    "Paloma Fernandes Advocacia",
-    "Dra Paloma Fernandes",
-    "Advogada Previdenciária Guanhães",
-    "Advogada INSS Guanhães MG",
-    "Advogado Previdenciário Guanhães",
-    "Aposentadoria Guanhães MG",
-    "Direito Previdenciário Guanhães",
-    "Planejamento Previdenciário Guanhães",
-    "Auxílio Doença Guanhães",
-    "Aposentadoria por Invalidez Guanhães",
-    "BPC LOAS Guanhães",
-    "Aposentadoria Rural Minas Gerais",
-    "Paloma Fernandes Advogada Minas Gerais",
+    "Carla Gisele Advogada",
+    "Dra Carla Gisele",
+    "Advogada Espinosa MG",
+    "Advogada UFMG",
+    "Advogado Espinosa Minas Gerais",
+    "Serviços Jurídicos Espinosa",
+    "Direito de Família Espinosa",
+    "Inventário Espinosa MG",
+    "Aposentadoria Espinosa MG",
+    "Advogada Previdenciária Espinosa",
+    "Advogada Belo Horizonte",
+    "Carla Gisele Advocacia",
   ],
-  authors: [{ name: "Dra. Paloma Fernandes — Advocacia Previdenciária INSS" }],
-  creator: "Dra. Paloma Fernandes — Advocacia Previdenciária INSS",
-  publisher: "Dra. Paloma Fernandes — Advocacia Previdenciária INSS",
+  authors: [{ name: "Carla Gisele — Advogada" }],
+  creator: "Carla Gisele — Advogada",
+  publisher: "Carla Gisele — Advogada",
   formatDetection: {
     telephone: true,
     address: true,
   },
   icons: {
     icon: [
-      { url: "/favicon.ico?v=2", sizes: "any" },
-      { url: "/favicon-32x32.png?v=2", type: "image/png", sizes: "32x32" },
-      { url: "/favicon-16x16.png?v=2", type: "image/png", sizes: "16x16" },
-      { url: "/icon.png?v=2", type: "image/png", sizes: "192x192" },
+      { url: "/favicon.ico?v=5", sizes: "any" },
+      { url: "/favicon-32x32.png?v=5", type: "image/png", sizes: "32x32" },
+      { url: "/favicon-16x16.png?v=5", type: "image/png", sizes: "16x16" },
+      { url: "/icon.png?v=5", type: "image/png", sizes: "192x192" },
     ],
-    shortcut: "/favicon.ico?v=2",
-    apple: [{ url: "/apple-icon.png?v=2", sizes: "180x180" }],
+    shortcut: "/favicon.ico?v=5",
+    apple: [{ url: "/apple-icon.png?v=5", sizes: "180x180" }],
   },
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.palomafernandesadv.com.br",
-    title:
-      "Dra. Paloma Fernandes — Advocacia Previdenciária INSS · Guanhães - MG",
+    url: "https://www.carlagisele.adv.br",
+    title: "Carla Gisele — Advogada · Espinosa - MG & Belo Horizonte",
     description:
-      "⚖️ Advocacia Previdenciária especializada no INSS com defesa combativa, estratégica e humanizada. Conquiste sua aposentadoria e seus direitos com avaliação máxima 5,0 ★ no Google (47 avaliações). Av. Gov. Milton Campos, 2973 - Sl 204 - Centro, Guanhães - MG.",
-    siteName: "Dra. Paloma Fernandes — Advocacia Previdenciária INSS",
+      "⚖️ Advocacia pautada na extrema competência, ética e dedicação. Graduada pela UFMG com nota máxima 5,0 ★ no Google (31 avaliações). R. Padre Martin Kirscht - Espinosa, MG.",
+    siteName: "Carla Gisele — Advogada",
     images: [
       {
         url: "/logo.png",
         width: 1024,
         height: 341,
-        alt: "Dra. Paloma Fernandes — Advocacia Previdenciária INSS",
+        alt: "Carla Gisele — Advogada",
       },
     ],
   },
@@ -105,42 +102,41 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Paloma Fernandes — Advocacia Previdenciária INSS",
-    alternateName: "Dra. Paloma Fernandes Advocacia Previdenciária",
-    legalName: "Paloma Fernandes — Advocacia Previdenciária INSS",
-    telephone: "+55-33-99983-2397",
-    email: "contato@palomafernandesadv.com.br",
-    url: "https://www.palomafernandesadv.com.br",
-    image: "https://www.palomafernandesadv.com.br/logo.png",
+    name: "Carla Gisele — Advogada",
+    alternateName: "Dra. Carla Gisele Advocacia",
+    legalName: "Carla Gisele — Advogada",
+    telephone: "+55-38-99124-2534",
+    email: "contato@carlagisele.adv.br",
+    url: "https://www.carlagisele.adv.br",
+    image: "https://www.carlagisele.adv.br/logo.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Av. Gov. Milton Campos, 2973 - Sl 204 - Centro",
-      addressLocality: "Guanhães",
+      streetAddress: "R. Padre Martin Kirscht",
+      addressLocality: "Espinosa",
       addressRegion: "MG",
-      postalCode: "39740-000",
+      postalCode: "39510-000",
       addressCountry: "BR",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: -18.7753,
-      longitude: -42.9325,
+      latitude: -14.9264,
+      longitude: -42.8197,
     },
     priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "47",
+      reviewCount: "31",
     },
     areaServed: [
-      "Guanhães",
-      "Virginópolis",
-      "Sabinópolis",
-      "São João Evangelista",
-      "Peçanha",
-      "Dores de Guanhães",
-      "Materlândia",
-      "Governador Valadares",
-      "Vale do Rio Doce",
+      "Espinosa",
+      "Monte Azul",
+      "Mato Verde",
+      "Porteirinha",
+      "Janaúba",
+      "Montes Claros",
+      "Belo Horizonte",
+      "Norte de Minas",
       "Minas Gerais",
       "Brasil",
     ],
@@ -154,13 +150,13 @@ export default function RootLayout({
           "Thursday",
           "Friday",
         ],
-        opens: "08:30",
+        opens: "08:00",
         closes: "18:00",
       },
     ],
     sameAs: [
-      "https://www.instagram.com/adv.palomafernandes",
-      "https://wa.me/553399832397",
+      "https://www.instagram.com/carla_giseele/",
+      "https://wa.me/5538991242534",
     ],
   };
 
@@ -170,16 +166,16 @@ export default function RootLayout({
       className={`${bodyFont.variable} ${displayFont.variable} ${playfairFont.variable} ${cinzelFont.variable} scroll-smooth`}
     >
       <head>
-        <link rel="icon" href="/favicon.ico?v=2" sizes="any" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=2" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png?v=2" />
+        <link rel="icon" href="/favicon.ico?v=5" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=5" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=5" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png?v=5" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen overflow-x-clip bg-[#faf8f5] font-sans text-[#11141a] antialiased selection:bg-[#f0e6d8] selection:text-[#0b0d11]">
+      <body className="min-h-screen overflow-x-clip bg-[#faf8f5] font-sans text-[#141210] antialiased selection:bg-[#f3e5c8] selection:text-[#0e0c0a]">
         {children}
       </body>
     </html>

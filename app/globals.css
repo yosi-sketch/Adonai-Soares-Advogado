@@ -3,41 +3,37 @@
 :root {
   color-scheme: light;
   
-  /* Deep Obsidian Noir & Onyx (from logo "F" and serif typography) */
-  --brand-noir-light: #f5f6f8;
-  --brand-noir-highlight: #e4e7eb;
-  --brand-noir-shimmer: #8e95a2;
-  --brand-noir-accent: #2d3441;
-  --brand-noir: #171b22;
-  --brand-noir-rich: #111419;
-  --brand-noir-dark: #0b0d11;
-  --brand-noir-deep: #07080b;
+  /* Deep Obsidian Noir & Charcoal (from logo contrast & dark accents) */
+  --brand-noir-light: #f7f6f4;
+  --brand-noir-highlight: #eae7e2;
+  --brand-noir-shimmer: #9b9389;
+  --brand-noir-accent: #332a22;
+  --brand-noir: #221c16;
+  --brand-noir-rich: #161310;
+  --brand-noir-dark: #0e0c0a;
+  --brand-noir-deep: #080706;
 
-  /* Platinum Champagne & Titanium Sheen (from logo "P" monogram) */
-  --brand-champagne-light: #faf8f5;
-  --brand-champagne-highlight: #f3ede4;
-  --brand-champagne-accent: #bea993;
-  --brand-champagne: #a8927b;
-  --brand-champagne-dark: #745f4d;
-  --brand-champagne-deep: #4a3c30;
-
-  /* Warm Amber Glow (incandescent office ambient lighting) */
-  --brand-gold-light: #fdfbf7;
-  --brand-gold-highlight: #f7f0e3;
-  --brand-gold-accent: #d4a359;
-  --brand-gold: #be8a3a;
-  --brand-gold-dark: #8c6321;
+  /* Imperial Gold & Metallic Lustre (extracted directly from Carla Gisele 3D Gold Logo) */
+  --brand-gold-specular: #f6e8a8;
+  --brand-gold-light: #fbe38e;
+  --brand-gold-luminous: #fbb74e;
+  --brand-gold-highlight: #f9f3e5;
+  --brand-gold-accent: #d49b35;
+  --brand-gold: #c58b2c;
+  --brand-gold-dark: #a56f1e;
+  --brand-gold-bronze: #833a03;
+  --brand-gold-deep: #5a2606;
 
   /* Editorial Surfaces */
   --brand-surface: #ffffff;
   --brand-surface-elevated: #faf8f5;
-  --brand-paper: #f4efe8;
-  --brand-border: #e2dad0;
+  --brand-paper: #f5efe6;
+  --brand-border: #e5dccd;
   
   /* Text & Inks */
-  --brand-ink: #11141a;
-  --brand-ink-soft: #282e3b;
-  --brand-ink-muted: #565e6e;
+  --brand-ink: #141210;
+  --brand-ink-soft: #2b241d;
+  --brand-ink-muted: #5c5348;
 }
 
 @theme inline {
@@ -45,65 +41,55 @@
   --font-cinzel: var(--font-cinzel), "Cinzel", "Trajan Pro", serif;
   --font-sans: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
   
-  --color-ink: #11141a;
-  --color-ink-soft: #282e3b;
-  --color-ink-muted: #565e6e;
+  --color-ink: #141210;
+  --color-ink-soft: #2b241d;
+  --color-ink-muted: #5c5348;
   --color-pearl: #ffffff;
 
-  /* Platinum Champagne */
-  --color-champagne-50: #faf8f5;
-  --color-champagne-100: #f3ede4;
-  --color-champagne-200: #e5dacb;
-  --color-champagne-300: #d3c2ae;
-  --color-champagne-400: #bea993;
-  --color-champagne-500: #a8927b;
-  --color-champagne-600: #8f7863;
-  --color-champagne-700: #745f4d;
-  --color-champagne-800: #59493c;
-  --color-champagne-900: #3f332a;
+  /* Imperial Brand Gold */
+  --color-gold-50: #fdfbf7;
+  --color-gold-100: #f9f3e5;
+  --color-gold-200: #f3e5c8;
+  --color-gold-300: #e6cca0;
+  --color-gold-400: #d8ab65;
+  --color-gold-500: #c58b2c;
+  --color-gold-600: #a56f1e;
+  --color-gold-700: #833a03;
+  --color-gold-800: #5a2606;
+  --color-gold-900: #381704;
 
   /* Obsidian Noir */
-  --color-noir-50: #f6f7f9;
-  --color-noir-100: #eceff2;
-  --color-noir-200: #d7dce2;
-  --color-noir-300: #adb6c4;
-  --color-noir-400: #7b879a;
-  --color-noir-500: #4b5568;
-  --color-noir-600: #333b49;
-  --color-noir-700: #222833;
-  --color-noir-800: #171b22;
-  --color-noir-900: #111419;
-  --color-noir-950: #0b0d11;
+  --color-noir-50: #f8f7f5;
+  --color-noir-100: #edeae5;
+  --color-noir-200: #dbd5cc;
+  --color-noir-300: #b5aba0;
+  --color-noir-400: #857b70;
+  --color-noir-500: #544b41;
+  --color-noir-600: #3a3229;
+  --color-noir-700: #29221b;
+  --color-noir-800: #1d1813;
+  --color-noir-900: #14110e;
+  --color-noir-950: #0a0907;
 
-  /* Amber Gold Warmth */
-  --color-gold-50: #fdfbf7;
-  --color-gold-100: #f7f0e3;
-  --color-gold-200: #eedcc2;
-  --color-gold-300: #e2c296;
-  --color-gold-400: #d4a359;
-  --color-gold-500: #be8a3a;
-  --color-gold-600: #9e6e28;
-  --color-gold-700: #7c531c;
+  /* Compatibility & Brand Aliases */
+  --color-brand-50: #fdfbf7;
+  --color-brand-100: #f9f3e5;
+  --color-brand-200: #f3e5c8;
+  --color-brand-300: #e5dccd;
+  --color-brand-400: #d8ab65;
+  --color-brand-500: #c58b2c;
+  --color-brand-600: #a56f1e;
+  --color-brand-700: #833a03;
+  --color-brand-800: #221c16;
+  --color-brand-900: #161310;
+  --color-brand-950: #0e0c0a;
 
-  /* Compatibility Aliases */
-  --color-brand-50: #faf8f5;
-  --color-brand-100: #f4efe8;
-  --color-brand-200: #eae2d6;
-  --color-brand-300: #e2dad0;
-  --color-brand-400: #cbbba8;
-  --color-brand-500: #a8927b;
-  --color-brand-600: #8f7863;
-  --color-brand-700: #222833;
-  --color-brand-800: #171b22;
-  --color-brand-900: #111419;
-  --color-brand-950: #0b0d11;
-
-  --shadow-card: 0 10px 30px rgba(17, 20, 26, 0.05);
-  --shadow-champagne: 0 10px 30px rgba(168, 146, 123, 0.25);
-  --shadow-gold: 0 10px 30px rgba(212, 163, 89, 0.28);
-  --shadow-noir: 0 12px 35px rgba(11, 13, 17, 0.24);
-  --shadow-obsidian: 0 16px 45px rgba(11, 13, 17, 0.16);
-  --shadow-glow: 0 0 35px rgba(190, 169, 147, 0.3);
+  --shadow-card: 0 10px 30px rgba(20, 18, 16, 0.05);
+  --shadow-gold: 0 10px 30px rgba(197, 139, 44, 0.28);
+  --shadow-gold-lg: 0 16px 40px rgba(197, 139, 44, 0.35);
+  --shadow-noir: 0 12px 35px rgba(14, 12, 10, 0.26);
+  --shadow-obsidian: 0 16px 45px rgba(14, 12, 10, 0.18);
+  --shadow-glow: 0 0 35px rgba(212, 155, 53, 0.35);
 }
 
 html {
@@ -113,14 +99,14 @@ html {
 
 body {
   background: #faf8f5;
-  color: #11141a;
+  color: #141210;
   font-family: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
-  caret-color: #a8927b;
+  caret-color: #c58b2c;
 }
 
 ::selection {
-  background: #f0e6d8;
-  color: #0b0d11;
+  background: #f3e5c8;
+  color: #0e0c0a;
 }
 
 .font-cinzel {
@@ -140,24 +126,19 @@ body {
 }
 
 .eyebrow {
-  color: #111419;
+  color: #161310;
 }
 
 .eyebrow-light {
-  color: #745f4d;
-}
-
-.eyebrow-champagne {
-  color: #a8927b;
+  color: #833a03;
 }
 
 .eyebrow-gold {
-  color: #d4a359;
+  color: #c58b2c;
 }
 
 .eyebrow::before,
 .eyebrow-light::before,
-.eyebrow-champagne::before,
 .eyebrow-gold::before {
   width: 1.75rem;
   height: 1.5px;
@@ -169,7 +150,7 @@ body {
 .nav-link {
   position: relative;
   padding-block: 0.5rem;
-  color: #282e3b;
+  color: #2b241d;
   font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -183,7 +164,7 @@ body {
   bottom: 0;
   left: 0;
   height: 2px;
-  background: #a8927b;
+  background: #c58b2c;
   content: "";
   transform: scaleX(0);
   transform-origin: left;
@@ -191,7 +172,7 @@ body {
 }
 
 .nav-link:hover {
-  color: #0b0d11;
+  color: #0e0c0a;
 }
 
 .nav-link:hover::after {
@@ -203,7 +184,7 @@ body {
 }
 
 .footer-link:hover {
-  color: #cbbba8;
+  color: #c58b2c;
 }
 
 ::-webkit-scrollbar {
@@ -211,17 +192,17 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f4efe8;
+  background: #f5efe6;
 }
 
 ::-webkit-scrollbar-thumb {
-  border: 2px solid #f4efe8;
+  border: 2px solid #f5efe6;
   border-radius: 999px;
-  background: #d3c2ae;
+  background: #d8ab65;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #a8927b;
+  background: #c58b2c;
 }
 
 @media (prefers-reduced-motion: reduce) {
