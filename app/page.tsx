@@ -10,7 +10,6 @@ import {
   CheckCircle2,
   Clock,
   FileCheck2,
-  Heart,
   HeartHandshake,
   Mail,
   MapPin,
@@ -20,37 +19,38 @@ import {
   ShieldCheck,
   Sparkles,
   Star,
-  Users,
+  Wheat,
   X,
+  Stethoscope,
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
 
-const WHATSAPP_NUMBER = "5537999868988";
-const PHONE_DISPLAY = "(37) 99986-8988";
-const EMAIL_CONTACT = "contato@janainacarvalhoadv.com.br";
-const INSTAGRAM_URL = "https://www.instagram.com/janainacarvalho_advogada/";
-const INSTAGRAM_HANDLE = "@janainacarvalho_advogada";
-const LAWYER_NAME = "Dra. Janaína Carvalho";
-const LAWYER_TITLE = "Advogada | Especialista em Direito de Família";
+const WHATSAPP_NUMBER = "553399832397";
+const PHONE_DISPLAY = "(33) 99983-2397";
+const EMAIL_CONTACT = "contato@palomafernandesadv.com.br";
+const INSTAGRAM_URL = "https://www.instagram.com/adv.palomafernandes";
+const INSTAGRAM_HANDLE = "@adv.palomafernandes";
+const LAWYER_NAME = "Dra. Paloma Fernandes";
+const LAWYER_TITLE = "Advogada Previdenciária | Especialista em INSS";
 
 const ADDRESS_TEXT =
-  "Praça Pref. Mário Carneiro, nº 50 - 2º andar - sala 01 - Centro, Dores do Indaiá - MG, 35610-000";
+  "Av. Gov. Milton Campos, 2973 - Sl 204 - Centro, Guanhães - MG, 39740-000";
 const GOOGLE_MAPS_URL =
-  "https://www.google.com/maps/search/?api=1&query=Jana%C3%ADna+Carvalho+Advogada+Pra%C3%A7a+Pref+M%C3%A1rio+Carneiro+50+Dores+do+Indai%C3%A1+MG";
+  "https://www.google.com/maps/search/?api=1&query=Paloma+Fernandes+Advocacia+Previdenci%C3%A1ria+INSS+Av+Gov+Milton+Campos+2973+Guanh%C3%A3es+MG";
 const GOOGLE_SEARCH_URL =
-  "https://www.google.com/search?q=Jana%C3%ADna+Carvalho+%E2%80%94+Advogada%0ADores+do+Indai%C3%A1+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
+  "https://www.google.com/search?q=Paloma+Fernandes+%E2%80%94+Advocacia+Previdenci%C3%A1ria%0AGuanh%C3%A3es+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
 
 const LOGO_SRC = "/logo.png";
 const LOGO_SYMBOL_SRC = "/logo-symbol.png";
-const FOTO_HERO_SRC = "/dra-janaina.jpg";
-const FOTO_ESCRITORIO_SRC = "/escritorio.png";
+const FOTO_HERO_SRC = "/dra-paloma.jpg";
+const FOTO_SOBRE_SRC = "/dra-paloma.jpg";
 
 function getWhatsAppUrl(
   message?: string,
   number: string = WHATSAPP_NUMBER
 ) {
   const defaultText =
-    "Olá, Dra. Janaína! Gostaria de agendar um atendimento para tirar dúvidas sobre meu caso de família.";
+    "Olá, Dra. Paloma! Gostaria de agendar um atendimento para tirar dúvidas sobre meu benefício ou aposentadoria no INSS.";
   return `https://wa.me/${number}?text=${encodeURIComponent(
     message || defaultText
   )}`;
@@ -160,176 +160,199 @@ interface PracticeArea {
 
 const practiceAreas: PracticeArea[] = [
   {
-    id: "divorcio-uniao-estavel",
-    title: "Divórcio & Dissolução de União Estável",
-    icon: Scale,
-    tag: "Consensual em Cartório · Judicial · Partilha de Bens · Celeridade",
-    summary:
-      "Condução respeitosa, segura e eficiente da dissolução matrimonial, priorizando a via extrajudicial em cartório e garantindo a partilha justa de patrimônio sem prejuízos.",
-    details:
-      "O término de um ciclo conjugal não precisa ser sinônimo de desgaste infinito e conflitos traumáticos. A Dra. Janaína Carvalho atua com sensibilidade humana e alto rigor técnico para homologar divórcios consensuais diretamente em cartório com máxima celeridade e economia. Em situações litigiosas, exerce defesa incisiva para proteger seu patrimônio, sua meação e a sua tranquilidade.",
-    topics: [
-      "Divórcio Extrajudicial em Cartório: procedimento célere concluído em poucos dias, com menor custo e sigilo",
-      "Divórcio Judicial Litigioso com partilha justa e equilibrada de bens imóveis, veículos e investimentos",
-      "Dissolução e Reconhecimento de União Estável com apuração de bens comuns e direitos patrimoniais",
-      "Proteção contra ocultação, desvio ou dilapidação fraudulenta de patrimônio pelo ex-cônjuge",
-      "Fixação de alimentos provisórios e regulamentação imediata de convivência",
-      "Alteração de nome e restabelecimento de solteiro(a) no registro civil",
-    ],
-    whatsAppText:
-      "Olá, Dra. Janaína! Gostaria de uma orientação jurídica especializada sobre divórcio ou dissolução de união estável.",
-  },
-  {
-    id: "guarda-regime-convivencia",
-    title: "Guarda, Convivência & Proteção dos Filhos",
-    icon: Heart,
-    tag: "Guarda Compartilhada · Regime de Visitas · Convivência · Bem-Estar",
-    summary:
-      "Defesa intransigente do bem-estar dos filhos, estruturando planos parentais equilibrados e prevenindo situações de alienação parental.",
-    details:
-      "Os filhos são a prioridade absoluta em qualquer transição familiar. A Dra. Janaína Carvalho atua com acolhimento e firmeza técnica para estabelecer acordos de guarda compartilhada, fixar planos parentais detalhados (férias, datas festivas e rotina escolar) e intervir com rigor jurídico em casos de alienação parental ou descumprimento de visitas.",
-    topics: [
-      "Guarda Compartilhada e Guarda Unilateral fundamentada no superior interesse da criança e do adolescente",
-      "Plano de Convivência Familiar estruturado (rotina escolar, férias, feriados e finais de semana alternados)",
-      "Medidas urgentes contra atos de Alienação Parental e preservação do vínculo afetivo",
-      "Ação de Modificação de Guarda e reversão de regime de convivência prejudicial aos menores",
-      "Autorização judicial para viagens nacionais e internacionais com os filhos",
-      "Tutela, curatela e proteção jurídica de incapazes",
-    ],
-    whatsAppText:
-      "Olá, Dra. Janaína! Gostaria de conversar sobre guarda dos filhos e regime de convivência familiar.",
-  },
-  {
-    id: "pensao-alimenticia",
-    title: "Pensão Alimentícia & Execução de Alimentos",
-    icon: ShieldCheck,
-    tag: "Fixação · Revisão · Cobrança de Atrasados · Prisão & Penhora",
-    summary:
-      "Garantia do sustento justo e digno dos seus filhos, fixando valores compatíveis com a necessidade real e cobrando débitos com máxima combatividade.",
-    details:
-      "O sustento e a dignidade de quem você ama não podem esperar. A Dra. Janaína Carvalho atua na apuração minuciosa dos rendimentos reais do alimentante (inclusive rendas informais e sinais exteriores de riqueza) para fixação de pensão condizente. Em caso de inadimplência, aciona medidas contundentes de execução sob pena de prisão civil, bloqueio de contas (Sisbajud) e penhora de bens.",
-    topics: [
-      "Ação de Fixação de Pensão Alimentícia com pedido liminar de alimentos provisórios imediatos",
-      "Investigação patrimonial para comprovação de renda oculta de empresários e profissionais autônomos",
-      "Execução de Pensão Alimentícia em atraso sob pena de prisão civil do devedor",
-      "Penhora de veículos, contas bancárias, salários e bens para quitação integral dos valores atrasados",
-      "Ação Revisional de Alimentos (majoração de valor ou redução por mudança comprovada de capacidade financeira)",
-      "Ação de Exoneração de Alimentos quando preenchidos os requisitos legais da maioridade e independência",
-      "Pensão alimentícia gravídica (durante a gestação) e alimentos transitórios para ex-cônjuge",
-    ],
-    whatsAppText:
-      "Olá, Dra. Janaína! Gostaria de orientações sobre fixação, cobrança ou revisão de pensão alimentícia.",
-  },
-  {
-    id: "inventarios-sucessoes",
-    title: "Inventários, Herança & Sucessões",
+    id: "planejamento-previdenciario",
+    title: "Planejamento Previdenciário Estratégico",
     icon: FileCheck2,
-    tag: "Inventário em Cartório · Partilha Rápida · Economia de ITCMD · Testamentos",
+    tag: "Auditoria CNIS · Regras de Transição · Cálculo de RMI · Melhor Momento",
     summary:
-      "Condução ágil da partilha de herança e inventário, priorizando a via extrajudicial em cartório para evitar anos de espera e desgastes familiares.",
+      "Auditoria minuciosa de todo o seu histórico de contribuições para você saber o dia exato de se aposentar com o maior valor mensal possível, evitando perdas financeiras irreversíveis.",
     details:
-      "A perda de um ente querido é delicada e a burocracia sucessória não deve agravar o sofrimento da família. A Dra. Janaína Carvalho conduz inventários extrajudiciais em cartório de forma acelerada, com otimização tributária no ITCMD e orientação completa aos herdeiros. Havendo menores ou divergências, assume a condução judicial com firmeza e habilidade de mediação.",
+      "A Reforma da Previdência (EC 103/2019) criou múltiplas regras de transição complexas (pedágio de 50%, pedágio de 100%, pontos e idade mínima progressiva). Requerer seu benefício na hora errada ou com pendências cadastrais no INSS pode custar milhares de reais todos os meses. A Dra. Paloma Fernandes realiza uma auditoria aprofundada do seu extrato CNIS, simula todos os cenários legais, define o descarte inteligente de contribuições desfavoráveis e entrega um roteiro claro para você conquistar a melhor renda.",
     topics: [
-      "Inventário Extrajudicial em Cartório: procedimento célere concluído em poucas semanas sem burocracia de tribunal",
-      "Inventário Judicial eficiente para famílias com menores, incapazes ou partilhas contenciosas",
-      "Planejamento Sucessório Familiar: doações em vida com cláusula de usufruto e testamentos bem estruturados",
-      "Cálculo otimizado e redução legal de ITCMD e custos cartorários",
-      "Alvará Judicial para levantamento célere de saldos bancários, FGTS e restituições de falecidos",
-      "Ações de petição de herança, anulação de partilha lesiva e colação de bens",
+      "Auditoria detalhada do extrato CNIS e identificação de indicadores de pendência (PEXT, PREC-MENOR, etc.)",
+      "Simulação comparativa entre todas as regras de transição da Reforma da Previdência",
+      "Cálculo exato de Renda Mensal Inicial (RMI) e projeção de retorno financeiro",
+      "Descarte estratégico de salários prejudiciais para alavancar a média de aposentadoria",
+      "Orientação precisa sobre o valor e o prazo ideal de futuras contribuições",
+      "Resgate e validação de períodos trabalhados sem recolhimento regular pelo empregador",
     ],
     whatsAppText:
-      "Olá, Dra. Janaína! Gostaria de saber como proceder com o inventário ou partilha de herança da minha família.",
+      "Olá, Dra. Paloma! Gostaria de agendar um Planejamento Previdenciário para analisar meu caso e saber o melhor momento de me aposentar.",
   },
   {
-    id: "partilha-bens-patrimonio",
-    title: "Partilha de Bens & Proteção Patrimonial",
-    icon: Users,
-    tag: "Meação · Imóveis Urbanos & Rurais · Empresas Familiares · Defesa Patrimonial",
+    id: "aposentadorias-urbanas-especial",
+    title: "Aposentadorias Urbanas & Especial",
+    icon: Scale,
+    tag: "Idade Urbana · Tempo de Contribuição · Especial PPP/LTCAT · Defesa Integral",
     summary:
-      "Proteção detalhada de patrimônio construído durante a convivência conjugal, garantindo divisão justa de imóveis, fazendas, empresas e aplicações.",
+      "Concessão célere e estratégica da sua aposentadoria urbana ou especial, incluindo todos os períodos trabalhados, conversão de insalubridade e correção de falhas do INSS.",
     details:
-      "A correta identificação e divisão do patrimônio comum exige apuração contábil e documental rigorosa. A Dra. Janaína Carvalho assessora a partilha de imóveis rurais e urbanos, cotas societárias de empresas familiares, veículos e aplicações financeiras, evitando renúncias indevidas e garantindo compensações econômicas justas.",
+      "O INSS frequentemente indefere pedidos ou concede valores inferiores por desconsiderar períodos com insalubridade, tempo de serviço militar, vínculos sem baixa na carteira ou recolhimentos extemporâneos. A Dra. Paloma Fernandes analisa cada detalhe documental, reúne a documentação técnica necessária (PPP, LTCAT, holerites, carteiras profissionais) e atua com combatividade administrativa e judicial para garantir cada centavo a que você tem direito.",
     topics: [
-      "Partilha e meação justa de imóveis urbanos, fazendas e propriedades rurais",
-      "Apuração de haveres e partilha de cotas societárias de empresas e negócios familiares",
-      "Compensação financeira e indenização pelo uso exclusivo de imóvel comum pelo ex-parceiro",
-      "Regularização registral de bens partilhados junto a Cartórios de Registro de Imóveis",
-      "Análise de comunicabilidade de bens adquiridos antes e durante o casamento ou união estável",
-      "Ações declaratórias de simulação e anulação de transferência fraudulenta de bens a terceiros",
+      "Aposentadoria por Idade Urbana com validação integral do período de carência",
+      "Aposentadoria por Tempo de Contribuição pelas regras de transição vigentes",
+      "Aposentadoria Especial para profissionais expostos a ruído, calor, agentes químicos e biológicos",
+      "Conversão de tempo especial em comum com multiplicador vantajoso",
+      "Aposentadoria da Pessoa com Deficiência (Lei Complementar nº 142/2013) com critérios reduzidos",
+      "Regularização de empresas baixadas, extintas ou que não efetuaram repasse das contribuições",
     ],
     whatsAppText:
-      "Olá, Dra. Janaína! Gostaria de consultar sobre partilha de bens, fazendas ou patrimônio empresarial.",
+      "Olá, Dra. Paloma! Gostaria de uma avaliação para dar entrada na minha aposentadoria urbana ou especial no INSS.",
   },
   {
-    id: "planejamento-matrimonial-acordos",
-    title: "Planejamento Matrimonial, Pactos & Acordos",
+    id: "aposentadoria-rural-trabalhador-campo",
+    title: "Aposentadoria Rural & Segurado Especial",
+    icon: Wheat,
+    tag: "Agricultura Familiar · Lavoura · Boia-Fria · Produtor Rural · Guanhães & Região",
+    summary:
+      "Reconhecimento integral do tempo de trabalho na lavoura e agricultura familiar, garantindo a redução de idade para aposentadoria (55 anos mulher e 60 anos homem).",
+    details:
+      "Quem dedicou a vida à terra e à lavoura enfrenta grandes exigências burocráticas no INSS. A Dra. Paloma Fernandes possui ampla vivência na realidade dos trabalhadores do campo em Guanhães e em todo o interior mineiro, organizando um robusto conjunto de provas materiais (notas de produtor, contratos de comodato/arrendamento, certidões públicas históricas e autodeclaração rural) para vencer indeferimentos e garantir sua aposentadoria com dignidade.",
+    topics: [
+      "Aposentadoria por Idade Rural com redução de 5 anos (55 anos mulher e 60 anos homem)",
+      "Aposentadoria Híbrida / Mista: soma do tempo rural com o tempo de trabalho urbano",
+      "Elaboração correta da Autodeclaração do Segurado Especial perante o INSS",
+      "Resgate e validação de provas materiais contemporâneas de agricultura familiar",
+      "Concessão de salário-maternidade rural e auxílio por incapacidade rural",
+      "Ação judicial para reversão de indeferimentos causados por recusa injusta de documentos rurais",
+    ],
+    whatsAppText:
+      "Olá, Dra. Paloma! Gostaria de auxílio para comprovar meu tempo de trabalho na roça/campo e solicitar minha aposentadoria rural.",
+  },
+  {
+    id: "beneficios-incapacidade-pericia",
+    title: "Benefícios por Incapacidade & Perícia Médica",
+    icon: Stethoscope,
+    tag: "Auxílio por Incapacidade Temporária · Aposentadoria por Invalidez · Auxílio-Acidente",
+    summary:
+      "Defesa incisiva para trabalhadores incapacitados por doença física, mental ou acidente, revertendo negativas de perícia do INSS administrativamente e na Justiça.",
+    details:
+      "Estar doente ou incapacitado já é um fardo pesado; receber um indeferimento injusto na perícia médica do INSS agrava ainda mais o momento. A Dra. Paloma Fernandes prepara uma blindagem documental médica rigorosa (laudos detalhados, exames complementares e relatórios de especialistas), ingressa com recursos ou Ação Judicial com pedido de tutela de urgência e perícia médica judicial especializada para restabelecer ou conceder o seu benefício com rapidez.",
+    topics: [
+      "Auxílio por Incapacidade Temporária (antigo Auxílio-Doença) para tratamento de saúde",
+      "Aposentadoria por Incapacidade Permanente (antiga Aposentadoria por Invalidez)",
+      "Adicional de 25% na aposentadoria por invalidez para quem necessita de acompanhamento constante",
+      "Auxílio-Acidente: indenização mensal de 50% para quem ficou com sequelas permanentes após alta",
+      "Preparação técnica e documental para perícias presenciais ou perícia documental (Atestmed)",
+      "Ação Judicial com pedido liminar para liberação imediata dos pagamentos e atrasados",
+    ],
+    whatsAppText:
+      "Olá, Dra. Paloma! Tive meu benefício por incapacidade ou auxílio-doença negado pelo INSS e preciso de ajuda urgente.",
+  },
+  {
+    id: "bpc-loas-assistencial",
+    title: "BPC / LOAS (Idosos & Pessoas com Deficiência)",
     icon: HeartHandshake,
-    tag: "Pacto Antenupcial · Contrato de Namoro · Mediação · Segurança Preventiva",
+    tag: "1 Salário Mínimo Mensal · Sem Contribuição Prévia · Idosos 65+ · PCD de Qualquer Idade",
     summary:
-      "Assessoria preventiva e sigilosa para casais e famílias planejarem seu futuro com segurança jurídica e regras patrimoniais claras.",
+      "Concessão do benefício assistencial mensal de 1 salário mínimo para idosos acima de 65 anos e pessoas com deficiência em situação de vulnerabilidade socioeconômica.",
     details:
-      "Prevenir desentendimentos futuros é uma das decisões mais maduras e protetivas para a família. A Dra. Janaína Carvalho elabora pactos antenupciais personalizados, contratos de convivência, contratos de namoro e minutas de acordos amigáveis que resguardam o patrimônio individual e familiar, prevenindo litígios futuros e garantindo paz de espírito.",
+      "O Benefício de Prestação Continuada (BPC/LOAS) é uma garantia constitucional fundamental que não exige histórico prévio de contribuição ao INSS. A Dra. Paloma Fernandes conduz todo o processo com sensibilidade e precisão: orienta a regularização no CadÚnico, demonstra documentalmente as despesas essenciais com remédios, fraldas e tratamentos que abatem a renda da família, e supera os bloqueios e exigências indevidas do INSS.",
     topics: [
-      "Elaboração de Pacto Antenupcial personalizado com escolha estratégica de regime de bens",
-      "Contrato de Convivência e Contrato de Namoro com cláusulas de incomunicabilidade patrimonial",
-      "Alteração judicial consensual de regime de bens na constância do casamento",
-      "Mediação extrajudicial e redação de termos de acordo familiar com plena validade jurídica",
-      "Consultoria preventiva para esclarecimento seguro de direitos familiares antes da união",
-      "Pareceres jurídicos sobre segurança patrimonial e regime sucessório",
+      "BPC para Idosos a partir de 65 anos que vivem em condição de vulnerabilidade",
+      "BPC para Pessoas com Deficiência de qualquer idade com impedimentos de longo prazo",
+      "Dedução legal de gastos contínuos com saúde, remédios, alimentação especial e terapias",
+      "Orientação completa para inscrição e atualização do Cadastro Único (CadÚnico/CRAS)",
+      "Defesa contra suspensão indevida, bloqueio de pagamentos ou corte do benefício",
+      "Ação judicial contundente contra negativas baseadas em critérios rígidos de renda per capita",
     ],
     whatsAppText:
-      "Olá, Dra. Janaína! Gostaria de informações sobre pacto antenupcial, contrato de namoro ou planejamento matrimonial.",
+      "Olá, Dra. Paloma! Gostaria de saber como solicitar o BPC/LOAS para mim ou para um familiar no INSS.",
+  },
+  {
+    id: "pensao-por-morte-revisoes",
+    title: "Pensão por Morte & Revisões de Benefícios",
+    icon: ShieldCheck,
+    tag: "Amparo a Dependentes · Revisão de Cálculo · Erros do INSS · Atrasados dos Últimos 5 Anos",
+    summary:
+      "Concessão rápida e desburocratizada de pensão por morte para proteger a família enlutada e revisão minuciosa de benefícios concedidos com erros para recebimento de atrasados.",
+    details:
+      "No momento da perda de um ente querido, a família precisa de acolhimento ágil e segurança financeira. A Dra. Paloma Fernandes habilita dependentes (cônjuge, companheiro com união estável, filhos menores ou inválidos) para concessão imediata da pensão. Além disso, realiza diagnósticos revisionais para segurados que já recebem benefícios: recalculamos se o INSS descartou vínculos, aplicou tetos errados ou gerou valores inferiores ao legalmente devido.",
+    topics: [
+      "Pensão por Morte Urbana e Rural com comprovação documental de dependência econômica",
+      "Reconhecimento post mortem de união estável para concessão de pensão ao parceiro(a)",
+      "Auxílio-Reclusão para famílias de segurados de baixa renda recolhidos à prisão",
+      "Revisão de aposentadorias para inclusão de períodos trabalhados e vínculos rurais",
+      "Cobrança integral de parcelas atrasadas retroativas à Data de Entrada do Requerimento (DER)",
+      "Restabelecimento imediato de pensões ou aposentadorias suspensas indevidamente",
+    ],
+    whatsAppText:
+      "Olá, Dra. Paloma! Preciso de orientações jurídicas sobre pensão por morte ou revisão do valor do meu benefício.",
   },
 ];
 
 const clientReviews = [
   {
-    name: "Mariana Resende",
-    reviewerTag: "5 avaliações no Google",
-    badge: "Empatia & Competência Absoluta",
+    name: "Jaciara Angelina",
+    reviewerTag: "Local Guide · 14 avaliações",
+    badge: "Humana & Estratégica",
     rating: 5,
     content:
-      "A Dra. Janaína conduziu meu divórcio e a partilha de bens com extrema sensibilidade, ética e competência técnica. Sempre muito atenciosa, respondia todas as dúvidas rapidamente pelo WhatsApp. Recomendo de olhos fechados!",
+      "Excelente! Realmente defende o interesse do cliente! Humana e estratégica! É Advogada da nossa família e recomendamos de olhos fechados! Em meio a dúvidas e incertezas ter alguém competente ao seu lado faz toda a diferença! Obrigada Dra. Paloma!",
   },
   {
-    name: "Carlos Eduardo Mendes",
-    reviewerTag: "3 avaliações no Google",
-    badge: "Agilidade & Proteção da Filha",
-    rating: 5,
-    content:
-      "Profissional impecável. Conseguiu regularizar a guarda e a pensão da minha filha com muita agilidade e sem desgaste. O acolhimento no escritório em Dores do Indaiá e o suporte online foram excelentes.",
-  },
-  {
-    name: "Juliana Vasconcelos",
-    reviewerTag: "Local Guide · 18 avaliações",
-    badge: "Inventário Rápido em Cartório",
-    rating: 5,
-    content:
-      "Fizemos o inventário em cartório da minha família com a Dra. Janaína. O que achávamos que demoraria anos foi resolvido com muita rapidez, transparência e economia. Nota 10!",
-  },
-  {
-    name: "Renata Ferreira Castro",
-    reviewerTag: "4 avaliações no Google",
-    badge: "Segurança & Firmeza Técnica",
-    rating: 5,
-    content:
-      "Excelente advogada! Muito inteligente, atenciosa e firme na defesa dos nossos interesses. Transmite uma paz e segurança enormes em momentos difíceis de família.",
-  },
-  {
-    name: "Lucas Guimarães da Silva",
-    reviewerTag: "7 avaliações no Google",
-    badge: "Atendimento Humanizado",
-    rating: 5,
-    content:
-      "Dra. Janaína é diferenciada no Direito de Família. Humana, justa e extremamente capacitada. Nos manteve informados de cada passo do processo. 5 estrelas mais que merecidas!",
-  },
-  {
-    name: "Patrícia Alvarenga",
+    name: "Marcos Vinícius",
     reviewerTag: "2 avaliações no Google",
-    badge: "Escritório Impecável & Acolhimento",
+    badge: "Competência & Clareza",
     rating: 5,
     content:
-      "Atendimento acolhedor, escritório lindo e impecável no centro de Dores do Indaiá. A Dra. Janaína nos tratou com muito respeito e resolveu nossa situação com rapidez exemplar.",
+      "A Dra. Paloma é uma advogada extremamente competente, atenciosa e dedicada. Desde o primeiro contato, mostrou grande conhecimento e profissionalismo, sempre explicando tudo de forma clara e objetiva. Seu comprometimento e atenção aos detalhes fizeram toda a diferença no meu caso. Recomendo seus serviços com total confiança!",
+  },
+  {
+    name: "Wanderléia Tomás Oficial",
+    reviewerTag: "4 avaliações no Google",
+    badge: "Êxito em Todas as Causas",
+    rating: 5,
+    content:
+      "Maravilhoso atendimento, excelente advogada, muito séria no que faz, e todas as vezes que precisei dos seus serviços tivemos êxito em todos eles. Além de sério e compromissado o trabalho da advogada Paloma, ela nos passa tranquilidade, sem perder a assertividade que a causa exige, muito controle emocional! Amei todas as vezes que precisei. Obrigada Dra. Paloma por todo empenho e competência!",
+  },
+  {
+    name: "Girlane de Oliveira",
+    reviewerTag: "3 avaliações no Google",
+    badge: "Parceria de 10 Anos",
+    rating: 5,
+    content:
+      "Conheci a Dra. Paloma Fernandes em um momento muito difícil da minha vida. Ela foi mais que uma advogada, foi uma amiga que me deu suporte. Dez anos se fez agora. Vencemos batalhas difíceis. Ela toda vida ali, persistente em seu trabalho. Se eu pudesse daria nota 1000 pela dedicação e profissionalismo. A OAB tem em sua instituição uma grande advogada!",
+  },
+  {
+    name: "Gislaine Fernandes",
+    reviewerTag: "2 avaliações no Google",
+    badge: "Resultado de Sucesso",
+    rating: 5,
+    content:
+      "Prezada Paloma, agradeço sua paciência e atenção pessoal prestada durante todo esse meu processo. Seus esforços tiveram um impacto positivo significativo em minha vida. Sua experiência e dedicação foram fundamentais para alcançar um resultado de sucesso. Você é uma profissional de excelência! Obrigada por tudo!",
+  },
+  {
+    name: "Carmen Ildeu",
+    reviewerTag: "1 avaliação no Google",
+    badge: "Empatia & Luta Junto",
+    rating: 5,
+    content:
+      "É uma das melhores e ótima profissional. A Dra. Paloma não quer só o seu dinheiro, ela se envolve, tem empatia, sofre junto, luta junto. Muito obrigada por tudo! Deus abençoe sempre!",
+  },
+  {
+    name: "Paula Fernandes",
+    reviewerTag: "3 avaliações no Google",
+    badge: "Melhor Advogada da Região",
+    rating: 5,
+    content:
+      "Melhor advogada de Guanhães e região! Espaço, atendimento e trabalho impecável. Eu não conheço outro serviço melhor. Serviço de extrema qualidade e acolhimento!",
+  },
+  {
+    name: "Edilene Lopes",
+    reviewerTag: "2 avaliações no Google",
+    badge: "Honestidade & Rapidez",
+    rating: 5,
+    content:
+      "Pessoa excelente, responsável, agiu com uma honestidade e rapidez exemplar com nosso processo. Só agradeço por toda a atenção com a minha família num momento tão delicado. Recomendo muito uma profissional muito eficiente!",
+  },
+  {
+    name: "Tiago Santos",
+    reviewerTag: "4 avaliações no Google",
+    badge: "Causa Ganha & Seriedade",
+    rating: 5,
+    content:
+      "Excelente advogada, trabalha com seriedade, super indico causa ganha!",
   },
 ];
 
@@ -347,11 +370,11 @@ function Heading({
   return (
     <div>
       <p className={light ? "eyebrow-light" : "eyebrow"}>{eyebrow}</p>
-      <h2 className="mt-4 font-serif text-3xl leading-[1.14] tracking-[-0.02em] text-[#12151b] sm:text-4xl lg:text-[3.15rem]">
+      <h2 className="mt-4 font-serif text-3xl leading-[1.14] tracking-[-0.02em] text-[#11141a] sm:text-4xl lg:text-[3.15rem]">
         {children}
       </h2>
       {description && (
-        <p className="mt-4 text-[15px] leading-7 text-[#2a2f3a]">
+        <p className="mt-4 text-[15px] leading-7 text-[#282e3b]">
           {description}
         </p>
       )}
@@ -378,24 +401,24 @@ export default function Home() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <main className="overflow-hidden bg-[#faf8f5] text-[#12151b] selection:bg-[#f5ecd9] selection:text-[#0e1116]">
-        {/* Navigation Bar - Refined Light Luxury with Metallic Gold & Deep Obsidian */}
-        <header className="sticky top-0 z-40 border-b border-[#e5dfd7] bg-white/95 backdrop-blur-xl shadow-xs">
-          <div className="mx-auto flex h-[104px] max-w-7xl items-center justify-between gap-6 px-5 sm:h-[114px] lg:h-[118px] xl:h-[122px] sm:px-8 lg:px-12">
+      <main className="overflow-hidden bg-[#faf8f5] text-[#11141a] selection:bg-[#f0e6d8] selection:text-[#0b0d11]">
+        {/* Navigation Bar - Refined Platinum Champagne & Deep Obsidian Luxury */}
+        <header className="sticky top-0 z-40 border-b border-[#e2dad0] bg-white/95 backdrop-blur-xl shadow-xs">
+          <div className="mx-auto flex h-[98px] max-w-7xl items-center justify-between gap-6 px-5 sm:h-[108px] lg:h-[114px] xl:h-[118px] sm:px-8 lg:px-12">
             <a
               href="#inicio"
-              aria-label="Dra. Janaína Carvalho — Advogada - Página Inicial"
+              aria-label="Dra. Paloma Fernandes — Advocacia Previdenciária INSS - Página Inicial"
               onClick={closeMenu}
               className="flex shrink-0 items-center transition-opacity hover:opacity-95"
             >
-              <div className="relative h-[62px] w-[270px] sm:h-[72px] sm:w-[332px] lg:h-[83px] lg:w-[375px] xl:h-[88px] xl:w-[416px]">
+              <div className="relative h-[62px] w-[260px] sm:h-[72px] sm:w-[320px] lg:h-[82px] lg:w-[365px] xl:h-[88px] xl:w-[395px]">
                 <Image
                   src={LOGO_SRC}
-                  alt="Dra. Janaína Carvalho — Advogada | Especialista em Direito de Família"
+                  alt="Dra. Paloma Fernandes — Advocacia Previdenciária INSS"
                   fill
                   priority
                   unoptimized
-                  sizes="(max-width: 640px) 270px, (max-width: 1024px) 375px, 416px"
+                  sizes="(max-width: 640px) 260px, (max-width: 1024px) 365px, 395px"
                   className="object-contain object-left"
                 />
               </div>
@@ -412,7 +435,7 @@ export default function Home() {
                 A Advogada
               </a>
               <a className="nav-link" href="#atuacao">
-                Direito de Família
+                Especialidades INSS
               </a>
               <a className="nav-link" href="#diferenciais">
                 Por Que Escolher
@@ -430,9 +453,9 @@ export default function Home() {
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Avaliações da Dra. Janaína Carvalho no Google"
-                className="grid size-10 place-items-center rounded-lg border border-[#e5dfd7] bg-[#faf8f5] text-[#2a2f3a] transition-all hover:border-[#c5a059] hover:bg-white hover:text-[#0e1116] shadow-xs"
-                title="5,0 ★ no Google (61 avaliações)"
+                aria-label="Avaliações da Dra. Paloma Fernandes no Google"
+                className="grid size-10 place-items-center rounded-lg border border-[#e2dad0] bg-[#faf8f5] text-[#282e3b] transition-all hover:border-[#a8927b] hover:bg-white hover:text-[#0b0d11] shadow-xs"
+                title="5,0 ★ no Google (47 avaliações)"
               >
                 <GoogleIcon size={16} />
               </a>
@@ -440,16 +463,16 @@ export default function Home() {
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Instagram da Dra. Janaína Carvalho Advogada"
-                className="grid size-10 place-items-center rounded-lg border border-[#e5dfd7] bg-[#faf8f5] text-[#2a2f3a] transition-all hover:border-[#c5a059] hover:bg-white hover:text-[#0e1116] shadow-xs"
+                aria-label="Instagram da Dra. Paloma Fernandes"
+                className="grid size-10 place-items-center rounded-lg border border-[#e2dad0] bg-[#faf8f5] text-[#282e3b] transition-all hover:border-[#a8927b] hover:bg-white hover:text-[#0b0d11] shadow-xs"
                 title={`Instagram ${INSTAGRAM_HANDLE}`}
               >
                 <InstagramIcon size={16} />
               </a>
               <a
                 href={`tel:+${WHATSAPP_NUMBER}`}
-                aria-label="Ligar para a Dra. Janaína Carvalho Advogada"
-                className="grid size-10 place-items-center rounded-lg border border-[#e5dfd7] bg-[#faf8f5] text-[#2a2f3a] transition-all hover:border-[#c5a059] hover:bg-white hover:text-[#0e1116] shadow-xs"
+                aria-label="Ligar para a Dra. Paloma Fernandes"
+                className="grid size-10 place-items-center rounded-lg border border-[#e2dad0] bg-[#faf8f5] text-[#282e3b] transition-all hover:border-[#a8927b] hover:bg-white hover:text-[#0b0d11] shadow-xs"
                 title={`Ligar: ${PHONE_DISPLAY}`}
               >
                 <Phone size={16} />
@@ -458,22 +481,22 @@ export default function Home() {
                 href={getWhatsAppUrl()}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="WhatsApp Dra. Janaína Carvalho Advogada"
-                className="grid size-10 place-items-center rounded-lg border border-[#e5dfd7] bg-[#faf8f5] text-[#2a2f3a] transition-all hover:border-[#c5a059] hover:bg-white hover:text-[#0e1116] shadow-xs"
+                aria-label="WhatsApp Dra. Paloma Fernandes"
+                className="grid size-10 place-items-center rounded-lg border border-[#e2dad0] bg-[#faf8f5] text-[#282e3b] transition-all hover:border-[#a8927b] hover:bg-white hover:text-[#0b0d11] shadow-xs"
                 title="Atendimento no WhatsApp"
               >
                 <WhatsAppIcon size={18} />
               </a>
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá, Dra. Janaína! Gostaria de agendar uma consulta jurídica para orientações sobre meu caso familiar."
+                  "Olá, Dra. Paloma! Gostaria de agendar uma consulta para orientação sobre meus direitos no INSS."
                 )}
                 target="_blank"
                 size="sm"
                 variant="emerald"
                 className="rounded-lg shadow-sm"
               >
-                Agendar Consulta <ArrowUpRight size={14} />
+                Consultar Benefício <ArrowUpRight size={14} />
               </GlowingButton>
             </div>
 
@@ -482,7 +505,7 @@ export default function Home() {
               aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
               aria-expanded={menuOpen}
               aria-controls="mobile-navigation"
-              className="grid size-11 place-items-center rounded-lg border border-[#e5dfd7] bg-[#faf8f5] text-[#12151b] lg:hidden shadow-xs"
+              className="grid size-11 place-items-center rounded-lg border border-[#e2dad0] bg-[#faf8f5] text-[#11141a] lg:hidden shadow-xs"
               onClick={() => setMenuOpen((open) => !open)}
             >
               {menuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -498,13 +521,13 @@ export default function Home() {
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.22 }}
-                className="overflow-hidden border-t border-[#e5dfd7] bg-white px-6 text-[#12151b] lg:hidden"
+                className="overflow-hidden border-t border-[#e2dad0] bg-white px-6 text-[#11141a] lg:hidden"
               >
                 <div className="mx-auto flex max-w-7xl flex-col gap-1 py-4">
                   {[
                     ["Início", "#inicio"],
                     ["A Advogada", "#sobre"],
-                    ["Direito de Família", "#atuacao"],
+                    ["Especialidades INSS", "#atuacao"],
                     ["Por Que Escolher", "#diferenciais"],
                     ["Avaliações (5,0 ★)", "#avaliacoes"],
                     ["Contato & Sede", "#contato"],
@@ -513,16 +536,16 @@ export default function Home() {
                       key={label}
                       href={href}
                       onClick={closeMenu}
-                      className="py-3 text-sm font-medium text-[#2a2f3a] hover:text-[#c5a059]"
+                      className="py-3 text-sm font-medium text-[#282e3b] hover:text-[#a8927b]"
                     >
                       {label}
                     </a>
                   ))}
                   <div className="mt-3 flex flex-col gap-2">
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#0e1116] via-[#181c23] to-[#0e1116] px-5 py-3.5 text-xs font-bold uppercase tracking-[0.13em] text-white shadow-md transition-all hover:brightness-105"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#0b0d11] via-[#171b22] to-[#0b0d11] px-5 py-3.5 text-xs font-bold uppercase tracking-[0.13em] text-white shadow-md transition-all hover:brightness-105"
                       href={getWhatsAppUrl(
-                        "Olá, Dra. Janaína! Gostaria de conversar sobre meu caso de família pelo WhatsApp."
+                        "Olá, Dra. Paloma! Gostaria de conversar sobre minha aposentadoria ou benefício pelo WhatsApp."
                       )}
                       target="_blank"
                       rel="noreferrer"
@@ -531,13 +554,13 @@ export default function Home() {
                       <WhatsAppIcon size={16} /> WhatsApp: {PHONE_DISPLAY}
                     </a>
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#e5dfd7] bg-[#faf8f5] px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-[#12151b] transition-all hover:border-[#c5a059]"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#e2dad0] bg-[#faf8f5] px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-[#11141a] transition-all hover:border-[#a8927b]"
                       href={GOOGLE_SEARCH_URL}
                       target="_blank"
                       rel="noreferrer"
                       onClick={closeMenu}
                     >
-                      <GoogleIcon size={15} /> 5,0 ★ no Google (61 avaliações)
+                      <GoogleIcon size={15} /> 5,0 ★ no Google (47 avaliações)
                     </a>
                   </div>
                 </div>
@@ -546,14 +569,14 @@ export default function Home() {
           </AnimatePresence>
         </header>
 
-        {/* Hero Section - Luxurious Sculpted Gold, Deep Obsidian Noir & Alabaster Warmth */}
+        {/* Hero Section - Executive Titanium Platinum, Obsidian Noir & Incandescent Warmth */}
         <section
           id="inicio"
-          className="relative isolate scroll-mt-24 border-b border-[#e5dfd7] bg-gradient-to-b from-white via-[#faf8f5] to-[#f4efea]"
+          className="relative isolate scroll-mt-24 border-b border-[#e2dad0] bg-gradient-to-b from-white via-[#faf8f5] to-[#f4efe8]"
         >
-          {/* Subtle gold ambient aura */}
-          <div className="pointer-events-none absolute -right-32 top-8 -z-10 size-[36rem] rounded-full bg-[#c5a059]/12 blur-3xl" />
-          <div className="pointer-events-none absolute -left-20 bottom-10 -z-10 size-[28rem] rounded-full bg-[#d89c48]/10 blur-3xl" />
+          {/* Subtle champagne and warm ambient lighting aura */}
+          <div className="pointer-events-none absolute -right-32 top-8 -z-10 size-[36rem] rounded-full bg-[#a8927b]/12 blur-3xl" />
+          <div className="pointer-events-none absolute -left-20 bottom-10 -z-10 size-[28rem] rounded-full bg-[#d4a359]/10 blur-3xl" />
 
           <div className="mx-auto grid min-h-[640px] max-w-7xl items-center gap-10 px-5 py-14 sm:px-8 sm:py-16 lg:min-h-[700px] lg:grid-cols-[1.1fr_0.9fr] lg:gap-12 lg:px-12 lg:py-18 xl:min-h-[740px] xl:py-20">
             <motion.div
@@ -564,27 +587,27 @@ export default function Home() {
             >
               <motion.div
                 variants={reveal}
-                className="mb-5 inline-flex items-center gap-2 rounded-lg border border-[#c5a059]/35 bg-white px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-[#8c6725] shadow-xs"
+                className="mb-5 inline-flex items-center gap-2 rounded-lg border border-[#a8927b]/40 bg-white px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-[#745f4d] shadow-xs"
               >
-                <span className="size-2 shrink-0 rounded-full bg-[#c5a059]" />
-                <span>ADVOCACIA ESPECIALIZADA EM DIREITO DE FAMÍLIA · DORES DO INDAIÁ - MG</span>
+                <span className="size-2 shrink-0 rounded-full bg-[#a8927b]" />
+                <span>ADVOCACIA PREVIDENCIÁRIA & INSS · GUANHÃES - MG</span>
               </motion.div>
 
               <motion.h1
                 variants={reveal}
-                className="font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-[#12151b] sm:text-[2.6rem] sm:leading-[1.12] lg:text-[3.25rem] xl:text-[3.45rem]"
+                className="font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-[#11141a] sm:text-[2.6rem] sm:leading-[1.12] lg:text-[3.25rem] xl:text-[3.45rem]"
               >
-                Proteja o que é mais valioso:{" "}
-                <span className="font-serif italic text-[#8c6725]">
-                  sua família e seu patrimônio com segurança jurídica.
+                Sua aposentadoria e seus direitos no INSS conquistados com{" "}
+                <span className="font-serif italic text-[#745f4d]">
+                  estratégia, humanidade e o máximo valor.
                 </span>
               </motion.h1>
 
               <motion.p
                 variants={reveal}
-                className="mt-5 max-w-xl text-[15px] leading-7 text-[#2a2f3a] sm:text-base sm:leading-8"
+                className="mt-5 max-w-xl text-[15px] leading-7 text-[#282e3b] sm:text-base sm:leading-8"
               >
-                A <strong className="font-semibold text-[#12151b]">Dra. Janaína Carvalho</strong> atua com olhar humanizado, discrição absoluta e firmeza estratégica em <strong className="font-semibold text-[#12151b]">Divórcios, Guarda, Pensão Alimentícia, Partilha de Bens e Inventários</strong>, garantindo soluções céleres e proteção patrimonial em Dores do Indaiá e em todo o Brasil.
+                Mais de <strong className="font-semibold text-[#11141a]">10 anos de advocacia combativa</strong> ao lado de quem trabalhou duro a vida inteira. A <strong className="font-semibold text-[#11141a]">Dra. Paloma Fernandes</strong> atua com rigor investigativo no CNIS, acolhimento empático e firmeza na concessão de <strong className="font-semibold text-[#11141a]">Aposentadorias, Benefícios por Incapacidade, BPC/LOAS e Planejamento Previdenciário</strong> em Guanhães e em todo o Brasil.
               </motion.p>
 
               <motion.div
@@ -593,18 +616,18 @@ export default function Home() {
               >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Janaína! Gostaria de agendar uma consulta jurídica para avaliar o meu caso de família."
+                    "Olá, Dra. Paloma! Gostaria de uma avaliação jurídica para o meu benefício/aposentadoria no INSS."
                   )}
                   target="_blank"
                   size="md"
                   variant="emerald"
                   className="rounded-lg shadow-md"
                 >
-                  <WhatsAppIcon size={16} /> Falar no WhatsApp com a Dra. Janaína
+                  <WhatsAppIcon size={16} /> Falar no WhatsApp com a Dra. Paloma
                 </GlowingButton>
                 <a
                   href="#atuacao"
-                  className="group inline-flex items-center gap-2 rounded-lg border border-[#e5dfd7] bg-white px-5 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#12151b] shadow-xs transition-all hover:border-[#c5a059] hover:bg-[#faf8f5]"
+                  className="group inline-flex items-center gap-2 rounded-lg border border-[#e2dad0] bg-white px-5 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#11141a] shadow-xs transition-all hover:border-[#a8927b] hover:bg-[#faf8f5]"
                 >
                   Conhecer Especialidades{" "}
                   <ArrowRight
@@ -616,31 +639,31 @@ export default function Home() {
 
               <motion.div
                 variants={reveal}
-                className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-[#e5dfd7] pt-5 text-xs text-[#5a6272]"
+                className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-[#e2dad0] pt-5 text-xs text-[#565e6e]"
               >
                 <a
                   href={GOOGLE_SEARCH_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-1.5 font-medium text-[#12151b] transition-colors hover:text-[#8c6725]"
+                  className="inline-flex items-center gap-1.5 font-medium text-[#11141a] transition-colors hover:text-[#745f4d]"
                 >
-                  <Star size={14} className="fill-[#c5a059] text-[#c5a059]" /> 5,0 ★ no Google (61 avaliações)
+                  <Star size={14} className="fill-[#d4a359] text-[#d4a359]" /> 5,0 ★ no Google (47 avaliações)
                 </a>
-                <span className="inline-flex items-center gap-1.5 font-medium text-[#12151b]">
-                  <Award size={14} className="text-[#8c6725]" /> Atendimento Acolhedor & Sigiloso
+                <span className="inline-flex items-center gap-1.5 font-medium text-[#11141a]">
+                  <Award size={14} className="text-[#745f4d]" /> +10 Anos de Dedicação ao Segurado
                 </span>
                 <a
                   href={GOOGLE_MAPS_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-1.5 font-medium text-[#12151b] transition-colors hover:text-[#8c6725]"
+                  className="inline-flex items-center gap-1.5 font-medium text-[#11141a] transition-colors hover:text-[#745f4d]"
                 >
-                  <MapPin size={14} className="text-[#8c6725]" /> Praça Pref. Mário Carneiro · Centro · Dores do Indaiá
+                  <MapPin size={14} className="text-[#745f4d]" /> Av. Gov. Milton Campos, 2973 · Centro · Guanhães
                 </a>
               </motion.div>
             </motion.div>
 
-            {/* Hero Visual Presentation - Authentic Lawyer Portrait & Authority Card */}
+            {/* Hero Visual Presentation - Official Portrait & Authority Badges */}
             <motion.div
               initial={{ opacity: 0, scale: 0.97, y: 18 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -651,38 +674,38 @@ export default function Home() {
               }}
               className="relative mx-auto w-full max-w-[400px] sm:max-w-[430px] lg:max-w-[460px] xl:max-w-[480px] lg:ml-auto lg:mr-0"
             >
-              <div className="relative aspect-[4/4.9] overflow-hidden rounded-2xl border-2 border-[#e5dfd7] bg-[#0e1116] shadow-xl ring-1 ring-[#c5a059]/30">
+              <div className="relative aspect-[4/4.9] overflow-hidden rounded-2xl border-2 border-[#e2dad0] bg-[#0b0d11] shadow-xl ring-1 ring-[#a8927b]/35">
                 <Image
                   src={FOTO_HERO_SRC}
-                  alt="Dra. Janaína Carvalho — Advogada Especialista em Direito de Família"
+                  alt="Dra. Paloma Fernandes — Advogada Previdenciária Especialista em INSS"
                   fill
                   priority
                   loading="eager"
                   unoptimized
                   className="object-cover object-top"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-[#0e1116] via-[#0e1116]/85 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-[#0b0d11] via-[#0b0d11]/85 to-transparent" />
                 <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-3 text-white sm:bottom-6 sm:left-6 sm:right-6">
                   <div>
                     <p className="font-serif text-xl sm:text-2xl font-bold tracking-wide text-white">
-                      Dra. Janaína Carvalho
+                      Dra. Paloma Fernandes
                     </p>
-                    <p className="mt-0.5 text-[10px] uppercase tracking-[0.18em] text-[#f5ecd9]">
-                      Advogada · Especialista em Direito de Família
+                    <p className="mt-0.5 text-[10px] uppercase tracking-[0.18em] text-[#e5dacb]">
+                      Advogada · Especialista em Direito Previdenciário
                     </p>
                     <p className="mt-0.5 text-[11px] text-stone-300">
-                      Praça Pref. Mário Carneiro, 50 · Dores do Indaiá - MG
+                      Av. Gov. Milton Campos, 2973 - Sl 204 · Guanhães - MG
                     </p>
                   </div>
-                  <span className="grid size-11 shrink-0 place-items-center rounded-lg border border-[#c5a059]/60 bg-[#0e1116]/85 text-[#fdfcf9] backdrop-blur-sm shadow-md">
-                    <Scale size={18} className="text-[#c5a059]" />
+                  <span className="grid size-11 shrink-0 place-items-center rounded-lg border border-[#a8927b]/60 bg-[#0b0d11]/85 text-[#faf8f5] backdrop-blur-sm shadow-md">
+                    <Scale size={18} className="text-[#bea993]" />
                   </span>
                 </div>
               </div>
 
               {/* Floating authority badge */}
-              <div className="absolute -left-3 top-4 z-10 rounded-lg border border-[#c5a059]/40 bg-white/95 px-3 py-1.5 text-[9px] sm:text-[10px] font-bold tracking-[0.14em] text-[#0e1116] shadow-md backdrop-blur-md sm:-left-4">
-                SEDE EM DORES DO INDAIÁ · ATENDIMENTO ON-LINE EM TODO O BRASIL
+              <div className="absolute -left-3 top-4 z-10 rounded-lg border border-[#a8927b]/40 bg-white/95 px-3 py-1.5 text-[9px] sm:text-[10px] font-bold tracking-[0.14em] text-[#0b0d11] shadow-md backdrop-blur-md sm:-left-4">
+                SEDE EM GUANHÃES · ATENDIMENTO ON-LINE EM TODO O BRASIL
               </div>
 
               {/* Floating Google 5.0 Star Rating */}
@@ -690,24 +713,24 @@ export default function Home() {
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="group absolute -bottom-4 -right-2 z-10 rounded-xl border border-[#c5a059]/60 bg-white/95 p-3 shadow-md backdrop-blur-md transition-all hover:border-[#0e1116] hover:bg-white sm:-right-4"
+                className="group absolute -bottom-4 -right-2 z-10 rounded-xl border border-[#a8927b]/60 bg-white/95 p-3 shadow-md backdrop-blur-md transition-all hover:border-[#0b0d11] hover:bg-white sm:-right-4"
               >
                 <div className="flex items-center gap-2">
                   <GoogleIcon size={16} />
                   <div className="flex items-center gap-1.5">
-                    <div className="flex gap-0.5 text-[#c5a059]">
-                      <Star size={12} className="fill-[#c5a059] text-[#c5a059]" />
+                    <div className="flex gap-0.5 text-[#d4a359]">
+                      <Star size={12} className="fill-[#d4a359] text-[#d4a359]" />
                     </div>
-                    <span className="font-serif text-sm font-bold text-[#12151b]">
+                    <span className="font-serif text-sm font-bold text-[#11141a]">
                       5,0
                     </span>
-                    <span className="text-[9px] uppercase tracking-wider text-[#8c6725]">
+                    <span className="text-[9px] uppercase tracking-wider text-[#745f4d]">
                       / 5,0
                     </span>
                   </div>
                 </div>
-                <p className="mt-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#5a6272]">
-                  61 Avaliações no Google (100% 5★)
+                <p className="mt-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#565e6e]">
+                  47 Avaliações no Google (100% 5★)
                 </p>
               </a>
             </motion.div>
@@ -717,39 +740,39 @@ export default function Home() {
         {/* Highlights Banner - Authority Metrics */}
         <section
           aria-label="Credenciais e Destaques"
-          className="border-b border-[#e5dfd7] bg-white"
+          className="border-b border-[#e2dad0] bg-white"
         >
           <div className="mx-auto grid max-w-7xl gap-7 px-5 py-8 sm:grid-cols-4 sm:gap-4 sm:px-8 lg:px-12">
             {[
               [
                 "5,0 ★ no Google",
-                "nota máxima comprovada em 61 avaliações espontâneas destacando empatia e celeridade",
+                "nota máxima comprovada em 47 avaliações destacando humanidade e estratégia",
               ],
               [
-                "Direito de Família",
-                "atuação focada em divórcios, partilha patrimonial, guarda e pensão alimentícia",
+                "+10 Anos de Luta",
+                "mais de uma década vencendo batalhas e defendendo direitos previdenciários",
               ],
               [
-                "Inventários Ágeis",
-                "partilha de herança e inventários em cartório com agilidade e menor custo tributário",
+                "100% Foco no INSS",
+                "especialização pura em aposentadorias, benefícios por incapacidade e BPC/LOAS",
               ],
               [
-                "Dores do Indaiá • Brasil",
-                "sede acolhedora na Praça Pref. Mário Carneiro e assessoria jurídica digital para todo o país",
+                "Guanhães • Brasil",
+                "sede moderna na Av. Gov. Milton Campos e assessoria jurídica digital para todo o país",
               ],
             ].map(([value, label], index) => (
               <div
                 key={label}
                 className={
                   index > 0
-                    ? "flex items-center gap-4 sm:justify-center sm:border-l sm:border-[#e5dfd7]"
+                    ? "flex items-center gap-4 sm:justify-center sm:border-l sm:border-[#e2dad0]"
                     : "flex items-center gap-4 sm:justify-center"
                 }
               >
-                <span className="font-serif text-xl font-semibold text-[#8c6725] sm:text-2xl">
+                <span className="font-serif text-xl font-semibold text-[#745f4d] sm:text-2xl">
                   {value}
                 </span>
-                <span className="max-w-[165px] text-[11px] leading-5 text-[#5a6272]">
+                <span className="max-w-[165px] text-[11px] leading-5 text-[#565e6e]">
                   {label}
                 </span>
               </div>
@@ -757,10 +780,10 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Sobre a Dra. Janaína Carvalho - Editorial Canvas */}
+        {/* Sobre a Dra. Paloma Fernandes - Editorial Canvas */}
         <section
           id="sobre"
-          className="scroll-mt-24 border-y border-[#e5dfd7] bg-[#faf8f5] py-20 text-[#12151b] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-y border-[#e2dad0] bg-[#faf8f5] py-20 text-[#11141a] sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20 lg:px-12">
             {/* Visual presentation - Lawyer & Logo Composition */}
@@ -771,60 +794,60 @@ export default function Home() {
               variants={reveal}
               className="relative mx-auto w-full max-w-[490px]"
             >
-              <div className="relative aspect-[4/4.9] overflow-hidden rounded-2xl border-2 border-[#e5dfd7] bg-[#0e1116] shadow-2xl ring-1 ring-[#c5a059]/30">
+              <div className="relative aspect-[4/4.9] overflow-hidden rounded-2xl border-2 border-[#e2dad0] bg-[#0b0d11] shadow-2xl ring-1 ring-[#a8927b]/35">
                 <Image
-                  src={FOTO_HERO_SRC}
-                  alt="Dra. Janaína Carvalho — Advogada"
+                  src={FOTO_SOBRE_SRC}
+                  alt="Dra. Paloma Fernandes — Advocacia Previdenciária"
                   fill
                   unoptimized
                   className="object-cover object-top"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0e1116]/95 via-[#0e1116]/35 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0b0d11]/95 via-[#0b0d11]/35 to-transparent" />
                 
                 {/* Central brand emblem inside photo */}
                 <div className="absolute top-6 left-6 rounded-lg border border-white/20 bg-white/95 p-2.5 backdrop-blur-md shadow-md">
-                  <div className="relative h-[52px] w-[188px]">
+                  <div className="relative h-[48px] w-[175px]">
                     <Image
                       src={LOGO_SRC}
-                      alt="Logo Dra. Janaína Carvalho"
+                      alt="Logo Dra. Paloma Fernandes"
                       fill
                       unoptimized
-                      sizes="188px"
+                      sizes="175px"
                       className="object-contain"
                     />
                   </div>
                 </div>
 
                 <div className="absolute bottom-6 left-6 right-6 text-white">
-                  <p className="font-cinzel text-xl font-bold tracking-wider text-[#fdfcf9]">
-                    DRA. JANAÍNA CARVALHO
+                  <p className="font-cinzel text-xl font-bold tracking-wider text-[#faf8f5]">
+                    PALOMA FERNANDES
                   </p>
-                  <p className="mt-1 text-xs font-medium uppercase tracking-[0.18em] text-[#f5ecd9]">
-                    Advogada · Especialista em Direito de Família · Dores do Indaiá - MG
+                  <p className="mt-1 text-xs font-medium uppercase tracking-[0.18em] text-[#e5dacb]">
+                    Advogada · Direito Previdenciário INSS · Guanhães - MG
                   </p>
                 </div>
               </div>
 
               {/* Authority badge card */}
-              <div className="absolute -bottom-6 right-3 max-w-[340px] rounded-xl border border-[#c5a059]/60 bg-white px-5 py-4 shadow-xl sm:-right-6 sm:px-6">
-                <div className="flex items-center gap-2 text-[#8c6725]">
+              <div className="absolute -bottom-6 right-3 max-w-[340px] rounded-xl border border-[#a8927b]/60 bg-white px-5 py-4 shadow-xl sm:-right-6 sm:px-6">
+                <div className="flex items-center gap-2 text-[#745f4d]">
                   <Sparkles size={16} />
-                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#8c6725]">
-                    Excelência Jurídica & Empatia
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#745f4d]">
+                    Mais de 10 Anos de Advocacia
                   </p>
                 </div>
-                <p className="mt-1 font-serif text-lg leading-snug text-[#12151b]">
-                  Dra. Janaína Carvalho
+                <p className="mt-1 font-serif text-lg leading-snug text-[#11141a]">
+                  Dra. Paloma Fernandes
                 </p>
-                <p className="mt-0.5 text-[11px] font-medium text-[#8c6725]">
-                  Especialista em Direito de Família & Sucessões
+                <p className="mt-0.5 text-[11px] font-medium text-[#745f4d]">
+                  Especialista em Direito Previdenciário (INSS)
                 </p>
-                <p className="mt-1 text-[11px] leading-4 text-[#5a6272]">
-                  Praça Pref. Mário Carneiro, nº 50 · 2º andar · Centro · Dores do Indaiá
+                <p className="mt-1 text-[11px] leading-4 text-[#565e6e]">
+                  Av. Gov. Milton Campos, 2973 · Sl 204 · Centro · Guanhães - MG
                 </p>
               </div>
 
-              <span className="absolute -left-4 -top-4 -z-10 size-24 border-l-2 border-t-2 border-[#c5a059]/40 sm:-left-7 sm:-top-7 sm:size-32" />
+              <span className="absolute -left-4 -top-4 -z-10 size-24 border-l-2 border-t-2 border-[#a8927b]/40 sm:-left-7 sm:-top-7 sm:size-32" />
             </motion.div>
 
             {/* Story & Biography */}
@@ -836,48 +859,49 @@ export default function Home() {
             >
               <motion.div
                 variants={reveal}
-                className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#c5a059]/35 bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#8c6725] shadow-xs"
+                className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#a8927b]/35 bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#745f4d] shadow-xs"
               >
-                <span className="size-2 shrink-0 rounded-full bg-[#c5a059]" />
-                <span>SOBRE A DRA. JANAÍNA CARVALHO</span>
+                <span className="size-2 shrink-0 rounded-full bg-[#a8927b]" />
+                <span>SOBRE A DRA. PALOMA FERNANDES</span>
               </motion.div>
 
               <motion.h2
                 variants={reveal}
-                className="font-serif text-3xl leading-[1.14] tracking-[-0.02em] text-[#12151b] sm:text-4xl lg:text-[3.25rem]"
+                className="font-serif text-3xl leading-[1.14] tracking-[-0.02em] text-[#11141a] sm:text-4xl lg:text-[3.25rem]"
               >
-                Uma advocacia concebida para acolher sua história e defender seus direitos com firmeza:{" "}
-                <span className="italic text-[#8c6725]">
-                  sensibilidade humana, rigor técnico e soluções seguras.
+                Uma advocacia de firmeza técnica e acolhimento humano:{" "}
+                <span className="italic text-[#745f4d]">
+                  defendemos sua história de trabalho e lutamos pelo que é seu por direito.
                 </span>
               </motion.h2>
 
               <motion.p
                 variants={reveal}
-                className="mt-6 max-w-xl text-[15px] leading-7 text-[#2a2f3a]"
+                className="mt-6 max-w-xl text-[15px] leading-7 text-[#282e3b]"
               >
-                Com sede estruturada na Praça Prefeito Mário Carneiro, nº 50 - 2º andar - sala 01, no Centro de{" "}
-                <strong className="font-bold text-[#12151b]">Dores do Indaiá - MG</strong>, e assessoria digital moderna para atender famílias em qualquer região do Brasil ou no exterior, a atuação da{" "}
-                <strong className="font-bold text-[#12151b]">Dra. Janaína Carvalho</strong> é pautada por um compromisso inegociável: aliar profundo domínio no Direito de Família e Sucessões a uma escuta empática, transparente e altamente resolutiva.
+                Com sede estruturada na Avenida Governador Milton Campos, nº 2973 - Sala 204, no Centro de{" "}
+                <strong className="font-bold text-[#11141a]">Guanhães - MG</strong>, e consultoria digital segura para segurados em todo o Brasil, a trajetória da{" "}
+                <strong className="font-bold text-[#11141a]">Dra. Paloma Fernandes</strong> é fundamentada em uma década de lutas árduas contra a burocracia e as negativas do INSS.
               </motion.p>
 
               <motion.p
                 variants={reveal}
-                className="mt-4 max-w-xl text-[15px] leading-7 text-[#2a2f3a]"
+                className="mt-4 max-w-xl text-[15px] leading-7 text-[#282e3b]"
               >
-                Reconhecida com <strong className="font-bold text-[#12151b]">nota máxima 5,0 ★ em 61 avaliações espontâneas no Google</strong>, a Dra. Janaína destaca-se pela atenção cuidadosa a cada cliente, traduzindo questões jurídicas complexas em explicações simples, transparentes e com retorno ágil em cada etapa da demanda.
+                Reconhecida com <strong className="font-bold text-[#11141a]">avaliação máxima 5,0 ★ unânime em 47 avaliações no Google</strong>, a Dra. Paloma destaca-se por seu atendimento verdadeiramente humano, estratégico e transparente:{" "}
+                <em className="text-[#11141a]">&ldquo;Não quer só o seu dinheiro; ela se envolve, tem empatia, sofre junto e luta junto&rdquo;</em>, garantindo que nenhum trabalhador ou família fique desamparado.
               </motion.p>
 
               {/* Client Quote Card from real Google Reviews */}
               <motion.div
                 variants={reveal}
-                className="mt-6 rounded-xl border border-[#e5dfd7] bg-white p-5 shadow-xs"
+                className="mt-6 rounded-xl border border-[#e2dad0] bg-white p-5 shadow-xs"
               >
-                <blockquote className="font-serif text-sm italic leading-relaxed text-[#12151b]">
-                  &ldquo;A Dra. Janaína conduziu meu divórcio e a partilha de bens com extrema sensibilidade, ética e competência técnica. Sempre muito atenciosa, respondia todas as dúvidas rapidamente pelo WhatsApp. Recomendo de olhos fechados!&rdquo;
+                <blockquote className="font-serif text-sm italic leading-relaxed text-[#11141a]">
+                  &ldquo;Excelente! Realmente defende o interesse do cliente! Humana e estratégica! É Advogada da nossa família e recomendamos de olhos fechados! Em meio a dúvidas e incertezas ter alguém competente ao seu lado faz toda a diferença!&rdquo;
                 </blockquote>
-                <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-[#8c6725]">
-                  — Mariana Resende · Avaliação no Google (5,0 ★)
+                <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-[#745f4d]">
+                  — Jaciara Angelina · Local Guide no Google (5,0 ★)
                 </p>
               </motion.div>
 
@@ -886,45 +910,45 @@ export default function Home() {
                 variants={reveal}
                 className="mt-6 grid grid-cols-2 gap-3 text-xs sm:grid-cols-3"
               >
-                <div className="rounded-lg border border-[#e5dfd7] bg-white p-3 shadow-xs">
-                  <p className="font-bold text-[#12151b]">61 Avaliações 5,0 ★</p>
-                  <p className="mt-0.5 text-[11px] text-[#5a6272]">
-                    Unanimidade máxima no Google Meu Negócio
+                <div className="rounded-lg border border-[#e2dad0] bg-white p-3 shadow-xs">
+                  <p className="font-bold text-[#11141a]">47 Avaliações 5,0 ★</p>
+                  <p className="mt-0.5 text-[11px] text-[#565e6e]">
+                    100% de satisfação comprovada no Google
                   </p>
                 </div>
-                <div className="rounded-lg border border-[#e5dfd7] bg-white p-3 shadow-xs">
-                  <p className="font-bold text-[#12151b]">Especialista de Família</p>
-                  <p className="mt-0.5 text-[11px] text-[#5a6272]">
-                    Dedicação exclusiva a causas familiares e herança
+                <div className="rounded-lg border border-[#e2dad0] bg-white p-3 shadow-xs">
+                  <p className="font-bold text-[#11141a]">+10 Anos de Carreira</p>
+                  <p className="mt-0.5 text-[11px] text-[#565e6e]">
+                    Experiência prática em casos complexos de INSS
                   </p>
                 </div>
-                <div className="rounded-lg border border-[#e5dfd7] bg-white p-3 shadow-xs col-span-2 sm:col-span-1">
-                  <p className="font-bold text-[#12151b]">Sigilo & Celeridade</p>
-                  <p className="mt-0.5 text-[11px] text-[#5a6272]">
-                    Prioridade para soluções rápidas em cartório
+                <div className="rounded-lg border border-[#e2dad0] bg-white p-3 shadow-xs col-span-2 sm:col-span-1">
+                  <p className="font-bold text-[#11141a]">Assertividade & Calma</p>
+                  <p className="mt-0.5 text-[11px] text-[#565e6e]">
+                    Controle emocional e firmeza em cada ação
                   </p>
                 </div>
               </motion.div>
 
               <motion.div
                 variants={reveal}
-                className="mt-6 grid grid-cols-1 gap-2.5 text-xs font-semibold text-[#12151b] sm:grid-cols-2"
+                className="mt-6 grid grid-cols-1 gap-2.5 text-xs font-semibold text-[#11141a] sm:grid-cols-2"
               >
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#8c6725]" />
-                  <span>Sede na Praça Pref. Mário Carneiro, 50 · Sala 01 · Centro · Dores do Indaiá</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#745f4d]" />
+                  <span>Sede na Av. Gov. Milton Campos, 2973 · Sl 204 · Centro · Guanhães</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#8c6725]" />
-                  <span>Nota 5,0 ★ no Google com 61 avaliações comprovadas</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#745f4d]" />
+                  <span>Nota máxima 5,0 ★ no Google com 47 avaliações verificadas</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#8c6725]" />
-                  <span>Contato direto pelo WhatsApp com atendimento humanizado</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#745f4d]" />
+                  <span>Contato direto pelo WhatsApp com a Dra. Paloma</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#8c6725]" />
-                  <span>Atendimento presencial no Centro-Oeste Mineiro e digital para todo o país</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#745f4d]" />
+                  <span>Atendimento presencial em Guanhães e digital em todo o Brasil</span>
                 </div>
               </motion.div>
 
@@ -934,18 +958,18 @@ export default function Home() {
               >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Janaína! Gostaria de agendar uma consulta para conversar sobre meu caso de família."
+                    "Olá, Dra. Paloma! Gostaria de agendar uma consulta para conversar sobre minha situação no INSS."
                   )}
                   target="_blank"
                   size="md"
                   variant="emerald"
                   className="rounded-lg shadow-md"
                 >
-                  <WhatsAppIcon size={16} /> Falar com a Dra. Janaína
+                  <WhatsAppIcon size={16} /> Falar com a Dra. Paloma
                 </GlowingButton>
                 <a
                   href={`tel:+${WHATSAPP_NUMBER}`}
-                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#12151b] transition-colors hover:text-[#8c6725]"
+                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#11141a] transition-colors hover:text-[#745f4d]"
                 >
                   <Phone size={15} /> {PHONE_DISPLAY}
                 </a>
@@ -954,10 +978,10 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Pilares de Atuação / Especialidades em Direito de Família */}
+        {/* Pilares de Atuação / Especialidades Previdenciárias */}
         <section
           id="atuacao"
-          className="scroll-mt-24 border-t border-[#e5dfd7] bg-[#f4efea] py-20 sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#e2dad0] bg-[#f4efe8] py-20 sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <motion.div
@@ -969,16 +993,16 @@ export default function Home() {
             >
               <Heading
                 light
-                eyebrow="ÁREAS DE ATUAÇÃO & ESPECIALIDADES"
-                description="Atuação jurídica altamente especializada e humanizada em Direito de Família e Sucessões, focada em resolver divórcios, partilhas de bens, guarda, pensão alimentícia e inventários com celeridade e proteção emocional e patrimonial."
+                eyebrow="ÁREAS DE ATUAÇÃO PREVIDENCIÁRIA & INSS"
+                description="Assessoria jurídica especializada para garantir que você receba o benefício correto, no momento certo e com o maior valor financeiro possível perante o INSS ou na Justiça Federal."
               >
-                Soluções experientes em Direito de Família em{" "}
-                <span className="italic text-[#8c6725]">
-                  Dores do Indaiá, Minas Gerais e em todo o Brasil.
+                Especialidades jurídicas dedicadas aos seus direitos em{" "}
+                <span className="italic text-[#745f4d]">
+                  Guanhães, Minas Gerais e em todo o Brasil.
                 </span>
               </Heading>
-              <p className="max-w-[270px] pb-1 text-xs leading-6 text-[#5a6272]">
-                Clique em uma especialidade abaixo para conferir as demandas atendidas e iniciar uma conversa direta pelo WhatsApp.
+              <p className="max-w-[270px] pb-1 text-xs leading-6 text-[#565e6e]">
+                Clique em uma especialidade abaixo para conferir o detalhamento completo dos serviços e solicitar uma análise no WhatsApp.
               </p>
             </motion.div>
 
@@ -995,25 +1019,25 @@ export default function Home() {
                   <motion.article
                     key={area.id}
                     variants={reveal}
-                    className="group flex min-h-[350px] flex-col rounded-xl border border-[#e5dfd7] bg-white p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#c5a059] hover:shadow-lg sm:p-8"
+                    className="group flex min-h-[350px] flex-col rounded-xl border border-[#e2dad0] bg-white p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#a8927b] hover:shadow-lg sm:p-8"
                   >
                     <div className="flex items-start justify-between">
-                      <span className="grid size-12 place-items-center rounded-lg border border-[#c5a059]/35 bg-[#f8f3e8] text-[#8c6725] shadow-xs transition-colors group-hover:bg-[#0e1116] group-hover:text-[#c5a059] group-hover:border-[#c5a059]">
+                      <span className="grid size-12 place-items-center rounded-lg border border-[#a8927b]/35 bg-[#f3ede4] text-[#745f4d] shadow-xs transition-colors group-hover:bg-[#0b0d11] group-hover:text-[#e5dacb] group-hover:border-[#a8927b]">
                         <Icon size={22} strokeWidth={1.5} />
                       </span>
-                      <span className="font-serif text-2xl text-[#8c6725]/40">
+                      <span className="font-serif text-2xl text-[#a8927b]/40">
                         0{index + 1}
                       </span>
                     </div>
 
                     <div className="mt-6">
-                      <span className="inline-block rounded-md border border-[#c5a059]/30 bg-[#faf4e8] px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-[#8c6725] shadow-xs">
+                      <span className="inline-block rounded-md border border-[#a8927b]/30 bg-[#faf8f5] px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-[#745f4d] shadow-xs">
                         {area.tag}
                       </span>
-                      <h3 className="mt-3 font-serif text-[1.45rem] leading-tight text-[#12151b]">
+                      <h3 className="mt-3 font-serif text-[1.45rem] leading-tight text-[#11141a]">
                         {area.title}
                       </h3>
-                      <p className="mt-3 text-[13px] leading-6 text-[#5a6272]">
+                      <p className="mt-3 text-[13px] leading-6 text-[#565e6e]">
                         {area.summary}
                       </p>
                     </div>
@@ -1021,7 +1045,7 @@ export default function Home() {
                     <button
                       type="button"
                       onClick={() => setActiveArea(area)}
-                      className="group/link mt-auto inline-flex w-fit items-center gap-2 pt-6 text-[10px] font-bold uppercase tracking-[0.16em] text-[#8c6725] hover:text-[#12151b]"
+                      className="group/link mt-auto inline-flex w-fit items-center gap-2 pt-6 text-[10px] font-bold uppercase tracking-[0.16em] text-[#745f4d] hover:text-[#11141a]"
                     >
                       Ver detalhes e pedidos{" "}
                       <ArrowRight
@@ -1036,26 +1060,26 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Por Que Escolher a Dra. Janaína Carvalho - Diferenciais */}
+        {/* Por Que Escolher a Dra. Paloma Fernandes - Diferenciais */}
         <section
           id="diferenciais"
-          className="scroll-mt-24 border-t border-[#e5dfd7] bg-[#faf8f5] py-20 text-[#12151b] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#e2dad0] bg-[#faf8f5] py-20 text-[#11141a] sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
               <Heading
                 light
                 eyebrow="EXCELÊNCIA, ESTRATÉGIA & RESULTADOS"
-                description="O futuro dos seus filhos, a divisão justa do patrimônio construído e a segurança sucessória da sua família exigem uma advocacia dedicada, atenta a cada detalhe e verdadeiramente acolhedora."
+                description="O sustento da sua família, os anos dedicados ao trabalho duro e a sua tranquilidade financeira merecem uma advocacia atenta a cada detalhe e verdadeiramente combativa."
               >
-                Por que confiar seu caso à{" "}
-                <span className="italic text-[#8c6725]">
-                  Dra. Janaína Carvalho?
+                Por que confiar seu benefício à{" "}
+                <span className="italic text-[#745f4d]">
+                  Dra. Paloma Fernandes?
                 </span>
               </Heading>
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá, Dra. Janaína! Gostaria de uma avaliação para a minha situação familiar."
+                  "Olá, Dra. Paloma! Gostaria de uma avaliação para a minha situação no INSS."
                 )}
                 target="_blank"
                 size="md"
@@ -1073,49 +1097,49 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65 }}
-                className="group flex flex-col justify-between rounded-xl border border-[#e5dfd7] bg-white p-7 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#c5a059] hover:shadow-md sm:p-9"
+                className="group flex flex-col justify-between rounded-xl border border-[#e2dad0] bg-white p-7 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#a8927b] hover:shadow-md sm:p-9"
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#c5a059]/35 bg-[#faf4e8] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#8c6725]">
-                      <HeartHandshake size={14} /> Atendimento Humanizado & Sigiloso
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#a8927b]/35 bg-[#f3ede4] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#745f4d]">
+                      <HeartHandshake size={14} /> Atendimento Humanizado & Próximo
                     </span>
-                    <span className="text-xs font-semibold text-[#8c6725]">
+                    <span className="text-xs font-semibold text-[#745f4d]">
                       Você Sempre Informado
                     </span>
                   </div>
-                  <h3 className="mt-4 font-serif text-2xl leading-tight text-[#12151b] sm:text-[1.75rem]">
+                  <h3 className="mt-4 font-serif text-2xl leading-tight text-[#11141a] sm:text-[1.75rem]">
                     Comunicação Transparente e Suporte Acolhedor
                   </h3>
-                  <p className="mt-3 text-[14px] leading-relaxed text-[#2a2f3a]">
-                    Como atestam as 61 avaliações 5 estrelas no Google, o grande diferencial do escritório é aliar estratégia jurídica incisiva a uma comunicação empática e ágil. Você não fica sem respostas: cada andamento, prazo ou acordo é explicado de forma clara, acolhedora e sem juridiquês.
+                  <p className="mt-3 text-[14px] leading-relaxed text-[#282e3b]">
+                    Como atestam as 47 avaliações 5 estrelas no Google, o grande diferencial do escritório é aliar estratégia jurídica incisiva a uma escuta verdadeiramente atenta. Você não fica desamparado nem perdido em termos difíceis: cada etapa, exigência do INSS ou andamento judicial é explicado com calma e total transparência.
                   </p>
-                  <ul className="mt-5 space-y-2 text-xs font-medium text-[#12151b]">
+                  <ul className="mt-5 space-y-2 text-xs font-medium text-[#11141a]">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#8c6725]" />
+                      <CheckCircle2 size={15} className="shrink-0 text-[#745f4d]" />
                       <span>Comunicação direta pelo WhatsApp com respostas rápidas e suporte atencioso</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#8c6725]" />
-                      <span>Atualizações regulares sobre audiências, despachos e homologações</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#745f4d]" />
+                      <span>Atualizações regulares sobre perícias médicas, laudos e decisões</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#8c6725]" />
-                      <span>Transparência total sobre riscos, prazos e direitos patrimoniais da família</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#745f4d]" />
+                      <span>Explicações claras sem juridiquês para você entender seus direitos</span>
                     </li>
                   </ul>
                 </div>
-                <div className="mt-7 border-t border-[#e5dfd7] pt-4">
+                <div className="mt-7 border-t border-[#e2dad0] pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dra. Janaína! Gostaria de conversar para tirar dúvidas sobre meu processo de família."
+                      "Olá, Dra. Paloma! Gostaria de conversar para tirar dúvidas sobre meu processo do INSS."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#c5a059]/40 bg-[#faf8f5] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#12151b] transition-all hover:border-[#c5a059] hover:bg-[#0e1116] hover:text-[#fdfcf9]"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#a8927b]/40 bg-[#faf8f5] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#11141a] transition-all hover:border-[#a8927b] hover:bg-[#0b0d11] hover:text-[#faf8f5]"
                   >
                     <span className="inline-flex items-center gap-2">
-                      <WhatsAppIcon size={15} /> Conversar no WhatsApp com a Dra. Janaína
+                      <WhatsAppIcon size={15} /> Conversar no WhatsApp com a Dra. Paloma
                     </span>
                     <ArrowUpRight size={15} />
                   </a>
@@ -1128,46 +1152,46 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65, delay: 0.1 }}
-                className="group flex flex-col justify-between rounded-xl border border-[#e5dfd7] bg-white p-7 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#c5a059] hover:shadow-md sm:p-9"
+                className="group flex flex-col justify-between rounded-xl border border-[#e2dad0] bg-white p-7 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#a8927b] hover:shadow-md sm:p-9"
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#c5a059]/40 bg-[#fdfcf9] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#5c4416]">
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#a8927b]/40 bg-[#faf8f5] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#59493c]">
                       <Award size={14} /> Atuação Especializada & Firme
                     </span>
-                    <span className="text-xs font-semibold text-[#8c6725]">
+                    <span className="text-xs font-semibold text-[#745f4d]">
                       Soluções Sob Medida
                     </span>
                   </div>
-                  <h3 className="mt-4 font-serif text-2xl leading-tight text-[#12151b] sm:text-[1.75rem]">
-                    Estratégia Personalizada para a Realidade da Sua Família
+                  <h3 className="mt-4 font-serif text-2xl leading-tight text-[#11141a] sm:text-[1.75rem]">
+                    Estratégia Personalizada para a Realidade do Seu Caso
                   </h3>
-                  <p className="mt-3 text-[14px] leading-relaxed text-[#2a2f3a]">
-                    Cada família tem uma história única e urgências que merecem respeito. Estruturamos caminhos ágeis para resolver divórcios em cartório, conduzir partilhas justas de fazendas e imóveis, fixar pensões equilibradas e garantir a guarda com harmonia e segurança.
+                  <p className="mt-3 text-[14px] leading-relaxed text-[#282e3b]">
+                    Cada segurado tem um histórico contributivo único. Não usamos soluções genéricas: auditamos cada vínculo de carteira, tempo rural e atestados médicos para montar a melhor estratégia, seja na via administrativa ou em ação judicial contundente.
                   </p>
-                  <ul className="mt-5 space-y-2 text-xs font-medium text-[#12151b]">
+                  <ul className="mt-5 space-y-2 text-xs font-medium text-[#11141a]">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#8c6725]" />
-                      <span>Prioridade para soluções extrajudiciais em cartório: rapidez e menor custo financeiro</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#745f4d]" />
+                      <span>Auditoria minuciosa de vínculos e acerto de pendências do extrato CNIS</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#8c6725]" />
-                      <span>Combate enérgico a tentativas de sonegação ou ocultação patrimonial</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#745f4d]" />
+                      <span>Reversão judicial de perícias médicas superficiais e indeferimentos injustos</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#8c6725]" />
-                      <span>Plano parental detalhado para prevenir futuros conflitos entre os genitores</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#745f4d]" />
+                      <span>Cobrança rigorosa de valores em atraso retroativos desde o primeiro pedido</span>
                     </li>
                   </ul>
                 </div>
-                <div className="mt-7 border-t border-[#e5dfd7] pt-4">
+                <div className="mt-7 border-t border-[#e2dad0] pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dra. Janaína! Gostaria de consultar sobre a melhor estratégia jurídica para o meu caso."
+                      "Olá, Dra. Paloma! Gostaria de consultar sobre a melhor estratégia jurídica para o meu caso no INSS."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#c5a059]/40 bg-[#faf8f5] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#12151b] transition-all hover:border-[#c5a059] hover:bg-[#0e1116] hover:text-[#fdfcf9]"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#a8927b]/40 bg-[#faf8f5] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#11141a] transition-all hover:border-[#a8927b] hover:bg-[#0b0d11] hover:text-[#faf8f5]"
                   >
                     <span className="inline-flex items-center gap-2">
                       <WhatsAppIcon size={15} /> Consultar Estratégia no WhatsApp
@@ -1181,27 +1205,27 @@ export default function Home() {
         </section>
 
         {/* Método de Trabalho em 3 Passos */}
-        <section className="relative overflow-hidden border-t border-[#e5dfd7] bg-[#faf8f5] py-20 text-[#12151b] sm:py-24 lg:py-28">
-          <div className="pointer-events-none absolute -left-28 top-1/4 size-96 rounded-full bg-[#c5a059]/10 blur-3xl" />
-          <div className="pointer-events-none absolute -right-28 bottom-1/4 size-96 rounded-full bg-[#d89c48]/10 blur-3xl" />
+        <section className="relative overflow-hidden border-t border-[#e2dad0] bg-[#faf8f5] py-20 text-[#11141a] sm:py-24 lg:py-28">
+          <div className="pointer-events-none absolute -left-28 top-1/4 size-96 rounded-full bg-[#a8927b]/10 blur-3xl" />
+          <div className="pointer-events-none absolute -right-28 bottom-1/4 size-96 rounded-full bg-[#d4a359]/10 blur-3xl" />
 
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.88fr_1.12fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
                 light
                 eyebrow="COMO ATUAMOS NO SEU CASO"
-                description="Um método transparente, ético e resolutivo para analisar sua situação familiar e aplicar a solução jurídica mais rápida e protetiva."
+                description="Um método transparente, ético e resolutivo para analisar sua história previdenciária e aplicar a rota mais rápida e vantajosa."
               >
                 Três etapas claras para{" "}
-                <span className="italic text-[#8c6725]">
-                  proteger seus filhos, seus direitos e seu patrimônio.
+                <span className="italic text-[#745f4d]">
+                  proteger seu benefício e garantir o valor que você merece.
                 </span>
               </Heading>
 
-              <blockquote className="mt-8 rounded-xl border border-[#e5dfd7] bg-white p-6 font-serif text-base italic leading-7 text-[#12151b] shadow-xs">
-                &ldquo;Nosso propósito é exercer uma advocacia de família humana, justa e técnica, garantindo que cada cliente atravesse momentos delicados com serenidade, clareza e acompanhamento permanente.&rdquo;
-                <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-[#8c6725]">
-                  — Dra. Janaína Carvalho · Especialista em Direito de Família
+              <blockquote className="mt-8 rounded-xl border border-[#e2dad0] bg-white p-6 font-serif text-base italic leading-7 text-[#11141a] shadow-xs">
+                &ldquo;Nosso propósito é exercer uma advocacia previdenciária humana, técnica e combativa, garantindo que quem trabalhou duro a vida inteira receba sua aposentadoria com respeito, celeridade e acompanhamento permanente.&rdquo;
+                <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-[#745f4d]">
+                  — Dra. Paloma Fernandes · Advogada Previdenciária
                 </footer>
               </blockquote>
             </div>
@@ -1211,23 +1235,23 @@ export default function Home() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={stagger}
-              className="divide-y divide-[#e5dfd7]"
+              className="divide-y divide-[#e2dad0]"
             >
               {[
                 [
                   "01",
-                  "Escuta Acolhedora & Diagnóstico Documental",
-                  "Atendimento presencial na sede em Dores do Indaiá ou via WhatsApp/chamada de vídeo para examinar com minúcia certidões, matrículas de imóveis, extratos e a dinâmica familiar.",
+                  "Análise Detalhada & Diagnóstico do CNIS",
+                  "Atendimento presencial na sede em Guanhães ou via WhatsApp/chamada de vídeo para examinar com minúcia carteiras de trabalho, laudos médicos, extratos do CNIS e períodos rurais.",
                 ],
                 [
                   "02",
-                  "Definição da Rota Estratégica Mais Célere",
-                  "Planejamento detalhado para verificar a viabilidade de procedimento extrajudicial em cartório ou propositura de ação judicial contundente com pedidos de liminar urgente.",
+                  "Definição da Rota Estratégica Mais Vantajosa",
+                  "Planejamento detalhado para calcular o melhor momento de requerer o benefício, preparar documentos à prova de indeferimento ou acionar a Justiça Federal com pedido liminar.",
                 ],
                 [
                   "03",
                   "Atuação Incisiva, Presença Contínua & Retorno Rápido",
-                  "Protocolo imediato, acompanhamento constante perante juizados e cartórios, mantendo você informado sobre cada passo sem burocracias e sem demoras.",
+                  "Protocolo imediato, acompanhamento constante perante o INSS e tribunais, mantendo você informado sobre cada andamento sem burocracias e sem demoras.",
                 ],
               ].map(([number, title, description]) => (
                 <motion.div
@@ -1235,12 +1259,12 @@ export default function Home() {
                   variants={reveal}
                   className="grid gap-3 py-6 first:pt-0 sm:grid-cols-[70px_1fr] sm:gap-6 sm:py-7"
                 >
-                  <span className="font-serif text-2xl font-semibold text-[#8c6725]">
+                  <span className="font-serif text-2xl font-semibold text-[#745f4d]">
                     {number}
                   </span>
                   <div>
-                    <h3 className="font-serif text-2xl text-[#12151b]">{title}</h3>
-                    <p className="mt-2 max-w-lg text-[13px] leading-6 text-[#2a2f3a]">
+                    <h3 className="font-serif text-2xl text-[#11141a]">{title}</h3>
+                    <p className="mt-2 max-w-lg text-[13px] leading-6 text-[#282e3b]">
                       {description}
                     </p>
                   </div>
@@ -1250,54 +1274,54 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Avaliações / Depoimentos Reais no Google Meu Negócio (61 Avaliações 5,0 ★) */}
+        {/* Avaliações / Depoimentos Reais no Google Meu Negócio (47 Avaliações 5,0 ★) */}
         <section
           id="avaliacoes"
-          className="scroll-mt-24 border-t border-[#c5a059]/25 bg-[#f4efea] py-20 text-[#12151b] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#a8927b]/25 bg-[#f4efe8] py-20 text-[#11141a] sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
               <Heading
                 light
                 eyebrow="PROVA SOCIAL VERIFICADA · GOOGLE MEU NEGÓCIO"
-                description="Veja avaliações autênticas e espontâneas de clientes no Google sobre o acolhimento, a firmeza e os resultados da Dra. Janaína Carvalho em Dores do Indaiá - MG."
+                description="Veja avaliações autênticas e espontâneas de clientes no Google sobre o acolhimento, a persistência e as causas ganhas pela Dra. Paloma Fernandes em Guanhães - MG."
               >
                 Avaliada com nota máxima 5,0 ★ com{" "}
-                <span className="italic text-[#8c6725]">
-                  61 avaliações no Google pela competência, ética e excelência no atendimento.
+                <span className="italic text-[#745f4d]">
+                  47 avaliações no Google pela competência, ética e excelência no atendimento.
                 </span>
               </Heading>
 
               {/* Verified Google Badge Card */}
-              <div className="flex flex-col gap-3 rounded-xl border border-[#e5dfd7] bg-white p-5 shadow-xs sm:flex-row sm:items-center md:min-w-[340px]">
-                <div className="flex size-14 shrink-0 items-center justify-center rounded-lg border border-[#c5a059]/30 bg-[#faf8f5] shadow-xs">
+              <div className="flex flex-col gap-3 rounded-xl border border-[#e2dad0] bg-white p-5 shadow-xs sm:flex-row sm:items-center md:min-w-[340px]">
+                <div className="flex size-14 shrink-0 items-center justify-center rounded-lg border border-[#a8927b]/30 bg-[#faf8f5] shadow-xs">
                   <GoogleIcon size={30} />
                 </div>
                 <div>
                   <div className="flex items-center gap-2">
-                    <span className="font-serif text-3xl font-bold leading-none text-[#12151b]">
+                    <span className="font-serif text-3xl font-bold leading-none text-[#11141a]">
                       5,0
                     </span>
-                    <div className="flex gap-0.5 text-[#c5a059]">
+                    <div className="flex gap-0.5 text-[#d4a359]">
                       {Array.from({ length: 5 }, (_, i) => (
                         <Star
                           key={i}
                           size={14}
-                          className="fill-[#c5a059] text-[#c5a059]"
+                          className="fill-[#d4a359] text-[#d4a359]"
                         />
                       ))}
                     </div>
                   </div>
-                  <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-[#2a2f3a]">
-                    Janaína Carvalho — Advogada
+                  <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-[#282e3b]">
+                    Paloma Fernandes Advocacia Previdenciária
                   </p>
                   <a
                     href={GOOGLE_SEARCH_URL}
                     target="_blank"
                     rel="noreferrer"
-                    className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-[#8c6725] transition-colors hover:text-[#12151b]"
+                    className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-[#745f4d] transition-colors hover:text-[#11141a]"
                   >
-                    61 avaliações no Google (100% 5★) <ArrowUpRight size={13} />
+                    47 avaliações no Google (100% 5★) <ArrowUpRight size={13} />
                   </a>
                 </div>
               </div>
@@ -1308,41 +1332,41 @@ export default function Home() {
               {clientReviews.map((review) => (
                 <article
                   key={review.name}
-                  className="group relative flex flex-col justify-between rounded-xl border border-[#e5dfd7] bg-white p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#c5a059] hover:shadow-md sm:p-8"
+                  className="group relative flex flex-col justify-between rounded-xl border border-[#e2dad0] bg-white p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#a8927b] hover:shadow-md sm:p-8"
                 >
                   <div>
                     {/* Header: Stars + Badge */}
                     <div className="flex items-center justify-between gap-2">
-                      <div className="flex gap-1 text-[#c5a059]">
+                      <div className="flex gap-1 text-[#d4a359]">
                         {Array.from({ length: review.rating }, (_, i) => (
                           <Star
                             key={i}
                             size={14}
-                            className="fill-[#c5a059] text-[#c5a059]"
+                            className="fill-[#d4a359] text-[#d4a359]"
                           />
                         ))}
                       </div>
-                      <span className="rounded-md border border-[#c5a059]/30 bg-[#faf4e8] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#8c6725] shadow-xs">
+                      <span className="rounded-md border border-[#a8927b]/30 bg-[#faf8f5] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#745f4d] shadow-xs">
                         {review.badge}
                       </span>
                     </div>
 
                     {/* Review content */}
-                    <p className="mt-5 text-[14px] italic leading-relaxed text-[#12151b]">
+                    <p className="mt-5 text-[14px] italic leading-relaxed text-[#11141a]">
                       &ldquo;{review.content}&rdquo;
                     </p>
                   </div>
 
                   {/* Reviewer info */}
-                  <div className="mt-6 flex items-center gap-3 border-t border-[#e5dfd7] pt-4">
-                    <div className="grid size-10 shrink-0 place-items-center rounded-lg border border-[#c5a059]/35 bg-[#f8f3e8] font-serif text-sm font-semibold text-[#8c6725] shadow-xs">
+                  <div className="mt-6 flex items-center gap-3 border-t border-[#e2dad0] pt-4">
+                    <div className="grid size-10 shrink-0 place-items-center rounded-lg border border-[#a8927b]/35 bg-[#f3ede4] font-serif text-sm font-semibold text-[#745f4d] shadow-xs">
                       {review.name.charAt(0)}
                     </div>
                     <div className="min-w-0 flex-1">
-                      <p className="truncate font-serif text-base font-semibold text-[#12151b]">
+                      <p className="truncate font-serif text-base font-semibold text-[#11141a]">
                         {review.name}
                       </p>
-                      <p className="text-[10px] uppercase tracking-wider text-[#5a6272]">
+                      <p className="text-[10px] uppercase tracking-wider text-[#565e6e]">
                         {review.reviewerTag}
                       </p>
                     </div>
@@ -1352,23 +1376,23 @@ export default function Home() {
             </div>
 
             {/* Bottom Actions and Trust Tags */}
-            <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-[#e5dfd7] pt-8 sm:flex-row">
+            <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-[#e2dad0] pt-8 sm:flex-row">
               <div className="flex flex-wrap items-center gap-2">
                 {[
-                  "Advogada em Dores do Indaiá - MG",
-                  "Especialista em Direito de Família",
-                  "Nota 5,0 ★ no Google (61 avaliações)",
-                  "Divórcios em Cartório Extrajudiciais",
-                  "Guarda e Regime de Convivência",
-                  "Pensão Alimentícia & Execuções",
-                  "Inventários e Partilha de Bens",
+                  "Advogada em Guanhães - MG",
+                  "Direito Previdenciário INSS",
+                  "Nota 5,0 ★ no Google (47 avaliações)",
+                  "Planejamento Previdenciário",
+                  "Aposentadoria Rural e Urbana",
+                  "Auxílio-Doença e Invalidez",
+                  "BPC / LOAS",
                   "Atendimento Digital para Todo o Brasil",
                 ].map((tag) => (
                   <span
                     key={tag}
-                    className="inline-flex items-center gap-1.5 rounded-lg border border-[#e5dfd7] bg-white px-3.5 py-1.5 text-[11px] font-medium text-[#12151b] shadow-xs"
+                    className="inline-flex items-center gap-1.5 rounded-lg border border-[#e2dad0] bg-white px-3.5 py-1.5 text-[11px] font-medium text-[#11141a] shadow-xs"
                   >
-                    <CheckCircle2 size={13} className="text-[#8c6725]" />
+                    <CheckCircle2 size={13} className="text-[#745f4d]" />
                     {tag}
                   </span>
                 ))}
@@ -1378,9 +1402,9 @@ export default function Home() {
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="group inline-flex shrink-0 items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#8c6725] transition-colors hover:text-[#12151b]"
+                className="group inline-flex shrink-0 items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#745f4d] transition-colors hover:text-[#11141a]"
               >
-                Ver Todas as 61 Avaliações no Google{" "}
+                Ver Todas as 47 Avaliações no Google{" "}
                 <ArrowUpRight
                   size={15}
                   className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
@@ -1390,28 +1414,28 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Contato & Localização da Sede em Dores do Indaiá - MG */}
+        {/* Contato & Localização da Sede em Guanhães - MG */}
         <section
           id="contato"
-          className="scroll-mt-24 border-t border-[#c5a059]/25 bg-[#faf8f5] py-20 text-[#12151b] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#a8927b]/25 bg-[#faf8f5] py-20 text-[#11141a] sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
                 light
-                eyebrow="CONTATO & ATENDIMENTO EM DORES DO INDAIÁ"
-                description="Agende uma consulta presencial em nosso escritório na Praça Pref. Mário Carneiro ou inicie seu atendimento imediatamente pelo WhatsApp para examinar seu caso com discrição, ética e agilidade."
+                eyebrow="CONTATO & ATENDIMENTO EM GUANHÃES"
+                description="Agende uma consulta presencial em nosso escritório na Av. Gov. Milton Campos ou inicie seu atendimento imediatamente pelo WhatsApp para examinar seu caso com discrição, ética e agilidade."
               >
                 Estamos prontos para{" "}
-                <span className="italic text-[#8c6725]">
-                  escutar sua situação e proteger seus direitos e sua família.
+                <span className="italic text-[#745f4d]">
+                  escutar sua história e conquistar sua aposentadoria e benefícios.
                 </span>
               </Heading>
 
               <div className="mt-9 flex flex-col items-start gap-4">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Janaína! Gostaria de agendar um atendimento para análise do meu caso de família."
+                    "Olá, Dra. Paloma! Gostaria de agendar um atendimento para análise do meu benefício previdenciário no INSS."
                   )}
                   target="_blank"
                   size="lg"
@@ -1420,58 +1444,58 @@ export default function Home() {
                 >
                   <WhatsAppIcon size={17} /> Iniciar Conversa no WhatsApp
                 </GlowingButton>
-                <p className="text-[11px] leading-5 text-[#2a2f3a]">
+                <p className="text-[11px] leading-5 text-[#282e3b]">
                   Telefone e WhatsApp direto:{" "}
-                  <strong className="text-[#12151b]">{PHONE_DISPLAY}</strong>
+                  <strong className="text-[#11141a]">{PHONE_DISPLAY}</strong>
                 </p>
               </div>
 
-              <div className="mt-10 space-y-4 text-xs text-[#2a2f3a]">
+              <div className="mt-10 space-y-4 text-xs text-[#282e3b]">
                 <div className="flex items-start gap-3">
                   <Clock
                     size={16}
-                    className="mt-0.5 shrink-0 text-[#8c6725]"
+                    className="mt-0.5 shrink-0 text-[#745f4d]"
                   />
                   <div>
-                    <p className="font-semibold text-[#12151b]">
+                    <p className="font-semibold text-[#11141a]">
                       Horário de Funcionamento
                     </p>
-                    <p className="mt-0.5 text-[#12151b]">
+                    <p className="mt-0.5 text-[#11141a]">
                       Segunda a Sexta-feira das 08:30 às 18:00
                     </p>
-                    <p className="text-[11px] text-[#5a6272]">
-                      Atendimento presencial no Centro de Dores do Indaiá - MG e consultoria online em todo o Brasil
+                    <p className="text-[11px] text-[#565e6e]">
+                      Atendimento presencial no Centro de Guanhães - MG e consultoria online em todo o Brasil
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3 pt-1">
-                  <Phone size={16} className="shrink-0 text-[#8c6725]" />
+                  <Phone size={16} className="shrink-0 text-[#745f4d]" />
                   <a
                     href={`tel:+${WHATSAPP_NUMBER}`}
-                    className="font-medium text-[#12151b] transition-colors hover:text-[#8c6725]"
+                    className="font-medium text-[#11141a] transition-colors hover:text-[#745f4d]"
                   >
                     {PHONE_DISPLAY} (Ligações e WhatsApp)
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <InstagramIcon size={16} className="shrink-0 text-[#8c6725]" />
+                  <InstagramIcon size={16} className="shrink-0 text-[#745f4d]" />
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noreferrer"
-                    className="transition-colors hover:text-[#8c6725] text-[#12151b]"
+                    className="transition-colors hover:text-[#745f4d] text-[#11141a]"
                   >
                     {INSTAGRAM_HANDLE} (Instagram Oficial)
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <Mail size={16} className="shrink-0 text-[#8c6725]" />
+                  <Mail size={16} className="shrink-0 text-[#745f4d]" />
                   <a
                     href={`mailto:${EMAIL_CONTACT}`}
-                    className="transition-colors hover:text-[#8c6725] text-[#12151b]"
+                    className="transition-colors hover:text-[#745f4d] text-[#11141a]"
                   >
                     {EMAIL_CONTACT}
                   </a>
@@ -1480,16 +1504,16 @@ export default function Home() {
                 <div className="flex items-start gap-3">
                   <MapPin
                     size={16}
-                    className="mt-0.5 shrink-0 text-[#8c6725]"
+                    className="mt-0.5 shrink-0 text-[#745f4d]"
                   />
                   <div>
-                    <span className="text-[#12151b]">{ADDRESS_TEXT}</span>
+                    <span className="text-[#11141a]">{ADDRESS_TEXT}</span>
                     <br />
                     <a
                       href={GOOGLE_MAPS_URL}
                       target="_blank"
                       rel="noreferrer"
-                      className="mt-1 inline-flex items-center gap-1 font-semibold text-[#8c6725] hover:underline"
+                      className="mt-1 inline-flex items-center gap-1 font-semibold text-[#745f4d] hover:underline"
                     >
                       Ver no Google Maps <ArrowUpRight size={12} />
                     </a>
@@ -1498,89 +1522,89 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Office Card with authentic office photo */}
-            <div className="relative overflow-hidden rounded-xl border border-[#e5dfd7] bg-white p-7 shadow-sm sm:p-10">
-              <div className="absolute right-0 top-0 h-1.5 w-32 bg-gradient-to-r from-[#9a762b] via-[#c5a059] to-[#d89c48]" />
+            {/* Office Card with executive presentation */}
+            <div className="relative overflow-hidden rounded-xl border border-[#e2dad0] bg-white p-7 shadow-sm sm:p-10">
+              <div className="absolute right-0 top-0 h-1.5 w-32 bg-gradient-to-r from-[#745f4d] via-[#a8927b] to-[#bea993]" />
 
               <div className="flex flex-col gap-2">
-                <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#8c6725]">
-                  Sede do Escritório em Dores do Indaiá - MG
+                <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#745f4d]">
+                  Sede do Escritório em Guanhães - MG
                 </p>
-                <div className="relative h-[72px] w-[332px] sm:h-[83px] sm:w-[416px]">
+                <div className="relative h-[68px] w-[290px] sm:h-[78px] sm:w-[350px]">
                   <Image
                     src={LOGO_SRC}
-                    alt="Dra. Janaína Carvalho — Advogada"
+                    alt="Dra. Paloma Fernandes — Advocacia Previdenciária"
                     fill
                     unoptimized
-                    sizes="416px"
+                    sizes="350px"
                     className="object-contain object-left"
                   />
                 </div>
               </div>
 
-              {/* Office interior photo */}
-              <div className="relative mt-5 aspect-[16/10] w-full overflow-hidden rounded-lg border border-[#e5dfd7] shadow-xs">
+              {/* Office presentation card */}
+              <div className="relative mt-5 aspect-[16/10] w-full overflow-hidden rounded-lg border border-[#e2dad0] bg-[#0b0d11] shadow-xs">
                 <Image
-                  src={FOTO_ESCRITORIO_SRC}
-                  alt="Espaço de Atendimento da Dra. Janaína Carvalho em Dores do Indaiá - MG"
+                  src={FOTO_HERO_SRC}
+                  alt="Espaço de Atendimento da Dra. Paloma Fernandes em Guanhães - MG"
                   fill
                   unoptimized
                   className="object-cover object-center"
                 />
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/45 to-transparent p-3.5 text-white">
-                  <p className="text-xs font-semibold">Ambiente Acolhedor, Discreto e Moderno</p>
-                  <p className="text-[10px] text-stone-200">Praça Pref. Mário Carneiro, nº 50 · Sala 01 · Centro · Dores do Indaiá - MG</p>
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/55 to-transparent p-4 text-white">
+                  <p className="text-xs font-semibold">Ambiente Executivo, Acolhedor e Moderno</p>
+                  <p className="text-[10px] text-stone-200">Av. Gov. Milton Campos, 2973 · Sala 204 · Centro · Guanhães - MG</p>
                 </div>
               </div>
 
-              <address className="mt-6 max-w-md text-[14px] not-italic leading-7 text-[#2a2f3a]">
-                <strong className="font-semibold text-[#12151b]">
-                  Dra. Janaína Carvalho — Advogada
+              <address className="mt-6 max-w-md text-[14px] not-italic leading-7 text-[#282e3b]">
+                <strong className="font-semibold text-[#11141a]">
+                  Dra. Paloma Fernandes — Advocacia Previdenciária INSS
                 </strong>
                 <br />
                 {LAWYER_TITLE}
                 <br />
-                Atendimento presencial em Dores do Indaiá e online para todo o Brasil
+                Atendimento presencial em Guanhães e online para todo o Brasil
                 <br />
                 {ADDRESS_TEXT}
               </address>
 
               {/* Weekly schedule table */}
-              <div className="mt-6 rounded-lg border border-[#e5dfd7] bg-[#faf8f5] p-4 text-xs">
-                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#8c6725]">
+              <div className="mt-6 rounded-lg border border-[#e2dad0] bg-[#faf8f5] p-4 text-xs">
+                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#745f4d]">
                   Atendimento & Horários
                 </p>
-                <div className="grid grid-cols-2 gap-y-1.5 text-[#2a2f3a]">
+                <div className="grid grid-cols-2 gap-y-1.5 text-[#282e3b]">
                   <span>Segunda a Sexta</span>
-                  <span className="text-right font-semibold text-[#12151b]">
+                  <span className="text-right font-semibold text-[#11141a]">
                     08:30 às 18:00
                   </span>
                   <span>Atendimento Presencial</span>
-                  <span className="text-right font-medium text-[#8c6725]">
-                    Centro · Dores do Indaiá - MG
+                  <span className="text-right font-medium text-[#745f4d]">
+                    Centro · Guanhães - MG
                   </span>
                   <span>Endereço</span>
-                  <span className="text-right text-[#12151b]">Praça Pref. Mário Carneiro, 50 - Sl 01</span>
+                  <span className="text-right text-[#11141a]">Av. Gov. Milton Campos, 2973 - Sl 204</span>
                   <span>Avaliações Google</span>
-                  <span className="text-right font-semibold text-[#8c6725]">5,0 ★ (61 avaliações)</span>
+                  <span className="text-right font-semibold text-[#745f4d]">5,0 ★ (47 avaliações)</span>
                   <span>Atendimento Digital</span>
-                  <span className="text-right text-[#12151b]">Todo o Brasil & Exterior</span>
+                  <span className="text-right text-[#11141a]">Todo o Brasil & Exterior</span>
                 </div>
               </div>
 
-              <div className="my-7 h-px bg-[#e5dfd7]" />
+              <div className="my-7 h-px bg-[#e2dad0]" />
 
               <div className="flex flex-wrap items-center justify-between gap-4">
-                <p className="text-xs text-[#5a6272]">
+                <p className="text-xs text-[#565e6e]">
                   Atendimento humanizado, ético e com absoluto sigilo profissional
                 </p>
                 <a
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Janaína! Gostaria de agendar um atendimento no escritório."
+                    "Olá, Dra. Paloma! Gostaria de agendar um atendimento no escritório."
                   )}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg border border-[#c5a059]/40 bg-[#f4efea] px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-[#12151b] transition-colors hover:border-[#c5a059] hover:bg-[#0e1116] hover:text-[#fdfcf9]"
+                  className="inline-flex items-center gap-2 rounded-lg border border-[#a8927b]/40 bg-[#f4efe8] px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-[#11141a] transition-colors hover:border-[#a8927b] hover:bg-[#0b0d11] hover:text-[#faf8f5]"
                 >
                   <WhatsAppIcon size={14} /> Falar no WhatsApp <ArrowUpRight size={14} />
                 </a>
@@ -1590,23 +1614,23 @@ export default function Home() {
         </section>
 
         {/* Pre-Footer CTA Strip */}
-        <section className="border-t border-[#c5a059]/25 bg-gradient-to-r from-[#f4efea] via-[#faf8f5] to-[#f4efea] px-5 py-14 text-[#12151b] shadow-xs sm:px-8 sm:py-16 lg:px-12">
+        <section className="border-t border-[#a8927b]/25 bg-gradient-to-r from-[#f4efe8] via-[#faf8f5] to-[#f4efe8] px-5 py-14 text-[#11141a] shadow-xs sm:px-8 sm:py-16 lg:px-12">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-7 sm:flex-row sm:items-center">
             <div>
-              <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#8c6725]">
-                <Sparkles size={13} /> DRA. JANAÍNA CARVALHO — ADVOCACIA ESPECIALIZADA EM DIREITO DE FAMÍLIA
+              <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#745f4d]">
+                <Sparkles size={13} /> DRA. PALOMA FERNANDES — ADVOCACIA PREVIDENCIÁRIA ESPECIALIZADA
               </p>
-              <h2 className="mt-3 max-w-2xl font-serif text-3xl leading-tight text-[#12151b] sm:text-4xl">
-                Precisa de uma advogada especialista, acolhedora e combativa para resguardar seus filhos e seus direitos?
+              <h2 className="mt-3 max-w-2xl font-serif text-3xl leading-tight text-[#11141a] sm:text-4xl">
+                Precisa de uma advogada especialista, combativa e acolhedora para conquistar sua aposentadoria ou benefício no INSS?
               </h2>
             </div>
             <a
               href={getWhatsAppUrl(
-                "Olá, Dra. Janaína! Gostaria de uma avaliação jurídica para a minha situação familiar."
+                "Olá, Dra. Paloma! Gostaria de uma avaliação jurídica para o meu benefício do INSS."
               )}
               target="_blank"
               rel="noreferrer"
-              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-lg bg-gradient-to-r from-[#0e1116] via-[#181c23] to-[#0e1116] px-7 py-4 text-[11px] font-bold uppercase tracking-[0.14em] text-white shadow-md transition-all hover:-translate-y-0.5 hover:brightness-105 hover:shadow-lg border border-[#c5a059]/40 hover:border-[#c5a059]"
+              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-lg bg-gradient-to-r from-[#0b0d11] via-[#171b22] to-[#0b0d11] px-7 py-4 text-[11px] font-bold uppercase tracking-[0.14em] text-white shadow-md transition-all hover:-translate-y-0.5 hover:brightness-105 hover:shadow-lg border border-[#a8927b]/40 hover:border-[#bea993]"
             >
               <WhatsAppIcon size={17} /> Falar no WhatsApp{" "}
               <ArrowUpRight size={15} />
@@ -1615,38 +1639,38 @@ export default function Home() {
         </section>
 
         {/* Footer - Elegant Light Luxury */}
-        <footer className="border-t border-[#e5dfd7] bg-[#f4efea] px-5 py-14 text-[#12151b] sm:px-8 lg:px-12">
+        <footer className="border-t border-[#e2dad0] bg-[#f4efe8] px-5 py-14 text-[#11141a] sm:px-8 lg:px-12">
           <div className="mx-auto grid max-w-7xl gap-10 sm:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1fr]">
             <div>
               <a
                 href="#inicio"
-                aria-label="Dra. Janaína Carvalho — Advogada"
+                aria-label="Dra. Paloma Fernandes — Advocacia Previdenciária"
                 className="inline-block transition-transform hover:scale-[1.01]"
               >
-                <div className="relative h-[83px] w-[332px] sm:h-[104px] sm:w-[416px]">
+                <div className="relative h-[78px] w-[310px] sm:h-[95px] sm:w-[380px]">
                   <Image
                     src={LOGO_SRC}
-                    alt="Dra. Janaína Carvalho — Advogada"
+                    alt="Dra. Paloma Fernandes — Advocacia Previdenciária"
                     fill
                     unoptimized
-                    sizes="416px"
+                    sizes="380px"
                     className="object-contain object-left"
                   />
                 </div>
               </a>
-              <p className="mt-4 max-w-xs text-xs leading-6 text-[#5a6272]">
-                ⚖️ Advocacia especializada com defesa humanizada e estratégica. Atuação dedicada em Direito de Família e Sucessões: Divórcio, Guarda, Pensão Alimentícia, Partilha de Bens e Inventários em Dores do Indaiá - MG e em todo o Brasil.
+              <p className="mt-4 max-w-xs text-xs leading-6 text-[#565e6e]">
+                ⚖️ Advocacia previdenciária especializada com defesa humana e estratégica. Atuação combativa no INSS: Planejamento Previdenciário, Aposentadorias, Benefícios por Incapacidade, BPC/LOAS e Pensão por Morte em Guanhães - MG e em todo o Brasil.
               </p>
-              <p className="mt-3 text-[11px] font-semibold text-[#8c6725]">
-                Dra. Janaína Carvalho — Advogada | Especialista em Direito de Família
+              <p className="mt-3 text-[11px] font-semibold text-[#745f4d]">
+                Dra. Paloma Fernandes — Advogada | OAB/MG
               </p>
             </div>
 
             <div>
-              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8c6725]">
+              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#745f4d]">
                 Navegação
               </h2>
-              <div className="mt-4 flex flex-col items-start gap-3 text-xs text-[#5a6272]">
+              <div className="mt-4 flex flex-col items-start gap-3 text-xs text-[#565e6e]">
                 <a className="footer-link" href="#inicio">
                   Início
                 </a>
@@ -1654,7 +1678,7 @@ export default function Home() {
                   A Advogada
                 </a>
                 <a className="footer-link" href="#atuacao">
-                  Direito de Família
+                  Especialidades INSS
                 </a>
                 <a className="footer-link" href="#diferenciais">
                   Por Que Escolher
@@ -1669,17 +1693,17 @@ export default function Home() {
             </div>
 
             <div>
-              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8c6725]">
+              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#745f4d]">
                 Contato & Atendimento
               </h2>
-              <div className="mt-4 flex flex-col items-start gap-2.5 text-xs text-[#5a6272]">
+              <div className="mt-4 flex flex-col items-start gap-2.5 text-xs text-[#565e6e]">
                 <a
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Janaína! Gostaria de tirar dúvidas com o escritório."
+                    "Olá, Dra. Paloma! Gostaria de tirar dúvidas com o escritório."
                   )}
                   target="_blank"
                   rel="noreferrer"
-                  className="footer-link inline-flex items-center gap-2 font-medium text-[#12151b]"
+                  className="footer-link inline-flex items-center gap-2 font-medium text-[#11141a]"
                 >
                   <WhatsAppIcon size={15} /> WhatsApp: {PHONE_DISPLAY}
                 </a>
@@ -1712,16 +1736,16 @@ export default function Home() {
                   <MapPin size={15} className="mt-0.5 shrink-0" />
                   <span>{ADDRESS_TEXT}</span>
                 </a>
-                <p className="inline-flex items-center gap-2 pt-1 text-[11px] text-[#8c6725]">
+                <p className="inline-flex items-center gap-2 pt-1 text-[11px] text-[#745f4d]">
                   <Clock size={14} className="shrink-0" /> Seg a Sex: 08:30 às 18:00
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-[#e5dfd7] pt-6 text-[10px] text-stone-500 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-[#e2dad0] pt-6 text-[10px] text-stone-500 sm:flex-row sm:items-center sm:justify-between">
             <p>
-              © {new Date().getFullYear()} DRA. JANAÍNA CARVALHO — ADVOGADA. Todos os direitos reservados.
+              © {new Date().getFullYear()} DRA. PALOMA FERNANDES — ADVOCACIA PREVIDENCIÁRIA. Todos os direitos reservados.
             </p>
             <p>
               Conteúdo informativo, em estrita conformidade com o Código de Ética e Disciplina da OAB.
@@ -1736,16 +1760,16 @@ export default function Home() {
         >
           <a
             href={getWhatsAppUrl(
-              "Olá, Dra. Janaína! Gostaria de consultar sobre meu caso e tirar dúvidas pelo WhatsApp."
+              "Olá, Dra. Paloma! Gostaria de consultar sobre meu caso e tirar dúvidas pelo WhatsApp."
             )}
             target="_blank"
             rel="noreferrer"
-            aria-label="Falar agora pelo WhatsApp com a Dra. Janaína Carvalho"
+            aria-label="Falar agora pelo WhatsApp com a Dra. Paloma Fernandes"
             className="group relative flex size-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-[#25D366]/40"
           >
             <WhatsAppIcon size={28} />
-            <span className="pointer-events-none absolute right-16 hidden whitespace-nowrap rounded-lg bg-[#0e1116] border border-[#c5a059]/40 px-3.5 py-1.5 text-xs font-semibold text-white shadow-lg transition-opacity group-hover:block">
-              Falar com Dra. Janaína Carvalho
+            <span className="pointer-events-none absolute right-16 hidden whitespace-nowrap rounded-lg bg-[#0b0d11] border border-[#a8927b]/40 px-3.5 py-1.5 text-xs font-semibold text-white shadow-lg transition-opacity group-hover:block">
+              Falar com Dra. Paloma Fernandes
             </span>
           </a>
         </aside>
@@ -1769,30 +1793,30 @@ export default function Home() {
                 exit={{ opacity: 0, y: 16, scale: 0.99 }}
                 transition={{ duration: 0.24 }}
                 onClick={(event) => event.stopPropagation()}
-                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-xl border border-[#e5dfd7] bg-white p-7 shadow-2xl sm:max-w-xl sm:rounded-xl sm:p-10 text-[#12151b]"
+                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-xl border border-[#e2dad0] bg-white p-7 shadow-2xl sm:max-w-xl sm:rounded-xl sm:p-10 text-[#11141a]"
               >
                 <button
                   type="button"
                   aria-label="Fechar detalhes da especialidade"
                   onClick={() => setActiveArea(null)}
-                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-[#e5dfd7] bg-[#faf8f5] text-[#12151b] transition-colors hover:border-[#c5a059] hover:text-[#8c6725]"
+                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-[#e2dad0] bg-[#faf8f5] text-[#11141a] transition-colors hover:border-[#a8927b] hover:text-[#745f4d]"
                 >
                   <X size={18} />
                 </button>
 
                 <div className="flex items-center gap-3 pr-12">
-                  <div className="relative size-10 shrink-0 overflow-hidden rounded-lg border border-[#c5a059]/35 bg-[#faf8f5] p-1 shadow-xs">
+                  <div className="relative size-10 shrink-0 overflow-hidden rounded-lg border border-[#a8927b]/35 bg-[#faf8f5] p-1 shadow-xs">
                     <Image
                       src={LOGO_SYMBOL_SRC}
-                      alt="Balança da Justiça Dra. Janaína Carvalho"
+                      alt="Monograma PF Dra. Paloma Fernandes"
                       fill
                       sizes="40px"
                       className="object-contain"
                     />
                   </div>
                   <div>
-                    <p className="eyebrow-light">ÁREA DE ATUAÇÃO</p>
-                    <p className="text-[10px] font-semibold tracking-wider text-[#8c6725] uppercase">
+                    <p className="eyebrow-light">ESPECIALIDADE INSS</p>
+                    <p className="text-[10px] font-semibold tracking-wider text-[#745f4d] uppercase">
                       {LAWYER_NAME} · {LAWYER_TITLE}
                     </p>
                   </div>
@@ -1800,18 +1824,18 @@ export default function Home() {
 
                 <h2
                   id="area-dialog-title"
-                  className="mt-4 max-w-sm pr-10 font-serif text-3xl leading-tight text-[#12151b] sm:text-4xl"
+                  className="mt-4 max-w-sm pr-10 font-serif text-3xl leading-tight text-[#11141a] sm:text-4xl"
                 >
                   {activeArea.title}
                 </h2>
 
-                <p className="mt-5 text-sm leading-7 text-[#2a2f3a]">
+                <p className="mt-5 text-sm leading-7 text-[#282e3b]">
                   {activeArea.details}
                 </p>
 
-                <div className="mt-6 border-t border-[#e5dfd7] pt-5">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#8c6725]">
-                    Demandas e Pedidos Atendidos pelo Escritório:
+                <div className="mt-6 border-t border-[#e2dad0] pt-5">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#745f4d]">
+                    Demandas e Serviços Atendidos pelo Escritório:
                   </p>
                   <ul className="mt-4 space-y-3">
                     {activeArea.topics.map((topic) => (
@@ -1819,7 +1843,7 @@ export default function Home() {
                         key={topic}
                         className="flex items-center gap-3 text-sm text-[#1e293b]"
                       >
-                        <span className="size-2 shrink-0 rounded-full bg-[#c5a059]" />
+                        <span className="size-2 shrink-0 rounded-full bg-[#a8927b]" />
                         <span>{topic}</span>
                       </li>
                     ))}
@@ -1839,7 +1863,7 @@ export default function Home() {
                   <button
                     type="button"
                     onClick={() => setActiveArea(null)}
-                    className="px-5 py-3 text-xs font-semibold text-stone-500 transition-colors hover:text-[#12151b]"
+                    className="px-5 py-3 text-xs font-semibold text-stone-500 transition-colors hover:text-[#11141a]"
                   >
                     Fechar
                   </button>

@@ -35,28 +35,28 @@ export default function GlowingButton({
     lg: "px-7 py-4 text-xs tracking-[0.14em]",
   }[size];
 
-  // Refined metallic polished warm gold & deep obsidian noir for Dra. Janaína Carvalho
+  // Refined metallic polished platinum champagne & deep obsidian noir for Dra. Paloma Fernandes
   const variantClasses = {
-    emerald: // Backward compatible alias mapping to obsidian noir & gold
-      "border border-[#c5a059]/40 bg-gradient-to-r from-[#0e1116] via-[#181c23] to-[#0e1116] text-white font-bold shadow-md shadow-black/25 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-lg hover:border-[#c5a059]",
+    emerald: // Backward compatible alias mapping to obsidian noir & platinum champagne
+      "border border-[#a8927b]/50 bg-gradient-to-r from-[#0b0d11] via-[#171b22] to-[#0b0d11] text-white font-bold shadow-md shadow-black/30 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-lg hover:border-[#bea993]",
     navy:
-      "border border-[#c5a059]/40 bg-gradient-to-r from-[#0e1116] via-[#181c23] to-[#0e1116] text-white font-bold shadow-md shadow-black/25 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-lg hover:border-[#c5a059]",
+      "border border-[#a8927b]/50 bg-gradient-to-r from-[#0b0d11] via-[#171b22] to-[#0b0d11] text-white font-bold shadow-md shadow-black/30 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-lg hover:border-[#bea993]",
     ruby:
-      "border border-[#c5a059]/40 bg-gradient-to-r from-[#0e1116] via-[#181c23] to-[#0e1116] text-white font-bold shadow-md shadow-black/25 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-lg hover:border-[#c5a059]",
-    gold:
-      "border border-[#d89c48] bg-gradient-to-r from-[#9a762b] via-[#c5a059] to-[#b88d3b] text-white font-bold shadow-md shadow-[#c5a059]/30 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold",
-    dark:
-      "border border-[#c5a059]/50 bg-[#0e1116] text-[#faf8f5] font-bold shadow-sm hover:-translate-y-0.5 hover:bg-[#181c23] hover:border-[#c5a059] hover:text-white",
+      "border border-[#a8927b]/50 bg-gradient-to-r from-[#0b0d11] via-[#171b22] to-[#0b0d11] text-white font-bold shadow-md shadow-black/30 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-lg hover:border-[#bea993]",
     champagne:
-      "border border-[#c5a059]/50 bg-[#faf8f5] text-[#12151b] font-bold shadow-xs hover:-translate-y-0.5 hover:bg-[#f4efea] hover:border-[#c5a059]",
+      "border border-[#8f7863] bg-gradient-to-r from-[#8f7863] via-[#a8927b] to-[#745f4d] text-white font-bold shadow-md shadow-[#a8927b]/25 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-champagne",
+    gold:
+      "border border-[#c9944d] bg-gradient-to-r from-[#9e6e28] via-[#d4a359] to-[#be8a3a] text-white font-bold shadow-md shadow-[#d4a359]/30 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold",
+    dark:
+      "border border-[#a8927b]/40 bg-[#0b0d11] text-[#faf8f5] font-bold shadow-sm hover:-translate-y-0.5 hover:bg-[#171b22] hover:border-[#bea993] hover:text-white",
     outline:
-      "border border-[#c5a059]/70 bg-white text-[#12151b] hover:-translate-y-0.5 hover:border-[#c5a059] hover:bg-[#faf8f5]",
+      "border border-[#a8927b]/70 bg-white text-[#11141a] hover:-translate-y-0.5 hover:border-[#a8927b] hover:bg-[#faf8f5]",
     white:
-      "border border-[#e5dfd7] bg-white text-[#12151b] shadow-sm hover:-translate-y-0.5 hover:border-[#c5a059] hover:shadow-md",
+      "border border-[#e2dad0] bg-white text-[#11141a] shadow-sm hover:-translate-y-0.5 hover:border-[#a8927b] hover:shadow-md",
   }[variant];
 
   const classes =
-    "inline-flex items-center justify-center gap-2 rounded-lg font-bold uppercase transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#c5a059] select-none text-center cursor-pointer " +
+    "inline-flex items-center justify-center gap-2 rounded-lg font-bold uppercase transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#a8927b] select-none text-center cursor-pointer " +
     sizeClasses +
     " " +
     variantClasses +

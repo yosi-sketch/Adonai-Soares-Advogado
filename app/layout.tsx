@@ -40,56 +40,58 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.janainacarvalhoadv.com.br"),
+  metadataBase: new URL("https://www.palomafernandesadv.com.br"),
   title:
-    "Dra. Janaína Carvalho — Advogada | Especialista em Direito de Família · Dores do Indaiá - MG",
+    "Dra. Paloma Fernandes — Advocacia Previdenciária INSS · Guanhães - MG",
   description:
-    "⚖️ Dra. Janaína Carvalho — Advogada Especialista em Direito de Família & Sucessões. Atendimento humanizado, ético e estratégico em Divórcio, Guarda, Pensão Alimentícia, Partilha de Bens e Inventários. Sede na Praça Pref. Mário Carneiro, nº 50 - 2º andar - Centro, Dores do Indaiá - MG e online para todo o Brasil. Avaliação 5,0 ★ no Google (61 avaliações).",
+    "⚖️ Dra. Paloma Fernandes — Advocacia Previdenciária especializada em INSS, Aposentadorias, Benefícios por Incapacidade, Planejamento Previdenciário e BPC/LOAS. Atendimento humanizado, combativo e estratégico. Sede na Av. Gov. Milton Campos, 2973 - Sl 204 - Centro, Guanhães - MG e online para todo o Brasil. Avaliação 5,0 ★ no Google (47 avaliações).",
   keywords: [
-    "Janaína Carvalho Advogada",
-    "Dra Janaína Carvalho",
-    "Advogada Dores do Indaiá",
-    "Advogada Direito de Família Dores do Indaiá",
-    "Advogado em Dores do Indaiá MG",
-    "Direito de Família Dores do Indaiá",
-    "Divórcio Dores do Indaiá",
-    "Pensão Alimentícia Dores do Indaiá",
-    "Guarda dos Filhos Dores do Indaiá",
-    "Inventário em Cartório Dores do Indaiá",
-    "Partilha de Bens Minas Gerais",
-    "Janaína Carvalho Advogada Minas Gerais",
+    "Paloma Fernandes Advocacia",
+    "Dra Paloma Fernandes",
+    "Advogada Previdenciária Guanhães",
+    "Advogada INSS Guanhães MG",
+    "Advogado Previdenciário Guanhães",
+    "Aposentadoria Guanhães MG",
+    "Direito Previdenciário Guanhães",
+    "Planejamento Previdenciário Guanhães",
+    "Auxílio Doença Guanhães",
+    "Aposentadoria por Invalidez Guanhães",
+    "BPC LOAS Guanhães",
+    "Aposentadoria Rural Minas Gerais",
+    "Paloma Fernandes Advogada Minas Gerais",
   ],
-  authors: [{ name: "Dra. Janaína Carvalho — Advogada" }],
-  creator: "Dra. Janaína Carvalho — Advogada",
-  publisher: "Dra. Janaína Carvalho — Advogada",
+  authors: [{ name: "Dra. Paloma Fernandes — Advocacia Previdenciária INSS" }],
+  creator: "Dra. Paloma Fernandes — Advocacia Previdenciária INSS",
+  publisher: "Dra. Paloma Fernandes — Advocacia Previdenciária INSS",
   formatDetection: {
     telephone: true,
     address: true,
   },
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
-      { url: "/icon.png", type: "image/png", sizes: "192x192" },
+      { url: "/favicon.ico?v=2", sizes: "any" },
+      { url: "/favicon-32x32.png?v=2", type: "image/png", sizes: "32x32" },
+      { url: "/favicon-16x16.png?v=2", type: "image/png", sizes: "16x16" },
+      { url: "/icon.png?v=2", type: "image/png", sizes: "192x192" },
     ],
-    shortcut: "/favicon.ico",
-    apple: [{ url: "/apple-icon.png", sizes: "180x180" }],
+    shortcut: "/favicon.ico?v=2",
+    apple: [{ url: "/apple-icon.png?v=2", sizes: "180x180" }],
   },
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.janainacarvalhoadv.com.br",
+    url: "https://www.palomafernandesadv.com.br",
     title:
-      "Dra. Janaína Carvalho — Advogada | Especialista em Direito de Família · Dores do Indaiá - MG",
+      "Dra. Paloma Fernandes — Advocacia Previdenciária INSS · Guanhães - MG",
     description:
-      "⚖️ Advocacia especializada em Direito de Família e Sucessões com defesa estratégica e humanizada. Avaliação máxima 5,0 ★ no Google (61 avaliações). Praça Pref. Mário Carneiro, nº 50 - 2º andar - sala 01 - Centro, Dores do Indaiá - MG.",
-    siteName: "Dra. Janaína Carvalho — Advogada",
+      "⚖️ Advocacia Previdenciária especializada no INSS com defesa combativa, estratégica e humanizada. Conquiste sua aposentadoria e seus direitos com avaliação máxima 5,0 ★ no Google (47 avaliações). Av. Gov. Milton Campos, 2973 - Sl 204 - Centro, Guanhães - MG.",
+    siteName: "Dra. Paloma Fernandes — Advocacia Previdenciária INSS",
     images: [
       {
         url: "/logo.png",
         width: 1024,
         height: 341,
-        alt: "Dra. Janaína Carvalho — Advogada",
+        alt: "Dra. Paloma Fernandes — Advocacia Previdenciária INSS",
       },
     ],
   },
@@ -103,42 +105,42 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Dra. Janaína Carvalho — Advogada",
-    alternateName: "Janaína Carvalho Advogada Especialista em Direito de Família",
-    legalName: "Dra. Janaína Carvalho — Advogada",
-    telephone: "+55-37-99986-8988",
-    email: "contato@janainacarvalhoadv.com.br",
-    url: "https://www.janainacarvalhoadv.com.br",
-    image: "https://www.janainacarvalhoadv.com.br/logo.png",
+    name: "Paloma Fernandes — Advocacia Previdenciária INSS",
+    alternateName: "Dra. Paloma Fernandes Advocacia Previdenciária",
+    legalName: "Paloma Fernandes — Advocacia Previdenciária INSS",
+    telephone: "+55-33-99983-2397",
+    email: "contato@palomafernandesadv.com.br",
+    url: "https://www.palomafernandesadv.com.br",
+    image: "https://www.palomafernandesadv.com.br/logo.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Praça Pref. Mário Carneiro, nº 50 - 2º andar - sala 01 - Centro",
-      addressLocality: "Dores do Indaiá",
+      streetAddress: "Av. Gov. Milton Campos, 2973 - Sl 204 - Centro",
+      addressLocality: "Guanhães",
       addressRegion: "MG",
-      postalCode: "35610-000",
+      postalCode: "39740-000",
       addressCountry: "BR",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: -19.4611,
-      longitude: -45.6022,
+      latitude: -18.7753,
+      longitude: -42.9325,
     },
     priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "61",
+      reviewCount: "47",
     },
     areaServed: [
-      "Dores do Indaiá",
-      "Bom Despacho",
-      "Abaeté",
-      "Quartel Geral",
-      "Luz",
-      "Martinho Campos",
-      "Serra da Saudade",
-      "Divinópolis",
-      "Belo Horizonte",
+      "Guanhães",
+      "Virginópolis",
+      "Sabinópolis",
+      "São João Evangelista",
+      "Peçanha",
+      "Dores de Guanhães",
+      "Materlândia",
+      "Governador Valadares",
+      "Vale do Rio Doce",
       "Minas Gerais",
       "Brasil",
     ],
@@ -157,8 +159,8 @@ export default function RootLayout({
       },
     ],
     sameAs: [
-      "https://www.instagram.com/janainacarvalho_advogada/",
-      "https://wa.me/5537999868988",
+      "https://www.instagram.com/adv.palomafernandes",
+      "https://wa.me/553399832397",
     ],
   };
 
@@ -168,16 +170,16 @@ export default function RootLayout({
       className={`${bodyFont.variable} ${displayFont.variable} ${playfairFont.variable} ${cinzelFont.variable} scroll-smooth`}
     >
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png" />
+        <link rel="icon" href="/favicon.ico?v=2" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=2" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png?v=2" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen overflow-x-clip bg-[#faf8f5] font-sans text-[#12151b] antialiased selection:bg-[#f5ecd9] selection:text-[#0e1116]">
+      <body className="min-h-screen overflow-x-clip bg-[#faf8f5] font-sans text-[#11141a] antialiased selection:bg-[#f0e6d8] selection:text-[#0b0d11]">
         {children}
       </body>
     </html>

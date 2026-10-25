@@ -2,31 +2,42 @@
 
 :root {
   color-scheme: light;
+  
+  /* Deep Obsidian Noir & Onyx (from logo "F" and serif typography) */
   --brand-noir-light: #f5f6f8;
   --brand-noir-highlight: #e4e7eb;
   --brand-noir-shimmer: #8e95a2;
   --brand-noir-accent: #2d3441;
-  --brand-noir: #181c23;
-  --brand-noir-rich: #13161c;
-  --brand-noir-dark: #0e1116;
-  --brand-noir-deep: #080a0d;
-  --brand-noir-shadow: #050608;
+  --brand-noir: #171b22;
+  --brand-noir-rich: #111419;
+  --brand-noir-dark: #0b0d11;
+  --brand-noir-deep: #07080b;
 
-  --brand-gold-light: #fdfcf9;
-  --brand-gold-highlight: #f8f3e8;
-  --brand-gold-accent: #d89c48;
-  --brand-gold: #c5a059;
-  --brand-gold-dark: #8c6725;
-  --brand-gold-deep: #54380c;
+  /* Platinum Champagne & Titanium Sheen (from logo "P" monogram) */
+  --brand-champagne-light: #faf8f5;
+  --brand-champagne-highlight: #f3ede4;
+  --brand-champagne-accent: #bea993;
+  --brand-champagne: #a8927b;
+  --brand-champagne-dark: #745f4d;
+  --brand-champagne-deep: #4a3c30;
 
+  /* Warm Amber Glow (incandescent office ambient lighting) */
+  --brand-gold-light: #fdfbf7;
+  --brand-gold-highlight: #f7f0e3;
+  --brand-gold-accent: #d4a359;
+  --brand-gold: #be8a3a;
+  --brand-gold-dark: #8c6321;
+
+  /* Editorial Surfaces */
   --brand-surface: #ffffff;
   --brand-surface-elevated: #faf8f5;
-  --brand-paper: #f4efea;
-  --brand-border: #e5dfd7;
+  --brand-paper: #f4efe8;
+  --brand-border: #e2dad0;
   
-  --brand-ink: #12151b;
-  --brand-ink-soft: #2a2f3a;
-  --brand-ink-muted: #5a6272;
+  /* Text & Inks */
+  --brand-ink: #11141a;
+  --brand-ink-soft: #282e3b;
+  --brand-ink-muted: #565e6e;
 }
 
 @theme inline {
@@ -34,52 +45,65 @@
   --font-cinzel: var(--font-cinzel), "Cinzel", "Trajan Pro", serif;
   --font-sans: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
   
-  --color-ink: #12151b;
-  --color-ink-soft: #2a2f3a;
-  --color-ink-muted: #5a6272;
+  --color-ink: #11141a;
+  --color-ink-soft: #282e3b;
+  --color-ink-muted: #565e6e;
   --color-pearl: #ffffff;
 
-  --color-gold-50: #fdfcf9;
-  --color-gold-100: #fbf6ec;
-  --color-gold-200: #f5ecd9;
-  --color-gold-300: #e7cb92;
-  --color-gold-400: #d8b672;
-  --color-gold-500: #c5a059;
-  --color-gold-600: #a68037;
-  --color-gold-700: #8c6725;
-  --color-gold-800: #5c4416;
-  --color-gold-900: #3b2807;
+  /* Platinum Champagne */
+  --color-champagne-50: #faf8f5;
+  --color-champagne-100: #f3ede4;
+  --color-champagne-200: #e5dacb;
+  --color-champagne-300: #d3c2ae;
+  --color-champagne-400: #bea993;
+  --color-champagne-500: #a8927b;
+  --color-champagne-600: #8f7863;
+  --color-champagne-700: #745f4d;
+  --color-champagne-800: #59493c;
+  --color-champagne-900: #3f332a;
 
+  /* Obsidian Noir */
   --color-noir-50: #f6f7f9;
-  --color-noir-100: #ebedf2;
-  --color-noir-200: #d8dce4;
-  --color-noir-300: #b3bcc9;
-  --color-noir-400: #818ea1;
-  --color-noir-500: #4b5768;
-  --color-noir-600: #363f4d;
-  --color-noir-700: #242b35;
-  --color-noir-800: #181c23;
-  --color-noir-900: #13161c;
-  --color-noir-950: #0e1116;
+  --color-noir-100: #eceff2;
+  --color-noir-200: #d7dce2;
+  --color-noir-300: #adb6c4;
+  --color-noir-400: #7b879a;
+  --color-noir-500: #4b5568;
+  --color-noir-600: #333b49;
+  --color-noir-700: #222833;
+  --color-noir-800: #171b22;
+  --color-noir-900: #111419;
+  --color-noir-950: #0b0d11;
 
-  /* Aliases for brand compatibility */
+  /* Amber Gold Warmth */
+  --color-gold-50: #fdfbf7;
+  --color-gold-100: #f7f0e3;
+  --color-gold-200: #eedcc2;
+  --color-gold-300: #e2c296;
+  --color-gold-400: #d4a359;
+  --color-gold-500: #be8a3a;
+  --color-gold-600: #9e6e28;
+  --color-gold-700: #7c531c;
+
+  /* Compatibility Aliases */
   --color-brand-50: #faf8f5;
-  --color-brand-100: #f4efea;
-  --color-brand-200: #eae3d9;
-  --color-brand-300: #e5dfd7;
-  --color-brand-400: #d2c8bc;
-  --color-brand-500: #c5a059;
-  --color-brand-600: #8c6725;
-  --color-brand-700: #242b35;
-  --color-brand-800: #181c23;
-  --color-brand-900: #13161c;
-  --color-brand-950: #0e1116;
+  --color-brand-100: #f4efe8;
+  --color-brand-200: #eae2d6;
+  --color-brand-300: #e2dad0;
+  --color-brand-400: #cbbba8;
+  --color-brand-500: #a8927b;
+  --color-brand-600: #8f7863;
+  --color-brand-700: #222833;
+  --color-brand-800: #171b22;
+  --color-brand-900: #111419;
+  --color-brand-950: #0b0d11;
 
-  --shadow-card: 0 10px 30px rgba(18, 21, 27, 0.05);
-  --shadow-gold: 0 10px 30px rgba(197, 160, 89, 0.28);
-  --shadow-noir: 0 12px 35px rgba(14, 17, 22, 0.22);
-  --shadow-obsidian: 0 16px 45px rgba(14, 17, 22, 0.16);
-  --shadow-glow: 0 0 35px rgba(197, 160, 89, 0.25);
+  --shadow-card: 0 10px 30px rgba(17, 20, 26, 0.05);
+  --shadow-champagne: 0 10px 30px rgba(168, 146, 123, 0.25);
+  --shadow-gold: 0 10px 30px rgba(212, 163, 89, 0.28);
+  --shadow-noir: 0 12px 35px rgba(11, 13, 17, 0.24);
+  --shadow-obsidian: 0 16px 45px rgba(11, 13, 17, 0.16);
+  --shadow-glow: 0 0 35px rgba(190, 169, 147, 0.3);
 }
 
 html {
@@ -89,14 +113,14 @@ html {
 
 body {
   background: #faf8f5;
-  color: #12151b;
+  color: #11141a;
   font-family: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
-  caret-color: #c5a059;
+  caret-color: #a8927b;
 }
 
 ::selection {
-  background: #f5ecd9;
-  color: #0e1116;
+  background: #f0e6d8;
+  color: #0b0d11;
 }
 
 .font-cinzel {
@@ -116,19 +140,24 @@ body {
 }
 
 .eyebrow {
-  color: #13161c;
+  color: #111419;
 }
 
 .eyebrow-light {
-  color: #8c6725;
+  color: #745f4d;
+}
+
+.eyebrow-champagne {
+  color: #a8927b;
 }
 
 .eyebrow-gold {
-  color: #c5a059;
+  color: #d4a359;
 }
 
 .eyebrow::before,
 .eyebrow-light::before,
+.eyebrow-champagne::before,
 .eyebrow-gold::before {
   width: 1.75rem;
   height: 1.5px;
@@ -140,7 +169,7 @@ body {
 .nav-link {
   position: relative;
   padding-block: 0.5rem;
-  color: #2a2f3a;
+  color: #282e3b;
   font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -154,7 +183,7 @@ body {
   bottom: 0;
   left: 0;
   height: 2px;
-  background: #c5a059;
+  background: #a8927b;
   content: "";
   transform: scaleX(0);
   transform-origin: left;
@@ -162,7 +191,7 @@ body {
 }
 
 .nav-link:hover {
-  color: #0e1116;
+  color: #0b0d11;
 }
 
 .nav-link:hover::after {
@@ -174,7 +203,7 @@ body {
 }
 
 .footer-link:hover {
-  color: #c5a059;
+  color: #cbbba8;
 }
 
 ::-webkit-scrollbar {
@@ -182,17 +211,17 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f4efea;
+  background: #f4efe8;
 }
 
 ::-webkit-scrollbar-thumb {
-  border: 2px solid #f4efea;
+  border: 2px solid #f4efe8;
   border-radius: 999px;
-  background: #d8c8b0;
+  background: #d3c2ae;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #c5a059;
+  background: #a8927b;
 }
 
 @media (prefers-reduced-motion: reduce) {
