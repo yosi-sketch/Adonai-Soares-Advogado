@@ -3,37 +3,37 @@
 :root {
   color-scheme: light;
   
-  /* Deep Obsidian Noir & Charcoal (from logo contrast & dark accents) */
-  --brand-noir-light: #f7f6f4;
-  --brand-noir-highlight: #eae7e2;
-  --brand-noir-shimmer: #9b9389;
-  --brand-noir-accent: #332a22;
-  --brand-noir: #221c16;
-  --brand-noir-rich: #161310;
-  --brand-noir-dark: #0e0c0a;
-  --brand-noir-deep: #080706;
+  /* Deep Espresso Noir & Warm Obsidian (from logo contrast & dark accents) */
+  --brand-noir-light: #f8f6f3;
+  --brand-noir-highlight: #ebe6df;
+  --brand-noir-shimmer: #9c9184;
+  --brand-noir-accent: #3b2e23;
+  --brand-noir: #251d16;
+  --brand-noir-rich: #19130f;
+  --brand-noir-dark: #110d0a;
+  --brand-noir-deep: #0a0705;
 
-  /* Imperial Gold & Metallic Lustre (extracted directly from Carla Gisele 3D Gold Logo) */
-  --brand-gold-specular: #f6e8a8;
-  --brand-gold-light: #fbe38e;
-  --brand-gold-luminous: #fbb74e;
-  --brand-gold-highlight: #f9f3e5;
-  --brand-gold-accent: #d49b35;
-  --brand-gold: #c58b2c;
-  --brand-gold-dark: #a56f1e;
-  --brand-gold-bronze: #833a03;
-  --brand-gold-deep: #5a2606;
+  /* Metallic Champagne Rose Gold & Burnished Bronze (extracted directly from Patrícia Freyer 3D Logo) */
+  --brand-gold-specular: #fdecd2;
+  --brand-gold-light: #f7d8af;
+  --brand-gold-luminous: #eabf89;
+  --brand-gold-highlight: #fcf4eb;
+  --brand-gold-accent: #d29e62;
+  --brand-gold: #be8a50;
+  --brand-gold-dark: #9e6d37;
+  --brand-gold-bronze: #7a4f21;
+  --brand-gold-deep: #523112;
 
   /* Editorial Surfaces */
   --brand-surface: #ffffff;
-  --brand-surface-elevated: #faf8f5;
-  --brand-paper: #f5efe6;
-  --brand-border: #e5dccd;
+  --brand-surface-elevated: #faf7f2;
+  --brand-paper: #f4eee5;
+  --brand-border: #e6dcce;
   
   /* Text & Inks */
-  --brand-ink: #141210;
-  --brand-ink-soft: #2b241d;
-  --brand-ink-muted: #5c5348;
+  --brand-ink: #140f0c;
+  --brand-ink-soft: #2c221b;
+  --brand-ink-muted: #5e5246;
 }
 
 @theme inline {
@@ -41,55 +41,55 @@
   --font-cinzel: var(--font-cinzel), "Cinzel", "Trajan Pro", serif;
   --font-sans: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
   
-  --color-ink: #141210;
-  --color-ink-soft: #2b241d;
-  --color-ink-muted: #5c5348;
+  --color-ink: #140f0c;
+  --color-ink-soft: #2c221b;
+  --color-ink-muted: #5e5246;
   --color-pearl: #ffffff;
 
-  /* Imperial Brand Gold */
-  --color-gold-50: #fdfbf7;
-  --color-gold-100: #f9f3e5;
-  --color-gold-200: #f3e5c8;
-  --color-gold-300: #e6cca0;
-  --color-gold-400: #d8ab65;
-  --color-gold-500: #c58b2c;
-  --color-gold-600: #a56f1e;
-  --color-gold-700: #833a03;
-  --color-gold-800: #5a2606;
-  --color-gold-900: #381704;
+  /* Metallic Patrícia Freyer Gold */
+  --color-gold-50: #fdfbf8;
+  --color-gold-100: #fcf4eb;
+  --color-gold-200: #f7e6d2;
+  --color-gold-300: #eecfae;
+  --color-gold-400: #dfae76;
+  --color-gold-500: #be8a50;
+  --color-gold-600: #9e6d37;
+  --color-gold-700: #7a4f21;
+  --color-gold-800: #523112;
+  --color-gold-900: #361f0a;
 
-  /* Obsidian Noir */
-  --color-noir-50: #f8f7f5;
-  --color-noir-100: #edeae5;
-  --color-noir-200: #dbd5cc;
-  --color-noir-300: #b5aba0;
-  --color-noir-400: #857b70;
-  --color-noir-500: #544b41;
-  --color-noir-600: #3a3229;
-  --color-noir-700: #29221b;
-  --color-noir-800: #1d1813;
-  --color-noir-900: #14110e;
-  --color-noir-950: #0a0907;
+  /* Warm Espresso Noir */
+  --color-noir-50: #f8f6f3;
+  --color-noir-100: #ebe6df;
+  --color-noir-200: #d8cfc3;
+  --color-noir-300: #b3a493;
+  --color-noir-400: #827261;
+  --color-noir-500: #514436;
+  --color-noir-600: #382d22;
+  --color-noir-700: #271f17;
+  --color-noir-800: #1b1510;
+  --color-noir-900: #120e0a;
+  --color-noir-950: #090705;
 
   /* Compatibility & Brand Aliases */
-  --color-brand-50: #fdfbf7;
-  --color-brand-100: #f9f3e5;
-  --color-brand-200: #f3e5c8;
-  --color-brand-300: #e5dccd;
-  --color-brand-400: #d8ab65;
-  --color-brand-500: #c58b2c;
-  --color-brand-600: #a56f1e;
-  --color-brand-700: #833a03;
-  --color-brand-800: #221c16;
-  --color-brand-900: #161310;
-  --color-brand-950: #0e0c0a;
+  --color-brand-50: #fdfbf8;
+  --color-brand-100: #fcf4eb;
+  --color-brand-200: #f7e6d2;
+  --color-brand-300: #e6dcce;
+  --color-brand-400: #dfae76;
+  --color-brand-500: #be8a50;
+  --color-brand-600: #9e6d37;
+  --color-brand-700: #7a4f21;
+  --color-brand-800: #251d16;
+  --color-brand-900: #19130f;
+  --color-brand-950: #110d0a;
 
-  --shadow-card: 0 10px 30px rgba(20, 18, 16, 0.05);
-  --shadow-gold: 0 10px 30px rgba(197, 139, 44, 0.28);
-  --shadow-gold-lg: 0 16px 40px rgba(197, 139, 44, 0.35);
-  --shadow-noir: 0 12px 35px rgba(14, 12, 10, 0.26);
-  --shadow-obsidian: 0 16px 45px rgba(14, 12, 10, 0.18);
-  --shadow-glow: 0 0 35px rgba(212, 155, 53, 0.35);
+  --shadow-card: 0 10px 30px rgba(20, 15, 12, 0.05);
+  --shadow-gold: 0 10px 30px rgba(190, 138, 80, 0.28);
+  --shadow-gold-lg: 0 16px 40px rgba(190, 138, 80, 0.35);
+  --shadow-noir: 0 12px 35px rgba(17, 13, 10, 0.26);
+  --shadow-obsidian: 0 16px 45px rgba(17, 13, 10, 0.18);
+  --shadow-glow: 0 0 35px rgba(210, 158, 98, 0.35);
 }
 
 html {
@@ -98,15 +98,15 @@ html {
 }
 
 body {
-  background: #faf8f5;
-  color: #141210;
+  background: #faf7f2;
+  color: #140f0c;
   font-family: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
-  caret-color: #c58b2c;
+  caret-color: #be8a50;
 }
 
 ::selection {
-  background: #f3e5c8;
-  color: #0e0c0a;
+  background: #f7e6d2;
+  color: #110d0a;
 }
 
 .font-cinzel {
@@ -126,15 +126,15 @@ body {
 }
 
 .eyebrow {
-  color: #161310;
+  color: #19130f;
 }
 
 .eyebrow-light {
-  color: #833a03;
+  color: #7a4f21;
 }
 
 .eyebrow-gold {
-  color: #c58b2c;
+  color: #be8a50;
 }
 
 .eyebrow::before,
@@ -150,7 +150,7 @@ body {
 .nav-link {
   position: relative;
   padding-block: 0.5rem;
-  color: #2b241d;
+  color: #2c221b;
   font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -164,7 +164,7 @@ body {
   bottom: 0;
   left: 0;
   height: 2px;
-  background: #c58b2c;
+  background: #be8a50;
   content: "";
   transform: scaleX(0);
   transform-origin: left;
@@ -172,7 +172,7 @@ body {
 }
 
 .nav-link:hover {
-  color: #0e0c0a;
+  color: #110d0a;
 }
 
 .nav-link:hover::after {
@@ -184,7 +184,7 @@ body {
 }
 
 .footer-link:hover {
-  color: #c58b2c;
+  color: #be8a50;
 }
 
 ::-webkit-scrollbar {
@@ -192,17 +192,17 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f5efe6;
+  background: #f4eee5;
 }
 
 ::-webkit-scrollbar-thumb {
-  border: 2px solid #f5efe6;
+  border: 2px solid #f4eee5;
   border-radius: 999px;
-  background: #d8ab65;
+  background: #dfae76;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #c58b2c;
+  background: #be8a50;
 }
 
 @media (prefers-reduced-motion: reduce) {

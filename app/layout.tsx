@@ -36,59 +36,58 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#faf8f5",
+  themeColor: "#faf7f2",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.carlagisele.adv.br"),
-  title: "Carla Gisele — Advogada · Espinosa - MG & Belo Horizonte",
+  metadataBase: new URL("https://www.patriciafreyer.adv.br"),
+  title: "Patrícia Freyer Advocacia · Advogada Trabalhista · Peçanha - MG & Atendimento Online",
   description:
-    "⚖️ Dra. Carla Gisele — Advogada graduada pela Universidade Federal de Minas Gerais (UFMG). Atuação jurídica com extrema confiança, competência e ética em Espinosa, Belo Horizonte e atendimento online em todo o Brasil. Nota máxima 5,0 ★ no Google (31 avaliações).",
+    "⚖️ Dra. Patrícia Freyer — Advogada Trabalhista. Problemas no trabalho? Eu te ajudo a entender. Conhecer seus direitos faz diferença no seu bolso. Atendimento presencial em Peçanha - MG e online para todo o Brasil. Nota máxima 5,0 ★ no Google (31 avaliações).",
   keywords: [
-    "Carla Gisele Advogada",
-    "Dra Carla Gisele",
-    "Advogada Espinosa MG",
-    "Advogada UFMG",
-    "Advogado Espinosa Minas Gerais",
-    "Serviços Jurídicos Espinosa",
-    "Direito de Família Espinosa",
-    "Inventário Espinosa MG",
-    "Aposentadoria Espinosa MG",
-    "Advogada Previdenciária Espinosa",
-    "Advogada Belo Horizonte",
-    "Carla Gisele Advocacia",
+    "Patrícia Freyer Advocacia",
+    "Dra Patrícia Freyer",
+    "Advogada Trabalhista Peçanha",
+    "Advogada Trabalhista MG",
+    "Direito do Trabalho Peçanha MG",
+    "Rescisão Trabalhista Peçanha",
+    "Horas Extras Peçanha",
+    "Acidente de Trabalho Advogada",
+    "Rescisão Indireta Peçanha",
+    "Advogada Trabalhista Online",
+    "Patrícia Freyer Advogada",
   ],
-  authors: [{ name: "Carla Gisele — Advogada" }],
-  creator: "Carla Gisele — Advogada",
-  publisher: "Carla Gisele — Advogada",
+  authors: [{ name: "Patrícia Freyer Advocacia" }],
+  creator: "Patrícia Freyer Advocacia",
+  publisher: "Patrícia Freyer Advocacia",
   formatDetection: {
     telephone: true,
     address: true,
   },
   icons: {
     icon: [
-      { url: "/favicon.ico?v=5", sizes: "any" },
-      { url: "/favicon-32x32.png?v=5", type: "image/png", sizes: "32x32" },
-      { url: "/favicon-16x16.png?v=5", type: "image/png", sizes: "16x16" },
-      { url: "/icon.png?v=5", type: "image/png", sizes: "192x192" },
+      { url: "/favicon.ico?v=8", sizes: "any" },
+      { url: "/favicon-32x32.png?v=8", type: "image/png", sizes: "32x32" },
+      { url: "/favicon-16x16.png?v=8", type: "image/png", sizes: "16x16" },
+      { url: "/icon.png?v=8", type: "image/png", sizes: "192x192" },
     ],
-    shortcut: "/favicon.ico?v=5",
-    apple: [{ url: "/apple-icon.png?v=5", sizes: "180x180" }],
+    shortcut: "/favicon.ico?v=8",
+    apple: [{ url: "/apple-icon.png?v=8", sizes: "180x180" }],
   },
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.carlagisele.adv.br",
-    title: "Carla Gisele — Advogada · Espinosa - MG & Belo Horizonte",
+    url: "https://www.patriciafreyer.adv.br",
+    title: "Patrícia Freyer Advocacia · Advogada Trabalhista · Peçanha - MG",
     description:
-      "⚖️ Advocacia pautada na extrema competência, ética e dedicação. Graduada pela UFMG com nota máxima 5,0 ★ no Google (31 avaliações). R. Padre Martin Kirscht - Espinosa, MG.",
-    siteName: "Carla Gisele — Advogada",
+      "⚖️ Advocacia Trabalhista com dedicação, ética, clareza e atendimento humanizado. Nota máxima 5,0 ★ no Google (31 avaliações). Av. dos Bragas, 146 - Centro, Peçanha - MG e atendimento online para todo o Brasil.",
+    siteName: "Patrícia Freyer Advocacia",
     images: [
       {
         url: "/logo.png",
         width: 1024,
         height: 341,
-        alt: "Carla Gisele — Advogada",
+        alt: "Patrícia Freyer Advocacia",
       },
     ],
   },
@@ -102,25 +101,25 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Carla Gisele — Advogada",
-    alternateName: "Dra. Carla Gisele Advocacia",
-    legalName: "Carla Gisele — Advogada",
-    telephone: "+55-38-99124-2534",
-    email: "contato@carlagisele.adv.br",
-    url: "https://www.carlagisele.adv.br",
-    image: "https://www.carlagisele.adv.br/logo.png",
+    name: "Patrícia Freyer Advocacia",
+    alternateName: "Dra. Patrícia Freyer — Advogada Trabalhista",
+    legalName: "Patrícia Freyer Advocacia",
+    telephone: "+55-33-99815-0345",
+    email: "contato@patriciafreyer.adv.br",
+    url: "https://www.patriciafreyer.adv.br",
+    image: "https://www.patriciafreyer.adv.br/logo.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "R. Padre Martin Kirscht",
-      addressLocality: "Espinosa",
+      streetAddress: "Av. dos Bragas, 146 - Centro",
+      addressLocality: "Peçanha",
       addressRegion: "MG",
-      postalCode: "39510-000",
+      postalCode: "39700-000",
       addressCountry: "BR",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: -14.9264,
-      longitude: -42.8197,
+      latitude: -18.5492,
+      longitude: -42.5583,
     },
     priceRange: "$$",
     aggregateRating: {
@@ -129,14 +128,13 @@ export default function RootLayout({
       reviewCount: "31",
     },
     areaServed: [
-      "Espinosa",
-      "Monte Azul",
-      "Mato Verde",
-      "Porteirinha",
-      "Janaúba",
-      "Montes Claros",
-      "Belo Horizonte",
-      "Norte de Minas",
+      "Peçanha",
+      "Governador Valadares",
+      "Guanhães",
+      "Virginópolis",
+      "São João Evangelista",
+      "Vale do Rio Doce",
+      "Leste de Minas",
       "Minas Gerais",
       "Brasil",
     ],
@@ -150,13 +148,13 @@ export default function RootLayout({
           "Thursday",
           "Friday",
         ],
-        opens: "08:00",
+        opens: "09:00",
         closes: "18:00",
       },
     ],
     sameAs: [
-      "https://www.instagram.com/carla_giseele/",
-      "https://wa.me/5538991242534",
+      "https://www.instagram.com/adv.patriciafreyer/",
+      "https://wa.me/553398150345",
     ],
   };
 
@@ -166,16 +164,16 @@ export default function RootLayout({
       className={`${bodyFont.variable} ${displayFont.variable} ${playfairFont.variable} ${cinzelFont.variable} scroll-smooth`}
     >
       <head>
-        <link rel="icon" href="/favicon.ico?v=5" sizes="any" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=5" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=5" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png?v=5" />
+        <link rel="icon" href="/favicon.ico?v=8" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=8" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=8" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png?v=8" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen overflow-x-clip bg-[#faf8f5] font-sans text-[#141210] antialiased selection:bg-[#f3e5c8] selection:text-[#0e0c0a]">
+      <body className="min-h-screen overflow-x-clip bg-[#faf7f2] font-sans text-[#140f0c] antialiased selection:bg-[#f7e6d2] selection:text-[#110d0a]">
         {children}
       </body>
     </html>

@@ -35,28 +35,28 @@ export default function GlowingButton({
     lg: "px-7 py-4 text-xs tracking-[0.14em]",
   }[size];
 
-  // Refined metallic imperial gold & deep obsidian noir for Dra. Carla Gisele
+  // Refined metallic rose-gold & deep warm espresso noir for Dra. Patrícia Freyer
   const variantClasses = {
-    emerald: // Primary action: Deep obsidian noir with imperial gold accents
-      "border border-[#c58b2c]/60 bg-gradient-to-r from-[#0e0c0a] via-[#1a1510] to-[#0e0c0a] text-[#fdfbf7] font-bold shadow-md shadow-black/30 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-lg hover:border-[#eaa43a]",
+    emerald: // Primary action: Deep warm espresso noir with warm champagne gold accents
+      "border border-[#be8a50]/70 bg-gradient-to-r from-[#110d0a] via-[#1f1712] to-[#110d0a] text-[#fdfbf8] font-bold shadow-md shadow-black/30 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-lg hover:border-[#dfae76]",
     navy:
-      "border border-[#c58b2c]/60 bg-gradient-to-r from-[#0e0c0a] via-[#1a1510] to-[#0e0c0a] text-[#fdfbf7] font-bold shadow-md shadow-black/30 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-lg hover:border-[#eaa43a]",
+      "border border-[#be8a50]/70 bg-gradient-to-r from-[#110d0a] via-[#1f1712] to-[#110d0a] text-[#fdfbf8] font-bold shadow-md shadow-black/30 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-lg hover:border-[#dfae76]",
     ruby:
-      "border border-[#c58b2c]/60 bg-gradient-to-r from-[#0e0c0a] via-[#1a1510] to-[#0e0c0a] text-[#fdfbf7] font-bold shadow-md shadow-black/30 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-lg hover:border-[#eaa43a]",
+      "border border-[#be8a50]/70 bg-gradient-to-r from-[#110d0a] via-[#1f1712] to-[#110d0a] text-[#fdfbf8] font-bold shadow-md shadow-black/30 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-lg hover:border-[#dfae76]",
     champagne:
-      "border border-[#c58b2c] bg-gradient-to-r from-[#a56f1e] via-[#c58b2c] to-[#833a03] text-white font-bold shadow-md shadow-[#c58b2c]/25 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold",
+      "border border-[#dfae76] bg-gradient-to-r from-[#9e6d37] via-[#be8a50] to-[#7a4f21] text-white font-bold shadow-md shadow-[#be8a50]/25 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold",
     gold:
-      "border border-[#eaa43a] bg-gradient-to-r from-[#833a03] via-[#c58b2c] to-[#d49b35] text-white font-bold shadow-md shadow-[#c58b2c]/30 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold",
+      "border border-[#dfae76] bg-gradient-to-r from-[#7a4f21] via-[#be8a50] to-[#d29e62] text-white font-bold shadow-md shadow-[#be8a50]/30 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold",
     dark:
-      "border border-[#c58b2c]/40 bg-[#0e0c0a] text-[#fdfbf7] font-bold shadow-sm hover:-translate-y-0.5 hover:bg-[#1a1510] hover:border-[#eaa43a] hover:text-white",
+      "border border-[#be8a50]/40 bg-[#110d0a] text-[#fdfbf8] font-bold shadow-sm hover:-translate-y-0.5 hover:bg-[#1f1712] hover:border-[#dfae76] hover:text-white",
     outline:
-      "border border-[#c58b2c]/70 bg-white text-[#141210] hover:-translate-y-0.5 hover:border-[#c58b2c] hover:bg-[#fdfbf7]",
+      "border border-[#be8a50]/80 bg-white text-[#140f0c] hover:-translate-y-0.5 hover:border-[#be8a50] hover:bg-[#fcf4eb]",
     white:
-      "border border-[#e5dccd] bg-white text-[#141210] shadow-sm hover:-translate-y-0.5 hover:border-[#c58b2c] hover:shadow-md",
+      "border border-[#e6dcce] bg-white text-[#140f0c] shadow-sm hover:-translate-y-0.5 hover:border-[#be8a50] hover:shadow-md",
   }[variant];
 
   const classes =
-    "inline-flex items-center justify-center gap-2 rounded-lg font-bold uppercase transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#c58b2c] select-none text-center cursor-pointer " +
+    "inline-flex items-center justify-center gap-2 rounded-lg font-bold uppercase transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#be8a50] select-none text-center cursor-pointer " +
     sizeClasses +
     " " +
     variantClasses +
