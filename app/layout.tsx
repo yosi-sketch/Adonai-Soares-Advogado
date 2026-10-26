@@ -36,61 +36,62 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#08090c",
+  themeColor: "#0b0a08",
   colorScheme: "dark",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.rodrigocorrea.adv.br"),
-  title: "Rodrigo Corrêa Advocacia Criminal · Plantão 24h · Caxambu - MG & Tribunais",
+  metadataBase: new URL("https://www.adonaisoares.adv.br"),
+  title: "Adonai Soares — Advogado · AS Advocacia e Consultoria Jurídica · Corinto - MG",
   description:
-    "⚖️ Dr. Rodrigo Gomes Corrêa — Advocacia Criminal de Alta Complexidade e Plantão 24h. Prisões em flagrante, custódia, habeas corpus, tribunal do júri e recursos em tribunais superiores (TJMG, STJ e STF). Nota máxima 5,0 ★ no Google (27 avaliações). Sede em Caxambu - MG e atendimento em todo o Brasil.",
+    "⚖️ Dr. Adonai Soares de Moura (OAB/MG 187.717) — Advocacia e Consultoria Jurídica de Alta Excelência. Especialista em Direito Imobiliário, Regularização de Imóveis, Inventários e Sucessões, Direito de Família, Contratos e Defesa Técnica. Nota 4,8 ★ no Google (25 avaliações). Sede em Corinto - MG e atendimento em todo o Brasil.",
   keywords: [
-    "Rodrigo Corrêa Advocacia Criminal",
-    "Dr Rodrigo Corrêa",
-    "Dr Rodrigo Gomes Corrêa",
-    "Advogado Criminalista Caxambu",
-    "Advogado Criminalista MG",
-    "Plantão Criminal 24 Horas",
-    "Audiência de Custódia Caxambu",
-    "Prisão em Flagrante MG",
-    "Habeas Corpus TJMG",
-    "Habeas Corpus STJ STF",
-    "Tribunal do Júri MG",
-    "Defesa Criminal Especializada",
-    "Advocacia Criminal Caxambu MG",
+    "Adonai Soares Advogado",
+    "Dr Adonai Soares",
+    "Dr Adonai Soares de Moura",
+    "AS Advocacia e Consultoria Jurídica",
+    "Advogado em Corinto MG",
+    "Advocacia Corinto Minas Gerais",
+    "Inventário e Sucessões Corinto",
+    "Direito Imobiliário Corinto",
+    "Regularização de Imóveis Corinto MG",
+    "Usucapião Corinto MG",
+    "Direito de Família Corinto",
+    "Advogado Civil Corinto",
+    "Consultoria Jurídica Corinto MG",
+    "OAB MG 187717",
   ],
-  authors: [{ name: "Rodrigo Corrêa Advocacia Criminal" }],
-  creator: "Rodrigo Corrêa Advocacia Criminal",
-  publisher: "Rodrigo Corrêa Advocacia Criminal",
+  authors: [{ name: "AS Advocacia e Consultoria Jurídica" }],
+  creator: "AS Advocacia e Consultoria Jurídica",
+  publisher: "AS Advocacia e Consultoria Jurídica",
   formatDetection: {
     telephone: true,
     address: true,
   },
   icons: {
     icon: [
-      { url: "/favicon.ico?v=9", sizes: "any" },
-      { url: "/favicon-32x32.png?v=9", type: "image/png", sizes: "32x32" },
-      { url: "/favicon-16x16.png?v=9", type: "image/png", sizes: "16x16" },
-      { url: "/icon.png?v=9", type: "image/png", sizes: "192x192" },
+      { url: "/favicon.ico?v=10", sizes: "any" },
+      { url: "/favicon-32x32.png?v=10", type: "image/png", sizes: "32x32" },
+      { url: "/favicon-16x16.png?v=10", type: "image/png", sizes: "16x16" },
+      { url: "/icon.png?v=10", type: "image/png", sizes: "192x192" },
     ],
-    shortcut: "/favicon.ico?v=9",
-    apple: [{ url: "/apple-icon.png?v=9", sizes: "180x180" }],
+    shortcut: "/favicon.ico?v=10",
+    apple: [{ url: "/apple-icon.png?v=10", sizes: "180x180" }],
   },
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.rodrigocorrea.adv.br",
-    title: "Rodrigo Corrêa Advocacia Criminal · Plantão 24h · Caxambu - MG",
+    url: "https://www.adonaisoares.adv.br",
+    title: "Adonai Soares — Advogado · AS Advocacia e Consultoria Jurídica · Corinto - MG",
     description:
-      "⚖️ Advocacia Criminal com rigor técnico, prontidão 24 horas, ética e atendimento humanizado. Nota máxima 5,0 ★ no Google (27 avaliações). R. Maj. Penha, 299 - Sala 101 - Centro, Caxambu - MG e atendimento em todo o Brasil.",
-    siteName: "Rodrigo Corrêa Advocacia Criminal",
+      "⚖️ Advocacia com rigor técnico, ética inabalável, agilidade resolutiva e atendimento humanizado. Nota 4,8 ★ no Google (25 avaliações). R. Dr. Antônio Alvarenga, 371 - Centro, Corinto - MG.",
+    siteName: "AS Advocacia e Consultoria Jurídica",
     images: [
       {
         url: "/logo.png",
-        width: 1024,
-        height: 512,
-        alt: "Rodrigo Corrêa Advocacia Criminal",
+        width: 949,
+        height: 303,
+        alt: "Adonai Soares de Moura — Advocacia e Consultoria Jurídica",
       },
     ],
   },
@@ -104,44 +105,40 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Rodrigo Corrêa Advocacia Criminal",
-    alternateName: "Dr. Rodrigo Gomes Corrêa — Advocacia Criminal",
-    legalName: "Rodrigo Corrêa Advocacia Criminal",
-    telephone: "+55-35-99275-5472",
-    email: "contato@rodrigocorrea.adv.br",
-    url: "https://www.rodrigocorrea.adv.br",
-    image: "https://www.rodrigocorrea.adv.br/logo.png",
+    name: "AS Advocacia e Consultoria Jurídica",
+    alternateName: "Adonai Soares — Advogado",
+    legalName: "Adonai Soares de Moura — Advocacia e Consultoria Jurídica",
+    telephone: "+55-38-99812-6389",
+    email: "contato@adonaisoares.adv.br",
+    url: "https://www.adonaisoares.adv.br",
+    image: "https://www.adonaisoares.adv.br/logo.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "R. Maj. Penha, 299 - Sala 101 - Centro",
-      addressLocality: "Caxambu",
+      streetAddress: "R. Dr. Antônio Alvarenga, 371 - Centro",
+      addressLocality: "Corinto",
       addressRegion: "MG",
-      postalCode: "37440-000",
+      postalCode: "39200-000",
       addressCountry: "BR",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: -21.9774,
-      longitude: -44.9332,
+      latitude: -18.3792,
+      longitude: -44.4556,
     },
     priceRange: "$$$",
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "5.0",
-      reviewCount: "27",
+      ratingValue: "4.8",
+      reviewCount: "25",
     },
     areaServed: [
-      "Caxambu",
-      "Baependi",
-      "São Lourenço",
-      "Cruzília",
-      "Pouso Alto",
-      "Itamonte",
-      "Itanhandu",
-      "Passa Quatro",
-      "Varginha",
-      "Pouso Alegre",
-      "Sul de Minas",
+      "Corinto",
+      "Curvelo",
+      "Diamantina",
+      "Pirapora",
+      "Montes Claros",
+      "Sete Lagoas",
+      "Belo Horizonte",
       "Minas Gerais",
       "Brasil",
     ],
@@ -162,9 +159,8 @@ export default function RootLayout({
       },
     ],
     sameAs: [
-      "https://www.instagram.com/rodrigocorrea_adv/",
-      "https://linktr.ee/rodrigocorrea_adv",
-      "https://wa.me/5535992755472",
+      "https://www.instagram.com/adonaisoares.adv/",
+      "https://wa.me/5538998126389",
     ],
   };
 
@@ -174,18 +170,18 @@ export default function RootLayout({
       className={`${bodyFont.variable} ${displayFont.variable} ${playfairFont.variable} ${cinzelFont.variable} scroll-smooth dark`}
     >
       <head>
-        <link rel="icon" href="/favicon.ico?v=9" sizes="any" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=9" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=9" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png?v=9" />
-        <link rel="shortcut icon" href="/favicon.ico?v=9" />
-        <meta name="theme-color" content="#08090c" />
+        <link rel="icon" href="/favicon.ico?v=10" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=10" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=10" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png?v=10" />
+        <link rel="shortcut icon" href="/favicon.ico?v=10" />
+        <meta name="theme-color" content="#0b0a08" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen overflow-x-clip bg-[#08090c] font-sans text-[#f8f9fa] antialiased selection:bg-[#c59b27] selection:text-[#08090c]">
+      <body className="min-h-screen overflow-x-clip bg-[#0b0a08] font-sans text-[#fbfaf8] antialiased selection:bg-[#c5a882] selection:text-[#0b0a08]">
         {children}
       </body>
     </html>

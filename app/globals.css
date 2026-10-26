@@ -3,41 +3,41 @@
 :root {
   color-scheme: dark;
   
-  /* Deep Luxury Obsidian Noir Canvas */
-  --brand-noir-deep: #050507;
-  --brand-noir-canvas: #08090c;
-  --brand-noir-surface: #0e1016;
-  --brand-noir-elevated: #141720;
-  --brand-noir-card: #12151e;
-  --brand-noir-card-hover: #181c28;
+  /* Deep Luxury Warm Obsidian & Espresso Noir Canvas */
+  --brand-noir-deep: #070605;
+  --brand-noir-canvas: #0b0a08;
+  --brand-noir-surface: #12100d;
+  --brand-noir-elevated: #1a1713;
+  --brand-noir-card: #161310;
+  --brand-noir-card-hover: #221e19;
   --brand-border-subtle: rgba(255, 255, 255, 0.08);
-  --brand-border-gold: rgba(197, 155, 39, 0.25);
-  --brand-border-gold-bright: rgba(212, 175, 55, 0.55);
+  --brand-border-gold: rgba(197, 168, 130, 0.25);
+  --brand-border-gold-bright: rgba(223, 202, 169, 0.55);
 
-  /* Metallic Gold Palette (Extracted directly from Rodrigo Corrêa 3D Logo) */
-  --brand-gold-specular: #fbf8ee;
-  --brand-gold-light: #f6eed5;
-  --brand-gold-luminous: #eddbad;
-  --brand-gold-highlight: #e1c47a;
-  --brand-gold-accent: #d4af37;
-  --brand-gold: #c59b27;
-  --brand-gold-dark: #a37b1e;
-  --brand-gold-bronze: #7d5b16;
-  --brand-gold-deep: #543b0e;
+  /* Metallic Champagne Gold & Warm Bronze Palette (Extracted directly from Adonai Soares Logo) */
+  --brand-gold-specular: #fbf7ee;
+  --brand-gold-light: #f4ebd6;
+  --brand-gold-luminous: #dfcaa9;
+  --brand-gold-highlight: #d2b793;
+  --brand-gold-accent: #c5a882;
+  --brand-gold: #b5956f;
+  --brand-gold-dark: #a8885f;
+  --brand-gold-bronze: #866843;
+  --brand-gold-deep: #5f462a;
 
-  /* Platinum Chrome & Silver Facets */
+  /* Warm Platinum, Cream & Alabaster Inks */
   --brand-plat-pure: #ffffff;
-  --brand-plat-highlight: #f8f9fa;
-  --brand-plat-light: #e2e8f0;
-  --brand-plat-steel: #cbd5e1;
-  --brand-plat-muted: #94a3b8;
-  --brand-plat-dark: #64748b;
+  --brand-plat-highlight: #fbfaf8;
+  --brand-plat-light: #ece7df;
+  --brand-plat-steel: #d4cdc1;
+  --brand-plat-muted: #9e978d;
+  --brand-plat-dark: #6f6960;
 
   /* Text & Inks */
-  --brand-text-primary: #f8f9fa;
-  --brand-text-secondary: #cbd5e1;
-  --brand-text-muted: #94a3b8;
-  --brand-text-gold: #d4af37;
+  --brand-text-primary: #fbfaf8;
+  --brand-text-secondary: #d4cdc1;
+  --brand-text-muted: #9e978d;
+  --brand-text-gold: #dfcaa9;
 }
 
 @theme inline {
@@ -45,67 +45,67 @@
   --font-cinzel: var(--font-cinzel), "Cinzel", "Trajan Pro", serif;
   --font-sans: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
   
-  --color-canvas: #08090c;
-  --color-surface: #0e1016;
-  --color-elevated: #141720;
-  --color-card: #12151e;
+  --color-canvas: #0b0a08;
+  --color-surface: #12100d;
+  --color-elevated: #1a1713;
+  --color-card: #161310;
 
-  /* Metallic Gold */
-  --color-gold-50: #fbf8ee;
-  --color-gold-100: #f6eed5;
-  --color-gold-200: #eddbad;
-  --color-gold-300: #e1c47a;
-  --color-gold-400: #d4af37;
-  --color-gold-500: #c59b27;
-  --color-gold-600: #a37b1e;
-  --color-gold-700: #7d5b16;
-  --color-gold-800: #543b0e;
-  --color-gold-900: #332207;
+  /* Metallic Champagne Gold */
+  --color-gold-50: #fbf7ee;
+  --color-gold-100: #f4ebd6;
+  --color-gold-200: #e8d8be;
+  --color-gold-300: #dfcaa9;
+  --color-gold-400: #d2b793;
+  --color-gold-500: #c5a882;
+  --color-gold-600: #a8885f;
+  --color-gold-700: #866843;
+  --color-gold-800: #5f462a;
+  --color-gold-900: #3b2b18;
 
-  /* Platinum Silver */
+  /* Warm Platinum Silver & Alabaster */
   --color-plat-50: #ffffff;
-  --color-plat-100: #f8f9fa;
-  --color-plat-200: #f1f5f9;
-  --color-plat-300: #e2e8f0;
-  --color-plat-400: #cbd5e1;
-  --color-plat-500: #94a3b8;
-  --color-plat-600: #64748b;
-  --color-plat-700: #475569;
-  --color-plat-800: #334155;
-  --color-plat-900: #1e293b;
+  --color-plat-100: #fbfaf8;
+  --color-plat-200: #f3f0ea;
+  --color-plat-300: #e6e0d6;
+  --color-plat-400: #d4cdc1;
+  --color-plat-500: #9e978d;
+  --color-plat-600: #6f6960;
+  --color-plat-700: #4f4a43;
+  --color-plat-800: #38342e;
+  --color-plat-900: #201e1a;
 
-  /* Luxury Obsidian Noir */
-  --color-noir-50: #1a1e28;
-  --color-noir-100: #141720;
-  --color-noir-200: #11131a;
-  --color-noir-300: #0e1016;
-  --color-noir-400: #0b0c10;
-  --color-noir-500: #08090c;
-  --color-noir-900: #050507;
+  /* Luxury Warm Obsidian & Espresso Noir */
+  --color-noir-50: #221e1a;
+  --color-noir-100: #1c1814;
+  --color-noir-200: #171410;
+  --color-noir-300: #12100d;
+  --color-noir-400: #0f0d0b;
+  --color-noir-500: #0b0a08;
+  --color-noir-900: #070605;
 
-  --shadow-card: 0 10px 35px -5px rgba(0, 0, 0, 0.6);
-  --shadow-gold: 0 10px 30px -8px rgba(197, 155, 39, 0.35);
-  --shadow-gold-lg: 0 18px 45px -10px rgba(212, 175, 55, 0.45);
-  --shadow-glow: 0 0 40px rgba(212, 175, 55, 0.22);
-  --shadow-gold-xl: 0 20px 50px -10px rgba(212, 175, 55, 0.55);
+  --shadow-card: 0 10px 35px -5px rgba(0, 0, 0, 0.65);
+  --shadow-gold: 0 10px 30px -8px rgba(197, 168, 130, 0.35);
+  --shadow-gold-lg: 0 18px 45px -10px rgba(197, 168, 130, 0.45);
+  --shadow-glow: 0 0 40px rgba(223, 202, 169, 0.22);
+  --shadow-gold-xl: 0 20px 50px -10px rgba(197, 168, 130, 0.55);
 }
 
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 7.5rem;
-  background-color: #08090c;
+  background-color: #0b0a08;
 }
 
 body {
-  background: #08090c;
-  color: #f8f9fa;
+  background: #0b0a08;
+  color: #fbfaf8;
   font-family: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
-  caret-color: #d4af37;
+  caret-color: #dfcaa9;
 }
 
 ::selection {
-  background: #c59b27;
-  color: #08090c;
+  background: #c5a882;
+  color: #0b0a08;
 }
 
 .font-cinzel {
@@ -114,7 +114,8 @@ body {
 
 .eyebrow,
 .eyebrow-light,
-.eyebrow-gold {
+.eyebrow-gold,
+.eyebrow-dark {
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -126,20 +127,25 @@ body {
 }
 
 .eyebrow {
-  color: #cbd5e1;
+  color: #d4cdc1;
 }
 
 .eyebrow-light {
-  color: #e1c47a;
+  color: #dfcaa9;
 }
 
 .eyebrow-gold {
-  color: #d4af37;
+  color: #c5a882;
+}
+
+.eyebrow-dark {
+  color: #866843;
 }
 
 .eyebrow::before,
 .eyebrow-light::before,
-.eyebrow-gold::before {
+.eyebrow-gold::before,
+.eyebrow-dark::before {
   width: 1.75rem;
   height: 1.5px;
   flex: none;
@@ -150,7 +156,7 @@ body {
 .nav-link {
   position: relative;
   padding-block: 0.5rem;
-  color: #cbd5e1;
+  color: #d4cdc1;
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.12em;
@@ -164,7 +170,7 @@ body {
   bottom: 0;
   left: 0;
   height: 2px;
-  background: linear-gradient(90deg, #c59b27, #d4af37);
+  background: linear-gradient(90deg, #c5a882, #dfcaa9);
   content: "";
   transform: scaleX(0);
   transform-origin: left;
@@ -184,26 +190,26 @@ body {
 }
 
 .footer-link:hover {
-  color: #d4af37;
+  color: #dfcaa9;
 }
 
-/* Custom Metallic Scrollbar */
+/* Custom Metallic Champagne Scrollbar */
 ::-webkit-scrollbar {
   width: 9px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #08090c;
+  background: #0b0a08;
 }
 
 ::-webkit-scrollbar-thumb {
-  border: 2px solid #08090c;
+  border: 2px solid #0b0a08;
   border-radius: 999px;
-  background: #7d5b16;
+  background: #866843;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #c59b27;
+  background: #c5a882;
 }
 
 @media (prefers-reduced-motion: reduce) {

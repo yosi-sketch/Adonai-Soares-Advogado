@@ -1,33 +1,30 @@
-# Rodrigo Corrêa Advocacia Criminal
+# AS Advocacia e Consultoria Jurídica — Dr. Adonai Soares de Moura
 
-Landing page institucional e de alta conversão para o escritório **Rodrigo Corrêa Advocacia Criminal**, liderado pelo **Dr. Rodrigo Gomes Corrêa**, Advogado Criminalista com sede na R. Maj. Penha, 299 - Sala 101 - Centro, Caxambu - MG, com plantão criminal penal ininterrupto 24 horas e atuação em todo o estado de Minas Gerais e perante os Tribunais Superiores (TJMG, STJ e STF).
+Landing page e site institucional de alto padrão desenvolvido em Next.js 16 (App Router), Tailwind CSS v4 e Framer Motion para **Dr. Adonai Soares de Moura (OAB/MG 187.717) - AS Advocacia e Consultoria Jurídica**, sediado em Corinto - MG.
 
-## Características do Projeto
-- Desenvolvido com **Next.js 16 (App Router)** e **React 19**
-- Estilização com **Tailwind CSS v4**
-- Animações fluidas com **Framer Motion**
-- Ícones em SVG de alta fidelidade com **Lucide React**
-- Tipografia clássica e moderna: Cinzel, Playfair Display, Cormorant Garamond e Plus Jakarta Sans
-- Sistema de cores extraído fielmente do logotipo oficial em ouro champanhe metálico 3D, platina cromada e obsidian noir profundo
-- SEO avançado com metadados estruturados JSON-LD Schema (LegalService / Attorney)
-- Prova social com 27 avaliações no Google Meu Negócio (nota máxima 5,0 ★ unânime)
-- Favicon e ícones multi-resolução para abas de navegador e dispositivos móveis (favicon.ico, favicon-32x32, favicon-16x16, apple-icon, icon-192, icon-512)
+## 🛠️ Tecnologias Utilizadas
 
-## Identidade Visual & Contato
-- **Nome:** Rodrigo Corrêa Advocacia Criminal
-- **Advogado Titular:** Dr. Rodrigo Gomes Corrêa (OAB/MG)
-- **Especialidade:** Direito Penal e Processual Penal / Advocacia Criminal de Alta Complexidade / Plantão 24h
-- **WhatsApp / Telefone:** (35) 99275-5472 (Plantão 24 Horas)
-- **E-mail:** contato@rodrigocorrea.adv.br
-- **Endereço:** R. Maj. Penha, 299 - Sala 101 - Centro, Caxambu - MG, 37440-000
-- **Horário:** Aberto 24 Horas (Plantão Penal Ininterrupto)
-- **Instagram:** [@rodrigocorrea_adv](https://www.instagram.com/rodrigocorrea_adv/)
-- **Linktree:** [linktr.ee/rodrigocorrea_adv](https://linktr.ee/rodrigocorrea_adv)
-- **Avaliações no Google:** 5,0 ★ (27 avaliações reais)
+- **Framework:** Next.js 16 (App Router)
+- **Estilização:** Tailwind CSS v4 (@tailwindcss/postcss)
+- **Tipografia:** Cinzel, Playfair Display, Cormorant Garamond, Plus Jakarta Sans (Google Fonts)
+- **Animações:** Framer Motion
+- **Ícones:** Lucide React
+- **SEO & Metadados:** JSON-LD Schema.org LegalService, OpenGraph, Favicon multi-resolução e Viewport configurados
 
-## Execução Local
+## 🌟 Identidade Visual & Atributos
+
+- **Paleta de Cores:** Ouro champanhe metálico (`#dfcaa9`, `#c5a882`, `#f4ebd6`), bronze profundo (`#866843`, `#5f462a`) e ônix quente (`#0b0a08`, `#12100d`), extraídos diretamente do logotipo oficial do Dr. Adonai Soares de Moura.
+- **WhatsApp Direto:** [(38) 99812-6389](https://wa.me/5538998126389)
+- **E-mail:** contato@adonaisoares.adv.br
+- **Endereço:** R. Dr. Antônio Alvarenga, 371 - Centro, Corinto - MG, 39200-000
+- **Instagram:** [@adonaisoares.adv](https://www.instagram.com/adonaisoares.adv/)
+- **Prova Social:** 4,8 ★ no Google (25 avaliações verificadas)
+
+## 🚀 Como Executar
+
 ```bash
 npm install
 npm run dev
 ```
-Acesse `http://localhost:3000`.
+
+Acesse [http://localhost:3000](http://localhost:3000) no seu navegador.

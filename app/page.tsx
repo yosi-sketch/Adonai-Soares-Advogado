@@ -20,41 +20,43 @@ import {
   Star,
   Users,
   Briefcase,
-  AlertTriangle,
   ShieldCheck,
-  Siren,
   Gavel,
   BookOpen,
+  Home as HomeIcon,
+  ScrollText,
+  UserCheck,
+  Building2,
   X,
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
 
-const WHATSAPP_NUMBER = "5535992755472";
-const PHONE_DISPLAY = "(35) 99275-5472";
-const EMAIL_CONTACT = "contato@rodrigocorrea.adv.br";
-const INSTAGRAM_URL = "https://www.instagram.com/rodrigocorrea_adv/";
-const INSTAGRAM_HANDLE = "@rodrigocorrea_adv";
-const LINKTREE_URL = "https://linktr.ee/rodrigocorrea_adv";
-const LAWYER_NAME = "Dr. Rodrigo Gomes Corrêa";
-const LAWYER_TITLE = "Advogado Criminalista | OAB/MG";
+const WHATSAPP_NUMBER = "5538998126389";
+const PHONE_DISPLAY = "(38) 99812-6389";
+const EMAIL_CONTACT = "contato@adonaisoares.adv.br";
+const INSTAGRAM_URL = "https://www.instagram.com/adonaisoares.adv/";
+const INSTAGRAM_HANDLE = "@adonaisoares.adv";
+const LAWYER_NAME = "Dr. Adonai Soares de Moura";
+const LAWYER_TITLE = "Advogado & Consultor Jurídico | OAB/MG 187.717";
+const FIRM_NAME = "AS Advocacia e Consultoria Jurídica";
 
-const ADDRESS_TEXT = "R. Maj. Penha, 299 - Sala 101 - Centro, Caxambu - MG, 37440-000";
+const ADDRESS_TEXT = "R. Dr. Antônio Alvarenga, 371 - Centro, Corinto - MG, 39200-000";
 const GOOGLE_MAPS_URL =
-  "https://www.google.com/maps/search/?api=1&query=Rodrigo+Correa+Advocacia+Criminal+R+Maj+Penha+299+Sala+101+Centro+Caxambu+MG";
+  "https://www.google.com/maps/search/?api=1&query=Adonai+Soares+Advogado+R+Dr+Antonio+Alvarenga+371+Centro+Corinto+MG";
 const GOOGLE_SEARCH_URL =
-  "https://www.google.com/search?q=Rodrigo+Corr%C3%AAa+Advocacia+Criminal%0ACaxambu+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
+  "https://www.google.com/search?q=Adonai+Soares+%E2%80%94+Advogado%0ACorinto+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
 
 const LOGO_SRC = "/logo.png";
 const LOGO_SYMBOL_SRC = "/logo-symbol.png";
-const FOTO_HERO_SRC = "/rodrigo-correa-office.jpg";
-const FOTO_SOBRE_SRC = "/rodrigo-correa-equipe.jpg";
+const FOTO_HERO_SRC = "/adonai-soares-team.jpg";
+const FOTO_SOBRE_SRC = "/adonai-soares-office.jpg";
 
 function getWhatsAppUrl(
   message?: string,
   number: string = WHATSAPP_NUMBER
 ) {
   const defaultText =
-    "Olá, Dr. Rodrigo Corrêa! Preciso de atendimento com urgência no Plantão Criminal.";
+    "Olá, Dr. Adonai Soares! Gostaria de agendar uma consulta jurídica com seu escritório.";
   return `https://wa.me/${number}?text=${encodeURIComponent(
     message || defaultText
   )}`;
@@ -164,223 +166,243 @@ interface PracticeArea {
 
 const practiceAreas: PracticeArea[] = [
   {
-    id: "plantao-criminal-flagrante",
-    title: "Plantão Criminal 24h & Flagrante",
-    icon: Siren,
-    tag: "Delegacia de Polícia · Interrogatório · Plantão Noturno & Fins de Semana",
+    id: "direito-sucessorio-inventarios",
+    title: "Direito Sucessório & Inventários",
+    icon: ScrollText,
+    tag: "Inventário Judicial & Extrajudicial em Cartório · Partilha de Bens · Testamento",
     summary:
-      "Atendimento presencial imediato em delegacias e presídios em Caxambu e região. Garantia inegociável de que nenhum abuso, ilegalidade ou coação ocorra nas primeiras horas da prisão.",
+      "Resolução ágil, segura e harmoniosa de inventários e partilhas entre herdeiros. Atuação jurídica firme para resguardar o patrimônio da família e evitar desgastes desnecessários.",
     details:
-      "As primeiras horas após a voz de prisão são absolutamente decisivas para o destino do processo. O Dr. Rodrigo Gomes Corrêa atua com prontidão ininterrupta 24 horas por dia, realizando entrevista prévia e reservada com o cliente, acompanhando o interrogatório e a confecção do auto de prisão em flagrante (APFD), impedindo a autoincriminação e requerendo a liberdade provisória imediata.",
+      "O falecimento de um familiar impõe momentos delicados; a regularização patrimonial não pode se tornar um fardo. O Dr. Adonai Soares atua com comprovado domínio em inventários judiciais e extrajudiciais (direto em cartório), partilha consensual ou litigiosa de bens, cessão de direitos hereditários, planejamento sucessório e testamentos, garantindo velocidade, economia tributária (ITCMD) e segurança jurídica para todos os herdeiros.",
     topics: [
-      "Atendimento imediato e ininterrupto 24h em delegacias de polícia civil e postos da polícia federal",
-      "Entrevista prévia, sigilosa e reservada com o acusado antes de qualquer interrogatório formal",
-      "Fiscalização rigorosa da legalidade do flagrante e garantia expressa do direito constitucional ao silêncio",
-      "Pedido imediato de arbitramento de fiança pela autoridade policial ou soltura célere",
-      "Acompanhamento da apreensão de bens, celulares, veículos e formalização das garantias legais",
-      "Comunicação clara e constante com os familiares para prestar tranquilidade e orientações imediatas",
+      "Inventários extrajudiciais em cartório de notas com máxima celeridade e menor custo",
+      "Inventários judiciais e resolução de partilhas complexas entre múltiplos herdeiros",
+      "Planejamento sucessório estratégico, doações com reserva de usufruto e testamentos",
+      "Economia e planejamento tributário na apuração e recolhimento do ITCMD",
+      "Alvarás judiciais para liberação ágil de saldos bancários, FGTS, PIS e veículos",
+      "Postura conciliatória e humanizada para preservar a paz e o patrimônio da família",
     ],
     whatsAppText:
-      "Olá, Dr. Rodrigo Corrêa! Preciso de atendimento urgente no Plantão Criminal 24h para uma situação de prisão em flagrante.",
+      "Olá, Dr. Adonai Soares! Gostaria de uma consultoria especializada sobre inventário e partilha de bens.",
   },
   {
-    id: "audiencia-de-custodia-liberdade",
-    title: "Audiência de Custódia & Liberdade",
-    icon: ShieldCheck,
-    tag: "Relaxamento de Prisão · Revogação de Preventiva · Medidas Cautelares Alternativas",
+    id: "direito-imobiliario-regularizacao",
+    title: "Direito Imobiliário & Regularização de Imóveis",
+    icon: HomeIcon,
+    tag: "Usucapião Judicial & Extrajudicial · Escrituras · Contratos Imobiliários · Posse",
     summary:
-      "Atuação combativa perante o juiz em até 24 horas da prisão para demonstrar a ilegalidade do ato ou a total desnecessidade da prisão preventiva, conquistando a liberdade do cliente.",
+      "Conquiste a escritura definitiva e o registro de sua propriedade. Regularização fundiária urbana e rural, usucapião, reintegração de posse e contratos blindados.",
     details:
-      "Na audiência de custódia, o juiz decide se o custodiado responderá ao processo em liberdade ou se será encaminhado ao presídio. O Dr. Rodrigo Corrêa atua demonstrando a ausência dos requisitos autorizadores do artigo 312 do CPP, comprovando endereço fixo, ocupação lícita e bons antecedentes, realizando sustentação oral contundente pela concessão de liberdade provisória.",
+      "Imóvel sem escritura ou registro não confere segurança jurídica plena e sofre pesada desvalorização. O Dr. Adonai Soares possui grande prestígio na comarca de Corinto e região na condução de ações de Usucapião (judicial e em cartório), regularização de escrituras, contratos de gaveta, desmembramentos, defesas possessórias e assessoria na compra e venda segura de imóveis urbanos e rurais.",
     topics: [
-      "Sustentação oral combativa e fundamentada na Audiência de Custódia perante o juiz e o Ministério Público",
-      "Pedido de relaxamento imediato de prisão em caso de flagrante ilegal, agressões ou nulidades procedimentais",
-      "Pedido de revogação de prisão preventiva por manifesta ausência de contemporaneidade ou risco social",
-      "Concessão de liberdade provisória com ou sem aplicação de fiança",
-      "Aplicação de medidas cautelares diversas da prisão (Artigo 319 do Código de Processo Penal)",
-      "Requerimento de prisão domiciliar para mães com filhos menores ou cidadãos com problemas graves de saúde",
+      "Ações de Usucapião Judicial e Usucapião Extrajudicial perante o Cartório de Registro de Imóveis",
+      "Regularização completa de escrituras públicas, certidões de ônus, matrículas e averbações",
+      "Assessoria jurídica preventiva e due diligence na compra e venda de casas, lotes e fazendas",
+      "Ações possessórias: reintegração de posse, manutenção de posse e interdito proibitório",
+      "Elaboração e revisão minuciosa de contratos de locação residencial, comercial e arrendamento rural",
+      "Ações de despejo, rescisões contratuais, cobrança de aluguéis e renovatórias",
     ],
     whatsAppText:
-      "Olá, Dr. Rodrigo Corrêa! Preciso de defesa técnica urgente para uma Audiência de Custódia.",
+      "Olá, Dr. Adonai Soares! Preciso de assessoria jurídica para regularizar um imóvel ou dar entrada em usucapião.",
   },
   {
-    id: "habeas-corpus-tribunais-superiores",
-    title: "Habeas Corpus & Tribunais Superiores",
+    id: "direito-de-familia",
+    title: "Direito de Família & Relações Parentais",
+    icon: HeartHandshake,
+    tag: "Divórcio Consensual & Litigioso · Pensão Alimentícia · Guarda · Partilha",
+    summary:
+      "Atendimento acolhedor, discreto e altamente técnico para momentos cruciais da vida familiar. Protegendo seus direitos e o bem-estar de seus filhos com serenidade.",
+    details:
+      "Conflitos familiares demandam sensibilidade humana ímpar aliada a uma postura técnica inabalável. O escritório AS Advocacia conduz divórcios em cartório e judiciais, reconhecimento e dissolução de união estável, partilha equilibrada de bens, ações de fixação, revisão ou execução de pensão alimentícia, além de acordos de guarda e convivência parental.",
+    topics: [
+      "Divórcios em cartório de notas (rápidos, econômicos e sem burocracia para acordos)",
+      "Divórcios judiciais litigiosos com blindagem patrimonial e partilha justa de bens",
+      "Ações de alimentos: fixação, redução, exoneração e execução urgente sob pena de prisão",
+      "Regulamentação de guarda compartilhada, plano de convivência e proteção contra alienação parental",
+      "Reconhecimento e dissolução de união estável com partilha de patrimônio acumulado",
+      "Pactos antenupciais, contratos de convivência e consultoria patrimonial familiar",
+    ],
+    whatsAppText:
+      "Olá, Dr. Adonai Soares! Gostaria de consultar sobre divórcio, pensão alimentícia ou direitos de família.",
+  },
+  {
+    id: "direito-civil-contratos",
+    title: "Direito Civil & Contratos Estratégicos",
     icon: Scale,
-    tag: "Pedido Liminar · TJMG em Belo Horizonte · STJ e STF em Brasília",
+    tag: "Contratos · Execuções & Cobranças · Indenizações · Consultoria Jurídica",
     summary:
-      "Ação constitucional urgente com pedido de liminar contra decisões arbitrárias, prisões desproporcionais, constrangimento ilegal e excesso de prazo em todas as instâncias.",
+      "Soluções jurídicas práticas e diretas para blindar negócios, resguardar acordos e recuperar créditos com agilidade e respaldo legal irrefutável.",
     details:
-      "Quando uma ordem de prisão ilegal é mantida em primeira instância, o remédio heroico do Habeas Corpus é a via soberana para restaurar a liberdade. O escritório atua com impetração técnica de alta densidade doutrinária perante o Tribunal de Justiça de Minas Gerais (TJMG) e perante o Superior Tribunal de Justiça (STJ) e Supremo Tribunal Federal (STF), com despacho pessoal de memoriais e sustentação oral.",
+      "Nas relações civis e contratuais, clareza e firmeza técnica evitam prejuízos irreparáveis. O Dr. Adonai Soares elabora e audita contratos personalizados para pessoas físicas e empresas, ajuíza execuções de dívidas, ações de cobrança, indenizações por danos morais e materiais, além de consultoria preventiva para produtores, comerciantes e famílias.",
     topics: [
-      "Elaboração e impetração ágil de Habeas Corpus com pedido liminar para soltura em caráter de urgência",
-      "Combate incisivo ao excesso de prazo injustificado na formação da culpa e na instrução criminal",
-      "Trancamento de inquérito policial ou ação penal manifestamente infundada e sem justa causa",
-      "Interposição e condução de Recursos em Sentido Estrito, Apelações, RHC, REsp e Recursos Extraordinários",
-      "Despacho direto de memoriais conclusivos com Desembargadores no TJMG e Ministros em Brasília",
-      "Sustentação oral estratégica em sessões de julgamento das Turmas Criminais",
+      "Elaboração, análise e revisão de instrumentos contratuais civis, comerciais e de serviços",
+      "Ações de cobrança e execução de títulos de crédito (cheques, notas promissórias, contratos)",
+      "Ações indenizatórias por danos morais, danos materiais e prejuízos comerciais",
+      "Assessoria consultiva contínua para empresas locais, produtores e empresários",
+      "Notificações extrajudiciais estratégicas para solução rápida e amigável de controvérsias",
+      "Defesa processual robusta em ações judiciais cíveis e renegociação técnica de passivos",
     ],
     whatsAppText:
-      "Olá, Dr. Rodrigo Corrêa! Gostaria de consultar sobre a impetração de um Habeas Corpus com pedido de liminar.",
+      "Olá, Dr. Adonai Soares! Preciso de auxílio jurídico em contratos, cobrança ou matéria de Direito Civil.",
   },
   {
-    id: "tribunal-do-juri-crimes-contra-vida",
-    title: "Tribunal do Júri & Crimes Graves",
+    id: "direito-trabalhista-consultoria",
+    title: "Direito Trabalhista & Consultoria",
+    icon: Briefcase,
+    tag: "Defesa dos Trabalhadores · Verbas Rescisórias · Assessoria Empresarial Preventiva",
+    summary:
+      "Atuação equilibrada e combativa nas relações de trabalho. Garantia dos direitos fundamentais dos empregados e consultoria preventiva para empresas.",
+    details:
+      "O escritório AS Advocacia defende os direitos do trabalhador contra abusos patronais — como horas extras não pagas, adicionais de insalubridade e periculosidade, rescisões indiretas e acidentes de trabalho —, ao mesmo tempo em que orienta empregadores para a conformidade legal e mitigação de passivos trabalhistas.",
+    topics: [
+      "Reclamações trabalhistas para cobrança integral de verbas rescisórias, aviso prévio e FGTS + 40%",
+      "Cálculo e pedido de horas extras, intervalos não concedidos e trabalho noturno",
+      "Reconhecimento de adicionais de insalubridade, periculosidade e acúmulo de funções",
+      "Rescisão indireta do contrato de trabalho por descumprimento de deveres pelo empregador",
+      "Indenizações por acidentes de trabalho, doenças ocupacionais e garantia de estabilidade",
+      "Consultoria preventiva para empresas, adequação de contratos e prevenção de litígios",
+    ],
+    whatsAppText:
+      "Olá, Dr. Adonai Soares! Gostaria de consultar sobre uma questão trabalhista ou rescisão.",
+  },
+  {
+    id: "direito-previdenciario-inss",
+    title: "Direito Previdenciário (INSS)",
+    icon: UserCheck,
+    tag: "Aposentadorias · BPC/LOAS · Auxílio-Doença · Revisão de Benefícios",
+    summary:
+      "Conquiste o benefício que é seu por direito. Planejamento previdenciário, aposentadoria urbana ou rural e concessão judicial de benefícios negados pelo INSS.",
+    details:
+      "Diante das mudanças na previdência, obter o melhor benefício requer estratégia e análise minuciosa de tempo e contribuições. Atuamos administrativamente no INSS e na via judicial para concessão de aposentadorias, auxílio por incapacidade (auxílio-doença), aposentadoria por invalidez, pensão por morte e benefício assistencial BPC/LOAS.",
+    topics: [
+      "Planejamento previdenciário completo para calcular e antecipar o melhor valor de aposentadoria",
+      "Aposentadoria por idade urbana e rural, tempo de contribuição e regras de transição",
+      "Benefício de Prestação Continuada (BPC/LOAS) para idosos acima de 65 anos e pessoas com deficiência",
+      "Ações judiciais para concessão de auxílio-doença e aposentadoria por invalidez negados pelo INSS",
+      "Pensão por morte para dependentes de segurados falecidos",
+      "Ações revisionais de cálculo e cobrança de valores atrasados retroativos",
+    ],
+    whatsAppText:
+      "Olá, Dr. Adonai Soares! Gostaria de consultar sobre aposentadoria ou benefício do INSS.",
+  },
+  {
+    id: "defesa-criminal-atendimento-agil",
+    title: "Direito Penal & Defesa Técnica",
     icon: Gavel,
-    tag: "Homicídio · Tentativa · Feminicídio · Plenário do Júri · Sustentação Oral",
+    tag: "Atendimento em Flagrantes · Audiência de Custódia · Inquérito Policial",
     summary:
-      "Defesa estratégica de alta complexidade em crimes dolosos contra a vida. Pleno domínio do plenário, quesitação rigorosa, oratória persuasiva e desmontagem de teses acusatórias.",
+      "Prontidão ininterrupta e defesa técnica combativa para resguardar a liberdade e as garantias constitucionais em delegacias e juizados.",
     details:
-      "O Tribunal do Júri é o rito mais solene do processo penal, no qual a liberdade do réu é decidida por sete jurados da sociedade. Exige anos de especialização, inteligência cênica, oratória persuasiva e minucioso conhecimento técnico de laudos periciais e balística. O Dr. Rodrigo Corrêa atua desde a primeira fase de instrução até a sustentação oral perante o Conselho de Sentença.",
+      "Em matéria penal, cada hora é decisiva. O Dr. Adonai Soares e sua equipe atuam com dedicação integral em prisões em flagrante, acompanhamento em interrogatórios em delegacias, audiências de custódia, pedidos de liberdade provisória, revogação de preventiva e defesa em processos criminais.",
     topics: [
-      "Atuação integral na primeira fase do júri (judicium accusationis) visando impronúncia ou desclassificação",
-      "Interposição de Recurso em Sentido Estrito (RESE) contra decisões de pronúncia injustas",
-      "Investigação defensiva preliminar e reconstituição fática com análise minuciosa de laudos e perícias",
-      "Formulação de quesitos estratégicos e impugnação de testemunhas contraditórias",
-      "Sustentação oral apaixonada e fundamentada perante os jurados no Plenário do Júri",
-      "Recursos em instâncias superiores contra nulidades ocorridas em sessão de julgamento",
+      "Atendimento presencial ágil em delegacias de polícia e plantões judiciários",
+      "Acompanhamento em interrogatórios policiais para resguardar o direito ao silêncio",
+      "Atuação incisiva na Audiência de Custódia com pedido de liberdade provisória",
+      "Requerimento de relaxamento de prisão ilegal ou substituição por cautelares",
+      "Impetração ágil de Habeas Corpus com pedido liminar perante o TJMG",
+      "Defesa técnica estratégica durante toda a instrução da ação penal",
     ],
     whatsAppText:
-      "Olá, Dr. Rodrigo Corrêa! Gostaria de atendimento especializado para um processo do Tribunal do Júri.",
-  },
-  {
-    id: "inquerito-policial-investigacao",
-    title: "Inquérito Policial & Investigação Defensiva",
-    icon: BookOpen,
-    tag: "Defesa Preliminar · Oitivas · Operações Policiais · Sigilo e Estratégia",
-    summary:
-      "Atuação técnica preventiva desde o nascedouro da investigação para blindar o investigado contra abusos, produzir contraprovas autônomas e evitar indiciamentos e denúncias.",
-    details:
-      "Muitas condenações nascem de declarações equivocadas ou da ausência de defesa na fase investigativa. O Dr. Rodrigo Corrêa acompanha depoimentos em delegacias, garante acesso irrestrito às provas já encartadas com base na Súmula Vinculante 14 do STF, formula quesitos e realiza investigação defensiva com coleta lícita de provas para o arquivamento das investigações.",
-    topics: [
-      "Acompanhamento presencial em oitivas, depoimentos e acareações perante o delegado de polícia",
-      "Acesso irrestrito e integral às peças de investigação (Súmula Vinculante nº 14 do STF)",
-      "Investigação defensiva com coleta de documentos, declarações juramentadas e provas digitais",
-      "Requerimento de diligências essenciais à comprovação da inocência do investigado",
-      "Defesa e proteção jurídica em caso de mandados de busca e apreensão e quebras de sigilo",
-      "Elaboração de Defesa Prévia e Resposta à Acusação para trancamento pré-processual",
-    ],
-    whatsAppText:
-      "Olá, Dr. Rodrigo Corrêa! Fui intimado para prestar depoimento ou estou sob investigação policial e preciso de orientação.",
-  },
-  {
-    id: "execucao-penal-beneficios",
-    title: "Execução Penal & Progressão de Regime",
-    icon: FileCheck2,
-    tag: "Progressão Fechado/Semiaberto/Aberto · Livramento Condicional · Remição",
-    summary:
-      "Fiscalização minuciosa do cumprimento de pena no sistema SEEU. Conquista de progressões de regime no dia exato, livramento condicional, saídas temporárias e remição por estudo e trabalho.",
-    details:
-      "O cumprimento de pena não pode ultrapassar um único dia além do fixado pela lei. O Dr. Rodrigo Corrêa realiza a auditoria matemática contínua da Execução Penal, calculando frações de pena, pleiteando progressões para o semiaberto e aberto, conquistando o livramento condicional e abatendo dias de cárcere por meio da remição por leitura, trabalho e estudos.",
-    topics: [
-      "Auditoria minuciosa do Atestado de Pena a Cumprir e cálculo de frações no sistema eletrônico SEEU",
-      "Pedido imediato de progressão de regime (fechado para semiaberto, e semiaberto para aberto)",
-      "Instrução e concessão de Livramento Condicional para cumprimento do restante da pena em liberdade",
-      "Remição de pena por trabalho prisional, cursos profissionalizantes, estudo e leitura de obras",
-      "Requerimento de Saídas Temporárias (visitas à família) e autorização para trabalho externo",
-      "Pedidos de transferência de estabelecimento prisional para unidade próxima à residência da família",
-    ],
-    whatsAppText:
-      "Olá, Dr. Rodrigo Corrêa! Gostaria de consultar sobre a Execução Penal e benefícios de pena no SEEU.",
+      "Olá, Dr. Adonai Soares! Preciso de atendimento urgente para uma demanda penal ou prisão em flagrante.",
   },
 ];
 
 const clientReviews = [
   {
-    name: "Priscila Lima Silva",
-    reviewerTag: "8 avaliações no Google",
-    badge: "Ética & Cuidado Humano",
-    rating: 5,
-    content:
-      "Dr. Rodrigo é um profissional extraordinário! Desde o primeiro contato demonstrou ética, dedicação e um cuidado humano que fazem toda a diferença. Sua competência, transparência e comprometimento passam segurança e confiança em cada passo do processo. Além do conhecimento jurídico impecável, trabalha com seriedade, respeito e uma atenção especial aos detalhes, sempre buscando o melhor resultado. Um advogado tão excelente, responsável e ao mesmo tempo tão acessível e atencioso. Só tenho gratidão pelo trabalho maravilhoso que realizou – com excelência do início ao fim. Recomendo de olhos fechados, pois é um exemplo de advogado comprometido e brilhante no que faz.🌟👏",
-  },
-  {
-    name: "Alberto Ribeiro",
+    name: "Felipe Marques",
     reviewerTag: "1 avaliação no Google",
-    badge: "Resolução em Menos de 1 Semana",
+    badge: "Atendimento Humanizado & Conhecimento",
     rating: 5,
     content:
-      "Advogado atencioso e competente, amplo conhecimento na área, muito experiente, resolveu meu problema em menos de uma semana, além de me passar muita tranquilidade e confiança. Espero nunca precisar de advogado novamente, mas caso um dia precise, sei que posso contar com o Dr. Rodrigo Correa. Parabéns pelo profissionalismo e ética.",
+      "Ótimo advogado, Dr. Adonai! Sempre me acolheu com respeito, atenção e dedicação, esclarecendo todas as minhas dúvidas de forma clara e paciente. Profissional extremamente competente, transmite segurança e demonstra profundo conhecimento jurídico. Além disso, o atendimento é humanizado e eficiente, tornando todo o processo muito mais tranquilo. O escritório tem ótima localização, e ele é sempre pontual e disponível para ajudar. Recomendo com total confiança!",
   },
   {
-    name: "Maria Das Graças Andrade",
+    name: "Ana Maciel",
     reviewerTag: "1 avaliação no Google",
-    badge: "Paciência & Caráter Fora do Sério",
+    badge: "Competência & Ética Irrepreensível",
     rating: 5,
     content:
-      "Inexplicável! Dr Rodrigo Gomes Correa é um excelente profissional muito dedicado atencioso com os clientes. Ele é incrível ele trabalhou para mim em um processo criminal, eu tenho dificuldade para enxergar com uma perca de visão e audição... Ele fazia o impossível pra eu entender ele até aumentava as letras e virava a tela do computador para mim e explicava várias vezes onde eu não conseguia entender. Então eu posso dizer que ele é muito bom advogado e como pessoa também ele é um ser humano especial humilde de um caráter fora do sério. Eu super indico esse profissional para outros clientes, a ele só gratidão mesmo por tudo pela paciência comigo porque eu falo muito, e mando muitos áudios um em cima do outro. Obrigado Dr Rodrigo Gomes Correa. ❤️",
+      "Gostaria de expressar minha sincera admiração pelo trabalho do Dr Adonai . Um profissional de notável competência, postura ética irrepreensível e profundo conhecimento jurídico. Demonstrou, ao longo de todo o processo, comprometimento, clareza nas orientações e uma dedicação que inspira confiança. Sinto-me extremamente grata pelo acolhimento, pela condução segura do meu caso e pela excelência no atendimento. Sem dúvida, um advogado que honra a advocacia com seriedade, empatia e respeito ao cliente. Recomendo com absoluta confiança.",
   },
   {
-    name: "Andrielly Gomes",
-    reviewerTag: "Local Guide · 69 avaliações · 15 fotos",
-    badge: "Excelência & Garantias Constitucionais",
-    rating: 5,
-    content:
-      "Oferece orientação técnica de excelência ao cliente e a seus familiares, busca garantir que sejam aplicadas todas as garantias e direitos a que seu cliente faz jus, luta pela obediência aos princípios assegurados pela Constituição Federal, tanto quanto os infraconstitucionais. Indico sem sombra de dúvidas para quem precisa de um especialista na área criminal. 🙏",
-  },
-  {
-    name: "Jao :p",
-    reviewerTag: "3 avaliações no Google",
-    badge: "Humano & Muito Confiável",
-    rating: 5,
-    content:
-      "Excelente profissional ..dedicado e extremamente competente .. Humano e muito confiável. Minha experiência com Dr. Rodrigo é com certeza a melhor possível.",
-  },
-  {
-    name: "Filipe Maciel Reis",
-    reviewerTag: "4 avaliações no Google",
-    badge: "Atenção aos Detalhes",
-    rating: 5,
-    content:
-      "Ótimo profissional, realiza seu trabalho com competência e dedicação. Disponível a ajudar e compreender os detalhes minuciosamente. Visa o melhor ao cliente.",
-  },
-  {
-    name: "Alice Alckmin",
-    reviewerTag: "6 avaliações no Google",
-    badge: "Extremamente Atencioso",
-    rating: 5,
-    content:
-      "Dr. Rodrigo é extremamente atencioso e comprometido com seu trabalho! Só tenho a agradecer por tudo!",
-  },
-  {
-    name: "Éricka Palmieri",
-    reviewerTag: "4 avaliações no Google",
-    badge: "Clareza & Responsabilidade",
-    rating: 5,
-    content:
-      "Profissional sério, competente e que realmente se preocupa em resolver o problema do seu cliente com clareza e responsabilidade. Super recomendo!",
-  },
-  {
-    name: "Katiarezendesouza Souza",
+    name: "Carlos Daniel",
     reviewerTag: "2 avaliações no Google",
-    badge: "Dedicação Plena",
+    badge: "Especialista em Sucessões & Imóveis",
     rating: 5,
     content:
-      "Foi ótimo, muito atencioso e dedicado às situações levantadas. Excelente profissional!",
+      "Profissional sério e atencioso, com grande domínio em áreas essenciais do Direito, como Sucessões e Direito Real. Acompanho sua atuação com firmeza e dedicação em inventários, partilhas de bens entre herdeiros e também em casos que envolvem a regularização de imóveis, como usucapião e escrituras. Explica com clareza, orienta com segurança e resolve com responsabilidade. Recomendo a quem busca um profissional que compreenda não apenas a lei, mas também a realidade vivida por aqueles que dela dependem.",
   },
   {
-    name: "Laura Vieira",
-    reviewerTag: "Local Guide · 11 avaliações",
-    badge: "Extremamente Capacitado",
+    name: "Laura Oliveira",
+    reviewerTag: "Local Guide · 17 avaliações · 11 fotos",
+    badge: "Família, Inventário & Imóveis",
     rating: 5,
     content:
-      "Excelente! Sempre muito atencioso e educado! Profissional extremamente capacitado.",
+      "Adonai é um profissional altamente capacitado no que diz respeito a direito de família, inventário especialmente e imóveis. Atento, atualizado e atencioso sempre dando retorno ao cliente.",
   },
   {
-    name: "Maikon Lourenço",
+    name: "Vinicius Santos",
+    reviewerTag: "11 avaliações · 8 fotos",
+    badge: "Advogado Civil que Resolve",
+    rating: 5,
+    content:
+      "Advogado civil em Corinto que realmente resolve. Já precisei de ajuda com contratos e o Dr. Adonai foi direto, claro e muito profissional.",
+  },
+  {
+    name: "Raíssa Caroline",
     reviewerTag: "1 avaliação no Google",
-    badge: "Nota Máxima & Conhecimento",
+    badge: "Comprometimento & Clareza",
     rating: 5,
     content:
-      "Nota máxima excelente atendimento e inclusive o conhecimento!!! Super recomendo ..",
+      "Excelente profissional! Sempre me atendeu com a maior atenção e comprometimento. Sempre muito prestativo, esclareceu todas as minhas dúvidas com clareza e conduziu tudo com muita responsabilidade e profissionalismo. Recomendo o trabalho sem dúvidas!",
   },
   {
-    name: "Ana Gabriela de Castro Sousa",
-    reviewerTag: "2 avaliações no Google",
-    badge: "Capacitado & Prestativo",
+    name: "Fernanda Da silva",
+    reviewerTag: "1 avaliação no Google",
+    badge: "Resolução Célere de Inventário",
     rating: 5,
     content:
-      "Profissional muito capacitado e prestativo! Recomendo os seus serviços.",
+      "O Dr Adonai é excelente profissional, precisei resolver o inventário, onde ele resolveu com muita dedicação e competência. Sem duvida, o melhor!",
+  },
+  {
+    name: "Anna Paula Souza Rodrigues",
+    reviewerTag: "2 avaliações no Google",
+    badge: "Equipe Excelente & Transparente",
+    rating: 5,
+    content:
+      "O escritório possui uma equipe excelente! O advogado Adonai Soares é um profissional muito dedicado, competente e transparente! Recomendo! ✨",
+  },
+  {
+    name: "Josimara Moura",
+    reviewerTag: "1 avaliação no Google",
+    badge: "Agilidade & Compromisso",
+    rating: 5,
+    content:
+      "Si precisam de um advogado que resolve o problema , é ele Adonai Soares. Esclarece dúvidas frequentes e soluciona situações com muita agilidade e compromisso.",
+  },
+  {
+    name: "Lucas CAmpos",
+    reviewerTag: "2 avaliações no Google",
+    badge: "Causa Vencida em Corinto",
+    rating: 5,
+    content:
+      "Excelente advogado em Corinto, me ajudou muito na minha causa, graças a ele deu tudo certo.",
+  },
+  {
+    name: "Isabella Gonçalves",
+    reviewerTag: "1 avaliação no Google",
+    badge: "Qualificação & Firmeza",
+    rating: 5,
+    content:
+      "Advogado muito qualificado, trabalho com o melhor!!",
+  },
+  {
+    name: "Cibele Amancio",
+    reviewerTag: "1 avaliação no Google",
+    badge: "Atencioso & Prestativo",
+    rating: 5,
+    content:
+      "Excelente trabalho, muito atencioso e prestativo, recomendo muito! 🙏🏻",
   },
 ];
 
@@ -388,21 +410,32 @@ function Heading({
   eyebrow,
   children,
   description,
-  light = true,
+  theme = "dark",
+  light,
 }: {
   eyebrow: string;
   children: React.ReactNode;
   description?: string;
+  theme?: "dark" | "light";
   light?: boolean;
 }) {
+  const isLight = theme === "light";
   return (
     <div>
-      <p className={light ? "eyebrow-light" : "eyebrow-gold"}>{eyebrow}</p>
-      <h2 className="mt-4 font-serif text-3xl leading-[1.14] tracking-[-0.02em] text-[#f8f9fa] sm:text-4xl lg:text-[3.15rem]">
+      <p className={isLight ? "eyebrow-dark" : "eyebrow-light"}>{eyebrow}</p>
+      <h2
+        className={`mt-4 font-serif text-3xl leading-[1.14] tracking-[-0.02em] sm:text-4xl lg:text-[3.15rem] ${
+          isLight ? "text-[#1a1713]" : "text-[#fbfaf8]"
+        }`}
+      >
         {children}
       </h2>
       {description && (
-        <p className="mt-4 text-[15px] leading-7 text-[#cbd5e1]">
+        <p
+          className={`mt-4 text-[15px] leading-7 ${
+            isLight ? "text-[#4a443c]" : "text-[#d4cdc1]"
+          }`}
+        >
           {description}
         </p>
       )}
@@ -429,24 +462,24 @@ export default function Home() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <main className="overflow-hidden bg-[#08090c] text-[#f8f9fa] selection:bg-[#c59b27] selection:text-[#08090c]">
-        {/* Navigation Bar - Refined Metallic Gold, Platinum Chrome & Obsidian Luxury */}
-        <header className="sticky top-0 z-40 border-b border-[#c59b27]/25 bg-[#08090c]/95 backdrop-blur-xl shadow-card">
+      <main className="overflow-hidden bg-[#0b0a08] text-[#fbfaf8] selection:bg-[#c5a882] selection:text-[#0b0a08]">
+        {/* Navigation Bar - Refined Metallic Champagne Gold & Obsidian Luxury */}
+        <header className="sticky top-0 z-40 border-b border-[#c5a882]/25 bg-[#0b0a08]/95 backdrop-blur-xl shadow-card">
           <div className="mx-auto flex h-[98px] max-w-7xl items-center justify-between gap-6 px-5 sm:h-[108px] lg:h-[114px] xl:h-[118px] sm:px-8 lg:px-12">
             <a
               href="#inicio"
-              aria-label="Rodrigo Corrêa Advocacia Criminal - Início"
+              aria-label="Adonai Soares — Advocacia e Consultoria Jurídica - Início"
               onClick={closeMenu}
               className="flex shrink-0 items-center transition-opacity hover:opacity-95"
             >
-              <div className="relative h-[66px] w-[260px] sm:h-[76px] sm:w-[320px] lg:h-[86px] lg:w-[365px] xl:h-[90px] xl:w-[385px]">
+              <div className="relative h-[68px] w-[260px] sm:h-[80px] sm:w-[320px] lg:h-[90px] lg:w-[370px] xl:h-[94px] xl:w-[390px]">
                 <Image
                   src={LOGO_SRC}
-                  alt="Rodrigo Corrêa Advocacia Criminal"
+                  alt="Adonai Soares de Moura — Advocacia e Consultoria Jurídica"
                   fill
                   priority
                   unoptimized
-                  sizes="(max-width: 640px) 260px, (max-width: 1024px) 365px, 385px"
+                  sizes="(max-width: 640px) 260px, (max-width: 1024px) 370px, 390px"
                   className="object-contain object-left"
                 />
               </div>
@@ -460,19 +493,19 @@ export default function Home() {
                 Início
               </a>
               <a className="nav-link" href="#sobre">
-                O Advogado
+                O Advogado & Equipe
               </a>
               <a className="nav-link" href="#atuacao">
-                Atuação Penal
+                Áreas de Atuação
               </a>
               <a className="nav-link" href="#diferenciais">
                 Diferenciais
               </a>
               <a className="nav-link" href="#avaliacoes">
-                Avaliações (5,0 ★)
+                Avaliações (4,8 ★)
               </a>
               <a className="nav-link" href="#contato">
-                Plantão 24h & Sede
+                Contato & Sede
               </a>
             </nav>
 
@@ -481,9 +514,9 @@ export default function Home() {
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Avaliações do Dr. Rodrigo Corrêa no Google"
-                className="grid size-10 place-items-center rounded-lg border border-[#c59b27]/30 bg-[#0e1016] text-[#cbd5e1] transition-all hover:border-[#d4af37] hover:bg-[#141720] hover:text-white shadow-xs"
-                title="5,0 ★ no Google (27 avaliações)"
+                aria-label="Avaliações do Dr. Adonai Soares no Google"
+                className="grid size-10 place-items-center rounded-lg border border-[#c5a882]/30 bg-[#12100d] text-[#d4cdc1] transition-all hover:border-[#dfcaa9] hover:bg-[#1a1713] hover:text-white shadow-xs"
+                title="4,8 ★ no Google (25 avaliações)"
               >
                 <GoogleIcon size={16} />
               </a>
@@ -491,16 +524,16 @@ export default function Home() {
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Instagram do Dr. Rodrigo Corrêa"
-                className="grid size-10 place-items-center rounded-lg border border-[#c59b27]/30 bg-[#0e1016] text-[#cbd5e1] transition-all hover:border-[#d4af37] hover:bg-[#141720] hover:text-white shadow-xs"
+                aria-label="Instagram do Dr. Adonai Soares"
+                className="grid size-10 place-items-center rounded-lg border border-[#c5a882]/30 bg-[#12100d] text-[#d4cdc1] transition-all hover:border-[#dfcaa9] hover:bg-[#1a1713] hover:text-white shadow-xs"
                 title={`Instagram ${INSTAGRAM_HANDLE}`}
               >
                 <InstagramIcon size={16} />
               </a>
               <a
                 href={`tel:+${WHATSAPP_NUMBER}`}
-                aria-label="Ligar para o Dr. Rodrigo Corrêa"
-                className="grid size-10 place-items-center rounded-lg border border-[#c59b27]/30 bg-[#0e1016] text-[#cbd5e1] transition-all hover:border-[#d4af37] hover:bg-[#141720] hover:text-white shadow-xs"
+                aria-label="Ligar para o Dr. Adonai Soares"
+                className="grid size-10 place-items-center rounded-lg border border-[#c5a882]/30 bg-[#12100d] text-[#d4cdc1] transition-all hover:border-[#dfcaa9] hover:bg-[#1a1713] hover:text-white shadow-xs"
                 title={`Ligar: ${PHONE_DISPLAY}`}
               >
                 <Phone size={16} />
@@ -509,22 +542,22 @@ export default function Home() {
                 href={getWhatsAppUrl()}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="WhatsApp Dr. Rodrigo Corrêa"
-                className="grid size-10 place-items-center rounded-lg border border-[#c59b27]/30 bg-[#0e1016] text-[#cbd5e1] transition-all hover:border-[#d4af37] hover:bg-[#141720] hover:text-white shadow-xs"
-                title="Plantão WhatsApp 24 Horas"
+                aria-label="WhatsApp Dr. Adonai Soares"
+                className="grid size-10 place-items-center rounded-lg border border-[#c5a882]/30 bg-[#12100d] text-[#d4cdc1] transition-all hover:border-[#dfcaa9] hover:bg-[#1a1713] hover:text-white shadow-xs"
+                title="Atendimento WhatsApp"
               >
                 <WhatsAppIcon size={18} />
               </a>
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá, Dr. Rodrigo Corrêa! Preciso de atendimento de urgência no Plantão Criminal 24h."
+                  "Olá, Dr. Adonai Soares! Gostaria de agendar uma consulta jurídica no escritório."
                 )}
                 target="_blank"
                 size="sm"
                 variant="gold"
                 className="rounded-lg shadow-sm"
               >
-                Plantão 24h <ArrowUpRight size={14} className="text-[#08090c]" />
+                Agendar Consulta <ArrowUpRight size={14} className="text-[#0b0a08]" />
               </GlowingButton>
             </div>
 
@@ -533,7 +566,7 @@ export default function Home() {
               aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
               aria-expanded={menuOpen}
               aria-controls="mobile-navigation"
-              className="grid size-11 place-items-center rounded-lg border border-[#c59b27]/40 bg-[#0e1016] text-[#f8f9fa] lg:hidden shadow-xs"
+              className="grid size-11 place-items-center rounded-lg border border-[#c5a882]/40 bg-[#12100d] text-[#fbfaf8] lg:hidden shadow-xs"
               onClick={() => setMenuOpen((open) => !open)}
             >
               {menuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -549,46 +582,46 @@ export default function Home() {
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.22 }}
-                className="overflow-hidden border-t border-[#c59b27]/25 bg-[#0e1016] px-6 text-[#f8f9fa] lg:hidden"
+                className="overflow-hidden border-t border-[#c5a882]/25 bg-[#12100d] px-6 text-[#fbfaf8] lg:hidden"
               >
                 <div className="mx-auto flex max-w-7xl flex-col gap-1 py-4">
                   {[
                     ["Início", "#inicio"],
                     ["O Advogado & Equipe", "#sobre"],
-                    ["Especialidades Criminais", "#atuacao"],
+                    ["Áreas de Atuação", "#atuacao"],
                     ["Diferenciais", "#diferenciais"],
-                    ["Avaliações (5,0 ★)", "#avaliacoes"],
-                    ["Plantão 24h & Sede", "#contato"],
+                    ["Avaliações (4,8 ★)", "#avaliacoes"],
+                    ["Contato & Sede", "#contato"],
                   ].map(([label, href]) => (
                     <a
                       key={label}
                       href={href}
                       onClick={closeMenu}
-                      className="py-3 text-sm font-medium text-[#cbd5e1] hover:text-[#d4af37]"
+                      className="py-3 text-sm font-medium text-[#d4cdc1] hover:text-[#dfcaa9]"
                     >
                       {label}
                     </a>
                   ))}
                   <div className="mt-3 flex flex-col gap-2">
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#fae9b5]/80 bg-gradient-to-r from-[#b38922] via-[#e5c46e] to-[#b38922] px-5 py-3.5 text-xs font-black uppercase tracking-[0.14em] text-[#08090c] shadow-[0_4px_16px_rgba(212,175,55,0.4),inset_0_1px_1px_rgba(255,255,255,0.85)] transition-all hover:brightness-105 active:translate-y-0"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#f4ebd6]/85 bg-gradient-to-r from-[#9e7e57] via-[#dfcaa9] to-[#9e7e57] px-5 py-3.5 text-xs font-black uppercase tracking-[0.14em] text-[#0b0a08] shadow-[0_4px_16px_rgba(197,168,130,0.4),inset_0_1px_1px_rgba(255,255,255,0.85)] transition-all hover:brightness-105 active:translate-y-0"
                       href={getWhatsAppUrl(
-                        "Olá, Dr. Rodrigo Corrêa! Preciso de atendimento urgente no Plantão Criminal."
+                        "Olá, Dr. Adonai Soares! Gostaria de atendimento com seu escritório."
                       )}
                       target="_blank"
                       rel="noreferrer"
                       onClick={closeMenu}
                     >
-                      <WhatsAppIcon size={16} className="text-[#08090c]" /> Plantão 24h: {PHONE_DISPLAY}
+                      <WhatsAppIcon size={16} className="text-[#0b0a08]" /> WhatsApp: {PHONE_DISPLAY}
                     </a>
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#c59b27]/40 bg-[#141720] px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-[#f8f9fa] transition-all hover:border-[#d4af37]"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#c5a882]/40 bg-[#1a1713] px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-[#fbfaf8] transition-all hover:border-[#dfcaa9]"
                       href={GOOGLE_SEARCH_URL}
                       target="_blank"
                       rel="noreferrer"
                       onClick={closeMenu}
                     >
-                      <GoogleIcon size={15} /> 5,0 ★ no Google (27 avaliações)
+                      <GoogleIcon size={15} /> 4,8 ★ no Google (25 avaliações)
                     </a>
                   </div>
                 </div>
@@ -597,16 +630,16 @@ export default function Home() {
           </AnimatePresence>
         </header>
 
-        {/* Hero Section - Metallic Gold Aura, Chrome Platinum & Obsidian Luxury */}
+        {/* Hero Section - Champagne Gold Aura & Warm Obsidian Luxury */}
         <section
           id="inicio"
-          className="relative isolate scroll-mt-24 border-b border-[#c59b27]/25 bg-gradient-to-b from-[#08090c] via-[#0d0f15] to-[#08090c]"
+          className="relative isolate scroll-mt-24 border-b border-[#c5a882]/25 bg-gradient-to-b from-[#0b0a08] via-[#12100d] to-[#0b0a08]"
         >
-          {/* Subtle gold and platinum ambient lighting aura */}
-          <div className="pointer-events-none absolute -right-32 top-8 -z-10 size-[36rem] rounded-full bg-[#c59b27]/12 blur-3xl" />
-          <div className="pointer-events-none absolute -left-20 bottom-10 -z-10 size-[28rem] rounded-full bg-[#d4af37]/8 blur-3xl" />
+          {/* Subtle champagne and bronze ambient lighting aura */}
+          <div className="pointer-events-none absolute -right-32 top-8 -z-10 size-[36rem] rounded-full bg-[#c5a882]/12 blur-3xl" />
+          <div className="pointer-events-none absolute -left-20 bottom-10 -z-10 size-[28rem] rounded-full bg-[#dfcaa9]/8 blur-3xl" />
 
-          <div className="mx-auto grid min-h-[640px] max-w-7xl items-center gap-10 px-5 py-14 sm:px-8 sm:py-16 lg:min-h-[700px] lg:grid-cols-[1.12fr_0.88fr] lg:gap-12 lg:px-12 lg:py-18 xl:min-h-[740px] xl:py-20">
+          <div className="mx-auto grid min-h-[640px] max-w-7xl items-center gap-10 px-5 py-14 sm:px-8 sm:py-16 lg:min-h-[700px] lg:grid-cols-[1.14fr_0.86fr] lg:gap-12 lg:px-12 lg:py-18 xl:min-h-[740px] xl:py-20">
             <motion.div
               initial="hidden"
               animate="visible"
@@ -615,30 +648,30 @@ export default function Home() {
             >
               <motion.div
                 variants={reveal}
-                className="mb-5 inline-flex items-center gap-2 rounded-lg border border-[#c59b27]/50 bg-[#141720]/80 px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-[#e1c47a] shadow-xs backdrop-blur-md"
+                className="mb-5 inline-flex items-center gap-2 rounded-lg border border-[#c5a882]/50 bg-[#1a1713]/85 px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-[#dfcaa9] shadow-xs backdrop-blur-md"
               >
                 <span className="relative flex size-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#d4af37] opacity-75"></span>
-                  <span className="relative inline-flex size-2 rounded-full bg-[#fae9b5]"></span>
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#c5a882] opacity-75"></span>
+                  <span className="relative inline-flex size-2 rounded-full bg-[#f4ebd6]"></span>
                 </span>
-                <span>PLANTÃO CRIMINAL 24H · CAXAMBU - MG & TRIBUNAIS</span>
+                <span>AS ADVOCACIA & CONSULTORIA JURÍDICA · CORINTO - MG</span>
               </motion.div>
 
               <motion.h1
                 variants={reveal}
-                className="font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-[#f8f9fa] sm:text-[2.6rem] sm:leading-[1.12] lg:text-[3.25rem] xl:text-[3.45rem]"
+                className="font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-[#fbfaf8] sm:text-[2.6rem] sm:leading-[1.12] lg:text-[3.25rem] xl:text-[3.45rem]"
               >
-                Sua liberdade exige uma defesa criminal especializada,{" "}
-                <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#e1c47a] via-[#d4af37] to-[#fbf8ee]">
-                  combativa e disponível 24 horas.
+                Segurança jurídica, clareza e dedicação para proteger seu patrimônio e{" "}
+                <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#dfcaa9] via-[#c5a882] to-[#fbf7ee]">
+                  garantir seus direitos com excelência.
                 </span>
               </motion.h1>
 
               <motion.p
                 variants={reveal}
-                className="mt-5 max-w-xl text-[15px] leading-7 text-[#cbd5e1] sm:text-base sm:leading-8"
+                className="mt-5 max-w-xl text-[15px] leading-7 text-[#d4cdc1] sm:text-base sm:leading-8"
               >
-                Liderado pelo <strong className="font-semibold text-white">Dr. Rodrigo Gomes Corrêa</strong>, nosso escritório é especializado em Direito Penal de alta complexidade. Atuação imediata, técnica e intransigente em <strong className="font-semibold text-white">prisões em flagrante, audiências de custódia, habeas corpus, tribunal do júri e recursos perante o TJMG, STJ e STF</strong>, com sede física no Centro de Caxambu - MG e prontidão ininterrupta.
+                Sob a liderança do <strong className="font-semibold text-white">Dr. Adonai Soares de Moura (OAB/MG 187.717)</strong>, nosso escritório é referência em atuação resolutiva em <strong className="font-semibold text-white">Direito Imobiliário, Regularização de Imóveis, Inventários & Sucessões, Direito de Família, Contratos Civis e Assessoria Estratégica</strong>. Atendimento humanizado, transparente e ágil com sede física no Centro de Corinto - MG e atuação em todo o Brasil.
               </motion.p>
 
               <motion.div
@@ -647,54 +680,54 @@ export default function Home() {
               >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dr. Rodrigo Corrêa! Preciso acionar o Plantão Criminal 24h para um atendimento de urgência."
+                    "Olá, Dr. Adonai Soares! Gostaria de conversar para analisar uma demanda jurídica."
                   )}
                   target="_blank"
                   size="md"
                   variant="gold"
                   className="rounded-lg shadow-md"
                 >
-                  <WhatsAppIcon size={16} className="text-[#08090c]" /> Acionar Plantão 24h no WhatsApp
+                  <WhatsAppIcon size={16} className="text-[#0b0a08]" /> Iniciar Atendimento no WhatsApp
                 </GlowingButton>
                 <a
                   href="#atuacao"
-                  className="group inline-flex items-center gap-2 rounded-lg border border-[#c59b27]/45 bg-[#0e1016]/90 backdrop-blur-md px-5 py-3.5 text-xs font-bold uppercase tracking-[0.14em] text-[#f8f9fa] shadow-[0_4px_16px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.06)] transition-all hover:border-[#fae9b5] hover:bg-[#141720] hover:text-white"
+                  className="group inline-flex items-center gap-2 rounded-lg border border-[#c5a882]/45 bg-[#12100d]/90 backdrop-blur-md px-5 py-3.5 text-xs font-bold uppercase tracking-[0.14em] text-[#fbfaf8] shadow-[0_4px_16px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.06)] transition-all hover:border-[#f4ebd6] hover:bg-[#1a1713] hover:text-white"
                 >
-                  Conhecer Áreas de Atuação{" "}
+                  Conhecer Nossas Especialidades{" "}
                   <ArrowRight
                     size={14}
-                    className="transition-transform group-hover:translate-x-1 text-[#d4af37]"
+                    className="transition-transform group-hover:translate-x-1 text-[#dfcaa9]"
                   />
                 </a>
               </motion.div>
 
               <motion.div
                 variants={reveal}
-                className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-[#c59b27]/25 pt-5 text-xs text-[#94a3b8]"
+                className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-[#c5a882]/25 pt-5 text-xs text-[#9e978d]"
               >
                 <a
                   href={GOOGLE_SEARCH_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-1.5 font-medium text-[#f8f9fa] transition-colors hover:text-[#d4af37]"
+                  className="inline-flex items-center gap-1.5 font-medium text-[#fbfaf8] transition-colors hover:text-[#dfcaa9]"
                 >
-                  <Star size={14} className="fill-[#d4af37] text-[#d4af37]" /> 5,0 ★ no Google (27 avaliações)
+                  <Star size={14} className="fill-[#c5a882] text-[#c5a882]" /> 4,8 ★ no Google (25 avaliações)
                 </a>
-                <span className="inline-flex items-center gap-1.5 font-medium text-[#f8f9fa]">
-                  <Clock size={14} className="text-[#d4af37]" /> Aberto 24 Horas
+                <span className="inline-flex items-center gap-1.5 font-medium text-[#fbfaf8]">
+                  <Clock size={14} className="text-[#c5a882]" /> Aberto 24 Horas · Agilidade
                 </span>
                 <a
                   href={GOOGLE_MAPS_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-1.5 font-medium text-[#f8f9fa] transition-colors hover:text-[#d4af37]"
+                  className="inline-flex items-center gap-1.5 font-medium text-[#fbfaf8] transition-colors hover:text-[#dfcaa9]"
                 >
-                  <MapPin size={14} className="text-[#d4af37]" /> R. Maj. Penha, 299 · Caxambu - MG
+                  <MapPin size={14} className="text-[#c5a882]" /> R. Dr. Antônio Alvarenga, 371 · Corinto - MG
                 </a>
               </motion.div>
             </motion.div>
 
-            {/* Hero Visual Presentation - Official Portrait */}
+            {/* Hero Visual Presentation - Dr. Adonai Soares & Legal Team */}
             <motion.div
               initial={{ opacity: 0, scale: 0.97, y: 18 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -703,65 +736,65 @@ export default function Home() {
                 delay: 0.18,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="relative mx-auto w-full max-w-[400px] sm:max-w-[430px] lg:max-w-[460px] xl:max-w-[480px] lg:ml-auto lg:mr-0"
+              className="relative mx-auto w-full max-w-[420px] sm:max-w-[450px] lg:max-w-[480px] xl:max-w-[500px] lg:ml-auto lg:mr-0"
             >
-              <div className="relative aspect-[4/4.9] overflow-hidden rounded-2xl border-2 border-[#c59b27]/50 bg-[#0e1016] shadow-2xl ring-1 ring-[#d4af37]/35">
+              <div className="relative aspect-[4/4.9] overflow-hidden rounded-2xl border-2 border-[#c5a882]/50 bg-[#12100d] shadow-2xl ring-1 ring-[#dfcaa9]/35">
                 <Image
                   src={FOTO_HERO_SRC}
-                  alt="Dr. Rodrigo Gomes Corrêa — Advogado Criminalista"
+                  alt="Dr. Adonai Soares de Moura e Equipe — AS Advocacia e Consultoria Jurídica"
                   fill
                   priority
                   loading="eager"
                   unoptimized
                   className="object-cover object-top"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-[#08090c] via-[#08090c]/85 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-[#0b0a08] via-[#0b0a08]/85 to-transparent" />
                 <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-3 text-white sm:bottom-6 sm:left-6 sm:right-6">
                   <div>
                     <p className="font-serif text-xl sm:text-2xl font-bold tracking-wide text-white">
-                      Dr. Rodrigo Corrêa
+                      Dr. Adonai Soares
                     </p>
-                    <p className="mt-0.5 text-[10px] uppercase tracking-[0.18em] text-[#e1c47a]">
-                      Advogado Criminalista · OAB/MG
+                    <p className="mt-0.5 text-[10px] uppercase tracking-[0.18em] text-[#dfcaa9]">
+                      Advogado & Consultor Jurídico · OAB/MG 187.717
                     </p>
                     <p className="mt-0.5 text-[11px] text-stone-300">
-                      R. Maj. Penha, 299 · Caxambu - MG & Tribunais
+                      R. Dr. Antônio Alvarenga, 371 · Centro, Corinto - MG
                     </p>
                   </div>
-                  <span className="grid size-11 shrink-0 place-items-center rounded-lg border border-[#c59b27]/60 bg-[#08090c]/85 text-[#d4af37] backdrop-blur-sm shadow-md">
+                  <span className="grid size-11 shrink-0 place-items-center rounded-lg border border-[#c5a882]/60 bg-[#0b0a08]/85 text-[#dfcaa9] backdrop-blur-sm shadow-md">
                     <Scale size={18} />
                   </span>
                 </div>
               </div>
 
               {/* Floating authority badge */}
-              <div className="absolute -left-3 top-4 z-10 rounded-lg border border-[#c59b27]/50 bg-[#08090c]/90 px-3 py-1.5 text-[9px] sm:text-[10px] font-bold tracking-[0.14em] text-[#e1c47a] shadow-md backdrop-blur-md sm:-left-4">
-                SEDE EM CAXAMBU · PLANTÃO PENAL 24 HORAS
+              <div className="absolute -left-3 top-4 z-10 rounded-lg border border-[#c5a882]/50 bg-[#0b0a08]/90 px-3 py-1.5 text-[9px] sm:text-[10px] font-bold tracking-[0.14em] text-[#dfcaa9] shadow-md backdrop-blur-md sm:-left-4">
+                SEDE PRÓPRIA EM CORINTO · EQUIPE ESPECIALIZADA
               </div>
 
-              {/* Floating Google 5.0 Star Rating */}
+              {/* Floating Google 4.8 Star Rating */}
               <a
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="group absolute -bottom-4 -right-2 z-10 rounded-xl border border-[#c59b27]/60 bg-[#0e1016]/95 p-3 shadow-xl backdrop-blur-md transition-all hover:border-[#d4af37] hover:bg-[#141720] sm:-right-4"
+                className="group absolute -bottom-4 -right-2 z-10 rounded-xl border border-[#c5a882]/60 bg-[#12100d]/95 p-3 shadow-xl backdrop-blur-md transition-all hover:border-[#dfcaa9] hover:bg-[#1a1713] sm:-right-4"
               >
                 <div className="flex items-center gap-2">
                   <GoogleIcon size={16} />
                   <div className="flex items-center gap-1.5">
-                    <div className="flex gap-0.5 text-[#d4af37]">
-                      <Star size={12} className="fill-[#d4af37] text-[#d4af37]" />
+                    <div className="flex gap-0.5 text-[#c5a882]">
+                      <Star size={12} className="fill-[#c5a882] text-[#c5a882]" />
                     </div>
                     <span className="font-serif text-sm font-bold text-white">
-                      5,0
+                      4,8
                     </span>
-                    <span className="text-[9px] uppercase tracking-wider text-[#e1c47a]">
+                    <span className="text-[9px] uppercase tracking-wider text-[#dfcaa9]">
                       / 5,0
                     </span>
                   </div>
                 </div>
-                <p className="mt-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#cbd5e1]">
-                  27 Avaliações no Google (100% 5★)
+                <p className="mt-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#d4cdc1]">
+                  25 Avaliações no Google (Destaque Máximo)
                 </p>
               </a>
             </motion.div>
@@ -771,39 +804,39 @@ export default function Home() {
         {/* Highlights Banner - Authority Metrics */}
         <section
           aria-label="Credenciais e Destaques"
-          className="border-b border-[#c59b27]/25 bg-[#0e1016]"
+          className="border-b border-[#c5a882]/25 bg-[#12100d]"
         >
           <div className="mx-auto grid max-w-7xl gap-7 px-5 py-8 sm:grid-cols-4 sm:gap-4 sm:px-8 lg:px-12">
             {[
               [
-                "5,0 ★ no Google",
-                "nota máxima comprovada em 27 avaliações destacando competência, ética e dedicação",
+                "4,8 ★ no Google",
+                "nota excelente com 25 avaliações comprovando agilidade, clareza e dedicação",
               ],
               [
-                "Plantão 24 Horas",
-                "prontidão ininterrupta para flagrantes, custódia e mandados de prisão",
+                "Atendimento Ágil",
+                "prontidão ininterrupta e respostas imediatas para proteger seus direitos",
               ],
               [
-                "Cuidado Humano",
-                "escuta atenta, paciência para sanar dúvidas e acolhimento à família",
+                "Cuidado Humanizado",
+                "escuta atenta, acolhimento sincero e paciência para esclarecer todas as dúvidas",
               ],
               [
-                "Caxambu • MG • Brasil",
-                "sede física no Centro de Caxambu e atuação estratégica em todo o país",
+                "Corinto • MG • Brasil",
+                "escritório executivo no Centro de Corinto e atuação estratégica em todo o país",
               ],
             ].map(([value, label], index) => (
               <div
                 key={label}
                 className={
                   index > 0
-                    ? "flex items-center gap-4 sm:justify-center sm:border-l sm:border-[#c59b27]/25"
+                    ? "flex items-center gap-4 sm:justify-center sm:border-l sm:border-[#c5a882]/25"
                     : "flex items-center gap-4 sm:justify-center"
                 }
               >
-                <span className="font-serif text-xl font-semibold text-[#d4af37] sm:text-2xl">
+                <span className="font-serif text-xl font-semibold text-[#dfcaa9] sm:text-2xl">
                   {value}
                 </span>
-                <span className="max-w-[165px] text-[11px] leading-5 text-[#cbd5e1]">
+                <span className="max-w-[165px] text-[11px] leading-5 text-[#d4cdc1]">
                   {label}
                 </span>
               </div>
@@ -811,13 +844,13 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Sobre o Dr. Rodrigo Corrêa & Equipe - Luxury Editorial */}
+        {/* Sobre o Dr. Adonai Soares & Equipe - Dobra Clara (Alabastro & Nogueira Nobre) */}
         <section
           id="sobre"
-          className="scroll-mt-24 border-y border-[#c59b27]/25 bg-[#08090c] py-20 text-[#f8f9fa] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-y border-[#c5a882]/30 bg-[#f8f5ee] py-20 text-[#1a1713] sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20 lg:px-12">
-            {/* Visual presentation - Team / Partners Photo */}
+            {/* Visual presentation - Office Reception Photo with Logo Wall & Wood Slats */}
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -825,37 +858,37 @@ export default function Home() {
               variants={reveal}
               className="relative mx-auto w-full max-w-[490px]"
             >
-              <div className="relative aspect-[4/4.9] overflow-hidden rounded-2xl border-2 border-[#c59b27]/50 bg-[#0e1016] shadow-2xl ring-1 ring-[#d4af37]/35">
+              <div className="relative aspect-[4/4.9] overflow-hidden rounded-2xl border-2 border-[#c5a882]/45 bg-white shadow-2xl ring-1 ring-[#c5a882]/20">
                 <Image
                   src={FOTO_SOBRE_SRC}
-                  alt="Dr. Rodrigo Corrêa e Equipe de Advocacia Criminal"
+                  alt="Espaço Executivo AS Advocacia e Consultoria Jurídica — Dr. Adonai Soares"
                   fill
                   unoptimized
-                  className="object-cover object-top"
+                  className="object-cover object-center"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-[#08090c]/85 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-[#1a1713]/80 to-transparent" />
               </div>
 
               {/* Authority badge card */}
-              <div className="absolute -bottom-6 right-3 max-w-[340px] rounded-xl border border-[#c59b27]/60 bg-[#0e1016]/95 backdrop-blur-md px-5 py-4 shadow-xl sm:-right-6 sm:px-6">
-                <div className="flex items-center gap-2 text-[#d4af37]">
+              <div className="absolute -bottom-6 right-3 max-w-[340px] rounded-xl border border-[#c5a882]/40 bg-white/95 backdrop-blur-md px-5 py-4 shadow-xl sm:-right-6 sm:px-6">
+                <div className="flex items-center gap-2 text-[#866843]">
                   <Sparkles size={16} />
-                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#e1c47a]">
-                    Excelência Penal & Ética
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#866843]">
+                    Excelência Jurídica & Modernidade
                   </p>
                 </div>
-                <p className="mt-1 font-serif text-lg leading-snug text-white">
-                  Dr. Rodrigo Gomes Corrêa & Equipe
+                <p className="mt-1 font-serif text-lg leading-snug text-[#1a1713]">
+                  AS Advocacia e Consultoria Jurídica
                 </p>
-                <p className="mt-0.5 text-[11px] font-medium text-[#d4af37]">
-                  Defesa Combativa, Altamente Técnica & Humanizada
+                <p className="mt-0.5 text-[11px] font-medium text-[#866843]">
+                  Dr. Adonai Soares de Moura · OAB/MG 187.717
                 </p>
-                <p className="mt-1 text-[11px] leading-4 text-[#94a3b8]">
-                  R. Maj. Penha, 299 - Sala 101 · Centro, Caxambu - MG
+                <p className="mt-1 text-[11px] leading-4 text-[#6b6257]">
+                  R. Dr. Antônio Alvarenga, 371 · Centro, Corinto - MG
                 </p>
               </div>
 
-              <span className="absolute -left-4 -top-4 -z-10 size-24 border-l-2 border-t-2 border-[#c59b27]/40 sm:-left-7 sm:-top-7 sm:size-32" />
+              <span className="absolute -left-4 -top-4 -z-10 size-24 border-l-2 border-t-2 border-[#c5a882]/45 sm:-left-7 sm:-top-7 sm:size-32" />
             </motion.div>
 
             {/* Story & Biography */}
@@ -867,49 +900,48 @@ export default function Home() {
             >
               <motion.div
                 variants={reveal}
-                className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#c59b27]/40 bg-[#141720] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#e1c47a] shadow-xs"
+                className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#c5a882]/40 bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#866843] shadow-xs"
               >
-                <span className="size-2 shrink-0 rounded-full bg-[#d4af37]" />
-                <span>SOBRE O DR. RODRIGO GOMES CORRÊA</span>
+                <span className="size-2 shrink-0 rounded-full bg-[#866843]" />
+                <span>SOBRE O DR. ADONAI SOARES & ESCRITÓRIO</span>
               </motion.div>
 
               <motion.h2
                 variants={reveal}
-                className="font-serif text-3xl leading-[1.14] tracking-[-0.02em] text-[#f8f9fa] sm:text-4xl lg:text-[3.25rem]"
+                className="font-serif text-3xl leading-[1.14] tracking-[-0.02em] text-[#1a1713] sm:text-4xl lg:text-[3.25rem]"
               >
-                Uma advocacia criminal pautada no rigor técnico, na ética e no{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#e1c47a] via-[#d4af37] to-[#fbf8ee]">
-                  cuidado profundamente humano em cada caso.
+                Uma advocacia pautada na competência técnica, na postura ética e no{" "}
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#866843] via-[#b5956f] to-[#5f462a]">
+                  acolhimento dedicado a cada cliente.
                 </span>
               </motion.h2>
 
               <motion.p
                 variants={reveal}
-                className="mt-6 max-w-xl text-[15px] leading-7 text-[#cbd5e1]"
+                className="mt-6 max-w-xl text-[15px] leading-7 text-[#4a443c]"
               >
-                Com escritório sediado na Rua Major Penha, no Centro de{" "}
-                <strong className="font-bold text-white">Caxambu - MG</strong>, e prestando assessoria penal estratégica em todo o estado de Minas Gerais e tribunais superiores, a atuação do{" "}
-                <strong className="font-bold text-white">Dr. Rodrigo Gomes Corrêa</strong> se fundamenta na intransigente defesa dos direitos e garantias constitucionais, com disponibilidade 24 horas para situações emergenciais.
+                Com escritório moderno e estruturado na Rua Dr. Antônio Alvarenga, no Centro de{" "}
+                <strong className="font-bold text-[#1a1713]">Corinto - MG</strong>, a atuação do{" "}
+                <strong className="font-bold text-[#1a1713]">Dr. Adonai Soares de Moura (OAB/MG 187.717)</strong> se destaca pela capacidade de traduzir o Direito em soluções práticas, rápidas e seguras para pessoas, famílias e empresas.
               </motion.p>
 
               <motion.p
                 variants={reveal}
-                className="mt-4 max-w-xl text-[15px] leading-7 text-[#cbd5e1]"
+                className="mt-4 max-w-xl text-[15px] leading-7 text-[#4a443c]"
               >
-                Reconhecido com <strong className="font-bold text-white">nota máxima 5,0 ★ unânime em 27 avaliações no Google</strong>, o Dr. Rodrigo é elogiado constantemente pelo domínio técnico impecável, pela rapidez resolutiva e pelo acolhimento aos clientes e seus familiares em momentos de angústia:{" "}
-                <em className="text-white">&ldquo;Desde o primeiro contato demonstrou ética, dedicação e um cuidado humano que fazem toda a diferença. Passa segurança e tranquilidade em cada passo.&rdquo;</em>
+                Amparado por uma equipe multidisciplinar qualificada, o Dr. Adonai conquistou expressivo reconhecimento com <strong className="font-bold text-[#1a1713]">nota 4,8 ★ em 25 avaliações no Google</strong>, sendo amplamente elogiado pela agilidade na resolução de inventários, segurança na regularização de imóveis, clareza nas orientações e pontualidade exemplar em cada etapa processual.
               </motion.p>
 
               {/* Client Quote Card from real Google Reviews */}
               <motion.div
                 variants={reveal}
-                className="mt-6 rounded-xl border border-[#c59b27]/35 bg-[#0e1016] p-5 shadow-xs"
+                className="mt-6 rounded-xl border border-[#c5a882]/35 bg-white p-5 shadow-xs"
               >
-                <blockquote className="font-serif text-sm italic leading-relaxed text-[#f8f9fa]">
-                  &ldquo;Ele é incrível, trabalhou para mim em um processo criminal... Ele fazia o impossível pra eu entender, explicava várias vezes com muita paciência. É muito bom advogado e como pessoa também é um ser humano especial, de um caráter fora do sério. Só gratidão!&rdquo;
+                <blockquote className="font-serif text-sm italic leading-relaxed text-[#2a241e]">
+                  &ldquo;Profissional de notável competência, postura ética irrepreensível e profundo conhecimento jurídico. Demonstrou, ao longo de todo o processo, comprometimento, clareza nas orientações e uma dedicação que inspira confiança. Um advogado que honra a advocacia com seriedade, empatia e respeito ao cliente.&rdquo;
                 </blockquote>
-                <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-[#d4af37]">
-                  — Depoimento real verificado no Google Meu Negócio (5,0 ★)
+                <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-[#866843]">
+                  — Ana Maciel · Avaliação real verificada no Google Meu Negócio
                 </p>
               </motion.div>
 
@@ -918,45 +950,45 @@ export default function Home() {
                 variants={reveal}
                 className="mt-6 grid grid-cols-2 gap-3 text-xs sm:grid-cols-3"
               >
-                <div className="rounded-lg border border-[#c59b27]/30 bg-[#0e1016] p-3 shadow-xs">
-                  <p className="font-bold text-white">27 Avaliações 5,0 ★</p>
-                  <p className="mt-0.5 text-[11px] text-[#94a3b8]">
-                    100% de satisfação comprovada no Google
+                <div className="rounded-lg border border-[#c5a882]/30 bg-white p-3 shadow-xs">
+                  <p className="font-bold text-[#1a1713]">4,8 ★ no Google</p>
+                  <p className="mt-0.5 text-[11px] text-[#6b6257]">
+                    25 avaliações espontâneas e verificadas
                   </p>
                 </div>
-                <div className="rounded-lg border border-[#c59b27]/30 bg-[#0e1016] p-3 shadow-xs">
-                  <p className="font-bold text-white">Plantão 24 Horas</p>
-                  <p className="mt-0.5 text-[11px] text-[#94a3b8]">
-                    Atendimento imediato a qualquer hora
+                <div className="rounded-lg border border-[#c5a882]/30 bg-white p-3 shadow-xs">
+                  <p className="font-bold text-[#1a1713]">Equipe Especializada</p>
+                  <p className="mt-0.5 text-[11px] text-[#6b6257]">
+                    Atendimento ágil em múltiplas áreas
                   </p>
                 </div>
-                <div className="rounded-lg border border-[#c59b27]/30 bg-[#0e1016] p-3 shadow-xs col-span-2 sm:col-span-1">
-                  <p className="font-bold text-white">Rigor Constitucional</p>
-                  <p className="mt-0.5 text-[11px] text-[#94a3b8]">
-                    Garantia plena de todos os seus direitos
+                <div className="rounded-lg border border-[#c5a882]/30 bg-white p-3 shadow-xs col-span-2 sm:col-span-1">
+                  <p className="font-bold text-[#1a1713]">Clareza & Ética</p>
+                  <p className="mt-0.5 text-[11px] text-[#6b6257]">
+                    Sem juridiquês, direto ao ponto
                   </p>
                 </div>
               </motion.div>
 
               <motion.div
                 variants={reveal}
-                className="mt-6 grid grid-cols-1 gap-2.5 text-xs font-semibold text-[#f8f9fa] sm:grid-cols-2"
+                className="mt-6 grid grid-cols-1 gap-2.5 text-xs font-semibold text-[#1a1713] sm:grid-cols-2"
               >
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#d4af37]" />
-                  <span>Sede na R. Maj. Penha, 299 - Sala 101 · Centro, Caxambu - MG</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#866843]" />
+                  <span>Sede na R. Dr. Antônio Alvarenga, 371 · Centro, Corinto - MG</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#d4af37]" />
-                  <span>Nota 5,0 ★ máxima no Google em 27 avaliações autênticas</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#866843]" />
+                  <span>Excelência comprovada em Inventários, Usucapião e Imóveis</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#d4af37]" />
-                  <span>Contato direto pelo WhatsApp com o Dr. Rodrigo Corrêa</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#866843]" />
+                  <span>Contato direto pelo WhatsApp com o Dr. Adonai Soares</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#d4af37]" />
-                  <span>Atuação em delegacias, comarcas de MG e Tribunais Superiores</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#866843]" />
+                  <span>Atuação em Corinto, comarcas de MG e Tribunais Superiores</span>
                 </div>
               </motion.div>
 
@@ -966,18 +998,18 @@ export default function Home() {
               >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dr. Rodrigo Corrêa! Gostaria de uma consulta para analisar um caso criminal."
+                    "Olá, Dr. Adonai Soares! Gostaria de agendar um atendimento para apresentar meu caso."
                   )}
                   target="_blank"
                   size="md"
                   variant="gold"
                   className="rounded-lg shadow-md"
                 >
-                  <WhatsAppIcon size={16} className="text-[#08090c]" /> Falar com o Dr. Rodrigo Corrêa
+                  <WhatsAppIcon size={16} className="text-[#0b0a08]" /> Falar com o Dr. Adonai Soares
                 </GlowingButton>
                 <a
                   href={`tel:+${WHATSAPP_NUMBER}`}
-                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#cbd5e1] transition-colors hover:text-[#d4af37]"
+                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#4a443c] transition-colors hover:text-[#866843]"
                 >
                   <Phone size={15} /> {PHONE_DISPLAY}
                 </a>
@@ -986,10 +1018,10 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Pilares de Atuação / Especialidades Criminais */}
+        {/* Pilares de Atuação / Especialidades */}
         <section
           id="atuacao"
-          className="scroll-mt-24 border-t border-[#c59b27]/25 bg-[#0e1016] py-20 sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#c5a882]/25 bg-[#12100d] py-20 sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <motion.div
@@ -1001,16 +1033,16 @@ export default function Home() {
             >
               <Heading
                 light
-                eyebrow="ESPECIALIDADES EM DIREITO PENAL & PROCESSO PENAL"
-                description="Defesa criminal estratégica e combativa para resguardar a sua liberdade, a sua integridade e os seus direitos perante a Justiça."
+                eyebrow="ÁREAS DE ATUAÇÃO & CONSULTORIA JURÍDICA"
+                description="Soluções jurídicas técnicas, modernas e humanizadas para resguardar seu patrimônio, defender sua família e impulsionar seus negócios."
               >
-                Soluções jurídicas técnicas para defender você em{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#e1c47a] via-[#d4af37] to-[#fbf8ee]">
-                  Caxambu, Minas Gerais e Tribunais Superiores.
+                Especialidades completas para atender você em{" "}
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#dfcaa9] via-[#c5a882] to-[#fbf7ee]">
+                  Corinto, Minas Gerais e em todo o Brasil.
                 </span>
               </Heading>
-              <p className="max-w-[270px] pb-1 text-xs leading-6 text-[#94a3b8]">
-                Clique em uma área de atuação abaixo para conferir o detalhamento completo dos serviços e acionar o atendimento no WhatsApp.
+              <p className="max-w-[270px] pb-1 text-xs leading-6 text-[#9e978d]">
+                Clique em qualquer área de atuação abaixo para conferir os procedimentos detalhados e solicitar atendimento direto via WhatsApp.
               </p>
             </motion.div>
 
@@ -1027,25 +1059,25 @@ export default function Home() {
                   <motion.article
                     key={area.id}
                     variants={reveal}
-                    className="group flex min-h-[350px] flex-col rounded-xl border border-[#c59b27]/30 bg-[#12151e] p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#d4af37] hover:shadow-gold sm:p-8"
+                    className="group flex min-h-[350px] flex-col rounded-xl border border-[#c5a882]/30 bg-[#161310] p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#dfcaa9] hover:shadow-gold sm:p-8"
                   >
                     <div className="flex items-start justify-between">
-                      <span className="grid size-12 place-items-center rounded-lg border border-[#c59b27]/40 bg-[#08090c] text-[#d4af37] shadow-xs transition-colors group-hover:bg-[#c59b27] group-hover:text-[#08090c] group-hover:border-[#e1c47a]">
+                      <span className="grid size-12 place-items-center rounded-lg border border-[#c5a882]/40 bg-[#0b0a08] text-[#dfcaa9] shadow-xs transition-colors group-hover:bg-[#c5a882] group-hover:text-[#0b0a08] group-hover:border-[#f4ebd6]">
                         <Icon size={22} strokeWidth={1.5} />
                       </span>
-                      <span className="font-serif text-2xl text-[#c59b27]/40 group-hover:text-[#d4af37]">
+                      <span className="font-serif text-2xl text-[#c5a882]/40 group-hover:text-[#dfcaa9]">
                         0{index + 1}
                       </span>
                     </div>
 
                     <div className="mt-6">
-                      <span className="inline-block rounded-md border border-[#c59b27]/30 bg-[#08090c] px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-[#e1c47a] shadow-xs">
+                      <span className="inline-block rounded-md border border-[#c5a882]/30 bg-[#0b0a08] px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-[#dfcaa9] shadow-xs">
                         {area.tag}
                       </span>
-                      <h3 className="mt-3 font-serif text-[1.45rem] leading-tight text-white group-hover:text-[#e1c47a] transition-colors">
+                      <h3 className="mt-3 font-serif text-[1.45rem] leading-tight text-white group-hover:text-[#dfcaa9] transition-colors">
                         {area.title}
                       </h3>
-                      <p className="mt-3 text-[13px] leading-6 text-[#cbd5e1]">
+                      <p className="mt-3 text-[13px] leading-6 text-[#d4cdc1]">
                         {area.summary}
                       </p>
                     </div>
@@ -1053,9 +1085,9 @@ export default function Home() {
                     <button
                       type="button"
                       onClick={() => setActiveArea(area)}
-                      className="group/link mt-auto inline-flex w-fit items-center gap-2 pt-6 text-[10px] font-bold uppercase tracking-[0.16em] text-[#d4af37] hover:text-white"
+                      className="group/link mt-auto inline-flex w-fit items-center gap-2 pt-6 text-[10px] font-bold uppercase tracking-[0.16em] text-[#dfcaa9] hover:text-white"
                     >
-                      Ver detalhes e pedidos{" "}
+                      Ver detalhes e procedimentos{" "}
                       <ArrowRight
                         size={14}
                         className="transition-transform group/link:translate-x-1"
@@ -1068,138 +1100,138 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Por Que Escolher o Dr. Rodrigo Corrêa - Diferenciais */}
+        {/* Por Que Escolher o Dr. Adonai Soares - Dobra Clara (Calcário & Marfim) */}
         <section
           id="diferenciais"
-          className="scroll-mt-24 border-t border-[#c59b27]/25 bg-[#08090c] py-20 text-[#f8f9fa] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#c5a882]/30 bg-[#f5f1e8] py-20 text-[#1a1713] sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
               <Heading
-                light
-                eyebrow="PRONTIDÃO 24H, RIGOR TÉCNICO & ATENDIMENTO HUMANO"
-                description="Quando a liberdade de quem você ama está ameaçada, cada segundo conta. Você merece uma defesa criminal técnica, combativa e que atende o telefone imediatamente."
+                theme="light"
+                eyebrow="AGILIDADE, PROFISSIONALISMO & ATENDIMENTO HUMANO"
+                description="Quando o seu patrimônio, sua família ou seus direitos estão em jogo, você merece um advogado acessível, combativo e que resolve de verdade."
               >
-                Por que confiar sua defesa criminal ao{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#e1c47a] via-[#d4af37] to-[#fbf8ee]">
-                  Dr. Rodrigo Corrêa?
+                Por que confiar suas causas ao{" "}
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#866843] via-[#b5956f] to-[#5f462a]">
+                  Dr. Adonai Soares?
                 </span>
               </Heading>
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá, Dr. Rodrigo Corrêa! Gostaria de consultar sobre um caso criminal e entender os passos da defesa."
+                  "Olá, Dr. Adonai Soares! Gostaria de conversar para entender as etapas da minha demanda jurídica."
                 )}
                 target="_blank"
                 size="md"
                 variant="gold"
                 className="rounded-lg shadow-sm"
               >
-                <WhatsAppIcon size={16} className="text-[#08090c]" /> Falar no WhatsApp
+                <WhatsAppIcon size={16} className="text-[#0b0a08]" /> Falar no WhatsApp
               </GlowingButton>
             </div>
 
             <div className="mt-12 grid gap-8 lg:grid-cols-2">
-              {/* Card 1: Prontidão Noturna & Acolhimento Humano */}
+              {/* Card 1: Comunicação Clara e Resolução Prática */}
               <motion.article
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65 }}
-                className="group flex flex-col justify-between rounded-xl border border-[#c59b27]/30 bg-[#0e1016] p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-[#d4af37] hover:shadow-gold sm:p-9"
+                className="group flex flex-col justify-between rounded-xl border border-[#c5a882]/30 bg-white p-7 shadow-[0_8px_30px_rgba(26,23,19,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-[#b5956f] hover:shadow-[0_12px_36px_rgba(197,168,130,0.18)] sm:p-9"
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#c59b27]/40 bg-[#141720] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#e1c47a]">
-                      <HeartHandshake size={14} /> Atendimento Humanizado & Próximo
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#c5a882]/40 bg-[#f8f5ee] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#866843]">
+                      <HeartHandshake size={14} /> Atendimento Humanizado & Direto
                     </span>
-                    <span className="text-xs font-semibold text-[#d4af37]">
-                      Você Sempre Amparado
+                    <span className="text-xs font-semibold text-[#866843]">
+                      Sempre Próximo de Você
                     </span>
                   </div>
-                  <h3 className="mt-4 font-serif text-2xl leading-tight text-white sm:text-[1.75rem]">
-                    Comunicação Clara, Empatia e Respostas Imediatas
+                  <h3 className="mt-4 font-serif text-2xl leading-tight text-[#1a1713] sm:text-[1.75rem]">
+                    Comunicação Sem Juridiquês, Paciência e Respostas Claras
                   </h3>
-                  <p className="mt-3 text-[14px] leading-relaxed text-[#cbd5e1]">
-                    Como atestam os depoimentos reais de nossos clientes no Google, o grande diferencial do Dr. Rodrigo Corrêa é unir um conhecimento jurídico impecável a uma atenção humana rara. Em momentos de aflição, você e seus familiares recebem explicações claras, sem juridiquês inacessível, com acompanhamento próximo em cada passo.
+                  <p className="mt-3 text-[14px] leading-relaxed text-[#4a443c]">
+                    Como comprovam os clientes no Google, o grande diferencial do Dr. Adonai Soares é aliar alto conhecimento jurídico a um atendimento acolhedor. Ele explica cada detalhe com calma e transparência, mantendo você sempre informado sobre os passos e perspectivas do processo.
                   </p>
-                  <ul className="mt-5 space-y-2 text-xs font-medium text-white">
+                  <ul className="mt-5 space-y-2 text-xs font-medium text-[#2a241e]">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#d4af37]" />
-                      <span>Plantão penal 24 horas e contato direto com o advogado pelo WhatsApp</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#866843]" />
+                      <span>Contato direto com o advogado pelo WhatsApp para sanar dúvidas</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#d4af37]" />
-                      <span>Acolhimento especial e orientações tranquilizadoras aos familiares do preso</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#866843]" />
+                      <span>Pontualidade rigorosa e retorno constante sobre cada andamento processual</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#d4af37]" />
-                      <span>Transparência absoluta sobre os riscos, teses e perspectivas do processo</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#866843]" />
+                      <span>Transparência total quanto a prazos, custos e estratégias adotadas</span>
                     </li>
                   </ul>
                 </div>
-                <div className="mt-7 border-t border-[#c59b27]/25 pt-4">
+                <div className="mt-7 border-t border-[#c5a882]/25 pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dr. Rodrigo Corrêa! Gostaria de conversar para tirar dúvidas sobre um processo criminal."
+                      "Olá, Dr. Adonai Soares! Gostaria de tirar dúvidas com você sobre o meu caso."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#c59b27]/40 bg-[#141720] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#f8f9fa] transition-all hover:border-[#d4af37] hover:bg-[#c59b27] hover:text-[#08090c]"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#c5a882]/40 bg-[#f8f5ee] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#1a1713] transition-all hover:border-[#866843] hover:bg-[#c5a882] hover:text-[#0b0a08]"
                   >
                     <span className="inline-flex items-center gap-2">
-                      <WhatsAppIcon size={15} /> Conversar no WhatsApp com o Dr. Rodrigo
+                      <WhatsAppIcon size={15} /> Conversar com o Dr. Adonai Soares
                     </span>
                     <ArrowUpRight size={15} />
                   </a>
                 </div>
               </motion.article>
 
-              {/* Card 2: Estratégia Combina Rigor e Combate aos Abusos */}
+              {/* Card 2: Firmeza Técnica e Domínio em Sucessões e Imóveis */}
               <motion.article
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65, delay: 0.1 }}
-                className="group flex flex-col justify-between rounded-xl border border-[#c59b27]/30 bg-[#0e1016] p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-[#d4af37] hover:shadow-gold sm:p-9"
+                className="group flex flex-col justify-between rounded-xl border border-[#c5a882]/30 bg-white p-7 shadow-[0_8px_30px_rgba(26,23,19,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-[#b5956f] hover:shadow-[0_12px_36px_rgba(197,168,130,0.18)] sm:p-9"
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#c59b27]/40 bg-[#141720] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#e1c47a]">
-                      <Award size={14} /> Atuação Técnica & Firmeza
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#c5a882]/40 bg-[#f8f5ee] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#866843]">
+                      <Award size={14} /> Solidez & Eficiência Técnica
                     </span>
-                    <span className="text-xs font-semibold text-[#d4af37]">
-                      Garantias Constitucionais
+                    <span className="text-xs font-semibold text-[#866843]">
+                      Resultados Concretos
                     </span>
                   </div>
-                  <h3 className="mt-4 font-serif text-2xl leading-tight text-white sm:text-[1.75rem]">
-                    Defesa Estratégica, Investigação e Sustentação Oral
+                  <h3 className="mt-4 font-serif text-2xl leading-tight text-[#1a1713] sm:text-[1.75rem]">
+                    Especialização em Inventários, Regularização de Imóveis e Contratos
                   </h3>
-                  <p className="mt-3 text-[14px] leading-relaxed text-[#cbd5e1]">
-                    Não aceitamos acusações genéricas ou prisões arbitrárias. Analisamos minuciosamente cada folha dos autos, identificamos nulidades de busca e apreensão, quebras ilegais de sigilo e depoimentos contraditórios, construindo uma estratégia sólida da delegacia aos tribunais superiores.
+                  <p className="mt-3 text-[14px] leading-relaxed text-[#4a443c]">
+                    Em causas imobiliárias e sucessórias, um erro técnico pode travar bens por anos. O Dr. Adonai conduz inventários com celeridade e domínio das vias extrajudiciais, regulariza propriedades por usucapião e elabora contratos à prova de litígios, blindando você contra perdas.
                   </p>
-                  <ul className="mt-5 space-y-2 text-xs font-medium text-white">
+                  <ul className="mt-5 space-y-2 text-xs font-medium text-[#2a241e]">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#d4af37]" />
-                      <span>Investigação defensiva preliminar para desarticular a narrativa acusatória</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#866843]" />
+                      <span>Agilidade na partilha de bens entre herdeiros em cartório ou via judicial</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#d4af37]" />
-                      <span>Postura combativa em audiências de instrução e perante o Plenário do Júri</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#866843]" />
+                      <span>Conquista de escrituras definitivas e registro de imóveis urbanos e rurais</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#d4af37]" />
-                      <span>Impetração de Habeas Corpus com pedido liminar em todas as instâncias</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#866843]" />
+                      <span>Equipe jurídica sincronizada para acompanhar seu caso sem interrupções</span>
                     </li>
                   </ul>
                 </div>
-                <div className="mt-7 border-t border-[#c59b27]/25 pt-4">
+                <div className="mt-7 border-t border-[#c5a882]/25 pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dr. Rodrigo Corrêa! Gostaria de consultar sobre a melhor estratégia jurídica para um caso penal."
+                      "Olá, Dr. Adonai Soares! Gostaria de consultar sobre a melhor estratégia para meu inventário ou imóvel."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#c59b27]/40 bg-[#141720] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#f8f9fa] transition-all hover:border-[#d4af37] hover:bg-[#c59b27] hover:text-[#08090c]"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#c5a882]/40 bg-[#f8f5ee] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#1a1713] transition-all hover:border-[#866843] hover:bg-[#c5a882] hover:text-[#0b0a08]"
                   >
                     <span className="inline-flex items-center gap-2">
                       <WhatsAppIcon size={15} /> Consultar Estratégia no WhatsApp
@@ -1213,27 +1245,27 @@ export default function Home() {
         </section>
 
         {/* Método de Trabalho em 3 Passos */}
-        <section className="relative overflow-hidden border-t border-[#c59b27]/25 bg-[#0e1016] py-20 text-[#f8f9fa] sm:py-24 lg:py-28">
-          <div className="pointer-events-none absolute -left-28 top-1/4 size-96 rounded-full bg-[#c59b27]/10 blur-3xl" />
-          <div className="pointer-events-none absolute -right-28 bottom-1/4 size-96 rounded-full bg-[#d4af37]/10 blur-3xl" />
+        <section className="relative overflow-hidden border-t border-[#c5a882]/25 bg-[#12100d] py-20 text-[#fbfaf8] sm:py-24 lg:py-28">
+          <div className="pointer-events-none absolute -left-28 top-1/4 size-96 rounded-full bg-[#c5a882]/10 blur-3xl" />
+          <div className="pointer-events-none absolute -right-28 bottom-1/4 size-96 rounded-full bg-[#dfcaa9]/10 blur-3xl" />
 
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.88fr_1.12fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
                 light
-                eyebrow="COMO ATUAMOS NO SEU CASO"
-                description="Um método ágil, ético e resolutivo para agir com urgência na defesa penal e aplicar a estratégia de soltura mais segura e eficiente."
+                eyebrow="COMO CONDUZIMOS SEU CASO"
+                description="Um método transparente, ágil e centrado em resultados práticos para garantir a sua tranquilidade e a segurança de sua família."
               >
                 Três etapas claras para{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#e1c47a] via-[#d4af37] to-[#fbf8ee]">
-                  proteger sua liberdade e garantir a tranquilidade de sua família.
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#dfcaa9] via-[#c5a882] to-[#fbf7ee]">
+                  proteger seu patrimônio e solucionar sua demanda jurídica.
                 </span>
               </Heading>
 
-              <blockquote className="mt-8 rounded-xl border border-[#c59b27]/35 bg-[#12151e] p-6 font-serif text-base italic leading-7 text-[#f8f9fa] shadow-card">
-                &ldquo;A liberdade é o bem mais precioso do ser humano. Nosso compromisso é exercer uma advocacia criminal intransigente, ética e acolhedora, garantindo que você compreenda cada etapa do processo e sinta a segurança de estar sob a melhor proteção técnica.&rdquo;
-                <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-[#d4af37]">
-                  — Dr. Rodrigo Gomes Corrêa · Advogado Criminalista
+              <blockquote className="mt-8 rounded-xl border border-[#c5a882]/35 bg-[#161310] p-6 font-serif text-base italic leading-7 text-[#fbfaf8] shadow-card">
+                &ldquo;A advocacia deve ser sinônimo de segurança, clareza e dedicação. Nosso compromisso é ouvir a realidade do cliente com empatia e aplicar a técnica jurídica com firmeza, alcançando a solução mais rápida e justa.&rdquo;
+                <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-[#dfcaa9]">
+                  — Dr. Adonai Soares de Moura · OAB/MG 187.717
                 </footer>
               </blockquote>
             </div>
@@ -1243,23 +1275,23 @@ export default function Home() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={stagger}
-              className="divide-y divide-[#c59b27]/25"
+              className="divide-y divide-[#c5a882]/25"
             >
               {[
                 [
                   "01",
-                  "Contato Imediato & Intervenção Flagrancial",
-                  "Acionamento 24h via WhatsApp ou ligação. Atendimento imediato em delegacia ou presídio, com entrevista prévia sigilosa e garantia do direito ao silêncio.",
+                  "Atendimento Inicial & Análise Diagnóstica",
+                  "Conversa reservada via WhatsApp, ligação ou presencial no escritório em Corinto. Escuta detalhada do seu problema e verificação documental inicial.",
                 ],
                 [
                   "02",
-                  "Estratégia de Defesa & Medidas Urgentes",
-                  "Atuação incisiva na Audiência de Custódia, elaboração de pedidos de relaxamento de prisão, revogação de preventiva e impetração ágil de Habeas Corpus com liminar.",
+                  "Definição Estratégica & Execução Rápida",
+                  "Apresentação da rota mais econômica e rápida (judicial ou extrajudicial em cartório), com elaboração precisa das peças e requerimentos cabíveis.",
                 ],
                 [
                   "03",
-                  "Acompanhamento Contínuo, Sustentação Oral & Apoio",
-                  "Atuação técnica rigorosa em todas as fases da instrução processual, plenário do júri ou tribunais superiores, mantendo cliente e familiares 100% informados.",
+                  "Acompanhamento Contínuo & Prestação de Contas",
+                  "Atuação combativa em audiências, cartórios e tribunais, com atualizações periódicas para você acompanhar cada vitória com total tranquilidade.",
                 ],
               ].map(([number, title, description]) => (
                 <motion.div
@@ -1267,12 +1299,12 @@ export default function Home() {
                   variants={reveal}
                   className="grid gap-3 py-6 first:pt-0 sm:grid-cols-[70px_1fr] sm:gap-6 sm:py-7"
                 >
-                  <span className="font-serif text-2xl font-semibold text-[#d4af37]">
+                  <span className="font-serif text-2xl font-semibold text-[#dfcaa9]">
                     {number}
                   </span>
                   <div>
                     <h3 className="font-serif text-2xl text-white">{title}</h3>
-                    <p className="mt-2 max-w-lg text-[13px] leading-6 text-[#cbd5e1]">
+                    <p className="mt-2 max-w-lg text-[13px] leading-6 text-[#d4cdc1]">
                       {description}
                     </p>
                   </div>
@@ -1282,54 +1314,54 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Avaliações / Depoimentos Reais no Google Meu Negócio (27 Avaliações 5,0 ★) */}
+        {/* Avaliações / Depoimentos Reais no Google Meu Negócio - Dobra Clara (Alabastro & Marfim) */}
         <section
           id="avaliacoes"
-          className="scroll-mt-24 border-t border-[#c59b27]/25 bg-[#08090c] py-20 text-[#f8f9fa] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#c5a882]/30 bg-[#f8f5ee] py-20 text-[#1a1713] sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
               <Heading
-                light
+                theme="light"
                 eyebrow="PROVA SOCIAL VERIFICADA · GOOGLE MEU NEGÓCIO"
-                description="Veja depoimentos autênticos e espontâneos de clientes e familiares sobre a dedicação, a competência e a ética do Dr. Rodrigo Corrêa em Caxambu - MG."
+                description="Veja depoimentos autênticos e públicos de clientes sobre a competência, a transparência e o acolhimento do Dr. Adonai Soares em Corinto - MG."
               >
-                Avaliado com nota máxima 5,0 ★ com{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#e1c47a] via-[#d4af37] to-[#fbf8ee]">
-                  27 avaliações no Google pela dedicação, ética e segurança transmitida.
+                Avaliado com 4,8 ★ em{" "}
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#866843] via-[#b5956f] to-[#5f462a]">
+                  25 avaliações no Google pela agilidade, clareza e dedicação.
                 </span>
               </Heading>
 
               {/* Verified Google Badge Card */}
-              <div className="flex flex-col gap-3 rounded-xl border border-[#c59b27]/35 bg-[#0e1016] p-5 shadow-card sm:flex-row sm:items-center md:min-w-[340px]">
-                <div className="flex size-14 shrink-0 items-center justify-center rounded-lg border border-[#c59b27]/30 bg-[#141720] shadow-xs">
+              <div className="flex flex-col gap-3 rounded-xl border border-[#c5a882]/35 bg-white p-5 shadow-[0_8px_30px_rgba(26,23,19,0.08)] sm:flex-row sm:items-center md:min-w-[340px]">
+                <div className="flex size-14 shrink-0 items-center justify-center rounded-lg border border-[#c5a882]/30 bg-[#f8f5ee] shadow-xs">
                   <GoogleIcon size={30} />
                 </div>
                 <div>
                   <div className="flex items-center gap-2">
-                    <span className="font-serif text-3xl font-bold leading-none text-white">
-                      5,0
+                    <span className="font-serif text-3xl font-bold leading-none text-[#1a1713]">
+                      4,8
                     </span>
-                    <div className="flex gap-0.5 text-[#d4af37]">
+                    <div className="flex gap-0.5 text-[#c5a882]">
                       {Array.from({ length: 5 }, (_, i) => (
                         <Star
                           key={i}
                           size={14}
-                          className="fill-[#d4af37] text-[#d4af37]"
+                          className="fill-[#c5a882] text-[#c5a882]"
                         />
                       ))}
                     </div>
                   </div>
-                  <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-[#cbd5e1]">
-                    Rodrigo Corrêa Advocacia Criminal
+                  <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-[#4a443c]">
+                    Adonai Soares — Advogado
                   </p>
                   <a
                     href={GOOGLE_SEARCH_URL}
                     target="_blank"
                     rel="noreferrer"
-                    className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-[#d4af37] transition-colors hover:text-white"
+                    className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-[#866843] transition-colors hover:text-[#1a1713]"
                   >
-                    27 avaliações no Google (100% 5★) <ArrowUpRight size={13} />
+                    25 avaliações no Google <ArrowUpRight size={13} />
                   </a>
                 </div>
               </div>
@@ -1340,41 +1372,41 @@ export default function Home() {
               {clientReviews.map((review) => (
                 <article
                   key={review.name}
-                  className="group relative flex flex-col justify-between rounded-xl border border-[#c59b27]/30 bg-[#12151e] p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#d4af37] hover:shadow-gold sm:p-8"
+                  className="group relative flex flex-col justify-between rounded-xl border border-[#c5a882]/30 bg-white p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#b5956f] hover:shadow-[0_12px_36px_rgba(197,168,130,0.18)] shadow-[0_4px_20px_rgba(26,23,19,0.05)] sm:p-8"
                 >
                   <div>
                     {/* Header: Stars + Badge */}
                     <div className="flex items-center justify-between gap-2">
-                      <div className="flex gap-1 text-[#d4af37]">
+                      <div className="flex gap-1 text-[#c5a882]">
                         {Array.from({ length: review.rating }, (_, i) => (
                           <Star
                             key={i}
                             size={14}
-                            className="fill-[#d4af37] text-[#d4af37]"
+                            className="fill-[#c5a882] text-[#c5a882]"
                           />
                         ))}
                       </div>
-                      <span className="rounded-md border border-[#c59b27]/35 bg-[#08090c] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#e1c47a] shadow-xs">
+                      <span className="rounded-md border border-[#c5a882]/35 bg-[#f8f5ee] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#866843] shadow-xs">
                         {review.badge}
                       </span>
                     </div>
 
                     {/* Review content */}
-                    <p className="mt-5 text-[14px] italic leading-relaxed text-[#f8f9fa]">
+                    <p className="mt-5 text-[14px] italic leading-relaxed text-[#2a241e]">
                       &ldquo;{review.content}&rdquo;
                     </p>
                   </div>
 
                   {/* Reviewer info */}
-                  <div className="mt-6 flex items-center gap-3 border-t border-[#c59b27]/25 pt-4">
-                    <div className="grid size-10 shrink-0 place-items-center rounded-lg border border-[#c59b27]/40 bg-[#08090c] font-serif text-sm font-semibold text-[#d4af37] shadow-xs">
+                  <div className="mt-6 flex items-center gap-3 border-t border-[#c5a882]/25 pt-4">
+                    <div className="grid size-10 shrink-0 place-items-center rounded-lg border border-[#c5a882]/40 bg-[#f4ebd6] font-serif text-sm font-semibold text-[#866843] shadow-xs">
                       {review.name.charAt(0)}
                     </div>
                     <div className="min-w-0 flex-1">
-                      <p className="truncate font-serif text-base font-semibold text-white">
+                      <p className="truncate font-serif text-base font-semibold text-[#1a1713]">
                         {review.name}
                       </p>
-                      <p className="text-[10px] uppercase tracking-wider text-[#94a3b8]">
+                      <p className="text-[10px] uppercase tracking-wider text-[#6b6257]">
                         {review.reviewerTag}
                       </p>
                     </div>
@@ -1384,22 +1416,22 @@ export default function Home() {
             </div>
 
             {/* Bottom Actions and Trust Tags */}
-            <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-[#c59b27]/25 pt-8 sm:flex-row">
+            <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-[#c5a882]/25 pt-8 sm:flex-row">
               <div className="flex flex-wrap items-center gap-2">
                 {[
-                  "Advogado em Caxambu - MG",
-                  "Especialista em Direito Penal",
-                  "Plantão Criminal 24 Horas",
-                  "Nota 5,0 ★ no Google (27 avaliações)",
-                  "Audiência de Custódia & Flagrante",
-                  "Habeas Corpus TJMG, STJ & STF",
-                  "Tribunal do Júri & Execução Penal",
+                  "Advogado em Corinto - MG",
+                  "Especialista em Inventários & Partilhas",
+                  "Direito Imobiliário & Usucapião",
+                  "Nota 4,8 ★ no Google (25 avaliações)",
+                  "Direito de Família & Contratos",
+                  "Equipe Especializada & Ágil",
+                  "Atendimento em Todo o Brasil",
                 ].map((tag) => (
                   <span
                     key={tag}
-                    className="inline-flex items-center gap-1.5 rounded-lg border border-[#c59b27]/30 bg-[#12151e] px-3.5 py-1.5 text-[11px] font-medium text-[#f8f9fa] shadow-xs"
+                    className="inline-flex items-center gap-1.5 rounded-lg border border-[#c5a882]/30 bg-white px-3.5 py-1.5 text-[11px] font-medium text-[#1a1713] shadow-xs"
                   >
-                    <CheckCircle2 size={13} className="text-[#d4af37]" />
+                    <CheckCircle2 size={13} className="text-[#866843]" />
                     {tag}
                   </span>
                 ))}
@@ -1409,9 +1441,9 @@ export default function Home() {
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="group inline-flex shrink-0 items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#d4af37] transition-colors hover:text-white"
+                className="group inline-flex shrink-0 items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#866843] transition-colors hover:text-[#1a1713]"
               >
-                Ver Todas as 27 Avaliações no Google{" "}
+                Ver Todas as 25 Avaliações no Google{" "}
                 <ArrowUpRight
                   size={15}
                   className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
@@ -1421,88 +1453,88 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Contato & Localização da Sede em Caxambu - MG */}
+        {/* Contato & Localização da Sede em Corinto - MG */}
         <section
           id="contato"
-          className="scroll-mt-24 border-t border-[#c59b27]/25 bg-[#0e1016] py-20 text-[#f8f9fa] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#c5a882]/25 bg-[#12100d] py-20 text-[#fbfaf8] sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
                 light
-                eyebrow="CONTATO & PLANTÃO PENAL 24 HORAS"
-                description="Acione imediatamente o Dr. Rodrigo Corrêa pelo WhatsApp para atendimento emergencial de flagrante, prisão ou agendamento de consulta jurídica com sigilo absoluto."
+                eyebrow="CONTATO & AGENDAMENTO DE CONSULTA"
+                description="Fale diretamente com o Dr. Adonai Soares pelo WhatsApp para agendamento de consulta ou atendimento com total sigilo profissional."
               >
-                Prontidão total para{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#e1c47a] via-[#d4af37] to-[#fbf8ee]">
-                  proteger sua liberdade com técnica e excelência.
+                Prontidão para{" "}
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#dfcaa9] via-[#c5a882] to-[#fbf7ee]">
+                  proteger seu patrimônio e defender seus direitos.
                 </span>
               </Heading>
 
               <div className="mt-9 flex flex-col items-start gap-4">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dr. Rodrigo Corrêa! Preciso de atendimento no Plantão Penal 24 Horas."
+                    "Olá, Dr. Adonai Soares! Gostaria de agendar uma consulta jurídica com seu escritório."
                   )}
                   target="_blank"
                   size="lg"
                   variant="gold"
                   className="rounded-lg shadow-md"
                 >
-                  <WhatsAppIcon size={17} className="text-[#08090c]" /> Acionar Plantão 24h no WhatsApp
+                  <WhatsAppIcon size={17} className="text-[#0b0a08]" /> Falar no WhatsApp com o Dr. Adonai
                 </GlowingButton>
-                <p className="text-[11px] leading-5 text-[#cbd5e1]">
-                  Plantão telefônico e WhatsApp direto:{" "}
+                <p className="text-[11px] leading-5 text-[#d4cdc1]">
+                  WhatsApp e telefone direto:{" "}
                   <strong className="text-white">{PHONE_DISPLAY}</strong>
                 </p>
               </div>
 
-              <div className="mt-10 space-y-4 text-xs text-[#cbd5e1]">
+              <div className="mt-10 space-y-4 text-xs text-[#d4cdc1]">
                 <div className="flex items-start gap-3">
                   <Clock
                     size={16}
-                    className="mt-0.5 shrink-0 text-[#d4af37]"
+                    className="mt-0.5 shrink-0 text-[#c5a882]"
                   />
                   <div>
                     <p className="font-semibold text-white">
                       Horário de Funcionamento
                     </p>
-                    <p className="mt-0.5 text-[#e1c47a] font-bold">
-                      Aberto 24 Horas (Plantão Penal Ininterrupto)
+                    <p className="mt-0.5 text-[#dfcaa9] font-bold">
+                      Aberto 24 Horas (Atendimento Ágil & Plantão)
                     </p>
-                    <p className="text-[11px] text-[#94a3b8]">
-                      Atendimento presencial em Caxambu - MG, delegacias da região e tribunais de todo o Brasil
+                    <p className="text-[11px] text-[#9e978d]">
+                      Atendimento presencial em Corinto - MG e assessoria jurídica em todo o estado de Minas Gerais e tribunais do Brasil
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3 pt-1">
-                  <Phone size={16} className="shrink-0 text-[#d4af37]" />
+                  <Phone size={16} className="shrink-0 text-[#c5a882]" />
                   <a
                     href={`tel:+${WHATSAPP_NUMBER}`}
-                    className="font-medium text-white transition-colors hover:text-[#d4af37]"
+                    className="font-medium text-white transition-colors hover:text-[#dfcaa9]"
                   >
-                    {PHONE_DISPLAY} (Ligações e WhatsApp 24h)
+                    {PHONE_DISPLAY} (Ligações e WhatsApp)
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <InstagramIcon size={16} className="shrink-0 text-[#d4af37]" />
+                  <InstagramIcon size={16} className="shrink-0 text-[#c5a882]" />
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noreferrer"
-                    className="transition-colors hover:text-[#d4af37] text-white"
+                    className="transition-colors hover:text-[#dfcaa9] text-white"
                   >
                     {INSTAGRAM_HANDLE} (Instagram Oficial)
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <Mail size={16} className="shrink-0 text-[#d4af37]" />
+                  <Mail size={16} className="shrink-0 text-[#c5a882]" />
                   <a
                     href={`mailto:${EMAIL_CONTACT}`}
-                    className="transition-colors hover:text-[#d4af37] text-white"
+                    className="transition-colors hover:text-[#dfcaa9] text-white"
                   >
                     {EMAIL_CONTACT}
                   </a>
@@ -1511,7 +1543,7 @@ export default function Home() {
                 <div className="flex items-start gap-3">
                   <MapPin
                     size={16}
-                    className="mt-0.5 shrink-0 text-[#d4af37]"
+                    className="mt-0.5 shrink-0 text-[#c5a882]"
                   />
                   <div>
                     <span className="text-white">{ADDRESS_TEXT}</span>
@@ -1520,7 +1552,7 @@ export default function Home() {
                       href={GOOGLE_MAPS_URL}
                       target="_blank"
                       rel="noreferrer"
-                      className="mt-1 inline-flex items-center gap-1 font-semibold text-[#d4af37] hover:underline"
+                      className="mt-1 inline-flex items-center gap-1 font-semibold text-[#dfcaa9] hover:underline"
                     >
                       Ver no Google Maps <ArrowUpRight size={12} />
                     </a>
@@ -1530,17 +1562,17 @@ export default function Home() {
             </div>
 
             {/* Office Card with executive presentation */}
-            <div className="relative overflow-hidden rounded-xl border border-[#c59b27]/35 bg-[#12151e] p-7 shadow-card sm:p-10">
-              <div className="absolute right-0 top-0 h-1.5 w-32 bg-gradient-to-r from-[#a37b1e] via-[#d4af37] to-[#e1c47a]" />
+            <div className="relative overflow-hidden rounded-xl border border-[#c5a882]/35 bg-[#161310] p-7 shadow-card sm:p-10">
+              <div className="absolute right-0 top-0 h-1.5 w-32 bg-gradient-to-r from-[#866843] via-[#c5a882] to-[#dfcaa9]" />
 
               <div className="flex flex-col gap-2">
-                <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#e1c47a]">
-                  Sede do Escritório em Caxambu - MG
+                <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#dfcaa9]">
+                  Sede do Escritório em Corinto - MG
                 </p>
                 <div className="relative h-[68px] w-[280px] sm:h-[78px] sm:w-[340px]">
                   <Image
                     src={LOGO_SRC}
-                    alt="Rodrigo Corrêa Advocacia Criminal"
+                    alt="AS Advocacia e Consultoria Jurídica — Adonai Soares de Moura"
                     fill
                     unoptimized
                     sizes="340px"
@@ -1550,68 +1582,68 @@ export default function Home() {
               </div>
 
               {/* Office presentation photo */}
-              <div className="relative mt-5 aspect-[16/10] w-full overflow-hidden rounded-lg border border-[#c59b27]/30 bg-[#08090c] shadow-xs">
+              <div className="relative mt-5 aspect-[16/10] w-full overflow-hidden rounded-lg border border-[#c5a882]/30 bg-[#0b0a08] shadow-xs">
                 <Image
-                  src={FOTO_HERO_SRC}
-                  alt="Espaço de Atendimento do Dr. Rodrigo Corrêa em Caxambu - MG"
+                  src={FOTO_SOBRE_SRC}
+                  alt="Espaço de Atendimento do Dr. Adonai Soares em Corinto - MG"
                   fill
                   unoptimized
                   className="object-cover object-center"
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent p-4 text-white">
-                  <p className="text-xs font-semibold">Ambiente Executivo, Moderno e Reservado</p>
+                  <p className="text-xs font-semibold">Ambiente Executivo, Confortável e Reservado</p>
                   <p className="text-[10px] text-stone-300">{ADDRESS_TEXT}</p>
                 </div>
               </div>
 
-              <address className="mt-6 max-w-md text-[14px] not-italic leading-7 text-[#cbd5e1]">
+              <address className="mt-6 max-w-md text-[14px] not-italic leading-7 text-[#d4cdc1]">
                 <strong className="font-semibold text-white">
-                  Rodrigo Corrêa Advocacia Criminal
+                  {FIRM_NAME}
                 </strong>
                 <br />
-                {LAWYER_TITLE}
+                {LAWYER_NAME} · {LAWYER_TITLE}
                 <br />
-                Atendimento presencial em Caxambu, Sul de Minas e tribunais de todo o Brasil
+                Atendimento presencial em Corinto, região Central de Minas e tribunais de todo o Brasil
                 <br />
                 {ADDRESS_TEXT}
               </address>
 
               {/* Weekly schedule table */}
-              <div className="mt-6 rounded-lg border border-[#c59b27]/25 bg-[#08090c] p-4 text-xs">
-                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#e1c47a]">
+              <div className="mt-6 rounded-lg border border-[#c5a882]/25 bg-[#0b0a08] p-4 text-xs">
+                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#dfcaa9]">
                   Atendimento & Horários
                 </p>
-                <div className="grid grid-cols-2 gap-y-1.5 text-[#cbd5e1]">
-                  <span>Plantão Criminal</span>
-                  <span className="text-right font-semibold text-[#e1c47a]">
+                <div className="grid grid-cols-2 gap-y-1.5 text-[#d4cdc1]">
+                  <span>Plantão & Consultas</span>
+                  <span className="text-right font-semibold text-[#dfcaa9]">
                     Aberto 24 Horas
                   </span>
                   <span>Atendimento Presencial</span>
-                  <span className="text-right font-medium text-[#d4af37]">
-                    Caxambu - MG (Centro)
+                  <span className="text-right font-medium text-[#c5a882]">
+                    Corinto - MG (Centro)
                   </span>
                   <span>Endereço</span>
-                  <span className="text-right text-white">R. Maj. Penha, 299 - Sala 101</span>
+                  <span className="text-right text-white">R. Dr. Antônio Alvarenga, 371</span>
                   <span>Avaliações Google</span>
-                  <span className="text-right font-semibold text-[#d4af37]">5,0 ★ (27 avaliações)</span>
-                  <span>Tribunais Superiores</span>
-                  <span className="text-right text-white">TJMG, STJ & STF</span>
+                  <span className="text-right font-semibold text-[#dfcaa9]">4,8 ★ (25 avaliações)</span>
+                  <span>Tribunais</span>
+                  <span className="text-right text-white">TJMG, TRF, TRT & Tribunais Superiores</span>
                 </div>
               </div>
 
-              <div className="my-7 h-px bg-[#c59b27]/25" />
+              <div className="my-7 h-px bg-[#c5a882]/25" />
 
               <div className="flex flex-wrap items-center justify-between gap-4">
-                <p className="text-xs text-[#94a3b8]">
-                  Atendimento sob estrito sigilo profissional e garantia constitucional
+                <p className="text-xs text-[#9e978d]">
+                  Atendimento sob estrito sigilo profissional e conformidade ética com a OAB
                 </p>
                 <a
                   href={getWhatsAppUrl(
-                    "Olá, Dr. Rodrigo Corrêa! Gostaria de agendar um atendimento no escritório."
+                    "Olá, Dr. Adonai Soares! Gostaria de agendar uma consulta no escritório de Corinto."
                   )}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg border border-[#c59b27]/50 bg-[#141720] px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#d4af37] hover:bg-[#c59b27] hover:text-[#08090c]"
+                  className="inline-flex items-center gap-2 rounded-lg border border-[#c5a882]/50 bg-[#1a1713] px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#dfcaa9] hover:bg-[#c5a882] hover:text-[#0b0a08]"
                 >
                   <WhatsAppIcon size={14} /> Falar no WhatsApp <ArrowUpRight size={14} />
                 </a>
@@ -1621,43 +1653,43 @@ export default function Home() {
         </section>
 
         {/* Pre-Footer CTA Strip */}
-        <section className="border-t border-[#c59b27]/25 bg-gradient-to-r from-[#08090c] via-[#12151e] to-[#08090c] px-5 py-14 text-[#f8f9fa] shadow-card sm:px-8 sm:py-16 lg:px-12">
+        <section className="border-t border-[#c5a882]/25 bg-gradient-to-r from-[#0b0a08] via-[#161310] to-[#0b0a08] px-5 py-14 text-[#fbfaf8] shadow-card sm:px-8 sm:py-16 lg:px-12">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-7 sm:flex-row sm:items-center">
             <div>
-              <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#e1c47a]">
-                <Sparkles size={13} /> RODRIGO CORRÊA ADVOCACIA CRIMINAL
+              <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#dfcaa9]">
+                <Sparkles size={13} /> AS ADVOCACIA E CONSULTORIA JURÍDICA
               </p>
               <h2 className="mt-3 max-w-2xl font-serif text-3xl leading-tight text-white sm:text-4xl">
-                Precisa de uma defesa criminal combativa, experiente e disponível agora?
+                Precisa de um advogado dedicado, experiente e que realmente resolve?
               </h2>
             </div>
             <a
               href={getWhatsAppUrl(
-                "Olá, Dr. Rodrigo Corrêa! Preciso de atendimento emergencial no Plantão Penal."
+                "Olá, Dr. Adonai Soares! Preciso de atendimento com seu escritório para analisar uma questão jurídica."
               )}
               target="_blank"
               rel="noreferrer"
-              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-lg border border-[#fae9b5]/80 bg-gradient-to-r from-[#b38922] via-[#e5c46e] to-[#b38922] px-8 py-4 text-[11px] font-black uppercase tracking-[0.15em] text-[#08090c] shadow-[0_8px_24px_-4px_rgba(212,175,55,0.45),inset_0_1px_1.5px_rgba(255,255,255,0.85)] transition-all hover:-translate-y-0.5 hover:from-[#c59b27] hover:via-[#fae9b5] hover:to-[#c59b27] hover:shadow-[0_12px_32px_rgba(212,175,55,0.7)]"
+              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-lg border border-[#f4ebd6]/85 bg-gradient-to-r from-[#9e7e57] via-[#dfcaa9] to-[#9e7e57] px-8 py-4 text-[11px] font-black uppercase tracking-[0.15em] text-[#0b0a08] shadow-[0_8px_24px_-4px_rgba(197,168,130,0.45),inset_0_1px_1.5px_rgba(255,255,255,0.85)] transition-all hover:-translate-y-0.5 hover:from-[#c5a882] hover:via-[#fbf7ee] hover:to-[#c5a882] hover:shadow-[0_12px_32px_rgba(197,168,130,0.7)]"
             >
-              <WhatsAppIcon size={17} className="text-[#08090c]" /> Acionar Plantão 24h{" "}
-              <ArrowUpRight size={15} className="text-[#08090c]" />
+              <WhatsAppIcon size={17} className="text-[#0b0a08]" /> Iniciar Atendimento Agora{" "}
+              <ArrowUpRight size={15} className="text-[#0b0a08]" />
             </a>
           </div>
         </section>
 
         {/* Footer - Elegant Luxury Noir */}
-        <footer className="border-t border-[#c59b27]/25 bg-[#08090c] px-5 py-14 text-[#f8f9fa] sm:px-8 lg:px-12">
+        <footer className="border-t border-[#c5a882]/25 bg-[#0b0a08] px-5 py-14 text-[#fbfaf8] sm:px-8 lg:px-12">
           <div className="mx-auto grid max-w-7xl gap-10 sm:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1fr]">
             <div>
               <a
                 href="#inicio"
-                aria-label="Rodrigo Corrêa Advocacia Criminal"
+                aria-label="AS Advocacia e Consultoria Jurídica"
                 className="inline-block transition-transform hover:scale-[1.01]"
               >
                 <div className="relative h-[78px] w-[300px] sm:h-[95px] sm:w-[360px]">
                   <Image
                     src={LOGO_SRC}
-                    alt="Rodrigo Corrêa Advocacia Criminal"
+                    alt="AS Advocacia e Consultoria Jurídica — Dr. Adonai Soares de Moura"
                     fill
                     unoptimized
                     sizes="360px"
@@ -1665,19 +1697,19 @@ export default function Home() {
                   />
                 </div>
               </a>
-              <p className="mt-4 max-w-xs text-xs leading-6 text-[#94a3b8]">
-                ⚖️ Advocacia Criminal com rigor técnico, ética inabalável e atendimento humanizado. Foco especializado em Flagrantes, Custódia, Habeas Corpus, Tribunal do Júri e Tribunais Superiores em Caxambu - MG e em todo o Brasil.
+              <p className="mt-4 max-w-xs text-xs leading-6 text-[#9e978d]">
+                ⚖️ Advocacia com rigor técnico, ética inabalável, agilidade resolutiva e atendimento humanizado. Atuação em Inventários, Regularização de Imóveis, Família, Contratos e causas estratégicas em Corinto - MG e em todo o Brasil.
               </p>
-              <p className="mt-3 text-[11px] font-semibold text-[#d4af37]">
-                Dr. Rodrigo Gomes Corrêa — Advogado Criminalista | OAB/MG
+              <p className="mt-3 text-[11px] font-semibold text-[#dfcaa9]">
+                {LAWYER_NAME} — {LAWYER_TITLE}
               </p>
             </div>
 
             <div>
-              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#e1c47a]">
+              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#dfcaa9]">
                 Navegação
               </h2>
-              <div className="mt-4 flex flex-col items-start gap-3 text-xs text-[#cbd5e1]">
+              <div className="mt-4 flex flex-col items-start gap-3 text-xs text-[#d4cdc1]">
                 <a className="footer-link" href="#inicio">
                   Início
                 </a>
@@ -1685,40 +1717,40 @@ export default function Home() {
                   O Advogado & Equipe
                 </a>
                 <a className="footer-link" href="#atuacao">
-                  Especialidades Criminais
+                  Áreas de Atuação
                 </a>
                 <a className="footer-link" href="#diferenciais">
                   Diferenciais
                 </a>
                 <a className="footer-link" href="#avaliacoes">
-                  Avaliações de Clientes (5,0 ★)
+                  Avaliações de Clientes (4,8 ★)
                 </a>
                 <a className="footer-link" href="#contato">
-                  Plantão 24h & Sede
+                  Contato & Sede
                 </a>
               </div>
             </div>
 
             <div>
-              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#e1c47a]">
-                Contato & Atendimento 24h
+              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#dfcaa9]">
+                Contato & Atendimento
               </h2>
-              <div className="mt-4 flex flex-col items-start gap-2.5 text-xs text-[#cbd5e1]">
+              <div className="mt-4 flex flex-col items-start gap-2.5 text-xs text-[#d4cdc1]">
                 <a
                   href={getWhatsAppUrl(
-                    "Olá, Dr. Rodrigo Corrêa! Preciso de atendimento no Plantão Penal."
+                    "Olá, Dr. Adonai Soares! Gostaria de falar com o escritório."
                   )}
                   target="_blank"
                   rel="noreferrer"
                   className="footer-link inline-flex items-center gap-2 font-medium text-white"
                 >
-                  <WhatsAppIcon size={15} /> Plantão WhatsApp: {PHONE_DISPLAY}
+                  <WhatsAppIcon size={15} /> WhatsApp: {PHONE_DISPLAY}
                 </a>
                 <a
                   href={`tel:+${WHATSAPP_NUMBER}`}
                   className="footer-link inline-flex items-center gap-2"
                 >
-                  <Phone size={15} className="shrink-0" /> Telefone 24h: {PHONE_DISPLAY}
+                  <Phone size={15} className="shrink-0" /> Telefone: {PHONE_DISPLAY}
                 </a>
                 <a
                   href={INSTAGRAM_URL}
@@ -1727,14 +1759,6 @@ export default function Home() {
                   className="footer-link inline-flex items-center gap-2"
                 >
                   <InstagramIcon size={15} className="shrink-0" /> Instagram: {INSTAGRAM_HANDLE}
-                </a>
-                <a
-                  href={LINKTREE_URL}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="footer-link inline-flex items-center gap-2"
-                >
-                  <Sparkles size={15} className="shrink-0" /> Linktree Oficial
                 </a>
                 <a
                   href={`mailto:${EMAIL_CONTACT}`}
@@ -1751,16 +1775,16 @@ export default function Home() {
                   <MapPin size={15} className="mt-0.5 shrink-0" />
                   <span>{ADDRESS_TEXT}</span>
                 </a>
-                <p className="inline-flex items-center gap-2 pt-1 text-[11px] text-[#e1c47a] font-semibold">
-                  <Clock size={14} className="shrink-0 text-[#d4af37]" /> Plantão Criminal Aberto 24 Horas
+                <p className="inline-flex items-center gap-2 pt-1 text-[11px] text-[#dfcaa9] font-semibold">
+                  <Clock size={14} className="shrink-0 text-[#c5a882]" /> Aberto 24 Horas · Atendimento Ágil
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-[#c59b27]/25 pt-6 text-[10px] text-stone-500 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-[#c5a882]/25 pt-6 text-[10px] text-stone-500 sm:flex-row sm:items-center sm:justify-between">
             <p>
-              © {new Date().getFullYear()} RODRIGO CORRÊA ADVOCACIA CRIMINAL. Todos os direitos reservados.
+              © {new Date().getFullYear()} AS ADVOCACIA E CONSULTORIA JURÍDICA. Todos os direitos reservados.
             </p>
             <p>
               Conteúdo informativo, em estrita conformidade com o Código de Ética e Disciplina da OAB.
@@ -1775,26 +1799,26 @@ export default function Home() {
         >
           <a
             href={getWhatsAppUrl(
-              "Olá, Dr. Rodrigo Corrêa! Preciso de atendimento urgente no Plantão Criminal 24h."
+              "Olá, Dr. Adonai Soares! Gostaria de agendar um atendimento pelo WhatsApp."
             )}
             target="_blank"
             rel="noreferrer"
-            aria-label="Falar agora pelo WhatsApp com o Dr. Rodrigo Corrêa"
-            className="group relative flex size-14 items-center justify-center rounded-full border-2 border-[#d4af37]/80 bg-gradient-to-b from-[#1a1e28] via-[#0e1016] to-[#08090c] text-[#e5c46e] shadow-[0_8px_30px_rgba(0,0,0,0.8),0_0_25px_rgba(212,175,55,0.35)] transition-all duration-300 hover:scale-110 hover:border-[#fae9b5] hover:shadow-[0_10px_35px_rgba(212,175,55,0.6)] focus:outline-none focus:ring-4 focus:ring-[#d4af37]/40"
+            aria-label="Falar agora pelo WhatsApp com o Dr. Adonai Soares"
+            className="group relative flex size-14 items-center justify-center rounded-full border-2 border-[#c5a882]/80 bg-gradient-to-b from-[#221e19] via-[#141210] to-[#0b0a08] text-[#dfcaa9] shadow-[0_8px_30px_rgba(0,0,0,0.8),0_0_25px_rgba(197,168,130,0.35)] transition-all duration-300 hover:scale-110 hover:border-[#f4ebd6] hover:shadow-[0_10px_35px_rgba(197,168,130,0.6)] focus:outline-none focus:ring-4 focus:ring-[#c5a882]/40"
           >
             {/* Live pulsating status beacon */}
             <span className="absolute -top-0.5 -right-0.5 flex size-3.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#d4af37] opacity-75"></span>
-              <span className="relative inline-flex size-3.5 rounded-full border-2 border-[#08090c] bg-[#fae9b5]"></span>
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#c5a882] opacity-75"></span>
+              <span className="relative inline-flex size-3.5 rounded-full border-2 border-[#0b0a08] bg-[#f4ebd6]"></span>
             </span>
-            <WhatsAppIcon size={26} className="text-[#fae9b5] transition-transform duration-300 group-hover:scale-110" />
-            <span className="pointer-events-none absolute right-16 hidden whitespace-nowrap rounded-lg border border-[#c59b27]/60 bg-[#08090c]/95 px-3.5 py-1.5 text-xs font-semibold text-[#f8f9fa] shadow-2xl backdrop-blur-md transition-opacity group-hover:block">
-              <span className="text-[#e1c47a]">Plantão Penal 24h</span> · Dr. Rodrigo Corrêa
+            <WhatsAppIcon size={26} className="text-[#f4ebd6] transition-transform duration-300 group-hover:scale-110" />
+            <span className="pointer-events-none absolute right-16 hidden whitespace-nowrap rounded-lg border border-[#c5a882]/60 bg-[#0b0a08]/95 px-3.5 py-1.5 text-xs font-semibold text-[#fbfaf8] shadow-2xl backdrop-blur-md transition-opacity group-hover:block">
+              <span className="text-[#dfcaa9]">WhatsApp Direto</span> · Dr. Adonai Soares
             </span>
           </a>
         </aside>
 
-        {/* Modal de Detalhes da Especialidade Criminal */}
+        {/* Modal de Detalhes da Especialidade */}
         <AnimatePresence>
           {activeArea && (
             <motion.div
@@ -1813,30 +1837,30 @@ export default function Home() {
                 exit={{ opacity: 0, y: 16, scale: 0.99 }}
                 transition={{ duration: 0.24 }}
                 onClick={(event) => event.stopPropagation()}
-                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-xl border border-[#c59b27]/40 bg-[#0e1016] p-7 shadow-2xl sm:max-w-xl sm:rounded-xl sm:p-10 text-[#f8f9fa]"
+                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-xl border border-[#c5a882]/40 bg-[#12100d] p-7 shadow-2xl sm:max-w-xl sm:rounded-xl sm:p-10 text-[#fbfaf8]"
               >
                 <button
                   type="button"
                   aria-label="Fechar detalhes da especialidade"
                   onClick={() => setActiveArea(null)}
-                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-[#c59b27]/30 bg-[#141720] text-[#f8f9fa] transition-colors hover:border-[#d4af37] hover:text-[#e1c47a]"
+                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-[#c5a882]/30 bg-[#1a1713] text-[#fbfaf8] transition-colors hover:border-[#dfcaa9] hover:text-[#f4ebd6]"
                 >
                   <X size={18} />
                 </button>
 
                 <div className="flex items-center gap-3 pr-12">
-                  <div className="relative size-10 shrink-0 overflow-hidden rounded-lg border border-[#c59b27]/40 bg-[#08090c] p-1 shadow-xs">
+                  <div className="relative size-10 shrink-0 overflow-hidden rounded-lg border border-[#c5a882]/40 bg-[#0b0a08] p-1 shadow-xs">
                     <Image
                       src={LOGO_SYMBOL_SRC}
-                      alt="Símbolo Rodrigo Corrêa Advocacia Criminal"
+                      alt="Símbolo AS Advocacia e Consultoria Jurídica"
                       fill
                       sizes="40px"
                       className="object-contain"
                     />
                   </div>
                   <div>
-                    <p className="eyebrow-light">ADVOCACIA CRIMINAL</p>
-                    <p className="text-[10px] font-semibold tracking-wider text-[#d4af37] uppercase">
+                    <p className="eyebrow-light">AS ADVOCACIA & CONSULTORIA</p>
+                    <p className="text-[10px] font-semibold tracking-wider text-[#dfcaa9] uppercase">
                       {LAWYER_NAME} · {LAWYER_TITLE}
                     </p>
                   </div>
@@ -1849,21 +1873,21 @@ export default function Home() {
                   {activeArea.title}
                 </h2>
 
-                <p className="mt-5 text-sm leading-7 text-[#cbd5e1]">
+                <p className="mt-5 text-sm leading-7 text-[#d4cdc1]">
                   {activeArea.details}
                 </p>
 
-                <div className="mt-6 border-t border-[#c59b27]/25 pt-5">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#e1c47a]">
+                <div className="mt-6 border-t border-[#c5a882]/25 pt-5">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#dfcaa9]">
                     Atuação e Procedimentos Adotados pelo Escritório:
                   </p>
                   <ul className="mt-4 space-y-3">
                     {activeArea.topics.map((topic) => (
                       <li
                         key={topic}
-                        className="flex items-center gap-3 text-sm text-[#cbd5e1]"
+                        className="flex items-center gap-3 text-sm text-[#d4cdc1]"
                       >
-                        <span className="size-2 shrink-0 rounded-full bg-[#d4af37]" />
+                        <span className="size-2 shrink-0 rounded-full bg-[#c5a882]" />
                         <span>{topic}</span>
                       </li>
                     ))}
@@ -1878,12 +1902,12 @@ export default function Home() {
                     variant="gold"
                     className="rounded-lg shadow-md"
                   >
-                    <WhatsAppIcon size={16} className="text-[#08090c]" /> Consultar sobre esta demanda
+                    <WhatsAppIcon size={16} className="text-[#0b0a08]" /> Consultar sobre esta demanda
                   </GlowingButton>
                   <button
                     type="button"
                     onClick={() => setActiveArea(null)}
-                    className="px-5 py-3 text-xs font-semibold text-[#94a3b8] transition-colors hover:text-white"
+                    className="px-5 py-3 text-xs font-semibold text-[#9e978d] transition-colors hover:text-white"
                   >
                     Fechar
                   </button>
